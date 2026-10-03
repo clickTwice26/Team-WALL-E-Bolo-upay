@@ -1,0 +1,49 @@
+{
+  "dataset": {
+    "total": 8000,
+    "train": 5600,
+    "validation": 1200,
+    "test": 1200,
+    "scam_share": 0.287,
+    "note": "Synthetic scenarios. Numbers show the pipeline works as designed; they are not real-world fraud results."
+  },
+  "thresholds": {
+    "yellow": 0.08,
+    "red": 0.9
+  },
+  "test_auc": {
+    "logistic_regression": 0.9861,
+    "gradient_boosting": 0.9922
+  },
+  "test_pipeline": {
+    "ml_plus_interview_plus_rules": {
+      "scam_flagged_rate": 0.9191,
+      "scam_red_rate": 0.7379,
+      "legit_red_rate": 0.0112,
+      "legit_flagged_rate": 0.1336,
+      "n_scam": 309,
+      "n_legit": 891
+    },
+    "baseline_rules_only": {
+      "scam_flagged_rate": 0.5307,
+      "scam_red_rate": 0.1618,
+      "legit_red_rate": 0.009,
+      "legit_flagged_rate": 0.0606,
+      "n_scam": 309,
+      "n_legit": 891
+    }
+  },
+  "model_choice": "Logistic regression: AUC close to gradient boosting and every warning can be explained feature by feature.",
+  "coefficients": {
+    "is_new_recipient": 1.503,
+    "log_recipient_ratio": 0.037,
+    "is_night": 0.179,
+    "recent_sends_30m": 0.723,
+    "balance_fraction": 1.688,
+    "on_active_call": 0.801,
+    "return_claim_no_inflow": 0.485,
+    "scam_score": 1.901,
+    "is_recharge": -0.328
+  },
+  "trained_at": "2026-10-03T18:18:17"
+}

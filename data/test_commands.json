@@ -1,0 +1,773 @@
+{
+ "note": "Hand-written labelled commands for user u1 (Rahima). recipient: contact id, phone, 'self', 'ask' (system must ask), 'cX?' (fuzzy: must ask to confirm cX). amount null = system must ask for the amount.",
+ "commands": [
+  {
+   "id": 1,
+   "user": "u1",
+   "text": "Ammu ke 500 taka pathao",
+   "intent": "send_money",
+   "amount": 500,
+   "recipient": "c1"
+  },
+  {
+   "id": 2,
+   "user": "u1",
+   "text": "ammu k 500 pathao",
+   "intent": "send_money",
+   "amount": 500,
+   "recipient": "c1"
+  },
+  {
+   "id": 3,
+   "user": "u1",
+   "text": "ammuke 1000 taka dao",
+   "intent": "send_money",
+   "amount": 1000,
+   "recipient": "c1"
+  },
+  {
+   "id": 4,
+   "user": "u1",
+   "text": "amma ke 2000 tk send koro",
+   "intent": "send_money",
+   "amount": 2000,
+   "recipient": "c1"
+  },
+  {
+   "id": 5,
+   "user": "u1",
+   "text": "maa ke 1500 taka pathiye dao",
+   "intent": "send_money",
+   "amount": 1500,
+   "recipient": "c1"
+  },
+  {
+   "id": 6,
+   "user": "u1",
+   "text": "Ammu ke 2,500 taka pathao",
+   "intent": "send_money",
+   "amount": 2500,
+   "recipient": "c1"
+  },
+  {
+   "id": 7,
+   "user": "u1",
+   "text": "ammu ke 5k pathao",
+   "intent": "send_money",
+   "amount": 5000,
+   "recipient": "c1"
+  },
+  {
+   "id": 8,
+   "user": "u1",
+   "text": "ammu ke 1.5k taka",
+   "intent": "send_money",
+   "amount": 1500,
+   "recipient": "c1"
+  },
+  {
+   "id": 9,
+   "user": "u1",
+   "text": "ammu ke pach hajar taka pathao",
+   "intent": "send_money",
+   "amount": 5000,
+   "recipient": "c1"
+  },
+  {
+   "id": 10,
+   "user": "u1",
+   "text": "ammu ke der hajar taka pathao",
+   "intent": "send_money",
+   "amount": 1500,
+   "recipient": "c1"
+  },
+  {
+   "id": 11,
+   "user": "u1",
+   "text": "ammu ke arai hajar pathao",
+   "intent": "send_money",
+   "amount": 2500,
+   "recipient": "c1"
+  },
+  {
+   "id": 12,
+   "user": "u1",
+   "text": "ammu ke sare tin hajar taka",
+   "intent": "send_money",
+   "amount": 3500,
+   "recipient": "c1"
+  },
+  {
+   "id": 13,
+   "user": "u1",
+   "text": "ammu ke duisho taka pathao",
+   "intent": "send_money",
+   "amount": 200,
+   "recipient": "c1"
+  },
+  {
+   "id": 14,
+   "user": "u1",
+   "text": "ammu ke pachsho taka dao",
+   "intent": "send_money",
+   "amount": 500,
+   "recipient": "c1"
+  },
+  {
+   "id": 15,
+   "user": "u1",
+   "text": "ammu ke ek hajar pathao",
+   "intent": "send_money",
+   "amount": 1000,
+   "recipient": "c1"
+  },
+  {
+   "id": 16,
+   "user": "u1",
+   "text": "rahim bhai ke 1000 taka pathao",
+   "intent": "send_money",
+   "amount": 1000,
+   "recipient": "c2"
+  },
+  {
+   "id": 17,
+   "user": "u1",
+   "text": "rahim bhaike 700 tk dao",
+   "intent": "send_money",
+   "amount": 700,
+   "recipient": "c2"
+  },
+  {
+   "id": 18,
+   "user": "u1",
+   "text": "bhaiya ke 1200 taka pathao",
+   "intent": "send_money",
+   "amount": 1200,
+   "recipient": "c2"
+  },
+  {
+   "id": 19,
+   "user": "u1",
+   "text": "rahim store ke 350 taka dao",
+   "intent": "send_money",
+   "amount": 350,
+   "recipient": "c3"
+  },
+  {
+   "id": 20,
+   "user": "u1",
+   "text": "rahim dokan e 400 taka pathao",
+   "intent": "send_money",
+   "amount": 400,
+   "recipient": "c3"
+  },
+  {
+   "id": 21,
+   "user": "u1",
+   "text": "salma apa ke 500 pathao",
+   "intent": "send_money",
+   "amount": 500,
+   "recipient": "c4"
+  },
+  {
+   "id": 22,
+   "user": "u1",
+   "text": "salma ke 600 taka",
+   "intent": "send_money",
+   "amount": 600,
+   "recipient": "c4"
+  },
+  {
+   "id": 23,
+   "user": "u1",
+   "text": "apa ke 800 taka pathao",
+   "intent": "send_money",
+   "amount": 800,
+   "recipient": "c4"
+  },
+  {
+   "id": 24,
+   "user": "u1",
+   "text": "karim ke 4500 taka bari vara",
+   "intent": "send_money",
+   "amount": 4500,
+   "recipient": "c5"
+  },
+  {
+   "id": 25,
+   "user": "u1",
+   "text": "bariwala ke 4500 pathao",
+   "intent": "send_money",
+   "amount": 4500,
+   "recipient": "c5"
+  },
+  {
+   "id": 26,
+   "user": "u1",
+   "text": "landlord ke 4,500 tk",
+   "intent": "send_money",
+   "amount": 4500,
+   "recipient": "c5"
+  },
+  {
+   "id": 27,
+   "user": "u1",
+   "text": "আম্মুকে ৫০০ টাকা পাঠাও",
+   "intent": "send_money",
+   "amount": 500,
+   "recipient": "c1"
+  },
+  {
+   "id": 28,
+   "user": "u1",
+   "text": "আম্মুকে দেড় হাজার টাকা পাঠাও",
+   "intent": "send_money",
+   "amount": 1500,
+   "recipient": "c1"
+  },
+  {
+   "id": 29,
+   "user": "u1",
+   "text": "আম্মাকে দুই হাজার টাকা দাও",
+   "intent": "send_money",
+   "amount": 2000,
+   "recipient": "c1"
+  },
+  {
+   "id": 30,
+   "user": "u1",
+   "text": "মাকে পাঁচশো টাকা পাঠাও",
+   "intent": "send_money",
+   "amount": 500,
+   "recipient": "c1"
+  },
+  {
+   "id": 31,
+   "user": "u1",
+   "text": "আম্মুকে আড়াই হাজার টাকা পাঠাও",
+   "intent": "send_money",
+   "amount": 2500,
+   "recipient": "c1"
+  },
+  {
+   "id": 32,
+   "user": "u1",
+   "text": "আম্মুকে সাড়ে তিন হাজার টাকা পাঠান",
+   "intent": "send_money",
+   "amount": 3500,
+   "recipient": "c1"
+  },
+  {
+   "id": 33,
+   "user": "u1",
+   "text": "আম্মুকে পৌনে দুই হাজার টাকা পাঠাও",
+   "intent": "send_money",
+   "amount": 1750,
+   "recipient": "c1"
+  },
+  {
+   "id": 34,
+   "user": "u1",
+   "text": "আম্মুকে ১৫০০ টাকা পাঠাও",
+   "intent": "send_money",
+   "amount": 1500,
+   "recipient": "c1"
+  },
+  {
+   "id": 35,
+   "user": "u1",
+   "text": "আম্মুকে ১,০০০ টাকা পাঠিয়ে দাও",
+   "intent": "send_money",
+   "amount": 1000,
+   "recipient": "c1"
+  },
+  {
+   "id": 36,
+   "user": "u1",
+   "text": "রহিম ভাইকে ৫০০ টাকা পাঠাও",
+   "intent": "send_money",
+   "amount": 500,
+   "recipient": "c2"
+  },
+  {
+   "id": 37,
+   "user": "u1",
+   "text": "রহিম ভাইকে এক হাজার টাকা দাও",
+   "intent": "send_money",
+   "amount": 1000,
+   "recipient": "c2"
+  },
+  {
+   "id": 38,
+   "user": "u1",
+   "text": "ভাইয়াকে বারোশো টাকা পাঠাও",
+   "intent": "send_money",
+   "amount": 1200,
+   "recipient": "c2"
+  },
+  {
+   "id": 39,
+   "user": "u1",
+   "text": "রহিম স্টোরে তিনশো টাকা দাও",
+   "intent": "send_money",
+   "amount": 300,
+   "recipient": "c3"
+  },
+  {
+   "id": 40,
+   "user": "u1",
+   "text": "রহিম দোকানে সাড়ে তিনশো টাকা পাঠাও",
+   "intent": "send_money",
+   "amount": 350,
+   "recipient": "c3"
+  },
+  {
+   "id": 41,
+   "user": "u1",
+   "text": "সালমা আপাকে ছয়শো টাকা পাঠাও",
+   "intent": "send_money",
+   "amount": 600,
+   "recipient": "c4"
+  },
+  {
+   "id": 42,
+   "user": "u1",
+   "text": "সালমাকে আটশো টাকা দাও",
+   "intent": "send_money",
+   "amount": 800,
+   "recipient": "c4"
+  },
+  {
+   "id": 43,
+   "user": "u1",
+   "text": "আপাকে সাতশো টাকা পাঠাও",
+   "intent": "send_money",
+   "amount": 700,
+   "recipient": "c4"
+  },
+  {
+   "id": 44,
+   "user": "u1",
+   "text": "করিমকে সাড়ে চার হাজার টাকা পাঠাও",
+   "intent": "send_money",
+   "amount": 4500,
+   "recipient": "c5"
+  },
+  {
+   "id": 45,
+   "user": "u1",
+   "text": "বাড়িওয়ালাকে ৪৫০০ টাকা পাঠাও",
+   "intent": "send_money",
+   "amount": 4500,
+   "recipient": "c5"
+  },
+  {
+   "id": 46,
+   "user": "u1",
+   "text": "আম্মুকে দুই হাজার পাঁচশো টাকা পাঠাও",
+   "intent": "send_money",
+   "amount": 2500,
+   "recipient": "c1"
+  },
+  {
+   "id": 47,
+   "user": "u1",
+   "text": "আম্মুকে পঁচিশ হাজার টাকা পাঠাও",
+   "intent": "send_money",
+   "amount": 25000,
+   "recipient": "c1"
+  },
+  {
+   "id": 48,
+   "user": "u1",
+   "text": "আম্মুকে এক লাখ টাকা পাঠাও",
+   "intent": "send_money",
+   "amount": 100000,
+   "recipient": "c1"
+  },
+  {
+   "id": 49,
+   "user": "u1",
+   "text": "আম্মুকে দেড়শো টাকা দাও",
+   "intent": "send_money",
+   "amount": 150,
+   "recipient": "c1"
+  },
+  {
+   "id": 50,
+   "user": "u1",
+   "text": "আম্মুকে আড়াইশো টাকা পাঠাও",
+   "intent": "send_money",
+   "amount": 250,
+   "recipient": "c1"
+  },
+  {
+   "id": 51,
+   "user": "u1",
+   "text": "send 500 taka to Ammu",
+   "intent": "send_money",
+   "amount": 500,
+   "recipient": "c1"
+  },
+  {
+   "id": 52,
+   "user": "u1",
+   "text": "send 2000 tk to salma",
+   "intent": "send_money",
+   "amount": 2000,
+   "recipient": "c4"
+  },
+  {
+   "id": 53,
+   "user": "u1",
+   "text": "transfer 4500 to my landlord",
+   "intent": "send_money",
+   "amount": 4500,
+   "recipient": "c5"
+  },
+  {
+   "id": 54,
+   "user": "u1",
+   "text": "send two thousand five hundred to ammu",
+   "intent": "send_money",
+   "amount": 2500,
+   "recipient": "c1"
+  },
+  {
+   "id": 55,
+   "user": "u1",
+   "text": "send one thousand taka to rahim bhai",
+   "intent": "send_money",
+   "amount": 1000,
+   "recipient": "c2"
+  },
+  {
+   "id": 56,
+   "user": "u1",
+   "text": "give 300 to rahim store",
+   "intent": "send_money",
+   "amount": 300,
+   "recipient": "c3"
+  },
+  {
+   "id": 57,
+   "user": "u1",
+   "text": "01799998888 e 500 taka pathao",
+   "intent": "send_money",
+   "amount": 500,
+   "recipient": "01799998888"
+  },
+  {
+   "id": 58,
+   "user": "u1",
+   "text": "০১৭৯৯৯৯৮৮৮৮ নম্বরে ৫০০ টাকা পাঠাও",
+   "intent": "send_money",
+   "amount": 500,
+   "recipient": "01799998888"
+  },
+  {
+   "id": 59,
+   "user": "u1",
+   "text": "017 9999 8888 te 1000 taka dao",
+   "intent": "send_money",
+   "amount": 1000,
+   "recipient": "01799998888"
+  },
+  {
+   "id": 60,
+   "user": "u1",
+   "text": "+8801799998888 e 700 pathao",
+   "intent": "send_money",
+   "amount": 700,
+   "recipient": "01799998888"
+  },
+  {
+   "id": 61,
+   "user": "u1",
+   "text": "01700000101 e 500 taka pathao",
+   "intent": "send_money",
+   "amount": 500,
+   "recipient": "c1"
+  },
+  {
+   "id": 62,
+   "user": "u1",
+   "text": "01899997777 নম্বরে দেড় হাজার টাকা পাঠাও",
+   "intent": "send_money",
+   "amount": 1500,
+   "recipient": "01899997777"
+  },
+  {
+   "id": 63,
+   "user": "u1",
+   "text": "01799998888 number e 2000 taka ferot pathao",
+   "intent": "send_money",
+   "amount": 2000,
+   "recipient": "01799998888"
+  },
+  {
+   "id": 64,
+   "user": "u1",
+   "text": "send 3000 to 01611112222",
+   "intent": "send_money",
+   "amount": 3000,
+   "recipient": "01611112222"
+  },
+  {
+   "id": 65,
+   "user": "u1",
+   "text": "amar number e 50 taka recharge koro",
+   "intent": "mobile_recharge",
+   "amount": 50,
+   "recipient": "self"
+  },
+  {
+   "id": 66,
+   "user": "u1",
+   "text": "আমার নম্বরে ৫০ টাকা রিচার্জ করো",
+   "intent": "mobile_recharge",
+   "amount": 50,
+   "recipient": "self"
+  },
+  {
+   "id": 67,
+   "user": "u1",
+   "text": "ammu ke 100 taka recharge kore dao",
+   "intent": "mobile_recharge",
+   "amount": 100,
+   "recipient": "c1"
+  },
+  {
+   "id": 68,
+   "user": "u1",
+   "text": "আম্মুর নম্বরে ১০০ টাকা রিচার্জ",
+   "intent": "mobile_recharge",
+   "amount": 100,
+   "recipient": "c1"
+  },
+  {
+   "id": 69,
+   "user": "u1",
+   "text": "01799998888 e 20 taka recharge",
+   "intent": "mobile_recharge",
+   "amount": 20,
+   "recipient": "01799998888"
+  },
+  {
+   "id": 70,
+   "user": "u1",
+   "text": "salma apa ke 50 taka flexiload",
+   "intent": "mobile_recharge",
+   "amount": 50,
+   "recipient": "c4"
+  },
+  {
+   "id": 71,
+   "user": "u1",
+   "text": "amar mobile e 30 tk recharge",
+   "intent": "mobile_recharge",
+   "amount": 30,
+   "recipient": "self"
+  },
+  {
+   "id": 72,
+   "user": "u1",
+   "text": "রহিম ভাইকে বিশ টাকা রিচার্জ করে দাও",
+   "intent": "mobile_recharge",
+   "amount": 20,
+   "recipient": "c2"
+  },
+  {
+   "id": 73,
+   "user": "u1",
+   "text": "recharge 100 taka to my number",
+   "intent": "mobile_recharge",
+   "amount": 100,
+   "recipient": "self"
+  },
+  {
+   "id": 74,
+   "user": "u1",
+   "text": "আমার ফোনে ত্রিশ টাকা রিচার্জ করো",
+   "intent": "mobile_recharge",
+   "amount": 30,
+   "recipient": "self"
+  },
+  {
+   "id": 75,
+   "user": "u1",
+   "text": "balance koto",
+   "intent": "check_balance",
+   "amount": null,
+   "recipient": null
+  },
+  {
+   "id": 76,
+   "user": "u1",
+   "text": "আমার ব্যালেন্স কত",
+   "intent": "check_balance",
+   "amount": null,
+   "recipient": null
+  },
+  {
+   "id": 77,
+   "user": "u1",
+   "text": "koto taka ache",
+   "intent": "check_balance",
+   "amount": null,
+   "recipient": null
+  },
+  {
+   "id": 78,
+   "user": "u1",
+   "text": "check balance",
+   "intent": "check_balance",
+   "amount": null,
+   "recipient": null
+  },
+  {
+   "id": 79,
+   "user": "u1",
+   "text": "কত টাকা আছে",
+   "intent": "check_balance",
+   "amount": null,
+   "recipient": null
+  },
+  {
+   "id": 80,
+   "user": "u1",
+   "text": "500 taka cash out korbo",
+   "intent": "unsupported",
+   "amount": null,
+   "recipient": null
+  },
+  {
+   "id": 81,
+   "user": "u1",
+   "text": "ক্যাশ আউট করব ১০০০ টাকা",
+   "intent": "unsupported",
+   "amount": null,
+   "recipient": null
+  },
+  {
+   "id": 82,
+   "user": "u1",
+   "text": "current bill dibo",
+   "intent": "unsupported",
+   "amount": null,
+   "recipient": null
+  },
+  {
+   "id": 83,
+   "user": "u1",
+   "text": "বিদ্যুৎ বিল দিব",
+   "intent": "unsupported",
+   "amount": null,
+   "recipient": null
+  },
+  {
+   "id": 84,
+   "user": "u1",
+   "text": "rahim ke 500 taka pathao",
+   "intent": "send_money",
+   "amount": 500,
+   "recipient": "ask"
+  },
+  {
+   "id": 85,
+   "user": "u1",
+   "text": "রহিমকে ৫০০ টাকা পাঠাও",
+   "intent": "send_money",
+   "amount": 500,
+   "recipient": "ask"
+  },
+  {
+   "id": 86,
+   "user": "u1",
+   "text": "ammu ke 500 1000 pathao",
+   "intent": "send_money",
+   "amount": null,
+   "recipient": "c1"
+  },
+  {
+   "id": 87,
+   "user": "u1",
+   "text": "ammu ke pathao",
+   "intent": "send_money",
+   "amount": null,
+   "recipient": "c1"
+  },
+  {
+   "id": 88,
+   "user": "u1",
+   "text": "আম্মুকে টাকা পাঠাও",
+   "intent": "send_money",
+   "amount": null,
+   "recipient": "c1"
+  },
+  {
+   "id": 89,
+   "user": "u1",
+   "text": "salma apa ke 500, na 1000 pathao",
+   "intent": "send_money",
+   "amount": null,
+   "recipient": "c4"
+  },
+  {
+   "id": 90,
+   "user": "u1",
+   "text": "500 taka pathao",
+   "intent": "send_money",
+   "amount": 500,
+   "recipient": "ask"
+  },
+  {
+   "id": 91,
+   "user": "u1",
+   "text": "৫০০ টাকা পাঠাও",
+   "intent": "send_money",
+   "amount": 500,
+   "recipient": "ask"
+  },
+  {
+   "id": 92,
+   "user": "u1",
+   "text": "send 1000 taka",
+   "intent": "send_money",
+   "amount": 1000,
+   "recipient": "ask"
+  },
+  {
+   "id": 93,
+   "user": "u1",
+   "text": "rohim bhai ke 500 pathao",
+   "intent": "send_money",
+   "amount": 500,
+   "recipient": "c2?"
+  },
+  {
+   "id": 94,
+   "user": "u1",
+   "text": "salmaa ke 500 taka",
+   "intent": "send_money",
+   "amount": 500,
+   "recipient": "c4?"
+  },
+  {
+   "id": 95,
+   "user": "u1",
+   "text": "hello",
+   "intent": "unknown",
+   "amount": null,
+   "recipient": null
+  },
+  {
+   "id": 96,
+   "user": "u1",
+   "text": "ki khobor",
+   "intent": "unknown",
+   "amount": null,
+   "recipient": null
+  }
+ ]
+}

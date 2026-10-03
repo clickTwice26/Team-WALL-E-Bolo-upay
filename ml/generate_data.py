@@ -37,7 +37,7 @@ USERS = [
              "phone": phone("0170000", 102), "aliases": ["rahim bhai", "রহিম ভাই", "rahim", "রহিম", "bhaiya", "ভাইয়া"],
              "usual": 1000, "freq": 3},
             {"id": "c3", "name": "Rahim Store", "name_bn": "রহিম স্টোর", "relation": "shop",
-             "phone": phone("0170000", 103), "aliases": ["rahim store", "রহিম স্টোর", "rahim dokan", "রহিম দোকান", "rahim"],
+             "phone": phone("0170000", 103), "aliases": ["rahim store", "রহিম স্টোর", "rahim dokan", "রহিম দোকান", "rahim", "রহিম"],
              "usual": 350, "freq": 5},
             {"id": "c4", "name": "Salma Apa", "name_bn": "সালমা আপা", "relation": "sister",
              "phone": phone("0170000", 104), "aliases": ["salma", "সালমা", "salma apa", "সালমা আপা", "apa", "আপা"],

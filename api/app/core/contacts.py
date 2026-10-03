@@ -10,11 +10,13 @@ from __future__ import annotations
 from rapidfuzz import fuzz
 
 from .numbers import is_number_token
-from .text import normalize
+from .text import nfc, normalize
 
 # Case markers glued to names: আম্মুকে, rahimke, রহিমের, karim-re ...
-SUFFIXES = sorted(["কে", "রে", "এর", "ের", "র", "ke", "k", "re", "er", "r",
-                   "ko", "ki", "ক", "কেও"], key=len, reverse=True)
+SUFFIXES = sorted(["কে", "রে", "এর", "ের", "র", "ে", "তে", "য়ে", "কেও",
+                   "ke", "k", "re", "er", "r", "ko", "ki", "e", "te"],
+                  key=len, reverse=True)
+SUFFIXES = [nfc(x) for x in SUFFIXES]
 
 STOPWORDS = {
     "taka", "tk", "টাকা", "pathao", "pathan", "pathai", "পাঠাও", "পাঠান",
@@ -30,7 +32,7 @@ def _bases(tok: str) -> set[str]:
     out = {tok}
     for suf in SUFFIXES:
         if tok.endswith(suf) and len(tok) - len(suf) >= 2:
-            out.add(tok[: -len(suf)])
+            out.add(nfc(tok[: -len(suf)]))
     return out
 
 

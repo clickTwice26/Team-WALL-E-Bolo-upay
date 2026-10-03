@@ -1,0 +1,13 @@
+{
+  "test_set_size": 96,
+  "llm_used": false,
+  "intent_accuracy": 1.0,
+  "amount_accuracy": 1.0,
+  "recipient_accuracy": 1.0,
+  "end_to_end_accuracy": 1.0,
+  "silent_wrong_amount_rate": 0.0,
+  "silent_wrong_recipient_rate": 0.0,
+  "safe_failure_rate": 1.0,
+  "failures": [],
+  "note": "Test commands were written by the team (Bangla, Banglish, English, Bangla digits, number words, phone numbers, ambiguous names and amounts). Real user speech will be messier; collecting real commands is the next step."
+}
