@@ -87,7 +87,7 @@ Features:
 | return_claim_no_inflow | user says "ferot" but no incoming money from that number |
 | scam_phrase_score | from scam interview answers |
 
-- Model: logistic regression (explainable weights) trained on synthetic labeled scenarios; exported to `model/risk_weights.json` and run in TypeScript.
+- Model: logistic regression (explainable weights) trained on synthetic labeled scenarios; saved to `model/risk_model.joblib` and served by FastAPI.
 - Hard rules override: `return_claim_no_inflow` → RED; PIN/OTP phrase → RED.
 - Thresholds: score < 0.3 GREEN, 0.3–0.7 YELLOW, ≥ 0.7 RED (tuned on validation set).
 - Output: level + top 3 reasons in Bangla and English.
@@ -142,25 +142,33 @@ Labeled command test set (150–200 items): Bangla, Banglish, English, Bangla di
 
 Report measured numbers only.
 
-## 5. Tech stack
+## 5. Tech stack (self-hosted server)
 | Layer | Choice |
 |---|---|
-| Frontend + API | Next.js (App Router), TypeScript, Tailwind |
-| Speech | Web Speech API (STT), SpeechSynthesis (TTS) |
-| LLM | Gemini / OpenAI / Claude via API route; optional |
-| ML training | Python, pandas, scikit-learn |
-| Model serving | exported JSON weights, inference in TypeScript |
-| Auth demo | WebAuthn, hashed PIN |
-| Deploy | Vercel (live URL) |
+| Frontend | Next.js (App Router), TypeScript, Tailwind CSS, shadcn/ui |
+| Speech | Web Speech API (STT, bn-BD), SpeechSynthesis (TTS) |
+| Backend API | FastAPI (Python), Pydantic schemas, Uvicorn |
+| LLM | Gemini / OpenAI / Claude via backend; optional (rule parser fallback) |
+| Fuzzy matching | rapidfuzz |
+| ML | pandas, numpy, scikit-learn (logistic regression + gradient boosting), joblib |
+| Explainability | per-feature contributions (LR coefficients), SHAP optional |
+| Database | SQLite (prototype) via SQLAlchemy; PostgreSQL-ready |
+| Auth demo | WebAuthn (@simplewebauthn/browser + py_webauthn), hashed PIN (bcrypt) |
+| Testing | pytest (backend + evaluation), Vitest (frontend utils) |
+| Containers | Docker + Docker Compose (web, api) |
+| Reverse proxy + HTTPS | Caddy (automatic Let's Encrypt TLS) |
+| CI (optional) | GitHub Actions: lint + tests on push |
+
+HTTPS is mandatory: browsers block microphone access and WebAuthn on plain HTTP.
 
 ## 6. Repository layout
 ```
-app/                 Next.js pages: / (assistant), /dashboard, /accuracy
-app/api/parse        intent API (LLM + rules)
-app/api/risk         risk scoring API
-lib/                 normalize, intent, contacts, risk, interview, scam matcher
+deploy/              docker-compose.yml, Caddyfile
+web/                 Next.js frontend: / (assistant), /dashboard, /accuracy
+api/                 FastAPI backend: /parse, /risk, /interview, /auth, /metrics
+api/core/            normalize, intent, contacts, risk, interview, scam matcher
 data/                scam_phrases.json, users.json, transactions.json, test_commands.json
-model/               risk_weights.json, metrics.json
+model/               risk_model.joblib, metrics.json
 ml/                  generate_data.py, train_risk.py, evaluate.py
 docs/                PIPELINE.md, report
 .env.example         LLM_PROVIDER, LLM_API_KEY placeholders
