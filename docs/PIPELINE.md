@@ -34,7 +34,7 @@ Prototype for AI Dev Fest 2026 AI Hackathon (DIU CPC × upay). Synthetic data on
         │  large text, recipient name + amount, read back by voice
         ▼
 [8] Risk-based authentication
-        │  GREEN → fingerprint (WebAuthn) or PIN
+        │  GREEN → Face ID / fingerprint (phones) or PIN
         │  YELLOW → PIN required + warning
         │  RED → hold + cooling-off timer + warning, then PIN
         ▼
@@ -47,7 +47,7 @@ Prototype for AI Dev Fest 2026 AI Hackathon (DIU CPC × upay). Synthetic data on
 ## 2. Components
 
 ### [1] Voice input
-- Browser Web Speech API, `lang = "bn-BD"` (fallback `en-US`), Chrome.
+- speech_to_text (Web Speech API on web), `bn-BD` with an English toggle.
 - Always show the transcript in an editable box. Text input always available.
 - Raw audio never leaves the browser.
 
@@ -105,7 +105,7 @@ Features:
 - Edit / Cancel always visible.
 
 ### [8] Authentication
-- WebAuthn passkey for fingerprint (platform authenticator). If unsupported → PIN.
+- Face ID / fingerprint via local_auth on iOS/Android (GREEN only). Web build → PIN.
 - PIN keypad: large keys, Bangla digits, vibration per tap, digits never spoken.
 - Demo PIN hashed (SHA-256 + salt), never logged.
 - RED: 60-second cooling-off timer + "Call the person on their known number" + helpline 16268.
@@ -145,26 +145,26 @@ Report measured numbers only.
 ## 5. Tech stack (self-hosted server)
 | Layer | Choice |
 |---|---|
-| Frontend | Next.js (App Router), TypeScript, Tailwind CSS, shadcn/ui |
-| Speech | Web Speech API (STT, bn-BD), SpeechSynthesis (TTS) |
+| App | Flutter (iOS, Android, Web), bundled Hind Siliguri font |
+| Speech | speech_to_text (STT, bn-BD), flutter_tts (TTS) |
 | Backend API | FastAPI (Python), Pydantic schemas, Uvicorn |
 | LLM | Gemini / OpenAI / Claude via backend; optional (rule parser fallback) |
 | Fuzzy matching | rapidfuzz |
 | ML | pandas, numpy, scikit-learn (logistic regression + gradient boosting), joblib |
 | Explainability | per-feature contributions (LR coefficients), SHAP optional |
-| Database | SQLite (prototype) via SQLAlchemy; PostgreSQL-ready |
-| Auth demo | WebAuthn (@simplewebauthn/browser + py_webauthn), hashed PIN (bcrypt) |
-| Testing | pytest (backend + evaluation), Vitest (frontend utils) |
-| Containers | Docker + Docker Compose (web, api) |
+| Database | SQLite (prototype) |
+| Auth | local_auth (Face ID / fingerprint, phones), bcrypt-hashed PIN, server-side rules |
+| Testing | pytest (backend + evaluation), flutter analyze |
+| Containers | Docker + Docker Compose (one app image + Caddy) |
 | Reverse proxy + HTTPS | Caddy (automatic Let's Encrypt TLS) |
 | CI (optional) | GitHub Actions: lint + tests on push |
 
-HTTPS is mandatory: browsers block microphone access and WebAuthn on plain HTTP.
+HTTPS is mandatory: browsers block microphone access on plain HTTP.
 
 ## 6. Repository layout
 ```
-deploy/              docker-compose.yml, Caddyfile
-web/                 Next.js frontend: / (assistant), /dashboard, /accuracy
+deploy/              Dockerfile, Caddyfile (docker-compose.yml at repo root)
+app/                 Flutter app: home, assistant, dashboard, accuracy
 api/                 FastAPI backend: /parse, /risk, /interview, /auth, /metrics
 api/core/            normalize, intent, contacts, risk, interview, scam matcher
 data/                scam_phrases.json, users.json, transactions.json, test_commands.json
