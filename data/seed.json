@@ -1,0 +1,2710 @@
+{
+ "generated_at": "2026-10-03T18:00:00+06:00",
+ "demo_pin": "1234",
+ "note": "Synthetic data. No real customers, numbers or transactions.",
+ "users": [
+  {
+   "id": "u1",
+   "name": "Rahima Begum",
+   "name_bn": "রহিমা বেগম",
+   "phone": "01700000001",
+   "persona": "Garment worker, Gazipur",
+   "balance": 8450,
+   "contacts": [
+    {
+     "id": "c1",
+     "name": "Ammu",
+     "name_bn": "আম্মু",
+     "relation": "mother",
+     "phone": "01700000101",
+     "aliases": [
+      "ammu",
+      "আম্মু",
+      "amma",
+      "আম্মা",
+      "ma",
+      "মা",
+      "maa"
+     ]
+    },
+    {
+     "id": "c2",
+     "name": "Rahim Uddin",
+     "name_bn": "রহিম উদ্দিন",
+     "relation": "brother",
+     "phone": "01700000102",
+     "aliases": [
+      "rahim bhai",
+      "রহিম ভাই",
+      "rahim",
+      "রহিম",
+      "bhaiya",
+      "ভাইয়া"
+     ]
+    },
+    {
+     "id": "c3",
+     "name": "Rahim Store",
+     "name_bn": "রহিম স্টোর",
+     "relation": "shop",
+     "phone": "01700000103",
+     "aliases": [
+      "rahim store",
+      "রহিম স্টোর",
+      "rahim dokan",
+      "রহিম দোকান",
+      "rahim"
+     ]
+    },
+    {
+     "id": "c4",
+     "name": "Salma Apa",
+     "name_bn": "সালমা আপা",
+     "relation": "sister",
+     "phone": "01700000104",
+     "aliases": [
+      "salma",
+      "সালমা",
+      "salma apa",
+      "সালমা আপা",
+      "apa",
+      "আপা"
+     ]
+    },
+    {
+     "id": "c5",
+     "name": "Karim Landlord",
+     "name_bn": "করিম বাড়িওয়ালা",
+     "relation": "landlord",
+     "phone": "01700000105",
+     "aliases": [
+      "karim",
+      "করিম",
+      "bariwala",
+      "বাড়িওয়ালা",
+      "landlord"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "name": "Karim Mia",
+   "name_bn": "করিম মিয়া",
+   "phone": "01700000002",
+   "persona": "Grocery shop owner, Mirpur",
+   "balance": 23600,
+   "contacts": [
+    {
+     "id": "c6",
+     "name": "Abbu",
+     "name_bn": "আব্বু",
+     "relation": "father",
+     "phone": "01700000201",
+     "aliases": [
+      "abbu",
+      "আব্বু",
+      "abba",
+      "আব্বা",
+      "baba",
+      "বাবা"
+     ]
+    },
+    {
+     "id": "c7",
+     "name": "Jamal Supplier",
+     "name_bn": "জামাল সাপ্লায়ার",
+     "relation": "supplier",
+     "phone": "01700000202",
+     "aliases": [
+      "jamal",
+      "জামাল",
+      "supplier",
+      "সাপ্লায়ার"
+     ]
+    },
+    {
+     "id": "c8",
+     "name": "Nasrin",
+     "name_bn": "নাসরিন",
+     "relation": "wife",
+     "phone": "01700000203",
+     "aliases": [
+      "nasrin",
+      "নাসরিন",
+      "bou",
+      "বউ"
+     ]
+    },
+    {
+     "id": "c9",
+     "name": "Shafiq Bhai",
+     "name_bn": "শফিক ভাই",
+     "relation": "friend",
+     "phone": "01700000204",
+     "aliases": [
+      "shafiq",
+      "শফিক",
+      "shafiq bhai",
+      "শফিক ভাই"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "name": "Nusrat Jahan",
+   "name_bn": "নুসরাত জাহান",
+   "phone": "01700000003",
+   "persona": "University student, Dhaka",
+   "balance": 3120,
+   "contacts": [
+    {
+     "id": "c10",
+     "name": "Abbu",
+     "name_bn": "আব্বু",
+     "relation": "father",
+     "phone": "01700000301",
+     "aliases": [
+      "abbu",
+      "আব্বু",
+      "baba",
+      "বাবা"
+     ]
+    },
+    {
+     "id": "c11",
+     "name": "Mess Manager Tanvir",
+     "name_bn": "তানভীর",
+     "relation": "mess",
+     "phone": "01700000302",
+     "aliases": [
+      "tanvir",
+      "তানভীর",
+      "mess",
+      "মেস",
+      "manager"
+     ]
+    },
+    {
+     "id": "c12",
+     "name": "Riya",
+     "name_bn": "রিয়া",
+     "relation": "friend",
+     "phone": "01700000303",
+     "aliases": [
+      "riya",
+      "রিয়া",
+      "ria"
+     ]
+    }
+   ]
+  }
+ ],
+ "transactions": [
+  {
+   "id": "u1-t28",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 1490,
+   "ts": "2026-04-09T09:11:47.054022+06:00"
+  },
+  {
+   "id": "u1-t75",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 470,
+   "ts": "2026-04-09T15:04:31.803075+06:00"
+  },
+  {
+   "id": "u1-t97",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000105",
+   "amount": 4580,
+   "ts": "2026-04-10T15:20:48.011549+06:00"
+  },
+  {
+   "id": "u1-t33",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 1300,
+   "ts": "2026-04-13T10:46:52.227561+06:00"
+  },
+  {
+   "id": "u1-t51",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000102",
+   "amount": 800,
+   "ts": "2026-04-14T17:57:11.920529+06:00"
+  },
+  {
+   "id": "u1-t64",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 470,
+   "ts": "2026-04-17T16:32:57.494148+06:00"
+  },
+  {
+   "id": "u1-t47",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000102",
+   "amount": 900,
+   "ts": "2026-04-19T10:37:27.931499+06:00"
+  },
+  {
+   "id": "u1-t83",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 350,
+   "ts": "2026-04-20T20:13:48.387487+06:00"
+  },
+  {
+   "id": "u1-t99",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000105",
+   "amount": 5720,
+   "ts": "2026-04-24T11:17:07.110235+06:00"
+  },
+  {
+   "id": "u1-t20",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 1450,
+   "ts": "2026-04-24T14:43:40.845060+06:00"
+  },
+  {
+   "id": "u1-t4",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 1990,
+   "ts": "2026-04-24T18:23:26.146765+06:00"
+  },
+  {
+   "id": "u1-t80",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 310,
+   "ts": "2026-04-26T09:04:58.815486+06:00"
+  },
+  {
+   "id": "u1-t1",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 2190,
+   "ts": "2026-04-28T16:46:27.286962+06:00"
+  },
+  {
+   "id": "u1-t133",
+   "user_id": "u1",
+   "type": "receive",
+   "counterparty": "01800000011",
+   "amount": 8000,
+   "ts": "2026-04-29T15:50:32.862475+06:00"
+  },
+  {
+   "id": "u1-t106",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 50,
+   "ts": "2026-04-30T15:22:28.503476+06:00"
+  },
+  {
+   "id": "u1-t25",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 2000,
+   "ts": "2026-04-30T19:04:44.573070+06:00"
+  },
+  {
+   "id": "u1-t125",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 50,
+   "ts": "2026-05-01T18:18:35.999177+06:00"
+  },
+  {
+   "id": "u1-t60",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 360,
+   "ts": "2026-05-03T12:46:29.468859+06:00"
+  },
+  {
+   "id": "u1-t128",
+   "user_id": "u1",
+   "type": "receive",
+   "counterparty": "01800000036",
+   "amount": 8000,
+   "ts": "2026-05-03T22:57:39.653915+06:00"
+  },
+  {
+   "id": "u1-t23",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 3080,
+   "ts": "2026-05-04T17:14:27.760742+06:00"
+  },
+  {
+   "id": "u1-t79",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 270,
+   "ts": "2026-05-05T10:05:43.517131+06:00"
+  },
+  {
+   "id": "u1-t94",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000104",
+   "amount": 430,
+   "ts": "2026-05-08T19:48:56.399952+06:00"
+  },
+  {
+   "id": "u1-t77",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 450,
+   "ts": "2026-05-09T10:12:29.582627+06:00"
+  },
+  {
+   "id": "u1-t86",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000104",
+   "amount": 590,
+   "ts": "2026-05-09T11:34:42.043520+06:00"
+  },
+  {
+   "id": "u1-t59",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 330,
+   "ts": "2026-05-09T19:34:21.260346+06:00"
+  },
+  {
+   "id": "u1-t46",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000102",
+   "amount": 820,
+   "ts": "2026-05-10T16:42:30.735993+06:00"
+  },
+  {
+   "id": "u1-t108",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 100,
+   "ts": "2026-05-12T12:45:42.095741+06:00"
+  },
+  {
+   "id": "u1-t16",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 2060,
+   "ts": "2026-05-13T15:11:57.337442+06:00"
+  },
+  {
+   "id": "u1-t93",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000104",
+   "amount": 370,
+   "ts": "2026-05-14T13:43:02.546401+06:00"
+  },
+  {
+   "id": "u1-t110",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 50,
+   "ts": "2026-05-15T08:47:31.127757+06:00"
+  },
+  {
+   "id": "u1-t137",
+   "user_id": "u1",
+   "type": "receive",
+   "counterparty": "01800000024",
+   "amount": 5000,
+   "ts": "2026-05-16T07:08:36.277884+06:00"
+  },
+  {
+   "id": "u1-t90",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000104",
+   "amount": 590,
+   "ts": "2026-05-19T16:08:01.605362+06:00"
+  },
+  {
+   "id": "u1-t107",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 50,
+   "ts": "2026-05-22T20:33:05.722420+06:00"
+  },
+  {
+   "id": "u1-t104",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 50,
+   "ts": "2026-05-22T22:58:54.581400+06:00"
+  },
+  {
+   "id": "u1-t73",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 380,
+   "ts": "2026-05-23T17:44:45.501370+06:00"
+  },
+  {
+   "id": "u1-t70",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 380,
+   "ts": "2026-05-24T09:30:35.648248+06:00"
+  },
+  {
+   "id": "u1-t132",
+   "user_id": "u1",
+   "type": "receive",
+   "counterparty": "01800000035",
+   "amount": 10000,
+   "ts": "2026-05-24T15:25:53.427355+06:00"
+  },
+  {
+   "id": "u1-t44",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000102",
+   "amount": 1140,
+   "ts": "2026-05-25T09:32:27.284429+06:00"
+  },
+  {
+   "id": "u1-t89",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000104",
+   "amount": 330,
+   "ts": "2026-05-25T12:49:45.412411+06:00"
+  },
+  {
+   "id": "u1-t37",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000102",
+   "amount": 770,
+   "ts": "2026-05-26T21:26:26.156893+06:00"
+  },
+  {
+   "id": "u1-t43",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000102",
+   "amount": 840,
+   "ts": "2026-05-27T19:25:34.831175+06:00"
+  },
+  {
+   "id": "u1-t49",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000102",
+   "amount": 1670,
+   "ts": "2026-06-01T16:43:29.280827+06:00"
+  },
+  {
+   "id": "u1-t115",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 50,
+   "ts": "2026-06-03T13:37:07.741682+06:00"
+  },
+  {
+   "id": "u1-t85",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000104",
+   "amount": 650,
+   "ts": "2026-06-04T18:51:55.262900+06:00"
+  },
+  {
+   "id": "u1-t32",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 2440,
+   "ts": "2026-06-06T18:37:49.836930+06:00"
+  },
+  {
+   "id": "u1-t6",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 1800,
+   "ts": "2026-06-07T12:08:21.801201+06:00"
+  },
+  {
+   "id": "u1-t38",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000102",
+   "amount": 900,
+   "ts": "2026-06-07T15:47:44.273580+06:00"
+  },
+  {
+   "id": "u1-t103",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 50,
+   "ts": "2026-06-07T17:29:04.129944+06:00"
+  },
+  {
+   "id": "u1-t29",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 1360,
+   "ts": "2026-06-09T08:59:30.965035+06:00"
+  },
+  {
+   "id": "u1-t50",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000102",
+   "amount": 1210,
+   "ts": "2026-06-09T17:50:04.877352+06:00"
+  },
+  {
+   "id": "u1-t116",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 100,
+   "ts": "2026-06-10T09:54:02.380060+06:00"
+  },
+  {
+   "id": "u1-t126",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 50,
+   "ts": "2026-06-10T18:39:06.255360+06:00"
+  },
+  {
+   "id": "u1-t98",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000105",
+   "amount": 4580,
+   "ts": "2026-06-12T11:52:14.094045+06:00"
+  },
+  {
+   "id": "u1-t58",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 480,
+   "ts": "2026-06-14T14:28:09.478163+06:00"
+  },
+  {
+   "id": "u1-t5",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 2010,
+   "ts": "2026-06-17T13:18:47.411902+06:00"
+  },
+  {
+   "id": "u1-t8",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 2630,
+   "ts": "2026-06-17T15:19:48.938696+06:00"
+  },
+  {
+   "id": "u1-t68",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 570,
+   "ts": "2026-06-19T08:27:36.673939+06:00"
+  },
+  {
+   "id": "u1-t48",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000102",
+   "amount": 780,
+   "ts": "2026-06-20T20:59:17.611418+06:00"
+  },
+  {
+   "id": "u1-t45",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000102",
+   "amount": 1490,
+   "ts": "2026-06-24T08:46:03.544841+06:00"
+  },
+  {
+   "id": "u1-t121",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 50,
+   "ts": "2026-06-28T11:31:31.157633+06:00"
+  },
+  {
+   "id": "u1-t138",
+   "user_id": "u1",
+   "type": "receive",
+   "counterparty": "01800000048",
+   "amount": 12000,
+   "ts": "2026-06-29T02:23:19.658068+06:00"
+  },
+  {
+   "id": "u1-t13",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 1670,
+   "ts": "2026-06-30T16:34:51.016863+06:00"
+  },
+  {
+   "id": "u1-t67",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 320,
+   "ts": "2026-07-01T17:36:50.344158+06:00"
+  },
+  {
+   "id": "u1-t12",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 2210,
+   "ts": "2026-07-02T09:21:46.519913+06:00"
+  },
+  {
+   "id": "u1-t122",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 30,
+   "ts": "2026-07-06T16:30:55.311955+06:00"
+  },
+  {
+   "id": "u1-t27",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 2020,
+   "ts": "2026-07-07T10:33:10.905353+06:00"
+  },
+  {
+   "id": "u1-t123",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 50,
+   "ts": "2026-07-07T20:46:32.533305+06:00"
+  },
+  {
+   "id": "u1-t119",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 20,
+   "ts": "2026-07-08T14:14:58.307478+06:00"
+  },
+  {
+   "id": "u1-t102",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000105",
+   "amount": 4990,
+   "ts": "2026-07-08T15:55:05.393094+06:00"
+  },
+  {
+   "id": "u1-t36",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 2180,
+   "ts": "2026-07-09T10:47:28.524620+06:00"
+  },
+  {
+   "id": "u1-t39",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000102",
+   "amount": 1870,
+   "ts": "2026-07-09T16:17:16.049060+06:00"
+  },
+  {
+   "id": "u1-t127",
+   "user_id": "u1",
+   "type": "receive",
+   "counterparty": "01800000047",
+   "amount": 8000,
+   "ts": "2026-07-11T02:29:29.817935+06:00"
+  },
+  {
+   "id": "u1-t21",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 2360,
+   "ts": "2026-07-14T17:51:42.895201+06:00"
+  },
+  {
+   "id": "u1-t41",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000102",
+   "amount": 930,
+   "ts": "2026-07-14T21:14:53.502698+06:00"
+  },
+  {
+   "id": "u1-t62",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 350,
+   "ts": "2026-07-15T21:42:50.937558+06:00"
+  },
+  {
+   "id": "u1-t42",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000102",
+   "amount": 730,
+   "ts": "2026-07-17T16:22:32.101380+06:00"
+  },
+  {
+   "id": "u1-t91",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000104",
+   "amount": 560,
+   "ts": "2026-07-19T14:26:14.505762+06:00"
+  },
+  {
+   "id": "u1-t2",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 3170,
+   "ts": "2026-07-19T20:32:57.206029+06:00"
+  },
+  {
+   "id": "u1-t11",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 2210,
+   "ts": "2026-07-19T21:08:21.615474+06:00"
+  },
+  {
+   "id": "u1-t56",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 360,
+   "ts": "2026-07-20T13:02:51.042879+06:00"
+  },
+  {
+   "id": "u1-t3",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 1550,
+   "ts": "2026-07-21T17:03:09.481142+06:00"
+  },
+  {
+   "id": "u1-t31",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 2030,
+   "ts": "2026-07-26T17:55:18.383186+06:00"
+  },
+  {
+   "id": "u1-t22",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 2440,
+   "ts": "2026-07-27T12:39:45.784029+06:00"
+  },
+  {
+   "id": "u1-t63",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 380,
+   "ts": "2026-07-29T13:57:34.575569+06:00"
+  },
+  {
+   "id": "u1-t7",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 1810,
+   "ts": "2026-07-31T12:04:09.551449+06:00"
+  },
+  {
+   "id": "u1-t95",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000104",
+   "amount": 500,
+   "ts": "2026-07-31T20:00:14.509130+06:00"
+  },
+  {
+   "id": "u1-t81",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 250,
+   "ts": "2026-08-01T15:43:29.948148+06:00"
+  },
+  {
+   "id": "u1-t88",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000104",
+   "amount": 460,
+   "ts": "2026-08-02T12:34:35.136129+06:00"
+  },
+  {
+   "id": "u1-t100",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000105",
+   "amount": 4980,
+   "ts": "2026-08-05T09:41:57.239749+06:00"
+  },
+  {
+   "id": "u1-t26",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 2680,
+   "ts": "2026-08-05T20:12:09.069090+06:00"
+  },
+  {
+   "id": "u1-t135",
+   "user_id": "u1",
+   "type": "receive",
+   "counterparty": "01800000027",
+   "amount": 12000,
+   "ts": "2026-08-06T10:57:48.756861+06:00"
+  },
+  {
+   "id": "u1-t35",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 2120,
+   "ts": "2026-08-06T18:42:02.571683+06:00"
+  },
+  {
+   "id": "u1-t112",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 50,
+   "ts": "2026-08-06T20:06:53.436734+06:00"
+  },
+  {
+   "id": "u1-t101",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000105",
+   "amount": 2910,
+   "ts": "2026-08-07T09:00:25.313199+06:00"
+  },
+  {
+   "id": "u1-t30",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 2000,
+   "ts": "2026-08-07T09:35:13.328338+06:00"
+  },
+  {
+   "id": "u1-t92",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000104",
+   "amount": 590,
+   "ts": "2026-08-07T18:39:21.976020+06:00"
+  },
+  {
+   "id": "u1-t134",
+   "user_id": "u1",
+   "type": "receive",
+   "counterparty": "01800000049",
+   "amount": 8000,
+   "ts": "2026-08-08T19:02:47.263156+06:00"
+  },
+  {
+   "id": "u1-t129",
+   "user_id": "u1",
+   "type": "receive",
+   "counterparty": "01800000009",
+   "amount": 5000,
+   "ts": "2026-08-15T04:40:33.612510+06:00"
+  },
+  {
+   "id": "u1-t55",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 300,
+   "ts": "2026-08-15T09:30:14.995533+06:00"
+  },
+  {
+   "id": "u1-t19",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 1640,
+   "ts": "2026-08-15T18:32:23.417966+06:00"
+  },
+  {
+   "id": "u1-t54",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000102",
+   "amount": 870,
+   "ts": "2026-08-16T08:20:11.727316+06:00"
+  },
+  {
+   "id": "u1-t84",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 330,
+   "ts": "2026-08-20T13:18:29.476736+06:00"
+  },
+  {
+   "id": "u1-t96",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000104",
+   "amount": 610,
+   "ts": "2026-08-21T18:08:24.232878+06:00"
+  },
+  {
+   "id": "u1-t78",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 330,
+   "ts": "2026-08-22T09:01:01.465926+06:00"
+  },
+  {
+   "id": "u1-t76",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 260,
+   "ts": "2026-08-23T16:58:22.284316+06:00"
+  },
+  {
+   "id": "u1-t124",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 50,
+   "ts": "2026-08-23T19:46:18.163483+06:00"
+  },
+  {
+   "id": "u1-t131",
+   "user_id": "u1",
+   "type": "receive",
+   "counterparty": "01800000012",
+   "amount": 8000,
+   "ts": "2026-08-26T01:44:24.853137+06:00"
+  },
+  {
+   "id": "u1-t69",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 290,
+   "ts": "2026-08-27T09:50:29.470849+06:00"
+  },
+  {
+   "id": "u1-t130",
+   "user_id": "u1",
+   "type": "receive",
+   "counterparty": "01800000003",
+   "amount": 10000,
+   "ts": "2026-08-28T06:45:38.081357+06:00"
+  },
+  {
+   "id": "u1-t9",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 1820,
+   "ts": "2026-08-29T15:53:10.097336+06:00"
+  },
+  {
+   "id": "u1-t17",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 2460,
+   "ts": "2026-08-30T08:48:10.025087+06:00"
+  },
+  {
+   "id": "u1-t40",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000102",
+   "amount": 970,
+   "ts": "2026-08-31T11:03:38.311194+06:00"
+  },
+  {
+   "id": "u1-t82",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 460,
+   "ts": "2026-09-02T15:25:13.782503+06:00"
+  },
+  {
+   "id": "u1-t105",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 50,
+   "ts": "2026-09-03T08:10:31.087583+06:00"
+  },
+  {
+   "id": "u1-t87",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000104",
+   "amount": 280,
+   "ts": "2026-09-03T11:54:09.799045+06:00"
+  },
+  {
+   "id": "u1-t109",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 50,
+   "ts": "2026-09-04T14:17:37.044231+06:00"
+  },
+  {
+   "id": "u1-t34",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 2250,
+   "ts": "2026-09-04T20:35:05.538668+06:00"
+  },
+  {
+   "id": "u1-t10",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 2060,
+   "ts": "2026-09-05T15:46:20.059517+06:00"
+  },
+  {
+   "id": "u1-t114",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 100,
+   "ts": "2026-09-06T16:42:06.581599+06:00"
+  },
+  {
+   "id": "u1-t24",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 2080,
+   "ts": "2026-09-08T10:13:31.875960+06:00"
+  },
+  {
+   "id": "u1-t117",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 50,
+   "ts": "2026-09-08T10:35:38.187394+06:00"
+  },
+  {
+   "id": "u1-t66",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 400,
+   "ts": "2026-09-08T15:01:02.567579+06:00"
+  },
+  {
+   "id": "u1-t111",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 100,
+   "ts": "2026-09-08T19:09:46.328673+06:00"
+  },
+  {
+   "id": "u1-t15",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 2660,
+   "ts": "2026-09-12T12:39:37.971561+06:00"
+  },
+  {
+   "id": "u1-t74",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 210,
+   "ts": "2026-09-15T12:51:39.014692+06:00"
+  },
+  {
+   "id": "u1-t136",
+   "user_id": "u1",
+   "type": "receive",
+   "counterparty": "01800000002",
+   "amount": 10000,
+   "ts": "2026-09-17T01:35:12.640265+06:00"
+  },
+  {
+   "id": "u1-t18",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 1580,
+   "ts": "2026-09-18T19:00:01.011409+06:00"
+  },
+  {
+   "id": "u1-t120",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 20,
+   "ts": "2026-09-19T11:58:01.976414+06:00"
+  },
+  {
+   "id": "u1-t71",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 520,
+   "ts": "2026-09-25T16:20:22.990297+06:00"
+  },
+  {
+   "id": "u1-t61",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 450,
+   "ts": "2026-09-25T18:34:00.305097+06:00"
+  },
+  {
+   "id": "u1-t72",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 410,
+   "ts": "2026-09-26T10:47:56.349525+06:00"
+  },
+  {
+   "id": "u1-t118",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 100,
+   "ts": "2026-09-26T21:08:57.487820+06:00"
+  },
+  {
+   "id": "u1-t53",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000102",
+   "amount": 1350,
+   "ts": "2026-09-28T12:03:59.311296+06:00"
+  },
+  {
+   "id": "u1-t57",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 370,
+   "ts": "2026-09-28T14:34:43.033018+06:00"
+  },
+  {
+   "id": "u1-t65",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000103",
+   "amount": 360,
+   "ts": "2026-09-29T11:56:43.332317+06:00"
+  },
+  {
+   "id": "u1-t113",
+   "user_id": "u1",
+   "type": "mobile_recharge",
+   "counterparty": "01700000001",
+   "amount": 20,
+   "ts": "2026-09-29T17:30:54.070148+06:00"
+  },
+  {
+   "id": "u1-t52",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000102",
+   "amount": 900,
+   "ts": "2026-09-29T18:33:47.863672+06:00"
+  },
+  {
+   "id": "u1-t14",
+   "user_id": "u1",
+   "type": "send_money",
+   "counterparty": "01700000101",
+   "amount": 2000,
+   "ts": "2026-10-03T18:00:55.383345+06:00"
+  },
+  {
+   "id": "u2-t107",
+   "user_id": "u2",
+   "type": "receive",
+   "counterparty": "01800000014",
+   "amount": 5000,
+   "ts": "2026-04-07T03:35:02.999443+06:00"
+  },
+  {
+   "id": "u2-t92",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 100,
+   "ts": "2026-04-07T11:18:57.529510+06:00"
+  },
+  {
+   "id": "u2-t48",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 5690,
+   "ts": "2026-04-08T10:28:10.509647+06:00"
+  },
+  {
+   "id": "u2-t100",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 50,
+   "ts": "2026-04-09T13:04:19.897354+06:00"
+  },
+  {
+   "id": "u2-t40",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 7810,
+   "ts": "2026-04-10T20:24:55.133732+06:00"
+  },
+  {
+   "id": "u2-t114",
+   "user_id": "u2",
+   "type": "receive",
+   "counterparty": "01800000029",
+   "amount": 5000,
+   "ts": "2026-04-13T08:03:55.761565+06:00"
+  },
+  {
+   "id": "u2-t59",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 850,
+   "ts": "2026-04-14T11:34:23.354699+06:00"
+  },
+  {
+   "id": "u2-t2",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 4800,
+   "ts": "2026-04-17T21:50:14.118778+06:00"
+  },
+  {
+   "id": "u2-t51",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 1430,
+   "ts": "2026-04-19T12:37:23.777028+06:00"
+  },
+  {
+   "id": "u2-t76",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000204",
+   "amount": 710,
+   "ts": "2026-04-19T16:03:42.500886+06:00"
+  },
+  {
+   "id": "u2-t108",
+   "user_id": "u2",
+   "type": "receive",
+   "counterparty": "01800000012",
+   "amount": 5000,
+   "ts": "2026-04-20T16:41:07.978172+06:00"
+  },
+  {
+   "id": "u2-t17",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 4550,
+   "ts": "2026-04-21T16:35:48.987003+06:00"
+  },
+  {
+   "id": "u2-t9",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 3290,
+   "ts": "2026-04-21T17:36:45.482626+06:00"
+  },
+  {
+   "id": "u2-t4",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 3560,
+   "ts": "2026-04-23T11:09:31.944235+06:00"
+  },
+  {
+   "id": "u2-t110",
+   "user_id": "u2",
+   "type": "receive",
+   "counterparty": "01800000040",
+   "amount": 5000,
+   "ts": "2026-04-25T05:02:01.627220+06:00"
+  },
+  {
+   "id": "u2-t91",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 30,
+   "ts": "2026-04-26T17:56:42.339518+06:00"
+  },
+  {
+   "id": "u2-t105",
+   "user_id": "u2",
+   "type": "receive",
+   "counterparty": "01800000022",
+   "amount": 12000,
+   "ts": "2026-04-27T13:00:26.998966+06:00"
+  },
+  {
+   "id": "u2-t32",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 8110,
+   "ts": "2026-04-28T18:15:53.994463+06:00"
+  },
+  {
+   "id": "u2-t28",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 6520,
+   "ts": "2026-04-29T11:59:14.398714+06:00"
+  },
+  {
+   "id": "u2-t42",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 8930,
+   "ts": "2026-05-02T09:12:05.335509+06:00"
+  },
+  {
+   "id": "u2-t1",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 3020,
+   "ts": "2026-05-05T19:30:00.328758+06:00"
+  },
+  {
+   "id": "u2-t10",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 6260,
+   "ts": "2026-05-13T14:35:51.411407+06:00"
+  },
+  {
+   "id": "u2-t88",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 100,
+   "ts": "2026-05-13T22:16:26.927186+06:00"
+  },
+  {
+   "id": "u2-t54",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 2190,
+   "ts": "2026-05-14T12:42:29.311841+06:00"
+  },
+  {
+   "id": "u2-t5",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 2670,
+   "ts": "2026-05-17T11:39:37.007727+06:00"
+  },
+  {
+   "id": "u2-t112",
+   "user_id": "u2",
+   "type": "receive",
+   "counterparty": "01800000045",
+   "amount": 5000,
+   "ts": "2026-05-17T19:25:28.211886+06:00"
+  },
+  {
+   "id": "u2-t37",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 5690,
+   "ts": "2026-05-18T09:15:32.990270+06:00"
+  },
+  {
+   "id": "u2-t56",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 1660,
+   "ts": "2026-05-18T13:13:18.160361+06:00"
+  },
+  {
+   "id": "u2-t86",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 50,
+   "ts": "2026-05-21T15:29:31.754018+06:00"
+  },
+  {
+   "id": "u2-t85",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 100,
+   "ts": "2026-05-22T16:08:23.394260+06:00"
+  },
+  {
+   "id": "u2-t3",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 3030,
+   "ts": "2026-05-23T10:38:41.260039+06:00"
+  },
+  {
+   "id": "u2-t106",
+   "user_id": "u2",
+   "type": "receive",
+   "counterparty": "01800000020",
+   "amount": 10000,
+   "ts": "2026-05-23T13:56:48.144630+06:00"
+  },
+  {
+   "id": "u2-t20",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 3100,
+   "ts": "2026-05-23T19:51:49.489336+06:00"
+  },
+  {
+   "id": "u2-t78",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000204",
+   "amount": 640,
+   "ts": "2026-05-23T20:08:04.345683+06:00"
+  },
+  {
+   "id": "u2-t58",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 1200,
+   "ts": "2026-05-24T15:47:04.007652+06:00"
+  },
+  {
+   "id": "u2-t35",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 6270,
+   "ts": "2026-05-24T19:31:50.317705+06:00"
+  },
+  {
+   "id": "u2-t34",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 6760,
+   "ts": "2026-05-27T17:12:46.890415+06:00"
+  },
+  {
+   "id": "u2-t111",
+   "user_id": "u2",
+   "type": "receive",
+   "counterparty": "01800000007",
+   "amount": 12000,
+   "ts": "2026-05-28T11:55:04.113758+06:00"
+  },
+  {
+   "id": "u2-t53",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 1030,
+   "ts": "2026-05-30T10:54:23.348223+06:00"
+  },
+  {
+   "id": "u2-t62",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 1690,
+   "ts": "2026-05-30T19:46:30.236818+06:00"
+  },
+  {
+   "id": "u2-t90",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 50,
+   "ts": "2026-06-01T12:18:33.619835+06:00"
+  },
+  {
+   "id": "u2-t83",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 100,
+   "ts": "2026-06-01T19:05:25.160256+06:00"
+  },
+  {
+   "id": "u2-t19",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 2060,
+   "ts": "2026-06-03T14:16:28.205852+06:00"
+  },
+  {
+   "id": "u2-t99",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 50,
+   "ts": "2026-06-03T14:47:11.251810+06:00"
+  },
+  {
+   "id": "u2-t22",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 2600,
+   "ts": "2026-06-04T19:57:21.445040+06:00"
+  },
+  {
+   "id": "u2-t68",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 1140,
+   "ts": "2026-06-13T09:18:51.285775+06:00"
+  },
+  {
+   "id": "u2-t18",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 3060,
+   "ts": "2026-06-15T17:17:54.593844+06:00"
+  },
+  {
+   "id": "u2-t55",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 1030,
+   "ts": "2026-06-18T18:01:43.428116+06:00"
+  },
+  {
+   "id": "u2-t103",
+   "user_id": "u2",
+   "type": "receive",
+   "counterparty": "01800000003",
+   "amount": 5000,
+   "ts": "2026-06-19T17:46:30.982081+06:00"
+  },
+  {
+   "id": "u2-t87",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 50,
+   "ts": "2026-06-19T21:00:16.043805+06:00"
+  },
+  {
+   "id": "u2-t43",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 5320,
+   "ts": "2026-06-21T16:21:57.432850+06:00"
+  },
+  {
+   "id": "u2-t82",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 100,
+   "ts": "2026-06-22T17:03:58.297461+06:00"
+  },
+  {
+   "id": "u2-t65",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 1560,
+   "ts": "2026-06-23T13:49:51.808537+06:00"
+  },
+  {
+   "id": "u2-t89",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 100,
+   "ts": "2026-06-24T13:50:47.268502+06:00"
+  },
+  {
+   "id": "u2-t73",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000204",
+   "amount": 1190,
+   "ts": "2026-06-25T09:59:01.648409+06:00"
+  },
+  {
+   "id": "u2-t49",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 1310,
+   "ts": "2026-06-25T10:53:34.092550+06:00"
+  },
+  {
+   "id": "u2-t50",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 1940,
+   "ts": "2026-06-25T11:27:48.391198+06:00"
+  },
+  {
+   "id": "u2-t24",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 2950,
+   "ts": "2026-06-25T17:39:26.987438+06:00"
+  },
+  {
+   "id": "u2-t12",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 2980,
+   "ts": "2026-06-28T13:51:35.968809+06:00"
+  },
+  {
+   "id": "u2-t69",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 1420,
+   "ts": "2026-06-28T16:41:48.413750+06:00"
+  },
+  {
+   "id": "u2-t46",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 4860,
+   "ts": "2026-06-28T18:42:55.181838+06:00"
+  },
+  {
+   "id": "u2-t71",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 2150,
+   "ts": "2026-06-28T18:56:43.262609+06:00"
+  },
+  {
+   "id": "u2-t29",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 5030,
+   "ts": "2026-06-28T20:48:49.080422+06:00"
+  },
+  {
+   "id": "u2-t26",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 7520,
+   "ts": "2026-06-29T11:24:48.947299+06:00"
+  },
+  {
+   "id": "u2-t75",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000204",
+   "amount": 750,
+   "ts": "2026-07-01T08:31:40.198253+06:00"
+  },
+  {
+   "id": "u2-t8",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 3370,
+   "ts": "2026-07-02T11:08:36.966250+06:00"
+  },
+  {
+   "id": "u2-t72",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 1190,
+   "ts": "2026-07-03T09:56:42.115121+06:00"
+  },
+  {
+   "id": "u2-t67",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 1110,
+   "ts": "2026-07-04T21:49:30.765743+06:00"
+  },
+  {
+   "id": "u2-t36",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 8100,
+   "ts": "2026-07-08T15:16:36.825786+06:00"
+  },
+  {
+   "id": "u2-t84",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 50,
+   "ts": "2026-07-09T16:02:15.440472+06:00"
+  },
+  {
+   "id": "u2-t16",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 3630,
+   "ts": "2026-07-10T09:31:51.238507+06:00"
+  },
+  {
+   "id": "u2-t25",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 5700,
+   "ts": "2026-07-11T11:29:45.623721+06:00"
+  },
+  {
+   "id": "u2-t45",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 7470,
+   "ts": "2026-07-17T16:41:23.807950+06:00"
+  },
+  {
+   "id": "u2-t14",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 3330,
+   "ts": "2026-07-22T18:43:15.750555+06:00"
+  },
+  {
+   "id": "u2-t93",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 50,
+   "ts": "2026-07-22T19:51:38.560877+06:00"
+  },
+  {
+   "id": "u2-t96",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 50,
+   "ts": "2026-07-25T17:18:28.294123+06:00"
+  },
+  {
+   "id": "u2-t47",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 5940,
+   "ts": "2026-07-25T18:00:40.965421+06:00"
+  },
+  {
+   "id": "u2-t57",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 1540,
+   "ts": "2026-07-26T16:22:34.573961+06:00"
+  },
+  {
+   "id": "u2-t61",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 1600,
+   "ts": "2026-07-26T20:46:38.012207+06:00"
+  },
+  {
+   "id": "u2-t95",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 50,
+   "ts": "2026-08-03T14:41:19.607964+06:00"
+  },
+  {
+   "id": "u2-t38",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 5010,
+   "ts": "2026-08-05T11:43:57.937996+06:00"
+  },
+  {
+   "id": "u2-t97",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 50,
+   "ts": "2026-08-05T13:30:09.447425+06:00"
+  },
+  {
+   "id": "u2-t60",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 1800,
+   "ts": "2026-08-05T14:40:08.660761+06:00"
+  },
+  {
+   "id": "u2-t41",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 4400,
+   "ts": "2026-08-09T13:37:21.665229+06:00"
+  },
+  {
+   "id": "u2-t109",
+   "user_id": "u2",
+   "type": "receive",
+   "counterparty": "01800000040",
+   "amount": 12000,
+   "ts": "2026-08-11T14:43:39.611008+06:00"
+  },
+  {
+   "id": "u2-t94",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 20,
+   "ts": "2026-08-15T18:30:33.188717+06:00"
+  },
+  {
+   "id": "u2-t101",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 50,
+   "ts": "2026-08-16T20:39:18.951616+06:00"
+  },
+  {
+   "id": "u2-t98",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 100,
+   "ts": "2026-08-20T15:22:03.156251+06:00"
+  },
+  {
+   "id": "u2-t39",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 6800,
+   "ts": "2026-08-20T18:45:33.236702+06:00"
+  },
+  {
+   "id": "u2-t81",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 50,
+   "ts": "2026-08-22T12:40:09.245488+06:00"
+  },
+  {
+   "id": "u2-t27",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 7210,
+   "ts": "2026-08-22T17:03:45.547034+06:00"
+  },
+  {
+   "id": "u2-t102",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 50,
+   "ts": "2026-08-24T08:54:07.133872+06:00"
+  },
+  {
+   "id": "u2-t11",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 2760,
+   "ts": "2026-08-26T13:29:59.878840+06:00"
+  },
+  {
+   "id": "u2-t13",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 2860,
+   "ts": "2026-08-27T13:59:14.955296+06:00"
+  },
+  {
+   "id": "u2-t30",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 4840,
+   "ts": "2026-08-28T13:52:12.557910+06:00"
+  },
+  {
+   "id": "u2-t63",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 1620,
+   "ts": "2026-09-03T12:20:39.396495+06:00"
+  },
+  {
+   "id": "u2-t21",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 2570,
+   "ts": "2026-09-07T10:13:16.328284+06:00"
+  },
+  {
+   "id": "u2-t23",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 2970,
+   "ts": "2026-09-08T08:02:02.023847+06:00"
+  },
+  {
+   "id": "u2-t104",
+   "user_id": "u2",
+   "type": "receive",
+   "counterparty": "01800000019",
+   "amount": 5000,
+   "ts": "2026-09-08T08:20:30.933254+06:00"
+  },
+  {
+   "id": "u2-t66",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 1210,
+   "ts": "2026-09-09T08:06:10.517256+06:00"
+  },
+  {
+   "id": "u2-t80",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 100,
+   "ts": "2026-09-10T09:06:23.269713+06:00"
+  },
+  {
+   "id": "u2-t6",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 5040,
+   "ts": "2026-09-10T15:19:18.030619+06:00"
+  },
+  {
+   "id": "u2-t44",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 7590,
+   "ts": "2026-09-11T17:40:29.916244+06:00"
+  },
+  {
+   "id": "u2-t70",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 2080,
+   "ts": "2026-09-14T09:55:50.758443+06:00"
+  },
+  {
+   "id": "u2-t113",
+   "user_id": "u2",
+   "type": "receive",
+   "counterparty": "01800000005",
+   "amount": 12000,
+   "ts": "2026-09-16T06:03:00.136799+06:00"
+  },
+  {
+   "id": "u2-t31",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 7290,
+   "ts": "2026-09-17T21:53:46.618589+06:00"
+  },
+  {
+   "id": "u2-t79",
+   "user_id": "u2",
+   "type": "mobile_recharge",
+   "counterparty": "01700000002",
+   "amount": 50,
+   "ts": "2026-09-20T09:47:45.395104+06:00"
+  },
+  {
+   "id": "u2-t33",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000202",
+   "amount": 3630,
+   "ts": "2026-09-21T21:46:10.338248+06:00"
+  },
+  {
+   "id": "u2-t52",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 1790,
+   "ts": "2026-09-22T15:22:26.631060+06:00"
+  },
+  {
+   "id": "u2-t77",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000204",
+   "amount": 990,
+   "ts": "2026-09-24T10:27:47.973720+06:00"
+  },
+  {
+   "id": "u2-t7",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 4580,
+   "ts": "2026-09-27T15:11:17.895727+06:00"
+  },
+  {
+   "id": "u2-t15",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000201",
+   "amount": 2050,
+   "ts": "2026-09-27T15:47:00.644272+06:00"
+  },
+  {
+   "id": "u2-t74",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000204",
+   "amount": 780,
+   "ts": "2026-09-30T10:30:23.041435+06:00"
+  },
+  {
+   "id": "u2-t64",
+   "user_id": "u2",
+   "type": "send_money",
+   "counterparty": "01700000203",
+   "amount": 1220,
+   "ts": "2026-10-01T16:31:19.383306+06:00"
+  },
+  {
+   "id": "u2-t115",
+   "user_id": "u2",
+   "type": "receive",
+   "counterparty": "01700000204",
+   "amount": 1000,
+   "ts": "2026-10-03T15:00:00+06:00"
+  },
+  {
+   "id": "u3-t60",
+   "user_id": "u3",
+   "type": "receive",
+   "counterparty": "01800000019",
+   "amount": 8000,
+   "ts": "2026-04-09T04:06:11.192388+06:00"
+  },
+  {
+   "id": "u3-t34",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 50,
+   "ts": "2026-04-13T16:57:26.659266+06:00"
+  },
+  {
+   "id": "u3-t4",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000302",
+   "amount": 3200,
+   "ts": "2026-04-19T14:50:32.041056+06:00"
+  },
+  {
+   "id": "u3-t8",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000303",
+   "amount": 210,
+   "ts": "2026-04-25T09:15:30.453638+06:00"
+  },
+  {
+   "id": "u3-t10",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000303",
+   "amount": 150,
+   "ts": "2026-04-27T19:25:09.802083+06:00"
+  },
+  {
+   "id": "u3-t57",
+   "user_id": "u3",
+   "type": "receive",
+   "counterparty": "01800000004",
+   "amount": 8000,
+   "ts": "2026-04-28T01:58:45.206057+06:00"
+  },
+  {
+   "id": "u3-t56",
+   "user_id": "u3",
+   "type": "receive",
+   "counterparty": "01800000044",
+   "amount": 10000,
+   "ts": "2026-04-28T04:05:03.385384+06:00"
+  },
+  {
+   "id": "u3-t6",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000302",
+   "amount": 2390,
+   "ts": "2026-04-30T19:55:20.084613+06:00"
+  },
+  {
+   "id": "u3-t28",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 50,
+   "ts": "2026-05-02T18:58:23.720907+06:00"
+  },
+  {
+   "id": "u3-t13",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000303",
+   "amount": 180,
+   "ts": "2026-05-10T13:41:59.336174+06:00"
+  },
+  {
+   "id": "u3-t19",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000303",
+   "amount": 140,
+   "ts": "2026-05-13T16:23:35.674301+06:00"
+  },
+  {
+   "id": "u3-t7",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000303",
+   "amount": 220,
+   "ts": "2026-05-13T20:18:00.291580+06:00"
+  },
+  {
+   "id": "u3-t31",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 30,
+   "ts": "2026-05-20T11:43:25.130906+06:00"
+  },
+  {
+   "id": "u3-t58",
+   "user_id": "u3",
+   "type": "receive",
+   "counterparty": "01800000021",
+   "amount": 10000,
+   "ts": "2026-05-20T23:43:53.677831+06:00"
+  },
+  {
+   "id": "u3-t43",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 30,
+   "ts": "2026-05-23T13:39:31.199091+06:00"
+  },
+  {
+   "id": "u3-t52",
+   "user_id": "u3",
+   "type": "receive",
+   "counterparty": "01800000050",
+   "amount": 12000,
+   "ts": "2026-05-26T03:11:15.197119+06:00"
+  },
+  {
+   "id": "u3-t32",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 50,
+   "ts": "2026-05-26T11:25:09.822877+06:00"
+  },
+  {
+   "id": "u3-t38",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 50,
+   "ts": "2026-05-27T21:17:46.409171+06:00"
+  },
+  {
+   "id": "u3-t37",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 50,
+   "ts": "2026-05-30T12:28:37.048785+06:00"
+  },
+  {
+   "id": "u3-t20",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000303",
+   "amount": 320,
+   "ts": "2026-06-03T16:21:54.875450+06:00"
+  },
+  {
+   "id": "u3-t53",
+   "user_id": "u3",
+   "type": "receive",
+   "counterparty": "01800000005",
+   "amount": 12000,
+   "ts": "2026-06-05T22:03:07.956421+06:00"
+  },
+  {
+   "id": "u3-t35",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 30,
+   "ts": "2026-06-08T14:24:23.210404+06:00"
+  },
+  {
+   "id": "u3-t40",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 50,
+   "ts": "2026-06-16T21:32:33.396362+06:00"
+  },
+  {
+   "id": "u3-t29",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 50,
+   "ts": "2026-06-17T19:10:00.405106+06:00"
+  },
+  {
+   "id": "u3-t26",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 20,
+   "ts": "2026-06-23T22:49:17.145114+06:00"
+  },
+  {
+   "id": "u3-t47",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 30,
+   "ts": "2026-06-28T11:04:08.787420+06:00"
+  },
+  {
+   "id": "u3-t49",
+   "user_id": "u3",
+   "type": "receive",
+   "counterparty": "01800000030",
+   "amount": 5000,
+   "ts": "2026-06-29T06:07:31.358267+06:00"
+  },
+  {
+   "id": "u3-t21",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000303",
+   "amount": 170,
+   "ts": "2026-07-13T08:05:11.114613+06:00"
+  },
+  {
+   "id": "u3-t45",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 30,
+   "ts": "2026-07-14T21:26:07.405427+06:00"
+  },
+  {
+   "id": "u3-t39",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 20,
+   "ts": "2026-07-15T11:25:48.412499+06:00"
+  },
+  {
+   "id": "u3-t9",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000303",
+   "amount": 140,
+   "ts": "2026-07-15T12:05:12.840708+06:00"
+  },
+  {
+   "id": "u3-t14",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000303",
+   "amount": 130,
+   "ts": "2026-07-22T12:53:12.017049+06:00"
+  },
+  {
+   "id": "u3-t24",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000303",
+   "amount": 210,
+   "ts": "2026-07-29T14:25:01.746932+06:00"
+  },
+  {
+   "id": "u3-t25",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 20,
+   "ts": "2026-07-29T22:17:26.929007+06:00"
+  },
+  {
+   "id": "u3-t27",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 50,
+   "ts": "2026-07-30T08:58:52.940985+06:00"
+  },
+  {
+   "id": "u3-t5",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000302",
+   "amount": 2850,
+   "ts": "2026-07-30T12:04:41.254807+06:00"
+  },
+  {
+   "id": "u3-t3",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000302",
+   "amount": 2940,
+   "ts": "2026-07-31T10:24:16.393249+06:00"
+  },
+  {
+   "id": "u3-t23",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000303",
+   "amount": 200,
+   "ts": "2026-08-02T11:32:07.096351+06:00"
+  },
+  {
+   "id": "u3-t12",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000303",
+   "amount": 220,
+   "ts": "2026-08-07T17:09:42.105116+06:00"
+  },
+  {
+   "id": "u3-t51",
+   "user_id": "u3",
+   "type": "receive",
+   "counterparty": "01800000041",
+   "amount": 5000,
+   "ts": "2026-08-08T23:41:31.876735+06:00"
+  },
+  {
+   "id": "u3-t22",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000303",
+   "amount": 220,
+   "ts": "2026-08-13T15:51:50.127207+06:00"
+  },
+  {
+   "id": "u3-t44",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 50,
+   "ts": "2026-08-15T20:42:07.740692+06:00"
+  },
+  {
+   "id": "u3-t42",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 50,
+   "ts": "2026-08-16T17:24:19.127384+06:00"
+  },
+  {
+   "id": "u3-t46",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 20,
+   "ts": "2026-08-17T10:40:58.639149+06:00"
+  },
+  {
+   "id": "u3-t55",
+   "user_id": "u3",
+   "type": "receive",
+   "counterparty": "01800000027",
+   "amount": 5000,
+   "ts": "2026-08-18T01:24:25.758100+06:00"
+  },
+  {
+   "id": "u3-t1",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000302",
+   "amount": 3760,
+   "ts": "2026-08-20T14:40:36.109411+06:00"
+  },
+  {
+   "id": "u3-t11",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000303",
+   "amount": 140,
+   "ts": "2026-08-26T10:08:26.889972+06:00"
+  },
+  {
+   "id": "u3-t36",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 100,
+   "ts": "2026-08-30T19:15:25.745306+06:00"
+  },
+  {
+   "id": "u3-t2",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000302",
+   "amount": 2390,
+   "ts": "2026-09-03T08:46:31.714238+06:00"
+  },
+  {
+   "id": "u3-t15",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000303",
+   "amount": 170,
+   "ts": "2026-09-05T12:02:32.833745+06:00"
+  },
+  {
+   "id": "u3-t41",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 100,
+   "ts": "2026-09-10T17:20:10.947102+06:00"
+  },
+  {
+   "id": "u3-t54",
+   "user_id": "u3",
+   "type": "receive",
+   "counterparty": "01800000033",
+   "amount": 12000,
+   "ts": "2026-09-12T20:11:52.307616+06:00"
+  },
+  {
+   "id": "u3-t16",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000303",
+   "amount": 160,
+   "ts": "2026-09-18T15:13:01.219708+06:00"
+  },
+  {
+   "id": "u3-t48",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 50,
+   "ts": "2026-09-20T17:44:11.641662+06:00"
+  },
+  {
+   "id": "u3-t50",
+   "user_id": "u3",
+   "type": "receive",
+   "counterparty": "01800000047",
+   "amount": 10000,
+   "ts": "2026-09-22T23:54:44.672687+06:00"
+  },
+  {
+   "id": "u3-t59",
+   "user_id": "u3",
+   "type": "receive",
+   "counterparty": "01800000017",
+   "amount": 10000,
+   "ts": "2026-09-23T15:39:50.407268+06:00"
+  },
+  {
+   "id": "u3-t33",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 20,
+   "ts": "2026-09-24T08:03:32.692915+06:00"
+  },
+  {
+   "id": "u3-t30",
+   "user_id": "u3",
+   "type": "mobile_recharge",
+   "counterparty": "01700000003",
+   "amount": 20,
+   "ts": "2026-09-25T12:09:57.387244+06:00"
+  },
+  {
+   "id": "u3-t17",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000303",
+   "amount": 180,
+   "ts": "2026-09-28T12:06:14.531409+06:00"
+  },
+  {
+   "id": "u3-t18",
+   "user_id": "u3",
+   "type": "send_money",
+   "counterparty": "01700000303",
+   "amount": 230,
+   "ts": "2026-09-28T21:56:29.734671+06:00"
+  }
+ ]
+}
