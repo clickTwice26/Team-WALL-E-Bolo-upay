@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "description": "Scam phrase lexicon for the Bolo upay scam shield. Compiled from common MFS scam patterns in Bangladesh. Weights: high = hold (red), medium = warn (yellow), escalates to red when combined with another risk signal.",
+  "levels": {
+    "high": 1.0,
+    "medium": 0.5
+  },
+  "categories": [
+    {
+      "id": "pin_otp_request",
+      "level": "high",
+      "explain_bn": "উপায় কখনো আপনার পিন বা ওটিপি চায় না।",
+      "explain_en": "upay never asks for your PIN or OTP.",
+      "phrases": {
+        "bn": ["ওটিপি", "ও টি পি", "কোড টা বলুন", "কোডটা বলুন", "পিন নম্বর", "পিন টা বলুন", "মেসেজে যে কোড", "ভেরিফিকেশন কোড"],
+        "banglish": ["otp", "otp ta bolen", "code ta den", "code ta bolen", "pin number din", "pin ta bolen", "message e je code", "verification code"],
+        "en": ["tell me the otp", "share the code", "give your pin", "verification code", "one time password"]
+      }
+    },
+    {
+      "id": "fake_official",
+      "level": "high",
+      "explain_bn": "উপায় অফিস বা কাস্টমার কেয়ার পরিচয়ে টাকা চাওয়া প্রতারণা হতে পারে।",
+      "explain_en": "Someone claiming to be upay staff and asking for money is a common scam.",
+      "phrases": {
+        "bn": ["উপায় অফিস থেকে", "কাস্টমার কেয়ার থেকে", "অ্যাকাউন্ট বন্ধ হয়ে যাবে", "অ্যাকাউন্ট ব্লক", "অ্যাকাউন্ট লক", "কেওয়াইসি আপডেট", "অ্যাকাউন্ট ভেরিফাই"],
+        "banglish": ["upay office theke", "customer care theke", "account bondho hoye jabe", "account block", "account lock", "kyc update", "account verify"],
+        "en": ["calling from upay", "customer care", "account will be blocked", "account suspended", "update your kyc", "verify your account"]
+      }
+    },
+    {
+      "id": "sent_by_mistake",
+      "level": "high",
+      "check": "If the user is returning money but no incoming transfer from this number exists, escalate to red.",
+      "explain_bn": "এই নম্বর থেকে আপনার অ্যাকাউন্টে কোনো টাকা আসেনি।",
+      "explain_en": "No money was received from this number.",
+      "phrases": {
+        "bn": ["ভুল করে টাকা", "ভুলে আপনার নম্বরে", "টাকাটা ফেরত", "টাকা ফেরত পাঠান", "ফেরত দিন"],
+        "banglish": ["vul kore taka", "bhul kore taka", "vule apnar number e", "takata ferot", "taka ferot pathan", "ferot din"],
+        "en": ["sent by mistake", "wrong number", "send it back", "return the money"]
+      }
+    },
+    {
+      "id": "lottery_prize",
+      "level": "high",
+      "explain_bn": "পুরস্কার পেতে আগে টাকা পাঠাতে বলা সবসময় প্রতারণা।",
+      "explain_en": "Being asked to pay money to receive a prize is always a scam.",
+      "phrases": {
+        "bn": ["লটারি জিতেছেন", "পুরস্কার পেয়েছেন", "ক্যাশব্যাক পেতে আগে", "গিফট দাবি", "বোনাস দাবি"],
+        "banglish": ["lottery jitechen", "puroskar peyechen", "cashback pete age", "gift claim", "bonus claim"],
+        "en": ["you won a lottery", "you won a prize", "claim your gift", "claim your bonus", "send money first to get cashback"]
+      }
+    },
+    {
+      "id": "govt_allowance",
+      "level": "high",
+      "explain_bn": "সরকারি ভাতা বা উপবৃত্তির জন্য কোনো ফি লাগে না।",
+      "explain_en": "Government allowances never require a processing fee.",
+      "phrases": {
+        "bn": ["সরকারি ভাতা", "উপবৃত্তির টাকা", "প্রসেসিং ফি", "ত্রাণের টাকা"],
+        "banglish": ["sorkari vata", "sorkari bhata", "upobritti", "processing fee", "traner taka"],
+        "en": ["government allowance", "stipend", "processing fee", "relief money"]
+      }
+    },
+    {
+      "id": "urgency_pressure",
+      "level": "medium",
+      "explain_bn": "তাড়াহুড়া বা গোপন রাখতে বলা প্রতারণার লক্ষণ।",
+      "explain_en": "Pressure to act fast or keep it secret is a scam warning sign.",
+      "phrases": {
+        "bn": ["এখনই পাঠান", "তাড়াতাড়ি পাঠান", "কাউকে বলবেন না", "ফোন কাটবেন না", "দেরি করলে বিপদ"],
+        "banglish": ["ekhoni pathan", "taratari pathan", "kauke bolben na", "phone katben na", "deri korle bipod"],
+        "en": ["send right now", "don't tell anyone", "do not hang up", "urgent"]
+      }
+    },
+    {
+      "id": "relative_in_trouble",
+      "level": "medium",
+      "escalate_if": "new_recipient",
+      "explain_bn": "নতুন নম্বর থেকে আত্মীয়ের বিপদের কথা বললে আগে পরিচিত নম্বরে ফোন করে নিশ্চিত হোন।",
+      "explain_en": "If a 'relative in trouble' calls from a new number, call their known number first.",
+      "phrases": {
+        "bn": ["বিপদে পড়েছি", "নতুন নম্বর থেকে বলছি", "এক্সিডেন্ট হয়েছে", "হাসপাতালে", "পুলিশে ধরেছে"],
+        "banglish": ["bipode porechi", "notun number theke bolchi", "accident hoyeche", "hospital e", "police e dhoreche"],
+        "en": ["i am in trouble", "calling from a new number", "had an accident", "in hospital", "police arrested"]
+      }
+    },
+    {
+      "id": "job_loan_investment",
+      "level": "medium",
+      "explain_bn": "চাকরি বা লোনের জন্য আগে টাকা চাওয়া প্রতারণা হতে পারে।",
+      "explain_en": "Upfront fees for jobs, loans or 'guaranteed profit' are common scams.",
+      "phrases": {
+        "bn": ["চাকরির জন্য রেজিস্ট্রেশন ফি", "লোন পেতে আগে", "ডাবল টাকা", "নিশ্চিত লাভ"],
+        "banglish": ["chakrir jonno registration fee", "loan pete age", "double taka", "nishchit labh"],
+        "en": ["registration fee for job", "pay first to get loan", "double your money", "guaranteed profit"]
+      }
+    }
+  ]
+}
