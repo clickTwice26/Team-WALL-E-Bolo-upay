@@ -44,6 +44,10 @@ ADVICE = {
 }
 
 
+def _bn(n: int) -> str:
+    return f"{n:,}".translate(str.maketrans("0123456789", "০১২৩৪৫৬৭৮৯"))
+
+
 @lru_cache(maxsize=1)
 def load_model():
     if not MODEL_PATH.exists():
@@ -106,8 +110,8 @@ def assess(feats: dict, summary: dict, scam: dict, amount: float,
         suggestion = amount / 10
         if 0.4 * rec_med <= suggestion <= 2.5 * rec_med:
             mistake = {"usual": int(rec_med), "suggested": int(suggestion),
-                       "bn": f"আপনি সাধারণত এই ব্যক্তিকে প্রায় ৳{int(rec_med):,} পাঠান। "
-                             f"আপনি কি ৳{int(suggestion):,} বোঝাতে চেয়েছেন?",
+                       "bn": f"আপনি সাধারণত এই ব্যক্তিকে প্রায় ৳{_bn(int(rec_med))} পাঠান। "
+                             f"আপনি কি ৳{_bn(int(suggestion))} বোঝাতে চেয়েছেন?",
                        "en": f"You usually send this person about ৳{int(rec_med):,}. "
                              f"Did you mean ৳{int(suggestion):,}?"}
             if level == "GREEN":

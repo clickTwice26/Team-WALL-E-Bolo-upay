@@ -71,15 +71,14 @@ class _ShellState extends State<Shell> {
         return Scaffold(
           body: IndexedStack(index: tab, children: const [HomeScreen(), DashboardScreen(), AccuracyScreen()]),
           floatingActionButton: tab == 0
-              ? FloatingActionButton.large(
+              ? FloatingActionButton.extended(
                   backgroundColor: BrandColors.navy,
                   foregroundColor: Colors.white,
-                  shape: const CircleBorder(),
                   onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AssistantScreen())),
-                  child: const Icon(Icons.mic_rounded, size: 40),
+                  icon: const Icon(Icons.mic_rounded, size: 28),
+                  label: const Text('বলো upay', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16)),
                 )
               : null,
-          floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
           bottomNavigationBar: NavigationBar(
             selectedIndex: tab,
             onDestinationSelected: (i) => setState(() => tab = i),

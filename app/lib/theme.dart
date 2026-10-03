@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 /// upay-inspired palette. Adjust these constants to match the official
 /// upay design system if upay shares it; every screen reads from here.
@@ -22,7 +21,7 @@ class BrandColors {
 ThemeData buildTheme() {
   final base = ThemeData(
     useMaterial3: true,
-    fontFamily: GoogleFonts.hindSiliguri().fontFamily,
+    fontFamily: 'HindSiliguri', // bundled (assets/fonts), works offline
     colorScheme: ColorScheme.fromSeed(
       seedColor: BrandColors.navy,
       primary: BrandColors.navy,
@@ -44,14 +43,14 @@ ThemeData buildTheme() {
         foregroundColor: Colors.white,
         minimumSize: const Size.fromHeight(52),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-        textStyle: const TextStyle(fontSize: 17, fontWeight: FontWeight.w600),
+        textStyle: const TextStyle(fontFamily: 'HindSiliguri', fontSize: 17, fontWeight: FontWeight.w600),
       ),
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
         minimumSize: const Size.fromHeight(52),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-        textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+        textStyle: const TextStyle(fontFamily: 'HindSiliguri', fontSize: 16, fontWeight: FontWeight.w600),
       ),
     ),
     cardTheme: CardThemeData(

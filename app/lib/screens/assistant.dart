@@ -691,7 +691,10 @@ class _AssistantScreenState extends State<AssistantScreen> {
   Widget _reviewView() {
     final a = assessment!;
     final level = a['level'] as String;
-    final reasons = ((a['reasons'] as List?) ?? []).map((e) => Map<String, dynamic>.from(e)).toList();
+    final reasons = ((a['reasons'] as List?) ?? [])
+        .map((e) => Map<String, dynamic>.from(e))
+        .where((r) => r['key'] != 'mistake_amount') // shown in its own card
+        .toList();
     final mistake = a['mistake'] as Map?;
     final title = switch (level) {
       'GREEN' => tr(bn, 'নিরাপদ মনে হচ্ছে', 'Looks safe'),
