@@ -9,6 +9,17 @@ Prototype for the AI Dev Fest 2026 AI Hackathon (DIU CPC × upay). Track 03 (Cus
 
 ---
 
+
+## Screenshots
+
+| Home | Voice input | Normal send (GREEN) |
+|---|---|---|
+| ![](docs/screenshots/01_home.png) | ![](docs/screenshots/02_voice_input.png) | ![](docs/screenshots/03_green.png) |
+| **Which Rahim?** | **Extra zero?** | **Scam interview** |
+| ![](docs/screenshots/04_which_rahim.png) | ![](docs/screenshots/05_extra_zero.png) | ![](docs/screenshots/06_interview.png) |
+| **Fake upay call (RED)** | **Hold before PIN** | **Accuracy report** |
+| ![](docs/screenshots/07_red.png) | ![](docs/screenshots/08_hold.png) | ![](docs/screenshots/09_accuracy.png) |
+
 ## 1. Project overview
 
 **Problem.** Mobile financial services in Bangladesh lose most stolen money for good. Bangladesh Bank figures (reported by New Age, July 2026) show Tk 81.32 crore of MFS fraud in 2025, of which 91.3% was never recovered: scammers move money through mule wallets within minutes. MFS providers also handled about 700,000 customer disputes worth Tk 153.98 crore. Low-literate users find menu-driven apps hard and make transaction errors (wrong number, extra zero), and most scams work by talking a victim into sending money themselves.
@@ -52,7 +63,7 @@ What the app deliberately does **not** do: it never listens to phone calls, neve
 | LLM (optional) | Anthropic Python SDK (`claude-opus-5-5` by default), OpenAI or Gemini via REST |
 | Storage | SQLite (prototype) |
 | Security | bcrypt-hashed demo PIN, server-side authentication rules |
-| Tests | pytest (37 tests), parser evaluation script |
+| Tests | pytest (39 tests), parser evaluation script |
 | Deploy | Docker, Docker Compose, Caddy (automatic HTTPS) |
 
 ## 4. Requirements
@@ -140,7 +151,7 @@ Demo login is not needed. Use the settings button (top right on the home screen)
 ## 9. Testing
 
 ```bash
-cd api && python -m pytest -q          # 37 tests: parser, scam matcher, API flow
+cd api && python -m pytest -q          # 39 tests: parser, scam matcher, API flow
 python ml/evaluate_parser.py           # labelled command set → model/parser_metrics.json
 python ml/train_risk.py                # trains and evaluates → model/risk_metrics.json
 ```

@@ -127,8 +127,7 @@ def assess(body: AssessIn):
         return {"level": "BLOCKED", "reason": "insufficient_balance",
                 "message_bn": "আপনার অ্যাকাউন্টে যথেষ্ট ব্যালেন্স নেই।",
                 "message_en": "Not enough balance.", "balance": u["balance"]}
-    said = " ".join([d.command_text, *body.answers])
-    sc = scam.match(said)
+    sc = scam.match_many([d.command_text, *body.answers])
     now = body.now.astimezone(store.TZ) if body.now else None
     feats, summary = feat_mod.compute(
         amount=d.amount, intent=d.intent, phone=d.recipient_phone,

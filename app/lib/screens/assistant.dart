@@ -780,12 +780,13 @@ class _AssistantScreenState extends State<AssistantScreen> {
           width: 120,
           height: 120,
           child: Stack(alignment: Alignment.center, children: [
-            CircularProgressIndicator(
+            Positioned.fill(
+                child: CircularProgressIndicator(
               value: holdLeft == 0 ? 1 : 1 - holdLeft / ((assessment!['hold_seconds'] as num?) ?? 30),
               strokeWidth: 8,
               color: BrandColors.red,
               backgroundColor: BrandColors.redBg,
-            ),
+            )),
             Text(bn ? bnDigits('$holdLeft') : '$holdLeft', style: const TextStyle(fontSize: 34, fontWeight: FontWeight.w800)),
           ]),
         ),

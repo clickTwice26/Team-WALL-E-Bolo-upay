@@ -84,3 +84,14 @@ def test_cancel_counts_as_protected():
 def test_insufficient_balance_blocked():
     a = assess("Ammu ke 50000 taka pathao")
     assert a["level"] == "BLOCKED"
+
+
+def test_later_no_does_not_cancel_earlier_scam_answer():
+    b = assess("01799998888 e 5000 taka pathao", on_active_call=True,
+               answers=["হ্যাঁ, উপায় অফিস থেকে ফোন দিয়েছে", "না, কেউ ফোন করেনি", "না"])
+    assert b["level"] == "RED"
+
+
+def test_bangla_negative_verb_is_not_a_hit():
+    from app.core import scam
+    assert scam.match("কেউ ওটিপি চায়নি")["score"] == 0
