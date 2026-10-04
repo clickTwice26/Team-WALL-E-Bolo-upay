@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 /// upay-inspired palette. Adjust these constants to match the official
 /// upay design system if upay shares it; every screen reads from here.
 class BrandColors {
-  static const navy = Color(0xFF0B3A75);
-  static const navyDark = Color(0xFF072650);
-  static const yellow = Color(0xFFFFC72C);
+  static const navy = Color(0xFF0B4EA8); // upay royal blue
+  static const navyDark = Color(0xFF083B85);
+  static const yellow = Color(0xFFFFD614); // upay yellow
   static const red = Color(0xFFE31E24);
-  static const bg = Color(0xFFF4F6FA);
+  static const bg = Color(0xFFF6F7FB);
   static const card = Colors.white;
   static const text = Color(0xFF1B2433);
   static const muted = Color(0xFF6B7585);
@@ -33,9 +33,11 @@ ThemeData buildTheme() {
   return base.copyWith(
     textTheme: base.textTheme.apply(bodyColor: BrandColors.text, displayColor: BrandColors.text),
     appBarTheme: const AppBarTheme(
-      backgroundColor: BrandColors.navy,
-      foregroundColor: Colors.white,
+      backgroundColor: BrandColors.yellow,
+      foregroundColor: BrandColors.text,
       elevation: 0,
+      centerTitle: true,
+      titleTextStyle: TextStyle(fontFamily: 'HindSiliguri', fontSize: 20, fontWeight: FontWeight.w700, color: BrandColors.text),
     ),
     filledButtonTheme: FilledButtonThemeData(
       style: FilledButton.styleFrom(

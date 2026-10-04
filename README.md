@@ -17,8 +17,8 @@ Prototype for the AI Dev Fest 2026 AI Hackathon (DIU CPC × upay). Track 03 (Cus
 | ![](docs/screenshots/01_home.png) | ![](docs/screenshots/02_voice_input.png) | ![](docs/screenshots/03_green.png) |
 | **Which Rahim?** | **Extra zero?** | **Scam interview** |
 | ![](docs/screenshots/04_which_rahim.png) | ![](docs/screenshots/05_extra_zero.png) | ![](docs/screenshots/06_interview.png) |
-| **Fake upay call (RED)** | **Hold before PIN** | **Accuracy report** |
-| ![](docs/screenshots/07_red.png) | ![](docs/screenshots/08_hold.png) | ![](docs/screenshots/09_accuracy.png) |
+| **Fake upay call (RED)** | **Hold before PIN** | **PIN → done** |
+| ![](docs/screenshots/07_red.png) | ![](docs/screenshots/08_hold.png) | ![](docs/screenshots/09_pin.png) |
 
 ## 1. Project overview
 
@@ -54,7 +54,7 @@ What the app deliberately does **not** do: it never listens to phone calls, neve
 
 | Layer | Technology |
 |---|---|
-| App (iOS, Android, Web) | Flutter 3 (Dart), Material 3, bundled Hind Siliguri font |
+| App (iOS, Android, Web) | Flutter 3 (Dart), Material 3, bundled Hind Siliguri font, UI follows upay's yellow/blue design language |
 | Voice | `speech_to_text` (STT), `flutter_tts` (TTS) |
 | Biometrics | `local_auth` (Face ID / Touch ID / fingerprint) |
 | Backend API | Python 3.11, FastAPI, Pydantic, Uvicorn |

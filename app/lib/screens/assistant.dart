@@ -342,7 +342,7 @@ class _AssistantScreenState extends State<AssistantScreen> {
           actions: [
             TextButton(
               onPressed: appState.toggleLanguage,
-              child: Text(bn ? 'EN' : 'বাংলা', style: const TextStyle(color: Colors.white)),
+              child: Text(bn ? 'EN' : 'বাংলা', style: const TextStyle(color: BrandColors.navy, fontWeight: FontWeight.w700)),
             ),
           ],
         ),

@@ -62,6 +62,20 @@ class Shell extends StatefulWidget {
 class _ShellState extends State<Shell> {
   int tab = 0;
 
+  Widget _nav(int i, IconData icon, String label) {
+    final on = tab == i;
+    final c = on ? BrandColors.navy : BrandColors.muted;
+    return Expanded(
+      child: InkWell(
+        onTap: () => setState(() => tab = i),
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Icon(icon, color: c),
+          Text(label, style: TextStyle(fontSize: 12, color: c, fontWeight: on ? FontWeight.w700 : FontWeight.w500)),
+        ]),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return ListenableBuilder(
@@ -70,23 +84,41 @@ class _ShellState extends State<Shell> {
         final bn = appState.bangla;
         return Scaffold(
           body: IndexedStack(index: tab, children: const [HomeScreen(), DashboardScreen(), AccuracyScreen()]),
-          floatingActionButton: tab == 0
-              ? FloatingActionButton.extended(
-                  backgroundColor: BrandColors.navy,
-                  foregroundColor: Colors.white,
-                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AssistantScreen())),
-                  icon: const Icon(Icons.mic_rounded, size: 28),
-                  label: const Text('বলো upay', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16)),
-                )
-              : null,
-          bottomNavigationBar: NavigationBar(
-            selectedIndex: tab,
-            onDestinationSelected: (i) => setState(() => tab = i),
-            destinations: [
-              NavigationDestination(icon: const Icon(Icons.home_outlined), selectedIcon: const Icon(Icons.home), label: tr(bn, 'হোম', 'Home')),
-              NavigationDestination(icon: const Icon(Icons.shield_outlined), selectedIcon: const Icon(Icons.shield), label: tr(bn, 'ড্যাশবোর্ড', 'Dashboard')),
-              NavigationDestination(icon: const Icon(Icons.analytics_outlined), selectedIcon: const Icon(Icons.analytics), label: tr(bn, 'অ্যাকুরেসি', 'Accuracy')),
-            ],
+          floatingActionButton: SizedBox(
+            width: 70,
+            height: 70,
+            child: FloatingActionButton(
+              backgroundColor: BrandColors.navy,
+              foregroundColor: Colors.white,
+              elevation: 4,
+              shape: const CircleBorder(side: BorderSide(color: Colors.white, width: 4)),
+              tooltip: 'বলো upay',
+              onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AssistantScreen())),
+              child: const Icon(Icons.mic_rounded, size: 34),
+            ),
+          ),
+          floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+          bottomNavigationBar: BottomAppBar(
+            color: const Color(0xFFFFFBEA),
+            height: 68,
+            padding: EdgeInsets.zero,
+            notchMargin: 6,
+            shape: const CircularNotchedRectangle(),
+            child: Row(children: [
+              _nav(0, Icons.home_rounded, tr(bn, 'হোম', 'Home')),
+              _nav(1, Icons.shield_outlined, tr(bn, 'ড্যাশবোর্ড', 'Dashboard')),
+              const Expanded(child: SizedBox()),
+              _nav(2, Icons.analytics_outlined, tr(bn, 'অ্যাকুরেসি', 'Accuracy')),
+              Expanded(
+                child: InkWell(
+                  onTap: appState.toggleLanguage,
+                  child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                    const Icon(Icons.translate_rounded, color: BrandColors.muted),
+                    Text(bn ? 'English' : 'বাংলা', style: const TextStyle(fontSize: 12, color: BrandColors.muted)),
+                  ]),
+                ),
+              ),
+            ]),
           ),
         );
       },

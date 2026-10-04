@@ -27,9 +27,19 @@ class HomeScreen extends StatelessWidget {
           onRefresh: appState.refresh,
           child: ListView(padding: EdgeInsets.zero, children: [
             _header(context, p),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
-              child: _boloCard(context),
+            Container(
+              color: BrandColors.yellow,
+              child: Container(
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [BrandColors.yellow, BrandColors.yellow, BrandColors.bg, BrandColors.bg],
+                      stops: [0, .5, .5, 1]),
+                ),
+                child: _boloCard(context),
+              ),
             ),
             Padding(
               padding: const EdgeInsets.all(16),
@@ -63,116 +73,139 @@ class HomeScreen extends StatelessWidget {
   Widget _header(BuildContext context, Map<String, dynamic> p) {
     final name = bn ? p['name_bn'] : p['name'];
     return Container(
-      padding: EdgeInsets.fromLTRB(16, MediaQuery.of(context).padding.top + 12, 16, 22),
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(colors: [BrandColors.navy, BrandColors.navyDark], begin: Alignment.topLeft, end: Alignment.bottomRight),
-        borderRadius: BorderRadius.vertical(bottom: Radius.circular(24)),
-      ),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Row(children: [
-          CircleAvatar(
-            radius: 24,
-            backgroundColor: BrandColors.yellow,
-            child: Text(name.toString().characters.first,
-                style: const TextStyle(color: BrandColors.navy, fontWeight: FontWeight.w800, fontSize: 20)),
+      color: BrandColors.yellow,
+      padding: EdgeInsets.fromLTRB(16, MediaQuery.of(context).padding.top + 14, 16, 18),
+      child: Row(children: [
+        CircleAvatar(
+          radius: 26,
+          backgroundColor: Colors.white,
+          child: Text(name.toString().characters.first,
+              style: const TextStyle(color: BrandColors.navy, fontWeight: FontWeight.w800, fontSize: 22)),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text(name, style: const TextStyle(fontSize: 19, fontWeight: FontWeight.w700, color: BrandColors.text)),
+            Text(bn ? bnDigits(p['phone']) : p['phone'], style: const TextStyle(color: BrandColors.muted, fontSize: 13)),
+          ]),
+        ),
+        GestureDetector(
+          onTap: appState.toggleBalance,
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            decoration: BoxDecoration(color: BrandColors.navy, borderRadius: BorderRadius.circular(22)),
+            child: Text(
+              appState.balanceVisible ? taka(appState.balance, bn) : tr(bn, 'ব্যালেন্স', 'Balance'),
+              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 15),
+            ),
           ),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(name, style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w700)),
-              const SizedBox(height: 4),
-              GestureDetector(
-                onTap: appState.toggleBalance,
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
-                  decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(20)),
-                  child: Text(
-                    appState.balanceVisible ? taka(appState.balance, bn) : tr(bn, 'ব্যালেন্স দেখতে ট্যাপ করুন', 'Tap for balance'),
-                    style: const TextStyle(color: BrandColors.navy, fontWeight: FontWeight.w700),
-                  ),
-                ),
-              ),
-            ]),
-          ),
-          IconButton(
-            tooltip: 'Settings',
-            onPressed: () => _settings(context),
-            icon: const Icon(Icons.tune_rounded, color: Colors.white),
-          ),
-        ]),
+        ),
+        IconButton(
+          tooltip: 'Settings',
+          onPressed: () => _settings(context),
+          icon: const Icon(Icons.tune_rounded, color: BrandColors.navy),
+        ),
       ]),
     );
   }
 
   Widget _boloCard(BuildContext context) => Material(
-        color: BrandColors.yellow,
-        borderRadius: BorderRadius.circular(18),
+        color: Colors.white,
+        elevation: 2,
+        shadowColor: Colors.black12,
+        borderRadius: BorderRadius.circular(16),
         child: InkWell(
-          borderRadius: BorderRadius.circular(18),
+          borderRadius: BorderRadius.circular(16),
           onTap: () => _openAssistant(context),
-          child: Padding(
-            padding: const EdgeInsets.all(16),
+          child: Container(
+            padding: const EdgeInsets.all(14),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(16),
+              gradient: const LinearGradient(colors: [Color(0xFFE8F0FC), Colors.white]),
+            ),
             child: Row(children: [
               Container(
-                width: 56,
-                height: 56,
+                width: 52,
+                height: 52,
                 decoration: const BoxDecoration(color: BrandColors.navy, shape: BoxShape.circle),
-                child: const Icon(Icons.mic_rounded, color: Colors.white, size: 30),
+                child: const Icon(Icons.mic_rounded, color: Colors.white, size: 28),
               ),
-              const SizedBox(width: 14),
+              const SizedBox(width: 12),
               Expanded(
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  const Text('বলো upay', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800, color: BrandColors.navy)),
-                  Text(tr(bn, 'মুখে বলুন, টাকা পাঠান। প্রতারণা থেকে সুরক্ষাসহ।', 'Just say it. Send money safely, with scam protection.'),
-                      style: const TextStyle(color: BrandColors.navy)),
+                  const Text('বলো upay', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: BrandColors.text)),
+                  Text(tr(bn, 'মুখে বলুন, নিরাপদে টাকা পাঠান', 'Just say it. Send money safely.'),
+                      style: const TextStyle(color: BrandColors.muted, fontSize: 13)),
                 ]),
               ),
-              const Icon(Icons.arrow_forward_ios_rounded, color: BrandColors.navy, size: 18),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 7),
+                decoration: BoxDecoration(color: BrandColors.yellow, borderRadius: BorderRadius.circular(20)),
+                child: Text(tr(bn, 'বলুন', 'Speak'),
+                    style: const TextStyle(fontWeight: FontWeight.w700, color: BrandColors.text, fontSize: 13)),
+              ),
             ]),
           ),
         ),
       );
 
+  Widget _service(BuildContext context, IconData icon, Color bg, Color fg, String label, VoidCallback? onTap,
+      {bool big = true}) {
+    return InkWell(
+      borderRadius: BorderRadius.circular(12),
+      onTap: onTap ??
+          () => ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+              content: Text(tr(bn, 'এই প্রোটোটাইপে শুধু সেন্ড মানি, রিচার্জ ও ব্যালেন্স',
+                  'Prototype supports Send Money, Recharge and Balance')))),
+      child: Opacity(
+        opacity: onTap == null ? 0.55 : 1,
+        child: Column(mainAxisSize: MainAxisSize.min, children: [
+          Container(
+            width: big ? 62 : 48,
+            height: big ? 62 : 48,
+            decoration: BoxDecoration(color: bg, shape: big ? BoxShape.circle : BoxShape.rectangle,
+                borderRadius: big ? null : BorderRadius.circular(12)),
+            child: Icon(icon, color: fg, size: big ? 30 : 26),
+          ),
+          const SizedBox(height: 6),
+          Text(label, textAlign: TextAlign.center, maxLines: 2,
+              style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w600, color: BrandColors.text)),
+        ]),
+      ),
+    );
+  }
+
   Widget _services(BuildContext context) {
-    final items = [
-      (Icons.send_rounded, tr(bn, 'সেন্ড মানি', 'Send Money'), tr(bn, 'টাকা পাঠাও', 'send money'), true),
-      (Icons.phone_iphone_rounded, tr(bn, 'মোবাইল রিচার্জ', 'Recharge'), tr(bn, 'আমার নম্বরে ৫০ টাকা রিচার্জ', 'amar number e 50 taka recharge'), true),
-      (Icons.account_balance_wallet_outlined, tr(bn, 'ব্যালেন্স', 'Balance'), tr(bn, 'ব্যালেন্স কত', 'balance koto'), true),
-      (Icons.payments_outlined, tr(bn, 'ক্যাশ আউট', 'Cash Out'), null, false),
-      (Icons.receipt_long_outlined, tr(bn, 'পে বিল', 'Pay Bill'), null, false),
-      (Icons.storefront_outlined, tr(bn, 'পেমেন্ট', 'Payment'), null, false),
+    void say(String t) => _openAssistant(context, t);
+    final main = [
+      _service(context, Icons.send_rounded, const Color(0xFFBDEBFA), const Color(0xFF0B79B8),
+          tr(bn, 'সেন্ড মানি', 'Send Money'), () => _openAssistant(context)),
+      _service(context, Icons.payments_rounded, const Color(0xFFFFD9CC), const Color(0xFFE0603A),
+          tr(bn, 'ক্যাশ আউট', 'Cash Out'), null),
+      _service(context, Icons.phone_iphone_rounded, const Color(0xFFD3E6FB), const Color(0xFF2F7BD8),
+          tr(bn, 'মোবাইল টপআপ', 'Mobile TopUp'), () => say(tr(bn, 'আমার নম্বরে ৫০ টাকা রিচার্জ', 'amar number e 50 taka recharge'))),
+      _service(context, Icons.receipt_long_rounded, const Color(0xFFC9D3EE), const Color(0xFF3B4F9A),
+          tr(bn, 'পে বিল', 'Pay Bill'), null),
     ];
+    final second = [
+      _service(context, Icons.account_balance_wallet_outlined, BrandColors.bg, const Color(0xFF6A5ACD),
+          tr(bn, 'ব্যালেন্স', 'Balance'), () => say(tr(bn, 'ব্যালেন্স কত', 'balance koto')), big: false),
+      _service(context, Icons.request_page_outlined, BrandColors.bg, const Color(0xFF2BA3A0),
+          tr(bn, 'রিকোয়েস্ট মানি', 'Request Money'), null, big: false),
+      _service(context, Icons.account_balance_outlined, BrandColors.bg, const Color(0xFF2F7BD8),
+          tr(bn, 'ফান্ড ট্রান্সফার', 'Fund Transfer'), null, big: false),
+      _service(context, Icons.qr_code_2_rounded, BrandColors.bg, BrandColors.text,
+          tr(bn, 'মেক পেমেন্ট', 'Make Payment'), null, big: false),
+    ];
+    Widget row(List<Widget> items) => Row(children: [for (final i in items) Expanded(child: i)]);
     return Card(
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 12),
-        child: GridView.count(
-          crossAxisCount: 3,
-          shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
-          childAspectRatio: 1.15,
-          children: [
-            for (final it in items)
-              InkWell(
-                borderRadius: BorderRadius.circular(12),
-                onTap: it.$4
-                    ? () => it.$3 == tr(bn, 'টাকা পাঠাও', 'send money') ? _openAssistant(context) : _openAssistant(context, it.$3)
-                    : () => ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                        content: Text(tr(bn, 'এই প্রোটোটাইপে শুধু সেন্ড মানি, রিচার্জ ও ব্যালেন্স', 'Prototype supports Send Money, Recharge and Balance')))),
-                child: Opacity(
-                  opacity: it.$4 ? 1 : 0.45,
-                  child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                    Container(
-                      padding: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(color: BrandColors.bg, borderRadius: BorderRadius.circular(14)),
-                      child: Icon(it.$1, color: BrandColors.navy),
-                    ),
-                    const SizedBox(height: 6),
-                    Text(it.$2, textAlign: TextAlign.center, style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600)),
-                  ]),
-                ),
-              ),
-          ],
-        ),
+        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 6),
+        child: Column(children: [
+          row(main),
+          const Padding(padding: EdgeInsets.symmetric(vertical: 12, horizontal: 12), child: Divider(height: 1)),
+          row(second),
+        ]),
       ),
     );
   }
@@ -186,7 +219,8 @@ class HomeScreen extends StatelessWidget {
           _ => t,
         };
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Text(tr(bn, 'সাম্প্রতিক লেনদেন', 'Recent transactions'), style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 16)),
+      Text(tr(bn, 'সাম্প্রতিক লেনদেন', 'Recent transactions'),
+          style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 16, color: BrandColors.navy)),
       const SizedBox(height: 8),
       Card(
         child: Column(children: [

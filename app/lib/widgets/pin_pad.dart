@@ -40,15 +40,16 @@ class _PinPadState extends State<PinPad> {
 
   Widget _key(String label, {VoidCallback? onTap, Widget? child}) => Expanded(
         child: Padding(
-          padding: const EdgeInsets.all(6),
+          padding: const EdgeInsets.all(3),
           child: Material(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(16),
+            color: label.isEmpty ? Colors.transparent : Colors.white,
+            elevation: label.isEmpty ? 0 : 1,
+            borderRadius: BorderRadius.circular(8),
             child: InkWell(
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(8),
               onTap: onTap,
               child: SizedBox(
-                height: 62,
+                height: 54,
                 child: Center(
                   child: child ??
                       Text(widget.bangla ? bnDigits(label) : label,
@@ -65,18 +66,22 @@ class _PinPadState extends State<PinPad> {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: List.generate(
-            widget.length,
-            (i) => Container(
-              margin: const EdgeInsets.all(8),
-              width: 18,
-              height: 18,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: i < _pin.length ? BrandColors.navy : Colors.transparent,
-                border: Border.all(color: BrandColors.navy, width: 2),
+        Container(
+          margin: const EdgeInsets.symmetric(horizontal: 24),
+          padding: const EdgeInsets.symmetric(vertical: 14),
+          decoration: BoxDecoration(color: const Color(0xFFF0F2F6), borderRadius: BorderRadius.circular(30)),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: List.generate(
+              widget.length,
+              (i) => Container(
+                margin: const EdgeInsets.symmetric(horizontal: 12),
+                width: 16,
+                height: 16,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: i < _pin.length ? BrandColors.navy : const Color(0xFFB9C7E3),
+                ),
               ),
             ),
           ),
@@ -86,18 +91,24 @@ class _PinPadState extends State<PinPad> {
             padding: const EdgeInsets.only(top: 4),
             child: Text(widget.error!, style: const TextStyle(color: BrandColors.red)),
           ),
-        const SizedBox(height: 8),
-        for (final row in const [
-          ['1', '2', '3'],
-          ['4', '5', '6'],
-          ['7', '8', '9']
-        ])
-          Row(children: [for (final d in row) _key(d, onTap: () => _tap(d))]),
-        Row(children: [
-          _key('', child: const SizedBox()),
-          _key('0', onTap: () => _tap('0')),
-          _key('', onTap: _back, child: const Icon(Icons.backspace_outlined)),
-        ]),
+        const SizedBox(height: 14),
+        Container(
+          padding: const EdgeInsets.all(4),
+          decoration: BoxDecoration(color: const Color(0xFFD5D8DE), borderRadius: BorderRadius.circular(12)),
+          child: Column(children: [
+            for (final row in const [
+              ['1', '2', '3'],
+              ['4', '5', '6'],
+              ['7', '8', '9']
+            ])
+              Row(children: [for (final d in row) _key(d, onTap: () => _tap(d))]),
+            Row(children: [
+              _key('', child: const SizedBox()),
+              _key('0', onTap: () => _tap('0')),
+              _key('', onTap: _back, child: const Icon(Icons.backspace_outlined)),
+            ]),
+          ]),
+        ),
       ],
     );
   }
