@@ -28,3 +28,9 @@ app/android/local.properties
 .DS_Store
 .idea/
 .vscode/
+
+# LaTeX build files
+docs/report/*.aux
+docs/report/*.log
+docs/report/*.out
+docs/report/report.pdf

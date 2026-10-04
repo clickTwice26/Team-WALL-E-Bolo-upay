@@ -202,7 +202,8 @@ ml/             generate_data.py, train_risk.py, evaluate_parser.py
 data/           seed.json (synthetic), scam_phrases.json, test_commands.json
 model/          risk_model.joblib, risk_metrics.json, parser_metrics.json
 deploy/         Dockerfile, Caddyfile
-docs/           PIPELINE.md, REPORT.md, DEMO_SCRIPT.md
+docs/           Bolo-upay-Report-Team-WALL-E.pdf (project report), report/ (LaTeX source),
+                PIPELINE.md, REPORT.md, DEMO_SCRIPT.md
 ```
 
 ## Responsible AI

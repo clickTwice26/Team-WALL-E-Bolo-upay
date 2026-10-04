@@ -1,0 +1,303 @@
+% Bolo upay — Project Report · Team WALL-E · AI Dev Fest 2026
+% Build:  cd docs/report && xelatex report.tex && xelatex report.tex
+\documentclass[11pt,a4paper]{article}
+
+% ---------------------------------------------------------------- layout
+\usepackage[a4paper,top=24mm,bottom=24mm,left=24mm,right=24mm,headsep=8mm,footskip=12mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{Noto Sans}[Scale=MatchLowercase]
+\setmonofont{Latin Modern Mono}[Scale=MatchLowercase]
+\newfontfamily\bnfont{Noto Serif Bengali}[Script=Bengali,Scale=0.92]
+\newcommand{\bn}[1]{{\bnfont #1}}
+
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{needspace}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{ink}{HTML}{1B2433}
+\definecolor{navy}{HTML}{0B4EA8}
+\definecolor{muted}{HTML}{5F6B7A}
+\definecolor{rule}{HTML}{D5DAE2}
+\definecolor{panel}{HTML}{F4F6FA}
+\definecolor{green}{HTML}{1E9E5A}
+\definecolor{amber}{HTML}{B7791F}
+\definecolor{red}{HTML}{C62828}
+\color{ink}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\linespread{1.08}
+\setlist{nosep,leftmargin=1.3em,topsep=3pt,itemsep=2pt}
+\renewcommand{\arraystretch}{1.25}
+\captionsetup{font={small,sf},labelfont={bf,color=navy},labelsep=period,justification=raggedright,singlelinecheck=false}
+
+% headings: sans, navy, numbered, quiet
+\titleformat{\section}{\sffamily\bfseries\large\color{navy}}{\thesection}{0.8em}{}
+\titlespacing*{\section}{0pt}{14pt}{4pt}
+\titleformat{\subsection}{\sffamily\bfseries\normalsize\color{ink}}{\thesubsection}{0.8em}{}
+\titlespacing*{\subsection}{0pt}{8pt}{2pt}
+
+% header / footer
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{rule}\leaders\hrule height \headrulewidth\hfill}}
+\fancyhead[L]{\sffamily\footnotesize\color{muted} Bolo upay \;·\; Project Report}
+\fancyhead[R]{\sffamily\footnotesize\color{muted} Team WALL-E \;·\; AI Dev Fest 2026}
+\fancyfoot[C]{\sffamily\footnotesize\color{muted} \thepage\ / \pageref{LastPage}}
+\fancypagestyle{first}{\fancyhf{}\renewcommand{\headrulewidth}{0pt}%
+  \fancyfoot[C]{\sffamily\footnotesize\color{muted} \thepage\ / \pageref{LastPage}}}
+
+\newcommand{\metric}[2]{%
+  \begin{minipage}[t]{0.235\textwidth}\centering
+  {\sffamily\bfseries\fontsize{19}{22}\selectfont\color{navy}#1}\\[2pt]
+  {\sffamily\scriptsize\color{muted}#2}\end{minipage}}
+
+\begin{document}
+\thispagestyle{first}
+
+% ---------------------------------------------------------------- title block
+{\sffamily\footnotesize\color{muted} AI DEV FEST 2026 \;·\; AI HACKATHON \;·\; DIU CPC $\times$ upay}\par\vspace{6pt}
+{\sffamily\bfseries\fontsize{26}{30}\selectfont Bolo upay}\par\vspace{2pt}
+{\sffamily\large\color{muted} A voice-first Bangla payment assistant with a scam and mistake shield}\par\vspace{10pt}
+
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\sffamily\small\color{muted} Team & \small \textbf{Team WALL-E} \,—\, Shagato Chowdhury, Umme Munia\\
+\sffamily\small\color{muted} Tracks & \small 03 Customer Innovation \& Financial Independence; 01 Trust \& Risk Intelligence\\
+\sffamily\small\color{muted} Repository & \small \href{https://github.com/clickTwice26/Team-WALL-E-Bolo-upay}{\texttt{github.com/clickTwice26/Team-WALL-E-Bolo-upay}}\\
+\sffamily\small\color{muted} Date & \small 4 October 2026\\
+\end{tabularx}
+
+\vspace{6pt}{\color{rule}\hrule height 0.6pt}\vspace{10pt}
+
+% ---------------------------------------------------------------- summary
+\begin{minipage}{\textwidth}
+\textbf{Summary.} Stolen mobile-wallet money in Bangladesh is almost never recovered, so the only reliable moment to protect a customer is before they press send. Bolo upay lets a customer say a payment in Bangla, Banglish or English, understands it with two independent parsers that must agree, checks the transfer against the customer's own history, asks short spoken questions when something looks like a scam, and raises the authentication bar with the risk. The AI never moves money on its own.
+\end{minipage}
+
+\vspace{12pt}
+\noindent\metric{91.9\%}{of scams flagged\\(rules-only baseline 53.1\%)}\hfill
+\metric{1.1\%}{of honest transfers held\\(target $\le$ 2\%)}\hfill
+\metric{0\%}{wrong amounts shown\\without asking}\hfill
+\metric{40}{automated tests\\passing}
+\par\vspace{4pt}
+{\sffamily\scriptsize\color{muted} Scam-shield figures are measured on 1,200 held-out \emph{synthetic} scenarios; parser figures on 96 team-written commands. See Section~6.}
+
+\vspace{4pt}{\color{rule}\hrule height 0.6pt}
+
+% ---------------------------------------------------------------- 1
+\section{Problem}
+
+For upay customers who send money by phone, especially first-time and low-literate users, scams and payment mistakes cause losses that are almost never recovered. Our goal is to stop risky transfers before the money leaves, measured by scams flagged, honest transfers wrongly held, and wrong amounts shown without asking.
+
+\begin{itemize}
+  \item \textbf{Losses are not recovered.} Bangladesh Bank data reported MFS fraud of Tk 81.32 crore in 2025, of which 91.3\% was never recovered, because funds move through mule wallets within minutes. MFS fraud is more than 88\% of all unrecovered payment fraud, and officials recommended AI-driven detection~[1].
+  \item \textbf{Mistakes are costly.} MFS providers handled 699,605 customer disputes worth Tk 153.98 crore in 2025~[1].
+  \item \textbf{Scams work through the victim.} Most MFS fraud starts with the victim being talked into sharing a PIN or OTP, or sending money themselves~[1].
+  \item \textbf{Menus exclude people.} Low-literate MFS users in Bangladesh report frequent transaction errors~[2].
+  \item \textbf{Trust drives retention.} upay is a challenger with high acquisition cost (Tk 313 crore accumulated losses, 2021–2023~[3]); keeping customers active depends on trust and ease of use.
+\end{itemize}
+
+% ---------------------------------------------------------------- 2
+\section{Idea}
+
+Recovery after a scam rarely works. Bolo upay places a careful, explainable check at the moment before sending, inside a payment flow that a customer can use simply by speaking Bangla.
+
+A mobile app cannot and should not listen to phone calls. Instead, when a transfer looks risky, the assistant \emph{asks the customer} two or three short questions aloud (``Did someone call you asking for this money?'') and checks the answers for known scam patterns. Victims usually repeat what the scammer told them, which is exactly what the check looks for.
+
+% ---------------------------------------------------------------- 3
+\section{Implemented solution}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  node distance=4mm and 3.2mm,
+  box/.style={draw=rule,fill=panel,rounded corners=2pt,font=\sffamily\scriptsize,align=center,minimum height=10mm,text width=22mm,inner sep=2pt},
+  key/.style={box,draw=navy,fill=white,line width=0.6pt},
+  arr/.style={-{Stealth[length=1.6mm]},color=muted,line width=0.5pt}]
+  \node[box] (a) {Voice or text\\ \textcolor{muted}{editable transcript}};
+  \node[key,right=of a] (b) {Rule parser\\+ optional LLM};
+  \node[box,right=of b] (c) {Cross-check\\ \textcolor{muted}{ask if they disagree}};
+  \node[box,right=of c] (d) {Recipient\\resolution};
+  \node[key,below=7mm of d] (e) {Risk engine\\ \textcolor{muted}{ML + hard rules}};
+  \node[box,left=of e] (f) {Scam interview\\ \textcolor{muted}{amber / red only}};
+  \node[box,left=of f] (g) {Confirmation\\read aloud};
+  \node[key,left=of g] (h) {Risk-based\\authentication};
+  \draw[arr] (a)--(b); \draw[arr] (b)--(c); \draw[arr] (c)--(d); \draw[arr] (d)--(e);
+  \draw[arr] (e)--(f); \draw[arr] (f)--(g); \draw[arr] (g)--(h);
+  \node[font=\sffamily\scriptsize,color=muted,below=2mm of h,text width=40mm,align=center] {fingerprint $\rightarrow$ PIN $\rightarrow$ hold + PIN};
+  \node[font=\sffamily\scriptsize,color=muted,below=2mm of e,text width=40mm,align=center] {\textcolor{green}{GREEN} / \textcolor{amber}{YELLOW} / \textcolor{red}{RED} with reasons};
+\end{tikzpicture}
+\caption{Decision pipeline. Every step that can change money either asks the customer or requires their PIN or biometric.}
+\end{figure}
+
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}p{30mm} X@{}}
+\toprule
+Flutter app & iOS, Android and Web from one codebase: PIN login, home, voice assistant, clarification, scam interview, warning and hold screens, PIN pad, Face ID / fingerprint, ops dashboard, accuracy report.\\
+FastAPI backend & Parse, assess, execute, cancel, dashboard and metrics endpoints. Authentication rules are enforced on the server, not the client.\\
+ML pipeline & Synthetic data generator, risk-model training with validation-tuned thresholds, parser evaluation on a labelled command set.\\
+Deployment & One Docker image (API and web app on one origin) behind Caddy with automatic HTTPS.\\
+\bottomrule
+\end{tabularx}
+
+% ---------------------------------------------------------------- 4
+\section{Key features}
+
+\begin{enumerate}
+  \item \textbf{Natural commands.} Bangla, Banglish and English, including Bangla number words (\bn{দেড় হাজার} = 1,500, \bn{আড়াইশো} = 250, \bn{সাড়ে তিন হাজার} = 3,500, \bn{পৌনে দুই হাজার} = 1,750), Bangla digits, ``5k'' and spoken phone numbers.
+  \item \textbf{Never guesses money or people.} Two possible amounts, two contacts named Rahim, or a misheard name all lead to a question, not a guess.
+  \item \textbf{Scam shield.} Three levels with plain-Bangla reasons for every warning.
+  \item \textbf{Spoken scam interview} with negation handling (``nobody asked for my OTP'' is not a scam signal).
+  \item \textbf{Hard rules for clear evidence}, e.g.\ a request to ``send it back'' when no money ever arrived from that number.
+  \item \textbf{Mistake guard.} ``You usually send this person about Tk 360. Did you mean Tk 350?''
+  \item \textbf{Risk-based authentication.} Biometric only for low risk; PIN for medium; a 30-second hold, warning acknowledgement and PIN for high risk.
+  \item \textbf{Ops dashboard and in-app accuracy report} showing transfers cancelled after a warning and money protected.
+\end{enumerate}
+
+% ---------------------------------------------------------------- 5
+\section{AI approach}
+
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash\bfseries}p{24mm} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{50mm}@{}}
+\toprule
+\textnormal{\sffamily\small Part} & \sffamily\small Method & \sffamily\small Reason\\
+\midrule
+Speech & On-device speech-to-text; transcript always editable & Recognition makes mistakes; the user can fix the text\\
+Parsing & Deterministic Bangla/Banglish/English parser plus optional LLM (Gemini, OpenAI or Claude) with structured output; disagreement leads to a question & Money needs a second opinion; rules are predictable, the LLM covers unusual phrasing\\
+Recipient & Alias matching with Bangla case suffixes; longest alias wins; fuzzy matches need confirmation & Real contact lists have duplicates and nicknames\\
+Risk score & Logistic regression on nine history features & AUC close to gradient boosting (0.986 vs 0.992) and fully explainable\\
+Thresholds & Tuned on a validation split: honest transfers held $\le$ 2\%, then maximise scams flagged & Limits friction for honest customers explicitly\\
+Scam phrases & Lexicon of 8 scam types in three languages; exact and fuzzy matching; negation-aware & Victims repeat what the scammer said\\
+Evaluation & Two-stage (command only, then with interview answers); 70/15/15 split; rules-only baseline & Mirrors how the app actually decides\\
+\bottomrule
+\end{tabularx}
+
+\subsection{Model features and learned weights}
+\begin{tabularx}{\textwidth}{@{}>{\ttfamily\small}p{46mm} X r@{}}
+\toprule
+\textnormal{\sffamily\small Feature} & \sffamily\small Meaning & \sffamily\small Weight\\
+\midrule
+scam\_score & Scam phrases in the command or interview answers & 1.90\\
+balance\_fraction & Share of the balance being sent & 1.69\\
+is\_new\_recipient & Never sent to before and not in contacts & 1.50\\
+on\_active\_call & A phone call is active (native signal; simulated in the prototype) & 0.80\\
+recent\_sends\_30m & Number of sends in the last 30 minutes & 0.72\\
+return\_claim\_no\_inflow & ``Send it back'' but nothing arrived from that number (also a hard rule) & 0.49\\
+is\_night & Between 00:00 and 05:00, Dhaka time & 0.18\\
+log\_recipient\_ratio & Amount relative to what this person usually receives & 0.04\\
+is\_recharge & Mobile recharge rather than send money & $-$0.33\\
+\bottomrule
+\end{tabularx}
+
+% ---------------------------------------------------------------- 6
+\Needspace{12\baselineskip}
+\section{Results}
+
+\subsection{Command understanding}
+96 labelled commands written by the team (Bangla, Banglish, English, Bangla digits, number words, phone numbers, ambiguous names and amounts), rule parser only.
+
+\begin{tabularx}{\textwidth}{@{}X r X r@{}}
+\toprule
+Intent accuracy & 100\% & Recipient accuracy & 100\%\\
+Amount accuracy & 100\% & Wrong amount shown without asking & \textbf{0\%}\\
+\bottomrule
+\end{tabularx}
+
+\subsection{Scam shield}
+1,200 held-out synthetic scenarios (309 scams, 891 honest transfers); thresholds chosen on a separate validation split.
+
+\begin{tabularx}{\textwidth}{@{}X r r@{}}
+\toprule
+\sffamily\small Measure & \sffamily\small Bolo upay & \sffamily\small Rules only\\
+\midrule
+Scams flagged (yellow or red) & \textbf{91.9\%} & 53.1\%\\
+Scams held at red & \textbf{73.8\%} & 16.2\%\\
+Honest transfers held at red & 1.1\% & 0.9\%\\
+Honest transfers asked for PIN with a warning & 13.4\% & 6.1\%\\
+\bottomrule
+\end{tabularx}
+
+\vspace{2pt}
+{\small\color{muted} The scenarios are simulated because no real fraud data is available to the team; they show that the pipeline behaves as designed, not real-world fraud performance. The parser test set was written alongside the parser, so real speech will be harder.}
+
+% ---------------------------------------------------------------- 7
+\Needspace{8\baselineskip}
+\section{Real-life impact}
+
+\begin{itemize}
+  \item \textbf{Customers.} A ten-second pause with the right question at the right moment, in their own language. Scam victims are stopped before the money leaves.
+  \item \textbf{upay.} Fewer disputes from wrong-number and wrong-amount transfers; lower fraud loss and reputational damage; a clear difference from competitors; voice access for customers who avoid the app today.
+  \item \textbf{Pilot metrics.} Scams cancelled after a warning, money protected, disputes per 10,000 transfers, false-alarm rate, and voice-command completion rate.
+\end{itemize}
+
+% ---------------------------------------------------------------- 8
+\section{Responsible AI and security}
+
+Synthetic data only, with no personal information. No call recording and no voice biometrics, since voices can be cloned. The AI never moves money: every transfer needs the customer's PIN or biometric, and the server decides which is required. PINs are hashed; three wrong attempts lock the transaction. Every warning is explained, and false alarms are measured and reported so thresholds can be chosen to limit them.
+
+% ---------------------------------------------------------------- 9
+\section{Limitations and next steps}
+
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X@{}}
+\toprule
+\sffamily\small Limitation & \sffamily\small Next step\\
+\midrule
+Model trained on synthetic data & Validate on governed, anonymised upay data\\
+Test commands written by the team & Collect real Bangla voice commands from consenting pilot users\\
+Bangla speech recognition varies by device & Compare on-device and server speech recognition\\
+A pressured victim can ignore a warning & Delayed release or call-back for very risky transfers\\
+Account takeover and USSD users not covered & SMS confirmation path for USSD; device and login security\\
+Call-state signal is simulated & Implement in the native app with the customer's permission\\
+\bottomrule
+\end{tabularx}
+
+\subsection{Path to production}
+Competition review $\rightarrow$ technical and business review $\rightarrow$ controlled validation on governed data $\rightarrow$ proof of concept inside the upay app (send money only) $\rightarrow$ pilot with first-time users $\rightarrow$ measure scams stopped, disputes, false alarms and completion rate $\rightarrow$ integrate.
+
+% ---------------------------------------------------------------- screens
+\clearpage
+\section{Prototype screens}
+
+\begin{figure}[H]
+\centering
+\newcommand{\shot}[2]{\begin{minipage}[t]{0.185\textwidth}\centering
+  \includegraphics[width=\linewidth]{../screenshots/#1}\\[2pt]{\sffamily\scriptsize\color{muted}#2}\end{minipage}}
+\shot{00_login.png}{PIN login}\hfill
+\shot{01_home.png}{Home}\hfill
+\shot{03_green.png}{Normal send}\hfill
+\shot{09_pin.png}{PIN}\hfill
+\shot{10_done.png}{Done}\\[10pt]
+\shot{04_which_rahim.png}{Which Rahim?}\hfill
+\shot{05_extra_zero.png}{Extra zero}\hfill
+\shot{06_interview.png}{Scam interview}\hfill
+\shot{07_red.png}{Fake upay call}\hfill
+\shot{08_hold.png}{Hold before PIN}
+\caption{Screens from the running prototype (web build). A ribbon on every screen marks it as a prototype, not the official upay app.}
+\end{figure}
+
+% ---------------------------------------------------------------- refs
+\section*{References}
+\small
+\begin{enumerate}[label={[\arabic*]},leftmargin=2em]
+  \item New Age, ``Over 90pc stolen funds from MFS remain unrecovered,'' 3 July 2026 (Bangladesh Bank data).
+  \item ``Smartphone based Inclusive MFS Design for Low-Literate Population,'' ACM Digital Library.
+  \item The Business Standard, ``upay's accumulated losses cross Tk300cr in 2023,'' 15 June 2024.
+\end{enumerate}
+
+\vspace{4pt}
+{\footnotesize\color{muted} Disclosure: AI coding assistants were used during development, as permitted by the competition rules. All users, phone numbers and transactions in the prototype are synthetic.}
+
+\end{document}
