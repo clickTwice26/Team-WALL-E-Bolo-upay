@@ -1,7 +1,7 @@
-# বলো upay (Bolo upay)
+# Team WALL-E · বলো upay (Bolo upay)
 
 **A voice-first Bangla payment assistant with a built-in scam and mistake shield.**
-Prototype for the AI Dev Fest 2026 AI Hackathon (DIU CPC × upay). Track 03 (Customer Innovation & Financial Independence) and Track 01 (Trust & Risk Intelligence).
+Prototype by **Team WALL-E** (Shagato Chowdhury, Umme Munia) for the AI Dev Fest 2026 AI Hackathon (DIU CPC × upay). Track 03 (Customer Innovation & Financial Independence) and Track 01 (Trust & Risk Intelligence).
 
 > This is a hackathon prototype. It is **not the official upay app**, it moves no real money, and all users, numbers and transactions are synthetic.
 
@@ -79,8 +79,8 @@ What the app deliberately does **not** do: it never listens to phone calls, neve
 ## 5. Installation and setup
 
 ```bash
-git clone https://github.com/clicktwice26/aidevfest.top.git
-cd aidevfest.top
+git clone https://github.com/clickTwice26/Team-WALL-E-Bolo-upay.git
+cd Team-WALL-E-Bolo-upay
 
 # backend
 python3 -m venv .venv && source .venv/bin/activate

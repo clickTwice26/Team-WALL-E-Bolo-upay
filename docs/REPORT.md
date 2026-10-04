@@ -1,5 +1,7 @@
 # Bolo upay — Project Report
 
+**Team WALL-E** · Shagato Chowdhury, Umme Munia
+
 AI Dev Fest 2026 · AI Hackathon (DIU CPC × upay)
 Tracks: 03 Customer Innovation & Financial Independence · 01 Trust & Risk Intelligence
 
