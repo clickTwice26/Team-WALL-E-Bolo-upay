@@ -73,5 +73,7 @@ class Api {
       Map<String, dynamic>.from(await _send('GET', '/api/dashboard'));
   static Future<Map<String, dynamic>> metrics() async =>
       Map<String, dynamic>.from(await _send('GET', '/api/metrics'));
+  static Future<void> login(String userId, String pin) async =>
+      _send('POST', '/api/login', {'user_id': userId, 'pin': pin});
   static Future<void> reset() async => _send('POST', '/api/demo/reset');
 }

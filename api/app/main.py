@@ -76,6 +76,11 @@ class ExecuteIn(BaseModel):
     acknowledged_warning: bool = False
 
 
+class LoginIn(BaseModel):
+    user_id: str
+    pin: str = Field(pattern=r"^\d{4,5}$")
+
+
 class CancelIn(BaseModel):
     user_id: str
     assessment_id: str
@@ -111,6 +116,15 @@ def get_user(uid: str):
         recent.append({**t, "name": c["name"] if c else ("নিজের নম্বর" if t["counterparty"] == u["phone"] else None),
                        "counterparty": mask_phone(t["counterparty"] or "")})
     return {**u, "recent": recent}
+
+
+@app.post("/api/login")
+def login(body: LoginIn):
+    """Demo app unlock with the 4-digit PIN (synthetic users, demo PIN 1234)."""
+    _user_or_404(body.user_id)
+    if not store.check_pin(body.user_id, body.pin):
+        raise HTTPException(401, {"code": "wrong_pin"})
+    return {"ok": True}
 
 
 @app.post("/api/parse")

@@ -12,13 +12,15 @@ Prototype for the AI Dev Fest 2026 AI Hackathon (DIU CPC × upay). Track 03 (Cus
 
 ## Screenshots
 
-| Home | Voice input | Normal send (GREEN) |
+| PIN login | Home | Voice input |
 |---|---|---|
-| ![](docs/screenshots/01_home.png) | ![](docs/screenshots/02_voice_input.png) | ![](docs/screenshots/03_green.png) |
+| ![](docs/screenshots/00_login.png) | ![](docs/screenshots/01_home.png) | ![](docs/screenshots/02_voice_input.png) |
+| **Normal send (GREEN)** | **PIN** | **Done** |
+| ![](docs/screenshots/03_green.png) | ![](docs/screenshots/09_pin.png) | ![](docs/screenshots/10_done.png) |
 | **Which Rahim?** | **Extra zero?** | **Scam interview** |
 | ![](docs/screenshots/04_which_rahim.png) | ![](docs/screenshots/05_extra_zero.png) | ![](docs/screenshots/06_interview.png) |
-| **Fake upay call (RED)** | **Hold before PIN** | **PIN → done** |
-| ![](docs/screenshots/07_red.png) | ![](docs/screenshots/08_hold.png) | ![](docs/screenshots/09_pin.png) |
+| **Fake upay call (RED)** | **Hold before PIN** | |
+| ![](docs/screenshots/07_red.png) | ![](docs/screenshots/08_hold.png) | |
 
 ## 1. Project overview
 
@@ -54,7 +56,7 @@ What the app deliberately does **not** do: it never listens to phone calls, neve
 
 | Layer | Technology |
 |---|---|
-| App (iOS, Android, Web) | Flutter 3 (Dart), Material 3, bundled Hind Siliguri font, UI follows upay's yellow/blue design language |
+| App (iOS, Android, Web) | Flutter 3 (Dart), Material 3, bundled Hind Siliguri font, UI follows upay's yellow/blue design language and the public upay UX case study by Shadhin Lablu (Dribbble) |
 | Voice | `speech_to_text` (STT), `flutter_tts` (TTS) |
 | Biometrics | `local_auth` (Face ID / Touch ID / fingerprint) |
 | Backend API | Python 3.11, FastAPI, Pydantic, Uvicorn |
@@ -146,7 +148,7 @@ The app and API are served together at `https://$DOMAIN`.
 
 `https://<your-domain>` ← replace before submission.
 
-Demo login is not needed. Use the settings button (top right on the home screen) to switch between three synthetic users, toggle Bangla/English, and simulate "on a phone call". The **demo PIN is `1234`**.
+Unlock the app with the **demo PIN `1234`**. Use the settings button (top right on the home screen) to switch between three synthetic users, toggle Bangla/English, and simulate "on a phone call". The **demo PIN is `1234`**.
 
 ## 9. Testing
 

@@ -95,3 +95,8 @@ def test_later_no_does_not_cancel_earlier_scam_answer():
 def test_bangla_negative_verb_is_not_a_hit():
     from app.core import scam
     assert scam.match("কেউ ওটিপি চায়নি")["score"] == 0
+
+
+def test_login_pin():
+    assert c.post("/api/login", json={"user_id": "u1", "pin": "1234"}).status_code == 200
+    assert c.post("/api/login", json={"user_id": "u1", "pin": "9999"}).status_code == 401

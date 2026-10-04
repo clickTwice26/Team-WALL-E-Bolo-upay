@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'screens/assistant.dart';
 import 'screens/home.dart';
 import 'screens/insights.dart';
+import 'screens/login.dart';
 import 'state.dart';
 import 'strings.dart';
 import 'theme.dart';
@@ -25,7 +26,7 @@ class BoloUpayApp extends StatelessWidget {
         Expanded(child: child!),
         const _PrototypeRibbon(),
       ]),
-      home: const Shell(),
+      home: const _Gate(),
     );
   }
 }
@@ -51,6 +52,20 @@ class _PrototypeRibbon extends StatelessWidget {
       ),
     );
   }
+}
+
+/// PIN unlock first (demo PIN 1234), then the app.
+class _Gate extends StatefulWidget {
+  const _Gate();
+  @override
+  State<_Gate> createState() => _GateState();
+}
+
+class _GateState extends State<_Gate> {
+  bool unlocked = false;
+  @override
+  Widget build(BuildContext context) =>
+      unlocked ? const Shell() : LoginScreen(onUnlocked: () => setState(() => unlocked = true));
 }
 
 class Shell extends StatefulWidget {
@@ -106,14 +121,14 @@ class _ShellState extends State<Shell> {
             shape: const CircularNotchedRectangle(),
             child: Row(children: [
               _nav(0, Icons.home_rounded, tr(bn, 'হোম', 'Home')),
-              _nav(1, Icons.shield_outlined, tr(bn, 'ড্যাশবোর্ড', 'Dashboard')),
+              _nav(1, Icons.history_rounded, tr(bn, 'ড্যাশবোর্ড', 'Dashboard')),
               const Expanded(child: SizedBox()),
-              _nav(2, Icons.analytics_outlined, tr(bn, 'অ্যাকুরেসি', 'Accuracy')),
+              _nav(2, Icons.account_balance_wallet_outlined, tr(bn, 'অ্যাকুরেসি', 'Accuracy')),
               Expanded(
                 child: InkWell(
                   onTap: appState.toggleLanguage,
                   child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                    const Icon(Icons.translate_rounded, color: BrandColors.muted),
+                    const Icon(Icons.more_horiz_rounded, color: BrandColors.muted),
                     Text(bn ? 'English' : 'বাংলা', style: const TextStyle(fontSize: 12, color: BrandColors.muted)),
                   ]),
                 ),

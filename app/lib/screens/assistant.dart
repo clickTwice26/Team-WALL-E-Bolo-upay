@@ -826,12 +826,14 @@ class _AssistantScreenState extends State<AssistantScreen> {
     return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
       _summaryCard(),
       const SizedBox(height: 16),
-      Text(level == 'GREEN' ? tr(bn, 'পিন দিন বা ফিঙ্গারপ্রিন্ট দিন', 'Enter PIN or use biometrics') : tr(bn, 'এই লেনদেনে পিন লাগবে', 'PIN required for this transfer'),
-          textAlign: TextAlign.center, style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 16)),
-      const SizedBox(height: 4),
       Text(tr(bn, 'ডেমো পিন: ১২৩৪', 'Demo PIN: 1234'), textAlign: TextAlign.center, style: const TextStyle(color: BrandColors.muted)),
-      const SizedBox(height: 8),
-      PinPad(bangla: bn, error: pinError, onSubmit: (p) => _execute('pin', pin: p)),
+      const SizedBox(height: 10),
+      PinPad(
+        bangla: bn,
+        error: pinError,
+        title: level == 'GREEN' ? tr(bn, 'পিন বা ফিঙ্গারপ্রিন্ট', 'PIN or biometrics') : tr(bn, 'পিন দিয়ে নিশ্চিত করুন', 'Confirm with PIN'),
+        onSubmit: (p) => _execute('pin', pin: p),
+      ),
       if (canBio) ...[
         const SizedBox(height: 8),
         OutlinedButton.icon(

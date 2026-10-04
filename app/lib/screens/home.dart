@@ -47,6 +47,11 @@ class HomeScreen extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: _moreServices(context),
+            ),
+            const SizedBox(height: 16),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               child: _recent(p),
             ),
             const SizedBox(height: 100),
@@ -158,7 +163,7 @@ class HomeScreen extends StatelessWidget {
               content: Text(tr(bn, 'এই প্রোটোটাইপে শুধু সেন্ড মানি, রিচার্জ ও ব্যালেন্স',
                   'Prototype supports Send Money, Recharge and Balance')))),
       child: Opacity(
-        opacity: onTap == null ? 0.55 : 1,
+        opacity: onTap == null ? 0.9 : 1,
         child: Column(mainAxisSize: MainAxisSize.min, children: [
           Container(
             width: big ? 62 : 48,
@@ -205,6 +210,77 @@ class HomeScreen extends StatelessWidget {
           row(main),
           const Padding(padding: EdgeInsets.symmetric(vertical: 12, horizontal: 12), child: Divider(height: 1)),
           row(second),
+        ]),
+      ),
+    );
+  }
+
+  Widget _moreServices(BuildContext context) {
+    Widget section(String title, List<(IconData, Color, String)> items) => Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(12, 4, 12, 10),
+              child: Text(title, style: const TextStyle(color: BrandColors.navy, fontSize: 16, fontWeight: FontWeight.w600)),
+            ),
+            GridView.count(
+              crossAxisCount: 4,
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              childAspectRatio: 0.95,
+              children: [
+                for (final it in items)
+                  _service(context, it.$1, Colors.transparent, it.$2, it.$3, null, big: false),
+              ],
+            ),
+          ],
+        );
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 12),
+        child: Column(children: [
+          section(tr(bn, 'উপায় পেমেন্টস', 'upay Payments'), [
+            (Icons.traffic_rounded, const Color(0xFF3C9A5F), tr(bn, 'ট্রাফিক ফাইন', 'Traffic Fine')),
+            (Icons.flight_takeoff_rounded, const Color(0xFF6C63FF), tr(bn, 'ভিসা ফি', 'Indian Visa')),
+            (Icons.confirmation_number_outlined, const Color(0xFF7B6FB0), tr(bn, 'টিকেট', 'Ticket')),
+            (Icons.apartment_rounded, const Color(0xFF2BA3A0), tr(bn, 'হোটেল', 'Hotel')),
+            (Icons.volunteer_activism_outlined, const Color(0xFF3C9A5F), tr(bn, 'যাকাত', 'Zakat Payment')),
+            (Icons.inventory_2_outlined, const Color(0xFF2F7BD8), tr(bn, 'ডোনেশন', 'Donation')),
+            (Icons.landscape_outlined, const Color(0xFFD32F2F), tr(bn, 'ভূমি মন্ত্রণালয়', 'Ministry of Land')),
+            (Icons.health_and_safety_outlined, const Color(0xFF0B8F7A), tr(bn, 'ইন্স্যুরেন্স', 'Insurance')),
+          ]),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 6),
+            child: Row(children: [
+              const Spacer(),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 5),
+                decoration: BoxDecoration(color: BrandColors.yellow, borderRadius: BorderRadius.circular(20)),
+                child: Text(tr(bn, 'আরও দেখুন ›', 'See More ›'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 13)),
+              ),
+              Expanded(
+                child: Align(
+                  alignment: Alignment.centerRight,
+                  child: Container(
+                    margin: const EdgeInsets.only(right: 10),
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                    decoration: BoxDecoration(color: const Color(0xFFFFF6CC), borderRadius: BorderRadius.circular(20)),
+                    child: Row(mainAxisSize: MainAxisSize.min, children: [
+                      const Icon(Icons.card_giftcard_rounded, size: 18, color: BrandColors.navy),
+                      const SizedBox(width: 4),
+                      Text(tr(bn, 'উপায় অফার', 'upay Offers'), style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 13)),
+                    ]),
+                  ),
+                ),
+              ),
+            ]),
+          ),
+          section(tr(bn, 'অন্যান্য সেবা', 'Other Services'), [
+            (Icons.mosque_outlined, const Color(0xFF3C9A5F), tr(bn, 'ইসলামিক ফাইন্যান্স', 'Islamic Finance')),
+            (Icons.sports_esports_outlined, const Color(0xFF6C63FF), tr(bn, 'গেমস', 'Games')),
+            (Icons.favorite_border_rounded, const Color(0xFFD32F2F), tr(bn, 'হেলথ', 'Health')),
+            (Icons.location_on_outlined, const Color(0xFFE0603A), tr(bn, 'সার্ভিস লোকেটর', 'Service Locator')),
+          ]),
         ]),
       ),
     );
