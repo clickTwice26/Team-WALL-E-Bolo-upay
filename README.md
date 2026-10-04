@@ -5,7 +5,7 @@ Prototype by **Team WALL-E** (Shagato Chowdhury, Umme Munia) for the AI Dev Fest
 
 > This is a hackathon prototype. It is **not the official upay app**, it moves no real money, and all users, numbers and transactions are synthetic.
 
-**Live deployment:** `https://<your-domain>` ← replace with the deployed URL before submitting
+**Live deployment:** **https://boloupay.shagato.space** (demo PIN `1234`)
 
 ---
 
@@ -148,7 +148,10 @@ The app and API are served together at `https://$DOMAIN`.
 
 ## 8. Live deployment URL
 
-`https://<your-domain>` ← replace before submission.
+**https://boloupay.shagato.space**
+
+- API health check: https://boloupay.shagato.space/api/health
+- API docs (OpenAPI): https://boloupay.shagato.space/docs
 
 Unlock the app with the **demo PIN `1234`**. Use the settings button (top right on the home screen) to switch between three synthetic users, toggle Bangla/English, and simulate "on a phone call". The **demo PIN is `1234`**.
 
@@ -192,7 +195,7 @@ The scenarios are simulated (no real fraud data is available). The numbers show 
 - **Fingerprint** works in the iOS and Android builds. The web build uses PIN only.
 - **Phone-call signal:** a native upay app can know a call is active (not its content). The prototype simulates this with a toggle.
 - **Reset demo data:** settings → "Reset demo data", or `POST /api/demo/reset`.
-- **API docs:** `https://<your-domain>/docs` (OpenAPI).
+- **API docs:** https://boloupay.shagato.space/docs (OpenAPI).
 - **Disclosure of external resources:** Flutter and pub packages, FastAPI, scikit-learn, RapidFuzz, Hind Siliguri font (SIL Open Font License, `app/assets/fonts/OFL.txt`), optional LLM APIs. AI coding assistants were used during development. All data is synthetic.
 
 ## Repository layout
