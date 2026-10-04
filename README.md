@@ -136,8 +136,10 @@ cd app && flutter build apk --release --dart-define=API_BASE=https://bolo.exampl
 # output: app/build/app/outputs/flutter-apk/app-release.apk
 ```
 
-**Production (your server)**
+**Production (your server)** — full step-by-step guide with DNS, checks and troubleshooting: [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md)
 ```bash
+sudo DOMAIN=bolo.example.com bash deploy/setup.sh   # installs Docker, writes .env, builds, starts HTTPS
+# or manually:
 cp .env.example .env        # set DOMAIN, optional LLM key
 docker compose up -d --build
 docker compose logs -f app  # check it started
@@ -202,7 +204,7 @@ ml/             generate_data.py, train_risk.py, evaluate_parser.py
 data/           seed.json (synthetic), scam_phrases.json, test_commands.json
 model/          risk_model.joblib, risk_metrics.json, parser_metrics.json
 deploy/         Dockerfile, Caddyfile
-docs/           Bolo-upay-Report-Team-WALL-E.pdf (project report), report/ (LaTeX source),
+docs/           Bolo-upay-Report-Team-WALL-E.pdf (project report), report/ (LaTeX source), DEPLOYMENT.md,
                 PIPELINE.md, REPORT.md, DEMO_SCRIPT.md
 ```
 
