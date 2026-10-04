@@ -1,0 +1,229 @@
+% ================================================================ System design
+% Included from report.tex. Notation: DeMarco/Yourdon DFD
+%   external entity = rectangle, process = rounded node with number,
+%   data store = open-ended box labelled D1..D5, arrows = named data flows.
+
+\tikzset{
+  ent/.style={draw=ink,line width=0.6pt,fill=white,font=\sffamily\scriptsize\bfseries,align=center,minimum width=24mm,minimum height=10mm},
+  proc/.style={draw=navy,line width=0.8pt,fill=panel,rounded corners=7pt,font=\sffamily\scriptsize,align=center,minimum width=27mm,minimum height=12mm,inner sep=2pt},
+  bigproc/.style={proc,minimum width=46mm,minimum height=24mm,rounded corners=14pt},
+  store/.style={font=\sffamily\scriptsize,align=left,minimum width=30mm,minimum height=6mm,inner sep=2pt,
+    path picture={\draw[ink,line width=0.6pt]
+      (path picture bounding box.north west) -- (path picture bounding box.north east)
+      (path picture bounding box.south west) -- (path picture bounding box.south east)
+      ($(path picture bounding box.north west)+(6mm,0)$) -- ($(path picture bounding box.south west)+(6mm,0)$);}},
+  flow/.style={-{Stealth[length=1.6mm]},color=ink!75,line width=0.5pt},
+  lbl/.style={font=\sffamily\tiny,color=muted,fill=white,inner sep=1pt,align=center},
+  pid/.style={font=\sffamily\tiny\bfseries,color=navy},
+}
+\newcommand{\pnum}[1]{{\sffamily\tiny\bfseries\color{navy}#1}\\}
+\newcommand{\sid}[2]{\makebox[6mm][l]{\sffamily\bfseries #1}#2}
+
+\section{System design}
+
+The diagrams below describe the prototype as built. Data flow diagrams follow DeMarco notation: rectangles are external entities, rounded boxes are numbered processes, open boxes are data stores (D1–D5), and each arrow is labelled with the data it carries.
+
+% ---------------------------------------------------------------- DFD 0
+\subsection{Data flow diagram, level 0 (context)}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=10mm]
+  \node[bigproc] (sys) {\pnum{0}\textbf{Bolo upay}\\[1pt]voice payment assistant\\with scam and mistake shield};
+  \node[ent,left=34mm of sys] (cust) {Customer};
+  \node[ent,right=34mm of sys] (ops) {upay operations\\team};
+  \node[ent,above=14mm of sys] (llm) {LLM provider\\{\mdseries\tiny(optional)}};
+  \node[ent,below=14mm of sys] (dev) {Device services\\{\mdseries\tiny speech, biometrics, call state}};
+
+  \draw[flow] ([yshift=7mm]cust.east) -- node[lbl,above]{spoken or typed command} ([yshift=7mm]sys.west);
+  \draw[flow] ([yshift=2.3mm]cust.east) -- node[lbl,above]{interview answers} ([yshift=2.3mm]sys.west);
+  \draw[flow] ([yshift=-2.3mm]cust.east) -- node[lbl,below]{PIN or biometric approval} ([yshift=-2.3mm]sys.west);
+  \draw[flow] ([yshift=-7mm]sys.west) -- node[lbl,below]{read-back, warnings, reasons, result} ([yshift=-7mm]cust.east);
+
+  \draw[flow] ([yshift=4mm]sys.east) -- node[lbl,above]{decision log} ([yshift=4mm]ops.west);
+  \draw[flow] ([yshift=-4mm]sys.east) -- node[lbl,below]{dashboard and accuracy metrics} ([yshift=-4mm]ops.west);
+
+  \draw[flow] ([xshift=-6mm]sys.north) -- node[lbl,left]{command text} ([xshift=-6mm]llm.south);
+  \draw[flow] ([xshift=6mm]llm.south) -- node[lbl,right]{structured intent} ([xshift=6mm]sys.north);
+
+  \draw[flow] ([xshift=-6mm]dev.north) -- node[lbl,left]{transcript, call state} ([xshift=-6mm]sys.south);
+  \draw[flow] ([xshift=6mm]sys.south) -- node[lbl,right]{speech prompts} ([xshift=6mm]dev.north);
+\end{tikzpicture}
+\caption{Context diagram. Raw audio stays on the device: only the transcript reaches the system. Phone calls are never recorded; at most the native app learns that a call is active.}
+\end{figure}
+
+% ---------------------------------------------------------------- DFD 1
+\clearpage
+\subsection{Data flow diagram, level 1}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.94,transform shape]
+  % processes
+  \node[proc] (p1) at (0,0)      {\pnum{1.0}Understand\\command};
+  \node[proc] (p2) at (4.6,0)    {\pnum{2.0}Resolve\\recipient};
+  \node[proc] (p3) at (9.2,0)    {\pnum{3.0}Assess\\risk};
+  \node[proc] (p4) at (9.2,-4.5) {\pnum{4.0}Scam\\interview};
+  \node[proc] (p5) at (4.6,-4.5) {\pnum{5.0}Authenticate\\and execute};
+  \node[proc] (p6) at (0,-4.5)   {\pnum{6.0}Report and\\monitor};
+  % external entities
+  \node[ent] (cust) at (0,3) {Customer};
+  \node[ent] (llm)  at (4.6,3) {LLM provider};
+  \node[ent] (ops)  at (0,-8.2) {upay operations\\team};
+  % data stores
+  \node[store] (d1) at (4.6,-2.25)  {\sid{D1}Users and contacts};
+  \node[store] (d5) at (12.9,0.3)   {\sid{D5}Lexicon, model};
+  \node[store] (d2) at (12.9,-2.25) {\sid{D2}Transactions};
+  \node[store] (d3) at (12.9,-4.5)  {\sid{D3}Assessments};
+  \node[store] (d4) at (4.6,-6.8)   {\sid{D4}Decision log};
+
+  % customer and LLM
+  \draw[flow] ([xshift=-4mm]cust.south) -- node[lbl,left]{command text} ([xshift=-4mm]p1.north);
+  \draw[flow] ([xshift=4mm]p1.north) -- node[lbl,right]{question} ([xshift=4mm]cust.south);
+  \draw[flow] ([yshift=4.5mm]p1.east) -- node[lbl,above,sloped]{text} ([yshift=-1mm]llm.west);
+  \draw[flow] ([yshift=-4mm]llm.west) -- node[lbl,below,sloped]{intent JSON} ([yshift=1.5mm]p1.east);
+  % main path
+  \draw[flow] ([yshift=-2mm]p1.east) -- node[lbl,below]{intent, amount} ([yshift=-2mm]p2.west);
+  \draw[flow] (p2.east) -- node[lbl,above]{draft transfer} (p3.west);
+  \draw[flow] (d1.north) -- node[lbl,right]{contacts} (p2.south);
+  \draw[flow] (d1.south) -- node[lbl,right]{balance} (p5.north);
+  \draw[flow] (d5.west) -- node[lbl,above]{weights} ([yshift=3mm]p3.east);
+  \draw[flow] (d2.north) |- node[lbl,pos=0.75,below]{history} ([yshift=-3mm]p3.east);
+  \draw[flow] ([xshift=-4mm]p3.south) -- node[lbl,left]{amber/red: questions} ([xshift=-4mm]p4.north);
+  \draw[flow] ([xshift=4mm]p4.north) -- node[lbl,right]{answers} ([xshift=4mm]p3.south);
+  \draw[flow] (p3.south west) -- node[lbl,above,sloped]{green: level, auth} (p5.north east);
+  \draw[flow] (p4.west) -- node[lbl,above]{level, reasons} (p5.east);
+  \draw[flow] (p4.east) -- node[lbl,above]{assessment} (d3.west);
+  \draw[flow] (cust.west) -- ++(-0.6,0) |- node[lbl,pos=0.75,above]{PIN / biometric} (p5.north west |- 0,-3.1) -- ([xshift=-6mm]p5.north);
+  \draw[flow] ([xshift=8mm]p5.south) |- (14.7,-5.7) |- node[lbl,pos=0.25,right]{new transaction} (d2.east);
+  \draw[flow] (p5.south) -- node[lbl,right]{decision} (d4.north);
+  \draw[flow] (d4.west) -| node[lbl,pos=0.25,above]{log} ([xshift=6mm]p6.south);
+  \draw[flow] ([xshift=-6mm]p6.south) -- node[lbl,left]{dashboard, metrics} ([xshift=-6mm]ops.north);
+\end{tikzpicture}
+\caption{Level 1. Process 3.0 never moves money; only 5.0 does, and only after the customer's PIN or biometric. Process 4.0 runs only when 3.0 rates a transfer amber or red.}
+\end{figure}
+
+\begin{tabularx}{\textwidth}{@{}>{\sffamily\bfseries\small}p{10mm} >{\raggedright\arraybackslash}p{36mm} X@{}}
+\toprule
+\textnormal{\sffamily\small No.} & \sffamily\small Process & \sffamily\small What it does\\
+\midrule
+1.0 & Understand command & Normalises Bangla digits and number words, extracts intent, amount and phone number; compares with the optional LLM and asks if they disagree.\\
+2.0 & Resolve recipient & Matches names and nicknames against D1 with Bangla case suffixes; ambiguous or fuzzy matches go back to the customer.\\
+3.0 & Assess risk & Computes features from D2, matches scam phrases, scores with the model in D5, applies hard rules and the mistake guard (see level 2).\\
+4.0 & Scam interview & Asks up to three spoken questions and sends the answers back to 3.0 for a second assessment, stored in D3.\\
+5.0 & Authenticate and execute & Enforces biometric, PIN or hold-then-PIN by level; writes the transfer to D2 and the outcome to D4.\\
+6.0 & Report and monitor & Aggregates D4 into the ops dashboard and serves the measured accuracy figures.\\
+\bottomrule
+\end{tabularx}
+
+% ---------------------------------------------------------------- DFD 2
+\clearpage
+\subsection{Data flow diagram, level 2: process 3.0 Assess risk}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale=0.94,transform shape]
+  \node[ent,dashed] (in)  at (0,0)     {from 2.0\\{\mdseries\tiny draft transfer}};
+  \node[ent,dashed] (ans) at (0,-3.6)  {from 4.0\\{\mdseries\tiny interview answers}};
+  \node[proc] (q1) at (4.6,0)    {\pnum{3.1}Compute\\features};
+  \node[proc] (q2) at (4.6,-3.6) {\pnum{3.2}Match scam\\phrases};
+  \node[proc] (q3) at (9.4,-1.8) {\pnum{3.3}Score with\\model};
+  \node[proc] (q4) at (9.4,-5.4) {\pnum{3.4}Hard rules and\\mistake guard};
+  \node[proc] (q5) at (13.8,-3.6){\pnum{3.5}Decide level\\and reasons};
+  \node[store] (d1) at (2.9,2.3)   {\sid{D1}Users, contacts};
+  \node[store] (d2) at (6.6,2.3)   {\sid{D2}Transactions};
+  \node[store] (d5m) at (9.4,0.6)  {\sid{D5}Risk model};
+  \node[store] (d5) at (4.6,-6.2)  {\sid{D5}Scam lexicon};
+  \node[store] (d3) at (13.8,-7.0) {\sid{D3}Assessments};
+  \node[ent,dashed] (out) at (13.8,0.2) {to 4.0 or 5.0\\{\mdseries\tiny level, reasons, auth}};
+
+  \draw[flow] (in) -- node[lbl,above]{amount, recipient} (q1);
+  \draw[flow] (d1.south) -- node[lbl,left]{contacts, balance} (q1.north west);
+  \draw[flow] (d2.south) -- node[lbl,right]{history} (q1.north east);
+  \draw[flow] (in.south east) -- node[lbl,above,sloped]{command text} (q2.north west);
+  \draw[flow] (ans) -- node[lbl,above]{answers} (q2);
+  \draw[flow] (d5.north) -- node[lbl,right]{lexicon} (q2.south);
+  \draw[flow] (d5m.south) -- node[lbl,right]{weights, thresholds} (q3.north);
+  \draw[flow] (q1.east) -- node[lbl,above,sloped]{9 features} (q3.north west);
+  \draw[flow] (q2.north east) -- node[lbl,below,sloped]{scam score} (q3.south west);
+  \draw[flow] (q2.south east) -- node[lbl,below,sloped]{categories} (q4.west);
+  \draw[flow] (q1.south east) -- node[lbl,pos=0.78,above,sloped]{inflow, usual amount} (q4.north west);
+  \draw[flow] (q3.east) -- node[lbl,above,sloped]{probability} (q5.north west);
+  \draw[flow] (q4.east) -- node[lbl,below,sloped]{overrides, suggestion} (q5.south west);
+  \draw[flow] (q5.north) -- (out.south);
+  \draw[flow] (q5.south) -- node[lbl,right]{stored assessment} (d3.north);
+\end{tikzpicture}
+\caption{Level 2 of process 3.0. Hard rules (3.4) override the model: a PIN or OTP request, a ``send it back'' claim with no incoming money, or a ``relative in trouble'' story from a new number always yields red.}
+\end{figure}
+
+\begin{tabularx}{\textwidth}{@{}>{\sffamily\bfseries\small}p{10mm} X@{}}
+\toprule
+3.1 & New recipient, amount relative to what this person usually receives, share of balance, sends in the last 30 minutes, night time, active call, refund claim without incoming money.\\
+3.2 & Each utterance is matched separately against eight scam categories in Bangla, Banglish and English; a following negation (\bn{না}, \bn{চায়নি}, ``nai'') cancels a match.\\
+3.3 & Logistic regression; probability compared with thresholds tuned on validation data (amber $\ge$ 0.08, red $\ge$ 0.90).\\
+3.4 & Unambiguous evidence forces red; a known recipient receiving about ten times the usual amount triggers ``Did you mean \dots?''\\
+3.5 & Combines the above into green, amber or red, the reasons shown to the customer, the required authentication, and whether to run the interview.\\
+\bottomrule
+\end{tabularx}
+
+% ---------------------------------------------------------------- sequence
+\clearpage
+\subsection{Sequence diagram: a scam attempt that is stopped}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  msg/.style={-{Stealth[length=1.5mm]},line width=0.5pt,color=ink},
+  ret/.style={-{Stealth[length=1.5mm]},line width=0.5pt,color=muted,dashed},
+  mt/.style={font=\sffamily\tiny,above,inner sep=1pt,fill=white},
+  head/.style={draw=ink,line width=0.6pt,fill=panel,font=\sffamily\scriptsize\bfseries,minimum width=21mm,minimum height=8mm,align=center},
+  act/.style={draw=navy,fill=navy!12,minimum width=2mm,inner sep=0}]
+  % lifelines
+  \foreach \x/\n/\t in {0/C/Customer,2.75/A/Flutter app,5.5/P/API,8.25/R/Parser\\{\mdseries\tiny + optional LLM},11/K/Risk engine,13.75/S/Store\\{\mdseries\tiny D1--D4}} {
+    \node[head] (\n) at (\x,0) {\t};
+    \draw[color=rule,line width=0.6pt,dashed] (\x,-0.5) -- (\x,-19.4);
+  }
+  \newcommand{\sqm}[4]{\draw[msg] (#1,#3) -- node[mt]{#4} (#2,#3);}
+  \newcommand{\sqr}[4]{\draw[ret] (#1,#3) -- node[mt]{#4} (#2,#3);}
+  \newcommand{\sqnote}[2]{\node[font=\sffamily\tiny\bfseries,color=navy,anchor=west] at (-0.6,#1) {#2};}
+
+  \sqnote{-0.95}{1\; Command}
+  \sqm{0}{2.75}{-1.4}{``01799998888 e 5000 taka pathao''}
+  \sqm{2.75}{5.5}{-2.0}{POST /api/parse}
+  \sqm{5.5}{8.25}{-2.6}{parse(text)}
+  \sqr{8.25}{5.5}{-3.2}{send\_money, 5000, new number}
+  \sqr{5.5}{2.75}{-3.8}{status ok}
+
+  \sqnote{-4.35}{2\; First risk check}
+  \sqm{2.75}{5.5}{-4.8}{POST /api/assess (on call)}
+  \sqm{5.5}{13.75}{-5.4}{load history, contacts, balance}
+  \sqr{13.75}{5.5}{-6.0}{}
+  \sqm{5.5}{11}{-6.6}{features, score}
+  \sqr{11}{5.5}{-7.2}{AMBER, interview needed}
+  \sqr{5.5}{2.75}{-7.8}{3 questions}
+
+  \sqnote{-8.35}{3\; Scam interview}
+  \sqr{2.75}{0}{-8.8}{``Did someone call you asking for this money?''}
+  \sqm{0}{2.75}{-9.4}{``\bn{উপায় অফিস থেকে ফোন দিয়েছে}''}
+  \sqm{2.75}{5.5}{-10.0}{POST /api/assess + answers}
+  \sqm{5.5}{11}{-10.6}{match phrases, rules}
+  \sqr{11}{5.5}{-11.2}{RED: fake upay staff}
+  \sqm{5.5}{13.75}{-11.8}{save assessment (D3)}
+  \sqr{5.5}{2.75}{-12.4}{RED, reasons, hold 30 s}
+
+  \sqnote{-12.95}{4\; Warning and decision}
+  \sqr{2.75}{0}{-13.4}{warning read aloud, helpline 16268}
+  \sqm{0}{2.75}{-14.0}{Cancel}
+  \sqm{2.75}{5.5}{-14.6}{POST /api/cancel}
+  \sqm{5.5}{13.75}{-15.2}{log ``cancelled after warning'' (D4)}
+  \sqr{5.5}{2.75}{-15.8}{ok}
+  \sqr{2.75}{0}{-16.4}{``Cancelled. Your money is safe.''}
+
+  \node[draw=rule,fill=panel,font=\sffamily\tiny,align=left,text width=60mm,anchor=north west] at (0.6,-17.0)
+    {\textbf{If the customer continues instead:} the app waits for the hold to end, requires the warning to be acknowledged and the PIN to be entered; the server re-checks all three before \texttt{/api/execute} writes the transfer. Biometrics are refused for amber and red.};
+  % activations
+  \node[act,minimum height=33mm,anchor=north] at (5.5,-1.9) {};
+  \node[act,minimum height=26mm,anchor=north] at (5.5,-9.9) {};
+\end{tikzpicture}
+\caption{Sequence of a fake-upay-staff scam: the first check finds a new number, a large share of the balance and an active call; the customer's own answer confirms the pattern; the transfer is held and cancelled before any money moves.}
+\end{figure}
