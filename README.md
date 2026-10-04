@@ -65,7 +65,7 @@ What the app deliberately does **not** do: it never listens to phone calls, neve
 | LLM (optional) | Anthropic Python SDK (`claude-opus-5-5` by default), OpenAI or Gemini via REST |
 | Storage | SQLite (prototype) |
 | Security | bcrypt-hashed demo PIN, server-side authentication rules |
-| Tests | pytest (39 tests), parser evaluation script |
+| Tests | pytest (40 tests), parser evaluation script |
 | Deploy | Docker, Docker Compose, Caddy (automatic HTTPS) |
 
 ## 4. Requirements
@@ -153,7 +153,7 @@ Unlock the app with the **demo PIN `1234`**. Use the settings button (top right 
 ## 9. Testing
 
 ```bash
-cd api && python -m pytest -q          # 39 tests: parser, scam matcher, API flow
+cd api && python -m pytest -q          # 40 tests: parser, scam matcher, API flow, login
 python ml/evaluate_parser.py           # labelled command set → model/parser_metrics.json
 python ml/train_risk.py                # trains and evaluates → model/risk_metrics.json
 ```
