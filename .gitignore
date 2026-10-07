@@ -12,6 +12,9 @@ venv/
 .env.*
 !.env.example
 
+# Host-specific compose settings (e.g. publish the app for a local nginx)
+docker-compose.override.yml
+
 # Flutter / Dart
 app/.dart_tool/
 app/build/
