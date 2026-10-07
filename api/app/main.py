@@ -10,22 +10,23 @@ Flow used by the app:
 from __future__ import annotations
 
 import json
+import logging
 import os
 from datetime import datetime
 from pathlib import Path
 from typing import Literal, Optional
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
-from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse, Response
 from pydantic import BaseModel, Field
 
 from . import store
 from .core import features as feat_mod
-from .core import llm, parser, risk, scam
+from .core import llm, parser, risk, scam, tts
 from .core.text import mask_phone
 
+log = logging.getLogger("bolo.api")
 ROOT = Path(__file__).resolve().parents[2]
 HOLD_SECONDS = int(os.getenv("HOLD_SECONDS", "30"))
 MAX_PIN_FAILURES = 3
@@ -86,6 +87,10 @@ class CancelIn(BaseModel):
     assessment_id: str
 
 
+class TTSIn(BaseModel):
+    text: str = Field(min_length=1, max_length=tts.MAX_CHARS)
+
+
 def _user_or_404(uid: str) -> dict:
     u = store.user(uid)
     if not u:
@@ -97,7 +102,20 @@ def _user_or_404(uid: str) -> dict:
 @app.get("/api/health")
 def health():
     return {"ok": True, "llm": llm.provider() if llm.enabled() else None,
-            "model": risk.model_card().get("model")}
+            "tts": tts.enabled(), "model": risk.model_card().get("model")}
+
+
+@app.post("/api/tts")
+def text_to_speech(body: TTSIn):
+    """Natural server voice (Gemini TTS). The app falls back to the device voice."""
+    if not tts.enabled():
+        raise HTTPException(503, "tts_disabled")
+    try:
+        wav = tts.synthesize(body.text)
+    except Exception as e:  # network, quota, or no audio returned
+        log.warning("TTS failed: %s", e)
+        raise HTTPException(502, "tts_failed")
+    return Response(wav, media_type="audio/wav")
 
 
 @app.get("/api/users")
@@ -251,12 +269,23 @@ def demo_reset():
 
 # ---------- Flutter web build (single deploy: API + app on one origin) ----------
 WEB_DIR = Path(os.getenv("WEB_DIR", str(ROOT / "app" / "build" / "web")))
-if WEB_DIR.exists():
-    app.mount("/assets", StaticFiles(directory=WEB_DIR / "assets"), name="assets") if (WEB_DIR / "assets").exists() else None
+# Cloudflare adds a 4-hour browser cache to responses without Cache-Control,
+# so a redeploy would not show. "no-cache" makes browsers revalidate (ETag).
+NO_CACHE = {"Cache-Control": "no-cache"}
 
+
+def _static(base: Path, path: str, request: Request) -> Response:
+    """A file inside ``base``, or its index.html (client-side routes)."""
+    f = (base / path).resolve()
+    if not (path and f.is_file() and base.resolve() in f.parents):
+        f = base / "index.html"
+    resp = FileResponse(f, headers=NO_CACHE, stat_result=os.stat(f))
+    if request.headers.get("if-none-match") == resp.headers["etag"]:
+        return Response(status_code=304, headers={**NO_CACHE, "etag": resp.headers["etag"]})
+    return resp
+
+
+if WEB_DIR.exists():
     @app.get("/{path:path}", include_in_schema=False)
-    def spa(path: str):
-        f = (WEB_DIR / path).resolve()
-        if path and f.is_file() and WEB_DIR.resolve() in f.parents:
-            return FileResponse(f)
-        return FileResponse(WEB_DIR / "index.html")
+    def spa(path: str, request: Request):
+        return _static(WEB_DIR, path, request)

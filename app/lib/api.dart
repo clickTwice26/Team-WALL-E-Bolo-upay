@@ -76,4 +76,16 @@ class Api {
   static Future<void> login(String userId, String pin) async =>
       _send('POST', '/api/login', {'user_id': userId, 'pin': pin});
   static Future<void> reset() async => _send('POST', '/api/demo/reset');
+
+  /// Natural server voice (WAV), or null when the server has no TTS or fails.
+  static Future<Uint8List?> tts(String text) async {
+    try {
+      final r = await http
+          .post(_uri('/api/tts'), headers: {'Content-Type': 'application/json'}, body: jsonEncode({'text': text}))
+          .timeout(const Duration(seconds: 20));
+      return r.statusCode == 200 && r.bodyBytes.isNotEmpty ? r.bodyBytes : null;
+    } catch (_) {
+      return null;
+    }
+  }
 }
