@@ -42,6 +42,9 @@ class HomeScreen extends StatelessWidget {
                 child: _boloCard(context),
               ),
             ),
+            // demo site only (DEMO_MODE lists the personas): one tap per judged scenario
+            if (appState.users.isNotEmpty)
+              Padding(padding: const EdgeInsets.fromLTRB(16, 16, 16, 0), child: _demoScenarios(context)),
             Padding(
               padding: const EdgeInsets.all(16),
               child: _services(context),
@@ -154,6 +157,49 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       );
+
+  /// The three scenarios in docs/SCENARIOS.md: reset the demo data, set the
+  /// call signal, and open the assistant with the scenario's command.
+  Widget _demoScenarios(BuildContext context) {
+    Future<void> run(String command, {bool onCall = false}) async {
+      try {
+        await Api.reset();
+        await appState.refresh();
+      } on ApiError catch (_) {
+        // reset is best effort: the scenario still runs on the current data
+      }
+      appState.setSimulateCall(onCall);
+      if (context.mounted) _openAssistant(context, command);
+    }
+
+    Widget item(IconData icon, Color c, String title, String sub, VoidCallback onTap) => ListTile(
+          dense: true,
+          leading: Icon(icon, color: c),
+          title: Text(title, style: const TextStyle(fontWeight: FontWeight.w700)),
+          subtitle: Text(sub),
+          trailing: const Icon(Icons.play_circle_outline_rounded, color: BrandColors.navy),
+          onTap: onTap,
+        );
+    return Card(
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+          child: Text(tr(bn, 'ডেমো দৃশ্য (এক ট্যাপে)', 'Demo scenarios (one tap)'),
+              style: const TextStyle(color: BrandColors.navy, fontSize: 16, fontWeight: FontWeight.w600)),
+        ),
+        item(Icons.support_agent_rounded, BrandColors.red, tr(bn, '১. ভুয়া উপায় কর্মী', '1. Fake upay employee'),
+            tr(bn, 'ফোন কলে "উপায় অফিস" ৳৫,০০০ চাইছে', 'On a call, "upay office" asks for ৳5,000'),
+            () => run('upay office theke phone kore bollo 01799998888 e 5000 taka pathate', onCall: true)),
+        item(Icons.people_alt_outlined, BrandColors.navy, tr(bn, '২. ভুল প্রাপক', '2. Wrong recipient'),
+            tr(bn, 'দুইজন রহিম: কাকে ৳৫০০?', 'Two contacts named Rahim: which one gets ৳500?'),
+            () => run('rahim ke 500 taka pathao')),
+        item(Icons.exposure_plus_1_rounded, BrandColors.amber, tr(bn, '৩. অস্বাভাবিক বড় অঙ্ক', '3. Unusually large amount'),
+            tr(bn, 'সাধারণত ৳৩৬০, এবার ৳৩,৫০০: বাড়তি শূন্য?', 'Usually ৳360, now ৳3,500: an extra zero?'),
+            () => run('rahim store ke 3500 taka')),
+        const SizedBox(height: 4),
+      ]),
+    );
+  }
 
   Widget _service(BuildContext context, IconData icon, Color bg, Color fg, String label, VoidCallback? onTap,
       {bool big = true}) {
