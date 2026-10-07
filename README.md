@@ -19,8 +19,10 @@ Prototype by **Team WALL-E** (Shagato Chowdhury, Umme Munia) for the AI Dev Fest
 | ![](docs/screenshots/03_green.png) | ![](docs/screenshots/09_pin.png) | ![](docs/screenshots/10_done.png) |
 | **Which Rahim?** | **Extra zero?** | **Scam interview** |
 | ![](docs/screenshots/04_which_rahim.png) | ![](docs/screenshots/05_extra_zero.png) | ![](docs/screenshots/06_interview.png) |
-| **Fake upay call (RED)** | **Hold before PIN** | |
-| ![](docs/screenshots/07_red.png) | ![](docs/screenshots/08_hold.png) | |
+| **Fake upay call (RED)** | **Hold before PIN** | **Pay Bill (saved accounts)** |
+| ![](docs/screenshots/07_red.png) | ![](docs/screenshots/08_hold.png) | ![](docs/screenshots/13_pay_bill.png) |
+| **Agent: "how do I reset my PIN?"** | **Agent: cash-out charges** | |
+| ![](docs/screenshots/11_agent_rag.png) | ![](docs/screenshots/12_agent_charges.png) | |
 
 ## 1. Project overview
 
@@ -52,6 +54,7 @@ Prototype by **Team WALL-E** (Shagato Chowdhury, Umme Munia) for the AI Dev Fest
 | Ops dashboard | Decisions by risk level, transfers cancelled after a warning, money protected, scam patterns seen, and model health: input drift (PSI) against training, RED overrides, warnings users reported wrong. See [`docs/FAILURE_POLICY.md`](docs/FAILURE_POLICY.md) |
 | Accuracy report | Measured parser accuracy and scam-shield metrics, shown live in the app |
 | Bolo agent (every page) | Voice/text agent that sees the page on screen and the last 3 pages, and acts through the same code as the buttons. LLM planner when a key is set, Bangla/Banglish/English keyword router otherwise; every plan passes a safety guard |
+| upay knowledge (RAG) | The agent answers questions about upay itself (charges, limits, PIN reset, registration, cash in/out, remittance, offers, helpline, terms, privacy) from **upay's public website**: 174 pages scraped into 458 Bangla/English passages, BM25 retrieval that works in Bangla, Banglish and English, cited passages for the LLM, and the best lines plus the source without it. Never guesses a charge or limit |
 | Human handoff + support console | "Talk to a person", a reported scam or lost money, or two misses in a row hand the chat to staff at `/console`, with the bot context and the customer's scam checks. Staff can stop a pending transfer, never send money |
 | Natural voice | Gemini TTS through the server (same key as the LLM), best installed device voice as fallback |
 
@@ -60,6 +63,17 @@ Prototype by **Team WALL-E** (Shagato Chowdhury, Umme Munia) for the AI Dev Fest
 The centre mic (or the floating orb on other pages) opens a bottom panel that works on every page. The app tells the agent what is on screen (page, step, a short summary, and the actions its buttons offer right now) plus the last 3 pages; the agent answers in Bangla or English and the app runs the returned actions through the same methods as its buttons: open a page, go back, settings, language, show/hide balance, switch demo user, call simulation, start a transfer, pick an amount or recipient, answer the scam questions, confirm, cancel, repeat. Try: "ড্যাশবোর্ড খোলো", "এই পেজে কী আছে?", "আগের পেজে কী ছিল?", "dokaner ta", "abar pathao".
 
 Safety rules live in the server's `sanitize()` and apply to every plan, LLM or rules: there is no action for entering a PIN, using biometrics, ticking the RED warning box or skipping a hold; page actions run only when the page offers them (the app never offers "confirm" on a RED review); money-moving actions need the user's own words and never run on automatic follow-ups; interview answers are always the user's raw words; a PIN or OTP said aloud gets a warning and no action.
+
+### upay knowledge base (RAG)
+
+Ask the agent "পিন ভুলে গেলে কিভাবে রিসেট করব?", "cash out er charge koto?", "send money limit koto" or "হেল্পলাইন নম্বর কত" on any page.
+
+- **Source:** `scripts/scrape_upay.py` crawls www.upaybd.com and the public CMS it loads from (`api.upaybd.com/api/v2/pages/<slug>`): services and how-tos, the limits tables, the charge calculator (one passage per service), the FAQ, contact details, offers, terms and the privacy policy. Output: `data/upay_kb/kb.jsonl` (one passage per line with its URL, section and category), `manifest.json` (crawl date, page list) and the raw page JSON in `pages/` for audits. Re-run it to refresh (about 10 seconds).
+- **Retrieval:** `api/app/core/kb.py`, BM25 over the parsers' normalised tokens, light Bangla suffix stripping and a small Bangla/Banglish → English glossary, so a question in any script reaches both halves of a bilingual passage. No embeddings and no new dependencies; it loads in about 0.3 s.
+- **With an LLM:** the top 5 passages go to the planner as `upay_knowledge`; it must answer only from them, quote numbers exactly, put the refs it used in `sources` and suggest the helpline 16268 when they don't answer. Only refs it was actually given become citations.
+- **Without an LLM:** the keyword router answers a question about upay (a question word plus a product word, no amount, no phone number) with the best matching lines and "Source: upay's website". Commands such as "ammu ke 500 pathao" or "cash out 500" still start a transfer, and a PIN said aloud is still caught first.
+- **API:** `GET /api/kb/search?q=...` returns the matching passages (signed-in users); `/api/health` reports `kb_chunks`.
+- **Limits:** offers and charges change, so answers cite the page and the crawl date is in the manifest. The charge calculator is English only, so a Bangla charge question can surface a related Bangla page first; the LLM path sees both.
 
 ### Human handoff and the support console
 
@@ -81,10 +95,11 @@ The demo runs Gemini for the second parsing path, the agent planner and the spok
 | Backend API | Python 3.11, FastAPI, Pydantic, Uvicorn |
 | ML | scikit-learn (gradient boosting with sigmoid calibration, logistic regression fallback), SHAP, NumPy, joblib; matplotlib for the training report |
 | Text matching | RapidFuzz |
+| Knowledge (RAG) | Scraper with httpx over upay's public site and CMS; BM25 retrieval in pure Python (`api/app/core/kb.py`) |
 | LLM (optional) | Anthropic Python SDK (`claude-opus-5-5` by default), OpenAI or Gemini via REST (Gemini in the demo; a local model in production, see above) |
 | Storage | SQLite (prototype) |
 | Security | Signed session tokens (every request acts as the signed-in user, never a user id in the body), bcrypt-hashed PINs with a per-account lock after 5 wrong tries, biometric approvals verified as ECDSA P-256 signatures from a hardware-backed device key (`biometric_signature`), named support-console accounts, demo-only controls behind `DEMO_MODE` |
-| Tests | pytest (93 tests), parser evaluation script |
+| Tests | pytest (173 tests), parser evaluation script, k6 load test |
 | Deploy | Docker, Docker Compose, Caddy (automatic HTTPS) |
 
 ## 4. Requirements
@@ -192,7 +207,8 @@ Unlock the app with the **demo PIN `1234`**. Use the settings button (top right 
 ## 9. Testing
 
 ```bash
-cd api && python -m pytest -q          # 93 tests: parser, scam matcher, API flow, sessions and PIN lock, signed biometrics, agent rules and safety, handoff, TTS
+cd api && python -m pytest -q          # 173 tests: parser, scam matcher, API flow, sessions and PIN lock, signed biometrics, agent rules and safety, handoff, TTS, upay knowledge base, wallet adapter
+python scripts/scrape_upay.py          # refresh the upay knowledge base from upaybd.com → data/upay_kb/
 python ml/evaluate_parser.py           # labelled command set → model/parser_metrics.json
 python ml/train_risk.py                # simulates timelines, trains, compares → model/risk_metrics.json
 docker run --rm -i -e BASE=http://host.docker.internal:8000 -e VUS=50 grafana/k6 run - < loadtest/flow.js   # load test, see docs/SCALE.md
@@ -246,10 +262,14 @@ Calibration plot: [`docs/img/calibration.png`](docs/img/calibration.png). We als
 
 ```
 api/            FastAPI backend (app/core: parser, numbers, contacts, scam, features, risk, llm,
-                agent, pinguard, tts; app/handoff.py: human handoff + support console API)
+                agent, kb (upay knowledge retrieval), pinguard, tts; app/handoff.py: human handoff +
+                support console API; app/wallet: local ledger and mock upay API adapters)
 app/            Flutter app (iOS, Android, Web); lib/agent: Bolo agent; lib/console: support console
 ml/             generate_data.py, simulate.py (wallet timelines), train_risk.py, evaluate_parser.py
-data/           seed.json (synthetic), scam_phrases.json, test_commands.json
+data/           seed.json (synthetic), scam_phrases.json, test_commands.json,
+                upay_kb/ (scraped upay website: kb.jsonl, manifest.json, raw pages)
+scripts/        scrape_upay.py (builds data/upay_kb)
+loadtest/       k6 load test (flow.js)
 model/          risk_model.joblib, risk_metrics.json, parser_metrics.json
 deploy/         Dockerfile, Caddyfile, nginx site (hosts that already run nginx)
 docs/           Bolo-upay-Report-Team-WALL-E.pdf (project report), report/ (LaTeX source), DEPLOYMENT.md,
