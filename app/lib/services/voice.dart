@@ -14,7 +14,8 @@ import 'voice_guard.dart';
 /// server has a key) and falls back to the best voice on the device.
 class Voice {
   Voice._();
-  static final Voice instance = Voice._();
+  /// Not final: flow tests swap in a fake, so no platform speech plugins run.
+  static Voice instance = Voice._();
 
   final SpeechToText _stt = SpeechToText();
   final FlutterTts _tts = FlutterTts();
@@ -34,6 +35,9 @@ class Voice {
   double? lastPauseRatio;
   DateTime? lastHeardAt;
   final List<(int, double)> _levels = [];
+  /// The recognizer's confidence (0-1) for the last final result, or null when
+  /// it gives none (the audio study logs it; see docs/AUDIO_EVAL.md).
+  double? lastConfidence;
 
   /// Bumped by every speak()/silence(): a slow server reply for an older
   /// sentence must not start playing over a newer one.
@@ -60,6 +64,7 @@ class Voice {
     await _stt.listen(
       onResult: (SpeechRecognitionResult r) {
         if (r.finalResult) {
+          lastConfidence = r.hasConfidenceRating ? r.confidence : null;
           lastUnsure = r.hasConfidenceRating && r.confidence < minConfidence;
           lastPauseRatio = VoiceGuard.pauseRatio(_levels);
           lastHeardAt = DateTime.now();

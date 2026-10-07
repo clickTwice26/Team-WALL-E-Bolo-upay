@@ -206,6 +206,7 @@ docker run --rm -i -e BASE=http://host.docker.internal:8000 -e VUS=50 grafana/k6
 | Wrong amount shown without asking | **0%** |
 
 These commands were written by the team alongside the parser, so they show the parser handles the listed patterns; real user speech will be harder. Collecting real commands is the next step.
+Real speech: the app's hidden evaluation mode logs transcripts, STT confidence and parse results (never audio), and `python ml/evaluate_audio.py LOGS` scores them by condition, dialect and age (protocol: [`docs/AUDIO_EVAL.md`](docs/AUDIO_EVAL.md)).
 
 | Scam shield (1,426 simulated payments, the last 15% by time) | Bolo upay | Previous model (9 inputs) | Rules only |
 |---|---|---|---|

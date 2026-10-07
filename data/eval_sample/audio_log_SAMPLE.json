@@ -1,0 +1,3645 @@
+{
+ "kind": "bolo_upay_audio_eval",
+ "version": 1,
+ "sample": true,
+ "note": "SYNTHETIC SAMPLE made up to test ml/evaluate_audio.py. Not real speech and not real results.",
+ "exported_at": "2026-10-01T12:00:00Z",
+ "sessions": [
+  {
+   "participant": "S01",
+   "age_band": "18-30",
+   "gender": "female",
+   "dialect": "dhaka",
+   "condition": "quiet",
+   "mode": "read",
+   "device": "SAMPLE (no device)",
+   "platform": "sample",
+   "stt_locale": "bn-BD",
+   "consent": true,
+   "started_at": "2026-10-01T10:00:00Z",
+   "records": [
+    {
+     "prompt_id": "C42",
+     "kind": "read",
+     "reference": "সালমাকে আটশো টাকা দাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 800,
+      "recipient": "c4"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "দেন আটশো টাকা দাও",
+     "confidence": 0.99,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_recipient",
+      "intent": "send_money",
+      "amount": 800,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:00:00Z"
+    },
+    {
+     "prompt_id": "C20",
+     "kind": "read",
+     "reference": "রহিম দোকানে ৪০০ টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 400,
+      "recipient": "c3"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিম দোকানে ৪০০ টাকা পাঠাও",
+     "confidence": 0.937,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 400,
+      "recipient": "c3",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:01:00Z"
+    },
+    {
+     "prompt_id": "C51",
+     "kind": "read",
+     "reference": "সেন্ড ৫০০ টাকা টু আম্মু",
+     "expected": {
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "সেন্ড ৫০০ টাকা টু আম্মু",
+     "confidence": 0.799,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:02:00Z"
+    },
+    {
+     "prompt_id": "C84",
+     "kind": "read",
+     "reference": "রহিমকে ৫০০ টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": "ask"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিমকে ৫০০ টাকা পাঠাও",
+     "confidence": 0.874,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "clarify_recipient",
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:03:00Z"
+    },
+    {
+     "prompt_id": "C7",
+     "kind": "read",
+     "reference": "আম্মুকে ফাইভ কে পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 5000,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে ফাইভ কে পাঠাও",
+     "confidence": 0.831,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_amount",
+      "intent": "send_money",
+      "amount": null,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:04:00Z"
+    },
+    {
+     "prompt_id": "C10",
+     "kind": "read",
+     "reference": "আম্মুকে দেড় হাজার টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে দেড় হাজার টাকা পাঠাও",
+     "confidence": 0.836,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:05:00Z"
+    },
+    {
+     "prompt_id": "C69",
+     "kind": "read",
+     "reference": "০১৭৯৯৯৯৮৮৮৮ এ ২০ টাকা রিচার্জ",
+     "expected": {
+      "intent": "mobile_recharge",
+      "amount": 20,
+      "recipient": "01799998888"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "০১৭৯৯৯৯৮৮৮৮ এ ২০ টাকা রিচার্জ",
+     "confidence": 0.827,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "mobile_recharge",
+      "amount": 20,
+      "recipient": "01799998888",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:06:00Z"
+    },
+    {
+     "prompt_id": "C13",
+     "kind": "read",
+     "reference": "আম্মুকে দুইশো টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 200,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে দুইশো টাকা পাঠাও",
+     "confidence": 0.902,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 200,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:07:00Z"
+    },
+    {
+     "prompt_id": "C47",
+     "kind": "read",
+     "reference": "আম্মুকে পঁচিশ হাজার টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 25000,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে পঁচিশ হাজার টাকা পাঠাও",
+     "confidence": 0.99,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 25000,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:08:00Z"
+    },
+    {
+     "prompt_id": "F10",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "cash_out",
+      "amount": 1000,
+      "recipient": null
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "এক হাজার টাকা ক্যাশ আউট করব",
+     "confidence": 0.948,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_recipient",
+      "intent": "cash_out",
+      "amount": 1000,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:09:00Z"
+    },
+    {
+     "prompt_id": "F1",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "send_money",
+      "amount": 800,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে বাজারের জন্য আটশো টাকা পাঠাও",
+     "confidence": 0.862,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 800,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:10:00Z"
+    },
+    {
+     "prompt_id": "F4",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "check_balance",
+      "amount": null,
+      "recipient": null
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আমার কত টাকা আছে",
+     "confidence": 0.99,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "check_balance",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:11:00Z"
+    }
+   ]
+  },
+  {
+   "participant": "S01",
+   "age_band": "18-30",
+   "gender": "female",
+   "dialect": "dhaka",
+   "condition": "street",
+   "mode": "read",
+   "device": "SAMPLE (no device)",
+   "platform": "sample",
+   "stt_locale": "bn-BD",
+   "consent": true,
+   "started_at": "2026-10-01T10:00:00Z",
+   "records": [
+    {
+     "prompt_id": "C42",
+     "kind": "read",
+     "reference": "সালমাকে আটশো টাকা দাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 800,
+      "recipient": "c4"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "সালমাকে আটশো টাকা দাও",
+     "confidence": 0.704,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 800,
+      "recipient": "c4",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:00:00Z"
+    },
+    {
+     "prompt_id": "C20",
+     "kind": "read",
+     "reference": "রহিম দোকানে ৪০০ টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 400,
+      "recipient": "c3"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিম দোকানে ৪০০ টাকা পাঠাও",
+     "confidence": 0.762,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 400,
+      "recipient": "c3",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:01:00Z"
+    },
+    {
+     "prompt_id": "C51",
+     "kind": "read",
+     "reference": "সেন্ড ৫০০ টাকা টু আম্মু",
+     "expected": {
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "সেন্ড ৫০০ টাকা টু আম্মু",
+     "confidence": 0.641,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:02:00Z"
+    },
+    {
+     "prompt_id": "C84",
+     "kind": "read",
+     "reference": "রহিমকে ৫০০ টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": "ask"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিমকে ৫০০ টাকা পাঠাও",
+     "confidence": 0.721,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "clarify_recipient",
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:03:00Z"
+    },
+    {
+     "prompt_id": "C7",
+     "kind": "read",
+     "reference": "আম্মুকে ফাইভ কে পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 5000,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "পাঠা ফাইভ কে পাঠাও",
+     "confidence": 0.707,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_amount",
+      "intent": "send_money",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:04:00Z"
+    },
+    {
+     "prompt_id": "C10",
+     "kind": "read",
+     "reference": "আম্মুকে দেড় হাজার টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "দেড় হাজার টাকা পাঠাও",
+     "confidence": 0.727,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_recipient",
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:05:00Z"
+    },
+    {
+     "prompt_id": "C69",
+     "kind": "read",
+     "reference": "০১৭৯৯৯৯৮৮৮৮ এ ২০ টাকা রিচার্জ",
+     "expected": {
+      "intent": "mobile_recharge",
+      "amount": 20,
+      "recipient": "01799998888"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "০১৭৯৯৯৯৮৮৮৮ এ ২০ টাকা",
+     "confidence": 0.872,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 20,
+      "recipient": "01799998888",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:06:00Z"
+    },
+    {
+     "prompt_id": "C13",
+     "kind": "read",
+     "reference": "আম্মুকে দুইশো টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 200,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে দুইশো টাকা পাঠাও",
+     "confidence": 0.678,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 200,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:07:00Z"
+    },
+    {
+     "prompt_id": "C47",
+     "kind": "read",
+     "reference": "আম্মুকে পঁচিশ হাজার টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 25000,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "করো পঁচিশ হাজার টাকা পাঠাও",
+     "confidence": 0.844,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_recipient",
+      "intent": "send_money",
+      "amount": 25000,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:08:00Z"
+    },
+    {
+     "prompt_id": "F10",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "cash_out",
+      "amount": 1000,
+      "recipient": null
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "ভাই হাজার আম্মা ক্যাশ পাঠা করব",
+     "confidence": 0.829,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 1000,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:09:00Z"
+    },
+    {
+     "prompt_id": "F1",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "send_money",
+      "amount": 800,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে বাজারের জন্য আটশো টাকা পাঠাও",
+     "confidence": 0.85,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 800,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:10:00Z"
+    },
+    {
+     "prompt_id": "F4",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "check_balance",
+      "amount": null,
+      "recipient": null
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আমার টাকা টাকা আছে",
+     "confidence": 0.756,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "unknown",
+      "intent": "unknown",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:11:00Z"
+    }
+   ]
+  },
+  {
+   "participant": "S01",
+   "age_band": "18-30",
+   "gender": "female",
+   "dialect": "dhaka",
+   "condition": "bus_tv",
+   "mode": "read",
+   "device": "SAMPLE (no device)",
+   "platform": "sample",
+   "stt_locale": "bn-BD",
+   "consent": true,
+   "started_at": "2026-10-01T10:00:00Z",
+   "records": [
+    {
+     "prompt_id": "C42",
+     "kind": "read",
+     "reference": "সালমাকে আটশো টাকা দাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 800,
+      "recipient": "c4"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "সালমাকে আটশো টাকা ভাই",
+     "confidence": 0.575,
+     "has_confidence": true,
+     "unsure": true,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 800,
+      "recipient": "c4",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:00:00Z"
+    },
+    {
+     "prompt_id": "C20",
+     "kind": "read",
+     "reference": "রহিম দোকানে ৪০০ টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 400,
+      "recipient": "c3"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিম দোকানে ৪০০ পাঠাও",
+     "confidence": 0.475,
+     "has_confidence": true,
+     "unsure": true,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 400,
+      "recipient": "c3",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:01:00Z"
+    },
+    {
+     "prompt_id": "C51",
+     "kind": "read",
+     "reference": "সেন্ড ৫০০ টাকা টু আম্মু",
+     "expected": {
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "সেন্ড ৫০০ টাকা টু আম্মু",
+     "confidence": 0.533,
+     "has_confidence": true,
+     "unsure": true,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:02:00Z"
+    },
+    {
+     "prompt_id": "C84",
+     "kind": "read",
+     "reference": "রহিমকে ৫০০ টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": "ask"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিমকে পাঠা টাকা পাঠাও",
+     "confidence": 0.548,
+     "has_confidence": true,
+     "unsure": true,
+     "parse": {
+      "status": "need_amount",
+      "intent": "send_money",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:03:00Z"
+    },
+    {
+     "prompt_id": "C7",
+     "kind": "read",
+     "reference": "আম্মুকে ফাইভ কে পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 5000,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে ফাইভ",
+     "confidence": 0.633,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "unknown",
+      "intent": "unknown",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:04:00Z"
+    },
+    {
+     "prompt_id": "C10",
+     "kind": "read",
+     "reference": "আম্মুকে দেড় হাজার টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে দেড় হাজার টাকা পাঠাও",
+     "confidence": 0.763,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:05:00Z"
+    },
+    {
+     "prompt_id": "C69",
+     "kind": "read",
+     "reference": "০১৭৯৯৯৯৮৮৮৮ এ ২০ টাকা রিচার্জ",
+     "expected": {
+      "intent": "mobile_recharge",
+      "amount": 20,
+      "recipient": "01799998888"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "০১৭৯৯৯৯৮৮৮৮ এ পাঠা টাকা রিচার্জ",
+     "confidence": 0.815,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_amount",
+      "intent": "mobile_recharge",
+      "amount": null,
+      "recipient": "01799998888",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:06:00Z"
+    },
+    {
+     "prompt_id": "C13",
+     "kind": "read",
+     "reference": "আম্মুকে দুইশো টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 200,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে দুইশো টাকা দেন",
+     "confidence": 0.642,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 200,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:07:00Z"
+    },
+    {
+     "prompt_id": "C47",
+     "kind": "read",
+     "reference": "আম্মুকে পঁচিশ হাজার টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 25000,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে পঁচিশ নাও টাকা",
+     "confidence": 0.624,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 25,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:08:00Z"
+    },
+    {
+     "prompt_id": "F10",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "cash_out",
+      "amount": 1000,
+      "recipient": null
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "এক পাঠা আউট করব",
+     "confidence": 0.552,
+     "has_confidence": true,
+     "unsure": true,
+     "parse": {
+      "status": "need_amount",
+      "intent": "send_money",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:09:00Z"
+    },
+    {
+     "prompt_id": "F1",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "send_money",
+      "amount": 800,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে বাজারের জন্য আটশো ভাই টাকা",
+     "confidence": 0.634,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 800,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:10:00Z"
+    },
+    {
+     "prompt_id": "F4",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "check_balance",
+      "amount": null,
+      "recipient": null
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আমার নাও নাও আম্মা",
+     "confidence": 0.603,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "unknown",
+      "intent": "unknown",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:11:00Z"
+    }
+   ]
+  },
+  {
+   "participant": "S02",
+   "age_band": "30-50",
+   "gender": "male",
+   "dialect": "chattogram",
+   "condition": "quiet",
+   "mode": "read",
+   "device": "SAMPLE (no device)",
+   "platform": "sample",
+   "stt_locale": "bn-BD",
+   "consent": true,
+   "started_at": "2026-10-01T10:00:00Z",
+   "records": [
+    {
+     "prompt_id": "C65",
+     "kind": "read",
+     "reference": "আমার নম্বরে ৫০ টাকা রিচার্জ করো",
+     "expected": {
+      "intent": "mobile_recharge",
+      "amount": 50,
+      "recipient": "self"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আমার নম্বরে ৫০ টাকা রিচার্জ করো",
+     "confidence": 0.918,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "mobile_recharge",
+      "amount": 50,
+      "recipient": "self",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:00:00Z"
+    },
+    {
+     "prompt_id": "C31",
+     "kind": "read",
+     "reference": "আম্মুকে আড়াই হাজার টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 2500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে আড়াই হাজার টাকা পাঠাও",
+     "confidence": 0.792,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 2500,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:01:00Z"
+    },
+    {
+     "prompt_id": "C76",
+     "kind": "read",
+     "reference": "আমার ব্যালেন্স কত",
+     "expected": {
+      "intent": "check_balance",
+      "amount": null,
+      "recipient": null
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আমার ব্যালেন্স কত",
+     "confidence": 0.762,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "check_balance",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:02:00Z"
+    },
+    {
+     "prompt_id": "C42",
+     "kind": "read",
+     "reference": "সালমাকে আটশো টাকা দাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 800,
+      "recipient": "c4"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "সালমাকে আটশো টাকা দাও",
+     "confidence": 0.915,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 800,
+      "recipient": "c4",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:03:00Z"
+    },
+    {
+     "prompt_id": "C34",
+     "kind": "read",
+     "reference": "আম্মুকে ১৫০০ টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে ১৫০০ টাকা পাঠাও",
+     "confidence": 0.828,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:04:00Z"
+    },
+    {
+     "prompt_id": "C70",
+     "kind": "read",
+     "reference": "সালমা আপাকে ৫০ টাকা ফ্লেক্সিলোড",
+     "expected": {
+      "intent": "mobile_recharge",
+      "amount": 50,
+      "recipient": "c4"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "সালমা আপাকে ৫০ টাকা ফ্লেক্সিলোড",
+     "confidence": 0.838,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "mobile_recharge",
+      "amount": 50,
+      "recipient": "c4",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:05:00Z"
+    },
+    {
+     "prompt_id": "C54",
+     "kind": "read",
+     "reference": "সেন্ড টু থাউজেন্ড ফাইভ হান্ড্রেড টু আম্মু",
+     "expected": {
+      "intent": "send_money",
+      "amount": 2500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "সেন্ড টু থাউজেন্ড ফাইভ হান্ড্রেড টু আম্মু",
+     "confidence": 0.923,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "unknown",
+      "intent": "unknown",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:06:00Z"
+    },
+    {
+     "prompt_id": "C17",
+     "kind": "read",
+     "reference": "রহিম ভাইকে ৭০০ টাকা দাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 700,
+      "recipient": "c2"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিম ভাইকে ৭০০ টাকা দাও",
+     "confidence": 0.863,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 700,
+      "recipient": "c2",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:07:00Z"
+    },
+    {
+     "prompt_id": "C8",
+     "kind": "read",
+     "reference": "আম্মুকে ওয়ান পয়েন্ট ফাইভ কে টাকা",
+     "expected": {
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে ওয়ান পয়েন্ট ফাইভ কে টাকা",
+     "confidence": 0.99,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "unknown",
+      "intent": "unknown",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:08:00Z"
+    },
+    {
+     "prompt_id": "F6",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "send_money",
+      "amount": 350,
+      "recipient": "c3"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিম দোকানে সাড়ে তিনশো টাকা দাও",
+     "confidence": 0.99,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 350,
+      "recipient": "c3",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:09:00Z"
+    },
+    {
+     "prompt_id": "F8",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "mobile_recharge",
+      "amount": 100,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুর নম্বরে একশো টাকা রিচার্জ করে দাও",
+     "confidence": 0.897,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "mobile_recharge",
+      "amount": 100,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:10:00Z"
+    },
+    {
+     "prompt_id": "F7",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "send_money",
+      "amount": 2500,
+      "recipient": "c2"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিম ভাইকে হাজার টাকা পাঠাও",
+     "confidence": 0.884,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 1000,
+      "recipient": "c2",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:11:00Z"
+    }
+   ]
+  },
+  {
+   "participant": "S02",
+   "age_band": "30-50",
+   "gender": "male",
+   "dialect": "chattogram",
+   "condition": "street",
+   "mode": "read",
+   "device": "SAMPLE (no device)",
+   "platform": "sample",
+   "stt_locale": "bn-BD",
+   "consent": true,
+   "started_at": "2026-10-01T10:00:00Z",
+   "records": [
+    {
+     "prompt_id": "C65",
+     "kind": "read",
+     "reference": "আমার নম্বরে ৫০ টাকা রিচার্জ করো",
+     "expected": {
+      "intent": "mobile_recharge",
+      "amount": 50,
+      "recipient": "self"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "নাও নম্বরে ৫০ আম্মা করো",
+     "confidence": 0.755,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 50,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:00:00Z"
+    },
+    {
+     "prompt_id": "C31",
+     "kind": "read",
+     "reference": "আম্মুকে আড়াই হাজার টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 2500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে আড়াই হাজার টাকা পাঠাও",
+     "confidence": 0.802,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 2500,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:01:00Z"
+    },
+    {
+     "prompt_id": "C76",
+     "kind": "read",
+     "reference": "আমার ব্যালেন্স কত",
+     "expected": {
+      "intent": "check_balance",
+      "amount": null,
+      "recipient": null
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আমার ব্যালেন্স কত",
+     "confidence": 0.783,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "check_balance",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:02:00Z"
+    },
+    {
+     "prompt_id": "C42",
+     "kind": "read",
+     "reference": "সালমাকে আটশো টাকা দাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 800,
+      "recipient": "c4"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "সালমাকে আটশো টাকা দাও",
+     "confidence": 0.775,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 800,
+      "recipient": "c4",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:03:00Z"
+    },
+    {
+     "prompt_id": "C34",
+     "kind": "read",
+     "reference": "আম্মুকে ১৫০০ টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে নাও টাকা পাঠাও",
+     "confidence": 0.769,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_amount",
+      "intent": "send_money",
+      "amount": null,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:04:00Z"
+    },
+    {
+     "prompt_id": "C70",
+     "kind": "read",
+     "reference": "সালমা আপাকে ৫০ টাকা ফ্লেক্সিলোড",
+     "expected": {
+      "intent": "mobile_recharge",
+      "amount": 50,
+      "recipient": "c4"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "সালমা আপাকে ৫০ টাকা",
+     "confidence": 0.768,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 50,
+      "recipient": "c4",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:05:00Z"
+    },
+    {
+     "prompt_id": "C54",
+     "kind": "read",
+     "reference": "সেন্ড টু থাউজেন্ড ফাইভ হান্ড্রেড টু আম্মু",
+     "expected": {
+      "intent": "send_money",
+      "amount": 2500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "সেন্ড টু থাউজেন্ড ফাইভ হান্ড্রেড টু আম্মু",
+     "confidence": 0.707,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "unknown",
+      "intent": "unknown",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:06:00Z"
+    },
+    {
+     "prompt_id": "C17",
+     "kind": "read",
+     "reference": "রহিম ভাইকে ৭০০ টাকা দাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 700,
+      "recipient": "c2"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিম ভাইকে ৭০০ টাকা দাও",
+     "confidence": 0.749,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 700,
+      "recipient": "c2",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:07:00Z"
+    },
+    {
+     "prompt_id": "C8",
+     "kind": "read",
+     "reference": "আম্মুকে ওয়ান পয়েন্ট ফাইভ কে টাকা",
+     "expected": {
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "পয়েন্ট ফাইভ কে টাকা",
+     "confidence": 0.649,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "unknown",
+      "intent": "unknown",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:08:00Z"
+    },
+    {
+     "prompt_id": "F6",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "send_money",
+      "amount": 350,
+      "recipient": "c3"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিম দোকানে সাড়ে তিনশো টাকা দাও",
+     "confidence": 0.798,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 350,
+      "recipient": "c3",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:09:00Z"
+    },
+    {
+     "prompt_id": "F8",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "mobile_recharge",
+      "amount": 100,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুর নম্বরে একশো টাকা রিচার্জ করে দাও",
+     "confidence": 0.911,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "mobile_recharge",
+      "amount": 100,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:10:00Z"
+    },
+    {
+     "prompt_id": "F7",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "send_money",
+      "amount": 2500,
+      "recipient": "c2"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "ভাইকে আড়াই হাজার পাঠাও",
+     "confidence": 0.743,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_recipient",
+      "intent": "send_money",
+      "amount": 2500,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:11:00Z"
+    }
+   ]
+  },
+  {
+   "participant": "S02",
+   "age_band": "30-50",
+   "gender": "male",
+   "dialect": "chattogram",
+   "condition": "bus_tv",
+   "mode": "read",
+   "device": "SAMPLE (no device)",
+   "platform": "sample",
+   "stt_locale": "bn-BD",
+   "consent": true,
+   "started_at": "2026-10-01T10:00:00Z",
+   "records": [
+    {
+     "prompt_id": "C65",
+     "kind": "read",
+     "reference": "আমার নম্বরে ৫০ টাকা রিচার্জ করো",
+     "expected": {
+      "intent": "mobile_recharge",
+      "amount": 50,
+      "recipient": "self"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আমার নম্বরে ৫০ টাকা রিচার্জ",
+     "confidence": 0.639,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "mobile_recharge",
+      "amount": 50,
+      "recipient": "self",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:00:00Z"
+    },
+    {
+     "prompt_id": "C31",
+     "kind": "read",
+     "reference": "আম্মুকে আড়াই হাজার টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 2500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে আড়াই হাজার টাকা",
+     "confidence": 0.647,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 2500,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:01:00Z"
+    },
+    {
+     "prompt_id": "C76",
+     "kind": "read",
+     "reference": "আমার ব্যালেন্স কত",
+     "expected": {
+      "intent": "check_balance",
+      "amount": null,
+      "recipient": null
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "পাঠা কত",
+     "confidence": 0.586,
+     "has_confidence": true,
+     "unsure": true,
+     "parse": {
+      "status": "need_amount",
+      "intent": "send_money",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:02:00Z"
+    },
+    {
+     "prompt_id": "C42",
+     "kind": "read",
+     "reference": "সালমাকে আটশো টাকা দাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 800,
+      "recipient": "c4"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "সালমাকে টাকা",
+     "confidence": 0.639,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "unknown",
+      "intent": "unknown",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:03:00Z"
+    },
+    {
+     "prompt_id": "C34",
+     "kind": "read",
+     "reference": "আম্মুকে ১৫০০ টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "টাকা পাঠাও",
+     "confidence": 0.509,
+     "has_confidence": true,
+     "unsure": true,
+     "parse": {
+      "status": "need_amount",
+      "intent": "send_money",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:04:00Z"
+    },
+    {
+     "prompt_id": "C70",
+     "kind": "read",
+     "reference": "সালমা আপাকে ৫০ টাকা ফ্লেক্সিলোড",
+     "expected": {
+      "intent": "mobile_recharge",
+      "amount": 50,
+      "recipient": "c4"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "সালমা আপাকে ৫০ টাকা ফ্লেক্সিলোড",
+     "confidence": 0.616,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "mobile_recharge",
+      "amount": 50,
+      "recipient": "c4",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:05:00Z"
+    },
+    {
+     "prompt_id": "C54",
+     "kind": "read",
+     "reference": "সেন্ড টু থাউজেন্ড ফাইভ হান্ড্রেড টু আম্মু",
+     "expected": {
+      "intent": "send_money",
+      "amount": 2500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "করো টু নাও ফাইভ হান্ড্রেড টু আম্মু",
+     "confidence": 0.702,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "unknown",
+      "intent": "unknown",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:06:00Z"
+    },
+    {
+     "prompt_id": "C17",
+     "kind": "read",
+     "reference": "রহিম ভাইকে ৭০০ টাকা দাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 700,
+      "recipient": "c2"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিম ভাইকে ৭০০ টাকা দাও",
+     "confidence": 0.715,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 700,
+      "recipient": "c2",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:07:00Z"
+    },
+    {
+     "prompt_id": "C8",
+     "kind": "read",
+     "reference": "আম্মুকে ওয়ান পয়েন্ট ফাইভ কে টাকা",
+     "expected": {
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে ওয়ান পয়েন্ট আম্মা টাকা",
+     "confidence": 0.615,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "unknown",
+      "intent": "unknown",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:08:00Z"
+    },
+    {
+     "prompt_id": "F6",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "send_money",
+      "amount": 350,
+      "recipient": "c3"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "দোকানে সাড়ে তিনশো টাকা",
+     "confidence": 0.648,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_recipient",
+      "intent": "send_money",
+      "amount": 350,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:09:00Z"
+    },
+    {
+     "prompt_id": "F8",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "mobile_recharge",
+      "amount": 100,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুর একশো টাকা রিচার্জ করে দাও",
+     "confidence": 0.642,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "mobile_recharge",
+      "amount": 100,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:10:00Z"
+    },
+    {
+     "prompt_id": "F7",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "send_money",
+      "amount": 2500,
+      "recipient": "c2"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিম ভাইকে আড়াই টাকা পাঠাও",
+     "confidence": 0.582,
+     "has_confidence": true,
+     "unsure": true,
+     "parse": {
+      "status": "clarify_amount",
+      "intent": "send_money",
+      "amount": null,
+      "recipient": "c2",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:11:00Z"
+    }
+   ]
+  },
+  {
+   "participant": "S03",
+   "age_band": "50+",
+   "gender": "female",
+   "dialect": "sylhet",
+   "condition": "quiet",
+   "mode": "read",
+   "device": "SAMPLE (no device)",
+   "platform": "sample",
+   "stt_locale": "bn-BD",
+   "consent": true,
+   "started_at": "2026-10-01T10:00:00Z",
+   "records": [
+    {
+     "prompt_id": "C81",
+     "kind": "read",
+     "reference": "ক্যাশ আউট করব ১০০০ টাকা",
+     "expected": {
+      "intent": "cash_out",
+      "amount": 1000,
+      "recipient": null
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "ক্যাশ আউট করব ১০০০ টাকা",
+     "confidence": 0.775,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_recipient",
+      "intent": "cash_out",
+      "amount": 1000,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:00:00Z"
+    },
+    {
+     "prompt_id": "C83",
+     "kind": "read",
+     "reference": "বিদ্যুৎ বিল দিব",
+     "expected": {
+      "intent": "unsupported",
+      "amount": null,
+      "recipient": null
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "বিদ্যুৎ বিল দিব",
+     "confidence": 0.908,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "unsupported",
+      "intent": "unsupported",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:01:00Z"
+    },
+    {
+     "prompt_id": "C26",
+     "kind": "read",
+     "reference": "ল্যান্ডলর্ডকে ৪৫০০ টাকা",
+     "expected": {
+      "intent": "send_money",
+      "amount": 4500,
+      "recipient": "c5"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "ল্যান্ডলর্ডকে ৪৫০০ টাকা",
+     "confidence": 0.978,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_recipient",
+      "intent": "send_money",
+      "amount": 4500,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:02:00Z"
+    },
+    {
+     "prompt_id": "C10",
+     "kind": "read",
+     "reference": "আম্মুকে দেড় হাজার টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে দেড় হাজার টাকা পাঠাও",
+     "confidence": 0.947,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:03:00Z"
+    },
+    {
+     "prompt_id": "C77",
+     "kind": "read",
+     "reference": "কত টাকা আছে",
+     "expected": {
+      "intent": "check_balance",
+      "amount": null,
+      "recipient": null
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "কত টাকা আছে",
+     "confidence": 0.931,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "check_balance",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:04:00Z"
+    },
+    {
+     "prompt_id": "C19",
+     "kind": "read",
+     "reference": "রহিম স্টোরকে ৩৫০ টাকা দাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 350,
+      "recipient": "c3"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিম স্টোরকে ৩৫০ টাকা দাও",
+     "confidence": 0.916,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 350,
+      "recipient": "c3",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:05:00Z"
+    },
+    {
+     "prompt_id": "C43",
+     "kind": "read",
+     "reference": "আপাকে সাতশো টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 700,
+      "recipient": "c4"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আপাকে সাতশো টাকা পাঠাও",
+     "confidence": 0.957,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 700,
+      "recipient": "c4",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:06:00Z"
+    },
+    {
+     "prompt_id": "C33",
+     "kind": "read",
+     "reference": "আম্মুকে পৌনে দুই হাজার টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 1750,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে পৌনে দুই হাজার টাকা পাঠাও",
+     "confidence": 0.844,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 1750,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:07:00Z"
+    },
+    {
+     "prompt_id": "C84",
+     "kind": "read",
+     "reference": "রহিমকে ৫০০ টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": "ask"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিমকে ৫০০ টাকা পাঠাও",
+     "confidence": 0.858,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "clarify_recipient",
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:08:00Z"
+    },
+    {
+     "prompt_id": "F5",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "send_money",
+      "amount": 1200,
+      "recipient": "c4"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "সালমা আপাকে টাকা পাঠাও",
+     "confidence": 0.969,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_amount",
+      "intent": "send_money",
+      "amount": null,
+      "recipient": "c4",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:09:00Z"
+    },
+    {
+     "prompt_id": "F3",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "mobile_recharge",
+      "amount": 50,
+      "recipient": "self"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আমার ফোনে পঞ্চাশ টাকা রিচার্জ করো",
+     "confidence": 0.94,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "mobile_recharge",
+      "amount": 50,
+      "recipient": "self",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:10:00Z"
+    },
+    {
+     "prompt_id": "F1",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "send_money",
+      "amount": 800,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে বাজারের জন্য আটশো টাকা পাঠাও",
+     "confidence": 0.849,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 800,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:11:00Z"
+    }
+   ]
+  },
+  {
+   "participant": "S03",
+   "age_band": "50+",
+   "gender": "female",
+   "dialect": "sylhet",
+   "condition": "street",
+   "mode": "read",
+   "device": "SAMPLE (no device)",
+   "platform": "sample",
+   "stt_locale": "bn-BD",
+   "consent": true,
+   "started_at": "2026-10-01T10:00:00Z",
+   "records": [
+    {
+     "prompt_id": "C81",
+     "kind": "read",
+     "reference": "ক্যাশ আউট করব ১০০০ টাকা",
+     "expected": {
+      "intent": "cash_out",
+      "amount": 1000,
+      "recipient": null
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "ক্যাশ আউট করব ১০০০",
+     "confidence": 0.766,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_recipient",
+      "intent": "cash_out",
+      "amount": 1000,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:00:00Z"
+    },
+    {
+     "prompt_id": "C83",
+     "kind": "read",
+     "reference": "বিদ্যুৎ বিল দিব",
+     "expected": {
+      "intent": "unsupported",
+      "amount": null,
+      "recipient": null
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "বিদ্যুৎ বিল দিব",
+     "confidence": 0.679,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "unsupported",
+      "intent": "unsupported",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:01:00Z"
+    },
+    {
+     "prompt_id": "C26",
+     "kind": "read",
+     "reference": "ল্যান্ডলর্ডকে ৪৫০০ টাকা",
+     "expected": {
+      "intent": "send_money",
+      "amount": 4500,
+      "recipient": "c5"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "করো ৪৫০০ টাকা",
+     "confidence": 0.864,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_recipient",
+      "intent": "send_money",
+      "amount": 4500,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:02:00Z"
+    },
+    {
+     "prompt_id": "C10",
+     "kind": "read",
+     "reference": "আম্মুকে দেড় হাজার টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে দেড় হাজার টাকা পাঠাও",
+     "confidence": 0.883,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:03:00Z"
+    },
+    {
+     "prompt_id": "C77",
+     "kind": "read",
+     "reference": "কত টাকা আছে",
+     "expected": {
+      "intent": "check_balance",
+      "amount": null,
+      "recipient": null
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "কত টাকা আছে",
+     "confidence": 0.713,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "check_balance",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:04:00Z"
+    },
+    {
+     "prompt_id": "C19",
+     "kind": "read",
+     "reference": "রহিম স্টোরকে ৩৫০ টাকা দাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 350,
+      "recipient": "c3"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিম স্টোরকে ৩৫০ করো দাও",
+     "confidence": 0.693,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 350,
+      "recipient": "c3",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:05:00Z"
+    },
+    {
+     "prompt_id": "C43",
+     "kind": "read",
+     "reference": "আপাকে সাতশো টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 700,
+      "recipient": "c4"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আপাকে সাতশো টাকা পাঠাও",
+     "confidence": 0.984,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 700,
+      "recipient": "c4",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:06:00Z"
+    },
+    {
+     "prompt_id": "C33",
+     "kind": "read",
+     "reference": "আম্মুকে পৌনে দুই হাজার টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 1750,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে পৌনে দুই আম্মা টাকা পাঠাও",
+     "confidence": 0.611,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_amount",
+      "intent": "send_money",
+      "amount": null,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:07:00Z"
+    },
+    {
+     "prompt_id": "C84",
+     "kind": "read",
+     "reference": "রহিমকে ৫০০ টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": "ask"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিমকে ৫০০ টাকা",
+     "confidence": 0.814,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "clarify_recipient",
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:08:00Z"
+    },
+    {
+     "prompt_id": "F5",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "send_money",
+      "amount": 1200,
+      "recipient": "c4"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "সালমা আপাকে বারোশো টাকা পাঠাও",
+     "confidence": 0.703,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 1200,
+      "recipient": "c4",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:09:00Z"
+    },
+    {
+     "prompt_id": "F3",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "mobile_recharge",
+      "amount": 50,
+      "recipient": "self"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আমার ফোনে পঞ্চাশ টাকা রিচার্জ করো",
+     "confidence": 0.902,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "mobile_recharge",
+      "amount": 50,
+      "recipient": "self",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:10:00Z"
+    },
+    {
+     "prompt_id": "F1",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "send_money",
+      "amount": 800,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে বাজারের জন্য আটশো টাকা পাঠাও",
+     "confidence": 0.854,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 800,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:11:00Z"
+    }
+   ]
+  },
+  {
+   "participant": "S03",
+   "age_band": "50+",
+   "gender": "female",
+   "dialect": "sylhet",
+   "condition": "bus_tv",
+   "mode": "read",
+   "device": "SAMPLE (no device)",
+   "platform": "sample",
+   "stt_locale": "bn-BD",
+   "consent": true,
+   "started_at": "2026-10-01T10:00:00Z",
+   "records": [
+    {
+     "prompt_id": "C81",
+     "kind": "read",
+     "reference": "ক্যাশ আউট করব ১০০০ টাকা",
+     "expected": {
+      "intent": "cash_out",
+      "amount": 1000,
+      "recipient": null
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "দেন আউট করব ১০০ টাকা",
+     "confidence": 0.498,
+     "has_confidence": true,
+     "unsure": true,
+     "parse": {
+      "status": "need_recipient",
+      "intent": "send_money",
+      "amount": 100,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:00:00Z"
+    },
+    {
+     "prompt_id": "C83",
+     "kind": "read",
+     "reference": "বিদ্যুৎ বিল দিব",
+     "expected": {
+      "intent": "unsupported",
+      "amount": null,
+      "recipient": null
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "বিদ্যুৎ বিল দিব",
+     "confidence": 0.755,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "unsupported",
+      "intent": "unsupported",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:01:00Z"
+    },
+    {
+     "prompt_id": "C26",
+     "kind": "read",
+     "reference": "ল্যান্ডলর্ডকে ৪৫০০ টাকা",
+     "expected": {
+      "intent": "send_money",
+      "amount": 4500,
+      "recipient": "c5"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "ভাই টাকা",
+     "confidence": 0.697,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "unknown",
+      "intent": "unknown",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:02:00Z"
+    },
+    {
+     "prompt_id": "C10",
+     "kind": "read",
+     "reference": "আম্মুকে দেড় হাজার টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে দেড় টাকা",
+     "confidence": 0.529,
+     "has_confidence": true,
+     "unsure": true,
+     "parse": {
+      "status": "clarify_amount",
+      "intent": "send_money",
+      "amount": null,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:03:00Z"
+    },
+    {
+     "prompt_id": "C77",
+     "kind": "read",
+     "reference": "কত টাকা আছে",
+     "expected": {
+      "intent": "check_balance",
+      "amount": null,
+      "recipient": null
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "কত আছে",
+     "confidence": 0.571,
+     "has_confidence": true,
+     "unsure": true,
+     "parse": {
+      "status": "unknown",
+      "intent": "unknown",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:04:00Z"
+    },
+    {
+     "prompt_id": "C19",
+     "kind": "read",
+     "reference": "রহিম স্টোরকে ৩৫০ টাকা দাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 350,
+      "recipient": "c3"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিম স্টোরকে টাকা দাও",
+     "confidence": 0.57,
+     "has_confidence": true,
+     "unsure": true,
+     "parse": {
+      "status": "need_amount",
+      "intent": "send_money",
+      "amount": null,
+      "recipient": "c3",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:05:00Z"
+    },
+    {
+     "prompt_id": "C43",
+     "kind": "read",
+     "reference": "আপাকে সাতশো টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 700,
+      "recipient": "c4"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আপাকে সাতশো পাঠাও",
+     "confidence": 0.628,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 700,
+      "recipient": "c4",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:06:00Z"
+    },
+    {
+     "prompt_id": "C33",
+     "kind": "read",
+     "reference": "আম্মুকে পৌনে দুই হাজার টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 1750,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে পৌনে দুই হাজার পাঠাও",
+     "confidence": 0.709,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 1750,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:07:00Z"
+    },
+    {
+     "prompt_id": "C84",
+     "kind": "read",
+     "reference": "রহিমকে ৫০০ টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": "ask"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "করো টাকা",
+     "confidence": 0.572,
+     "has_confidence": true,
+     "unsure": true,
+     "parse": {
+      "status": "unknown",
+      "intent": "unknown",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:08:00Z"
+    },
+    {
+     "prompt_id": "F5",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "send_money",
+      "amount": 1200,
+      "recipient": "c4"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "সালমা আপাকে বারোশো টাকা পাঠাও",
+     "confidence": 0.675,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 1200,
+      "recipient": "c4",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:09:00Z"
+    },
+    {
+     "prompt_id": "F3",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "mobile_recharge",
+      "amount": 50,
+      "recipient": "self"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আমার ফোনে টাকা নাও করো",
+     "confidence": 0.664,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "unknown",
+      "intent": "unknown",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:10:00Z"
+    },
+    {
+     "prompt_id": "F1",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "send_money",
+      "amount": 800,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে বাজারের জন্য পাঠা টাকা পাঠাও",
+     "confidence": 0.773,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_amount",
+      "intent": "send_money",
+      "amount": null,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:11:00Z"
+    }
+   ]
+  },
+  {
+   "participant": "S04",
+   "age_band": "30-50",
+   "gender": "male",
+   "dialect": "barishal",
+   "condition": "quiet",
+   "mode": "read",
+   "device": "SAMPLE (no device)",
+   "platform": "sample",
+   "stt_locale": "bn-BD",
+   "consent": true,
+   "started_at": "2026-10-01T10:00:00Z",
+   "records": [
+    {
+     "prompt_id": "C77",
+     "kind": "read",
+     "reference": "কত টাকা আছে",
+     "expected": {
+      "intent": "check_balance",
+      "amount": null,
+      "recipient": null
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "কত টাকা আছে",
+     "confidence": 0.99,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "check_balance",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:00:00Z"
+    },
+    {
+     "prompt_id": "C19",
+     "kind": "read",
+     "reference": "রহিম স্টোরকে ৩৫০ টাকা দাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 350,
+      "recipient": "c3"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিম স্টোরকে ৩৫০ টাকা করো",
+     "confidence": 0.897,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 350,
+      "recipient": "c3",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:01:00Z"
+    },
+    {
+     "prompt_id": "C51",
+     "kind": "read",
+     "reference": "সেন্ড ৫০০ টাকা টু আম্মু",
+     "expected": {
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "সেন্ড ৫০০ টাকা টু আম্মু",
+     "confidence": 0.929,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:02:00Z"
+    },
+    {
+     "prompt_id": "C7",
+     "kind": "read",
+     "reference": "আম্মুকে ফাইভ কে পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 5000,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে ফাইভ কে পাঠাও",
+     "confidence": 0.915,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_amount",
+      "intent": "send_money",
+      "amount": null,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:03:00Z"
+    },
+    {
+     "prompt_id": "C28",
+     "kind": "read",
+     "reference": "আম্মুকে দেড় হাজার টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে দেড় হাজার টাকা পাঠাও",
+     "confidence": 0.885,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:04:00Z"
+    },
+    {
+     "prompt_id": "C4",
+     "kind": "read",
+     "reference": "আম্মাকে ২০০০ টাকা সেন্ড করো",
+     "expected": {
+      "intent": "send_money",
+      "amount": 2000,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মাকে ২০০০ টাকা সেন্ড করো",
+     "confidence": 0.849,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 2000,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:05:00Z"
+    },
+    {
+     "prompt_id": "C54",
+     "kind": "read",
+     "reference": "সেন্ড টু থাউজেন্ড ফাইভ হান্ড্রেড টু আম্মু",
+     "expected": {
+      "intent": "send_money",
+      "amount": 2500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "সেন্ড টু থাউজেন্ড ফাইভ হান্ড্রেড টু আম্মু",
+     "confidence": 0.949,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "unknown",
+      "intent": "unknown",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:06:00Z"
+    },
+    {
+     "prompt_id": "C91",
+     "kind": "read",
+     "reference": "৫০০ টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": "ask"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "৫০০ টাকা পাঠাও",
+     "confidence": 0.92,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_recipient",
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:07:00Z"
+    },
+    {
+     "prompt_id": "C8",
+     "kind": "read",
+     "reference": "আম্মুকে ওয়ান পয়েন্ট ফাইভ কে টাকা",
+     "expected": {
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে ওয়ান পয়েন্ট ফাইভ কে টাকা",
+     "confidence": 0.862,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "unknown",
+      "intent": "unknown",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:08:00Z"
+    },
+    {
+     "prompt_id": "F3",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "mobile_recharge",
+      "amount": 50,
+      "recipient": "self"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আমার ফোনে পঞ্চাশ টাকা রিচার্জ করো",
+     "confidence": 0.99,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "mobile_recharge",
+      "amount": 50,
+      "recipient": "self",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:09:00Z"
+    },
+    {
+     "prompt_id": "F7",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "send_money",
+      "amount": 2500,
+      "recipient": "c2"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিম ভাইকে আড়াই হাজার টাকা পাঠাও",
+     "confidence": 0.963,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 2500,
+      "recipient": "c2",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:10:00Z"
+    },
+    {
+     "prompt_id": "F8",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "mobile_recharge",
+      "amount": 100,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "নম্বরে একশো টাকা রিচার্জ করে দাও",
+     "confidence": 0.969,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_recipient",
+      "intent": "mobile_recharge",
+      "amount": 100,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:11:00Z"
+    }
+   ]
+  },
+  {
+   "participant": "S04",
+   "age_band": "30-50",
+   "gender": "male",
+   "dialect": "barishal",
+   "condition": "street",
+   "mode": "read",
+   "device": "SAMPLE (no device)",
+   "platform": "sample",
+   "stt_locale": "bn-BD",
+   "consent": true,
+   "started_at": "2026-10-01T10:00:00Z",
+   "records": [
+    {
+     "prompt_id": "C77",
+     "kind": "read",
+     "reference": "কত টাকা আছে",
+     "expected": {
+      "intent": "check_balance",
+      "amount": null,
+      "recipient": null
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "কত টাকা আছে",
+     "confidence": 0.68,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "check_balance",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:00:00Z"
+    },
+    {
+     "prompt_id": "C19",
+     "kind": "read",
+     "reference": "রহিম স্টোরকে ৩৫০ টাকা দাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 350,
+      "recipient": "c3"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিম স্টোরকে ৩৫০ টাকা দাও",
+     "confidence": 0.754,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 350,
+      "recipient": "c3",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:01:00Z"
+    },
+    {
+     "prompt_id": "C51",
+     "kind": "read",
+     "reference": "সেন্ড ৫০০ টাকা টু আম্মু",
+     "expected": {
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "সেন্ড ৫০০ টাকা টু টাকা",
+     "confidence": 0.55,
+     "has_confidence": true,
+     "unsure": true,
+     "parse": {
+      "status": "need_recipient",
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:02:00Z"
+    },
+    {
+     "prompt_id": "C7",
+     "kind": "read",
+     "reference": "আম্মুকে ফাইভ কে পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 5000,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে ফাইভ কে পাঠাও",
+     "confidence": 0.874,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_amount",
+      "intent": "send_money",
+      "amount": null,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:03:00Z"
+    },
+    {
+     "prompt_id": "C28",
+     "kind": "read",
+     "reference": "আম্মুকে দেড় হাজার টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে দেড় হাজার টাকা পাঠাও",
+     "confidence": 0.772,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:04:00Z"
+    },
+    {
+     "prompt_id": "C4",
+     "kind": "read",
+     "reference": "আম্মাকে ২০০০ টাকা সেন্ড করো",
+     "expected": {
+      "intent": "send_money",
+      "amount": 2000,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মাকে ২০০০ টাকা সেন্ড করো",
+     "confidence": 0.694,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 2000,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:05:00Z"
+    },
+    {
+     "prompt_id": "C54",
+     "kind": "read",
+     "reference": "সেন্ড টু থাউজেন্ড ফাইভ হান্ড্রেড টু আম্মু",
+     "expected": {
+      "intent": "send_money",
+      "amount": 2500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "সেন্ড টু থাউজেন্ড ফাইভ হান্ড্রেড আম্মা আম্মু",
+     "confidence": 0.702,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "unknown",
+      "intent": "unknown",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:06:00Z"
+    },
+    {
+     "prompt_id": "C91",
+     "kind": "read",
+     "reference": "৫০০ টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": "ask"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "৫০০ টাকা পাঠাও",
+     "confidence": 0.757,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_recipient",
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:07:00Z"
+    },
+    {
+     "prompt_id": "C8",
+     "kind": "read",
+     "reference": "আম্মুকে ওয়ান পয়েন্ট ফাইভ কে টাকা",
+     "expected": {
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "দেন ওয়ান পয়েন্ট ফাইভ কে টাকা",
+     "confidence": 0.763,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_amount",
+      "intent": "send_money",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:08:00Z"
+    },
+    {
+     "prompt_id": "F3",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "mobile_recharge",
+      "amount": 50,
+      "recipient": "self"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আমার ফোনে পঞ্চাশ ভাই রিচার্জ করো",
+     "confidence": 0.786,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "mobile_recharge",
+      "amount": 50,
+      "recipient": "self",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:09:00Z"
+    },
+    {
+     "prompt_id": "F7",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "send_money",
+      "amount": 2500,
+      "recipient": "c2"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিম ভাইকে আড়াই ভাই টাকা পাঠাও",
+     "confidence": 0.831,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_amount",
+      "intent": "send_money",
+      "amount": null,
+      "recipient": "c2",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:10:00Z"
+    },
+    {
+     "prompt_id": "F8",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "mobile_recharge",
+      "amount": 100,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "নম্বরে টাকা রিচার্জ করে দাও",
+     "confidence": 0.777,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_amount",
+      "intent": "mobile_recharge",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:11:00Z"
+    }
+   ]
+  },
+  {
+   "participant": "S04",
+   "age_band": "30-50",
+   "gender": "male",
+   "dialect": "barishal",
+   "condition": "bus_tv",
+   "mode": "read",
+   "device": "SAMPLE (no device)",
+   "platform": "sample",
+   "stt_locale": "bn-BD",
+   "consent": true,
+   "started_at": "2026-10-01T10:00:00Z",
+   "records": [
+    {
+     "prompt_id": "C77",
+     "kind": "read",
+     "reference": "কত টাকা আছে",
+     "expected": {
+      "intent": "check_balance",
+      "amount": null,
+      "recipient": null
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "কত টাকা আছে",
+     "confidence": 0.732,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "check_balance",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:00:00Z"
+    },
+    {
+     "prompt_id": "C19",
+     "kind": "read",
+     "reference": "রহিম স্টোরকে ৩৫০ টাকা দাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 350,
+      "recipient": "c3"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিম স্টোরকে ৩৫০ টাকা ভাই",
+     "confidence": 0.658,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 350,
+      "recipient": "c3",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:01:00Z"
+    },
+    {
+     "prompt_id": "C51",
+     "kind": "read",
+     "reference": "সেন্ড ৫০০ টাকা টু আম্মু",
+     "expected": {
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "করো ৫০০ টাকা টু আম্মু",
+     "confidence": 0.635,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:02:00Z"
+    },
+    {
+     "prompt_id": "C7",
+     "kind": "read",
+     "reference": "আম্মুকে ফাইভ কে পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 5000,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে কে পাঠাও",
+     "confidence": 0.474,
+     "has_confidence": true,
+     "unsure": true,
+     "parse": {
+      "status": "need_amount",
+      "intent": "send_money",
+      "amount": null,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:03:00Z"
+    },
+    {
+     "prompt_id": "C28",
+     "kind": "read",
+     "reference": "আম্মুকে দেড় হাজার টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে দেড় হাজার টাকা টাকা",
+     "confidence": 0.502,
+     "has_confidence": true,
+     "unsure": true,
+     "parse": {
+      "status": "ok",
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:04:00Z"
+    },
+    {
+     "prompt_id": "C4",
+     "kind": "read",
+     "reference": "আম্মাকে ২০০০ টাকা সেন্ড করো",
+     "expected": {
+      "intent": "send_money",
+      "amount": 2000,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মাকে টাকা নাও করো",
+     "confidence": 0.732,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "unknown",
+      "intent": "unknown",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:05:00Z"
+    },
+    {
+     "prompt_id": "C54",
+     "kind": "read",
+     "reference": "সেন্ড টু থাউজেন্ড ফাইভ হান্ড্রেড টু আম্মু",
+     "expected": {
+      "intent": "send_money",
+      "amount": 2500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "সেন্ড টু থাউজেন্ড আম্মা পাঠা টু",
+     "confidence": 0.711,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_amount",
+      "intent": "send_money",
+      "amount": null,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:06:00Z"
+    },
+    {
+     "prompt_id": "C91",
+     "kind": "read",
+     "reference": "৫০০ টাকা পাঠাও",
+     "expected": {
+      "intent": "send_money",
+      "amount": 500,
+      "recipient": "ask"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "পাঠা টাকা",
+     "confidence": 0.443,
+     "has_confidence": true,
+     "unsure": true,
+     "parse": {
+      "status": "need_amount",
+      "intent": "send_money",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:07:00Z"
+    },
+    {
+     "prompt_id": "C8",
+     "kind": "read",
+     "reference": "আম্মুকে ওয়ান পয়েন্ট ফাইভ কে টাকা",
+     "expected": {
+      "intent": "send_money",
+      "amount": 1500,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুকে ওয়ান পয়েন্ট কে টাকা",
+     "confidence": 0.54,
+     "has_confidence": true,
+     "unsure": true,
+     "parse": {
+      "status": "unknown",
+      "intent": "unknown",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:08:00Z"
+    },
+    {
+     "prompt_id": "F3",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "mobile_recharge",
+      "amount": 50,
+      "recipient": "self"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আমার ফোনে দেন পাঠা করো",
+     "confidence": 0.518,
+     "has_confidence": true,
+     "unsure": true,
+     "parse": {
+      "status": "need_amount",
+      "intent": "send_money",
+      "amount": null,
+      "recipient": null,
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:09:00Z"
+    },
+    {
+     "prompt_id": "F7",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "send_money",
+      "amount": 2500,
+      "recipient": "c2"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "রহিম করো আড়াই ভাই টাকা পাঠাও",
+     "confidence": 0.604,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "need_amount",
+      "intent": "send_money",
+      "amount": null,
+      "recipient": "c2",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:10:00Z"
+    },
+    {
+     "prompt_id": "F8",
+     "kind": "free",
+     "reference": null,
+     "expected": {
+      "intent": "mobile_recharge",
+      "amount": 100,
+      "recipient": "c1"
+     },
+     "attempt": 1,
+     "input": "voice",
+     "transcript": "আম্মুর নম্বরে একশো টাকা রিচার্জ করে দাও",
+     "confidence": 0.711,
+     "has_confidence": true,
+     "unsure": false,
+     "parse": {
+      "status": "ok",
+      "intent": "mobile_recharge",
+      "amount": 100,
+      "recipient": "c1",
+      "llm_used": false
+     },
+     "at": "2026-10-01T10:11:00Z"
+    }
+   ]
+  }
+ ]
+}

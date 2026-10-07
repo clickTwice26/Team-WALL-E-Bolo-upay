@@ -6,6 +6,7 @@ import 'agent/agent.dart';
 import 'api.dart';
 import 'agent/agent_layer.dart';
 import 'screens/assistant.dart';
+import 'screens/eval_mode.dart';
 import 'screens/home.dart';
 import 'screens/insights.dart';
 import 'screens/login.dart';
@@ -114,7 +115,7 @@ class _GateState extends State<_Gate> {
 
   @override
   Widget build(BuildContext context) => unlocked
-      ? const Shell()
+      ? (kEvalMode ? const EvalScreen() : const Shell()) // study phones: straight to evaluation mode
       : LoginScreen(onUnlocked: () {
           Agent.instance.enabled = true; // the agent only works after the PIN unlock
           setState(() => unlocked = true);

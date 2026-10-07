@@ -1,0 +1,847 @@
+{
+  "sample": true,
+  "generated_at": "2026-10-07T05:31:37+00:00",
+  "sources": [
+    "audio_log_SAMPLE.json"
+  ],
+  "reparsed": false,
+  "design": {
+    "speakers": 4,
+    "speakers_all_conditions": 4,
+    "min_speakers": 12,
+    "conditions": [
+      "quiet",
+      "street",
+      "bus_tv"
+    ],
+    "meets_design": false
+  },
+  "target": {
+    "silent_wrong_amount_max": 0.01,
+    "met": false
+  },
+  "overall": {
+    "utterances": 144,
+    "speakers": 4,
+    "wer": 0.1337,
+    "cer": 0.1334,
+    "intent_accuracy": 0.8125,
+    "amount_accuracy": 0.6744,
+    "recipient_accuracy": 0.748,
+    "clarification_rate": 0.3472,
+    "wrong_amount_rate": 0.0233,
+    "silent_wrong_amount_rate": 0.0155,
+    "silent_wrong_recipient_rate": 0.0081,
+    "stt_unsure_rate": 0.1319,
+    "mean_confidence": 0.763
+  },
+  "by_condition": {
+    "bus_tv": {
+      "utterances": 48,
+      "speakers": 4,
+      "wer": 0.2754,
+      "cer": 0.2528,
+      "intent_accuracy": 0.6875,
+      "amount_accuracy": 0.4419,
+      "recipient_accuracy": 0.7073,
+      "clarification_rate": 0.4792,
+      "wrong_amount_rate": 0.0465,
+      "silent_wrong_amount_rate": 0.0233,
+      "silent_wrong_recipient_rate": 0.0,
+      "stt_unsure_rate": 0.375,
+      "mean_confidence": 0.622
+    },
+    "quiet": {
+      "utterances": 48,
+      "speakers": 4,
+      "wer": 0.012,
+      "cer": 0.0111,
+      "intent_accuracy": 0.9167,
+      "amount_accuracy": 0.814,
+      "recipient_accuracy": 0.8293,
+      "clarification_rate": 0.2292,
+      "wrong_amount_rate": 0.0233,
+      "silent_wrong_amount_rate": 0.0233,
+      "silent_wrong_recipient_rate": 0.0,
+      "stt_unsure_rate": 0.0,
+      "mean_confidence": 0.904
+    },
+    "street": {
+      "utterances": 48,
+      "speakers": 4,
+      "wer": 0.1138,
+      "cer": 0.1364,
+      "intent_accuracy": 0.8333,
+      "amount_accuracy": 0.7674,
+      "recipient_accuracy": 0.7073,
+      "clarification_rate": 0.3333,
+      "wrong_amount_rate": 0.0,
+      "silent_wrong_amount_rate": 0.0,
+      "silent_wrong_recipient_rate": 0.0244,
+      "stt_unsure_rate": 0.0208,
+      "mean_confidence": 0.765
+    }
+  },
+  "by_dialect": {
+    "barishal": {
+      "utterances": 36,
+      "speakers": 1,
+      "wer": 0.124,
+      "cer": 0.1141,
+      "intent_accuracy": 0.8333,
+      "amount_accuracy": 0.5455,
+      "recipient_accuracy": 0.697,
+      "clarification_rate": 0.4444,
+      "wrong_amount_rate": 0.0,
+      "silent_wrong_amount_rate": 0.0,
+      "silent_wrong_recipient_rate": 0.0,
+      "stt_unsure_rate": 0.1667,
+      "mean_confidence": 0.759
+    },
+    "chattogram": {
+      "utterances": 36,
+      "speakers": 1,
+      "wer": 0.1407,
+      "cer": 0.1421,
+      "intent_accuracy": 0.7222,
+      "amount_accuracy": 0.6667,
+      "recipient_accuracy": 0.6667,
+      "clarification_rate": 0.1667,
+      "wrong_amount_rate": 0.0303,
+      "silent_wrong_amount_rate": 0.0303,
+      "silent_wrong_recipient_rate": 0.0303,
+      "stt_unsure_rate": 0.0833,
+      "mean_confidence": 0.76
+    },
+    "dhaka": {
+      "utterances": 36,
+      "speakers": 1,
+      "wer": 0.1138,
+      "cer": 0.1131,
+      "intent_accuracy": 0.8333,
+      "amount_accuracy": 0.7879,
+      "recipient_accuracy": 0.8333,
+      "clarification_rate": 0.3889,
+      "wrong_amount_rate": 0.0303,
+      "silent_wrong_amount_rate": 0.0303,
+      "silent_wrong_recipient_rate": 0.0,
+      "stt_unsure_rate": 0.1389,
+      "mean_confidence": 0.758
+    },
+    "sylhet": {
+      "utterances": 36,
+      "speakers": 1,
+      "wer": 0.1579,
+      "cer": 0.1667,
+      "intent_accuracy": 0.8611,
+      "amount_accuracy": 0.7,
+      "recipient_accuracy": 0.8148,
+      "clarification_rate": 0.3889,
+      "wrong_amount_rate": 0.0333,
+      "silent_wrong_amount_rate": 0.0,
+      "silent_wrong_recipient_rate": 0.0,
+      "stt_unsure_rate": 0.1389,
+      "mean_confidence": 0.777
+    }
+  },
+  "by_age": {
+    "18-30": {
+      "utterances": 36,
+      "speakers": 1,
+      "wer": 0.1138,
+      "cer": 0.1131,
+      "intent_accuracy": 0.8333,
+      "amount_accuracy": 0.7879,
+      "recipient_accuracy": 0.8333,
+      "clarification_rate": 0.3889,
+      "wrong_amount_rate": 0.0303,
+      "silent_wrong_amount_rate": 0.0303,
+      "silent_wrong_recipient_rate": 0.0,
+      "stt_unsure_rate": 0.1389,
+      "mean_confidence": 0.758
+    },
+    "30-50": {
+      "utterances": 72,
+      "speakers": 2,
+      "wer": 0.1326,
+      "cer": 0.1289,
+      "intent_accuracy": 0.7778,
+      "amount_accuracy": 0.6061,
+      "recipient_accuracy": 0.6818,
+      "clarification_rate": 0.3056,
+      "wrong_amount_rate": 0.0152,
+      "silent_wrong_amount_rate": 0.0152,
+      "silent_wrong_recipient_rate": 0.0152,
+      "stt_unsure_rate": 0.125,
+      "mean_confidence": 0.759
+    },
+    "50+": {
+      "utterances": 36,
+      "speakers": 1,
+      "wer": 0.1579,
+      "cer": 0.1667,
+      "intent_accuracy": 0.8611,
+      "amount_accuracy": 0.7,
+      "recipient_accuracy": 0.8148,
+      "clarification_rate": 0.3889,
+      "wrong_amount_rate": 0.0333,
+      "silent_wrong_amount_rate": 0.0,
+      "silent_wrong_recipient_rate": 0.0,
+      "stt_unsure_rate": 0.1389,
+      "mean_confidence": 0.777
+    }
+  },
+  "by_gender": {
+    "female": {
+      "utterances": 72,
+      "speakers": 2,
+      "wer": 0.135,
+      "cer": 0.1385,
+      "intent_accuracy": 0.8472,
+      "amount_accuracy": 0.746,
+      "recipient_accuracy": 0.8246,
+      "clarification_rate": 0.3889,
+      "wrong_amount_rate": 0.0317,
+      "silent_wrong_amount_rate": 0.0159,
+      "silent_wrong_recipient_rate": 0.0,
+      "stt_unsure_rate": 0.1389,
+      "mean_confidence": 0.767
+    },
+    "male": {
+      "utterances": 72,
+      "speakers": 2,
+      "wer": 0.1326,
+      "cer": 0.1289,
+      "intent_accuracy": 0.7778,
+      "amount_accuracy": 0.6061,
+      "recipient_accuracy": 0.6818,
+      "clarification_rate": 0.3056,
+      "wrong_amount_rate": 0.0152,
+      "silent_wrong_amount_rate": 0.0152,
+      "silent_wrong_recipient_rate": 0.0152,
+      "stt_unsure_rate": 0.125,
+      "mean_confidence": 0.759
+    }
+  },
+  "failures": [
+    {
+      "prompt_id": "C47",
+      "reference": "আম্মুকে পঁচিশ হাজার টাকা পাঠাও",
+      "transcript": "আম্মুকে পঁচিশ নাও টাকা",
+      "confidence": 0.624,
+      "expected": {
+        "intent": "send_money",
+        "amount": 25000,
+        "recipient": "c1"
+      },
+      "parse": {
+        "status": "ok",
+        "intent": "send_money",
+        "amount": 25,
+        "recipient": "c1",
+        "llm_used": false
+      },
+      "problems": [
+        "silent_wrong_amount",
+        "amount_ok"
+      ],
+      "participant": "S01",
+      "condition": "bus_tv",
+      "dialect": "dhaka"
+    },
+    {
+      "prompt_id": "F7",
+      "reference": null,
+      "transcript": "রহিম ভাইকে হাজার টাকা পাঠাও",
+      "confidence": 0.884,
+      "expected": {
+        "intent": "send_money",
+        "amount": 2500,
+        "recipient": "c2"
+      },
+      "parse": {
+        "status": "ok",
+        "intent": "send_money",
+        "amount": 1000,
+        "recipient": "c2",
+        "llm_used": false
+      },
+      "problems": [
+        "silent_wrong_amount",
+        "amount_ok"
+      ],
+      "participant": "S02",
+      "condition": "quiet",
+      "dialect": "chattogram"
+    },
+    {
+      "prompt_id": "C65",
+      "reference": "আমার নম্বরে ৫০ টাকা রিচার্জ করো",
+      "transcript": "নাও নম্বরে ৫০ আম্মা করো",
+      "confidence": 0.755,
+      "expected": {
+        "intent": "mobile_recharge",
+        "amount": 50,
+        "recipient": "self"
+      },
+      "parse": {
+        "status": "ok",
+        "intent": "send_money",
+        "amount": 50,
+        "recipient": "c1",
+        "llm_used": false
+      },
+      "problems": [
+        "silent_wrong_recipient",
+        "intent_ok",
+        "recipient_ok"
+      ],
+      "participant": "S02",
+      "condition": "street",
+      "dialect": "chattogram"
+    },
+    {
+      "prompt_id": "C42",
+      "reference": "সালমাকে আটশো টাকা দাও",
+      "transcript": "দেন আটশো টাকা দাও",
+      "confidence": 0.99,
+      "expected": {
+        "intent": "send_money",
+        "amount": 800,
+        "recipient": "c4"
+      },
+      "parse": {
+        "status": "need_recipient",
+        "intent": "send_money",
+        "amount": 800,
+        "recipient": null,
+        "llm_used": false
+      },
+      "problems": [
+        "recipient_ok"
+      ],
+      "participant": "S01",
+      "condition": "quiet",
+      "dialect": "dhaka"
+    },
+    {
+      "prompt_id": "C7",
+      "reference": "আম্মুকে ফাইভ কে পাঠাও",
+      "transcript": "আম্মুকে ফাইভ কে পাঠাও",
+      "confidence": 0.831,
+      "expected": {
+        "intent": "send_money",
+        "amount": 5000,
+        "recipient": "c1"
+      },
+      "parse": {
+        "status": "need_amount",
+        "intent": "send_money",
+        "amount": null,
+        "recipient": "c1",
+        "llm_used": false
+      },
+      "problems": [
+        "amount_ok"
+      ],
+      "participant": "S01",
+      "condition": "quiet",
+      "dialect": "dhaka"
+    },
+    {
+      "prompt_id": "C7",
+      "reference": "আম্মুকে ফাইভ কে পাঠাও",
+      "transcript": "পাঠা ফাইভ কে পাঠাও",
+      "confidence": 0.707,
+      "expected": {
+        "intent": "send_money",
+        "amount": 5000,
+        "recipient": "c1"
+      },
+      "parse": {
+        "status": "need_amount",
+        "intent": "send_money",
+        "amount": null,
+        "recipient": null,
+        "llm_used": false
+      },
+      "problems": [
+        "amount_ok",
+        "recipient_ok"
+      ],
+      "participant": "S01",
+      "condition": "street",
+      "dialect": "dhaka"
+    },
+    {
+      "prompt_id": "C10",
+      "reference": "আম্মুকে দেড় হাজার টাকা পাঠাও",
+      "transcript": "দেড় হাজার টাকা পাঠাও",
+      "confidence": 0.727,
+      "expected": {
+        "intent": "send_money",
+        "amount": 1500,
+        "recipient": "c1"
+      },
+      "parse": {
+        "status": "need_recipient",
+        "intent": "send_money",
+        "amount": 1500,
+        "recipient": null,
+        "llm_used": false
+      },
+      "problems": [
+        "recipient_ok"
+      ],
+      "participant": "S01",
+      "condition": "street",
+      "dialect": "dhaka"
+    },
+    {
+      "prompt_id": "C69",
+      "reference": "০১৭৯৯৯৯৮৮৮৮ এ ২০ টাকা রিচার্জ",
+      "transcript": "০১৭৯৯৯৯৮৮৮৮ এ ২০ টাকা",
+      "confidence": 0.872,
+      "expected": {
+        "intent": "mobile_recharge",
+        "amount": 20,
+        "recipient": "01799998888"
+      },
+      "parse": {
+        "status": "ok",
+        "intent": "send_money",
+        "amount": 20,
+        "recipient": "01799998888",
+        "llm_used": false
+      },
+      "problems": [
+        "intent_ok"
+      ],
+      "participant": "S01",
+      "condition": "street",
+      "dialect": "dhaka"
+    },
+    {
+      "prompt_id": "C47",
+      "reference": "আম্মুকে পঁচিশ হাজার টাকা পাঠাও",
+      "transcript": "করো পঁচিশ হাজার টাকা পাঠাও",
+      "confidence": 0.844,
+      "expected": {
+        "intent": "send_money",
+        "amount": 25000,
+        "recipient": "c1"
+      },
+      "parse": {
+        "status": "need_recipient",
+        "intent": "send_money",
+        "amount": 25000,
+        "recipient": null,
+        "llm_used": false
+      },
+      "problems": [
+        "recipient_ok"
+      ],
+      "participant": "S01",
+      "condition": "street",
+      "dialect": "dhaka"
+    },
+    {
+      "prompt_id": "F10",
+      "reference": null,
+      "transcript": "ভাই হাজার আম্মা ক্যাশ পাঠা করব",
+      "confidence": 0.829,
+      "expected": {
+        "intent": "cash_out",
+        "amount": 1000,
+        "recipient": null
+      },
+      "parse": {
+        "status": "ok",
+        "intent": "send_money",
+        "amount": 1000,
+        "recipient": "c1",
+        "llm_used": false
+      },
+      "problems": [
+        "intent_ok"
+      ],
+      "participant": "S01",
+      "condition": "street",
+      "dialect": "dhaka"
+    },
+    {
+      "prompt_id": "F4",
+      "reference": null,
+      "transcript": "আমার টাকা টাকা আছে",
+      "confidence": 0.756,
+      "expected": {
+        "intent": "check_balance",
+        "amount": null,
+        "recipient": null
+      },
+      "parse": {
+        "status": "unknown",
+        "intent": "unknown",
+        "amount": null,
+        "recipient": null,
+        "llm_used": false
+      },
+      "problems": [
+        "intent_ok"
+      ],
+      "participant": "S01",
+      "condition": "street",
+      "dialect": "dhaka"
+    },
+    {
+      "prompt_id": "C84",
+      "reference": "রহিমকে ৫০০ টাকা পাঠাও",
+      "transcript": "রহিমকে পাঠা টাকা পাঠাও",
+      "confidence": 0.548,
+      "expected": {
+        "intent": "send_money",
+        "amount": 500,
+        "recipient": "ask"
+      },
+      "parse": {
+        "status": "need_amount",
+        "intent": "send_money",
+        "amount": null,
+        "recipient": null,
+        "llm_used": false
+      },
+      "problems": [
+        "amount_ok"
+      ],
+      "participant": "S01",
+      "condition": "bus_tv",
+      "dialect": "dhaka"
+    },
+    {
+      "prompt_id": "C7",
+      "reference": "আম্মুকে ফাইভ কে পাঠাও",
+      "transcript": "আম্মুকে ফাইভ",
+      "confidence": 0.633,
+      "expected": {
+        "intent": "send_money",
+        "amount": 5000,
+        "recipient": "c1"
+      },
+      "parse": {
+        "status": "unknown",
+        "intent": "unknown",
+        "amount": null,
+        "recipient": null,
+        "llm_used": false
+      },
+      "problems": [
+        "intent_ok",
+        "amount_ok",
+        "recipient_ok"
+      ],
+      "participant": "S01",
+      "condition": "bus_tv",
+      "dialect": "dhaka"
+    },
+    {
+      "prompt_id": "C69",
+      "reference": "০১৭৯৯৯৯৮৮৮৮ এ ২০ টাকা রিচার্জ",
+      "transcript": "০১৭৯৯৯৯৮৮৮৮ এ পাঠা টাকা রিচার্জ",
+      "confidence": 0.815,
+      "expected": {
+        "intent": "mobile_recharge",
+        "amount": 20,
+        "recipient": "01799998888"
+      },
+      "parse": {
+        "status": "need_amount",
+        "intent": "mobile_recharge",
+        "amount": null,
+        "recipient": "01799998888",
+        "llm_used": false
+      },
+      "problems": [
+        "amount_ok"
+      ],
+      "participant": "S01",
+      "condition": "bus_tv",
+      "dialect": "dhaka"
+    },
+    {
+      "prompt_id": "F10",
+      "reference": null,
+      "transcript": "এক পাঠা আউট করব",
+      "confidence": 0.552,
+      "expected": {
+        "intent": "cash_out",
+        "amount": 1000,
+        "recipient": null
+      },
+      "parse": {
+        "status": "need_amount",
+        "intent": "send_money",
+        "amount": null,
+        "recipient": null,
+        "llm_used": false
+      },
+      "problems": [
+        "intent_ok",
+        "amount_ok"
+      ],
+      "participant": "S01",
+      "condition": "bus_tv",
+      "dialect": "dhaka"
+    },
+    {
+      "prompt_id": "F4",
+      "reference": null,
+      "transcript": "আমার নাও নাও আম্মা",
+      "confidence": 0.603,
+      "expected": {
+        "intent": "check_balance",
+        "amount": null,
+        "recipient": null
+      },
+      "parse": {
+        "status": "unknown",
+        "intent": "unknown",
+        "amount": null,
+        "recipient": null,
+        "llm_used": false
+      },
+      "problems": [
+        "intent_ok"
+      ],
+      "participant": "S01",
+      "condition": "bus_tv",
+      "dialect": "dhaka"
+    },
+    {
+      "prompt_id": "C54",
+      "reference": "সেন্ড টু থাউজেন্ড ফাইভ হান্ড্রেড টু আম্মু",
+      "transcript": "সেন্ড টু থাউজেন্ড ফাইভ হান্ড্রেড টু আম্মু",
+      "confidence": 0.923,
+      "expected": {
+        "intent": "send_money",
+        "amount": 2500,
+        "recipient": "c1"
+      },
+      "parse": {
+        "status": "unknown",
+        "intent": "unknown",
+        "amount": null,
+        "recipient": null,
+        "llm_used": false
+      },
+      "problems": [
+        "intent_ok",
+        "amount_ok",
+        "recipient_ok"
+      ],
+      "participant": "S02",
+      "condition": "quiet",
+      "dialect": "chattogram"
+    },
+    {
+      "prompt_id": "C8",
+      "reference": "আম্মুকে ওয়ান পয়েন্ট ফাইভ কে টাকা",
+      "transcript": "আম্মুকে ওয়ান পয়েন্ট ফাইভ কে টাকা",
+      "confidence": 0.99,
+      "expected": {
+        "intent": "send_money",
+        "amount": 1500,
+        "recipient": "c1"
+      },
+      "parse": {
+        "status": "unknown",
+        "intent": "unknown",
+        "amount": null,
+        "recipient": null,
+        "llm_used": false
+      },
+      "problems": [
+        "intent_ok",
+        "amount_ok",
+        "recipient_ok"
+      ],
+      "participant": "S02",
+      "condition": "quiet",
+      "dialect": "chattogram"
+    },
+    {
+      "prompt_id": "C34",
+      "reference": "আম্মুকে ১৫০০ টাকা পাঠাও",
+      "transcript": "আম্মুকে নাও টাকা পাঠাও",
+      "confidence": 0.769,
+      "expected": {
+        "intent": "send_money",
+        "amount": 1500,
+        "recipient": "c1"
+      },
+      "parse": {
+        "status": "need_amount",
+        "intent": "send_money",
+        "amount": null,
+        "recipient": "c1",
+        "llm_used": false
+      },
+      "problems": [
+        "amount_ok"
+      ],
+      "participant": "S02",
+      "condition": "street",
+      "dialect": "chattogram"
+    },
+    {
+      "prompt_id": "C70",
+      "reference": "সালমা আপাকে ৫০ টাকা ফ্লেক্সিলোড",
+      "transcript": "সালমা আপাকে ৫০ টাকা",
+      "confidence": 0.768,
+      "expected": {
+        "intent": "mobile_recharge",
+        "amount": 50,
+        "recipient": "c4"
+      },
+      "parse": {
+        "status": "ok",
+        "intent": "send_money",
+        "amount": 50,
+        "recipient": "c4",
+        "llm_used": false
+      },
+      "problems": [
+        "intent_ok"
+      ],
+      "participant": "S02",
+      "condition": "street",
+      "dialect": "chattogram"
+    },
+    {
+      "prompt_id": "C54",
+      "reference": "সেন্ড টু থাউজেন্ড ফাইভ হান্ড্রেড টু আম্মু",
+      "transcript": "সেন্ড টু থাউজেন্ড ফাইভ হান্ড্রেড টু আম্মু",
+      "confidence": 0.707,
+      "expected": {
+        "intent": "send_money",
+        "amount": 2500,
+        "recipient": "c1"
+      },
+      "parse": {
+        "status": "unknown",
+        "intent": "unknown",
+        "amount": null,
+        "recipient": null,
+        "llm_used": false
+      },
+      "problems": [
+        "intent_ok",
+        "amount_ok",
+        "recipient_ok"
+      ],
+      "participant": "S02",
+      "condition": "street",
+      "dialect": "chattogram"
+    },
+    {
+      "prompt_id": "C8",
+      "reference": "আম্মুকে ওয়ান পয়েন্ট ফাইভ কে টাকা",
+      "transcript": "পয়েন্ট ফাইভ কে টাকা",
+      "confidence": 0.649,
+      "expected": {
+        "intent": "send_money",
+        "amount": 1500,
+        "recipient": "c1"
+      },
+      "parse": {
+        "status": "unknown",
+        "intent": "unknown",
+        "amount": null,
+        "recipient": null,
+        "llm_used": false
+      },
+      "problems": [
+        "intent_ok",
+        "amount_ok",
+        "recipient_ok"
+      ],
+      "participant": "S02",
+      "condition": "street",
+      "dialect": "chattogram"
+    },
+    {
+      "prompt_id": "F7",
+      "reference": null,
+      "transcript": "ভাইকে আড়াই হাজার পাঠাও",
+      "confidence": 0.743,
+      "expected": {
+        "intent": "send_money",
+        "amount": 2500,
+        "recipient": "c2"
+      },
+      "parse": {
+        "status": "need_recipient",
+        "intent": "send_money",
+        "amount": 2500,
+        "recipient": null,
+        "llm_used": false
+      },
+      "problems": [
+        "recipient_ok"
+      ],
+      "participant": "S02",
+      "condition": "street",
+      "dialect": "chattogram"
+    },
+    {
+      "prompt_id": "C76",
+      "reference": "আমার ব্যালেন্স কত",
+      "transcript": "পাঠা কত",
+      "confidence": 0.586,
+      "expected": {
+        "intent": "check_balance",
+        "amount": null,
+        "recipient": null
+      },
+      "parse": {
+        "status": "need_amount",
+        "intent": "send_money",
+        "amount": null,
+        "recipient": null,
+        "llm_used": false
+      },
+      "problems": [
+        "intent_ok"
+      ],
+      "participant": "S02",
+      "condition": "bus_tv",
+      "dialect": "chattogram"
+    },
+    {
+      "prompt_id": "C42",
+      "reference": "সালমাকে আটশো টাকা দাও",
+      "transcript": "সালমাকে টাকা",
+      "confidence": 0.639,
+      "expected": {
+        "intent": "send_money",
+        "amount": 800,
+        "recipient": "c4"
+      },
+      "parse": {
+        "status": "unknown",
+        "intent": "unknown",
+        "amount": null,
+        "recipient": null,
+        "llm_used": false
+      },
+      "problems": [
+        "intent_ok",
+        "amount_ok",
+        "recipient_ok"
+      ],
+      "participant": "S02",
+      "condition": "bus_tv",
+      "dialect": "chattogram"
+    }
+  ],
+  "note": "SAMPLE: synthetic log made up to test the pipeline, not real results."
+}

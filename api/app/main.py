@@ -28,7 +28,7 @@ from fastapi.responses import FileResponse, JSONResponse, Response
 from prometheus_fastapi_instrumentator import Instrumentator
 from pydantic import BaseModel, Field
 
-from . import auth, handoff, impact, monitor, store, wallet
+from . import auth, evaluation, handoff, impact, monitor, store, wallet
 from .core import agent
 from .core import features as feat_mod
 from .core import interview, kb, llm, parser, risk, scam, tts
@@ -64,6 +64,7 @@ app = FastAPI(title="Bolo upay API", version="1.0.0", lifespan=lifespan,
 app.add_middleware(CORSMiddleware, allow_origins=os.getenv("CORS_ORIGINS", "*").split(","),
                    allow_methods=["*"], allow_headers=["*"])
 app.include_router(handoff.router)
+app.include_router(evaluation.router)  # demo-only study tooling
 # Prometheus text at /metrics (per route template, so cardinality stays small).
 # Registered before the SPA catch-all at the end of this file, which would
 # otherwise answer /metrics with index.html. Caddy keeps it off the internet.
@@ -505,7 +506,7 @@ def _dashboard_data() -> dict:
 @app.get("/api/metrics")
 def metrics():
     out = {"risk_model": risk.model_card()}
-    for name in ("risk_metrics", "parser_metrics", "sequence_metrics"):
+    for name in ("risk_metrics", "parser_metrics", "sequence_metrics", "audio_metrics"):
         p = ROOT / "model" / f"{name}.json"
         out[name] = json.loads(p.read_text()) if p.exists() else None
     return out
