@@ -5,6 +5,7 @@ import 'package:speech_to_text/speech_recognition_result.dart';
 import 'package:speech_to_text/speech_to_text.dart';
 
 import '../api.dart';
+import 'voice_guard.dart';
 
 /// Speech-to-text and text-to-speech. Raw audio never leaves the device:
 /// only the transcript is sent to the API, and the user can edit it first.
@@ -27,6 +28,13 @@ class Voice {
   bool lastUnsure = false;
   static const minConfidence = 0.6;
 
+  /// R10 hesitation: the pause ratio of the last finished utterance (null when it
+  /// could not be judged), from the recognizer's sound levels. Levels are numbers,
+  /// not audio: the recognizer holds the microphone, so no recorder runs beside it.
+  double? lastPauseRatio;
+  DateTime? lastHeardAt;
+  final List<(int, double)> _levels = [];
+
   /// Bumped by every speak()/silence(): a slow server reply for an older
   /// sentence must not start playing over a newer one.
   int _seq = 0;
@@ -47,11 +55,18 @@ class Voice {
 
   Future<void> listen({required bool bangla, required void Function(String text, bool done) onText}) async {
     if (!await init()) return;
+    _levels.clear();
+    final clock = Stopwatch()..start();
     await _stt.listen(
       onResult: (SpeechRecognitionResult r) {
-        if (r.finalResult) lastUnsure = r.hasConfidenceRating && r.confidence < minConfidence;
+        if (r.finalResult) {
+          lastUnsure = r.hasConfidenceRating && r.confidence < minConfidence;
+          lastPauseRatio = VoiceGuard.pauseRatio(_levels);
+          lastHeardAt = DateTime.now();
+        }
         onText(r.recognizedWords, r.finalResult);
       },
+      onSoundLevelChange: (level) => _levels.add((clock.elapsedMilliseconds, level)),
       listenOptions: SpeechListenOptions(
         localeId: _locale(bangla),
         partialResults: true,

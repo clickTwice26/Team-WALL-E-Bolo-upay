@@ -41,7 +41,7 @@ Prototype by **Team WALL-E** (Shagato Chowdhury, Umme Munia) for the AI Dev Fest
 | Voice input in Bangla / English, editable transcript | On-device speech-to-text (`speech_to_text`, Web Speech API on web). Audio never leaves the device |
 | Command understanding | **Rule parser** (Bangla number words like দেড়, আড়াই, সাড়ে, পৌনে; Bangla digits; phone numbers; intents) **plus optional LLM** (Anthropic, OpenAI or Gemini) returning structured JSON. If the amounts disagree, the app asks |
 | Recipient resolution | Alias matching with Bangla case suffixes (আম্মুকে, rahim-ke) and fuzzy matching for speech errors; ambiguous names → the user picks; fuzzy → the user confirms |
-| Scam risk score | **Gradient boosting** (monotonic, calibrated) on 18 features from the user's own history: the payment itself, the last hours and days (bursts, new recipients, a stranger's money passed on) and the user's habits (usual amount, usual hours). Each warning's reasons come from that payment's SHAP values. Logistic regression is the fallback |
+| Scam risk score | **Gradient boosting** (monotonic, calibrated) on 22 features: the payment itself, the last hours and days (bursts, new recipients, a stranger's money passed on), the user's habits (usual amount, usual hours) and voice-guard cues measured on the phone (long pauses, a call on the loudspeaker; a different or second voice moves GREEN to PIN, see [`docs/VOICE_GUARD.md`](docs/VOICE_GUARD.md)). Each warning's reasons come from that payment's SHAP values. Logistic regression is the fallback |
 | Scam interview | **Adaptive** spoken questions (at most 3, `data/interview.json`): the first follows this payment's strongest risk signal (a "send it back" claim, a stranger's money passed on, an active call, an unusual hour, a cash-out, a new recipient), each follow-up follows what the answers revealed, and it stops once an answer settles it. Answers are matched against a Bangla/Banglish/English scam phrase lexicon (`data/scam_phrases.json`) with negation handling ("keu otp chay nai" is not a hit) |
 | Hard rules | Asking for a PIN/OTP, fake upay staff, lottery/fee, allowance fee → RED. "Send it back" when no money came from that number → RED. "Relative in trouble" from a new number → RED. Cashing out most of the balance late at night at a never-used agent → RED |
 | Mistake guard | Known recipient + amount about 10× the usual → "Did you mean ৳350?" |
@@ -200,18 +200,18 @@ These commands were written by the team alongside the parser, so they show the p
 
 | Scam shield (1,426 simulated payments, the last 15% by time) | Bolo upay | Previous model (9 inputs) | Rules only |
 |---|---|---|---|
-| Scams flagged (YELLOW or RED) | **95.3%** | 78.3% | 63.1% |
-| Scams held (RED) | **84.0%** | 55.8% | 10.5% |
+| Scams flagged (YELLOW or RED) | **94.0%** | 78.3% | 63.1% |
+| Scams held (RED) | **87.7%** | 55.8% | 10.5% |
 | Honest transfers held (RED) | 1.5% | 1.0% | 0.3% |
-| Honest transfers warned (YELLOW or RED) | 12.8% | 9.7% | 10.9% |
+| Honest transfers warned (YELLOW or RED) | 11.2% | 9.7% | 10.9% |
 
 The data is simulated (no real fraud data is available): 650 synthetic users with six months of wallet history, then a month of payments, honest ones and nine kinds of scam (`ml/simulate.py`). The numbers show the pipeline behaves as designed, not real-world performance. Thresholds are tuned on an earlier time slice to hold at most 2% and warn at most 12% of honest payments.
 
 | Model on the same test set | PR-AUC | Brier |
 |---|---|---|
 | Previous model: logistic regression, 9 inputs | 0.938 | 0.055 |
-| Logistic regression, all inputs (fallback) | 0.972 | 0.033 |
-| **Gradient boosting, all inputs, calibrated (served)** | **0.979** | **0.030** |
+| Logistic regression, all inputs (fallback) | 0.977 | 0.032 |
+| **Gradient boosting, all inputs, calibrated (served)** | **0.984** | **0.026** |
 
 Calibration plot: [`docs/img/calibration.png`](docs/img/calibration.png). We also tried a sequence model, a GRU over each payment's last 20 transactions plus its features (`ml/compare_sequence.py`): test PR-AUC 0.973, below the served model, so it was not adopted (the rule is +0.01 or better).
 

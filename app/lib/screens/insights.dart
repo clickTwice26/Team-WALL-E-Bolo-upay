@@ -28,6 +28,10 @@ const _featureNames = {
   'recipient_paid_you_7d': ('প্রাপক সম্প্রতি আপনাকে টাকা দিয়েছে', 'Recipient paid you recently'),
   'is_cash_out': ('ক্যাশ আউট', 'Cash out'),
   'is_payment': ('বিল বা মার্চেন্ট পেমেন্ট', 'Bill or merchant payment'),
+  'hesitation': ('বলার সময় দীর্ঘ বিরতি', 'Long pauses while speaking'),
+  'speaker_echo': ('লাউডস্পিকারে কল চলছে', 'On a call on the loudspeaker'),
+  'voice_mismatch': ('মালিকের কণ্ঠ মেলেনি', "Not the owner's voice"),
+  'second_voice': ('আরেকজনের কণ্ঠ শোনা গেছে', 'A second voice heard'),
 };
 
 const _modelNames = {

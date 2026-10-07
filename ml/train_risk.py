@@ -55,6 +55,7 @@ MONOTONIC = {
     "balance_fraction": 1, "on_active_call": 1, "return_claim_no_inflow": 1, "scam_score": 1,
     "sends_24h": 1, "new_recipients_7d": 1, "inflow_then_outflow": 1, "amount_z_user": 1,
     "log_recipient_age": -1, "hour_unusual_for_user": 1, "recipient_paid_you_7d": -1,
+    "hesitation": 1, "speaker_echo": 1, "voice_mismatch": 1, "second_voice": 1,  # R10: can only raise
 }
 BASE_IDX = [FEATURES.index(f) for f in BASE_FEATURES]
 
@@ -67,11 +68,14 @@ def hard_red(feats: dict, hits: list) -> bool:
                     and feats["is_new_recipient"]))
 
 
-def levels(p1, p2, h1, h2, th):
+def levels(p1, p2, h1, h2, th, floor=None):
     """Two-stage decision: stage 1 = command only; stage 2 (interview) only
-    when stage 1 is YELLOW or RED."""
+    when stage 1 is YELLOW or RED. ``floor``: at least YELLOW (the voice guard
+    rule in risk.py: a different or second voice always needs the PIN)."""
     lv1 = np.where(h1 | (p1 >= th["red"]), 2, np.where(p1 >= th["yellow"], 1, 0))
     lv2 = np.where(h2 | (p2 >= th["red"]), 2, np.where(p2 >= th["yellow"], 1, 0))
+    if floor is not None:
+        lv1, lv2 = np.maximum(lv1, floor), np.maximum(lv2, floor)
     return np.where(lv1 > 0, lv2, 0)
 
 
@@ -90,14 +94,14 @@ MAX_HONEST_RED = 0.02   # honest payments held at RED
 MAX_HONEST_WARNED = 0.12  # honest payments that see any warning (about 1 in 8)
 
 
-def tune(p1, p2, h1, h2, y):
+def tune(p1, p2, h1, h2, y, floor=None):
     """Thresholds from the tuning split only: hold at most 2% of honest payments
     and warn at most 12%, then catch as many scams as possible."""
     best = None
     for red in np.arange(0.30, 0.97, 0.02):
         for yel in np.arange(0.02, red, 0.01):
             th = {"yellow": round(float(yel), 3), "red": round(float(red), 3)}
-            r = rates(levels(p1, p2, h1, h2, th), y)
+            r = rates(levels(p1, p2, h1, h2, th, floor), y)
             if r["legit_red_rate"] > MAX_HONEST_RED or r["legit_flagged_rate"] > MAX_HONEST_WARNED:
                 continue
             obj = r["scam_flagged_rate"] + 0.5 * r["scam_red_rate"]
@@ -171,6 +175,7 @@ def main() -> None:
     X1 = np.array([vector(dict(e["feats"], scam_score=0.0)) for e in events])  # command only
     h2 = np.array([hard_red(e["feats"], e["hits"]) for e in events])
     h1 = np.array([bool(e["feats"]["return_claim_no_inflow"]) for e in events])
+    vf = np.array([int(e["feats"]["voice_mismatch"] or e["feats"]["second_voice"]) for e in events])
     cut = [int(n * q) for q in (0.60, 0.70, 0.85)]
     tr, ca, va, te = (np.arange(0, cut[0]), np.arange(cut[0], cut[1]),
                       np.arange(cut[1], cut[2]), np.arange(cut[2], n))
@@ -199,15 +204,16 @@ def main() -> None:
     comparison = {name: scores(y[te], f(X2[te])) for name, f in models.items()}
 
     # thresholds and test pipeline for the served model, the fallback and the old model
-    def pipeline(f):
+    def pipeline(f, floor=vf):  # the previous model had no voice rule
         p1, p2 = f(X1), f(X2)
-        th = tune(p1[va], p2[va], h1[va], h2[va], y[va])
-        lv = levels(p1[te], p2[te], h1[te], h2[te], th)
+        fv, ft = (floor[va], floor[te]) if floor is not None else (None, None)
+        th = tune(p1[va], p2[va], h1[va], h2[va], y[va], fv)
+        lv = levels(p1[te], p2[te], h1[te], h2[te], th, ft)
         return th, lv
 
     th, lv = pipeline(served)
     th_fallback, lv_fallback = pipeline(lr_all)
-    _, lv_old = pipeline(lr_base)
+    _, lv_old = pipeline(lr_base, None)
     lv_base = np.array([baseline(events[i]["feats"]) for i in te])
 
     curves = {}

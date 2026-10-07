@@ -82,12 +82,17 @@ class Api {
   static Future<Map<String, dynamic>> parse(String text) async =>
       Map<String, dynamic>.from(await _send('POST', '/api/parse', {'text': text}));
   /// [callSource]: 'native' when the phone measured the call state (R11), else 'simulated'.
+  /// [voice]: R10 voice guard scores and yes/no (never audio), or null when nothing was measured.
   static Future<Map<String, dynamic>> assess(Map<String, dynamic> draft,
-          {bool onCall = false, String callSource = 'simulated', List<String> answers = const []}) async =>
+          {bool onCall = false,
+          String callSource = 'simulated',
+          Map<String, dynamic>? voice,
+          List<String> answers = const []}) async =>
       Map<String, dynamic>.from(await _send('POST', '/api/assess', {
         'draft': draft,
         'on_active_call': onCall,
         'call_signal_source': callSource,
+        'voice_signals': ?voice,
         'answers': answers,
       }));
 

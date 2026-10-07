@@ -52,7 +52,7 @@ def test_call_signal_source_is_stored_logged_and_kept_with_the_decision(u1):
     assert saved["draft"]["call_signal_source"] == "native" and saved["draft"]["on_active_call"] is True
     ev = [e for e in lines.events if e.get("event") == "assess"]
     assert ev == [{"event": "assess", "assessment_id": a["assessment_id"], "level": a["level"],
-                   "on_call": True, "call_signal_source": "native"}]
+                   "on_call": True, "call_signal_source": "native", "voice": {}}]  # R10: nothing measured
     assert "01799998888" not in json.dumps(ev)  # flags only, never the number
     u1.post("/api/cancel", json={"assessment_id": a["assessment_id"]})
     assert store.decisions(1)[0]["call_signal_source"] == "native"

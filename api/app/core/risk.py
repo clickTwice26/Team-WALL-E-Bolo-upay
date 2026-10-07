@@ -48,12 +48,21 @@ REASONS = {
                       "This amount is unusual for you."),
     "hour_unusual_for_user": ("এই সময়ে আপনি সাধারণত টাকা পাঠান না।",
                               "You don't usually send money at this time of day."),
+    "hesitation": ("টাকা পাঠানোর কথা বলার সময় আপনি অনেকবার থেমেছেন, যেন কেউ বলে দিচ্ছে।",
+                   "You paused a lot while giving the command, as if someone was telling you what to say."),
+    "speaker_echo": ("আপনি লাউডস্পিকারে কলে আছেন। প্রতারকেরা প্রায়ই এভাবে ধাপে ধাপে টাকা পাঠাতে বলে।",
+                     "You are on a call on the loudspeaker. Scammers often talk people through a payment like this."),
+    "voice_mismatch": ("কণ্ঠটি এই অ্যাকাউন্টের মালিকের সাথে মেলেনি, তাই পিন লাগবে।",
+                       "The voice did not match the account owner's, so the PIN is needed."),
+    "second_voice": ("কথার সময় আরেকজনের কণ্ঠ শোনা গেছে, তাই পিন লাগবে।",
+                     "A second voice was heard during the command, so the PIN is needed."),
     "cash_out_night_new_agent": ("গভীর রাতে নতুন এজেন্টের কাছে ব্যালেন্সের বেশিরভাগ ক্যাশ আউট হচ্ছে।",
                                  "Most of your balance is being cashed out late at night at an agent you have never used."),
 }
 # yes/no features: only a reason when they are actually on
 BINARY = ("is_night", "on_active_call", "is_new_recipient", "return_claim_no_inflow",
-          "inflow_then_outflow", "hour_unusual_for_user")
+          "inflow_then_outflow", "hour_unusual_for_user", "speaker_echo", "voice_mismatch", "second_voice")
+VOICE_PIN = ("voice_mismatch", "second_voice")  # GREEN -> at least YELLOW (PIN), never RED on their own
 REASON_MIN = 0.35  # how much a feature must push the score (log-odds) to be named
 
 ADVICE = {
@@ -103,7 +112,9 @@ def _fallback_prob(f: dict) -> float:
     """Transparent rules used only if the trained model file is missing."""
     z = (-3.0 + 1.6 * f["is_new_recipient"] + 0.7 * max(f["log_recipient_ratio"], 0)
          + 1.2 * f["on_active_call"] + 0.8 * f["is_night"] + 3.5 * f["scam_score"]
-         + 0.4 * f["recent_sends_30m"] + 1.0 * f["balance_fraction"])
+         + 0.4 * f["recent_sends_30m"] + 1.0 * f["balance_fraction"]
+         + 1.5 * f.get("hesitation", 0) + 0.8 * f.get("speaker_echo", 0)
+         + 0.8 * f.get("voice_mismatch", 0) + 0.8 * f.get("second_voice", 0))
     return float(1 / (1 + np.exp(-z)))
 
 
@@ -183,7 +194,16 @@ def assess(feats: dict, summary: dict, scam: dict, amount: float,
             if level == "GREEN":
                 level = "YELLOW"
 
+    # voice guard: a different or second voice is worth a PIN, never a hold; a matching
+    # voice lowers nothing (voices can be cloned), so only a warning sign is acted on
+    voice_pin = [k for k in VOICE_PIN if feats.get(k)]
+    if voice_pin and level == "GREEN":
+        level = "YELLOW"
+
     reasons = []
+    for r in voice_pin:
+        bn, en = REASONS[r]
+        reasons.append({"key": r, "bn": bn, "en": en, "hard": True})
     for r in rules:
         if r in ("return_claim_no_inflow", "cash_out_night_new_agent"):
             bn, en = REASONS[r]
@@ -199,7 +219,7 @@ def assess(feats: dict, summary: dict, scam: dict, amount: float,
             reasons.append({"key": feat, "bn": bn, "en": en, "weight": round(c, 2)})
     if not ranked:  # no per-feature contributions: list the active yes/no signals
         for feat in ("is_new_recipient", "on_active_call", "is_night", "inflow_then_outflow",
-                     "hour_unusual_for_user"):
+                     "hour_unusual_for_user", "speaker_echo"):
             if feats[feat]:
                 bn, en = REASONS[feat]
                 reasons.append({"key": feat, "bn": bn, "en": en})
