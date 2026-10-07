@@ -9,6 +9,7 @@ import '../services/voice.dart';
 import '../state.dart';
 import '../strings.dart';
 import '../theme.dart';
+import '../widgets/auth_ladder.dart';
 import '../widgets/pin_pad.dart';
 
 enum _Step { input, parsing, clarify, assessing, interview, review, hold, auth, working, done }
@@ -290,9 +291,12 @@ class _AssistantScreenState extends State<AssistantScreen> {
     final a = assessment!;
     final amt = taka(draft!['amount'], bn);
     final who = _recipientName();
-    final base = draft!['intent'] == 'mobile_recharge'
-        ? tr(bn, '$who নম্বরে $amt রিচার্জ।', 'Recharge $amt to $who.')
-        : tr(bn, '$who কে $amt পাঠানো হবে।', 'Sending $amt to $who.');
+    final base = switch (draft!['intent']) {
+      'mobile_recharge' => tr(bn, '$who নম্বরে $amt রিচার্জ।', 'Recharge $amt to $who.'),
+      'cash_out' => tr(bn, '$who এজেন্টে $amt ক্যাশ আউট।', 'Cash out $amt at $who.'),
+      'merchant_payment' => tr(bn, '$who কে $amt পেমেন্ট।', 'Paying $amt to $who.'),
+      _ => tr(bn, '$who কে $amt পাঠানো হবে।', 'Sending $amt to $who.'),
+    };
     final lvl = a['level'];
     final warn = lvl == 'GREEN' ? '' : ' ${bn ? a['advice_bn'] : a['advice_en']}';
     _say('$base$warn');
@@ -604,6 +608,7 @@ class _AssistantScreenState extends State<AssistantScreen> {
         ];
         content.addAll({
           'level': level,
+          'auth_required': a['auth_required'],
           'intent': draft?['intent'],
           'amount': amount,
           'recipient': _nameIn(false),
@@ -624,14 +629,14 @@ class _AssistantScreenState extends State<AssistantScreen> {
             '${reasons.isNotEmpty ? ' Reasons: ${reasons.map((r) => r['en']).join(' ')}' : ''}'
             '${mistake != null ? ' ${mistake['en']}' : ''}';
       case _Step.hold:
-        content.addAll({'level': level, 'hold_seconds_left': holdLeft, 'acknowledged': acknowledged});
+        content.addAll({'level': level, 'auth_required': a['auth_required'], 'hold_seconds_left': holdLeft, 'acknowledged': acknowledged});
         actions = [if (holdLeft == 0 && acknowledged) 'continue_to_pin', 'cancel_transfer', 'repeat'];
         sbn = 'লেনদেন আটকে আছে${holdLeft > 0 ? ', আরও $holdLeft সেকেন্ড' : ''}। সতর্কবার্তার বক্সে টিক '
             '${acknowledged ? 'দেওয়া হয়েছে' : 'দেওয়া হয়নি'}।';
         sen = 'The transfer is on hold${holdLeft > 0 ? ' for $holdLeft more seconds' : ''}. The warning box is '
             '${acknowledged ? 'ticked' : 'not ticked'}.';
       case _Step.auth:
-        content.addAll({'level': level, 'amount': amount, 'recipient': _nameIn(false)});
+        content.addAll({'level': level, 'auth_required': a['auth_required'], 'amount': amount, 'recipient': _nameIn(false)});
         actions = ['cancel_transfer'];
         sbn = 'পিন দিয়ে নিশ্চিত করার ধাপ: ${_nameIn(true)} কে ${amt(true)}।';
         sen = 'PIN step: ${amt(false)} to ${_nameIn(false)}.';
@@ -963,6 +968,22 @@ class _AssistantScreenState extends State<AssistantScreen> {
     ]);
   }
 
+  /// The approval this transfer needs (server's `auth_required`), on the
+  /// fingerprint → PIN → hold + PIN ladder. Tap it to see why.
+  Widget _authLadder() {
+    final a = assessment!;
+    return AuthLadder(
+      authRequired: '${a['auth_required'] ?? 'pin'}',
+      bangla: bn,
+      reasons: [
+        for (final r in (a['reasons'] as List? ?? []))
+          {'bn': r['bn'], 'en': r['en']}
+      ],
+      holdSeconds: (a['hold_seconds'] as num?)?.toInt() ?? 30,
+      biometricAvailable: biometricOk,
+    );
+  }
+
   Widget _levelBanner(String level, String title, [String? sub]) => Container(
         padding: const EdgeInsets.all(14),
         decoration: BoxDecoration(color: levelBg(level), borderRadius: BorderRadius.circular(14)),
@@ -993,7 +1014,12 @@ class _AssistantScreenState extends State<AssistantScreen> {
       child: Padding(
         padding: const EdgeInsets.all(18),
         child: Column(children: [
-          Text(d['intent'] == 'mobile_recharge' ? tr(bn, 'মোবাইল রিচার্জ', 'Mobile Recharge') : tr(bn, 'সেন্ড মানি', 'Send Money'),
+          Text(switch (d['intent']) {
+                'mobile_recharge' => tr(bn, 'মোবাইল রিচার্জ', 'Mobile Recharge'),
+                'cash_out' => tr(bn, 'ক্যাশ আউট', 'Cash Out'),
+                'merchant_payment' => tr(bn, 'মেক পেমেন্ট', 'Make Payment'),
+                _ => tr(bn, 'সেন্ড মানি', 'Send Money'),
+              },
               style: const TextStyle(color: BrandColors.muted, fontWeight: FontWeight.w600)),
           const SizedBox(height: 8),
           Text(taka(d['amount'], bn), style: const TextStyle(fontSize: 40, fontWeight: FontWeight.w800, color: BrandColors.navy)),
@@ -1080,6 +1106,8 @@ class _AssistantScreenState extends State<AssistantScreen> {
           ),
         ),
       ],
+      const SizedBox(height: 14),
+      _authLadder(),
       const SizedBox(height: 18),
       if (level == 'RED') ...[
         FilledButton(
@@ -1118,6 +1146,8 @@ class _AssistantScreenState extends State<AssistantScreen> {
   Widget _holdView() {
     return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
       _levelBanner('RED', tr(bn, 'লেনদেন সাময়িক আটকে রাখা হয়েছে', 'Transfer on hold')),
+      const SizedBox(height: 12),
+      _authLadder(),
       const SizedBox(height: 16),
       Center(
         child: SizedBox(
@@ -1169,6 +1199,8 @@ class _AssistantScreenState extends State<AssistantScreen> {
     final canBio = level == 'GREEN' && biometricOk;
     return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
       _summaryCard(),
+      const SizedBox(height: 12),
+      _authLadder(),
       const SizedBox(height: 16),
       Text(tr(bn, 'ডেমো পিন: ১২৩৪', 'Demo PIN: 1234'), textAlign: TextAlign.center, style: const TextStyle(color: BrandColors.muted)),
       const SizedBox(height: 10),

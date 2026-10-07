@@ -172,6 +172,25 @@ Deployment & One Docker image (API and web app on one origin) behind Caddy with 
   \item \textbf{Ops dashboard and in-app accuracy report} showing transfers cancelled after a warning and money protected.
 \end{enumerate}
 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  lvl/.style={draw=#1,line width=0.8pt,fill=white,rounded corners=3pt,font=\sffamily\scriptsize,align=center,text width=34mm,minimum height=15mm,inner sep=3pt},
+  sig/.style={font=\sffamily\scriptsize,align=left,text width=46mm,color=ink},
+  up/.style={-{Stealth[length=1.8mm]},line width=0.7pt,color=muted}]
+  \node[lvl=green] (g) {\textbf{\textcolor{green}{GREEN} \;·\; low risk}\\[1pt] fingerprint or PIN};
+  \node[lvl=amber,right=22mm of g] (y) {\textbf{\textcolor{amber}{YELLOW} \;·\; medium risk}\\[1pt] PIN (+ spoken interview)};
+  \node[lvl=red,right=22mm of y] (r) {\textbf{\textcolor{red}{RED} \;·\; high risk}\\[1pt] 30\,s hold + warning\\ then PIN};
+  \draw[up] (g) -- node[above,font=\sffamily\tiny,color=muted,align=center]{score $\geq$ 0.07} (y);
+  \draw[up] (y) -- node[above,font=\sffamily\tiny,color=muted,align=center]{score $\geq$ 0.66\\or a hard rule} (r);
+  \node[sig,below=4mm of y,xshift=-14mm] (s1) {\textbf{Signals that raise the score}\\
+    new number $\cdot$ amount or hour unusual for this user $\cdot$ active phone call $\cdot$ late night $\cdot$ bursts of payments $\cdot$ a stranger's money passed on $\cdot$ scam words in the command or answers $\cdot$ likely typo (an extra zero)};
+  \node[sig,right=6mm of s1] (s2) {\textbf{Hard rules (straight to RED)}\\
+    asked for PIN or OTP $\cdot$ caller posing as upay staff $\cdot$ lottery or fee $\cdot$ ``send it back'' with no money received $\cdot$ ``relative in trouble'' from a new number $\cdot$ night cash-out of most of the balance at a new agent};
+\end{tikzpicture}
+\caption{The authentication ladder. The server picks the step from the risk level and enforces it on every transfer; the app shows the same ladder on every confirm screen, with the current step highlighted and a ``Why?'' explanation. Thresholds are those of the served model, tuned on simulated data.}
+\end{figure}
+
 % ---------------------------------------------------------------- 5
 \section{AI approach}
 
