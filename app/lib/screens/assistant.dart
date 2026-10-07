@@ -137,20 +137,28 @@ class _AssistantScreenState extends State<AssistantScreen> {
         }
         await _assess();
       } else if (status == 'unsupported' || status == 'unknown') {
-        final q = bn ? p['question_bn'] : p['question_en'];
-        _say(q ?? '');
+        final q = _withWarning(p);
+        _say(q);
         setState(() {
           message = q;
           step = _Step.input;
         });
       } else {
-        final q = bn ? p['question_bn'] : p['question_en'];
-        _say(q ?? '');
+        _say(_withWarning(p));
         setState(() => step = _Step.clarify);
       }
     } on ApiError catch (e) {
       _fail(e);
     }
+  }
+
+  /// The parser's question, preceded by its scam warning when the command
+  /// already sounds like a scam ("upay office called...").
+  String _withWarning(Map p) {
+    final q = ((bn ? p['question_bn'] : p['question_en']) ?? '').toString();
+    final w = p['scam_warning'];
+    if (w is! Map) return q;
+    return '${bn ? w['bn'] : w['en']} $q'.trim();
   }
 
   void _fail(ApiError e) {
@@ -485,6 +493,23 @@ class _AssistantScreenState extends State<AssistantScreen> {
         ]),
       );
 
+  Widget _scamCard(Map w) => Container(
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(
+          color: BrandColors.redBg,
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(color: BrandColors.red, width: 2),
+        ),
+        child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          const Icon(Icons.warning_amber_rounded, color: BrandColors.red, size: 30),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Text('${bn ? w['bn'] : w['en']}',
+                style: const TextStyle(color: BrandColors.red, fontWeight: FontWeight.w700, fontSize: 15)),
+          ),
+        ]),
+      );
+
   Widget _heardCard() => Card(
         child: Padding(
           padding: const EdgeInsets.all(14),
@@ -501,7 +526,9 @@ class _AssistantScreenState extends State<AssistantScreen> {
     final p = parsed!;
     final status = p['status'];
     final q = bn ? p['question_bn'] : p['question_en'];
+    final warning = p['scam_warning'];
     final children = <Widget>[
+      if (warning is Map) ...[_scamCard(warning), const SizedBox(height: 12)],
       _heardCard(),
       const SizedBox(height: 16),
       Text(q ?? '', style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700)),

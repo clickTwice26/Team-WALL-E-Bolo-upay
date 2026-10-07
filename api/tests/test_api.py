@@ -97,6 +97,21 @@ def test_bangla_negative_verb_is_not_a_hit():
     assert scam.match("কেউ ওটিপি চায়নি")["score"] == 0
 
 
+def test_scam_warning_before_amount_or_recipient_is_known():
+    p = c.post("/api/parse", json={"user_id": "u1", "text":
+               "উপায় অফিস থেকে ফোন দিয়েছে হাজার টাকা পাঠাতে বা পিন নাম্বার বলতে"}).json()
+    assert p["status"] == "need_recipient"
+    w = p["scam_warning"]
+    assert w["category"] == "fake_official" and "16268" in w["en"] and "১৬২৬৮" in w["bn"]
+    assert p["question_en"] == "Who should receive it? Say a name or number."
+
+
+def test_no_early_warning_for_normal_or_refund_commands():
+    for text in ("ammu ke 500 taka pathao", "ammu ke taka pathao", "vul kore pathaisi ferot dao"):
+        p = c.post("/api/parse", json={"user_id": "u1", "text": text}).json()
+        assert "scam_warning" not in p, text
+
+
 def test_login_pin():
     assert c.post("/api/login", json={"user_id": "u1", "pin": "1234"}).status_code == 200
     assert c.post("/api/login", json={"user_id": "u1", "pin": "9999"}).status_code == 401

@@ -14,7 +14,7 @@ from __future__ import annotations
 
 from . import contacts as contacts_mod
 from . import intent as intent_mod
-from . import llm
+from . import llm, scam
 from .numbers import parse_amount
 from .text import extract_phones, normalize, tokens
 
@@ -38,6 +38,22 @@ def _contact_out(c: dict | None) -> dict | None:
     if not c:
         return None
     return {k: c.get(k) for k in ("id", "name", "name_bn", "phone", "relation")}
+
+
+def _scam_warning(text: str) -> dict | None:
+    """Warn before the amount or recipient is known: "upay office called and
+    asked for money" should get a warning now, not after the user answers
+    "how much?". "Send it back" is left to the risk check, which can see
+    whether money really came from that number (an honest refund says it too).
+    """
+    hits = [h for h in scam.match(text)["hits"] if h["category"] != "sent_by_mistake"]
+    if not hits:
+        return None
+    h = next((h for h in hits if h["level"] == "high"), hits[0])
+    return {"category": h["category"], "phrase": h["phrase"],
+            "bn": "⚠️ সতর্কতা! " + h["explain_bn"]
+                  + " ফোন কেটে দিন এবং ১৬২৬৮ নম্বরে কল করুন। টাকা পাঠাবেন না।",
+            "en": "⚠️ Warning! " + h["explain_en"] + " Hang up and call 16268. Do not send money."}
 
 
 def parse(text: str, user: dict, use_llm: bool = True) -> dict:
@@ -93,6 +109,10 @@ def parse(text: str, user: dict, use_llm: bool = True) -> dict:
         result["status"] = status
         q = QUESTIONS.get(status)
         result["question_bn"], result["question_en"] = q if q else (None, None)
+        if status != "ok":
+            warning = _scam_warning(text)
+            if warning:
+                result["scam_warning"] = warning
         return result
 
     if intent == "unsupported":
