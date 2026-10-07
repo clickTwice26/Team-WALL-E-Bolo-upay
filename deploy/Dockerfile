@@ -1,5 +1,10 @@
 # ---- stage 1: build the Flutter web app ----
 FROM ghcr.io/cirruslabs/flutter:stable AS web
+# pubspec needs Dart ^3.13.5; the image's stable channel can lag behind,
+# so pin the SDK the app is developed and tested with.
+ARG FLUTTER_VERSION=3.47.6
+RUN git clone --depth 1 -b ${FLUTTER_VERSION} https://github.com/flutter/flutter.git /opt/flutter && /opt/flutter/bin/flutter precache --web
+ENV PATH=/opt/flutter/bin:$PATH
 WORKDIR /src/app
 COPY app/pubspec.yaml app/pubspec.lock ./
 RUN flutter pub get
