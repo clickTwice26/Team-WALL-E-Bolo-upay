@@ -39,7 +39,7 @@ cd /opt/bolo-upay
 sudo DOMAIN=bolo.example.com bash deploy/setup.sh
 ```
 
-With the optional LLM:
+With the optional LLM (fine for the demo; production should use a local model, see the README section "LLM today, local model in production"):
 
 ```bash
 sudo DOMAIN=bolo.example.com \
