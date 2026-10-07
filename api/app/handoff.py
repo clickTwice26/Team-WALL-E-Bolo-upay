@@ -25,7 +25,7 @@ import bcrypt
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, Field
 
-from . import auth, store
+from . import auth, store, wallet
 from .core import pinguard
 from .core.text import mask_phone
 
@@ -246,7 +246,7 @@ def _customer(uid: str) -> dict:
     names = {c["phone"]: c["name"] for c in u["contacts"]}
     txs = [{"type": t["type"], "amount": t["amount"], "ts": t["ts"],
             "with": names.get(t["counterparty"]) or mask_phone(t["counterparty"] or "")}
-           for t in reversed(store.history(uid)[-12:])]
+           for t in reversed(wallet.get().history(uid)[-12:])]
     checks = []
     for a in store.assessments_for(uid, 8):
         d, r = a["draft"], a["result"]

@@ -134,6 +134,9 @@ Copy `.env.example` to `.env`. Never commit `.env`.
 | `CONSOLE_TOKEN` | Shared console code, used only when `CONSOLE_STAFF` is empty. The default `support-demo` works only with `DEMO_MODE=true` | |
 | `TTS_VOICE` / `TTS_MODEL` | Optional Gemini TTS voice and model (used when `LLM_PROVIDER=gemini`) | `Kore` |
 | `DB_PATH` | SQLite file (set by Docker to `/data/bolo.db`) | `data/bolo.db` |
+| `WALLET_ADAPTER` | Where money moves: `local` (SQLite ledger) or `mock_upay` (simulated upay API). See [`docs/SCALE.md`](docs/SCALE.md) | `local` |
+| `MOCK_UPAY_LATENCY_MS` / `MOCK_UPAY_FAILURE_RATE` | Simulated upay delay and failure rate for `mock_upay` | `120` / `0.02` |
+| `WEB_CONCURRENCY` | gunicorn worker processes in Docker (default: CPU count) | `4` |
 | `WEB_DIR` | Folder of the Flutter web build served at `/` | `app/build/web` |
 | `CONSOLE_DIR` | Folder of the console build served at `/console` | `app/build/console` |
 | `API_BASE` (Flutter build flag) | API URL for iOS/Android builds | `--dart-define=API_BASE=https://bolo.example.com` |
@@ -191,6 +194,7 @@ Unlock the app with the **demo PIN `1234`**. Use the settings button (top right 
 cd api && python -m pytest -q          # 93 tests: parser, scam matcher, API flow, sessions and PIN lock, signed biometrics, agent rules and safety, handoff, TTS
 python ml/evaluate_parser.py           # labelled command set → model/parser_metrics.json
 python ml/train_risk.py                # simulates timelines, trains, compares → model/risk_metrics.json
+docker run --rm -i -e BASE=http://host.docker.internal:8000 -e VUS=50 grafana/k6 run - < loadtest/flow.js   # load test, see docs/SCALE.md
 ```
 
 **Measured results**

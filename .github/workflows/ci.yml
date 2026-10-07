@@ -16,3 +16,25 @@ jobs:
       - uses: subosito/flutter-action@v2
         with: { channel: stable, flutter-version: 3.47.6 }
       - run: cd app && flutter pub get && flutter analyze --no-fatal-infos
+  loadtest-smoke:
+    # a few virtual users through login -> parse -> assess -> execute against
+    # gunicorn as deployed; fails on any error (full benchmark: docs/SCALE.md)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install -r api/requirements.txt
+      - name: Start the API (gunicorn, demo data)
+        run: |
+          cd api
+          DEMO_MODE=true HOLD_SECONDS=0 AUTH_SECRET=ci-smoke DB_PATH=/tmp/bolo.db WEB_CONCURRENCY=2 \
+            nohup gunicorn -c gunicorn.conf.py app.main:app > /tmp/api.log 2>&1 &
+          for i in $(seq 1 60); do curl -sf localhost:8000/api/health && exit 0; sleep 1; done
+          cat /tmp/api.log; exit 1
+      - name: k6 smoke (5 virtual users, 20 s)
+        run: >-
+          docker run --rm -i --network host -e VUS=5 -e RAMP=5s -e DURATION=20s -e ASSESS_P95=1000
+          grafana/k6 run - < loadtest/flow.js
+      - if: failure()
+        run: cat /tmp/api.log
