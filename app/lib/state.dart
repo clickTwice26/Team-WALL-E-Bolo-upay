@@ -74,6 +74,10 @@ class AppState extends ChangeNotifier {
   num get balance => (profile?['balance'] as num?) ?? 0;
   List<Map<String, dynamic>> get contacts =>
       ((profile?['contacts'] as List?) ?? []).map((e) => Map<String, dynamic>.from(e)).toList();
+
+  /// Saved bill accounts (DESCO, Titas, WASA ...): the payees of a bill payment.
+  List<Map<String, dynamic>> get billers =>
+      ((profile?['billers'] as List?) ?? []).map((e) => Map<String, dynamic>.from(e)).toList();
 }
 
 final appState = AppState();

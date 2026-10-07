@@ -290,9 +290,14 @@ class _AssistantScreenState extends State<AssistantScreen> {
     final a = assessment!;
     final amt = taka(draft!['amount'], bn);
     final who = _recipientName();
-    final base = draft!['intent'] == 'mobile_recharge'
-        ? tr(bn, '$who নম্বরে $amt রিচার্জ।', 'Recharge $amt to $who.')
-        : tr(bn, '$who কে $amt পাঠানো হবে।', 'Sending $amt to $who.');
+    final acct = _account(bn);
+    final base = switch (draft!['intent']) {
+      'mobile_recharge' => tr(bn, '$who নম্বরে $amt রিচার্জ।', 'Recharge $amt to $who.'),
+      'bill_payment' => tr(bn, '$who বিল $amt দেওয়া হবে$acct।', 'Paying the $who bill of $amt$acct.'),
+      'cash_out' => tr(bn, '$who এজেন্টের কাছে $amt ক্যাশ আউট হবে।', 'Cashing out $amt at agent $who.'),
+      'merchant_payment' => tr(bn, '$who কে $amt পেমেন্ট হবে।', 'Paying $amt to $who.'),
+      _ => tr(bn, '$who কে $amt পাঠানো হবে।', 'Sending $amt to $who.'),
+    };
     final lvl = a['level'];
     final warn = lvl == 'GREEN' ? '' : ' ${bn ? a['advice_bn'] : a['advice_en']}';
     _say('$base$warn');
@@ -305,6 +310,41 @@ class _AssistantScreenState extends State<AssistantScreen> {
     if (r['name'] == null) return bn ? bnDigits(maskPhone(r['phone'])) : maskPhone(r['phone']);
     return bn ? (r['name_bn'] ?? r['name']) : r['name'];
   }
+
+  /// ", account 41029876" for a bill (the biller's customer account), else ''.
+  String _account(bool b) {
+    final acc = recipient?['account'];
+    if (acc == null) return '';
+    return tr(b, ', অ্যাকাউন্ট ${bnDigits('$acc')}', ', account $acc');
+  }
+
+  String _billKind(Object? category) => switch (category) {
+        'electricity' => tr(bn, 'বিদ্যুৎ', 'Electricity'),
+        'gas' => tr(bn, 'গ্যাস', 'Gas'),
+        'water' => tr(bn, 'পানি', 'Water'),
+        _ => tr(bn, 'বিল', 'Bill'),
+      };
+
+  String _intentTitle(bool b) => switch (draft?['intent']) {
+        'mobile_recharge' => tr(b, 'মোবাইল রিচার্জ', 'Mobile Recharge'),
+        'bill_payment' => tr(b, 'পে বিল', 'Pay Bill'),
+        'cash_out' => tr(b, 'ক্যাশ আউট', 'Cash Out'),
+        'merchant_payment' => tr(b, 'মেক পেমেন্ট', 'Make Payment'),
+        _ => tr(b, 'সেন্ড মানি', 'Send Money'),
+      };
+
+  /// Who the user can pick on the clarify step: the parser's candidates, the
+  /// saved bill accounts for a bill, the contacts for a transfer (an agent or
+  /// merchant is never a contact: those are typed as numbers).
+  List<Map<String, dynamic>> _choices(Map p) => switch (p['status']) {
+        'confirm_recipient' => [Map<String, dynamic>.from(p['recipient'] ?? {})],
+        'clarify_recipient' => [for (final c in (p['recipient_candidates'] as List? ?? [])) Map<String, dynamic>.from(c)],
+        _ => switch (draft?['intent']) {
+            'bill_payment' => appState.billers,
+            'cash_out' || 'merchant_payment' => <Map<String, dynamic>>[],
+            _ => appState.contacts,
+          },
+      };
 
   // ---------------- interview ----------------
   List get _questions => asked;
@@ -489,6 +529,7 @@ class _AssistantScreenState extends State<AssistantScreen> {
   void _selectRecipient(Map a) {
     final shown = [
       ...appState.contacts,
+      ...appState.billers,
       for (final c in (parsed?['recipient_candidates'] as List?) ?? []) Map<String, dynamic>.from(c),
       if (parsed?['recipient'] != null) Map<String, dynamic>.from(parsed!['recipient']),
     ];
@@ -559,13 +600,7 @@ class _AssistantScreenState extends State<AssistantScreen> {
         final needAmount = status == 'clarify_amount' || status == 'need_amount';
         final showList = const {'clarify_recipient', 'confirm_recipient', 'need_recipient'}.contains(status) ||
             draft?['recipient_phone'] == null;
-        final cands = !showList
-            ? <Map<String, dynamic>>[]
-            : status == 'confirm_recipient'
-                ? [Map<String, dynamic>.from(p['recipient'] ?? {})]
-                : status == 'clarify_recipient'
-                    ? [for (final c in (p['recipient_candidates'] as List? ?? [])) Map<String, dynamic>.from(c)]
-                    : appState.contacts;
+        final cands = !showList ? <Map<String, dynamic>>[] : _choices(p);
         final list = [
           for (final c in cands)
             {for (final k in ['id', 'name', 'name_bn', 'relation']) k: c[k], 'phone': maskPhone('${c['phone'] ?? ''}')}
@@ -617,10 +652,10 @@ class _AssistantScreenState extends State<AssistantScreen> {
           'cancel_transfer',
           'repeat',
         ];
-        sbn = '$level: ${_nameIn(true)} কে ${amt(true)}। ${a['advice_bn'] ?? ''}'
+        sbn = '$level: ${_intentTitle(true)}, ${_nameIn(true)}${_account(true)}, ${amt(true)}। ${a['advice_bn'] ?? ''}'
             '${reasons.isNotEmpty ? ' কারণ: ${reasons.map((r) => r['bn']).join(' ')}' : ''}'
             '${mistake != null ? ' ${mistake['bn']}' : ''}';
-        sen = '$level: ${amt(false)} to ${_nameIn(false)}. ${a['advice_en'] ?? ''}'
+        sen = '$level: ${_intentTitle(false)}, ${amt(false)} to ${_nameIn(false)}${_account(false)}. ${a['advice_en'] ?? ''}'
             '${reasons.isNotEmpty ? ' Reasons: ${reasons.map((r) => r['en']).join(' ')}' : ''}'
             '${mistake != null ? ' ${mistake['en']}' : ''}';
       case _Step.hold:
@@ -633,8 +668,8 @@ class _AssistantScreenState extends State<AssistantScreen> {
       case _Step.auth:
         content.addAll({'level': level, 'amount': amount, 'recipient': _nameIn(false)});
         actions = ['cancel_transfer'];
-        sbn = 'পিন দিয়ে নিশ্চিত করার ধাপ: ${_nameIn(true)} কে ${amt(true)}।';
-        sen = 'PIN step: ${amt(false)} to ${_nameIn(false)}.';
+        sbn = 'পিন দিয়ে নিশ্চিত করার ধাপ: ${_intentTitle(true)}, ${_nameIn(true)}, ${amt(true)}।';
+        sen = 'PIN step: ${_intentTitle(false)}, ${amt(false)} to ${_nameIn(false)}.';
       case _Step.done:
         content['result'] = {'kind': doneInfo?['kind'], 'text': doneInfo?['text']};
         actions = ['new_transaction', 'repeat'];
@@ -724,8 +759,8 @@ class _AssistantScreenState extends State<AssistantScreen> {
 
   Widget _inputView() {
     final examples = bn
-        ? ['আম্মুকে ৫০০ টাকা পাঠাও', 'রহিম ভাইকে দেড় হাজার টাকা দাও', 'আমার নম্বরে ৫০ টাকা রিচার্জ', 'ব্যালেন্স কত?']
-        : ['Ammu ke 500 taka pathao', 'Rahim bhai ke der hajar dao', 'amar number e 50 taka recharge', 'balance koto'];
+        ? ['আম্মুকে ৫০০ টাকা পাঠাও', 'রহিম ভাইকে দেড় হাজার টাকা দাও', 'আমার নম্বরে ৫০ টাকা রিচার্জ', 'ডেসকো বিল ১২০০ টাকা', 'ব্যালেন্স কত?']
+        : ['Ammu ke 500 taka pathao', 'Rahim bhai ke der hajar dao', 'amar number e 50 taka recharge', 'DESCO bill 1200 taka', 'balance koto'];
     return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
       const SizedBox(height: 8),
       Text(tr(bn, 'বলুন, কাকে কত টাকা পাঠাবেন', 'Say who to pay and how much'),
@@ -863,27 +898,31 @@ class _AssistantScreenState extends State<AssistantScreen> {
       ));
     }
 
-    if (status == 'clarify_recipient' || status == 'confirm_recipient' ||
-        (status == 'need_recipient') || draft!['recipient_phone'] == null) {
-      final cands = status == 'confirm_recipient'
-          ? [p['recipient']]
-          : (status == 'clarify_recipient' ? (p['recipient_candidates'] as List) : appState.contacts);
+    // from the parse, not the draft: the number field must not vanish once a number is typed
+    final noPayee = p['recipient'] == null && p['new_number'] == null;
+    final intent = draft!['intent'];
+    if (status == 'clarify_recipient' || status == 'confirm_recipient' || status == 'need_recipient' || noPayee) {
+      final cands = _choices(p);
       children.add(const SizedBox(height: 8));
-      for (final c in cands) {
-        final m = Map<String, dynamic>.from(c);
+      for (final m in cands) {
         final selected = draft!['recipient_phone'] == m['phone'] && status != 'confirm_recipient'
             ? true
             : (status == 'confirm_recipient' && recipient?['confirmed'] == true);
+        final bill = m['relation'] == 'biller';
         children.add(Padding(
           padding: const EdgeInsets.only(bottom: 8),
           child: Card(
             child: ListTile(
               leading: CircleAvatar(
                   backgroundColor: BrandColors.yellow,
-                  child: Text(((bn ? m['name_bn'] : m['name']) ?? '?').toString().characters.first,
-                      style: const TextStyle(color: BrandColors.navy, fontWeight: FontWeight.w700))),
+                  child: bill
+                      ? const Icon(Icons.receipt_long_rounded, color: BrandColors.navy)
+                      : Text(((bn ? m['name_bn'] : m['name']) ?? '?').toString().characters.first,
+                          style: const TextStyle(color: BrandColors.navy, fontWeight: FontWeight.w700))),
               title: Text((bn ? m['name_bn'] : m['name']) ?? maskPhone(m['phone'])),
-              subtitle: Text('${m['relation'] ?? ''} · ${maskPhone(m['phone'])}'),
+              subtitle: Text(bill
+                  ? '${_billKind(m['category'])} · ${tr(bn, 'অ্যাকাউন্ট ${bnDigits('${m['account']}')}', 'Account ${m['account']}')}'
+                  : '${m['relation'] ?? ''} · ${maskPhone(m['phone'])}'),
               trailing: Icon(selected ? Icons.check_circle : Icons.radio_button_unchecked,
                   color: selected ? BrandColors.green : BrandColors.muted),
               onTap: () => setState(() {
@@ -894,14 +933,19 @@ class _AssistantScreenState extends State<AssistantScreen> {
           ),
         ));
       }
-      if (status == 'need_recipient') {
+      // bills go to a saved bill account only; anything else can take a typed number
+      if ((status == 'need_recipient' || noPayee) && intent != 'bill_payment') {
         children.add(TextField(
           controller: _phoneField,
           keyboardType: TextInputType.phone,
           decoration: InputDecoration(
               filled: true,
               fillColor: Colors.white,
-              hintText: tr(bn, 'অথবা নম্বর লিখুন (01XXXXXXXXX)', 'Or type a number (01XXXXXXXXX)'),
+              hintText: switch (intent) {
+                'cash_out' => tr(bn, 'এজেন্ট নম্বর লিখুন (01XXXXXXXXX)', 'Type the agent number (01XXXXXXXXX)'),
+                'merchant_payment' => tr(bn, 'মার্চেন্ট নম্বর লিখুন (01XXXXXXXXX)', 'Type the merchant number (01XXXXXXXXX)'),
+                _ => tr(bn, 'অথবা নম্বর লিখুন (01XXXXXXXXX)', 'Or type a number (01XXXXXXXXX)'),
+              },
               border: OutlineInputBorder(borderRadius: BorderRadius.circular(14), borderSide: BorderSide.none)),
           onChanged: (v) {
             final d = v.replaceAll(RegExp(r'\D'), '');
@@ -989,22 +1033,32 @@ class _AssistantScreenState extends State<AssistantScreen> {
     final r = recipient ?? {};
     final name = _recipientName();
     final isNew = parsed?['recipient_match'] == 'new_number';
+    final bill = r['relation'] == 'biller';
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(18),
         child: Column(children: [
-          Text(d['intent'] == 'mobile_recharge' ? tr(bn, 'মোবাইল রিচার্জ', 'Mobile Recharge') : tr(bn, 'সেন্ড মানি', 'Send Money'),
-              style: const TextStyle(color: BrandColors.muted, fontWeight: FontWeight.w600)),
+          Text(_intentTitle(bn), style: const TextStyle(color: BrandColors.muted, fontWeight: FontWeight.w600)),
           const SizedBox(height: 8),
           Text(taka(d['amount'], bn), style: const TextStyle(fontSize: 40, fontWeight: FontWeight.w800, color: BrandColors.navy)),
           const SizedBox(height: 12),
           CircleAvatar(
               radius: 26,
               backgroundColor: isNew ? BrandColors.redBg : BrandColors.yellow,
-              child: Icon(isNew ? Icons.person_off_outlined : Icons.person, color: BrandColors.navy)),
+              child: Icon(
+                  isNew
+                      ? Icons.person_off_outlined
+                      : bill
+                          ? Icons.receipt_long_rounded
+                          : Icons.person,
+                  color: BrandColors.navy)),
           const SizedBox(height: 6),
           Text(name, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700)),
-          if (r['phone'] != null)
+          // a bill names the biller and the customer account it pays, not a phone number
+          if (bill)
+            Text('${_billKind(r['category'])} · ${tr(bn, 'অ্যাকাউন্ট ${bnDigits('${r['account']}')}', 'Account ${r['account']}')}',
+                style: const TextStyle(color: BrandColors.muted))
+          else if (r['phone'] != null)
             Text(bn ? bnDigits(maskPhone(r['phone'])) : maskPhone(r['phone']), style: const TextStyle(color: BrandColors.muted)),
           if (isNew)
             Padding(

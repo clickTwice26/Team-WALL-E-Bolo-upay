@@ -86,6 +86,64 @@
       "landlord"
      ]
     }
+   ],
+   "billers": [
+    {
+     "id": "b1",
+     "name": "DESCO",
+     "name_bn": "ডেসকো",
+     "relation": "biller",
+     "category": "electricity",
+     "account": "41029876",
+     "phone": "01399000101",
+     "aliases": [
+      "desco",
+      "ডেসকো",
+      "ডেস্কো",
+      "current",
+      "কারেন্ট",
+      "bidyut",
+      "biddut",
+      "বিদ্যুৎ",
+      "electricity",
+      "electric"
+     ]
+    },
+    {
+     "id": "b2",
+     "name": "Titas Gas",
+     "name_bn": "তিতাস গ্যাস",
+     "relation": "biller",
+     "category": "gas",
+     "account": "2207118432",
+     "phone": "01399000102",
+     "aliases": [
+      "titas",
+      "তিতাস",
+      "titas gas",
+      "তিতাস গ্যাস",
+      "gas",
+      "গ্যাস"
+     ]
+    },
+    {
+     "id": "b3",
+     "name": "Dhaka WASA",
+     "name_bn": "ঢাকা ওয়াসা",
+     "relation": "biller",
+     "category": "water",
+     "account": "38810042",
+     "phone": "01399000103",
+     "aliases": [
+      "wasa",
+      "ওয়াসা",
+      "dhaka wasa",
+      "ঢাকা ওয়াসা",
+      "pani",
+      "পানি",
+      "water"
+     ]
+    }
    ]
   },
   {
@@ -150,6 +208,75 @@
       "শফিক ভাই"
      ]
     }
+   ],
+   "billers": [
+    {
+     "id": "b4",
+     "name": "DESCO (Home)",
+     "name_bn": "ডেসকো (বাসা)",
+     "relation": "biller",
+     "category": "electricity",
+     "account": "41551203",
+     "phone": "01399000201",
+     "aliases": [
+      "desco",
+      "ডেসকো",
+      "ডেস্কো",
+      "current",
+      "কারেন্ট",
+      "bidyut",
+      "biddut",
+      "বিদ্যুৎ",
+      "electricity",
+      "electric",
+      "basa",
+      "বাসা",
+      "bari",
+      "বাড়ি",
+      "home"
+     ]
+    },
+    {
+     "id": "b5",
+     "name": "DESCO (Shop)",
+     "name_bn": "ডেসকো (দোকান)",
+     "relation": "biller",
+     "category": "electricity",
+     "account": "41551877",
+     "phone": "01399000202",
+     "aliases": [
+      "desco",
+      "ডেসকো",
+      "ডেস্কো",
+      "current",
+      "কারেন্ট",
+      "bidyut",
+      "biddut",
+      "বিদ্যুৎ",
+      "electricity",
+      "electric",
+      "dokan",
+      "দোকান",
+      "shop"
+     ]
+    },
+    {
+     "id": "b6",
+     "name": "Titas Gas",
+     "name_bn": "তিতাস গ্যাস",
+     "relation": "biller",
+     "category": "gas",
+     "account": "2209340117",
+     "phone": "01399000203",
+     "aliases": [
+      "titas",
+      "তিতাস",
+      "titas gas",
+      "তিতাস গ্যাস",
+      "gas",
+      "গ্যাস"
+     ]
+    }
    ]
   },
   {
@@ -197,6 +324,46 @@
       "riya",
       "রিয়া",
       "ria"
+     ]
+    }
+   ],
+   "billers": [
+    {
+     "id": "b7",
+     "name": "DPDC",
+     "name_bn": "ডিপিডিসি",
+     "relation": "biller",
+     "category": "electricity",
+     "account": "11048263",
+     "phone": "01399000301",
+     "aliases": [
+      "dpdc",
+      "ডিপিডিসি",
+      "current",
+      "কারেন্ট",
+      "bidyut",
+      "biddut",
+      "বিদ্যুৎ",
+      "electricity",
+      "electric"
+     ]
+    },
+    {
+     "id": "b8",
+     "name": "Dhaka WASA",
+     "name_bn": "ঢাকা ওয়াসা",
+     "relation": "biller",
+     "category": "water",
+     "account": "38870519",
+     "phone": "01399000302",
+     "aliases": [
+      "wasa",
+      "ওয়াসা",
+      "dhaka wasa",
+      "ঢাকা ওয়াসা",
+      "pani",
+      "পানি",
+      "water"
      ]
     }
    ]

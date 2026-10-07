@@ -24,9 +24,12 @@ from . import contacts as contacts_mod
 from . import intent as intent_mod
 from . import llm, pinguard
 from .numbers import parse_amount
+from .parser import payees
 from .text import extract_phones, mask_phone, normalize, tokens
 
 PAGES = ("home", "dashboard", "accuracy", "assistant")
+# every payment the Send Money page checks (parse -> risk check -> PIN)
+MONEY_INTENTS = ("send_money", "mobile_recharge", "cash_out", "merchant_payment", "bill_payment")
 GLOBAL_ACTIONS = {"navigate", "go_back", "open_settings", "refresh", "set_language",
                   "show_balance", "switch_user", "set_simulate_call", "reset_demo",
                   "start_transfer", "connect_human"}
@@ -295,13 +298,18 @@ def _ordinal(t: str) -> tuple[Optional[int], str]:
     return None, t
 
 
+def _payees(user: dict) -> list[dict]:
+    """Contacts and saved bill accounts: anything a payment can go to."""
+    return user["contacts"] + user.get("billers", [])
+
+
 def _pick_recipient(t: str, candidates: list[dict], user: dict) -> Optional[dict]:
     """Which displayed candidate the user means: by phone, order or a word only
     one of them has ("dokan" -> Rahim Store, "bhai" -> Rahim Uddin)."""
-    by_id = {c["id"]: c for c in user["contacts"]}
+    by_id = {c["id"]: c for c in _payees(user)}
     phones, rest = extract_phones(t)
     if phones:
-        known = next((c for c in user["contacts"] if c["phone"] == phones[0]), None)
+        known = next((c for c in _payees(user) if c["phone"] == phones[0]), None)
         return {"contact_id": known["id"]} if known else {"phone": phones[0]}
     idx, rest = _ordinal(rest)
     if idx is not None and candidates and -len(candidates) <= idx < len(candidates):
@@ -324,12 +332,12 @@ def _full_command(t: str, user: dict) -> bool:
     """"karim ke 2000 pathao" on a step page is a new command, not an answer."""
     amount = _amount(t)
     det = intent_mod.detect(t, amount is not None)
-    if det["intent"] not in ("send_money", "mobile_recharge", "cash_out", "merchant_payment") or amount is None:
+    if det["intent"] not in MONEY_INTENTS or amount is None:
         return False
     phones, rest = extract_phones(t)
     if phones:
         return True
-    return contacts_mod.resolve(tokens(rest), [], user["contacts"])["status"] in ("found", "ambiguous")
+    return contacts_mod.resolve(tokens(rest), [], payees(user, det["intent"]))["status"] in ("found", "ambiguous")
 
 
 def _send_money(t: str, msg: str, page: dict, user: dict) -> Optional[dict]:
@@ -634,11 +642,12 @@ def rules(req: dict, facts: dict) -> dict:
     amount = _amount(t)
     det = intent_mod.detect(t, amount is not None)
     if det["intent"] == "unsupported":
-        what_bn, what_en = {"cash_out": ("ক্যাশ আউট", "Cash out"), "pay_bill": ("বিল পে", "Pay bill"),
-                            "add_money": ("অ্যাড মানি", "Add money")}.get(det["unsupported"], ("এটি", "That"))
-        return _plan(f"{what_bn} এই প্রোটোটাইপে এখনো নেই। সেন্ড মানি, রিচার্জ আর ব্যালেন্স দেখা যায়।",
-                     f"{what_en} is not in this prototype yet. You can send money, recharge and check your balance.")
-    if det["intent"] in ("send_money", "mobile_recharge", "cash_out", "merchant_payment"):
+        what_bn, what_en = {"add_money": ("অ্যাড মানি", "Add money")}.get(det["unsupported"], ("এটি", "That"))
+        return _plan(f"{what_bn} এই প্রোটোটাইপে এখনো নেই। সেন্ড মানি, রিচার্জ, ক্যাশ আউট, পে বিল, "
+                     "মেক পেমেন্ট আর ব্যালেন্স দেখা যায়।",
+                     f"{what_en} is not in this prototype yet. You can send money, recharge, cash out, "
+                     "pay bills, make payments and check your balance.")
+    if det["intent"] in MONEY_INTENTS:
         return _plan("ঠিক আছে, সেন্ড মানি পেজে যাচাই করছি।", "OK, checking it on the Send Money page.",
                      [{"type": "start_transfer", "text": msg[:MAX_TEXT]}])
     # second miss in a row: offer a person
@@ -682,7 +691,7 @@ def _valid(a: dict, req: dict, facts: dict) -> Optional[dict]:
         ok = isinstance(n, int) and not isinstance(n, bool) and 1 <= n <= MAX_AMOUNT
         return {"type": t, "amount": n} if ok else None
     if t == "select_recipient":
-        if a.get("contact_id") in {c["id"] for c in facts["user"]["contacts"]}:
+        if a.get("contact_id") in {c["id"] for c in _payees(facts["user"])}:
             return {"type": t, "contact_id": a["contact_id"]}
         phone = str(a.get("phone") or "")
         return {"type": t, "phone": phone} if PHONE_RE.match(phone) else None
@@ -734,7 +743,8 @@ Global, any page:
   transfer, complaint or refund (dispute) without asking to send money; and after a
   second misunderstanding in a row, offer a person and connect on a short "yes"
   (not_understood). Tell them a person is coming and that upay never asks for a PIN/OTP.
-- start_transfer {text}: any send-money or recharge request; pass the user's own words.
+- start_transfer {text}: any send-money, recharge, cash-out, bill or merchant payment
+  request; pass the user's own words.
   The Send Money page parses it, runs the scam check and asks the user to confirm.
 Page actions, ONLY if listed in current_page.actions:
 - select_amount {amount}; select_recipient {contact_id | phone}; clarify_continue
@@ -762,7 +772,7 @@ new: briefly tell them what is on the page now; do not start or confirm anything
 
 def _llm_input(req: dict, facts: dict) -> str:
     u = facts["user"]
-    names = {c["phone"]: c["name"] for c in u["contacts"]}
+    names = {c["phone"]: c["name"] for c in _payees(u)}
     return json.dumps({
         "message": req.get("message") or "",
         "observation": bool(req.get("observation")),
@@ -777,6 +787,8 @@ def _llm_input(req: dict, facts: dict) -> str:
             "contacts": [{"id": c["id"], "name": c["name"], "name_bn": c.get("name_bn"),
                           "relation": c.get("relation"), "phone": mask_phone(c["phone"])}
                          for c in u["contacts"]],
+            "bill_accounts": [{"id": b["id"], "name": b["name"], "name_bn": b.get("name_bn"),
+                               "category": b.get("category")} for b in u.get("billers", [])],
             "recent_transactions": [
                 {"type": t["type"], "amount": t["amount"], "ts": t["ts"],
                  "with": names.get(t["counterparty"]) or mask_phone(t["counterparty"] or "")}

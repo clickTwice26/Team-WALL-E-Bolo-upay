@@ -1,8 +1,8 @@
 """Generate the synthetic demo data for Bolo upay.
 
-Writes data/seed.json: demo users, their contacts and 6 months of wallet
-history. Everything is synthetic. Phone numbers use the 0170000xxxx /
-0180000xxxx ranges and no real person is represented.
+Writes data/seed.json: demo users, their contacts, saved bill accounts and 6
+months of wallet history. Everything is synthetic. Phone numbers use the
+0170000xxxx / 0180000xxxx ranges and no real person is represented.
 
 Run:  python ml/generate_data.py
 """
@@ -23,6 +23,23 @@ NOW = datetime(2026, 10, 3, 18, 0, tzinfo=TZ)
 def phone(prefix: str, n: int) -> str:
     return f"{prefix}{n:04d}"
 
+
+# Saved bill accounts are payees like contacts. Each has a synthetic 01-style
+# payee number (0139900xxxx) standing in for upay's biller code + customer
+# account, so a bill uses the same Draft (recipient_phone) as any payment.
+ELECTRIC = ["current", "কারেন্ট", "bidyut", "biddut", "বিদ্যুৎ", "electricity", "electric"]
+
+
+def biller(bid: str, name: str, name_bn: str, category: str, n: int, account: str,
+           aliases: list[str]) -> dict:
+    return {"id": bid, "name": name, "name_bn": name_bn, "relation": "biller",
+            "category": category, "account": account, "phone": phone("0139900", n),
+            "aliases": aliases}
+
+
+DESCO = ["desco", "ডেসকো", "ডেস্কো"] + ELECTRIC
+TITAS = ["titas", "তিতাস", "titas gas", "তিতাস গ্যাস", "gas", "গ্যাস"]
+WASA = ["wasa", "ওয়াসা", "dhaka wasa", "ঢাকা ওয়াসা", "pani", "পানি", "water"]
 
 USERS = [
     {
@@ -46,6 +63,11 @@ USERS = [
              "phone": phone("0170000", 105), "aliases": ["karim", "করিম", "bariwala", "বাড়িওয়ালা", "landlord"],
              "usual": 4500, "freq": 1},
         ],
+        "billers": [
+            biller("b1", "DESCO", "ডেসকো", "electricity", 101, "41029876", DESCO),
+            biller("b2", "Titas Gas", "তিতাস গ্যাস", "gas", 102, "2207118432", TITAS),
+            biller("b3", "Dhaka WASA", "ঢাকা ওয়াসা", "water", 103, "38810042", WASA),
+        ],
     },
     {
         "id": "u2", "name": "Karim Mia", "name_bn": "করিম মিয়া",
@@ -65,6 +87,14 @@ USERS = [
              "phone": phone("0170000", 204), "aliases": ["shafiq", "শফিক", "shafiq bhai", "শফিক ভাই"],
              "usual": 800, "freq": 1},
         ],
+        # two DESCO meters: "DESCO bill" has to ask which account
+        "billers": [
+            biller("b4", "DESCO (Home)", "ডেসকো (বাসা)", "electricity", 201, "41551203",
+                   DESCO + ["basa", "বাসা", "bari", "বাড়ি", "home"]),
+            biller("b5", "DESCO (Shop)", "ডেসকো (দোকান)", "electricity", 202, "41551877",
+                   DESCO + ["dokan", "দোকান", "shop"]),
+            biller("b6", "Titas Gas", "তিতাস গ্যাস", "gas", 203, "2209340117", TITAS),
+        ],
     },
     {
         "id": "u3", "name": "Nusrat Jahan", "name_bn": "নুসরাত জাহান",
@@ -80,6 +110,11 @@ USERS = [
             {"id": "c12", "name": "Riya", "name_bn": "রিয়া", "relation": "friend",
              "phone": phone("0170000", 303), "aliases": ["riya", "রিয়া", "ria"],
              "usual": 200, "freq": 3},
+        ],
+        "billers": [
+            biller("b7", "DPDC", "ডিপিডিসি", "electricity", 301, "11048263",
+                   ["dpdc", "ডিপিডিসি"] + ELECTRIC),
+            biller("b8", "Dhaka WASA", "ঢাকা ওয়াসা", "water", 302, "38870519", WASA),
         ],
     },
 ]

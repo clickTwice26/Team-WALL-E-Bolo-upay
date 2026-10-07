@@ -6,9 +6,10 @@ Output ``status`` tells the app what to do next:
   clarify_recipient - two or more contacts match, user must pick
   need_recipient    - no recipient found
   confirm_recipient - recipient found by fuzzy match, user must confirm
-  unsupported       - action not supported in this prototype (cash out, bills)
+  unsupported       - action not supported in this prototype (add money)
   unknown           - could not understand
-The parser never guesses an amount or a person.
+The parser never guesses an amount or a person. A bill payment is matched
+against the user's saved bill accounts (``billers``) instead of contacts.
 """
 from __future__ import annotations
 
@@ -31,17 +32,38 @@ QUESTIONS = {
                    "Which agent? Say the agent's number."),
     "need_merchant": ("কোন দোকানে পেমেন্ট করবেন? মার্চেন্ট নম্বরটি বলুন।",
                       "Which shop? Say the merchant number."),
-    "unsupported": ("এই প্রোটোটাইপে সেন্ড মানি, রিচার্জ, ক্যাশ আউট, মার্চেন্ট পেমেন্ট ও ব্যালেন্স দেখা যায়।",
-                    "This prototype supports Send Money, Recharge, Cash Out, Merchant Payment and Balance."),
+    "need_biller": ("কোন বিল দেবেন? প্রতিষ্ঠানের নাম বলুন, যেমন ডেসকো, তিতাস বা ওয়াসা।",
+                    "Which bill? Say the biller, for example DESCO, Titas or WASA."),
+    "clarify_biller": ("কোন অ্যাকাউন্টের বিল দেবেন? একটি বেছে নিন।",
+                       "Which bill account? Please pick one."),
+    "confirm_biller": ("আপনি কি এই বিলের কথা বলছেন?", "Did you mean this bill account?"),
+    "unsupported": ("এই প্রোটোটাইপে সেন্ড মানি, রিচার্জ, ক্যাশ আউট, পে বিল, মার্চেন্ট পেমেন্ট ও ব্যালেন্স দেখা যায়।",
+                    "This prototype supports Send Money, Recharge, Cash Out, Pay Bill, Merchant Payment and Balance."),
     "unknown": ("দুঃখিত, বুঝতে পারিনি। আবার বলুন, যেমন: আম্মুকে ৫০০ টাকা পাঠাও।",
                 "Sorry, I didn't understand. Try: \"Ammu ke 500 taka pathao\"."),
 }
+# the recipient question in the words of the service ("which agent", "which bill")
+INTENT_QUESTIONS = {
+    ("need_recipient", "cash_out"): "need_agent",
+    ("need_recipient", "merchant_payment"): "need_merchant",
+    ("need_recipient", "bill_payment"): "need_biller",
+    ("clarify_recipient", "bill_payment"): "clarify_biller",
+    ("confirm_recipient", "bill_payment"): "confirm_biller",
+}
+
+
+def payees(user: dict, intent: str | None) -> list[dict]:
+    """Who this kind of payment can go to: saved bill accounts for a bill, else contacts."""
+    return user.get("billers", []) if intent == "bill_payment" else user["contacts"]
 
 
 def _contact_out(c: dict | None) -> dict | None:
     if not c:
         return None
-    return {k: c.get(k) for k in ("id", "name", "name_bn", "phone", "relation")}
+    keys = ("id", "name", "name_bn", "phone", "relation")
+    if c.get("relation") == "biller":  # the summary card names the bill and its account
+        keys += ("category", "account")
+    return {k: c.get(k) for k in keys}
 
 
 def _scam_warning(text: str) -> dict | None:
@@ -111,10 +133,7 @@ def parse(text: str, user: dict, use_llm: bool = True) -> dict:
 
     def done(status: str) -> dict:
         result["status"] = status
-        key = status
-        if status == "need_recipient" and intent in ("cash_out", "merchant_payment"):
-            key = "need_agent" if intent == "cash_out" else "need_merchant"
-        q = QUESTIONS.get(key)
+        q = QUESTIONS.get(INTENT_QUESTIONS.get((status, intent), status))
         result["question_bn"], result["question_en"] = q if q else (None, None)
         if status != "ok":
             warning = _scam_warning(text)
@@ -133,7 +152,7 @@ def parse(text: str, user: dict, use_llm: bool = True) -> dict:
     rec_tokens = toks
     if llm_out and llm_out.recipient_text:
         rec_tokens = toks + tokens(normalize(llm_out.recipient_text))
-    rec = contacts_mod.resolve(rec_tokens, phones, user["contacts"], user["phone"])
+    rec = contacts_mod.resolve(rec_tokens, phones, payees(user, intent), user["phone"])
     if rec["status"] == "found":
         result["recipient"] = _contact_out(rec["contact"])
         result["recipient_match"] = rec["match"]

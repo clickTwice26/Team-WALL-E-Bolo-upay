@@ -77,12 +77,13 @@ def test_transfers_go_to_the_normal_flow():
 
 
 def test_unsupported_intents():
-    r = ask("বিদ্যুৎ বিল দিবো")
+    r = ask("ক্যাশ ইন করব")
     assert r["actions"] == [] and "not in this prototype" in r["reply_en"]
 
 
-def test_cash_out_and_merchant_payment_start_the_checked_flow():
-    for text in ("2000 taka cash out korbo", "dokane 300 taka payment koro"):
+def test_cash_out_bill_and_merchant_payment_start_the_checked_flow():
+    for text in ("2000 taka cash out korbo", "dokane 300 taka payment koro", "বিদ্যুৎ বিল দিবো",
+                 "DESCO bill 1200 taka dao"):
         assert acts(ask(text)) == [("start_transfer", {"text": text})], text
 
 
