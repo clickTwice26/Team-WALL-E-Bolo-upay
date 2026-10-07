@@ -1,0 +1,128 @@
+{
+ "url": "https://www.upaybd.com/services/details/indian-visa",
+ "api": "https://api.upaybd.com/api/v2/pages/indian-visa",
+ "data": {
+  "title_english": "indian visa",
+  "title_bangla": "indian visa",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Indian Visa",
+     "title bn": "ইন্ডিয়ান ভিসা",
+     "background image": "/media/dynamic_image/Ivac_desktop_VmP5D6e.jpg",
+     "background image sd": "/media/dynamic_image/Ivac_Mobile_vnnYCVH.jpg",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<div style=\"text-align: center;\">From উপায় (upay), now you can pay your Indian visa application fees in just a few simple steps. Either through manual input or through scanning QR code, paying your Indian Visa fee has never been easier.</div>",
+     "desc bn": "<div style=\"text-align: center;\">উপায় থেকে আপনার ইন্ডিয়ান ভিসা অ্যাপ্লিকেশন করে ফেলুন মাত্র কয়েকটা ধাপে।&nbsp; নাম্বার বসিয়ে অথবা QR কোড স্ক্যান করে আপনার ইন্ডিয়ান ভিসা ফি সহজেই দিতে পারবেন।</div>",
+     "Methods": [
+      {
+       "title": "How to pay your Indian Visa Fees?",
+       "title bn": "কিভাবে ইন্ডিয়ান ভিসা ফি পরিশোধ করবেন ?",
+       "desc": "Simply follow the below steps to complete your Indian Visa Fee payment",
+       "desc bn": "",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/1_XsVyjWK.png",
+         "image sd": "/media/dynamic_image/1_hH5gcH2.png"
+        },
+        {
+         "image ": "/media/dynamic_image/2_Ebx1DCO.png",
+         "image sd": "/media/dynamic_image/2_SzkVgZV.png"
+        },
+        {
+         "image ": "/media/dynamic_image/3_Yk7nHqM.png",
+         "image sd": "/media/dynamic_image/3_sY7TyoM.png"
+        },
+        {
+         "image ": "/media/dynamic_image/4_yIMynrR.png",
+         "image sd": "/media/dynamic_image/4_CvaIviE.png"
+        },
+        {
+         "image ": "/media/dynamic_image/5_bi4HeHS.png",
+         "image sd": "/media/dynamic_image/5_oRMOau0.png"
+        },
+        {
+         "image ": "/media/dynamic_image/6_OGlp5im.png",
+         "image sd": "/media/dynamic_image/6_1oWIMF1.png"
+        },
+        {
+         "image ": "/media/dynamic_image/7_gmcnjOi.png",
+         "image sd": "/media/dynamic_image/7_KH84Hc9.png"
+        },
+        {
+         "image ": "/media/dynamic_image/8_KYycqmo.png",
+         "image sd": "/media/dynamic_image/8_uToCx2T.png"
+        },
+        {
+         "image ": "/media/dynamic_image/9_mLHQe5Y.png",
+         "image sd": "/media/dynamic_image/9_7KCVNiY.png"
+        },
+        {
+         "image ": "/media/dynamic_image/10_qqz76iQ.png",
+         "image sd": "/media/dynamic_image/10_KegaanC.png"
+        },
+        {
+         "image ": "/media/dynamic_image/11.png",
+         "image sd": "/media/dynamic_image/11_Oys9VW0.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_dv2ghSK.png",
+         "image sd": "/media/dynamic_image/1_VIcxLCr.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_BI9gj63.png",
+         "image sd": "/media/dynamic_image/2_wNqdVYw.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_cp7jEhG.png",
+         "image sd": "/media/dynamic_image/3_aKBiI4P.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_rjRAKYs.png",
+         "image sd": "/media/dynamic_image/4_j9YgLaB.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_jILIKRm.png",
+         "image sd": "/media/dynamic_image/5_HrZT4JO.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_oXp8oFv.png",
+         "image sd": "/media/dynamic_image/6_QXQv1jf.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_UBFnBHl.png",
+         "image sd": "/media/dynamic_image/7_b8p4iyO.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "Lorem Ipsum",
+       "desc": "",
+       "desc bn": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "Lorem Ipsum",
+         "desc": "",
+         "desc bn": "Lorem Ipsum",
+         "thumb image": "/media/dynamic_image/0_zMcmmOU.png",
+         "thumb image sd": "/media/dynamic_image/0_Y0JWKdR.png",
+         "video": "/media/dynamic_video/Small_short_test_video_dWW4boP.mp4",
+         "current video tutorial": "true"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "indian-visa"
+ }
+}

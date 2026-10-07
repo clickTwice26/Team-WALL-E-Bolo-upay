@@ -1,0 +1,124 @@
+{
+ "url": "https://www.upaybd.com/services/details/payoneer-service",
+ "api": "https://api.upaybd.com/api/v2/pages/payoneer-service",
+ "data": {
+  "title_english": "Payoneer Service",
+  "title_bangla": "Payoneer Service",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Payoneer Service",
+     "title bn": "পেওনিয়ার সার্ভিস",
+     "background image": "/media/dynamic_image/Send_Money_desktop_MKEPUMZ_rpgyj1k.jpg",
+     "background image sd": "/media/dynamic_image/Untitled_design_7_ZAEzGYV.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<p><span style=\"font-size: 14pt;\"><strong>উপায় Partners with Payoneer for Freelancers</strong></span><br /><br /><span style=\"font-size: 14pt;\">উপায় has partnered with Payoneer to facilitate freelancers in Bangladesh by creating a new remittance channel. Freelancers will now be able to directly create or link their Payoneer account from the উপায় App to receive funds. There will be no need to travel to specific bank branches or provide extensive documentation for account opening or cash collection.</span></p>\r\n<p><span style=\"font-size: 14pt;\">Under this partnership, freelancers will be able to get the following services through উপায় app.</span></p>\r\n<ul>\r\n<li><span style=\"font-size: 14pt;\">Registration of Payoneer Account</span></li>\r\n<li><span style=\"font-size: 14pt;\">Linking of an existing Payoneer Account with উপায়</span></li>\r\n<li><span style=\"font-size: 14pt;\">Withdraw Payoneer Amount to উপায় wallet</span></li>\r\n<li><span style=\"font-size: 14pt;\">The Payoneer amount will be deposited to remittance pocket in equivalent BDT amount.</span></li>\r\n</ul>\r\n<br /><br /><span style=\"text-decoration: underline; font-size: 14pt;\"><strong>What are the benefits of Payoneer withdrawal through উপায়?</strong></span><br /><br />\r\n<ul>\r\n<li><span style=\"font-size: 14pt;\">New Account Registration</span></li>\r\n<li><span style=\"font-size: 14pt;\">Instant Transfer</span></li>\r\n<li><span style=\"font-size: 14pt;\">Good Exchange Rate</span></li>\r\n<li><span style=\"font-size: 14pt;\">Minimum withdrawal of $5.</span></li>\r\n<li><span style=\"font-size: 14pt;\">Lowest Cashout Charge (Free Cashout from UCB ATMs)</span></li>\r\n</ul>\r\n<br /><br /><span style=\"font-size: 14pt;\"><strong><strong>Limits and Frequencies:<br /><br /></strong></strong></span>\r\n<table style=\"border-collapse: collapse; width: 62.1352%; height: 223px; margin-left: auto; margin-right: auto;\">\r\n<tbody>\r\n<tr style=\"height: 67px;\">\r\n<td style=\"width: 25.9946%; height: 48px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" colspan=\"2\" width=\"210\">\r\n<p><span style=\"font-size: 14pt;\"><strong>Per Transaction Limit</strong></span></p>\r\n</td>\r\n<td style=\"width: 27.2466%; height: 48px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" colspan=\"2\" width=\"216\">\r\n<p><span style=\"font-size: 14pt;\"><strong>Daily Transaction Limit</strong></span></p>\r\n</td>\r\n<td style=\"width: 40.9499%; height: 48px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" colspan=\"2\" width=\"221\">\r\n<p><span style=\"font-size: 14pt;\"><strong>Monthly Transaction Limit</strong></span></p>\r\n</td>\r\n</tr>\r\n<tr style=\"height: 47px;\">\r\n<td style=\"width: 14.2966%; height: 47px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"102\">\r\n<p><span style=\"font-size: 14pt;\">Minimum</span></p>\r\n</td>\r\n<td style=\"width: 11.698%; height: 47px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"108\">\r\n<p><span style=\"font-size: 14pt;\">Maximum</span></p>\r\n</td>\r\n<td style=\"width: 11.7849%; height: 47px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"102\">\r\n<p><span style=\"font-size: 14pt;\">Count</span></p>\r\n</td>\r\n<td style=\"width: 15.4617%; height: 47px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"114\">\r\n<p><span style=\"font-size: 14pt;\">Amount</span></p>\r\n</td>\r\n<td style=\"width: 19.388%; height: 47px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"108\">\r\n<p><span style=\"font-size: 14pt;\">Count</span></p>\r\n</td>\r\n<td style=\"width: 21.5619%; height: 47px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"113\">\r\n<p><span style=\"font-size: 14pt;\">Amount</span></p>\r\n</td>\r\n</tr>\r\n<tr style=\"height: 15px;\">\r\n<td style=\"width: 14.2966%; height: 15px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"102\">\r\n<p><span style=\"font-size: 14pt;\">$5</span></p>\r\n</td>\r\n<td style=\"width: 11.698%; height: 15px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"108\">\r\n<p><span style=\"font-size: 14pt;\">$2000</span></p>\r\n</td>\r\n<td style=\"width: 11.7849%; height: 15px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"102\">\r\n<p><span style=\"font-size: 14pt;\">10</span></p>\r\n</td>\r\n<td style=\"width: 15.4617%; height: 15px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"114\">\r\n<p><span style=\"font-size: 14pt;\">$2000</span></p>\r\n</td>\r\n<td style=\"width: 19.388%; height: 15px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"108\">\r\n<p><span style=\"font-size: 14pt;\">30</span></p>\r\n</td>\r\n<td style=\"width: 21.5619%; height: 15px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"113\">\r\n<p><span style=\"font-size: 14pt;\">$8,000</span></p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<br /><br /><span style=\"text-decoration: underline; font-size: 14pt;\"><strong>Service Charges:</strong></span><br /><br />\r\n<ul>\r\n<li><span style=\"font-size: 14pt;\">উপায় does not charge any fee for withdrawals from Payoneer Account</span></li>\r\n<li><span style=\"font-size: 14pt;\">The cash out charge from upay Agents of the amount is 1% (BDT 10 per thousand) and free from UCB ATMs.</span></li>\r\n<li><span style=\"font-size: 14pt;\">Standard Payoneer charges of <span data-teams=\"true\">3% + $1 per transaction</span> will be applicable when withdrawing money from your Payoneer account.</span></li>\r\n</ul>\r\n<br /><br /><br /><span style=\"text-decoration: underline; font-size: 14pt;\"><strong>Terms and Conditions:</strong></span><br /><br />\r\n<ul>\r\n<li><span style=\"font-size: 14pt;\">New Payoneer account registration is managed by Payoneer Teams.</span></li>\r\n<li><span style=\"font-size: 14pt;\">Any communication related to your Payoneer account may be done with Payoneer <a href=\"https://payoneer.custhelp.com/app/Contact_us\" target=\"_blank\" rel=\"noopener\">Support</a>.</span></li>\r\n<li><span style=\"font-size: 14pt;\">Any communication from Payoneer related to your account registration will be done on your registered email address.</span></li>\r\n<li><span style=\"font-size: 14pt;\">The reflection of Payoneer withdrawal amount to you উপায় account may takes few minutes.</span></li>\r\n<li><span style=\"font-size: 14pt;\">Free Cash out is only available through UCB ATMs. Charge for Agent Cash Out will be applicable.</span></li>\r\n</ul>",
+     "desc bn": "<p><span style=\"font-size: 14pt;\"><strong><br />ফ্রিল্যান্সারদের জন্য উপায়-এর সাথে পেওনিয়ার-এর পার্টনারশিপ</strong></span><br /><br /><span style=\"font-size: 14pt;\">এখন ফ্রিল্যান্সাররা উপায় অ্যাপ থেকে সরাসরি পেওনিয়ার অ্যাকাউন্ট তৈরি বা লিঙ্ক করতে পারবেন এবং তাদের ফান্ড গ্রহণ করতে পারবেন। এজন্য নির্দিষ্ট ব্যাংক শাখায় যাওয়ার বা অ্যাকাউন্ট খোলা ও ক্যাশ সংগ্রহের জন্য অতিরিক্ত কাগজপত্র জমা দেওয়ার প্রয়োজন হবে না।</span></p>\r\n<p><span style=\"font-size: 14pt;\"><strong><br />উপায়-এর মাধ্যমে পেওনিয়ার উত্তোলনের সুবিধাসমূহ:</strong></span></p>\r\n<ul>\r\n<li><span style=\"font-size: 14pt;\"><strong>নতুন অ্যাকাউন্ট নিবন্ধন:</strong> সহজেই নতুন পেওনিয়ার অ্যাকাউন্ট তৈরি করা যাবে।</span></li>\r\n<li><span style=\"font-size: 14pt;\"><strong>তাৎক্ষণিক লেনদেন:</strong> ফান্ড সরাসরি উপায় ওয়ালেটে দ্রুত জমা হবে।</span></li>\r\n<li><span style=\"font-size: 14pt;\"><strong>সেরা এক্সচেঞ্জ রেট:</strong> আকর্ষণীয় বিনিময় হার।</span></li>\r\n<li><span style=\"font-size: 14pt;\"><strong>ন্যূনতম উত্তোলন $৫:</strong> শুধুমাত্র $৫ উত্তোলন করেই ফান্ড পেতে পারবেন।</span></li>\r\n<li><span style=\"font-size: 14pt;\"><strong>সবচেয়ে কম ক্যাশআউট চার্জ (UCB এটিএম থেকে বিনামূল্যে ক্যাশআউট):</strong> উপায় এজেন্টদের মাধ্যমে সর্বনিম্ন ক্যাশআউট চার্জ, এবং UCB এটিএম থেকে বিনামূল্যে ক্যাশআউট সুবিধা।</span></li>\r\n</ul>\r\n<br /><br /><span style=\"font-size: 14pt;\"><strong>লিমিট এবং লেনদেনের সীমা:<br /><br /></strong></span>\r\n<table style=\"border-collapse: collapse; width: 62.4417%; height: 237px; margin-left: auto; margin-right: auto;\">\r\n<tbody>\r\n<tr style=\"height: 67px;\">\r\n<td style=\"width: 25.9946%; height: 48px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" colspan=\"2\" width=\"210\"><span style=\"font-size: 14pt;\"><strong>প্রতিটি লেনদেনের সীমা</strong></span></td>\r\n<td style=\"width: 27.2466%; height: 48px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" colspan=\"2\" width=\"216\"><span style=\"font-size: 14pt;\"><strong>প্রতিদিনের লেনদেনের সীমা</strong><strong>&nbsp;</strong></span></td>\r\n<td style=\"width: 40.9499%; height: 48px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" colspan=\"2\" width=\"221\">\r\n<p><span style=\"font-size: 14pt;\"><strong>মাসিক লেনদেনের সীমা</strong></span></p>\r\n</td>\r\n</tr>\r\n<tr style=\"height: 47px;\">\r\n<td style=\"width: 14.2966%; height: 47px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"102\">\r\n<p><span style=\"font-size: 14pt;\">ন্যূনতম</span></p>\r\n</td>\r\n<td style=\"width: 11.698%; height: 47px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"108\">\r\n<p><span style=\"font-size: 14pt;\">সর্বোচ্চ</span></p>\r\n</td>\r\n<td style=\"width: 11.7849%; height: 47px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"102\">\r\n<p><span style=\"font-size: 14pt;\">সংখ্যা</span></p>\r\n</td>\r\n<td style=\"width: 15.4617%; height: 47px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"114\">\r\n<p><span style=\"font-size: 14pt;\">পরিমাণ</span></p>\r\n</td>\r\n<td style=\"width: 19.388%; height: 47px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"108\">\r\n<p><span style=\"font-size: 14pt;\">সংখ্যা</span></p>\r\n</td>\r\n<td style=\"width: 21.5619%; height: 47px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"113\"><span style=\"font-size: 14pt;\">পরিমাণ</span></td>\r\n</tr>\r\n<tr style=\"height: 15px;\">\r\n<td style=\"width: 14.2966%; height: 15px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"102\">\r\n<p><span style=\"font-size: 14pt;\">$৫</span></p>\r\n</td>\r\n<td style=\"width: 11.698%; height: 15px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"108\">\r\n<p><span style=\"font-size: 14pt;\">$২,০০০</span></p>\r\n</td>\r\n<td style=\"width: 11.7849%; height: 15px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"102\">\r\n<p><span style=\"font-size: 14pt;\">১০</span></p>\r\n</td>\r\n<td style=\"width: 15.4617%; height: 15px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"114\">\r\n<p><span style=\"font-size: 14pt;\">$২,০০০</span></p>\r\n</td>\r\n<td style=\"width: 19.388%; height: 15px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"108\">\r\n<p><span style=\"font-size: 14pt;\">৩০</span></p>\r\n</td>\r\n<td style=\"width: 21.5619%; height: 15px; text-align: center; vertical-align: middle; border-color: #000000; border-style: solid;\" width=\"113\">\r\n<p><span style=\"font-size: 14pt;\">$৮,০০০</span></p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<br /><br /><br />\r\n<p><span style=\"font-size: 14pt;\"><strong>সার্ভিস চার্জসমূহ:</strong></span></p>\r\n<ul>\r\n<li><span style=\"font-size: 14pt;\">উপায় পেওনিয়ার অ্যাকাউন্ট থেকে উত্তোলনের জন্য কোনো ফি নেয় না।</span></li>\r\n<li><span style=\"font-size: 14pt;\">উপায় এজেন্টদের মাধ্যমে ক্যাশ আউটের জন্য চার্জ হবে উত্তোলনকৃত পরিমাণের ১% (প্রতি হাজারে BDT ১০) এবং UCB এটিএম থেকে ক্যাশ আউট ফ্রি।</span></li>\r\n<li><span style=\"font-size: 14pt;\">পেওনিয়ার অ্যাকাউন্ট থেকে টাকা উত্তোলনের সময় প্রতি লেনদেনে ৩% + $1 স্ট্যান্ডার্ড চার্জ প্রযোজ্য হবে।</span></li>\r\n</ul>\r\n<br />\r\n<p><span style=\"font-size: 14pt;\"><strong><br />শর্তাবলী:</strong></span></p>\r\n<ul>\r\n<li><span style=\"font-size: 14pt;\">নতুন পেওনিয়ার অ্যাকাউন্ট নিবন্ধন পেওনিয়ার টিম দ্বারা পরিচালিত হয়।</span></li>\r\n<li><span style=\"font-size: 14pt;\">আপনার পেওনিয়ার অ্যাকাউন্ট সম্পর্কিত যে কোনও যোগাযোগ পেওনিয়ার সাপোর্টের মাধ্যমে করা যেতে পারে।</span></li>\r\n<li><span style=\"font-size: 14pt;\">পেওনিয়ার থেকে প্রাপ্ত অ্যাকাউন্ট নিবন্ধনের সম্পর্কিত সকল যোগাযোগ আপনার রেজিস্টার্ড ইমেইলে পাঠানো হবে।</span></li>\r\n<li><span style=\"font-size: 14pt;\">পেওনিয়ার থেকে উপায় অ্যাকাউন্টে টাকা জমা হতে কয়েক মিনিট সময় লাগতে পারে।</span></li>\r\n<li><span style=\"font-size: 14pt;\">ফ্রি ক্যাশ আউট শুধুমাত্র UCB এটিএম-এর মাধ্যমে উপলব্ধ। এজেন্ট ক্যাশ আউটের জন্য চার্জ প্রযোজ্য হবে।</span></li>\r\n</ul>",
+     "Methods": [
+      {
+       "title": "How to user your Payoneer service with উপায় app ?",
+       "title bn": "কিভাবে উপায় অ্যাপ এর মাধ্যমে পেওনিয়ার সার্ভিস ব্যাবহার করতে পারবেন ?",
+       "desc": "<br /><span style=\"font-size: 12pt;\">By following a few simple steps through উপায় app, you can create a new Payoneer account, connect your Payoneer account with উপায় and withdraw money easily. </span><br /><br /><span style=\"font-size: 12pt;\">Click on the link for the tutorial video: <a href=\"https://youtu.be/fOLsdilyj2c\" target=\"_blank\" rel=\"noopener\">Payoneer Tutorial</a></span>",
+       "desc bn": "<span style=\"font-size: 12pt;\">কিছু সহজ ধাপ অনুসরণ করে উপায় অ্যাপের মাধ্যমে আপনি একটি নতুন পেওনিয়ার অ্যাকাউন্ট তৈরি করতে পারেন, আপনার পেওনিয়ার অ্যাকাউন্টকে উপায়ের সাথে সংযুক্ত করতে পারেন এবং সহজেই টাকা উত্তোলন করতে পারেন। </span><br /><br /><span style=\"font-size: 12pt;\">আরও বিস্তারিত জানতে দেখে ফেলুন এই ভিডিওটিঃ <a href=\"https://youtu.be/fOLsdilyj2c\" target=\"_blank\" rel=\"noopener\">Payoneer Tutorial</a>&nbsp;</span>",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/8_3wuTzZn.png",
+         "image sd": "/media/dynamic_image/8_OUaUxfm.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_eYdWvVh.png",
+         "image sd": "/media/dynamic_image/1_iaaNFd4.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_ZkgPWYe.png",
+         "image sd": "/media/dynamic_image/2_6dS7YQu.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_lyS5SCB.png",
+         "image sd": "/media/dynamic_image/3_yKNNtUT.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_aQJk0vz.png",
+         "image sd": "/media/dynamic_image/4_hF8jKDU.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_8ebXm3p.png",
+         "image sd": "/media/dynamic_image/5_ftfIWeV.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_GYjO4PD.png",
+         "image sd": "/media/dynamic_image/6_iMxmqKz.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_lbZ3YFq.png",
+         "image sd": "/media/dynamic_image/7_8ctIb1j.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_yEWAPjA.png",
+         "image sd": "/media/dynamic_image/8_Pebvdal.png"
+        },
+        {
+         "image": "/media/dynamic_image/9_0LJFcdK.png",
+         "image sd": "/media/dynamic_image/9_arLU3E7.png"
+        },
+        {
+         "image": "/media/dynamic_image/10_JWpP7jj.png",
+         "image sd": "/media/dynamic_image/10_FoieWwo.png"
+        },
+        {
+         "image": "/media/dynamic_image/11_bmF72rr.png",
+         "image sd": "/media/dynamic_image/11_sAMHEXS.png"
+        },
+        {
+         "image": "/media/dynamic_image/12_zwe07Uu.png",
+         "image sd": "/media/dynamic_image/12_aGuOZ1l.png"
+        },
+        {
+         "image": "/media/dynamic_image/13_rJTf2uh.png",
+         "image sd": "/media/dynamic_image/13_PfGvxTU.png"
+        },
+        {
+         "image": "/media/dynamic_image/14_7XWbfYh.png",
+         "image sd": "/media/dynamic_image/14_IHTi9zD.png"
+        },
+        {
+         "image": "/media/dynamic_image/15_qsRexQS.png",
+         "image sd": "/media/dynamic_image/15_WYUKr5B.png"
+        },
+        {
+         "image": "/media/dynamic_image/16.png",
+         "image sd": "/media/dynamic_image/16_DzIGnZC.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "Check out the tutorial below",
+       "title bn": "Check out the tutorial below",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "payoneer-service"
+ }
+}

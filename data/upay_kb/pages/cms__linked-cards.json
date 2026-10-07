@@ -1,0 +1,27 @@
+{
+ "url": "https://www.upaybd.com/services/details/linked-cards",
+ "api": "https://api.upaybd.com/api/v2/pages/linked-cards",
+ "data": {
+  "title_english": "Linked Cards",
+  "title_bangla": "Linked Cards",
+  "template_name": "template-g",
+  "rows": {
+   "Data": [
+    {
+     "cover title": "Linked Cards",
+     "cover title bn": "কার্ড অ্যাড করুন",
+     "cover image": "/media/dynamic_image/Credit_card_Mobile_DM4Hhtb.jpg",
+     "cover image sd": "/media/dynamic_image/Website_Mobile_Header_3_8d1eEcB.png",
+     "desc": "<p style=\"text-align: center;\"><span style=\"font-weight: 400;\"><br /><br /><span style=\"font-size: 14pt;\">You can tag your UCB debit/credit card directly to your উপায় (upay) account. By tagging your UCB debit/credit card, you don&rsquo;t need to enter your pin &amp; OTP every time. Just tag your card and transfer your money within a few clicks.</span></span></p>\r\n<ul>\r\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400; font-size: 14pt;\">User input his/her PIN and press &ldquo;GO&rsquo; button to login</span></li>\r\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400; font-size: 14pt;\">Click &ldquo;Add Money&rdquo; from account home page</span></li>\r\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400; font-size: 14pt;\">Select &ldquo;Receiver Name or Number&rdquo;</span></li>\r\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400; font-size: 14pt;\">Enter &ldquo;Amount&rdquo;</span></li>\r\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400; font-size: 14pt;\">Select &ldquo;Linked Cards&rdquo;&nbsp;</span></li>\r\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400; font-size: 14pt;\">Select &ldquo;Linked Cards&rdquo; from drop down menu</span></li>\r\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400; font-size: 14pt;\">Enter &ldquo;PIN&rdquo;</span></li>\r\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400; font-size: 14pt;\">Slide &ldquo;Confirm&rdquo; to add money</span></li>\r\n</ul>",
+     "desc bn": "<p style=\"text-align: center;\"><span style=\"font-size: 14pt;\"><br />আপনার ইউসিবি ডেবিট/ক্রেডিট কার্ড সরাসরি উপায় অ্যাকাউন্টে ট্যাগ করতে পারবেন। আপনার ইউসিবি ডেবিট/ক্রেডিট কার্ড ট্যাগ করা থাকলে প্রতিবার পিন নাম্বার কিংবা ওটিপি দেয়ার প্রয়োজন নেই। শুধু কার্ড অ্যাকাউন্টের সাথে ট্যাগ করে টাকা ট্রান্সফার করুন কয়েকটি ক্লিকে।</span><br /><br /><br /></p>\r\n<span style=\"font-size: 14pt;\">- আপনার পিন নাম্বার দিয়ে &ldquo;GO&rdquo; বাটনে প্রেস করে লগ-ইন করুন</span><br /><span style=\"font-size: 14pt;\">- হোম পেইজ থেকে &ldquo;Add Money&rdquo; ক্লিক করুন</span><br /><span style=\"font-size: 14pt;\">- &ldquo;Receiver Name or Number&rdquo; সিলেক্ট করে</span><br /><span style=\"font-size: 14pt;\">- &ldquo;Amount&rdquo; দিন</span><br /><span style=\"font-size: 14pt;\">- তারপর &ldquo;Linked Cards&rdquo; সিলেক্ট করুন</span><br /><span style=\"font-size: 14pt;\">- নিচের মেন্যু থেকে &ldquo;Linked Cards&rdquo; সিলেক্ট করুন</span><br /><span style=\"font-size: 14pt;\">- &ldquo;PIN&rdquo; দিন</span><br /><span style=\"font-size: 14pt;\">- &ldquo;Confirm&rdquo; স্লাইড করে অ্যাড মানি করুন</span>",
+     "Navigation": [
+      {
+       "slug url": "/nav/Navigation"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "linked-cards"
+ }
+}

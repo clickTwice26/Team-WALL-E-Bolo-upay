@@ -1,0 +1,100 @@
+{
+ "url": "https://www.upaybd.com/services/details/nesco-postpaid",
+ "api": "https://api.upaybd.com/api/v2/pages/nesco-postpaid",
+ "data": {
+  "title_english": "NESCO-Postpaid",
+  "title_bangla": "NESCO-Postpaid",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "NESCO Postpaid",
+     "title bn": "NESCO Postpaid",
+     "background image": "/media/dynamic_image/Electricity_-_Desktop_lkK7FPg_1_ucq43J7.png",
+     "background image sd": "/media/dynamic_image/Electricity_-_Desktop_lkK7FPg_1_UDdfbQJ.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "Too much hassle on paying your electricity bill on time ? No worries anymore, as upay lets you pay your bill without any tension, straight from upay app.",
+     "desc bn": "এখন আর টেনশন করার কারণ নেই। উপায় এর মাধ্যমে আপনার বিল পরিশোধ করুন সহজেই এবং মাত্র কয়েকটা ক্লিক করে।",
+     "Methods": [
+      {
+       "title": "How to pay NESCO Postpaid Bill ?",
+       "title bn": "How to pay NESCO Postpaid Bill ?",
+       "desc": "Simply follow the below steps to pay your NESCO Postpaid Bill",
+       "desc bn": "নিম্নের ধাপ অনুসরণ করে সহজেই নেসকো পোস্টপেইড বিল সম্পন্ন করুন",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Untitled_1_Sgq8FWf.png",
+         "image sd": "/media/dynamic_image/Untitled_1_MekPGsb.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_7w6zNRk.png",
+         "image sd": "/media/dynamic_image/1_MyM1myY.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_PK1TMZd.png",
+         "image sd": "/media/dynamic_image/2_MoVo8sa.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_JFhCTLA.png",
+         "image sd": "/media/dynamic_image/3_Jwx3ABM.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_h0J7FD2.png",
+         "image sd": "/media/dynamic_image/4_koLWjoX.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_KxoYb5G.png",
+         "image sd": "/media/dynamic_image/5_gFIt8sn.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_XWs9pFl.png",
+         "image sd": "/media/dynamic_image/6_bnRSOeF.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_DhUdsnA.png",
+         "image sd": "/media/dynamic_image/7_vS8FrKA.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_0GO1IYt.png",
+         "image sd": "/media/dynamic_image/8_1S9srjH.png"
+        },
+        {
+         "image": "/media/dynamic_image/9_FTHAhz3.png",
+         "image sd": "/media/dynamic_image/9_aWtKtVj.png"
+        },
+        {
+         "image": "/media/dynamic_image/10_fsmtsl0.png",
+         "image sd": "/media/dynamic_image/10_h2d4Gvh.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "nesco-postpaid"
+ }
+}

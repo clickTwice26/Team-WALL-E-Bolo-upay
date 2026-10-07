@@ -1,0 +1,54 @@
+{
+ "url": "https://www.upaybd.com/products/Cash-Out",
+ "api": "https://api.upaybd.com/api/v2/pages/Cash-Out",
+ "data": {
+  "title_english": "Cash Out",
+  "title_bangla": "Cash Out",
+  "template_name": "template-c",
+  "rows": {
+   "Data": [
+    {
+     "cover title": "Cash out",
+     "cover title bn": "ক্যাশ আউট",
+     "background image": "/media/dynamic_image/Rates_and_Charges_desktop_1_ay7ezWH.jpg",
+     "background image sd": "/media/dynamic_image/Rates_and_Charges_mobile_obdDasH.jpg",
+     "desc": "<div style=\"text-align: center;\">Forgot your account? Now with উপায় (upay), you have an easy solution. Go to any উপায় (upay) agent or UCB ATM booth near you &amp; simply withdraw your money.</div>",
+     "desc bn": "<div style=\"text-align: center;\">আপনার ওয়ালেট ভুলে গেছেন? এখন উপায়-তে রয়েছে এর সহজ সমাধান। যেকোনো উপায় এজেন্ট বা ইউসিবি এটিএম বুথে যেয়ে আপনার টাকা তুলে ফেলুন সহজে।</div>",
+     "methods": [
+      {
+       "title": "upay Agent",
+       "title bn": "উপায় এজেন্ট&nbsp;",
+       "image": "/media/dynamic_image/Rectangle_66.jpg",
+       "image sd": "/media/dynamic_image/Rectangle_66_Yk6ZJfV.jpg",
+       "icon image": "/media/dynamic_image/Hosting-1_7xKpvMF.svg",
+       "icon image sd": "/media/dynamic_image/Hosting-1_4tN51of.svg",
+       "slug url": "/services/details/upay-agent",
+       "has providers": "true"
+      },
+      {
+       "title": "ATM Booth",
+       "title bn": "এটিএম বুথ&nbsp;",
+       "image": "/media/dynamic_image/Rectangle_66-1.jpg",
+       "image sd": "/media/dynamic_image/Rectangle_66-1_lQuglxU.jpg",
+       "icon image": "/media/dynamic_image/Hosting.png",
+       "icon image sd": "/media/dynamic_image/Hosting_Jk5wuAS.png",
+       "slug url": "/services/details/atm",
+       "has providers": "true"
+      }
+     ],
+     "GetApp": [
+      {
+       "Slug url": "/Get-App"
+      }
+     ],
+     "Navigation": [
+      {
+       "slug url": "/nav/Navigation"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "Cash-Out"
+ }
+}

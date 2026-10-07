@@ -1,0 +1,54 @@
+{
+ "url": "https://www.upaybd.com/services/details/jalalabad-gas-options",
+ "api": "https://api.upaybd.com/api/v2/pages/jalalabad-gas-options",
+ "data": {
+  "title_english": "Jalalabad Gas Options",
+  "title_bangla": "Jalalabad Gas Options",
+  "template_name": "template-c",
+  "rows": {
+   "Data": [
+    {
+     "cover title": "Jalalabad Gas",
+     "cover title bn": "জালালাবাদ গ্যাস",
+     "background image": "/media/dynamic_image/Desktop_Backdrop_Website_1_N8H8rY3.png",
+     "background image sd": "/media/dynamic_image/Mobile_Backdrop_Website_2070_x_750_px_1_1_RINxEpr.png",
+     "desc": "Gas Bill payment is easy and convenient through upay. Now enjoy Jalalabad Gas Bill Payment for both Prepaid and Postpaid, at no additional cost.",
+     "desc bn": "উপায় এর মাধ্যমে গ্যাস বিল পরিশোধ করা সহজ এবং সুবিধাজনক। এখন কোনো অতিরিক্ত খরচ ছাড়াই প্রিপেইড এবং পোস্টপেইড উভয়ের জন্য জালালাবাদ গ্যাস বিল পেমেন্ট উপভোগ করুন।",
+     "methods": [
+      {
+       "title": "Postpaid Payment",
+       "title bn": "পোস্টপেইড পেমেন্ট&nbsp;",
+       "image": "/media/dynamic_image/Rectangle_66_3_7pyDaPm.png",
+       "image sd": "/media/dynamic_image/Rectangle_66_3_Esw3reY.png",
+       "icon image": "/media/dynamic_image/Asset_144x-8_3_2Vv8Nwx.svg",
+       "icon image sd": "/media/dynamic_image/Asset_144x-8_3_h3B76cZ.svg",
+       "slug url": "/services/details/jalalabad-gas",
+       "has providers": "true"
+      },
+      {
+       "title": "Prepaid Payment",
+       "title bn": "প্রিপেইড পেমেন্ট",
+       "image": "/media/dynamic_image/Rectangle_66_3_gvIvXw5.png",
+       "image sd": "/media/dynamic_image/Rectangle_66_3_XXJfFzI.png",
+       "icon image": "/media/dynamic_image/Asset_144x-8_3_lAyWAdl.svg",
+       "icon image sd": "/media/dynamic_image/Asset_144x-8_3_V2MuS7J.svg",
+       "slug url": "/ProductServices/jalalabad-gas-prepaid",
+       "has providers": "true"
+      }
+     ],
+     "GetApp": [
+      {
+       "Slug url": ""
+      }
+     ],
+     "Navigation": [
+      {
+       "slug url": ""
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "jalalabad-gas-options"
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "url": "https://www.upaybd.com/services/details/card-to-upay-add-money",
+ "api": "https://api.upaybd.com/api/v2/pages/card-to-upay-add-money",
+ "data": {
+  "title_english": "Card to upay Add Money ",
+  "title_bangla": "Card to upay Add Money ",
+  "template_name": "template-h",
+  "rows": {
+   "Data": [
+    {
+     "image": "/media/dynamic_image/WEB_BANNER1440X680_XT9wthl.png",
+     "image sd": "/media/dynamic_image/WEB_BANNER1440X680_uajsbxI.png",
+     "Details data": [
+      {
+       "title": "Bangladesh Bank&rsquo;s Directives for Card to upay Add Money",
+       "title bn": "কার্ড থেকে উপায় Add Money সংক্রান্ত বাংলাদেশ ব্যাংকের নির্দেশনা",
+       "desc": "<div style=\"text-align: justify;\">In compliance with&nbsp;<strong>Circular No. 03/2026 of PSD- 1, Bangladesh Bank</strong>,&nbsp;upay&nbsp;has implemented a new verification process for&nbsp;<strong>Card to&nbsp;upay&nbsp;Add Money</strong>&nbsp;transactions, effective&nbsp;<strong>01 August 2026</strong>.&nbsp;<br /><br /></div>\r\n<div style=\"text-align: justify;\">As per the directive, the first Card to&nbsp;upay&nbsp;Add Money transaction must be completed with a maximum amount of&nbsp;<strong>BDT 500</strong>. Once the first successful transaction is completed, customers will be able to enjoy the regular Add Money transaction limits after a&nbsp;<strong>24-hour verification period</strong>. This verification is&nbsp;required&nbsp;only once for each card.&nbsp;</div>\r\n<div style=\"text-align: justify;\">&nbsp;</div>\r\n<div style=\"text-align: justify;\"><strong>Implementation Date:</strong>&nbsp;<strong>01 August 2026</strong>&nbsp;</div>\r\n<div style=\"text-align: justify;\">&nbsp;</div>\r\n<div style=\"text-align: justify;\"><strong>How It Works:</strong>&nbsp;</div>\r\n<ul>\r\n<li style=\"text-align: justify;\">\r\n<div><strong>Step 1:</strong>Complete your first Card to&nbsp;upay&nbsp;Add Money transaction with an amount of up to&nbsp;<strong>BDT 500</strong>.&nbsp;&nbsp;</div>\r\n</li>\r\n<li style=\"text-align: justify;\">\r\n<div><strong>Step 2:</strong>Wait for&nbsp;<strong>24 hours</strong>&nbsp;after the successful transaction.&nbsp;&nbsp;</div>\r\n</li>\r\n<li style=\"text-align: justify;\">\r\n<div><strong>Step 3:</strong>Your card will be verified, and you can then enjoy the regular Card to&nbsp;upay&nbsp;Add Money transaction subject to approved limits.&nbsp;&nbsp;</div>\r\n</li>\r\n<li>\r\n<div style=\"text-align: justify;\">This is a&nbsp;<strong>one-time verification process</strong>and is mandatory as per&nbsp;<strong>Bangladesh Bank</strong>&nbsp;</div>\r\n</li>\r\n</ul>",
+       "desc bn": "<div style=\"text-align: justify;\">বাংলাদেশ ব্যাংকের পিএসডি- ১ সার্কুলার নং ০৩/২০২৬ অনুযায়ী, <strong>০১ আগস্ট ২০২৬</strong> থেকে কার্ড থেকে উপায় Add Money লেনদেনের জন্য একটি নতুন ভেরিফিকেশন প্রক্রিয়া চালু করা হয়েছে।<br /><br /></div>\r\n<div style=\"text-align: justify;\">উক্ত নির্দেশনা অনুযায়ী, কার্ড থেকে উপায়- এ প্রথম Add Money লেনদেন সর্বোচ্চ <strong>৫০০ টাকা</strong> পর্যন্ত করা যাবে। প্রথম লেনদেন সফলভাবে সম্পন্ন হওয়ার <strong>২৪ ঘণ্টা ভেরিফিকেশন সময়</strong> শেষে গ্রাহকরা কার্ড থেকে উপায় Add Money- এর নিয়মিত লেনদেন সীমা উপভোগ করতে পারবেন। প্রতিটি কার্ডের জন্য এই ভেরিফিকেশন <strong>শুধুমাত্র একবার</strong> প্রয়োজন হবে।<br /><br /></div>\r\n<div style=\"text-align: justify;\"><strong>কার্যকর হওয়ার তারিখ:</strong> ০১ আগস্ট ২০২৬</div>\r\n<div style=\"text-align: justify;\"><strong><br />যেভাবে কাজ করবে</strong></div>\r\n<ul>\r\n<li style=\"text-align: justify;\">\r\n<div><strong>ধাপ ১:</strong> আপনার প্রথম কার্ড থেকে উপায় Add Money লেনদেন <strong>সর্বোচ্চ ৫০০ টাকা</strong> পর্যন্ত সম্পন্ন করুন।</div>\r\n</li>\r\n<li style=\"text-align: justify;\">\r\n<div><strong>ধাপ ২:</strong> সফল লেনদেনের পর <strong>২৪ ঘণ্টা অপেক্ষা করুন</strong>।</div>\r\n</li>\r\n<li style=\"text-align: justify;\">\r\n<div><strong>ধাপ ৩:</strong> আপনার কার্ড ভেরিফাই হয়ে যাবে এবং এরপর আপনি কার্ড থেকে উপায় Add Money-এর <strong>নিয়মিত লেনদেন সীমা</strong> ব্যবহার করতে পারবেন।</div>\r\n</li>\r\n<li>\r\n<div style=\"text-align: justify;\">এটি <strong>এককালীন ভেরিফিকেশন প্রক্রিয়া</strong> এবং বাংলাদেশ ব্যাংকের নির্দেশনা অনুযায়ী বাধ্যতামূলক।</div>\r\n</li>\r\n</ul>",
+       "sub title": "",
+       "sub title bn": "",
+       "sub desc": "",
+       "sub desc bn": "",
+       "key value": []
+      }
+     ],
+     "May like": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under May like": []
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "card-to-upay-add-money"
+ }
+}

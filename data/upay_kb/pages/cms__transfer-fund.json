@@ -1,0 +1,50 @@
+{
+ "url": "https://www.upaybd.com/products/utility/transfer-fund",
+ "api": "https://api.upaybd.com/api/v2/pages/transfer-fund",
+ "data": {
+  "title_english": "Transfer Fund",
+  "title_bangla": "Transfer Fund",
+  "template_name": "template-d",
+  "rows": {
+   "Data": [
+    {
+     "title": "Fund Transfer",
+     "title bn": "Fund Transfer",
+     "background image": "/media/dynamic_image/Cash_In_desktop_4oSoEn6_11v8xHk_BWo3FA0.jpg",
+     "background image sd": "/media/dynamic_image/Cash_In_mobile_X5JdPEu_GuJgbu0_LXI1vye.jpg",
+     "desc": "Need to transfer money to your bank account on a holiday when the Bank is closed ? No need to worry. Now with upay app, you can easily transfer funds any time anywhere.",
+     "desc bn": "Need to transfer money to your bank account on a holiday when the Bank is closed ? No need to worry. Now with upay app, you can easily transfer funds any time anywhere.",
+     "bill payment list": [
+      {
+       "title": "upay to Bank",
+       "title bn": "upay to Bank",
+       "icon": "/media/dynamic_image/Bank_icon.png",
+       "icon sd": "/media/dynamic_image/Bank_icon_hStwNEC.png",
+       "slug url": "/services/details/fund-transfer"
+      },
+      {
+       "title": "VISA",
+       "title bn": "ভিসা&nbsp;",
+       "icon": "/media/dynamic_image/VISA_Logo_1_pYxpwUR.png",
+       "icon sd": "/media/dynamic_image/VISA_Logo_1_VSs6OVi.png",
+       "slug url": "/services/details/visa-debit-card"
+      }
+     ],
+     "Other Service": [
+      {
+       "title": "Bill Pay",
+       "title bn": "বিল পে&nbsp;",
+       "slug url": "/products/Pay-Bill"
+      },
+      {
+       "title": "Credit Card",
+       "title bn": "ক্রেডিট কার্ড&nbsp;",
+       "slug url": "/products/utility/credit-card-service"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "transfer-fund"
+ }
+}

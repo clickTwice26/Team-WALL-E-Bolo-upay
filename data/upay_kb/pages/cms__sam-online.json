@@ -1,0 +1,96 @@
+{
+ "url": "https://www.upaybd.com/services/details/sam-online",
+ "api": "https://api.upaybd.com/api/v2/pages/sam-online",
+ "data": {
+  "title_english": "SAM Online",
+  "title_bangla": "SAM Online",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "SAM Online",
+     "title bn": "SAM Online",
+     "background image": "/media/dynamic_image/Desktop_Internet_Backdrop_IHsPlXy.png",
+     "background image sd": "/media/dynamic_image/Mobile_internet_backdrop_l014c16.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<div style=\"text-align: center;\"><br />There is no need to worry about paying your internet bill physically. Through upay app, you can pay your internet bill easily anytime, anywhere</div>",
+     "desc bn": "<div style=\"text-align: center;\"><br />There is no need to worry about paying your internet bill physically. Through upay app, you can pay your internet bill easily anytime, anywhere</div>",
+     "Methods": [
+      {
+       "title": "How to pay SAM Online Internet Bill ?",
+       "title bn": "How to pay SAM Online Internet Bill ?",
+       "desc": "",
+       "desc bn": "",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Add_Money_from_Card_is_not_available_on_268_6.png",
+         "image sd": "/media/dynamic_image/Add_Money_from_Card_is_not_available_on_268_6_Auafkcv.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_qZxRzPp.png",
+         "image sd": "/media/dynamic_image/1_q4T6Aqu.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_a2tjjo1.png",
+         "image sd": "/media/dynamic_image/2_qlykHu0.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_pMkaalm.png",
+         "image sd": "/media/dynamic_image/3_qmSMkIE.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_r6WeTS2.png",
+         "image sd": "/media/dynamic_image/4_I1H6taM.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_v3YtGpm.png",
+         "image sd": "/media/dynamic_image/5_juhSA7f.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_OSjKXYT.png",
+         "image sd": "/media/dynamic_image/6_hLa6pfI.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_CougPgp.png",
+         "image sd": "/media/dynamic_image/7_BeuSyDU.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_tiW3vf2.png",
+         "image sd": "/media/dynamic_image/8_i8OyVD0.png"
+        },
+        {
+         "image": "/media/dynamic_image/9_mspVCkf.png",
+         "image sd": "/media/dynamic_image/9_dadtCck.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "sam-online"
+ }
+}

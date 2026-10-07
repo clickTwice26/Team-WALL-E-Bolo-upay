@@ -1,0 +1,114 @@
+{
+ "url": "https://www.upaybd.com/need-help",
+ "api": "https://api.upaybd.com/api/v2/pages/need-help",
+ "data": {
+  "title_english": "Need help",
+  "title_bangla": "Need help",
+  "template_name": "need-help",
+  "rows": {
+   "Data": [
+    {
+     "cover title": "Need Help?",
+     "cover title bn": "হেল্প দরকার ?&nbsp;",
+     "cover image": "/media/dynamic_image/Need_help_desktop_uskzUo0.jpg",
+     "cover image sd": "/media/dynamic_image/Need_help_mobile_N11sQ14.jpg",
+     "Tutorial": [
+      {
+       "title": "Tutorials",
+       "title bn": "টিউটোরিয়াল",
+       "desc": "Watch all the tutorial videos below to learn more about upay services",
+       "desc bn": "উপায় সার্ভিস এর ব্যাপারে বিস্তারিত জানতে দেখে ফেলুন সব টিউটোরিয়াল ভিডিও&nbsp;\r\n<div id=\"tw-target-rmn-container\" class=\"tw-target-rmn tw-ta-container F0azHf tw-nfl\"></div>",
+       "Tutorial list": [
+        {
+         "title": "How to self register in upay",
+         "title bn": "উপায়তে কিভাবে সেলফ রেজিস্ট্রেশন করবেন ?",
+         "desc": "Opening in account in upay is easy, and only requires a phone number and an NID card. Watch the video to see how to self register in upay.",
+         "desc bn": "উপায় থেকে নতুন একাউন্ট করা খুব সহজ।&nbsp; শুধুমাত্র ফোন নম্বর ও NID দিয়েই নতুন একাউন্ট করে ফেলতে পারবেন সহজেই",
+         "thumb image": "/media/dynamic_image/Untitled_design_4.png",
+         "thumb image sd": "/media/dynamic_image/Untitled_design_4_ty1AUiA.png",
+         "video": "/media/dynamic_video/Self-Registration-Tutorial-V13.mp4",
+         "current video tutorial": "true"
+        },
+        {
+         "title": "How to apply for UCB - upay Prepaid Card ?",
+         "title bn": "ইউসিবি উপায় প্রিপেইড কার্ড রেজিস্ট্রেশন নিয়ম",
+         "desc": "For the first time in Bangladesh, upay introduces MFS co-branded prepaid card. Simply register your prepaid card through upay app, and enjoy level of convenience and financial freedom in home and abroad.",
+         "desc bn": "দেশে-বিদেশে লেনদেনের স্বাধীনতা দিতে উপায় নিয়ে এলো দেশের প্রথম এমএফএস কো-ব্র্যান্ডেড প্রিপেইড কার্ড! উপায় অ্যাপের মাধ্যমে রেজিস্ট্রেশন করে আজই রিকোয়েস্ট করুন আপনার ইউসিবি উপায় প্রিপেইড কার্ডের জন্য আর উপভোগ করুন দারুণ সব সুবিধা।",
+         "thumb image": "/media/dynamic_image/Thumbnail_Tutorial_Registration_Prepaid-card_N9uNjmY_zXOzKLZ.png",
+         "thumb image sd": "/media/dynamic_image/Thumbnail_Tutorial_Registration_Prepaid-card_N9uNjmY_zri1iLU.png",
+         "video": "/media/dynamic_video/upay_Prepaid_Card_Application_v5.mp4",
+         "current video tutorial": "true"
+        },
+        {
+         "title": "Multi - Wallet Feature",
+         "title bn": "মাল্টি-ওয়ালেট\" ফিচার",
+         "desc": "Having problems tracking your source of money ? upay brings to you multi wallet feature where you can see your separate wallet and source. Not only that, there is variable cash out charge feature for your convenience. Check out the video to know more.&nbsp;",
+         "desc bn": "আপনার অ্যাকাউন্টে বিভিন্ন জায়গা থেকে আসা টাকার ট্র্যাক রাখতে পারছেন না? এই ঝামেলা এড়ানোর উপায় আছে। উপায়-এ আপনার টাকা জমা হবে আলাদা আলাদা ওয়ালেটে। তাই ক্যাশ আউটের সময়ও থাকবে না বাড়তি চার্জের টেনশন। বিস্তারিত জানতে ক্লিক করুন ভিডিওটি",
+         "thumb image": "/media/dynamic_image/Add_Money_Multi_Wallet_Tutorial.png",
+         "thumb image sd": "/media/dynamic_image/Add_Money_Multi_Wallet_Tutorial_jOrsJ4B.png",
+         "video": "/media/dynamic_video/App_Tutorial_on_Multi-Wallet.mp4",
+         "current video tutorial": "true"
+        },
+        {
+         "title": "How to register your upay account with Payoneer ?",
+         "title bn": "কিভাবে পেওনিয়ার এর সাথে আপনার উপায় অ্যাকাউন্ট রেজিস্টার করবেন ?&nbsp;",
+         "desc": "You can easily bring your Payoneer balance to you upay account, and cash out at only 1% charge. Check out the video to know more.",
+         "desc bn": "উপায়-এ আপনার পেওনিয়ার অ্যাকাউন্ট থেকে টাকা আনুন খুব সহজেই এবং ক্যাশ আউট করুন মাত্র ১% চার্জ-এ। কিভাবে রেজিস্টার করবেন, তা জানতে ভিডিওটি দেখুন।&nbsp;",
+         "thumb image": "/media/dynamic_image/Payoneer_registration_thumbnail.png",
+         "thumb image sd": "/media/dynamic_image/Payoneer_registration_thumbnail_uoTTBqZ.png",
+         "video": "/media/dynamic_video/Tutorial_Payoneer_Registration.mp4",
+         "current video tutorial": "true"
+        },
+        {
+         "title": "How to load Prepaid Card from upay app ?",
+         "title bn": "কি ভাবে উপায় অ্যাপ থেকে প্রিপেইড কার্ড লোড করবেন ?",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "/media/dynamic_image/Need_Help.png",
+         "thumb image sd": "/media/dynamic_image/Need_Help_4QXDXPM.png",
+         "video": "/media/dynamic_video/UPAY_Prepaid_Card_Load_Bangla_Version_Video_V6.mp4",
+         "current video tutorial": "true"
+        },
+        {
+         "title": "Safe transaction through upay",
+         "title bn": "উপায় এর সাথে নিরাপদ লেনদেন করুন&nbsp;",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "/media/dynamic_image/Nirapod_Lenden.png",
+         "thumb image sd": "/media/dynamic_image/Nirapod_Lenden_YDUEO4B.png",
+         "video": "/media/dynamic_video/UPAY_SAFETY__CHANNEL_ANIMATION_v1.mp4",
+         "current video tutorial": "true"
+        },
+        {
+         "title": "কম খরচে নিরাপদ লেনদেন করার উপায়-তো একটাই!",
+         "title bn": "কম খরচে নিরাপদ লেনদেন করার উপায়-তো একটাই!",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "/media/dynamic_image/upay_world.png",
+         "thumb image sd": "/media/dynamic_image/upay_world_998eAi4.png",
+         "video": "/media/dynamic_video/Untitled_design.mp4",
+         "current video tutorial": "true"
+        }
+       ]
+      }
+     ],
+     "FAQ": [
+      {
+       "title": "Frequently Asked Questions",
+       "title bn": "প্রয়োজনীয় তথ্য",
+       "desc": "Confused about any of our services. Simply search and learn more about about upay",
+       "desc bn": "আমাদের সার্ভিস নিয়ে কোনো তথ্য প্রয়োজন ? সার্চ করেই আপনার উত্তর পেয়ে যান সহজেই",
+       "slug url": "/Latest-offer"
+      }
+     ],
+     "Navigation": [
+      {
+       "slug url": "/nav/Navigation"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "need-help"
+ }
+}

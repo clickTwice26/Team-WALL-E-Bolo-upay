@@ -1,0 +1,128 @@
+{
+ "url": "https://www.upaybd.com/services/details/dpdc-postpaid",
+ "api": "https://api.upaybd.com/api/v2/pages/dpdc-postpaid",
+ "data": {
+  "title_english": "DPDC Postpaid",
+  "title_bangla": "DPDC Postpaid",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "DPDC Postpaid",
+     "title bn": "ডিপিডিসি পোস্টপেইড&nbsp;",
+     "background image": "/media/dynamic_image/Electricity_-_Desktop_dkUBjmJ.png",
+     "background image sd": "/media/dynamic_image/Electricity_-_Mobile_hl5DF9p.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<div style=\"text-align: center;\"><br />Too much hassle on paying your electricity bill on time ? No worries anymore, as upay lets you pay your bill without any tension, straight from upay app.</div>",
+     "desc bn": "<div style=\"text-align: center;\"><br />এখন আর টেনশন করার কারণ নেই।&nbsp; উপায় এর মাধ্যমে আপনার বিল পরিশোধ করুন সহজেই এবং মাত্র কয়েকটা ক্লিক করে।&nbsp;&nbsp;</div>",
+     "Methods": [
+      {
+       "title": "How to pay DPDC Postpaid bill ?",
+       "title bn": "কিভাবে ডিপিডিসি পোস্টপেইড বিল পরিশোধ করবেন ?",
+       "desc": "Simply follow the below steps to pay your DPDC Postpaid Bill",
+       "desc bn": "",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/1_fEZcKDl.png",
+         "image sd": "/media/dynamic_image/1_i6eqvd0.png"
+        },
+        {
+         "image ": "/media/dynamic_image/2_EeSM35E.png",
+         "image sd": "/media/dynamic_image/2_7SfRrOM.png"
+        },
+        {
+         "image ": "/media/dynamic_image/2_2_jU181Lp.png",
+         "image sd": "/media/dynamic_image/2_2_MD9ktlH.png"
+        },
+        {
+         "image ": "/media/dynamic_image/3_M3x01if.png",
+         "image sd": "/media/dynamic_image/3_iSSJbVD.png"
+        },
+        {
+         "image ": "/media/dynamic_image/4_bAFlsqh.png",
+         "image sd": "/media/dynamic_image/4_Sg5oNlJ.png"
+        },
+        {
+         "image ": "/media/dynamic_image/5_1opTXLn.png",
+         "image sd": "/media/dynamic_image/5_2OFN1Px.png"
+        },
+        {
+         "image ": "/media/dynamic_image/6_q3pbDuN.png",
+         "image sd": "/media/dynamic_image/6_K0kRsqY.png"
+        },
+        {
+         "image ": "/media/dynamic_image/7_bvNzHMU.png",
+         "image sd": "/media/dynamic_image/7_KNETegK.png"
+        },
+        {
+         "image ": "/media/dynamic_image/8_gAG3iyp.png",
+         "image sd": "/media/dynamic_image/8_SW0pu0A.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_KGkBoe7.png",
+         "image sd": "/media/dynamic_image/1_bTIZecC.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_1_P13JnOy.png",
+         "image sd": "/media/dynamic_image/2_1_p4EXMX5.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_2_WpQsoNJ.png",
+         "image sd": "/media/dynamic_image/2_2_JsiOVVo.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_3_AAqimd0.png",
+         "image sd": "/media/dynamic_image/2_3_MkNuT5h.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_4_fHDY9uK.png",
+         "image sd": "/media/dynamic_image/2_4_5X8Hr9n.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_5_bF7PKyv.png",
+         "image sd": "/media/dynamic_image/2_5_uLdwsHM.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_6_lqCngV6.png",
+         "image sd": "/media/dynamic_image/2_6_nhPWgts.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_7_AOMgxxB.png",
+         "image sd": "/media/dynamic_image/2_7_9qLBq0S.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_8.png",
+         "image sd": "/media/dynamic_image/2_8_V72RxSs.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "dpdc-postpaid"
+ }
+}

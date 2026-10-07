@@ -1,0 +1,96 @@
+{
+ "url": "https://www.upaybd.com/services/details/bpdb-prepaid",
+ "api": "https://api.upaybd.com/api/v2/pages/bpdb-prepaid",
+ "data": {
+  "title_english": "BPDB Prepaid",
+  "title_bangla": "BPDB Prepaid",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "BPDB Prepaid",
+     "title bn": "BPDB Prepaid",
+     "background image": "/media/dynamic_image/Electricity_-_Desktop_Fe3qEQt.png",
+     "background image sd": "/media/dynamic_image/Electricity_-_Mobile_eWy5okk.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<span style=\"font-size: 12pt;\">Are you tired of the hassle of paying your electricity bill on time? With upay, you can now effortlessly pay your bill through the upay app, making the process stress-free.</span>",
+     "desc bn": "<span style=\"font-size: 12pt;\">Are you tired of the hassle of paying your electricity bill on time? With upay, you can now effortlessly pay your bill through the upay app, making the process stress-free.</span>",
+     "Methods": [
+      {
+       "title": "How to pay BPDB Prepaid Bill ?",
+       "title bn": "How to pay BPDB Prepaid Bill ?",
+       "desc": "Follow the steps outlined below to make your BPDB Prepaid&nbsp; Bill payment effortlessly.",
+       "desc bn": "Follow the steps outlined below to make your BPDB Prepaid&nbsp; Bill payment effortlessly.",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/rsz_picture1.png",
+         "image sd": "/media/dynamic_image/rsz_picture1_ZkuGiZK.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_7D1aoEa.png",
+         "image sd": "/media/dynamic_image/1_hNhZXNC.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_G11XI1O.png",
+         "image sd": "/media/dynamic_image/2_B7W4owU.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_Fg74ygz.png",
+         "image sd": "/media/dynamic_image/3_IfrkyZy.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_WdcZVyv.png",
+         "image sd": "/media/dynamic_image/4_xQpI5cb.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_HgoOMqR.png",
+         "image sd": "/media/dynamic_image/5_Sqk31bx.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_zf6x09p.png",
+         "image sd": "/media/dynamic_image/6_GkwhFSF.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_UWV0jxw.png",
+         "image sd": "/media/dynamic_image/7_DUJCqhd.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_IWeBJnA.png",
+         "image sd": "/media/dynamic_image/8_VK8zMMM.png"
+        },
+        {
+         "image": "/media/dynamic_image/9_639pVco.png",
+         "image sd": "/media/dynamic_image/9_LqEPn45.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "bpdb-prepaid"
+ }
+}

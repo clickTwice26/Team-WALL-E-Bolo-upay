@@ -1,0 +1,85 @@
+{
+ "url": "https://www.upaybd.com/services/details/internet",
+ "api": "https://api.upaybd.com/api/v2/pages/internet",
+ "data": {
+  "title_english": "Internet",
+  "title_bangla": "Internet",
+  "template_name": "template-d",
+  "rows": {
+   "Data": [
+    {
+     "title": "Internet",
+     "title bn": "Internet",
+     "background image": "/media/dynamic_image/Desktop_Internet_Backdrop.png",
+     "background image sd": "/media/dynamic_image/Mobile_internet_backdrop.png",
+     "desc": "Pay your internet bill easily through upay",
+     "desc bn": "Pay your internet bill easily through upay",
+     "bill payment list": [
+      {
+       "title": "SAM Online",
+       "title bn": "সাম অনলাইন",
+       "icon": "/media/dynamic_image/SAM_Online.png",
+       "icon sd": "/media/dynamic_image/SAM_Online_HxISlmq.png",
+       "slug url": "/services/details/sam-online"
+      },
+      {
+       "title": "Carnival Internet",
+       "title bn": "কার্নিভাল ইন্টারনেট",
+       "icon": "/media/dynamic_image/Untitled_design_23.png",
+       "icon sd": "/media/dynamic_image/Untitled_design_23_Kwvipvv.png",
+       "slug url": "/services/details/carnival-internet"
+      },
+      {
+       "title": "BTCL",
+       "title bn": "বি টি সি এল",
+       "icon": "/media/dynamic_image/BTCL.png",
+       "icon sd": "/media/dynamic_image/BTCL_I26BD6J.png",
+       "slug url": "/services/details/btcl"
+      },
+      {
+       "title": "DOT Internet",
+       "title bn": "ডট ইন্টারনেট&nbsp;",
+       "icon": "/media/dynamic_image/DOT_Internet.png",
+       "icon sd": "/media/dynamic_image/DOT_Internet_wcA6IpT.png",
+       "slug url": "/services/details/dot-internet"
+      },
+      {
+       "title": "Infolink",
+       "title bn": "ইনফোলিংক&nbsp;",
+       "icon": "/media/dynamic_image/Infolink.png",
+       "icon sd": "/media/dynamic_image/Infolink_2qmpF2E.png",
+       "slug url": "/services/details/infolink"
+      },
+      {
+       "title": "Link3 Internet",
+       "title bn": "লিংক ৩ ইন্টারনেট&nbsp;",
+       "icon": "/media/dynamic_image/Link_3.png",
+       "icon sd": "/media/dynamic_image/Link_3_qdJUIf4.png",
+       "slug url": "/services/details/link3"
+      },
+      {
+       "title": "KS Network",
+       "title bn": "কে এস নেটওয়ার্ক&nbsp;",
+       "icon": "/media/dynamic_image/KS_Network.png",
+       "icon sd": "/media/dynamic_image/KS_Network_eWlvv2j.png",
+       "slug url": "/services/details/ks-network"
+      }
+     ],
+     "Other Service": [
+      {
+       "title": "Electricity",
+       "title bn": "ইলেক্ট্রিসিটি&nbsp;",
+       "slug url": "/products/utility/electricity-bill"
+      },
+      {
+       "title": "Gas",
+       "title bn": "গাস&nbsp;",
+       "slug url": "/products/utility/Gas"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "internet"
+ }
+}

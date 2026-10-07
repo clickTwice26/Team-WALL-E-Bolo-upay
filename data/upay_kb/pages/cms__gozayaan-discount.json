@@ -1,0 +1,53 @@
+{
+ "url": "https://www.upaybd.com/services/details/gozayaan-discount",
+ "api": "https://api.upaybd.com/api/v2/pages/gozayaan-discount",
+ "data": {
+  "title_english": "GoZayaan Discount",
+  "title_bangla": "GoZayaan Discount",
+  "template_name": "template-h",
+  "rows": {
+   "Data": [
+    {
+     "image": "/media/dynamic_image/gozayan_Promotional_Campaign_Website_Desktop.jpg",
+     "image sd": "/media/dynamic_image/gozayan_Promotional_Campaign_Website_Desktop_ap2pKD7.jpg",
+     "Details data": [
+      {
+       "title": "Enjoy Attractive Discounts on Travel Bookings with upay &amp; goZayaan!",
+       "title bn": "উপায়&nbsp;ও goZayaan-এর সঙ্গে ট্রাভেল বুকিংয়ে উপভোগ করুন আকর্ষণীয় ডিসকাউন্ট!",
+       "desc": "<div style=\"text-align: justify;\"><strong>Campaign Duration: </strong>01 August 2026 to 31 October 2026</div>\r\n<div style=\"text-align: justify;\"><strong><br />Offer Details:</strong></div>\r\n<div style=\"text-align: justify;\">\r\n<ul>\r\n<li>Get up to 10% discount on flight bookings.</li>\r\n<li>Get up to 70% discount on hotel and resort bookings.</li>\r\n</ul>\r\n</div>\r\n<div style=\"text-align: justify;\"><strong>How It Works:</strong></div>\r\n<div style=\"text-align: justify;\">\r\n<ul>\r\n<li>Visit gozayaan (app or website) and select your preferred flight, hotel, or resort package.</li>\r\n<li>Choose upay as the payment method at checkout.</li>\r\n<li>Complete the payment using upay.</li>\r\n<li>The applicable discount will be automatically applied as per the campaign terms and conditions.</li>\r\n</ul>\r\n</div>\r\n<div style=\"text-align: justify;\"><strong>Terms &amp; Conditions:</strong></div>",
+       "desc bn": "<div style=\"text-align: justify;\">\r\n<p class=\"isSelectedEnd\"><strong>ক্যাম্পেইনের সময়কাল:</strong> ০১ আগস্ট ২০২৬ থেকে ৩১ অক্টোবর ২০২৬ পর্যন্ত</p>\r\n<p class=\"isSelectedEnd\"><strong>অফারের বিস্তারিত:</strong></p>\r\n<ul data-spread=\"false\">\r\n<li>ফ্লাইট বুকিংয়ে সর্বোচ্চ ১০% পর্যন্ত ডিসকাউন্ট উপভোগ করুন।</li>\r\n<li>হোটেল ও রিসোর্ট বুকিংয়ে সর্বোচ্চ ৭০% পর্যন্ত ডিসকাউন্ট উপভোগ করুন।</li>\r\n</ul>\r\n<p class=\"isSelectedEnd\"><strong>যেভাবে অফারটি উপভোগ করবেন:</strong></p>\r\n<ul data-spread=\"false\">\r\n<li>goZayaan-এর অ্যাপ অথবা ওয়েবসাইটে প্রবেশ করে আপনার পছন্দের ফ্লাইট, হোটেল অথবা রিসোর্ট প্যাকেজ নির্বাচন করুন।</li>\r\n<li>পেমেন্ট মেথড হিসেবে upay নির্বাচন করুন।</li>\r\n<li>উপায়&nbsp;-এর মাধ্যমে পেমেন্ট সম্পন্ন করুন।</li>\r\n<li>ক্যাম্পেইনের শর্তাবলি অনুযায়ী প্রযোজ্য ডিসকাউন্ট স্বয়ংক্রিয়ভাবে প্রয়োগ হবে।</li>\r\n</ul>\r\n<p><strong>শর্তাবলি ও নিয়মাবলি:</strong></p>\r\n</div>",
+       "sub title": "",
+       "sub title bn": "",
+       "sub desc": "",
+       "sub desc bn": "",
+       "key value": [
+        {
+         "title": "Discount is applicable only on flight, hotel, and resort bookings made through gozayaan.",
+         "title bn": "goZayaan-এর মাধ্যমে করা ফ্লাইট, হোটেল ও রিসোর্ট বুকিংয়ের ক্ষেত্রেই শুধুমাত্র এই ডিসকাউন্ট প্রযোজ্য।"
+        },
+        {
+         "title": "Discount is valid only for payments made through upay as the selected payment method on gozayaan.",
+         "title bn": "goZayaan-এ পেমেন্ট মেথড হিসেবে উপায়&nbsp;নির্বাচন করে পেমেন্ট সম্পন্ন করলেই শুধুমাত্র এই ডিসকাউন্ট প্রযোজ্য হবে।"
+        },
+        {
+         "title": "Any suspicious, collusive, or fraudulent transaction or activity intended to derive financial gain by abusing these terms and conditions will result in disqualification of the transaction and/or customer from this campaign or any future campaign",
+         "title bn": "এই শর্তাবলির অপব্যবহার করে আর্থিক সুবিধা নেওয়ার উদ্দেশ্যে কোনো সন্দেহজনক, যোগসাজশমূলক বা প্রতারণামূলক লেনদেন/কার্যক্রম শনাক্ত হলে, সংশ্লিষ্ট লেনদেন এবং/অথবা গ্রাহককে এই ক্যাম্পেইন বা ভবিষ্যতের যেকোনো ক্যাম্পেইন থেকে অযোগ্য ঘোষণা করা হবে।"
+        }
+       ]
+      }
+     ],
+     "May like": [
+      {
+       "title": "OFFERS YOU MAY LIKE",
+       "title bn": "OFFERS YOU MAY LIKE",
+       "desc": "Check out the other offers you may like",
+       "desc bn": "Check out the other offers you may like",
+       "Under May like": []
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "gozayaan-discount"
+ }
+}

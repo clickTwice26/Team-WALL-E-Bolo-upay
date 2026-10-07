@@ -1,0 +1,24 @@
+{
+ "url": "https://www.upaybd.com/service-location",
+ "api": "https://api.upaybd.com/api/v2/pages/Service-location",
+ "data": {
+  "title_english": "Service location",
+  "title_bangla": "Service location",
+  "template_name": "service_location",
+  "rows": {
+   "Data": [
+    {
+     "cover title": "Service Location",
+     "cover title bn": "সার্ভিস লোকেশন",
+     "cover image": "/media/dynamic_image/Background_Image_Agent_lx8LrvV.png",
+     "cover image sd": "/media/dynamic_image/Background_Image_Agent_7UX3v0U.png",
+     "main title": "",
+     "main title bn": "",
+     "desc": "Our upay agent's are widely available, covering all 64 districts of Bangladesh. No matter where you are, upay is always by your side when you need it. Connect with our agents today for fast and reliable service. With upay, financial transactions are now easier and more convenient!",
+     "desc bn": "আমাদের উপায় এজেন্ট আছে বাংলাদেশের ৬৪টি জেলা জুড়ে। যেখানে থাকুন না কেন, আপনার প্রয়োজনের মুহূর্তে উপায় আপনার পাশে। দ্রুত এবং নির্ভরযোগ্য সেবার জন্য আজই আমাদের এজেন্টের সাথে যোগাযোগ করুন। উপায়ের মাধ্যমে অর্থ লেনদেন এখন আরও সহজ এবং সুবিধাজনক!"
+    }
+   ]
+  },
+  "slug": "Service-location"
+ }
+}

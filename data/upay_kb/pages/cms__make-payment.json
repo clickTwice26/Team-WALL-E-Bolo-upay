@@ -1,0 +1,54 @@
+{
+ "url": "https://www.upaybd.com/products/make-payment",
+ "api": "https://api.upaybd.com/api/v2/pages/make-payment",
+ "data": {
+  "title_english": "make payment",
+  "title_bangla": "make payment",
+  "template_name": "template-c",
+  "rows": {
+   "Data": [
+    {
+     "cover title": "Make Payment",
+     "cover title bn": "মেক পেমেন্ট",
+     "background image": "/media/dynamic_image/Desktop_Make_Payment_1_FldWcKg.png",
+     "background image sd": "/media/dynamic_image/Mobile_Make_Payment_1_6sQlTo0.png",
+     "desc": "<div style=\"text-align: center;\"><br />Make hassle free cashless payments easily using উপায় (upay) App or by dialing *268#. Enjoy cashless convenience with thousands of merchant touchpoints all over the country and counting, as well as pay online easily with your উপায় (upay) account.</div>",
+     "desc bn": "<div style=\"text-align: center;\"><br />উপায় অ্যাপ ব্যবহার করে অথবা *268#ডায়াল করে সহজেই ঝামেলা মুক্ত ক্যাশলেস পেমেন্ট করুন। সারা দেশে হাজার হাজার উপায় মার্চেন্ট এর সাথে ক্যাশলেস সুবিধা উপভোগ করুন এবং সেইসাথে আপনার উপায় অ্যাকাউন্ট দিয়ে সহজেই অনলাইনে পেমেন্ট করুন।</div>",
+     "methods": [
+      {
+       "title": "Physical Shop",
+       "title bn": "মার্চেন্ট পেমেন্ট&nbsp;",
+       "image": "/media/dynamic_image/Rectangle_66_2.png",
+       "image sd": "/media/dynamic_image/Rectangle_66_2_ramb7ql.png",
+       "icon image": "/media/dynamic_image/Asset_144x-8_3.svg",
+       "icon image sd": "/media/dynamic_image/Asset_144x-8_3_gEyRDZu.svg",
+       "slug url": "/services/details/physical-shop",
+       "has providers": "true"
+      },
+      {
+       "title": "Online Shop",
+       "title bn": "অনলাইন শপ",
+       "image": "/media/dynamic_image/Rectangle_66_3.png",
+       "image sd": "/media/dynamic_image/Rectangle_66_3_eCH5q8D.png",
+       "icon image": "/media/dynamic_image/Asset_154x-8_1.svg",
+       "icon image sd": "/media/dynamic_image/Asset_154x-8_1_mrFJbHg.svg",
+       "slug url": "/ProductServices/online-shop",
+       "has providers": "true"
+      }
+     ],
+     "GetApp": [
+      {
+       "Slug url": "/Get-App"
+      }
+     ],
+     "Navigation": [
+      {
+       "slug url": "/nav/Navigation"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "make-payment"
+ }
+}

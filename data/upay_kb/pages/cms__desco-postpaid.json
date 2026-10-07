@@ -1,0 +1,124 @@
+{
+ "url": "https://www.upaybd.com/services/details/desco-postpaid",
+ "api": "https://api.upaybd.com/api/v2/pages/desco-postpaid",
+ "data": {
+  "title_english": "DESCO Postpaid",
+  "title_bangla": "DESCO Postpaid",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "DESCO Postpaid",
+     "title bn": "ডেসকো পোস্টপেইড&nbsp;",
+     "background image": "/media/dynamic_image/Electricity_-_Desktop.png",
+     "background image sd": "/media/dynamic_image/Electricity_-_Mobile.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<div style=\"text-align: center;\">Too much hassle on paying your electricity bill on time ? No worries anymore, as upay lets you pay your bill without any tension, straight from upay app.</div>",
+     "desc bn": "সময়মতো আপনার বিদ্যুৎ বিল পরিশোধ করতে খুব ঝামেলা? আর কোন চিন্তা নেই, কারণ উপায় অ্যাপ এর মাধ্যমে আপনার বিল পরিশোধ করুন সহজেই।",
+     "Methods": [
+      {
+       "title": "How to pay your DESCO Postpaid bill ?",
+       "title bn": "কিভাবে ডেসকো পোস্টপেইড পরিশোধ করবেন ?&nbsp;",
+       "desc": "Simply follow the below steps to pay your bill",
+       "desc bn": "",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/1_uwuSLsH.png",
+         "image sd": "/media/dynamic_image/1_HPFSUu1.png"
+        },
+        {
+         "image ": "/media/dynamic_image/2_EVK3Ego.png",
+         "image sd": "/media/dynamic_image/2_RZ8Y4fK.png"
+        },
+        {
+         "image ": "/media/dynamic_image/2_2_7yZrGcI.png",
+         "image sd": "/media/dynamic_image/2_2_Eh2L2u3.png"
+        },
+        {
+         "image ": "/media/dynamic_image/3_Ad8EZbW.png",
+         "image sd": "/media/dynamic_image/3_kOJxZTg.png"
+        },
+        {
+         "image ": "/media/dynamic_image/4_USV0Gf9.png",
+         "image sd": "/media/dynamic_image/4_lxRu0um.png"
+        },
+        {
+         "image ": "/media/dynamic_image/5_Apq961m.png",
+         "image sd": "/media/dynamic_image/5_nAaHU7e.png"
+        },
+        {
+         "image ": "/media/dynamic_image/6_CxpPrDX.png",
+         "image sd": "/media/dynamic_image/6_AoLeBx1.png"
+        },
+        {
+         "image ": "/media/dynamic_image/7_ZIzYHLy.png",
+         "image sd": "/media/dynamic_image/7_YWaTBLo.png"
+        },
+        {
+         "image ": "/media/dynamic_image/8_GhN5yMa.png",
+         "image sd": "/media/dynamic_image/8_YpBUwRj.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_DMPUgTz.png",
+         "image sd": "/media/dynamic_image/1_KDiSeBg.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_1_7TYSxg0.png",
+         "image sd": "/media/dynamic_image/2_1_KFoJBLm.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_2_cXHUheV.png",
+         "image sd": "/media/dynamic_image/2_2_zhJ7LRL.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_3_44bvh9l.png",
+         "image sd": "/media/dynamic_image/2_3_mNuHXgn.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_4_8Dry7de.png",
+         "image sd": "/media/dynamic_image/2_4_3vQvOYJ.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_5_hvMvN7A.png",
+         "image sd": "/media/dynamic_image/2_5_7NP2NV9.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_6_tutBgGm.png",
+         "image sd": "/media/dynamic_image/2_6_4HHjWyT.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_7_aABmIoG.png",
+         "image sd": "/media/dynamic_image/2_7_WJrz9pp.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "desco-postpaid"
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "url": "https://www.upaybd.com/services/details/npsb-interoperability",
+ "api": "https://api.upaybd.com/api/v2/pages/npsb-interoperability",
+ "data": {
+  "title_english": "NPSB Interoperability",
+  "title_bangla": "NPSB Interoperability",
+  "template_name": "template-h",
+  "rows": {
+   "Data": [
+    {
+     "image": "/media/dynamic_image/Website_Banner_Desktop_kv-003-1440_x_680_2.jpg",
+     "image sd": "/media/dynamic_image/Website_Banner_Desktop_kv-003-1440_x_680_2_BOA448u.jpg",
+     "Details data": [
+      {
+       "title": "upay NPSB: Easy, Convenient &amp; Cost-Effective Money Transfer",
+       "title bn": "upay NPSB: Easy, Convenient &amp; Cost-Effective Money Transfer",
+       "desc": "<div><strong>From : </strong>23&nbsp;August, 2026 Till Announcement<br /><br /></div>\r\n<div>\r\n<p><strong>Feature Details:<br /></strong>Customers will be able to Fund Transfer and Add Money via NPSB channel.<br />NPSB -Add Money will be credited into upay customer&rsquo;s Secondary wallet. Salary wallet is renamed as Secondary wallet.<br />The feature aims to provide a seamless, convenient and cost-effective Fund transfer experience while increasing NPSB interoperability usage among upay customers.<br />Customers need to update app for this feature.<br /><strong><br />Workflow: <br /></strong><strong>upay Homepage &rarr; NPSB &rarr; Select MFS/Bank/PSP<br /><br /></strong><strong>MFS:<br /></strong>Select MFS Operator &rarr; Enter Wallet Number and Wallet Holder Name &rarr; Click <strong>Save as Beneficiary</strong> (Optional) &rarr; Proceed &rarr; Enter Amount &rarr; Enter PIN &rarr; Slide to Confirm</p>\r\n</div>\r\n<div>\r\n<p><strong>Bank:</strong><br />Select Bank Name &rarr; Enter Account Number and Account Name &rarr; Click <strong>Save as Beneficiary</strong> (Optional) &rarr; Proceed &rarr; Enter Amount &rarr; Enter PIN &rarr; Slide to Confirm</p>\r\n<p><strong>NPSB Charge:</strong><strong>&nbsp;</strong></p>\r\n</div>\r\n<div>\r\n<table style=\"border-collapse: collapse; width: 99.6965%; height: 57px;\" border=\"1\">\r\n<tbody>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 47.8053%; text-align: center; height: 19px;\" width=\"64\"><strong>Types</strong></td>\r\n<td style=\"width: 47.8079%; text-align: center; height: 19px;\" width=\"64\"><strong>Charges</strong></td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 47.8053%; text-align: center; height: 19px;\">Fund Transfer&nbsp;&nbsp;</td>\r\n<td style=\"width: 47.8079%; text-align: center; height: 19px;\">0.85%</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 47.8053%; text-align: center; height: 19px;\">Add Money</td>\r\n<td style=\"width: 47.8079%; text-align: center; height: 19px;\">0</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n<div><strong><br />Cashout Campaign for NPSB from Secondary Wallet:<br /><br /></strong></div>\r\n<div>\r\n<table style=\"border-collapse: collapse; width: 99.6965%;\" border=\"1\">\r\n<tbody>\r\n<tr style=\"height: 15.75pt;\">\r\n<td class=\"xl65\" style=\"height: 15.75pt; width: 47.8053%; text-align: center;\" width=\"64\" height=\"21\"><strong>Channel</strong></td>\r\n<td class=\"xl66\" style=\"width: 47.8079%; text-align: center;\" width=\"64\"><strong>Cash Out Charge per 1000</strong></td>\r\n</tr>\r\n<tr style=\"height: 15.75pt;\">\r\n<td class=\"xl69\" style=\"height: 15.75pt; width: 47.8053%; text-align: center;\" height=\"21\">Agent</td>\r\n<td class=\"xl67\" style=\"width: 47.8079%; text-align: center;\">0.80%</td>\r\n</tr>\r\n<tr style=\"height: 15.75pt;\">\r\n<td class=\"xl69\" style=\"height: 15.75pt; width: 47.8053%; text-align: center;\" height=\"21\">UCB ATM</td>\r\n<td class=\"xl68\" style=\"width: 47.8079%; text-align: center;\">0</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n<div><strong><br />Terms &amp; Conditions:</strong></div>",
+       "desc bn": "<div><strong>From : </strong>23&nbsp;August, 2026 Till Announcement<br /><br /></div>\r\n<div>\r\n<p><strong>Feature Details:</strong></p>\r\n<ul>\r\n<li>Customers will be able to Fund Transfer and Add Money via NPSB channel.</li>\r\n<li>NPSB -Add Money will be credited into upay customer&rsquo;s Secondary wallet. Salary wallet is renamed as Secondary wallet.</li>\r\n<li>The feature aims to provide a seamless, convenient and cost-effective Fund transfer experience while increasing NPSB interoperability usage among upay customers.</li>\r\n<li>Customers need to update app for this feature.</li>\r\n</ul>\r\n</div>\r\n<div>\r\n<p><strong>Workflow:</strong></p>\r\n<p class=\"isSelectedEnd\"><strong>upay Homepage &rarr; NPSB &rarr; Select MFS/Bank/PSP</strong></p>\r\n<p class=\"isSelectedEnd\"><strong>MFS:</strong><br />Select MFS Operator &rarr; Enter Wallet Number and Wallet Holder Name &rarr; Click <strong>Save as Beneficiary</strong> (Optional) &rarr; Proceed &rarr; Enter Amount &rarr; Enter PIN &rarr; Slide to Confirm</p>\r\n<p><strong>Bank:</strong><br />Select Bank Name &rarr; Enter Account Number and Account Name &rarr; Click <strong>Save as Beneficiary</strong> (Optional) &rarr; Proceed &rarr; Enter Amount &rarr; Enter PIN &rarr; Slide to Confirm</p>\r\n<p><strong>NPSB Charge:</strong></p>\r\n</div>\r\n<div><strong>&nbsp;</strong></div>\r\n<div>\r\n<table style=\"border-collapse: collapse; width: 99.6965%; height: 57px;\" border=\"1\">\r\n<tbody>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 47.8053%; text-align: center; height: 19px;\" width=\"64\"><strong>Types</strong></td>\r\n<td style=\"width: 47.8079%; text-align: center; height: 19px;\" width=\"64\"><strong>Charges</strong></td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 47.8053%; text-align: center; height: 19px;\">Fund Transfer&nbsp;&nbsp;</td>\r\n<td style=\"width: 47.8079%; text-align: center; height: 19px;\">0.85%</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 47.8053%; text-align: center; height: 19px;\">Add Money</td>\r\n<td style=\"width: 47.8079%; text-align: center; height: 19px;\">0</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n<div><strong><br />Cashout Campaign for NPSB from Secondary Wallet:<br /><br /></strong></div>\r\n<div>\r\n<table style=\"border-collapse: collapse; width: 99.6965%;\" border=\"1\">\r\n<tbody>\r\n<tr style=\"height: 15.75pt;\">\r\n<td class=\"xl65\" style=\"height: 15.75pt; width: 47.8053%; text-align: center;\" width=\"64\" height=\"21\"><strong>Channel</strong></td>\r\n<td class=\"xl66\" style=\"width: 47.8079%; text-align: center;\" width=\"64\"><strong>Cash Out Charge per 1000</strong></td>\r\n</tr>\r\n<tr style=\"height: 15.75pt;\">\r\n<td class=\"xl69\" style=\"height: 15.75pt; width: 47.8053%; text-align: center;\" height=\"21\">Agent</td>\r\n<td class=\"xl67\" style=\"width: 47.8079%; text-align: center;\">0.80%</td>\r\n</tr>\r\n<tr style=\"height: 15.75pt;\">\r\n<td class=\"xl69\" style=\"height: 15.75pt; width: 47.8053%; text-align: center;\" height=\"21\">UCB ATM</td>\r\n<td class=\"xl68\" style=\"width: 47.8079%; text-align: center;\">0</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n<div><strong><br />Terms &amp; Conditions:</strong></div>",
+       "sub title": "",
+       "sub title bn": "",
+       "sub desc": "",
+       "sub desc bn": "",
+       "key value": [
+        {
+         "title": "Both new and existing users are eligible for the feature.",
+         "title bn": "Both new and existing users are eligible for the feature."
+        },
+        {
+         "title": "Customers need to update app for this feature.",
+         "title bn": "Customers need to update app for this feature."
+        },
+        {
+         "title": "For salary receivers, cash out charge will be applicable as per their company agreement.",
+         "title bn": "For salary receivers, cash out charge will be applicable as per their company agreement."
+        },
+        {
+         "title": "Any suspicious, collusive, or fraudulent transaction or activity intended to derive financial gain by abusing these terms and conditions will result in disqualification of the transaction.",
+         "title bn": "Any suspicious, collusive, or fraudulent transaction or activity intended to derive financial gain by abusing these terms and conditions will result in disqualification of the transaction."
+        }
+       ]
+      }
+     ],
+     "May like": [
+      {
+       "title": "Other Offer",
+       "title bn": "অন্যান্য অফার&nbsp;",
+       "desc": "",
+       "desc bn": "",
+       "Under May like": []
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "npsb-interoperability"
+ }
+}

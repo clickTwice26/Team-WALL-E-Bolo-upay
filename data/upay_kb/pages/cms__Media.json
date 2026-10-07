@@ -1,0 +1,52 @@
+{
+ "url": "https://www.upaybd.com/Media",
+ "api": "https://api.upaybd.com/api/v2/pages/Media",
+ "data": {
+  "title_english": "Media",
+  "title_bangla": "Media",
+  "template_name": "media",
+  "rows": {
+   "Data": [
+    {
+     "title": "Media",
+     "title bn": "মিডিয়া&nbsp;",
+     "cover image": "/media/dynamic_image/Media_Center_Media_Contact_Newsroom__desktop_XtV7KFd.jpg",
+     "cover image sd": "/media/dynamic_image/Website_Mobile_Header_4.png",
+     "segment one": [
+      {
+       "title": "Press Release",
+       "title bn": "প্রেস বিজ্ঞপ্তি&nbsp;",
+       "desc": "Check out all our Press Release here",
+       "desc bn": "সব প্রেস বিজ্ঞপতি দেখুন এইখানে&nbsp;",
+       "image": "/media/dynamic_image/Newsroom_Website.png",
+       "image sd": "/media/dynamic_image/Newsroom_Website_qVwW16q.png",
+       "slug url": "/Blog",
+       "category": ""
+      },
+      {
+       "title": "Media Contact",
+       "title bn": "মিডিয়া কন্টাক্ট&nbsp;",
+       "desc": "Contact us for any media related queries.",
+       "desc bn": "মিডিয়া সংক্রান্ত তথ্য জানতে যোগাযোগ করুন আমাদের সাথে&nbsp;",
+       "image": "/media/dynamic_image/Media_contact_desktop_1_EHjxyIH.jpg",
+       "image sd": "/media/dynamic_image/Media_contact_mobile_OcnoVnn.jpg",
+       "slug url": "/Media-Contact",
+       "category": "media-contact"
+      },
+      {
+       "title": "News from উপায়",
+       "title bn": "উপায় সংক্রান্ত নিউজ",
+       "desc": "Stay updated with all the news, announcements, articles regarding our product &amp; services.",
+       "desc bn": "উপায় সংক্রান্ত নিউজ, ঘোষণা, আর্টিকেল নিয়ে আপডেটেড থাকুন",
+       "image": "/media/dynamic_image/Newsroom_desktop_1_xORVfVT.jpg",
+       "image sd": "/media/dynamic_image/Newsroom_mobile_1_fqGhsCN.jpg",
+       "slug url": "/Newsroom",
+       "category": "newsroom"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "Media"
+ }
+}

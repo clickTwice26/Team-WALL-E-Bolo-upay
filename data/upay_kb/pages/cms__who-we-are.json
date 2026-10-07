@@ -1,0 +1,134 @@
+{
+ "url": "https://www.upaybd.com/who-we-are",
+ "api": "https://api.upaybd.com/api/v2/pages/who-we-are",
+ "data": {
+  "title_english": "who we are",
+  "title_bangla": "আমরা কারা",
+  "template_name": "who-we-are",
+  "rows": {
+   "Data": [
+    {
+     "cover title": "About Us",
+     "cover title bn": "পরিচিতি",
+     "cover image": "/media/dynamic_image/All_pages_cover_photo_DESK_TOP_1440x265_69BUAA0.png",
+     "cover image sd": "/media/dynamic_image/All_pages_cover_photo_Mobile_414x150_0NuMq44.png",
+     "Slider": [
+      {
+       "image": "/media/dynamic_image/for_desktop_we_are_09-05-2022_1.png",
+       "image sd": "/media/dynamic_image/for_Mobile_we_are_09-05-2022_1_KkhmutH.png"
+      },
+      {
+       "image": "/media/dynamic_image/for_desktop_we_are_09-05-2022_2_copy.png",
+       "image sd": "/media/dynamic_image/for_Mobile_we_are_09-05-2022_2_copy_g2WozIh.png"
+      },
+      {
+       "image": "/media/dynamic_image/for_desktop_we_are_04-08-2022.png",
+       "image sd": "/media/dynamic_image/for_Mobile_we_are_04-08-2022.png"
+      }
+     ],
+     "segment one": [
+      {
+       "title": "Our Story",
+       "title bn": "আমাদের পরিচয়",
+       "desc": "<p><span style=\"font-weight: 400; font-size: 12pt;\">One of the biggest strengths of the Bangladeshis is resilience in the face of challenges, persistently figuring out solutions to any problem we confront. Inspired by this optimistic spirit, উপায় (upay) was founded to become a companion that makes customer journey simple, secured and convenient, while availing financial services.</span></p>\r\n<p><span style=\"font-weight: 400; font-size: 12pt;\">উপায় (upay) is the digital financial service brand of UCB Fintech Company Limited, a subsidiary of the United Commercial Bank PLC. Upon receiving the license from Bangladesh Bank, উপায় (upay) started its journey in early 2021, offering a broad range of mobile financial services to people from all walks of life.</span></p>\r\n<p><span style=\"font-weight: 400; font-size: 12pt;\">উপায় (upay) product and services include mobile transactions, utility bill payment, in-store and e-commerce payment, inward remittance, salary disbursement, airtime recharge and other value added financial services. Customers can avail the services from our nationwide agent and merchant network at an affordable charge.</span></p>\r\n<p><span style=\"font-weight: 400; font-size: 12pt;\">Driven by the &lsquo;Digital Bangladesh&rsquo; vision, উপায় (upay) aims to actively contribute in transforming the financial landscape of the country. উপায় (upay) offers easy access to seamless digital financial solution, touching the lives of millions of people, and thus driving financial inclusion in the country.</span></p>\r\n<p><span style=\"font-weight: 400; font-size: 12pt;\">Embracing empathy as a core pillar of our value system, উপায় (upay)&nbsp; aims to usher in a new era in the digital financial service industry by keeping the customer&rsquo;s needs at the front and center of everything we do. No matter what challenges our customers&rsquo; face, as a companion, we promise to be their reliable problem solver, offering a delightful customer experience, complete security, and meaningful innovations.</span></p>",
+       "desc bn": "গর্বিত বাংলাদেশী হিসেবে আমাদের সবচেয়ে বড় শক্তির জায়গা হলো, হাল না ছেড়ে দিয়ে আমরা যেকোনো বাধা-বিপত্তির সম্মুখীন হতে পারি এবং সমাধানের পথ খুঁজে বের করে আবার পূর্বের অবস্থায় ফিরে যেতে পারি। এই আশাবাদী চিন্তা থেকে প্রেরণা নিয়ে, গ্রাহকদের সমস্যাগুলো সমাধান করতে এবং প্রতিটি মানুষের আরও কাছে অর্থনৈতিক পরিষেবাগুলো পৌঁছে দেয়ার জন্যই প্রতিষ্ঠিত হয়েছে &ldquo;উপায়&rdquo;। <br /><br />উপায়, ইউনাইটেড কমার্শিয়াল ব্যাংক পিএলসি এর সাবসিডিয়ারি &lsquo;ইউসিবি ফিনটেক কোম্পানি লিমিটেড&rsquo; এর একটি মোবাইল ফাইন্যান্সিয়াল সার্ভিস ব্র্যান্ড। বাংলাদেশ ব্যাংক থেকে লাইসেন্স পাওয়ার পরে, ২০২১ সালের ১৭ মার্চ দেশের সর্বস্তরের মানুষকে সুলভ, নিরাপদ ও বিস্তৃত মোবাইল ব্যাংকিং সেবা প্রদানের লক্ষ্যে উপায় তার যাত্রা শুরু করে।<br /><br />উপায় এর প্রোডাক্ট এবং সার্ভিসের মধ্যে রয়েছে মোবাইলে টাকা আদান-প্রদান, ইউটিলিটি বিল পেমেন্ট, ইন-স্টোর ও ই-কমার্স পেমেন্ট, রেমিট্যান্স গ্রহণ, বেতন প্রদান, সরকারি ভাতা গ্রহণ, মোবাইল রিচার্জ, ট্রাফিক জরিমানা প্রদান, ভারতীয় ভিসা ফি পেমেন্ট এবং অন্যান্য ভ্যালু অ্যাডেড সার্ভিসসহ নানা ধরনের সেবা। উপায়ের গ্রাহকরা সবচেয়ে সাশ্রয়ী মূল্যে দেশব্যাপী ছড়িয়ে থাকা উপায় এজেন্ট ও মার্চেন্ট নেটওয়ার্ক থেকে পরিষেবাগুলো উপভোগ করতে পারবেন। <br /><br />&lsquo;ডিজিটাল বাংলাদেশ&rsquo; গড়ার ভিশন নিয়ে উপায় সক্রিয়ভাবে দেশের প্রত্যন্ত অঞ্চলেও ডিজিটাল ফাইন্যান্সিয়াল সার্ভিস পৌঁছে দিতে ভূমিকা রাখবে। উপায় লক্ষ লক্ষ মানুষের জীবনে প্রভাব রাখবে এবং দেশের প্রত্যন্ত অঞ্চলের জনগোষ্ঠীকে আর্থিক অন্তর্ভু্ক্তিকরণের মাধ্যমে বিভিন্ন সমস্যার সমাধান করবে। <br /><br />উপায় এর লক্ষ্য, ডিজিটাল ফাইন্যান্সিয়াল সার্ভিস ইন্ডাস্ট্রিতে একটি নতুন যুগের সূচনা করা, যেখানে গ্রাহকের চাহিদাকেই দেওয়া হবে সর্বোচ্চ গুরুত্ব। সুন্দর, সুলভ ও নিরাপদ সেবা নিশ্চিত করে যেকোনো সমস্যা সমাধানের জন্য আমরা সবসময় গ্রাহকদের পাশে আছি।"
+      }
+     ],
+     "Segment two": [
+      {
+       "title": "Our Value",
+       "title bn": "আমাদের মূল্যবোধ",
+       "desc": "We ensure superior security, ease of experience, and innovative solutions for our valued users.",
+       "desc bn": "আমরা গ্রাহকের অর্থকে দিই সর্বোচ্চ সুরক্ষা, সেবাতে নিশ্চিত করি স্বাচ্ছন্দ্যময় অভিজ্ঞতা এবং সমস্যায় আনি উদ্ভাবনী সমাধান।",
+       "Under Segment two": [
+        {
+         "title": "Complete Security",
+         "title bn": "সম্পূর্ণ সুরক্ষা",
+         "desc": "A crucial pillar in our belief system is ensuring complete security for everyone. No matter who you are and no matter where you are from, upay guarantees ironclad security and thereby effortless peace of mind!",
+         "desc bn": "আমাদের বিশ্বাসের একটি গুরুত্বপূর্ণ জায়গা হলো প্রত্যেকের অর্থের সুরক্ষা নিশ্চিত করা। আপনি যেই হোন না কেন এবং যেখানেই থাকুন না কেন, উপায় সুরক্ষা নিশ্চিতের মাধ্যমে আপনার মানসিক প্রশান্তির নিশ্চয়তা দিবে।",
+         "image": "/media/dynamic_image/Our_Values_Complete_Security_Desktop_1_1.jpg",
+         "image sd": "/media/dynamic_image/Our_Values_Complete_Security_Mobile_1_1.png"
+        },
+        {
+         "title": "Simple Experience",
+         "title bn": "স্বাচ্ছন্দ্যময় অভিজ্ঞতা",
+         "desc": "There&rsquo;s enough complexity in life; but upay believes in finding ways to make things super simple for you. Only a seamlessly simple experience can assure customer delight and that is what upay aims at delivering in, each and every interaction.",
+         "desc bn": "জীবনে অনেক জটিলতা থাকে, তবে উপায় বিশ্বাস করে সব সম্যসার খুব সহজ সমাধান আপনাদের দিতে পারবে। গ্রাহককে আনন্দ দিতে পারে একটি স্বাচ্ছন্দ্যময় অভিজ্ঞতা, সেজন্য উপায় খেয়াল রাখে যেন প্রতিটি যোগাযোগ ঘটে সম্পূর্ণ নির্বিঘ্নে।",
+         "image": "/media/dynamic_image/Our_Values_Simple_Experience_desktop_1_1.jpg",
+         "image sd": "/media/dynamic_image/Our_Values_Simple_Experience_Mobile_1_1.png"
+        },
+        {
+         "title": "You Are First",
+         "title bn": "প্রথমেই আপনি",
+         "desc": "One of the key things that makes us unique, is our culture of meaningful innovations. upay is always listening to you to better understand your needs and constantly trying to find relevant solutions through meaningful innovation.",
+         "desc bn": "আমাদের সবার থেকে অনন্য মনে হওয়ার অন্যতম কারণ হল, অর্থবহ উদ্ভাবনের সংস্কৃতি। উপায় আপনার প্রয়োজনগুলি আরও ভালভাবে বোঝার জন্য সর্বদা আপনার কথা শুনছে এবং অর্থবহ উদ্ভাবনের মাধ্যমে নিয়মিত প্রাসঙ্গিক সমাধানগুলি সন্ধান করার চেষ্টা করছে।",
+         "image": "/media/dynamic_image/Our_Value_For_Destop_Our_Values_pic_-_657_x_445_04-08-2022.png",
+         "image sd": "/media/dynamic_image/Our_Value_For_Mobile_Our_Values_pic_-_307_x_210_11-05-2022.png"
+        }
+       ]
+      }
+     ],
+     "Segment three": [
+      {
+       "title": "Board of directors",
+       "title bn": "বোর্ড অফ ডিরেক্টরস",
+       "desc": "",
+       "desc bn": "",
+       "Under Segment three": [
+        {
+         "title": "Mohammad Mamdudur Rashid",
+         "title bn": "মোহাম্মদ মামদুদুর রশীদ",
+         "position": "Chairman",
+         "position bn": "চেয়ারম্যান",
+         "desc": "<p style=\"text-align: justify;\">Mr. Mohammad Mamdudur Rashid is the Chairman of UCB Fintech Company Limited and the Managing Director &amp; CEO of United Commercial Bank PLC. With a remarkable career spanning more than three decades in the banking industry, during his tenure at NCC Bank PLC, as the role of Managing Director and Chief Executive Officer, Mr. Rashid played a pivotal role in expanding the bank's international trade portfolio and enhancing its standing in the banking market, thereby contributing to its growth. Notable achievements under his leadership include NCC Bank's recognition as Bangladesh Bank's Best Primary Dealer and Global Brand Magazine's recognition as the fastest-growing brand in 2023. With his guidance, NCC Bank was able to successfully implement Islamic banking. Mr. Rashid entered the banking industry in 1995 with Citibank-Bangladesh and has held various leadership positions in Bangladesh, India, and Australia since then. His extensive knowledge spans several departments, including HR, General Services, Risk, Operations, Compliance, Business and Credit.</p>",
+         "desc bn": "<br />\r\n<p data-start=\"0\" data-end=\"497\">জনাব মোহাম্মদ মামদুদুর রশীদ, ইউসিবি ফিনটেক কোম্পানি লিমিটেডের চেয়ারম্যান এবং ইউনাইটেড কমার্শিয়াল ব্যাংক পিএলসি-এর ব্যবস্থাপনা পরিচালক ও প্রধান নির্বাহী কর্মকর্তা। ব্যাংকিং খাতে তিন দশকেরও বেশি সময়ের বর্ণাঢ্য কর্মজীবনে, এনসিসি ব্যাংক পিএলসি-এর ব্যবস্থাপনা পরিচালক ও প্রধান নির্বাহী কর্মকর্তা হিসেবে দায়িত্ব পালনকালে তিনি ব্যাংকটির আন্তর্জাতিক বাণিজ্য পোর্টফোলিও সম্প্রসারণ এবং ব্যাংকিং খাতে এর অবস্থান সুদৃঢ় করতে গুরুত্বপূর্ণ ভূমিকা পালন করেন, যা ব্যাংকটির প্রবৃদ্ধিতে উল্লেখযোগ্য অবদান রাখে।</p>\r\n<p data-start=\"499\" data-end=\"780\">তার নেতৃত্বে এনসিসি ব্যাংক বাংলাদেশ ব্যাংকের &ldquo;সেরা প্রাইমারি ডিলার&rdquo; হিসেবে স্বীকৃতি অর্জন করে এবং গ্লোবাল ব্র্যান্ড ম্যাগাজিন কর্তৃক ২০২৩ সালে &ldquo;দ্রুততম বর্ধনশীল ব্র্যান্ড&rdquo; হিসেবে স্বীকৃতি পায়। তার দিকনির্দেশনায় এনসিসি ব্যাংক সফলভাবে ইসলামিক ব্যাংকিং কার্যক্রম চালু করতে সক্ষম হয়।</p>\r\n<p data-start=\"782\" data-end=\"1108\" data-is-last-node=\"\" data-is-only-node=\"\">জনাব রশীদ ১৯৯৫ সালে সিটিব্যাংক-বাংলাদেশের মাধ্যমে ব্যাংকিং খাতে কর্মজীবন শুরু করেন এবং এরপর থেকে বাংলাদেশ, ভারত ও অস্ট্রেলিয়ায় বিভিন্ন নেতৃত্বস্থানীয় পদে দায়িত্ব পালন করেছেন। মানবসম্পদ, জেনারেল সার্ভিসেস, ঝুঁকি ব্যবস্থাপনা, অপারেশনস, কমপ্লায়েন্স, ব্যবসা ও ঋণ ব্যবস্থাপনাসহ বিভিন্ন ক্ষেত্রে তার বিস্তৃত অভিজ্ঞতা ও দক্ষতা রয়েছে।</p>",
+         "image": "/media/dynamic_image/Mamdudur_Rashid.png",
+         "image sd": "/media/dynamic_image/Mamdudur_Rashid_4kHsxCQ.png",
+         "squre image": "/media/dynamic_image/Untitled_design_5_w5rRy33.png",
+         "squre image sd": "/media/dynamic_image/Untitled_design_5_Jput1of.png"
+        },
+        {
+         "title": "Md. Abdullah Al Mamoon",
+         "title bn": "মোহাম্মাদ আব্দুল্লাহ আল মামুন",
+         "position": "Director",
+         "position bn": "পরিচালক",
+         "desc": "Mr. Md. Abdullah Al Mamoon is a Director of UCB Fintech Company Limited. He is also the Deputy Managing Director and Chief Operating Officer (COO) of United Commercial Bank PLC . <br /><br />Mr. Mamoon joined UCB as Senior Executive Vice President with over 28 years of multi-disciplinary experiences in diversified professional domains with Government and Financial Institutions. Prior to joining UCB, Mr. Mamoon served in AB Bank and BRAC Bank Ltd in different capacities that include Head of Core Business Team, Head of Operational Risk Management, Head of Program Management, etc. He also served in bKash Limited, Kayfin Consultants Limited, and Bangladesh Army, Government of Bangladesh. He served in the United Nations 'Peace Keeping' mission in Sierra Leone (UNAMSIL). <br /><br />Mr. Mamoon obtained his MBA degree from Royal Roads University, British Columbia, Canada, and was a winner of the 'Chancellor's Award'. He is a globally certified Project Management Professional (PMP) from Project Management Institute (PMI) in the USA, and a Green Belt in Six Sigma from Benchmark Six Sigma, India. He attended various training and participated in seminars and workshops at home and abroad.",
+         "desc bn": "<p>মোঃ আবদুল্লাহ আল মামুন ইউসিবি ফিনটেক কোম্পানি লিমিটেডের পরিচালকদের মধ্যে একজন। এছাড়াও তিনি ইউনাইটেড কমার্শিয়াল ব্যাংক পিএলসি এর ডেপুটি ম্যানেজিং ডিরেক্টর এবং চিফ অপারেটিং অফিসার (সিওও)।<br /><br />মোঃ আবদুল্লাহ আল মামুন ২৮ বছরেরও বেশি সময় ধরে সরকারি ও আর্থিক প্রতিষ্ঠানে বহুমুখী পেশাগত অভিজ্ঞতা অর্জনের পর ইউসিবিতে সিনিয়র এক্সিকিউটিভ ভাইস প্রেসিডেন্ট হিসেবে যোগদান করেন।</p>\r\n<p>ইউসিবি&rsquo;তে জয়েন করার আগে, মোঃ আবদুল্লাহ আল মামুন এবি ব্যাংক এবং ব্র্যাক ব্যাংকে বিজনেস টিমের হেড, অপারেশনাল রিস্ক ম্যানেজমেন্ট, হেড অফ প্রোগ্রাম ম্যানেজমেন্টসহ নানা দায়িত্ব পালন করেন। তিনি আরও বিকাশ, কেফিন কনসালটেন্স, বাংলাদেশ আর্মি এবং বাংলাদেশ সরকারের সাথে কাজ করেছেন। তিনি সিরিয়া লিয়নে ইউনাইটেড নেশনের হয়ে শান্তি রক্ষা মিশনে দায়িত্ব পালন করেছেন।</p>\r\n<p>তিনি ব্রিটিশ কলম্বিয়া কানাডার রয়্যাল রোডস ইউনিভার্সিটি থেকে এমবিএ ডিগ্রিসহ চ্যান্সেলর অ্যাওয়ার্ড অর্জন করেছেন। এছাড়াও তিনি বিশ্বব্যাপী প্রত্যায়িত প্রজেক্ট ম্যানেজমেন্ট প্রফেশনাল প্রজেক্টের এবং ইন্ডিয়ার বেঞ্চমার্ক সিক্স সিগমা থেকে গ্রিন বেল্ট সিক্স সিগমা পেয়েছেন। তিনি নানা রকম ট্রেনিং এবং সেমিনারে অংশগ্রহণ করেছেন।&nbsp;</p>",
+         "image": "/media/dynamic_image/MOHAMMAD_ABDULLAH_AL_MAMOON_1.jpg",
+         "image sd": "/media/dynamic_image/MOHAMMAD_ABDULLAH_AL_MAMOON_1_Ik4bKoX.jpg",
+         "squre image": "/media/dynamic_image/MOHAMMAD_ABDULLAH_AL_MAMOON_1_iIjx5ze.jpg",
+         "squre image sd": "/media/dynamic_image/MOHAMMAD_ABDULLAH_AL_MAMOON_1_T1V7IZG.jpg"
+        },
+        {
+         "title": "Abul Alam Ferdous",
+         "title bn": "আবুল আলম ফেরদৌস",
+         "position": "Director",
+         "position bn": "পরিচালক",
+         "desc": "Mr. Abul Alam Ferdous is a Director of UCB Fintech Company Limited and the Additional Managing Director of United Commercial Bank PLC. He brings around four decades of exceptional experience in Banking. In his illustrious career, he has held different banking positions in the arena of General Banking, Foreign Exchange, Credit etc, including 23 years of managerial responsibilities. <br /><br />An esteemed figure in the banking industry, Mr. Ferdous completed his B.com (Honors) in Accounting and M.com from Chittagong University. He participated in various trainings, workshops and seminars in home and abroad. His academic background and profound experience have equipped him with robust understanding of financial principles and strategies, facilitating his strategic decision-making and leadership within the banking sector.",
+         "desc bn": "<p><span style=\"font-size: 14pt;\">জনাব আবুল আলম ফেরদৌস ইউসিবি ফিনটেক কোম্পানি লিমিটেডের পরিচালক এবং ইউনাইটেড কমার্শিয়াল ব্যাংক পিএলসি-এর অতিরিক্ত ব্যবস্থাপনা পরিচালক হিসেবে কর্মরত আছেন। তিনি ব্যাংকিং খাতে প্রায় চার দশকের অসাধারণ অভিজ্ঞতা নিয়ে এসেছেন। তার বর্ণাঢ্য ক্যারিয়ার শুরু থেকে তিনি জেনারেল ব্যাংকিং, ফরেন এক্সচেঞ্জ, ক্রেডিট ইত্যাদি ক্ষেত্রে বিভিন্ন ব্যাংকিং পদে কাজ করেছেন, এবং ২৩ বছর ধরে ব্যবস্থাপনার দায়িত্ব পালন করেছেন।</span></p>\r\n<p><span style=\"font-size: 14pt;\">ব্যাংকিং সেক্টরে একজন সম্মানিত ব্যক্তিত্ব, জনাব ফেরদৌস চট্টগ্রাম বিশ্ববিদ্যালয় থেকে হিসাববিজ্ঞানে বি.কম (অনার্স) এবং এম.কম সম্পন্ন করেন। এছাড়াও, তিনি দেশি-বিদেশি বিভিন্ন প্রশিক্ষণ, কর্মশালা এবং সেমিনারে অংশগ্রহণ করেছেন। তাঁর &nbsp;একাডেমিক ব্যাকগ্রাউন্ড এবং গভীর অভিজ্ঞতা তাকে আর্থিক নীতিমালা এবং &nbsp;কৌশলের ক্ষেত্রে সুদৃঢ় ধারণা প্রদান করেছে, যা ব্যাংকিং সেক্টরে &nbsp;তাঁর কৌশলগত সিদ্ধান্ত গ্রহণ এবং নেতৃত্বকে সহজতর করেছে।</span></p>",
+         "image": "/media/dynamic_image/Abul_Alam_Ferdous_MsIte3W.png",
+         "image sd": "/media/dynamic_image/Abul_Alam_Ferdous_vnOUBsV.png",
+         "squre image": "/media/dynamic_image/Abul_Alam_Ferdous_UD5sd9T.png",
+         "squre image sd": "/media/dynamic_image/Abul_Alam_Ferdous_SFhvO73.png"
+        },
+        {
+         "title": "A. K. M. Fahim Mashroor",
+         "title bn": "এ কে এম ফাহিম মাসরুর",
+         "position": "Independent Director",
+         "position bn": "<span style=\"font-size: 14pt;\">স্বতন্ত্র পরিচালক</span>",
+         "desc": "Mr. Fahim Mashroor is an Independent Director of UCB Fintech Company Limited. He has over two decades of experience in the tech industry of Bangladesh. One of the most successful serial entrepreneurs in the country, Fahim Mashroor founded Bdjobs.com (the online employment exchange in Bangladesh) in 2000. Bdjobs.com has been one of the most successful internet ventures in the country. It is also one of the top five job sites in South Asia. In 2015, SEEK Australia, the largest job board network in the world, became part of Bdjobs.com as a strategic investor. <br /><br />He founded few other tech start-ups including AjkerDeal.com (retail marketplace), Delivery Tiger (retail logistics and fin-tech) and Beshto (social media). In 2012 he has been elected as President of BASIS (Bangladesh Association of Software &amp; Information Services), the national trade body representing software and IT service industry of Bangladesh. <br /><br />He has extensive experience in HR Development &amp; Training, ICT Industry Development, Development Policy, Financial &amp; Strategic Management. Fahim Mashroor has a graduate degree in Economics from Dhaka University and post graduate degree in MBA (IBA) Dhaka University.",
+         "desc bn": "<p><br /><span style=\"font-size: 14pt;\">জনাব এ কে এম ফাহিম মাসরুর ইউসিবি ফিনটেক কোম্পানি লিমিটেডের একজন স্বতন্ত্র পরিচালক। বাংলাদেশের প্রযুক্তি শিল্পে দুই দশকে বেশি সময়ের অভিজ্ঞতাসম্পন্ন, একজন সফল উদ্যোক্তা হিসেবে ফাহিম মাসরুর ২০০০ সালে বিডিজবস.কম (বাংলাদেশের অনলাইন কর্মসংস্থান প্ল্যাটফর্ম) প্রতিষ্ঠা করেন। বিডিজবস.কম দেশের অন্যতম সফল ইন্টারনেট ভেঞ্চার এবং দক্ষিণ এশিয়ার শীর্ষ পাঁচটি চাকরির সাইটের মধ্যে একটি। ২০১৫ সালে, SEEK Australia, বিশ্বের বৃহত্তম চাকরির নেটওয়ার্ক, বিডিজবস.কম-এর স্ট্রাটেজিক বিনিয়োগকারী হিসেবে যুক্ত হয়।</span></p>\r\n<p><span style=\"font-size: 14pt;\">জনাব ফাহিম মাসরুর আরও কিছু টেক স্টার্ট-আপ প্রতিষ্ঠা করেছেন, যার মধ্যে রয়েছে আজকেরডিল.কম (রিটেইল মার্কেটপ্লেস), ডেলিভারি টাইগার (রিটেইল লজিস্টিক্স এবং ফিনটেক) এবং বেশতো (সোশ্যাল মিডিয়া)। ২০১২ সালে তিনি বাংলাদেশের সফ্টওয়্যার এবং আইটি পরিষেবা শিল্পের প্রতিনিধিত্বকারী জাতীয় বাণিজ্য সংস্থা বেসিস (বাংলাদেশ অ্যাসোসিয়েশন অফ সফটওয়্যার অ্যান্ড ইনফরমেশন সার্ভিসেস) এর সভাপতি নির্বাচিত হয়েছেন।</span></p>\r\n<p><span style=\"font-size: 14pt;\">তাঁর এইচআর ডেভেলপমেন্ট অ্যান্ড ট্রেনিং, আইসিটি ইন্ডাস্ট্রি ডেভেলপমেন্ট, ডেভেলপমেন্ট পলিসি, ফাইন্যান্সিয়াল অ্যান্ড স্ট্র্যাটেজিক ম্যানেজমেন্টে বিস্তৃত অভিজ্ঞতা রয়েছে। ফাহিম মাশরুর ঢাকা বিশ্ববিদ্যালয় থেকে অর্থনীতিতে স্নাতক এবং ঢাকা বিশ্ববিদ্যালয়ের আইবিএ থেকে এমবিএ ডিগ্রি অর্জন করেছেন।</span></p>",
+         "image": "/media/dynamic_image/A.K.M._Fahim_Mashroor_lTIl1TX.png",
+         "image sd": "/media/dynamic_image/A.K.M._Fahim_Mashroor_msFuJcn.png",
+         "squre image": "/media/dynamic_image/A.K.M._Fahim_Mashroor.png",
+         "squre image sd": "/media/dynamic_image/A.K.M._Fahim_Mashroor_nYJkE1B.png"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "who-we-are"
+ }
+}

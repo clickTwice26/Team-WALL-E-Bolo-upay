@@ -1,0 +1,96 @@
+{
+ "url": "https://www.upaybd.com/services/details/bakhrabad-gas",
+ "api": "https://api.upaybd.com/api/v2/pages/bakhrabad-gas",
+ "data": {
+  "title_english": "Bakhrabad Gas",
+  "title_bangla": "Bakhrabad Gas",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Bakhrabad Gas",
+     "title bn": "বাখরাবাদ গ্যাস&nbsp;",
+     "background image": "/media/dynamic_image/Desktop_Backdrop_Website_1_XShr4An.png",
+     "background image sd": "/media/dynamic_image/Mobile_Backdrop_Website_2070_x_750_px_1_W7lEVX3.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "Time to get rid of queues, and go for gas bill payment through উপায় (upay).",
+     "desc bn": "দীর্ঘ লাইনে দাঁড়িয়ে থাকার দিন শেষ। আপনার বাড়িতে বসেই স্বাচ্ছন্দে গ্যাস বিলের অর্থ প্রদান করতে পারবেন।",
+     "Methods": [
+      {
+       "title": "How to pay Bakhrabad Gas Bill ?",
+       "title bn": "কিভাবে বাখরাবাদ গ্যাস বিল পেমেন্ট করবেন ?",
+       "desc": "",
+       "desc bn": "",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Not_Available_on_268_3.png",
+         "image sd": "/media/dynamic_image/Not_Available_on_268_3_Tpae4rQ.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_HlN0N6w.png",
+         "image sd": "/media/dynamic_image/1_XlHtSfW.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_7I3Zz5D.png",
+         "image sd": "/media/dynamic_image/2_tn5mG6J.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_m9d0rCX.png",
+         "image sd": "/media/dynamic_image/3_0F3tzTU.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_pDyfVz3.png",
+         "image sd": "/media/dynamic_image/4_x4rtV84.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_Y6flouT.png",
+         "image sd": "/media/dynamic_image/6_01ahGfT.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_3p8isv3.png",
+         "image sd": "/media/dynamic_image/7_azzeZ3Y.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_2_kXzWZvu.png",
+         "image sd": "/media/dynamic_image/7_2_svf9BcF.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_DOdsHe7.png",
+         "image sd": "/media/dynamic_image/8_v8inCeh.png"
+        },
+        {
+         "image": "/media/dynamic_image/9_ZaWmThZ.png",
+         "image sd": "/media/dynamic_image/9_FQ44Q1x.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "bakhrabad-gas"
+ }
+}

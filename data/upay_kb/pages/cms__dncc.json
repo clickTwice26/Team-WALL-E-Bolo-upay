@@ -1,0 +1,96 @@
+{
+ "url": "https://www.upaybd.com/services/details/dncc",
+ "api": "https://api.upaybd.com/api/v2/pages/dncc",
+ "data": {
+  "title_english": "DNCC",
+  "title_bangla": "DNCC",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "DNCC",
+     "title bn": "ডিএনসিসি",
+     "background image": "/media/dynamic_image/Land_Services_Header_desktop_RmKjqfl_ot7mJJc.jpg",
+     "background image sd": "/media/dynamic_image/Land_Services_Header_mobile_0uABKcn_ZXMXL1W.jpg",
+     "heading": "",
+     "heading bn": "",
+     "desc": "Looking for ways to complete your DNCC due payments. Simply visit upay app and complete your payments in only a few clicks",
+     "desc bn": "<div class=\"flex max-w-full flex-col flex-grow\">\r\n<div class=\"min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5\" dir=\"auto\" data-message-author-role=\"assistant\" data-message-id=\"d7958348-4164-4a66-a5fd-432dd8e70ef3\" data-message-model-slug=\"gpt-4o\">\r\n<div class=\"flex w-full flex-col gap-1 empty:hidden first:pt-[3px]\">\r\n<div class=\"markdown prose w-full break-words dark:prose-invert light\">\r\n<p style=\"text-align: center;\">আপনার ডিএনসিসি বকেয়া পেমেন্ট সম্পন্ন করার উপায় খুঁজছেন?<br />উপায় অ্যাপে যান এবং মাত্র কয়েকটি ক্লিকেই আপনার পেমেন্ট সম্পন্ন করুন।</p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
+     "Methods": [
+      {
+       "title": "How to pay your Dhaka North City Corporation Payment ?",
+       "title bn": "আপনার ঢাকা উত্তর সিটি করপোরেশন (ডিএনসিসি) পেমেন্ট কীভাবে করবেন?",
+       "desc": "Simply check out the process below",
+       "desc bn": "নিচের প্রক্রিয়াটি দেখে সহজেই সম্পন্ন করুন।",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Not_Available_on_268_1_TzbJgty.png",
+         "image sd": "/media/dynamic_image/Not_Available_on_268_1_02cJREX.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_eXntUzY.png",
+         "image sd": "/media/dynamic_image/1_5LXRxfc.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_UHWYKZq.png",
+         "image sd": "/media/dynamic_image/2_cIBLAbe.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_1uNB950.png",
+         "image sd": "/media/dynamic_image/3_PsOoF0P.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_RvVEDNQ.png",
+         "image sd": "/media/dynamic_image/4_dpxVJ6C.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_5kkXYbS.png",
+         "image sd": "/media/dynamic_image/5_gOYUlyh.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_ukYS7yx.png",
+         "image sd": "/media/dynamic_image/6_y8BSEEc.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_F5yyPeM.png",
+         "image sd": "/media/dynamic_image/7_18A3cT3.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_7wixPag.png",
+         "image sd": "/media/dynamic_image/8_IFwHgGN.png"
+        },
+        {
+         "image": "/media/dynamic_image/9_PyVV8Uw.png",
+         "image sd": "/media/dynamic_image/9_XTBsLVa.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "dncc"
+ }
+}

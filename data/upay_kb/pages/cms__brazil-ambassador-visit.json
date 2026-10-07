@@ -1,0 +1,60 @@
+{
+ "url": "https://www.upaybd.com/services/details/brazil-ambassador-visit",
+ "api": "https://api.upaybd.com/api/v2/pages/brazil-ambassador-visit",
+ "data": {
+  "title_english": "Brazil Ambassador Visit",
+  "title_bangla": "Brazil Ambassador Visit",
+  "template_name": "template-e",
+  "rows": {
+   "Data": [
+    {
+     "title": "Press Release",
+     "title bn": "Press Release",
+     "cover image": "/media/dynamic_image/Website_Desktop_Header_1_1_eNmYx4N_rQ6t50b.png",
+     "cover image sd": "/media/dynamic_image/Mobile_Desktop_Header_1_1_w1HtvDk_5fVMeB8.png",
+     "segment one": [
+      {
+       "title": "Brazil Ambassador visits upay office",
+       "title bn": "Brazil Ambassador visits upay office",
+       "desc": "<p>The Ambassador of Brazil to Bangladesh, His Excellency Mr. Joao Tabajara de Oliveira Junior visited the office of UCB Fintech Company Limited recently.</p>\r\n<p>UCB Fintech Company Limited is a subsidiary of the United Commercial Bank which operates mobile financial services under the brand name &lsquo;upay&rsquo;.</p>\r\n<p>During the visit, the Ambassador held a meeting with Mr. Anisuzzaman Chowdhury, Chairman of the upay Board of Directors. Among others, Members of the Board of Directors, Mr. Arif Quadri, Mr. Bashir Ahmed, Mr. ATM Tahmiduzzaman, Independent Director Mr. Ashraf Bin Taj, and Managing Director and CEO of UCB Fintech Company Limited Mr. Sydul H Khandaker were present at the meeting. Senior Management of UCB and upay were also present during the meeting.</p>\r\n<p>The ambassador praised upay for quick roll out of its services across Bangladesh within short period time and wished successful journey ahead.</p>\r\n<p>UCB Fintech Limited was established on July 30, 2020 and launched its commercial operation on March 17, 2021.</p>\r\nupay products and services include mobile transactions, utility bill payment, in-store and e-commerce payment, inward remittance, salary disbursement, airtime recharge, traffic fine payment, Indian visa fee payment and other value-added financial services. Customers can avail the services from upay&rsquo;s nationwide agent and merchant network at an affordable charge.",
+       "desc bn": "<p>The Ambassador of Brazil to Bangladesh, His Excellency Mr. Joao Tabajara de Oliveira Junior visited the office of UCB Fintech Company Limited recently.</p>\r\n<p>UCB Fintech Company Limited is a subsidiary of the United Commercial Bank which operates mobile financial services under the brand name &lsquo;upay&rsquo;.</p>\r\n<p>During the visit, the Ambassador held a meeting with Mr. Anisuzzaman Chowdhury, Chairman of the upay Board of Directors. Among others, Members of the Board of Directors, Mr. Arif Quadri, Mr. Bashir Ahmed, Mr. ATM Tahmiduzzaman, Independent Director Mr. Ashraf Bin Taj, and Managing Director and CEO of UCB Fintech Company Limited Mr. Sydul H Khandaker were present at the meeting. Senior Management of UCB and upay were also present during the meeting.</p>\r\n<p>The ambassador praised upay for quick roll out of its services across Bangladesh within short period time and wished successful journey ahead.</p>\r\n<p>UCB Fintech Limited was established on July 30, 2020 and launched its commercial operation on March 17, 2021.</p>\r\nupay products and services include mobile transactions, utility bill payment, in-store and e-commerce payment, inward remittance, salary disbursement, airtime recharge, traffic fine payment, Indian visa fee payment and other value-added financial services. Customers can avail the services from upay&rsquo;s nationwide agent and merchant network at an affordable charge.",
+       "image": "/media/dynamic_image/brazil_ambasador_upay_office_visit_pics_wecompress.com_s9C16vu.jpg",
+       "image sd": "/media/dynamic_image/brazil_ambasador_upay_office_visit_pics_wecompress.com_H3srDEG.jpg",
+       "sub title": "",
+       "sub title bn": "",
+       "sub desc": "",
+       "sub desc bn": "",
+       "sub image": "",
+       "sub image sd": ""
+      }
+     ],
+     "Segment two": [
+      {
+       "image": "",
+       "image sd": ""
+      }
+     ],
+     "Segment three": [
+      {
+       "title": "Share this article",
+       "title bn": "Share this article",
+       "facebook icon": "/media/dynamic_image/facebook_R0pSjSr_sSK2McB.png",
+       "facebook icon sd": "/media/dynamic_image/facebook_R0pSjSr_Cdh9q30.png",
+       "instagram icon": "",
+       "instagram icon sd": ""
+      }
+     ],
+     "Segment four": [
+      {
+       "title": "OTHER ANNOUNCEMENTS",
+       "title bn": "OTHER ANNOUNCEMENTS",
+       "desc": "Check out the other announcements from upay here",
+       "desc bn": "Check out the other announcements from upay here"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "brazil-ambassador-visit"
+ }
+}

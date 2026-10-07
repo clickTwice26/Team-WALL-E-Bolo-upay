@@ -1,0 +1,136 @@
+{
+ "url": "https://www.upaybd.com/services/details/pin-reset",
+ "api": "https://api.upaybd.com/api/v2/pages/pin-reset",
+ "data": {
+  "title_english": "Pin Reset",
+  "title_bangla": "Pin Reset",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "PIN Reset",
+     "title bn": "পিন রিসেট&nbsp;",
+     "background image": "/media/dynamic_image/Untitled_design_6_ru949GA.png",
+     "background image sd": "/media/dynamic_image/Website_Mobile_Header_1_SEipplp.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<div style=\"text-align: center;\"><span style=\"font-size: 12pt;\"><br />Dial *268# and reset your upay account pin without any hassle. Any users can change upay account pin by dialing *268# and following a simple process. After getting a temporary pin, upay users can use the app to set a new pin.</span></div>",
+     "desc bn": "<div style=\"text-align: center;\"><span style=\"font-size: 12pt;\"><br />ডায়াল করুন *২৬৮# এবং কোনো ঝামেলা ছাড়াই আপনার উপায় অ্যাকাউন্টের পিন রিসেট করুন। যে কোনো ব্যবহারকারী *২৬৮# ডায়াল করে এবং একটি সহজ প্রক্রিয়া অনুসরণ করে উপায় অ্যাকাউন্টের পিন পরিবর্তন করতে পারেন। টেম্পোরারি পিন পাওয়ার পর, উপায় ব্যবহারকারীরা অ্যাপ ব্যবহার করে একটি নতুন পিন সেট করতে পারবেন।</span></div>",
+     "Methods": [
+      {
+       "title": "How to reset your PIN ?",
+       "title bn": "কিভাবে পিন রিসেট করবেন ?",
+       "desc": "",
+       "desc bn": "",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/4_osPkbtu.png",
+         "image sd": "/media/dynamic_image/4_cUDkTPJ.png"
+        },
+        {
+         "image ": "/media/dynamic_image/4_Ln6t6V4.png",
+         "image sd": "/media/dynamic_image/4_xRbtKt5.png"
+        },
+        {
+         "image ": "/media/dynamic_image/5_IQYfJCt.png",
+         "image sd": "/media/dynamic_image/5_uYA9AZ0.png"
+        },
+        {
+         "image ": "/media/dynamic_image/6_AYRb8lS.png",
+         "image sd": "/media/dynamic_image/6_WSGpVtQ.png"
+        },
+        {
+         "image ": "/media/dynamic_image/7_6gtAlY8.png",
+         "image sd": "/media/dynamic_image/7_ROa9NU2.png"
+        },
+        {
+         "image ": "/media/dynamic_image/8_mzQrR8o.png",
+         "image sd": "/media/dynamic_image/8_7HT3CmE.png"
+        },
+        {
+         "image ": "/media/dynamic_image/9_erUDH3X.png",
+         "image sd": "/media/dynamic_image/9_vcVLkuu.png"
+        },
+        {
+         "image ": "/media/dynamic_image/10_I9yCas8.png",
+         "image sd": "/media/dynamic_image/10_H23IKhs.png"
+        },
+        {
+         "image ": "/media/dynamic_image/1_ajEWK9Y.png",
+         "image sd": "/media/dynamic_image/1_14N1CgV.png"
+        },
+        {
+         "image ": "/media/dynamic_image/2_SwAM9ol.png",
+         "image sd": "/media/dynamic_image/2_xHiKbOO.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/4_34stmUZ.png",
+         "image sd": "/media/dynamic_image/4_YhcaWjA.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_3IVVSaL.png",
+         "image sd": "/media/dynamic_image/4_1mqoy3B.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_fdV36u3.png",
+         "image sd": "/media/dynamic_image/5_TFCSMEP.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_qT2tQ1h.png",
+         "image sd": "/media/dynamic_image/6_7St1Wrs.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_N5U8XlX.png",
+         "image sd": "/media/dynamic_image/7_78an4CM.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_LFwV06j.png",
+         "image sd": "/media/dynamic_image/8_yol0yWO.png"
+        },
+        {
+         "image": "/media/dynamic_image/9_VeN4SOG.png",
+         "image sd": "/media/dynamic_image/9_4vMbR3W.png"
+        },
+        {
+         "image": "/media/dynamic_image/10_kZAFU8n.png",
+         "image sd": "/media/dynamic_image/10_0zDXECx.png"
+        },
+        {
+         "image": "/media/dynamic_image/1_RPsTdoC.png",
+         "image sd": "/media/dynamic_image/1_LlmlUhX.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_9tam2sF.png",
+         "image sd": "/media/dynamic_image/2_Nw7UtNt.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "pin-reset"
+ }
+}

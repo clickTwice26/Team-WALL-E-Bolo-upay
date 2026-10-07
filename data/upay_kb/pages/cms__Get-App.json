@@ -1,0 +1,32 @@
+{
+ "url": "https://www.upaybd.com/",
+ "api": "https://api.upaybd.com/api/v2/pages/Get-App",
+ "data": {
+  "title_english": "Get App",
+  "title_bangla": "Get App",
+  "template_name": "get-app",
+  "rows": {
+   "Data": [
+    {
+     "title": "Get The App Now",
+     "title bn": "ডাউনলোড করুন উপায় অ্যাপ",
+     "desc": "To make your life easier, download upay app and access all our services from a single touchpoint.",
+     "desc bn": "আপনার জীবনকে আরো সহজ করার জন্য, উপায় অ্যাপ ডাউনলোড করুন এবং আমাদের সকল সার্ভিস উপভোগ করুন।",
+     "segment one": [
+      {
+       "icon": "/media/dynamic_image/Google-Play-btn_JIEP2Tw.png",
+       "icon sd": "/media/dynamic_image/Google-Play-btn_JEsRpfe.png",
+       "url": "https://cutt.ly/upay"
+      },
+      {
+       "icon": "/media/dynamic_image/Apple-App-btn_N0RrXoK_nzTle20.svg",
+       "icon sd": "/media/dynamic_image/Apple-App-btn_N0RrXoK_uOcoOYg.svg",
+       "url": "https://apps.apple.com/us/app/upay-finance-and-payments/id1576179329"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "Get-App"
+ }
+}

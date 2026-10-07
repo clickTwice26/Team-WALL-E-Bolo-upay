@@ -1,0 +1,92 @@
+{
+ "url": "https://www.upaybd.com/services/details/infolink",
+ "api": "https://api.upaybd.com/api/v2/pages/infolink",
+ "data": {
+  "title_english": "Infolink",
+  "title_bangla": "Infolink",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Infolink",
+     "title bn": "ইনফোলিংক",
+     "background image": "/media/dynamic_image/Desktop_Internet_Backdrop_IHsPlXy_ac6XAaM_34JXP7v.png",
+     "background image sd": "/media/dynamic_image/Mobile_internet_backdrop_l014c16_gFp7nwn_P8esxYZ.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "There is no need to worry about paying your internet bill physically. Through upay app, you can pay your internet bill easily anytime, anywhere",
+     "desc bn": "এখন আর সময় মত ইন্টারনেট বিল দেয়ার চিন্তা নিতে হবে না। উপায় অ্যাপ এর মাধ্যমে খুব সহজেই ইন্টারনেট বিল দিতে পারবেন যে কোন সময়, যে কোন জায়গায়।",
+     "Methods": [
+      {
+       "title": "How to pay your Internet Bill ?",
+       "title bn": "কি ভাবে আপনার ইন্টারনেট বিল দিতে পারবেন ?",
+       "desc": "Simply follow the below steps in order to pay your internet bill",
+       "desc bn": "নিচের ধাপ গুলো অনুসরণ করে জেনে নিন কি ভাবে আপনার ইন্টারনেট বিল দিতে পারবেন।",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Internet_BIll_c0cmYkI.png",
+         "image sd": "/media/dynamic_image/Internet_BIll_Xn6kA6G.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_dMDx5Vs.png",
+         "image sd": "/media/dynamic_image/1_lzdXTuJ.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_MCnzAtk.png",
+         "image sd": "/media/dynamic_image/2_nDPldhN.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_BaD6weO.png",
+         "image sd": "/media/dynamic_image/3_hqHorPf.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_njiKlkT.png",
+         "image sd": "/media/dynamic_image/4_wkidhaA.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_z7qq8jS.png",
+         "image sd": "/media/dynamic_image/5_sMUmyR4.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_iSFUUvg.png",
+         "image sd": "/media/dynamic_image/6_ctUJf2w.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_0KzlyCb.png",
+         "image sd": "/media/dynamic_image/7_dSVwQPG.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_pA2HsaJ.png",
+         "image sd": "/media/dynamic_image/8_aQWboyP.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "infolink"
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "url": "https://www.upaybd.com/services/details/prepaid-card-chorki-subscription",
+ "api": "https://api.upaybd.com/api/v2/pages/prepaid-card-chorki-subscription",
+ "data": {
+  "title_english": "Prepaid Card Chorki Subscription ",
+  "title_bangla": "Prepaid Card Chorki Subscription ",
+  "template_name": "template-h",
+  "rows": {
+   "Data": [
+    {
+     "image": "/media/dynamic_image/Chorki_Prepaid_Card_Offer_Website_banner_Desktop_2500X11811400x680_GySuaGE.jpg",
+     "image sd": "/media/dynamic_image/Chorki_Prepaid_Card_Offer_Website_banner_Desktop_2500X11811400x680_K4PIHBh.jpg",
+     "Details data": [
+      {
+       "title": "Get 20% discount on Chorki Subscriptions by paying with your উপায় Card 🎬✨",
+       "title bn": "উপায় কার্ড দিয়ে পেমেন্ট করলে Chorki সাবস্ক্রিপশনে থাকছে ২০% ছাড়! 🎬✨",
+       "desc": "<span style=\"font-size: 12pt;\">Enjoy an exclusive 20% discount on your CHORKI subscription with the উপায় Card! Simply pay with your card, and the discount applies automatically. Don&rsquo;t miss this limited-time offer to stream premium content at a lower cost!</span><br /><br /><br /><span style=\"font-size: 12pt;\">🎉 <strong>What's the offer? </strong>🎉</span><br /><span style=\"font-size: 12pt;\">🔹 All উপায় card holders will enjoy a 20% discount on CHORKI subscriptions!<br /><br /><strong><br /></strong><span style=\"font-size: 14pt;\"><strong>Terms &amp; Conditions</strong></span><br /></span>",
+       "desc bn": "<div class=\"flex max-w-full flex-col flex-grow\">\r\n<div class=\"min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5\" dir=\"auto\" data-message-author-role=\"assistant\" data-message-id=\"86229fa2-b45c-4316-b77c-e5a6649ff558\" data-message-model-slug=\"gpt-4o\">\r\n<div class=\"flex w-full flex-col gap-1 empty:hidden first:pt-[3px]\">\r\n<div class=\"markdown prose w-full break-words dark:prose-invert light\">\r\n<p data-start=\"0\" data-end=\"68\"><span style=\"font-size: 12pt;\">উপায় কার্ডে Chorki সাবস্ক্রিপশনে পান ২০% ছাড়! এখন আপনার পছন্দের মুভি, ওয়েব সিরিজ ও ইউনিক কনটেন্ট দেখুন আরও সাশ্রয়ে। পেমেন্টের সময় উপায় কার্ড ব্যবহার করলেই ইন্সট্যান্ট ডিসকাউন্ট পাবেন।</span><br /><span style=\"font-size: 12pt;\">সীমিত সময়ের অফার! সুযোগ হাতছাড়া না করে আজই সাবস্ক্রাইব করুন</span><br /><br /></p>\r\n<p data-start=\"0\" data-end=\"35\"><span style=\"font-size: 12pt;\">🎉 <strong>অফারটি কি? </strong>🎉</span><br /><span style=\"font-size: 12pt;\">🔹 সকল উপায় প্রিপেইড কার্ড হোল্ডাররা Chorki সাবস্ক্রিপশনে ২০% ছাড় উপভোগ করতে পারবেন!<br /><br /><br /><span style=\"font-size: 14pt;\"><strong>শর্তাবলি</strong></span></span></p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
+       "sub title": "",
+       "sub title bn": "",
+       "sub desc": "",
+       "sub desc bn": "",
+       "key value": [
+        {
+         "title": "In order to avail the discount, customers are required to select UCB-upay Prepaid Card as their method of payment.",
+         "title bn": "ছাড় উপভোগ করতে হলে, অবশ্যই <strong data-start=\"89\" data-end=\"116\">UCB-upay প্রিপেইড কার্ড</strong> ব্যবহার করে পেমেন্ট করবেন"
+        },
+        {
+         "title": "Customers can enjoy the discount multiple times during the campaign period, adhering to each merchant's policy.",
+         "title bn": "গ্রাহকরা ক্যাম্পেইন চলাকালীন প্রতিবার মার্চেন্টের নীতিমালা অনুসরণ করে একাধিকবার ছাড় উপভোগ করতে পারবেন।"
+        },
+        {
+         "title": "Payments made through উপায় account via উপায় App or *268# are not eligible for this discount",
+         "title bn": "উপায় অ্যাপ অথবা *268# মাধ্যমে উপায় অ্যাকাউন্ট ব্যবহার করে করা পেমেন্ট এই ছাড়ের জন্য যোগ্য নয়।"
+        },
+        {
+         "title": "Please note that উপায় is solely providing a payment service, and any issues related to product availability are the responsibility of the merchant.",
+         "title bn": "মনে রাখবেন যে, উপায় শুধুমাত্র একটি পেমেন্ট সেবা প্রদান করছে, এবং পণ্য উপলব্ধতা সংক্রান্ত যেকোনো সমস্যা বিক্রেতার দায়িত্ব।"
+        },
+        {
+         "title": "উপায় reserves the right to change/modify campaign terms &amp; conditions if there is reasonable suspicion of customer abuse of the campaign benefits.",
+         "title bn": "উপায় ক্যাম্পেইনের সুবিধার অপব্যবহার সম্পর্কিত যৌক্তিক সন্দেহ হলে ক্যাম্পেইনের শর্তাবলী পরিবর্তন/সংশোধন করার অধিকার সংরক্ষণ করে।"
+        }
+       ]
+      }
+     ],
+     "May like": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under May like": []
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "prepaid-card-chorki-subscription"
+ }
+}

@@ -1,0 +1,161 @@
+{
+ "url": "https://www.upaybd.com/",
+ "api": "https://api.upaybd.com/api/v2/pages/Footer",
+ "data": {
+  "title_english": "Footer",
+  "title_bangla": "Footer",
+  "template_name": "footer",
+  "rows": {
+   "Data": [
+    {
+     "desc": "<div>upay (UCB Fintech Company Limited), is aiming to help aspirers achieve their goals through easy, secure and innovative Digital Financial Solutions.</div>",
+     "desc bn": "<p style=\"text-align: left;\">উপায় (UCB ফিনটেক কোম্পানি লিমিটেড) একটি ডিজিটাল ফাইন্যান্সিয়াল সার্ভিস ব্র্যান্ড যা সহজ, সুরক্ষিত এবং &nbsp;উদ্ভাবনী ডিজিটাল আর্থিক সমাধানের মাধ্যমে সবার লক্ষ্য অর্জনে সহায়তা করছে। &nbsp;&nbsp;</p>",
+     "upay logo": "/media/dynamic_image/upai_footer_white_6YDmbNa.png",
+     "upay logo sd": "/media/dynamic_image/upai_footer_white_Lv0x5Ew.png",
+     "Get In Touch": [
+      {
+       "title": "<a href=\"https://customerservice.upaybd.com/\" target=\"_blank\" rel=\"noopener\">Live Chat</a>",
+       "title bn": "<a href=\"https://customerservice.upaybd.com/\" target=\"_blank\" rel=\"noopener\">লাইভ চ্যাট</a>",
+       "icon": "/media/dynamic_image/chat_logo_design_2.svg",
+       "icon sd": "/media/dynamic_image/chat_logo_design_2_b0rnJ51.svg"
+      },
+      {
+       "title": "<a href=\"mailto:customerservice@upaybd.com\">customerservice@upaybd.com</a> (For Customer Service only)",
+       "title bn": "<a href=\"mailto:customerservice@upaybd.com\">customerservice@upaybd.com</a> (শুধুমাত্র কাস্টমার সার্ভিসের জন্য)",
+       "icon": "/media/dynamic_image/email_iaP3DWP.svg",
+       "icon sd": "/media/dynamic_image/email_nl1H5p1.svg"
+      },
+      {
+       "title": "<a href=\"mailto:info@upaybd.com\">info@upaybd.com</a> (For Media Queries)",
+       "title bn": "<a href=\"mailto:info@upaybd.com\">info@upaybd.com</a>&nbsp; (শুধুমাত্র মিডিয়ার জন্য)",
+       "icon": "/media/dynamic_image/email_iaP3DWP_9zcJF1p.svg",
+       "icon sd": "/media/dynamic_image/email_iaP3DWP_gs1knWV.svg"
+      },
+      {
+       "title": "16268",
+       "title bn": "১৬২৬৮",
+       "icon": "/media/dynamic_image/phone.svg",
+       "icon sd": "/media/dynamic_image/phone_2rE8HeX.svg"
+      },
+      {
+       "title": "09610916268",
+       "title bn": "০৯৬১০৯১৬২৬৮",
+       "icon": "/media/dynamic_image/phone_zbcxqSn.svg",
+       "icon sd": "/media/dynamic_image/phone_1U5KRoZ.svg"
+      },
+      {
+       "title": "Plot CWS (A) -1, Road 34, Gulshan Avenue, Dhaka - 1212, Bangladesh",
+       "title bn": "প্লট সিডব্লিউএস (এ) - ১, রোড ৩৪, গুলশান এভিনিউ, ঢাকা - ১২১২, বাংলাদেশ",
+       "icon": "/media/dynamic_image/location.svg",
+       "icon sd": "/media/dynamic_image/location_HIPSaHv.svg"
+      },
+      {
+       "title": "upay point ( Customer Service Center), UCB Taqwa Islamic Branch, Plot No.3, Block-5E(H)8, Near Shooting Club Gulshan Avenue, Gulshan-1, Dhaka-1212 - Timing: 9:30 am - 4:00 pm",
+       "title bn": "উপায় পয়েন্ট (কাস্টমার সার্ভিস সেন্টার) UCB তাকওয়া ইসলামিক শাখা, প্লট 3, ব্লক 5E(H)8, গুলশান অ্যাভেনিউ, গুলশান -১, ঢাকা ১২১২ - সময়: সকাল ৯:৩০ &ndash; বিকেল ৪:০০",
+       "icon": "/media/dynamic_image/location_gTK0NHz.svg",
+       "icon sd": "/media/dynamic_image/location_9iOAPbH.svg"
+      }
+     ],
+     "Usefull Links": [
+      {
+       "title": "Limits and Charges",
+       "title bn": "লিমিট এবং চার্জ",
+       "slug url": "/limits-and-charges"
+      },
+      {
+       "title": "Press Release",
+       "title bn": "প্রেস বিজ্ঞপ্তি",
+       "slug url": "/Blog"
+      },
+      {
+       "title": "Need Help?",
+       "title bn": "হেল্প দরকার ?",
+       "slug url": "/need-help"
+      },
+      {
+       "title": "Partner",
+       "title bn": "পার্টনার",
+       "slug url": "/partners"
+      },
+      {
+       "title": "Discontinued Agents",
+       "title bn": "ডিসকন্টিনিউড এজেন্ট",
+       "slug url": "/discontinued-agents"
+      }
+     ],
+     "Company Info": [
+      {
+       "title": "Privacy Policy",
+       "title bn": "প্রাইভেসী পলিসি",
+       "slug url": "/ProductServices/privacy-policy",
+       "pdf": "/Privacy_Policy.pdf"
+      },
+      {
+       "title": "Terms and Conditions",
+       "title bn": "শর্তাবলী",
+       "slug url": "/ProductServices/terms-and-condition",
+       "pdf": "/Terms_and_Conditions.pdf"
+      },
+      {
+       "title": "Who We Are",
+       "title bn": "আমাদের পরিচিতি",
+       "slug url": "/who-we-are",
+       "pdf": ""
+      },
+      {
+       "title": "Business Solution",
+       "title bn": "বিজনেস সল্যুশন",
+       "slug url": "/ProductServices/privacy-policy-bhorosha",
+       "pdf": ""
+      }
+     ],
+     "Stay Connected": [
+      {
+       "icon": "/media/dynamic_image/facebook.png",
+       "icon sd": "/media/dynamic_image/facebook_lWyyRLD.png",
+       "url": "https://www.facebook.com/upaybangladesh"
+      },
+      {
+       "icon": "/media/dynamic_image/linkedin.png",
+       "icon sd": "/media/dynamic_image/linkedin_QtSqmbz.png",
+       "url": "https://www.linkedin.com/company/upay-ucbfintech/"
+      },
+      {
+       "icon": "/media/dynamic_image/youtube.png",
+       "icon sd": "/media/dynamic_image/youtube_Qretnvc.png",
+       "url": "https://www.youtube.com/channel/UCEAt0bzPbUVVHRusaNtYOlg"
+      },
+      {
+       "icon": "/media/dynamic_image/Untitled_design_12_r80MCuM.png",
+       "icon sd": "/media/dynamic_image/Untitled_design_12_85mvSlK.png",
+       "url": "https://invite.viber.com/?g2=AQBHgt6ukI9I3U6kD06aw7Kd4RCJyuZvZCjuSVBI%2FfxUaXXe7%2FlEdpAekCKobLwn"
+      },
+      {
+       "icon": "/media/dynamic_image/Untitled_design_14_gieAqjg.png",
+       "icon sd": "/media/dynamic_image/Untitled_design_14_MNPJ5fV.png",
+       "url": "https://s.channelcom.tech/vaaSJr?from=copy_link"
+      }
+     ],
+     "Get app": [
+      {
+       "icon": "/media/dynamic_image/Android_Icon_gK19jnv.png",
+       "icon sd": "/media/dynamic_image/Android_Icon_VIMnsPu.png",
+       "url": "https://cutt.ly/NzXvJDf"
+      },
+      {
+       "icon": "/media/dynamic_image/Android_Icon_1.png",
+       "icon sd": "/media/dynamic_image/Android_Icon_1_a50Pox6.png",
+       "url": "https://apps.apple.com/us/app/upay-finance-and-payments/id1576179329"
+      },
+      {
+       "icon": "/media/dynamic_image/A_Subsidiary_of_UCB_White-01.png",
+       "icon sd": "/media/dynamic_image/A_Subsidiary_of_UCB_White-01_vlK6mjJ.png",
+       "url": "https://www.ucb.com.bd/"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "Footer"
+ }
+}

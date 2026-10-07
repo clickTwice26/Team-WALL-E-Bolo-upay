@@ -1,0 +1,94 @@
+{
+ "url": "https://www.upaybd.com/products/Pay-Bill",
+ "api": "https://api.upaybd.com/api/v2/pages/Pay-Bill",
+ "data": {
+  "title_english": "PayBill",
+  "title_bangla": "বিদ্যুৎ বিল",
+  "template_name": "template-c",
+  "rows": {
+   "Data": [
+    {
+     "cover title": "Pay Bill",
+     "cover title bn": "পে বিল",
+     "background image": "/media/dynamic_image/Bill_pay_desktop.jpg",
+     "background image sd": "/media/dynamic_image/Bill_pay_mobile.jpg",
+     "desc": "Bill payment is easy and convenient through upay. Now enjoy wide ranging utility bill payment options through upay.",
+     "desc bn": "উপায় এর মাধ্যমে বিল পেমেন্ট এখন অনেক সহজ এবং সুবিধাজনক।&nbsp;&nbsp;",
+     "methods": [
+      {
+       "title": "Gas",
+       "title bn": "গ্যাস",
+       "image": "/media/dynamic_image/Rectangle_66_4.png",
+       "image sd": "/media/dynamic_image/Rectangle_66_4_0IbGqxY.png",
+       "icon image": "/media/dynamic_image/Asset_54x-8_2.svg",
+       "icon image sd": "/media/dynamic_image/Asset_54x-8_2_iyY5JvO.svg",
+       "slug url": "/products/utility/Gas",
+       "has providers": "true"
+      },
+      {
+       "title": "Credit Card",
+       "title bn": "ক্রেডিট কার্ড",
+       "image": "/media/dynamic_image/Rectangle_66_3_bmJMPV2.png",
+       "image sd": "/media/dynamic_image/Rectangle_66_3_jg8sLfD.png",
+       "icon image": "/media/dynamic_image/Asset_154x-8_1_3M6GoX6.svg",
+       "icon image sd": "/media/dynamic_image/Asset_154x-8_1_pdpGA6T.svg",
+       "slug url": "/products/utility/credit-card-service",
+       "has providers": "true"
+      },
+      {
+       "title": "Electricity",
+       "title bn": "বিদ্যুৎ&nbsp;",
+       "image": "/media/dynamic_image/Pay_Bill___Website_Headers.png",
+       "image sd": "/media/dynamic_image/Pay_Bill___Website_Headers_8tTZYTL.png",
+       "icon image": "/media/dynamic_image/Asset_34x-8_2.png",
+       "icon image sd": "/media/dynamic_image/Asset_34x-8_2_qeIGEkJ.png",
+       "slug url": "/products/utility/electricity-bill",
+       "has providers": "true"
+      },
+      {
+       "title": "Water",
+       "title bn": "পানি&nbsp;",
+       "image": "/media/dynamic_image/Pay_Bill___Website_Headers_1.png",
+       "image sd": "/media/dynamic_image/Pay_Bill___Website_Headers_1_7jZl8rL.png",
+       "icon image": "/media/dynamic_image/Asset_74x-8_4.png",
+       "icon image sd": "/media/dynamic_image/Asset_74x-8_4_Bv4BV8K.png",
+       "slug url": "/products/utility/water-bill",
+       "has providers": "true"
+      },
+      {
+       "title": "Internet",
+       "title bn": "ইন্টারনেট",
+       "image": "/media/dynamic_image/Untitled_design_15.png",
+       "image sd": "/media/dynamic_image/Untitled_design_15_hqmz2zY.png",
+       "icon image": "/media/dynamic_image/Untitled_60_x_60_px_3.png",
+       "icon image sd": "/media/dynamic_image/Untitled_60_x_60_px_3_pQEYAN8.png",
+       "slug url": "/services/details/carnival-internet",
+       "has providers": "true"
+      },
+      {
+       "title": "Cable TV",
+       "title bn": "ক্যাবল টিভি",
+       "image": "/media/dynamic_image/Cable_TV_Website_.png",
+       "image sd": "/media/dynamic_image/Cable_TV_Website__BYkS8d5.png",
+       "icon image": "/media/dynamic_image/Icons_1.png",
+       "icon image sd": "/media/dynamic_image/Icons_1_8lVheio.png",
+       "slug url": "/products/utility/cable-tv",
+       "has providers": "true"
+      }
+     ],
+     "GetApp": [
+      {
+       "Slug url": "/Get-App"
+      }
+     ],
+     "Navigation": [
+      {
+       "slug url": "/nav/Navigation"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "Pay-Bill"
+ }
+}

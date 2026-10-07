@@ -1,0 +1,65 @@
+{
+ "url": "https://www.upaybd.com/services/details/prepaid-card-omnicare",
+ "api": "https://api.upaybd.com/api/v2/pages/prepaid-card-omnicare",
+ "data": {
+  "title_english": "prepaid card omnicare",
+  "title_bangla": "prepaid card omnicare",
+  "template_name": "template-h",
+  "rows": {
+   "Data": [
+    {
+     "image": "/media/dynamic_image/UPAY_Web_Banner-Desk_1440x680_PREPAID_CARD_OFFER_-_OMNICARE_9sZ8QsD_ADMQErI.png",
+     "image sd": "/media/dynamic_image/UPAY_Web_Banner-Desk_1440x680_PREPAID_CARD_OFFER_-_OMNICARE_9sZ8QsD_GCcl3Xw.png",
+     "Details data": [
+      {
+       "title": "Save up to 30% on healthcare costs at Omnicare!",
+       "title bn": "ওমনিকেয়ারে স্বাস্থ্যসেবায় সর্বোচ্চ ৩০% পর্যন্ত ছাড়!",
+       "desc": "<h3 data-start=\"190\" data-end=\"247\">🎁 Exclusive Benefit for উপায় Card holders</h3>\r\n<span style=\"font-size: 12pt;\">Get access to <strong data-start=\"263\" data-end=\"285\">up to 30% discount</strong> on a wide range of diagnostic and medical services at <strong data-start=\"340\" data-end=\"370\">Omnicare Diagnostic Center</strong> &mdash; exclusively with your উপায় Card.</span><br /><span style=\"font-size: 12pt;\"><span style=\"font-size: 12pt;\">This special offer is designed to make quality healthcare <strong data-start=\"477\" data-end=\"524\">more affordable, convenient, and accessible</strong> for you and your family.&nbsp;<br /></span></span><br />\r\n<table style=\"border-collapse: collapse; width: 99.6965%;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 64.973%; text-align: center;\" width=\"205\"><strong>Particulars</strong></td>\r\n<td style=\"width: 30.6403%; text-align: center;\" width=\"93\"><strong>Discount Rate</strong></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 64.973%; text-align: center;\">Pathological Test</td>\r\n<td style=\"width: 30.6403%; text-align: center;\">30%</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 64.973%; text-align: center;\">Radiology &amp; Imaging test</td>\r\n<td style=\"width: 30.6403%; text-align: center;\">20%</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 64.973%; text-align: center;\">Medicine (Omnicare pharmacy)</td>\r\n<td style=\"width: 30.6403%; text-align: center;\">5%</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<br /><br /><span style=\"font-size: 14pt;\"><strong>🔍 Why Choose Omnicare?<br /></strong></span>\r\n<ul>\r\n<li><span style=\"font-size: 12pt;\">Trusted diagnostic center with advanced medical technology</span></li>\r\n<li><span style=\"font-size: 12pt;\">Comprehensive tests and services under one roof</span></li>\r\n<li><span style=\"font-size: 12pt;\">Professional and compassionate care</span></li>\r\n</ul>\r\n<p data-start=\"740\" data-end=\"837\"><span style=\"font-size: 12pt;\">Start saving on your healthcare today &mdash; just by using your <strong data-start=\"799\" data-end=\"824\">উপায় Card</strong> at Omnicare!</span><br /><br /><strong data-start=\"146\" data-end=\"165\"><br /><span style=\"font-size: 12pt;\">Offer Validity:</span></strong><span style=\"font-size: 12pt;\"> <em data-start=\"166\" data-end=\"188\">Until further notice<br /><br /><br /><strong><span style=\"font-size: 14pt;\">Terms &amp; Conditions</span></strong><br /></em></span></p>",
+       "desc bn": "<h3 data-start=\"219\" data-end=\"284\"><span style=\"font-size: 12pt;\">🎁 শুধুমাত্র উপায় কার্ড ধারীদের জন্য বিশেষ সুবিধা</span></h3>\r\n<span style=\"font-size: 12pt;\">আপনার <strong data-start=\"292\" data-end=\"319\">উপায় কার্ড</strong> ব্যবহার করে <strong data-start=\"332\" data-end=\"368\">ওমনিকেয়ার ডায়াগনস্টিক সেন্টারে</strong> স্বাস্থ্যসেবা গ্রহণে <strong data-start=\"390\" data-end=\"419\">সর্বোচ্চ ৩০% পর্যন্ত ছাড়</strong> উপভোগ করুন।<br /></span><span style=\"font-size: 12pt;\">এই আকর্ষণীয় অফারটি স্বাস্থ্যসেবাকে করে তুলছে <strong data-start=\"481\" data-end=\"507\">আরো সাশ্রয়ী ও সহজলভ্য</strong>, যাতে আপনি ও আপনার পরিবার পান উন্নতমানের চিকিৎসা সুবিধা।<br /></span><br />\r\n<table style=\"border-collapse: collapse; width: 99.6965%; height: 76px;\" border=\"1\">\r\n<tbody>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 64.973%; text-align: center; height: 19px;\" width=\"205\"><strong>Particulars</strong></td>\r\n<td style=\"width: 30.6403%; text-align: center; height: 19px;\" width=\"93\"><strong>Discount Rate</strong></td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 64.973%; text-align: center; height: 19px;\">Pathological Test</td>\r\n<td style=\"width: 30.6403%; text-align: center; height: 19px;\">30%</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 64.973%; text-align: center; height: 19px;\">Radiology &amp; Imaging test</td>\r\n<td style=\"width: 30.6403%; text-align: center; height: 19px;\">20%</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 64.973%; text-align: center; height: 19px;\">Medicine (Omnicare pharmacy)</td>\r\n<td style=\"width: 30.6403%; text-align: center; height: 19px;\">5%</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<span style=\"font-size: 12pt;\"><span style=\"font-size: 12pt;\"><br /></span></span><span style=\"font-size: 12pt;\"><br />🔍 </span><strong style=\"font-size: 12pt;\">কেন বেছে নেবেন ওমনিকেয়ার?<br /></strong>\r\n<ul>\r\n<li><span style=\"font-size: 12pt;\">বিশ্বমানের প্রযুক্তিসম্পন্ন নির্ভরযোগ্য ডায়াগনস্টিক সেন্টার</span></li>\r\n<li><span style=\"font-size: 12pt;\">এক ছাদের নিচে সব ধরনের পরীক্ষা ও চিকিৎসাসেবা</span></li>\r\n<li><span style=\"font-size: 12pt;\">দক্ষ ও যত্নশীল মেডিকেল টিমের সেবা</span></li>\r\n</ul>\r\n<p data-start=\"758\" data-end=\"843\"><span style=\"font-size: 12pt;\">আজই আপনার উপায় কার্ড ব্যবহার করে সাশ্রয়ে স্বাস্থ্যসেবা গ্রহণ শুরু করুন!</span><br /><br /><span style=\"font-size: 12pt;\"><strong data-start=\"156\" data-end=\"174\">অফারের মেয়াদ:</strong> <em data-start=\"175\" data-end=\"217\">পরবর্তী ঘোষণা না দেওয়া পর্যন্ত প্রযোজ্য<br /><br /><br /><span style=\"font-size: 14pt;\"><strong>শর্তাবলি</strong></span><br /></em></span></p>",
+       "sub title": "",
+       "sub title bn": "",
+       "sub desc": "",
+       "sub desc bn": "",
+       "key value": [
+        {
+         "title": "Customer will get the discount multiple times as per the selected individual merchant&rsquo;s policy during the campaign period.",
+         "title bn": "ক্যাম্পেইন চলাকালীন নির্বাচিত প্রত্যেকটি মার্চেন্টের নীতিমালা অনুযায়ী গ্রাহক একাধিকবার ছাড় উপভোগ করতে পারবেন।"
+        },
+        {
+         "title": "Customer must make POS payment to avail the offer.",
+         "title bn": "অফারটি উপভোগ করতে গ্রাহককে অবশ্যই POS পেমেন্ট করতে হবে"
+        },
+        {
+         "title": "Discount will be applicable on catalogue price. However, offers cannot be clubbed with other offers simultaneously.",
+         "title bn": "ছাড় ক্যাটালগ মূল্যের উপর প্রযোজ্য হবে। তবে, এই অফারটি অন্য কোনো অফারের সঙ্গে একসঙ্গে ব্যবহার করা যাবে না।"
+        },
+        {
+         "title": "Customer will not be eligible for this discount if payment is made using upay account through upay App or *268#.",
+         "title bn": "গ্রাহক উপায় অ্যাপ অথবা *268# ব্যবহার করে উপায় অ্যাকাউন্ট থেকে পেমেন্ট করলে এই ছাড়ের জন্য অযোগ্য হবেন।"
+        },
+        {
+         "title": "upay is neither liable nor responsible for the merchant&rsquo;s inability to ensure the availability or delivery of the product since upay is only providing a payment service to the customer.",
+         "title bn": "উপায় শুধুমাত্র গ্রাহকের পেমেন্ট সেবা প্রদান করছে, তাই পণ্য সরবরাহ বা পাওয়ার ক্ষেত্রে মার্চেন্টের অক্ষমতার জন্য উপায় দায়ী বা জবাবদিহি নয়।"
+        },
+        {
+         "title": "upay reserves the right to change/modify campaign terms &amp; conditions if the particular transaction and/ or the customer transaction behavior raises reasonable suspicion that the customer has abused the benefits of the campaign.",
+         "title bn": "যদি কোনও লেনদেন এবং/অথবা গ্রাহকের লেনদেনের আচরণ থেকে যুক্তিসঙ্গত সন্দেহ জন্মায় যে গ্রাহক ক্যাম্পেইনের সুবিধাগুলো দূর্ণীতি করেছে, তখন উপায় ক্যাম্পেইনের শর্তাবলী পরিবর্তন/সংশোধন করার অধিকার সংরক্ষণ করে।"
+        }
+       ]
+      }
+     ],
+     "May like": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under May like": []
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "prepaid-card-omnicare"
+ }
+}

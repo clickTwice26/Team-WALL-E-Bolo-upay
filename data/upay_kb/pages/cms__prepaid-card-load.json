@@ -1,0 +1,84 @@
+{
+ "url": "https://www.upaybd.com/services/details/prepaid-card-load",
+ "api": "https://api.upaybd.com/api/v2/pages/prepaid-card-load",
+ "data": {
+  "title_english": "Prepaid Card Load",
+  "title_bangla": "Prepaid Card Load",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Prepaid Card Load",
+     "title bn": "প্রিপেইড কার্ডে ব্যালেন্স লোড",
+     "background image": "/media/dynamic_image/Desktop_Backdrop_Website_25pnm8a_TlJl50B.jpg",
+     "background image sd": "/media/dynamic_image/Mobile_Backdrop_Website_2070_x_750_px_Y6J8pbI_eql4BCH.jpg",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<p>For the first time in Bangladesh, upay introduces MFS co-branded prepaid card with United Commercial Bank PLC. Check out the steps below to know the full process of how to load balance to your UCB - upay co-branded prepaid card.</p>",
+     "desc bn": "<p>দেশে-বিদেশে লেনদেনের স্বাধীনতা দিতে উপায় নিয়ে এলো দেশের প্রথম এমএফএস কো-ব্র্যান্ডেড প্রিপেইড কার্ড! জেনে নিন কীভাবে খুব সহজেই ব্যালেন্স লোড করবেন আপনার ইউসিবি উপায় কো-ব্র্যান্ডেড প্রিপেইড কার্ডে।</p>",
+     "Methods": [
+      {
+       "title": "How to load your Prepaid Card ?",
+       "title bn": "কিভাবে ব্যালেন্স লোড করবেন আপনার ইউসিবি উপায় কো-ব্র্যান্ডেড প্রিপেইড কার্ডে ?",
+       "desc": "",
+       "desc bn": "",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Not_Available_on_268_WZJNes2.png",
+         "image sd": "/media/dynamic_image/Not_Available_on_268_oJrmkw0.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_yLTlLA7.png",
+         "image sd": "/media/dynamic_image/1_oS7zLOy.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_zlnX1st.png",
+         "image sd": "/media/dynamic_image/2_CzVtBH7.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_SFVnGwH.png",
+         "image sd": "/media/dynamic_image/3_rJwLMAn.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_tCnmZ8C.png",
+         "image sd": "/media/dynamic_image/4_OCDkMgR.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_0IshpX6.png",
+         "image sd": "/media/dynamic_image/5_KHH1QOO.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_9RmMbZF.png",
+         "image sd": "/media/dynamic_image/6_Zudr6hC.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "prepaid-card-load"
+ }
+}

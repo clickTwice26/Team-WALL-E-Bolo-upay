@@ -1,0 +1,92 @@
+{
+ "url": "https://www.upaybd.com/services/details/ks-network",
+ "api": "https://api.upaybd.com/api/v2/pages/ks-network",
+ "data": {
+  "title_english": "KS Network",
+  "title_bangla": "KS Network",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "KS Network",
+     "title bn": "কে এস নেটওয়ার্ক",
+     "background image": "/media/dynamic_image/Desktop_Internet_Backdrop_IHsPlXy_ac6XAaM_lHwGqsG.png",
+     "background image sd": "/media/dynamic_image/Mobile_internet_backdrop_l014c16_gFp7nwn_oDHmoaj.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "There is no need to worry about paying your internet bill physically. Through upay app, you can pay your internet bill easily anytime, anywhere",
+     "desc bn": "এখন আর সময় মত ইন্টারনেট বিল দেয়ার চিন্তা নিতে হবে না। উপায় অ্যাপ এর মাধ্যমে খুব সহজেই ইন্টারনেট বিল দিতে পারবেন যে কোন সময়, যে কোন জায়গায়।",
+     "Methods": [
+      {
+       "title": "How to pay your Internet Bill ?",
+       "title bn": "কি ভাবে আপনার ইন্টারনেট বিল দিতে পারবেন ?",
+       "desc": "Simply follow the below steps in order to pay your internet bill",
+       "desc bn": "নিচের ধাপ গুলো অনুসরণ করে জেনে নিন কি ভাবে আপনার ইন্টারনেট বিল দিতে পারবেন।",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Internet_BIll.png",
+         "image sd": "/media/dynamic_image/Internet_BIll_rOK9ReZ.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_tacKozH.png",
+         "image sd": "/media/dynamic_image/1_gK55122.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_7rittwa.png",
+         "image sd": "/media/dynamic_image/2_wdsmKVx.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_uIs7Mek.png",
+         "image sd": "/media/dynamic_image/3_Bu8nUgn.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_hmqLWAG.png",
+         "image sd": "/media/dynamic_image/4_wMNoau4.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_qtDdaRt.png",
+         "image sd": "/media/dynamic_image/5_2Op8w6s.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_LJWUVZs.png",
+         "image sd": "/media/dynamic_image/6_Apql6PE.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_JK8GFpM.png",
+         "image sd": "/media/dynamic_image/7_3SJ3601.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_47OfWSD.png",
+         "image sd": "/media/dynamic_image/8_7UZqcJL.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "ks-network"
+ }
+}

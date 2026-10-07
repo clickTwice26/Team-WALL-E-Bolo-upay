@@ -1,0 +1,69 @@
+{
+ "url": "https://www.upaybd.com/products/Add-Money",
+ "api": "https://api.upaybd.com/api/v2/pages/Add-Money",
+ "data": {
+  "title_english": "Add Money",
+  "title_bangla": "Add Money",
+  "template_name": "template-c",
+  "rows": {
+   "Data": [
+    {
+     "cover title": "Add Money",
+     "cover title bn": "অ্যাড মানি&nbsp;",
+     "background image": "/media/dynamic_image/Add_money_desktop.jpg",
+     "background image sd": "/media/dynamic_image/Add_money_Mobile_8oEHOPU.jpg",
+     "desc": "<span style=\"font-weight: 400; font-size: 14pt;\">Add Money to your উপায় (upay) account easily from multiple options instantly from home, be it from Bank or Debit / Credit Card.&nbsp; </span>",
+     "desc bn": "আপনার উপায় একউন্টে অ্যাড মানি করে ফেলুন সহজেই, হোক ব্যাংক অথবা ডেবিট / ক্রেডিট কার্ড থেকে&nbsp;",
+     "methods": [
+      {
+       "title": "Linked Account",
+       "title bn": "লিংকড একাউন্ট",
+       "image": "/media/dynamic_image/Rectangle_66.png",
+       "image sd": "/media/dynamic_image/Rectangle_66_AlEWN6s.png",
+       "icon image": "/media/dynamic_image/Asset_124x-8_3.svg",
+       "icon image sd": "/media/dynamic_image/Asset_124x-8_3_TnyvD44.svg",
+       "slug url": "/ProductServices/linked-account",
+       "has providers": "true"
+      },
+      {
+       "title": "Linked Cards",
+       "title bn": "লিংকড কার্ড&nbsp;",
+       "image": "/media/dynamic_image/Linked_Cards_AFukPxl.jpg",
+       "image sd": "/media/dynamic_image/Untitled_design_9.png",
+       "icon image": "/media/dynamic_image/Asset_134x-8_3.svg",
+       "icon image sd": "/media/dynamic_image/Asset_134x-8_3_4ADBnmX.svg",
+       "slug url": "/ProductServices/linked-cards",
+       "has providers": "true"
+      },
+      {
+       "title": "Card to upay",
+       "title bn": "কার্ড টু উপায়&nbsp;",
+       "image": "/media/dynamic_image/Rectangle_66_SWVUBp8.png",
+       "image sd": "/media/dynamic_image/Rectangle_66_JVvqice.png",
+       "icon image": "/media/dynamic_image/Asset_144x-8_3.png",
+       "icon image sd": "/media/dynamic_image/Asset_144x-8_3_m1rfCls.png",
+       "slug url": "/services/details/card-to-upay",
+       "has providers": "true"
+      },
+      {
+       "title": "Bank to upay",
+       "title bn": "ব্যাংক থেকে উপায়-এ",
+       "image": "/media/dynamic_image/Bank_to_upay_icon_1.png",
+       "image sd": "/media/dynamic_image/Bank_to_upay_icon_1_03heFpH.png",
+       "icon image": "/media/dynamic_image/Asset_144x-8_3_6Bu224o.png",
+       "icon image sd": "/media/dynamic_image/Asset_144x-8_3_47t6LJt.png",
+       "slug url": "/services/details/bank-to-upay",
+       "has providers": "true"
+      }
+     ],
+     "GetApp": [
+      {
+       "Slug url": "/Get-App"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "Add-Money"
+ }
+}

@@ -1,0 +1,88 @@
+{
+ "url": "https://www.upaybd.com/services/details/e-porcha",
+ "api": "https://api.upaybd.com/api/v2/pages/e-porcha",
+ "data": {
+  "title_english": "E-Porcha",
+  "title_bangla": "E-Porcha",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "E-Porcha",
+     "title bn": "ই- পর্চা&nbsp;",
+     "background image": "/media/dynamic_image/Land_Services_Header_desktop_RmKjqfl_u8C5C2L.jpg",
+     "background image sd": "/media/dynamic_image/Land_Services_Header_mobile_0uABKcn_1xbk9Rk.jpg",
+     "heading": "",
+     "heading bn": "",
+     "desc": "Looking for ways to complete your Land payments. Simply visit upay app and complete your land payments in only a few clicks",
+     "desc bn": "আপনার জমি কর সম্পূর্ণ করার উপায় খুঁজছেন ? উপায় অ্যাপের মাধ্যমে কয়েকটি ক্লিকে আপনার জমির কর সম্পূর্ণ করুন।",
+     "Methods": [
+      {
+       "title": "How to pay your E-Porcha application payment ?",
+       "title bn": "কিভাবে আপনার ই- পর্চা কর সম্পূর্ণ করবেন ?&nbsp;",
+       "desc": "Check out the process below to clear your land tax payment",
+       "desc bn": "নিচের ধাপ দেখে সহজেই আপনার ই পর্চা কর সম্পূর্ণ করুন&nbsp;&nbsp;",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Add_Money_from_Card_is_not_available_on_268_12.png",
+         "image sd": "/media/dynamic_image/Add_Money_from_Card_is_not_available_on_268_12_pGB4LZb.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_8k3eW5n.png",
+         "image sd": "/media/dynamic_image/1_qr2guZ9.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_Vsl7hdw.png",
+         "image sd": "/media/dynamic_image/2_R5Qy6nf.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_mEdAPRk.png",
+         "image sd": "/media/dynamic_image/3_YFbWUnW.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_UdOwtem.png",
+         "image sd": "/media/dynamic_image/4_XuRxsXl.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_b2peumB.png",
+         "image sd": "/media/dynamic_image/7_YzEVyAV.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_Crd5wg1.png",
+         "image sd": "/media/dynamic_image/8_kD05H5z.png"
+        },
+        {
+         "image": "/media/dynamic_image/9_3wNMmQj.png",
+         "image sd": "/media/dynamic_image/9_GbkCZc5.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "e-porcha"
+ }
+}

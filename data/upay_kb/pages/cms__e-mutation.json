@@ -1,0 +1,88 @@
+{
+ "url": "https://www.upaybd.com/services/details/e-mutation",
+ "api": "https://api.upaybd.com/api/v2/pages/e-mutation",
+ "data": {
+  "title_english": "E-Mutation",
+  "title_bangla": "E-Mutation",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "E-Mutation",
+     "title bn": "ই-নামজারি",
+     "background image": "/media/dynamic_image/Land_Services_Header_desktop_RmKjqfl_auBDlYN.jpg",
+     "background image sd": "/media/dynamic_image/Land_Services_Header_mobile_0uABKcn_q7k1PNq.jpg",
+     "heading": "",
+     "heading bn": "",
+     "desc": "Looking for ways to complete your E-Mutation payments. Simply visit upay app and complete your payments in only a few clicks",
+     "desc bn": "<div class=\"flex max-w-full flex-col flex-grow\">\r\n<div class=\"min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5\" dir=\"auto\" data-message-author-role=\"assistant\" data-message-id=\"bf2b7577-f2dd-41e8-888f-f18d948d23f6\" data-message-model-slug=\"gpt-4o\">\r\n<div class=\"flex w-full flex-col gap-1 empty:hidden first:pt-[3px]\">\r\n<div class=\"markdown prose w-full break-words dark:prose-invert light\">\r\n<p style=\"text-align: center;\">আপনার ই-মিউটেশন পেমেন্ট সম্পন্ন করার সহজ উপায় খুঁজছেন?<br />অন্য রকম সুবিধা নিয়ে এসেছে <strong>উপায় অ্যাপ</strong>! মাত্র কয়েকটি ক্লিকেই পেমেন্ট সম্পন্ন করুন সহজে ও দ্রুত</p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
+     "Methods": [
+      {
+       "title": "How to complete your E-Mutation payment ?",
+       "title bn": "আপনার ই-মিউটেশন পেমেন্ট কীভাবে সম্পন্ন করবেন?",
+       "desc": "Simply check out the process below",
+       "desc bn": "নিচের প্রক্রিয়াটি দেখে নিন।",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Not_Available_on_268_2_4Tv9wSG.png",
+         "image sd": "/media/dynamic_image/Not_Available_on_268_2_BINyR3T.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_8fECo5B.png",
+         "image sd": "/media/dynamic_image/1_1iPvwG5.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_c6ySmUi.png",
+         "image sd": "/media/dynamic_image/2_M06cuMp.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_dvON58U.png",
+         "image sd": "/media/dynamic_image/3_lqyCoJM.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_Y8Mn3n2.png",
+         "image sd": "/media/dynamic_image/4_YlxnxP4.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_rKpZlXR.png",
+         "image sd": "/media/dynamic_image/5_PmwGtUx.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_qsydPoe.png",
+         "image sd": "/media/dynamic_image/6_iyWBaCX.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_9MuJA0B.png",
+         "image sd": "/media/dynamic_image/7_E7FZS4y.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "e-mutation"
+ }
+}

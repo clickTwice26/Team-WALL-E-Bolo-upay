@@ -1,0 +1,71 @@
+{
+ "url": "https://www.upaybd.com/services/details/prepaid-card-automobile-service",
+ "api": "https://api.upaybd.com/api/v2/pages/prepaid-card-automobile-service",
+ "data": {
+  "title_english": "Prepaid Card Automobile Service",
+  "title_bangla": "Prepaid Card Automobile Service",
+  "template_name": "template-h",
+  "rows": {
+   "Data": [
+    {
+     "image": "/media/dynamic_image/UPAY_AUTO-MOBILE-SERVICE.png",
+     "image sd": "/media/dynamic_image/UPAY_AUTO-MOBILE-SERVICE_Ben7KPG.png",
+     "Details data": [
+      {
+       "title": "Enjoy up to 50% discount on service charge at your favorite automobile workshops with upay Card",
+       "title bn": "আপনার পছন্দের অটোমোবাইল ওয়ার্কশপে সার্ভিস চার্জে সর্বোচ্চ ৫০% পর্যন্ত ডিসকাউন্ট উপভোগ করুন।",
+       "desc": "<span style=\"font-size: 12pt;\">Unlock exclusive discounts on car services at top automobile workshops with your upay Card!&nbsp;</span><br />\r\n<p><strong><br /><span style=\"font-size: 14pt;\">What is the Offer?</span><br /></strong><span style=\"font-size: 12pt;\">Enjoy unbeatable discounts of up to 50% on service charges during the campaign period when you avail car services from the selected Automobile Workshop merchants listed below. Don&rsquo;t miss out on this limited-time offer to keep your car in top shape while saving big!</span></p>\r\n<table style=\"border-collapse: collapse; width: 99.6965%; height: 95px;\" border=\"1\">\r\n<tbody>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 4.8929%; height: 19px;\"><strong>SL</strong></td>\r\n<td style=\"width: 20.6181%; height: 19px;\"><strong>Merchant Name</strong></td>\r\n<td style=\"width: 28.099%; height: 19px;\"><strong>Offer Details</strong></td>\r\n<td style=\"width: 13.7479%; height: 19px;\"><strong>Offer Validity</strong></td>\r\n<td style=\"width: 22.0017%; height: 19px;\"><strong>Location</strong></td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 4.8929%; height: 19px;\">1.</td>\r\n<td style=\"width: 20.6181%; height: 19px;\">Autobahn Solution Ltd.</td>\r\n<td style=\"width: 28.099%; height: 19px;\">50% Discount on Service Charge &amp; Free Car Wash with general services</td>\r\n<td style=\"width: 13.7479%; height: 19px;\">Until Further Notice</td>\r\n<td style=\"width: 22.0017%; height: 19px;\">22 Kuni Para Road, Happy Homes, Tejgaon 1/A, Dhaka-1208, Bangladesh</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 4.8929%; height: 19px;\">2.</td>\r\n<td style=\"width: 20.6181%; height: 19px;\">Multibrand Workshop Ltd.</td>\r\n<td style=\"width: 28.099%; height: 19px;\">20% Discount on Service Charge 30% discount on Prepurchase Inspection</td>\r\n<td style=\"width: 13.7479%; height: 19px;\">Until Further Notice&nbsp;</td>\r\n<td style=\"width: 22.0017%; height: 19px;\">417-418/A, Tejgaon 1/A, Dhaka-1208, Bangladesh</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<br />\r\n<p><strong><br /><span style=\"font-size: 14pt;\">Terms &amp; Conditions </span></strong></p>",
+       "desc bn": "<span style=\"font-size: 12pt;\">আপনার upay কার্ড দিয়ে পে করে দেশের শীর্ষস্থানীয় অটোমোবাইল ওয়ার্কশপগুলোতে গাড়ির সার্ভিসে এক্সক্লুসিভ ডিসকাউন্ট উপভোগ করুন!<br /><br /></span><strong style=\"font-size: 12pt;\">অফারটি কী?<br /></strong><span style=\"font-size: 12pt;\">নির্বাচিত অটোমোবাইল ওয়ার্কশপে গাড়ির সার্ভিস করালে ক্যাম্পেইন চলাকালীন সময়ে সার্ভিস চার্জে ৫০% পর্যন্ত ডিসকাউন্ট পান। আপনার গাড়িকে সেরা অবস্থায় রাখতে&nbsp; এই&nbsp; অফারটি মিস করবেন না।&nbsp;<br /><br /><br /></span>\r\n<table style=\"border-collapse: collapse; width: 99.6965%; height: 95px;\" border=\"1\">\r\n<tbody>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 4.8929%; height: 19px;\"><strong>ক্রমিক</strong></td>\r\n<td style=\"width: 20.6181%; height: 19px;\"><strong>মার্চেন্টের নাম</strong></td>\r\n<td style=\"width: 28.099%; height: 19px;\"><strong>অফারের বিবরণ</strong></td>\r\n<td style=\"width: 13.7479%; height: 19px;\"><strong>অফারের সময়সীমা</strong></td>\r\n<td style=\"width: 22.0017%; height: 19px;\"><strong>ঠিকানা</strong></td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 4.8929%; height: 19px;\">১</td>\r\n<td style=\"width: 20.6181%; height: 19px;\">অটোবাহন সলিউশন লিমিটেড</td>\r\n<td style=\"width: 28.099%; height: 19px;\">সার্ভিস চার্জে ৫০% ডিসকাউন্ট এবং সাধারণ সার্ভিসের সাথে ফ্রি গাড়ি ওয়াশ</td>\r\n<td style=\"width: 13.7479%; height: 19px;\">পরবর্তী নোটিশ না দেওয়া পর্যন্ত</td>\r\n<td style=\"width: 22.0017%; height: 19px;\">২২ কুনি পাড়া রোড, হ্যাপি হোমস, তেজগাঁও ১/এ, ঢাকা-১২০৮, বাংলাদেশ</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 4.8929%; height: 19px;\">২</td>\r\n<td style=\"width: 20.6181%; height: 19px;\">মাল্টিব্র্যান্ড ওয়ার্কশপ লিমিটেড.</td>\r\n<td style=\"width: 28.099%; height: 19px;\">সার্ভিস চার্জে ২০% ডিসকাউন্ট এবং প্রিপারচেজ ইন্সপেকশনে ৩০% ডিসকাউন্ট</td>\r\n<td style=\"width: 13.7479%; height: 19px;\">পরবর্তী নোটিশ না দেওয়া পর্যন্ত</td>\r\n<td style=\"width: 22.0017%; height: 19px;\">৪১৭-৪১৮/এ, তেজগাঁও ১/এ, ঢাকা-১২০৮, বাংলাদেশ</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<br />\r\n<p><strong><br /><span style=\"font-size: 12pt;\">শর্তাবলী&nbsp;</span><br /></strong></p>",
+       "sub title": "",
+       "sub title bn": "",
+       "sub desc": "",
+       "sub desc bn": "",
+       "key value": [
+        {
+         "title": "Customer can avail the discount while paying using the co-branded prepaid card.",
+         "title bn": "গ্রাহক কো-ব্র্যান্ডেড প্রিপেইড কার্ড ব্যবহার করে পেমেন্ট করার সময় ডিসকাউন্ট উপভোগ করতে পারবেন।"
+        },
+        {
+         "title": "Customer will get the discount multiple times as per the selected merchant&rsquo;s policy during the campaign period",
+         "title bn": "গ্রাহক ক্যাম্পেইন চলাকালীন সময়ের মধ্যে নির্বাচিত মার্চেন্টের নীতিমালা অনুযায়ী একাধিকবার ডিসকাউন্ট পাবেন।"
+        },
+        {
+         "title": "Cash purchase will not be eligible for discounts under this offer",
+         "title bn": "নগদ ক্রয়ের মাধ্যমে এই অফারের অধীনে ডিসকাউন্ট প্রযোজ্য হবে না।"
+        },
+        {
+         "title": "upay is neither liable nor responsible for the merchant&rsquo;s inability to ensure the availability or delivery of the product since upay is only providing a payment service to the customer",
+         "title bn": "উপায় মার্চেন্টের পণ্য পাওয়া বা বিতরণের নিশ্চয়তা না দেওয়ার জন্য দায়ী বা দায়বদ্ধ নয়, কারণ উপায় কেবলমাত্র গ্রাহকের জন্য একটি পেমেন্ট সেবা প্রদান করছে।"
+        },
+        {
+         "title": "UCB &amp; upay reserves the right to change/modify campaign terms &amp; conditions if the particular transaction and/ or the customer transaction behavior raises reasonable suspicion that the customer has abused the benefits of the campaign",
+         "title bn": "UCB ও উপায় ক্যাম্পেইনের শর্তাবলী পরিবর্তন বা সংশোধন করার অধিকার রাখে যদি কোনো নির্দিষ্ট লেনদেন বা গ্রাহকের লেনদেনের আচরণে সন্দেহজনক কিছু মনে হয় যে গ্রাহক ক্যাম্পেইনের সুবিধাগুলি অপব্যবহার করছেন।"
+        }
+       ]
+      }
+     ],
+     "May like": [
+      {
+       "title": "YOU MAY ALSO LIKE&nbsp;",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under May like": [
+        {
+         "title": "Enjoy 40% Discount on Vehicle Tracking Devices with UCB-উপায় Prepaid Card!",
+         "title bn": "",
+         "desc": "Secure your vehicle with a 40% discount on published rates for vehicle tracking devices when you pay with your UCB-upay Prepaid Card.",
+         "desc bn": "",
+         "image": "/media/dynamic_image/UPAY_Web_Banner-Desk_1440x680_Finder_GPS_EbyTOJY_roHRzZS.png",
+         "image sd": "/media/dynamic_image/UPAY_Web_Banner-Desk_1440x680_Finder_GPS_EbyTOJY_x8AnQai.png",
+         "slug url": "/Latest-offer/prepaid-card-vehicle-tracker"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "prepaid-card-automobile-service"
+ }
+}

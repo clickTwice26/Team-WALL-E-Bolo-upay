@@ -1,0 +1,92 @@
+{
+ "url": "https://www.upaybd.com/services/details/master-credit-card",
+ "api": "https://api.upaybd.com/api/v2/pages/master-credit-card",
+ "data": {
+  "title_english": "Master Credit Card",
+  "title_bangla": "Master Credit Card",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Master Credit Card",
+     "title bn": "Master Credit Card",
+     "background image": "/media/dynamic_image/Credit_card_Mobile_cUIAlfF_OspYxzp.jpg",
+     "background image sd": "/media/dynamic_image/Website_Mobile_Header_3_gPzg0OQ_QbHlRnC.png",
+     "heading": "Pay your MasterCard Credit Card bill through upay anytime, anywhere in Bangladesh",
+     "heading bn": "Pay your MasterCard Credit Card bill through upay anytime, anywhere in Bangladesh",
+     "desc": "<br /><span style=\"font-size: 12pt;\">Now upay users will be able to pay any MasterCard Credit Card bills issued by commercial banks operating in Bangladesh. The service is available from upay customer app only.</span><br /><br /><span style=\"font-size: 12pt;\">The applicable Limits and Frequency for Master Credit Card bill are given below:</span><br /><br />\r\n<table style=\"border-collapse: collapse; width: 99.6965%;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 95.5812%; text-align: center;\" colspan=\"2\"><span style=\"font-size: 12pt;\">Per Transaction Limit (Amount in BDT)</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">Minimum</span></td>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">Maximum</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">100</span></td>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">25,000</span></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<br />\r\n<table style=\"border-collapse: collapse; width: 99.6965%;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 95.5812%; text-align: center;\" colspan=\"2\"><span style=\"font-size: 12pt;\">Daily Transaction Limit (Amount in BDT)</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">Count</span></td>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">Amount</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">N/A</span></td>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">N/A</span></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<br />\r\n<table style=\"border-collapse: collapse; width: 99.6965%;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 95.5812%; text-align: center;\" colspan=\"2\"><span style=\"font-size: 12pt;\">Monthly Transaction Limit (Amount in BDT)</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">Count</span></td>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">Amount</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">N/A</span></td>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">N/A</span></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<br /><span style=\"font-size: 12pt;\">Customer will be charged 0.8% of total bill amount by upay.<br /><br /></span><span style=\"font-size: 14pt;\"><span style=\"font-size: 14pt;\"><strong><br />Terms and Conditions<br /><br /></strong></span></span><span style=\"font-size: 12pt;\">- Only active (full profile) customers with sufficient balance will be eligible for this service through upay app.</span><br /><span style=\"font-size: 12pt;\">- A customer can avail this service multiple times with the conditions of applicable local (Bangladesh) credit limit. </span><br /><span style=\"font-size: 12pt;\">- Payment will be updated within 3 working days after bill payment. However, if the customer is charged a late fee by the bank for making a last-minute credit card bill through upay, then the customer has to contact the card-issuing bank to resolve the issue.</span><br /><span style=\"font-size: 12pt;\">- Customer must follow the applicable payment rules of their concerned bank.</span><br /><span style=\"font-size: 12pt;\">- Customer will be charged by upay for this credit card bill payment service as determined by upay from time to time.</span><br /><span style=\"font-size: 12pt;\">- upay shall only be responsible for payment as a payment service provider. Visa/Mastercard will bear the sole responsibility and liability of its credit card services. </span><br /><span style=\"font-size: 12pt;\">- upay reserves the right to change/modify/amend these terms &amp; conditions or applicable charges of bill payment service or cancel this service at any time without giving any prior notice.</span><br /><span style=\"font-size: 12pt;\">- Any decision taken by upay in respect to this service, shall be in the sole discretion of upay and shall be deemed final.</span><br /><span style=\"font-size: 12pt;\">- For details Terms &amp; Condition, click <a href=\"https://www.upaybd.com/ProductServices/terms-and-condition-credit-and-debit-card\" target=\"_blank\" rel=\"noopener\">HERE.&nbsp;</a><br /><br /><br /></span>",
+     "desc bn": "<br /><span style=\"font-size: 12pt;\">Now upay users will be able to pay any MasterCard Credit Card bills issued by commercial banks operating in Bangladesh. The service is available from upay customer app only.</span><br /><br /><span style=\"font-size: 12pt;\">The applicable Limits and Frequency for Master Credit Card bill are given below:</span><br /><br />\r\n<table style=\"border-collapse: collapse; width: 99.6965%;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 95.5812%; text-align: center;\" colspan=\"2\"><span style=\"font-size: 12pt;\">Per Transaction Limit (Amount in BDT)</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">Minimum</span></td>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">Maximum</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">100</span></td>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">25,000</span></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<br />\r\n<table style=\"border-collapse: collapse; width: 99.6965%;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 95.5812%; text-align: center;\" colspan=\"2\"><span style=\"font-size: 12pt;\">Daily Transaction Limit (Amount in BDT)</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">Count</span></td>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">Amount</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">N/A</span></td>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">N/A</span></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<br />\r\n<table style=\"border-collapse: collapse; width: 99.6965%;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 95.5812%; text-align: center;\" colspan=\"2\"><span style=\"font-size: 12pt;\">Monthly Transaction Limit (Amount in BDT)</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">Count</span></td>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">Amount</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">N/A</span></td>\r\n<td style=\"width: 47.7906%; text-align: center;\"><span style=\"font-size: 12pt;\">N/A</span></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<br /><span style=\"font-size: 12pt;\">Customer will be charged 0.8% of total bill amount by upay.<br /><br /></span><span style=\"font-size: 14pt;\"><strong><br />Terms and Conditions<br /><br /></strong></span><span style=\"font-size: 12pt;\">- Only active (full profile) customers with sufficient balance will be eligible for this service through upay app.</span><br /><span style=\"font-size: 12pt;\">- A customer can avail this service multiple times with the conditions of applicable local (Bangladesh) credit limit. </span><br /><span style=\"font-size: 12pt;\">- Payment will be updated within 3 working days after bill payment. However, if the customer is charged a late fee by the bank for making a last-minute credit card bill through upay, then the customer has to contact the card-issuing bank to resolve the issue.</span><br /><span style=\"font-size: 12pt;\">- Customer must follow the applicable payment rules of their concerned bank.</span><br /><span style=\"font-size: 12pt;\">- Customer will be charged by upay for this credit card bill payment service as determined by upay from time to time.</span><br /><span style=\"font-size: 12pt;\">- upay shall only be responsible for payment as a payment service provider. Visa/Mastercard will bear the sole responsibility and liability of its credit card services. </span><br /><span style=\"font-size: 12pt;\">- upay reserves the right to change/modify/amend these terms &amp; conditions or applicable charges of bill payment service or cancel this service at any time without giving any prior notice.</span><br /><span style=\"font-size: 12pt;\">- Any decision taken by upay in respect to this service, shall be in the sole discretion of upay and shall be deemed final.</span><br /><span style=\"font-size: 12pt;\">- For details Terms &amp; Condition, click <a href=\"https://www.upaybd.com/ProductServices/terms-and-condition-credit-and-debit-card\" target=\"_blank\" rel=\"noopener\">HERE.</a>&nbsp;<br /></span>",
+     "Methods": [
+      {
+       "title": "How to pay your Master Credit Card Bill ?",
+       "title bn": "How to pay your Master Credit Card Bill ?",
+       "desc": "",
+       "desc bn": "",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Not_Available_on_268_1_cPFLOoD.png",
+         "image sd": "/media/dynamic_image/Not_Available_on_268_1_O0xd9NC.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_1_U3VjN3d.png",
+         "image sd": "/media/dynamic_image/1_1_VAGSnGU.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_EEwAdr7.png",
+         "image sd": "/media/dynamic_image/2_6XGJfHr.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_g9GYvNa.png",
+         "image sd": "/media/dynamic_image/3_zjMeUJC.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_c5YwisK.png",
+         "image sd": "/media/dynamic_image/4_bLvMN0W.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_WGKqEav.png",
+         "image sd": "/media/dynamic_image/5_atyXwZy.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_d61uPjw.png",
+         "image sd": "/media/dynamic_image/6_2HdVe6B.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_VzPr2WW.png",
+         "image sd": "/media/dynamic_image/7_UeQxpwr.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_W6DkLbE.png",
+         "image sd": "/media/dynamic_image/8_yNDPeRW.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "master-credit-card"
+ }
+}

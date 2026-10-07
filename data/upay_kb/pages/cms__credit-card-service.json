@@ -1,0 +1,64 @@
+{
+ "url": "https://www.upaybd.com/services/details/credit-card-service",
+ "api": "https://api.upaybd.com/api/v2/pages/credit-card-service",
+ "data": {
+  "title_english": "Credit Card Service",
+  "title_bangla": "Credit Card Service",
+  "template_name": "template-d",
+  "rows": {
+   "Data": [
+    {
+     "title": "Credit Card",
+     "title bn": "ক্রেডিট কার্ড",
+     "background image": "/media/dynamic_image/Desktop_Backdrop_Website.png",
+     "background image sd": "/media/dynamic_image/Mobile_Backdrop_Website_2070_x_750_px.png",
+     "desc": "Pay your credit card bills through upay. No more hassle about payment process or waiting in line",
+     "desc bn": "আপনার ক্রেডিট কার্ড বিল এখন পরিশোধ করে ফেলুন সহজেই উপায় অ্যাপ এর মাধ্যমে কোন ঝামেলা ছাড়াই ।",
+     "bill payment list": [
+      {
+       "title": "UCB Credit Card",
+       "title bn": "UCB ক্রেডিট কার্ড",
+       "icon": "/media/dynamic_image/Untitled_design_25.png",
+       "icon sd": "/media/dynamic_image/Untitled_design_25_3HCsuXw.png",
+       "slug url": "/services/details/ucb-credit-card"
+      },
+      {
+       "title": "LangkaBangla",
+       "title bn": "লংকাবাংলা",
+       "icon": "/media/dynamic_image/LangkaBangla.png",
+       "icon sd": "/media/dynamic_image/LangkaBangla_uBi0xb6.png",
+       "slug url": "/services/details/langkabangla-credit-card"
+      },
+      {
+       "title": "VISA",
+       "title bn": "ভিসা&nbsp;",
+       "icon": "/media/dynamic_image/VISA_Logo_1.png",
+       "icon sd": "/media/dynamic_image/VISA_Logo_1_UkDIXcx.png",
+       "slug url": "/services/details/visa-credit-card"
+      },
+      {
+       "title": "Master Card",
+       "title bn": "মাস্টার কার্ড",
+       "icon": "/media/dynamic_image/Mastercard_Logo_1.png",
+       "icon sd": "/media/dynamic_image/Mastercard_Logo_1_pWddZUE.png",
+       "slug url": "/services/details/master-credit-card"
+      }
+     ],
+     "Other Service": [
+      {
+       "title": "Electricity",
+       "title bn": "ইলেক্ট্রিসিটি",
+       "slug url": "/products/utility/electricity-bill"
+      },
+      {
+       "title": "Internet",
+       "title bn": "ইন্টারনেট",
+       "slug url": "/products/utility/internet"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "credit-card-service"
+ }
+}

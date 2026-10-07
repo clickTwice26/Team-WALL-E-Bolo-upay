@@ -1,0 +1,55 @@
+{
+ "url": "https://www.upaybd.com/services/details/traffic-prosecution-fee-through-upay-in-chandpur",
+ "api": "https://api.upaybd.com/api/v2/pages/traffic-prosecution-fee-through-upay-in-chandpur",
+ "data": {
+  "title_english": "Traffic prosecution fee through upay in Chandpur",
+  "title_bangla": "Traffic prosecution fee through upay in Chandpur",
+  "template_name": "template-e",
+  "rows": {
+   "Data": [
+    {
+     "title": "Press Release",
+     "title bn": "Press Release",
+     "cover image": "/media/dynamic_image/Website_Desktop_Header.png",
+     "cover image sd": "/media/dynamic_image/Mobile_Desktop_Header_1_KQHzudx.png",
+     "segment one": [
+      {
+       "title": "upay, a leading mobile financial service provider in the country signed an agreement with the Chandpur Police recently for traffic prosecution fee payment through upay.",
+       "title bn": "upay, a leading mobile financial service provider in the country signed an agreement with the Chandpur Police recently for traffic prosecution fee payment through upay.",
+       "desc": "A T M Tahmiduzzaman, FCS, a Director of the Board of Directors&rsquo; of UCB Fintech Company Limited (upay) and Milon Mahmud, BPM (Bar), Superintendent of Police of Chandpur district signed the agreement on behalf of their respective organizations at office of Chandpur Police Super.<br /><br />The deal would facilitate the Chandpur people to make on spot traffic fine payment from their upay accounts for any violations of traffic rules. upay, a subsidiary of UCB launched its operation in March 2021 aiming to provide mobile financial services to the people of all walks of life. Senior officials of the both organizations were present during the signing ceremony.",
+       "desc bn": "A T M Tahmiduzzaman, FCS, a Director of the Board of Directors&rsquo; of UCB Fintech Company Limited (upay) and Milon Mahmud, BPM (Bar), Superintendent of Police of Chandpur district signed the agreement on behalf of their respective organizations at office of Chandpur Police Super.<br /><br />The deal would facilitate the Chandpur people to make on spot traffic fine payment from their upay accounts for any violations of traffic rules. upay, a subsidiary of UCB launched its operation in March 2021 aiming to provide mobile financial services to the people of all walks of life. Senior officials of the both organizations were present during the signing ceremony.",
+       "image": "/media/dynamic_image/Press_Release_Inner_-_1440_x_680.png",
+       "image sd": "/media/dynamic_image/Press_Release_Inner_-_1440_x_680_ukxemGw.png",
+       "sub title": "",
+       "sub title bn": "",
+       "sub desc": "",
+       "sub desc bn": "",
+       "sub image": "",
+       "sub image sd": ""
+      }
+     ],
+     "Segment two": [],
+     "Segment three": [
+      {
+       "title": "Share this Article",
+       "title bn": "",
+       "facebook icon": "/media/dynamic_image/facebook_Y8qi8Lt.png",
+       "facebook icon sd": "/media/dynamic_image/facebook_knaZGSJ.png",
+       "instagram icon": "",
+       "instagram icon sd": ""
+      }
+     ],
+     "Segment four": [
+      {
+       "title": "Other Announcements",
+       "title bn": "",
+       "desc": "Check out the other announcements from upay here",
+       "desc bn": ""
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "traffic-prosecution-fee-through-upay-in-chandpur"
+ }
+}

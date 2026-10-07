@@ -1,0 +1,100 @@
+{
+ "url": "https://www.upaybd.com/services/details/desco-prepaid",
+ "api": "https://api.upaybd.com/api/v2/pages/desco-prepaid",
+ "data": {
+  "title_english": "Desco Prepaid",
+  "title_bangla": "Desco Prepaid",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "DESCO Prepaid",
+     "title bn": "ডেসকো&nbsp; প্রিপেইড",
+     "background image": "/media/dynamic_image/Electricity_-_Desktop_lkK7FPg.png",
+     "background image sd": "/media/dynamic_image/Electricity_-_Mobile_LlkbeTu.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<div style=\"text-align: center;\"><br />Too much hassle on paying your electricity bill on time ? No worries anymore, as upay lets you pay your bill without any tension, straight from upay app.</div>",
+     "desc bn": "<div style=\"text-align: center;\"><br />সময়মতো আপনার বিদ্যুৎ বিল পরিশোধ করতে খুব ঝামেলা? আর কোন চিন্তা নেই, কারণ উপায় অ্যাপ এর মাধ্যমে আপনার বিল পরিশোধ করুন সহজেই।</div>",
+     "Methods": [
+      {
+       "title": "How to pay your DESCO Prepaid bill ?",
+       "title bn": "কিভাবে ডেসকো প্রিপেইড বিল পরিশোধ করবেন ?",
+       "desc": "Simply follow the below steps to pay your bill",
+       "desc bn": "খুব সহজে নিচের ধাপ অনুসরণ করুন&nbsp;",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Add_Money_from_Card_is_not_available_on_268_3_tVUc8Fs.png",
+         "image sd": "/media/dynamic_image/Add_Money_from_Card_is_not_available_on_268_3_pbhlFPZ.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_5SHXSaK.png",
+         "image sd": "/media/dynamic_image/1_Es28IVZ.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_C5S8MJw.png",
+         "image sd": "/media/dynamic_image/2_WusbeNW.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_Z2kpcgc.png",
+         "image sd": "/media/dynamic_image/3_CB9lJoD.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_i5QFlEH.png",
+         "image sd": "/media/dynamic_image/4_KRFVIVu.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_uLvGtaC.png",
+         "image sd": "/media/dynamic_image/6_fYcMlkJ.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_0XWytdl.png",
+         "image sd": "/media/dynamic_image/7_DktwuQo.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_2_2BvEPz8.png",
+         "image sd": "/media/dynamic_image/7_2_tEDPz5l.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_3.png",
+         "image sd": "/media/dynamic_image/7_3_qSBL3sw.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_ptfdpj5.png",
+         "image sd": "/media/dynamic_image/8_VwxvudT.png"
+        },
+        {
+         "image": "/media/dynamic_image/9_LJTlSnz.png",
+         "image sd": "/media/dynamic_image/9_txGWejZ.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "desco-prepaid"
+ }
+}

@@ -1,0 +1,80 @@
+{
+ "url": "https://www.upaybd.com/services/details/prepaid-card-bakery-offer",
+ "api": "https://api.upaybd.com/api/v2/pages/prepaid-card-bakery-offer",
+ "data": {
+  "title_english": "Prepaid Card bakery offer ",
+  "title_bangla": "Prepaid Card bakery offer ",
+  "template_name": "template-h",
+  "rows": {
+   "Data": [
+    {
+     "image": "/media/dynamic_image/UPAY_Bakaries--coffe-Offer_Adaptation.png",
+     "image sd": "/media/dynamic_image/UPAY_Bakaries--coffe-Offer_Adaptation_M28KBXT.png",
+     "Details data": [
+      {
+       "title": "Sip and&nbsp;Savor with Savings! Up to 20% Off at Top Bakeries &amp; Coffee Shops with Your উপায় Card!",
+       "title bn": "আপনার উপায় কার্ডে শীর্ষস্থানীয় বেকারি এবং কফি শপে উপভোগ করুন ২০% পর্যন্ত ছাড়!",
+       "desc": "<p><span style=\"font-size: 12pt;\"><br />Treat yourself to delicious baked goods and premium coffee, all while enjoying up to <strong>20% off</strong> at select, prestigious bakeries and coffee shops partnered with UCB. Whether it&rsquo;s a sweet treat or your favorite cup of coffee, your upay card unlocks exclusive savings to make every moment more delightful!</span></p>\r\n<p><span style=\"font-size: 14pt;\"><strong><br />Enjoy Anytime!</strong></span><br /><span style=\"font-size: 12pt;\">With this offer, you can indulge in high-quality products from renowned bakeries and coffee shops, and save every time you use your উপায় Prepaid card!</span><br /><br /></p>\r\n<table style=\"border-collapse: collapse; width: 99.6965%; height: 336px; margin-left: auto; margin-right: auto;\" border=\"1\">\r\n<tbody>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 15.9942%; height: 19px; text-align: center; background-color: #ffffff;\"><span style=\"background-color: #ffffff; color: #000000; font-size: 12pt;\"><strong>Parnter Name</strong></span></td>\r\n<td style=\"width: 24.849%; height: 19px; text-align: center; background-color: #ffffff;\"><span style=\"background-color: #ffffff; color: #000000; font-size: 12pt;\"><strong>Offer&nbsp;</strong></span></td>\r\n<td style=\"width: 33.0935%; height: 19px; text-align: center; background-color: #ffffff;\"><span style=\"color: #000000; background-color: #ffffff; font-size: 12pt;\"><strong>Address</strong></span></td>\r\n<td style=\"width: 6.08869%; height: 19px; text-align: center; background-color: #ffffff;\"><span style=\"color: #000000; background-color: #ffffff; font-size: 12pt;\"><strong>Validity</strong></span></td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"height: 222px; width: 15.9942%; text-align: center; vertical-align: middle;\" rowspan=\"3\">ESPRESSO HOUSE LIMITED</td>\r\n<td style=\"width: 24.849%; height: 10px; text-align: center; vertical-align: middle;\">15% discount on total bill.&nbsp;</td>\r\n<td style=\"width: 33.0935%; height: 10px; text-align: center; vertical-align: middle;\">\r\n<p>Banani: Sher Tower, Holding #13, Road #17, Banani C/A Dhaka, 1213</p>\r\n</td>\r\n<td style=\"height: 222px; text-align: center; width: 6.08869%; vertical-align: middle;\" rowspan=\"3\" width=\"107\">\r\n<p><br />Until Discontinued</p>\r\n</td>\r\n</tr>\r\n<tr style=\"height: 106px;\">\r\n<td style=\"width: 24.849%; text-align: center; height: 106px; vertical-align: middle;\">15% discount on total bill.&nbsp;</td>\r\n<td style=\"width: 33.0935%; height: 106px; text-align: center; vertical-align: middle;\">\r\n<p>Dhanmondi: Rangs Fortune Square, 6th Floor, Plot 32 Road No. 2, Dhaka 1207</p>\r\n</td>\r\n</tr>\r\n<tr style=\"height: 106px;\">\r\n<td style=\"width: 24.849%; text-align: center; height: 106px; vertical-align: middle;\">15% discount on total bill.&nbsp;</td>\r\n<td style=\"width: 33.0935%; height: 106px; text-align: center; vertical-align: middle;\">\r\n<p>Uttara: Ground Floor, House # 09, Road-03, Sector 1, Uttara Dhaka 1230</p>\r\n</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 15.9942%; height: 19px; text-align: center; vertical-align: middle;\">Bread &amp; Beyond</td>\r\n<td style=\"width: 24.849%; height: 19px; text-align: center; vertical-align: middle;\">10% discount order over Tk.750.00</td>\r\n<td style=\"width: 33.0935%; height: 19px; text-align: center; vertical-align: middle;\">All Outlets</td>\r\n<td style=\"width: 6.08869%; height: 19px; text-align: center; vertical-align: middle;\">Until Discontinued</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 15.9942%; height: 19px; text-align: center; vertical-align: middle;\">Hot Beans</td>\r\n<td style=\"width: 24.849%; height: 19px; text-align: center; vertical-align: middle;\">10% Discount on Total Bill</td>\r\n<td style=\"width: 33.0935%; height: 19px; text-align: center; vertical-align: middle;\">Anabil Tower, Plot#3, Block-NW (J), Gulshan North Avenue Kemal Ataturk Ave, Dhaka, Bangladesh</td>\r\n<td style=\"width: 6.08869%; height: 19px; text-align: center; vertical-align: middle;\">Until Discontinued</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 15.9942%; height: 19px; text-align: center; vertical-align: middle;\">Smith's Caf&eacute; Regalo</td>\r\n<td style=\"width: 24.849%; height: 19px; text-align: center; vertical-align: middle;\">10% on Total Bill</td>\r\n<td style=\"width: 33.0935%; height: 19px; text-align: center; vertical-align: middle;\">House#1, Road#23, Gulshan-1, Dhaka-1212</td>\r\n<td style=\"width: 6.08869%; height: 19px; text-align: center; vertical-align: middle;\">Until Discontinued</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 15.9942%; height: 19px; text-align: center; vertical-align: middle;\">Verde</td>\r\n<td style=\"width: 24.849%; height: 19px; text-align: center; vertical-align: middle;\">15% Discount on total bill</td>\r\n<td style=\"width: 33.0935%; height: 19px; text-align: center; vertical-align: middle;\">Landmark Shopping Complex, Gulshan-2, Dhaka 1212</td>\r\n<td style=\"width: 6.08869%; height: 19px; text-align: center; vertical-align: middle;\">Until Discontinued</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<br /><br /><span style=\"font-size: 14pt;\"><strong>Terms &amp; Conditions</strong></span>",
+       "desc bn": "<p><span style=\"font-size: 14pt;\"><br />সুস্বাদু বেকড খাবার আর প্রিমিয়াম কফি উপভোগ করুন, বেকারি ও কফি শপগুলোতে ২০% পর্যন্ত ছাড়! মিষ্টি কিছু বা প্রিয় কফি &ndash;উপায় কার্ড দিচ্ছে বিশেষ ছাড়, যা আপনার মুহূর্তগুলোকে আরও আনন্দদায়ক করবে।</span><br /><span style=\"font-size: 14pt;\"><strong><br />যেকোনো সময় উপভোগ করুন!</strong></span><br /><span style=\"font-size: 14pt;\">উপায় প্রিপেইড কার্ড দিয়ে পছন্দের বেকারি ও কফি শপ থেকে কিনুন আর প্রতিবার সাশ্রয় করুন!</span><br /><br /></p>\r\n<table style=\"border-collapse: collapse; width: 99.6965%; height: 336px; margin-left: auto; margin-right: auto;\" border=\"1\">\r\n<tbody>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 15.9942%; height: 19px; text-align: center; background-color: #ffffff;\"><span style=\"background-color: #ffffff; color: #000000; font-size: 12pt;\"><strong>মার্চেন্টের নাম</strong></span></td>\r\n<td style=\"width: 24.849%; height: 19px; text-align: center; background-color: #ffffff;\"><span style=\"background-color: #ffffff; color: #000000; font-size: 12pt;\"><strong>অফার</strong></span></td>\r\n<td style=\"width: 33.0935%; height: 19px; text-align: center; background-color: #ffffff;\"><span style=\"color: #000000; background-color: #ffffff; font-size: 12pt;\"><strong>ঠিকানা</strong></span></td>\r\n<td style=\"width: 6.08869%; height: 19px; text-align: center; background-color: #ffffff;\"><span style=\"color: #000000; background-color: #ffffff; font-size: 12pt;\"><strong>মেয়াদ</strong></span></td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"height: 222px; width: 15.9942%; text-align: center; vertical-align: middle;\" rowspan=\"3\">ESPRESSO HOUSE LIMITED</td>\r\n<td style=\"width: 24.849%; height: 10px; text-align: center; vertical-align: middle;\">15% discount on total bill.&nbsp;</td>\r\n<td style=\"width: 33.0935%; height: 10px; text-align: center; vertical-align: middle;\">\r\n<p>Banani: Sher Tower, Holding #13, Road #17, Banani C/A Dhaka, 1213</p>\r\n</td>\r\n<td style=\"height: 222px; text-align: center; width: 6.08869%; vertical-align: middle;\" rowspan=\"3\" width=\"107\">\r\n<p><br />Until Discontinued</p>\r\n</td>\r\n</tr>\r\n<tr style=\"height: 106px;\">\r\n<td style=\"width: 24.849%; text-align: center; height: 106px; vertical-align: middle;\">15% discount on total bill.&nbsp;</td>\r\n<td style=\"width: 33.0935%; height: 106px; text-align: center; vertical-align: middle;\">\r\n<p>Dhanmondi: Rangs Fortune Square, 6th Floor, Plot 32 Road No. 2, Dhaka 1207</p>\r\n</td>\r\n</tr>\r\n<tr style=\"height: 106px;\">\r\n<td style=\"width: 24.849%; text-align: center; height: 106px; vertical-align: middle;\">15% discount on total bill.&nbsp;</td>\r\n<td style=\"width: 33.0935%; height: 106px; text-align: center; vertical-align: middle;\">\r\n<p>Uttara: Ground Floor, House # 09, Road-03, Sector 1, Uttara Dhaka 1230</p>\r\n</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 15.9942%; height: 19px; text-align: center; vertical-align: middle;\">Bread &amp; Beyond</td>\r\n<td style=\"width: 24.849%; height: 19px; text-align: center; vertical-align: middle;\">10% discount order over Tk.750.00</td>\r\n<td style=\"width: 33.0935%; height: 19px; text-align: center; vertical-align: middle;\">All Outlets</td>\r\n<td style=\"width: 6.08869%; height: 19px; text-align: center; vertical-align: middle;\">Until Discontinued</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 15.9942%; height: 19px; text-align: center; vertical-align: middle;\">Hot Beans</td>\r\n<td style=\"width: 24.849%; height: 19px; text-align: center; vertical-align: middle;\">10% Discount on Total Bill</td>\r\n<td style=\"width: 33.0935%; height: 19px; text-align: center; vertical-align: middle;\">Anabil Tower, Plot#3, Block-NW (J), Gulshan North Avenue Kemal Ataturk Ave, Dhaka, Bangladesh</td>\r\n<td style=\"width: 6.08869%; height: 19px; text-align: center; vertical-align: middle;\">Until Discontinued</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 15.9942%; height: 19px; text-align: center; vertical-align: middle;\">Smith's Caf&eacute; Regalo</td>\r\n<td style=\"width: 24.849%; height: 19px; text-align: center; vertical-align: middle;\">10% on Total Bill</td>\r\n<td style=\"width: 33.0935%; height: 19px; text-align: center; vertical-align: middle;\">House#1, Road#23, Gulshan-1, Dhaka-1212</td>\r\n<td style=\"width: 6.08869%; height: 19px; text-align: center; vertical-align: middle;\">Until Discontinued</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 15.9942%; height: 19px; text-align: center; vertical-align: middle;\">Verde</td>\r\n<td style=\"width: 24.849%; height: 19px; text-align: center; vertical-align: middle;\">15% Discount on total bill</td>\r\n<td style=\"width: 33.0935%; height: 19px; text-align: center; vertical-align: middle;\">Landmark Shopping Complex, Gulshan-2, Dhaka 1212</td>\r\n<td style=\"width: 6.08869%; height: 19px; text-align: center; vertical-align: middle;\">Until Discontinued</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p style=\"text-align: center;\"><br /><span style=\"font-size: 14pt;\"><strong>শর্তাবলী</strong></span></p>",
+       "sub title": "",
+       "sub title bn": "",
+       "sub desc": "",
+       "sub desc bn": "",
+       "key value": [
+        {
+         "title": "Customer will get the discount multiple times as per the selected individual merchant&rsquo;s policy during the campaign period.",
+         "title bn": "ক্যাম্পেইন চলাকালীন নির্বাচিত প্রতিটি মার্চেন্টের নিজস্ব নীতির ভিত্তিতে গ্রাহকরা একাধিকবার এই ছাড় উপভোগ করতে পারবেন।"
+        },
+        {
+         "title": "Discount will be applicable on catalogue price. However, offers cannot be clubbed with other offers simultaneously.",
+         "title bn": "ছাড়টি ক্যাটালগ মূল্যের উপর প্রযোজ্য হবে। তবে, এই অফারটি অন্য কোনো অফারের সাথে একত্রে ব্যবহার করা যাবে না।"
+        },
+        {
+         "title": "Customer will not be eligible for this discount if payment is made using upay account through upay App or *268#.",
+         "title bn": "যদি গ্রাহক upay অ্যাপ বা *268# এর মাধ্যমে পেমেন্ট করেন, তবে তারা এই ছাড়ের জন্য যোগ্য হবেন না।"
+        },
+        {
+         "title": "upay is neither liable nor responsible for the merchant&rsquo;s inability to ensure the availability or delivery of the product since upay is only providing a payment service to the customer.",
+         "title bn": "উপায় শুধুমাত্র গ্রাহকদের জন্য একটি পেমেন্ট সেবা প্রদান করছে, তাই মার্চেন্টের পণ্য উপলব্ধতা বা ডেলিভারির ব্যর্থতার জন্য উপায় কোনও দায়বদ্ধতা বা দায়িত্ব বহন করে না।"
+        },
+        {
+         "title": "upay reserves the right to change/modify campaign terms &amp; conditions if the particular transaction and/ or the customer transaction behavior raises reasonable suspicion that the customer has abused the benefits of the campaign.",
+         "title bn": "উপায় কোনো নির্দিষ্ট লেনদেন এবং/অথবা গ্রাহকের লেনদেনের আচরণে যদি ক্যাম্পেইনের সুবিধার অপব্যবহারের সন্দেহ তৈরি হয়, তবে ক্যাম্পেইনের শর্তাবলী পরিবর্তন/সংশোধনের অধিকার সংরক্ষণ করে।"
+        }
+       ]
+      }
+     ],
+     "May like": [
+      {
+       "title": "You May Also Like",
+       "title bn": "অন্যান্য অফার",
+       "desc": "",
+       "desc bn": "",
+       "Under May like": [
+        {
+         "title": "Refer &amp; Enjoy Tk 60 Cash Reward!",
+         "title bn": "রেফার করলেই উপভোগ করুন ৬০ টাকা ক্যাশ রিওয়ার্ড!",
+         "desc": "Bring Your Loved Ones to উপায় &amp; Earn Up to BDT 60! Enjoy Cash Reward for Successful Photo Verification of a Limited Profile Customer or for Registering a New Customer.",
+         "desc bn": "সফল ভাবে রেফার করলেই আপনি উপভোগ করতে পারবেন ৬০ টাকা পর্যন্ত ক্যাশ রিওয়ার্ড",
+         "image": "/media/dynamic_image/UPAY_Web_Banner-Desk_1440x680_REFER_AND_EARN_8pKeWUz_7bBk2Cn.png",
+         "image sd": "/media/dynamic_image/UPAY_Web_Banner-Desk_1440x680_REFER_AND_EARN_8pKeWUz_dAVHiQe.png",
+         "slug url": "/Latest-offer/refer-and-enjoy-cash-reward"
+        },
+        {
+         "title": "Up to 75 Taka Cash Reward on Self Registration!",
+         "title bn": "সেলফ রেজিস্ট্রেশনে ৭৫ টাকা পর্যন্ত ক্যাশ রিওয়ার্ড",
+         "desc": "Download উপায় App Now &amp; Enjoy Exciting Cash Reward Upon Self-Registration, Cash In/ Add Money, Mobile Recharge, Bill Payment &amp; Many More.",
+         "desc bn": "ডাউনলোড করুন উপায় অ্যাপ। সেলফ রেজিস্ট্রেশন করার সাথে ক্যাশ ইন / অ্যাড মানি, মোবাইল রিচার্জ এবং বিল পে করলেই পাবেন ক্যাশ রিওয়ার্ড।",
+         "image": "/media/dynamic_image/Self-Registration-May-2023---Website-Banner-Desktop--1440x680_UpPp1X2_6_iJy0dUa.jpg",
+         "image sd": "/media/dynamic_image/Self-Registration-May-2023---Website-Banner-Desktop--1440x680_UpPp1X2_6_YTThZqL.jpg",
+         "slug url": "/Latest-offer/75-taka-cash-reward-on-self-registration"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "prepaid-card-bakery-offer"
+ }
+}

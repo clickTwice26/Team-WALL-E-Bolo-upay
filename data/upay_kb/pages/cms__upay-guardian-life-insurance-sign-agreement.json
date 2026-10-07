@@ -1,0 +1,55 @@
+{
+ "url": "https://www.upaybd.com/services/details/upay-guardian-life-insurance-sign-agreement",
+ "api": "https://api.upaybd.com/api/v2/pages/upay-guardian-life-insurance-sign-agreement",
+ "data": {
+  "title_english": "upay, Guardian Life Insurance sign agreement",
+  "title_bangla": "upay, Guardian Life Insurance sign agreement",
+  "template_name": "template-e",
+  "rows": {
+   "Data": [
+    {
+     "title": "",
+     "title bn": "",
+     "cover image": "/media/dynamic_image/Website_Desktop_Header_1_cf2Lxkj.png",
+     "cover image sd": "/media/dynamic_image/Mobile_Desktop_Header.png",
+     "segment one": [
+      {
+       "title": "upay recently signed an agreement with Guardian Life Insurance Limited, facilitating the upay customers to Guardian Life&rsquo;s insurance policies from the upay app.",
+       "title bn": "",
+       "desc": "Under the agreement, upay customers can buy the &lsquo;Easylife&rsquo; products of Guardian Life from its app amid the growing popularity of &lsquo;Micro Health Insurance&rsquo; in the country.<br />\r\n<p>Sydul Haque Khandaker, Managing Director and CEO of upay, and Sheikh Rakibul Karim, Deputy Managing Director and Acting CEO of Guardian Life Insurance signed the agreement on behalf of their respective organizations at the head office of Guardian Life Insurance.<br /><br />Shamim Ahmed, Chief Operating Officer, Yeasin Arafat, Head of Digital Channels and ADC, Shariar Akanda, Key Lead, Digital Channel and ADC, Ariful Hoque, AVP, Digital Channel and ADC from Guardian Life Insurance Limited and Md. Nur-E-Alam Siddiquee, Chief Financial Officer, Saad Mohammad Faizul Karim, Director, Business Sales, Md. Nazim Uddin Ahmed, Deputy Director, Business Sales, Md. Rezwanul Hoque, Assistant Director, Business Sales of upay were present at the signing ceremony.&nbsp;</p>\r\n<p>upay is a subsidiary of the United Commercial Bank that launched its service in March 2021 offers a broad range of mobile financial services to people from all walks of life.</p>",
+       "desc bn": "",
+       "image": "/media/dynamic_image/Guardian_Life_Inner.png",
+       "image sd": "/media/dynamic_image/Guardian_Life_Inner_SVW29W0.png",
+       "sub title": "",
+       "sub title bn": "",
+       "sub desc": "",
+       "sub desc bn": "",
+       "sub image": "",
+       "sub image sd": ""
+      }
+     ],
+     "Segment two": [],
+     "Segment three": [
+      {
+       "title": "Share This Article",
+       "title bn": "",
+       "facebook icon": "",
+       "facebook icon sd": "",
+       "instagram icon": "",
+       "instagram icon sd": ""
+      }
+     ],
+     "Segment four": [
+      {
+       "title": "Other Announcements",
+       "title bn": "",
+       "desc": "Check out the other announcements from upay here",
+       "desc bn": ""
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "upay-guardian-life-insurance-sign-agreement"
+ }
+}

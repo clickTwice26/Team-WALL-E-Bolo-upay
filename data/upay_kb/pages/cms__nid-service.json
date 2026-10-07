@@ -1,0 +1,92 @@
+{
+ "url": "https://www.upaybd.com/services/details/nid-service",
+ "api": "https://api.upaybd.com/api/v2/pages/nid-service",
+ "data": {
+  "title_english": "NID Service",
+  "title_bangla": "NID Service",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "NID Service",
+     "title bn": "এনআইডি সার্ভিস",
+     "background image": "/media/dynamic_image/Land_Services_Header_desktop_RmKjqfl_ot7mJJc_ONOkqdI.jpg",
+     "background image sd": "/media/dynamic_image/Land_Services_Header_mobile_0uABKcn_ZXMXL1W_CeA6lFV.jpg",
+     "heading": "",
+     "heading bn": "",
+     "desc": "Looking for ways to complete your NID service payment. Simply visit upay app and complete your land payments in only a few clicks",
+     "desc bn": "আপনার এনআইডি সার্ভিস পেমেন্ট সম্পূর্ণ করার উপায় খুঁজছেন ? উপায় অ্যাপের মাধ্যমে কয়েকটি ক্লিকে আপনার জমির কর সম্পূর্ণ করুন।",
+     "Methods": [
+      {
+       "title": "How to pay your NID service payment?",
+       "title bn": "কিভাবে আপনার এনআইডি সার্ভিস পেমেন্ট সম্পূর্ণ করবেন?",
+       "desc": "Check out the process below to clear your NID service payment",
+       "desc bn": "নিচের ধাপ দেখে সহজেই আপনার এনআইডি সার্ভিস পেমেন্ট সম্পূর্ণ করুন",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Untitled2.png",
+         "image sd": "/media/dynamic_image/Untitled2_5r6orrk.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_u0kFtMG.png",
+         "image sd": "/media/dynamic_image/1_Jpmdhsv.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_4isxspx.png",
+         "image sd": "/media/dynamic_image/2_3P1zwPQ.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_UIoCkOM.png",
+         "image sd": "/media/dynamic_image/3_y30WswX.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_HPkmCJF.png",
+         "image sd": "/media/dynamic_image/4_KLDPDrd.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_Ub24bY3.png",
+         "image sd": "/media/dynamic_image/5_zNVbtzs.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_Tyh3sm0.png",
+         "image sd": "/media/dynamic_image/6_DFkwjiX.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_JbECN0x.png",
+         "image sd": "/media/dynamic_image/7_0YUo1S7.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_PNRhuBw.png",
+         "image sd": "/media/dynamic_image/8_dgEnQoR.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "nid-service"
+ }
+}

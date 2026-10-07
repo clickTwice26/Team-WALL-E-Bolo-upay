@@ -1,0 +1,97 @@
+{
+ "url": "https://www.upaybd.com/services/details/electricity-bill",
+ "api": "https://api.upaybd.com/api/v2/pages/electricity-bill",
+ "data": {
+  "title_english": "Electricity Bill",
+  "title_bangla": "Electricity Bill",
+  "template_name": "template-d",
+  "rows": {
+   "Data": [
+    {
+     "title": "Electricity",
+     "title bn": "ইলেকট্রিসিটি&nbsp;",
+     "background image": "/media/dynamic_image/Electricity_-_Desktop_6MFlXlZ.png",
+     "background image sd": "/media/dynamic_image/Electricity_-_Mobile_oJ1RKnI.png",
+     "desc": "<div style=\"text-align: center;\">Through upay, you can pay your electricity bills with any of the prominent billers in the country with only a few clicks.</div>",
+     "desc bn": "<div style=\"text-align: center;\">উপায় থেকে যে কোন ইলেকট্রিসিটি বিল দেওয়া এখন খুব সহজ, মাত্র কয়েকটা ক্লিক এই।&nbsp;&nbsp;</div>",
+     "bill payment list": [
+      {
+       "title": "BPDB Prepaid",
+       "title bn": "বিপিডিবি প্রিপেইড",
+       "icon": "/media/dynamic_image/rsz_bangladesh-bidyut-unnayan-board-logo-b38479ce86-seeklogocom.png",
+       "icon sd": "/media/dynamic_image/rsz_bangladesh-bidyut-unnayan-board-logo-b38479ce86-seeklogocom_9O5CWIb.png",
+       "slug url": "/services/details/bpdb-prepaid"
+      },
+      {
+       "title": "DPDC Postpaid",
+       "title bn": "ডিপিডিসি পোস্টপেইড",
+       "icon": "/media/dynamic_image/Pay_Bill_Logos_3.png",
+       "icon sd": "/media/dynamic_image/Pay_Bill_Logos_3_Et4fxoV.png",
+       "slug url": "/services/details/dpdc-postpaid"
+      },
+      {
+       "title": "DESCO Postpaid",
+       "title bn": "ডেসকো পোস্টপেইড",
+       "icon": "/media/dynamic_image/Pay_Bill_Logos_4.png",
+       "icon sd": "/media/dynamic_image/Pay_Bill_Logos_4_nkDKEGK.png",
+       "slug url": "/services/details/desco-postpaid"
+      },
+      {
+       "title": "DESCO Prepaid",
+       "title bn": "ডেসকো প্রিপেইড",
+       "icon": "/media/dynamic_image/Pay_Bill_Logos_4_Pe2pnyv.png",
+       "icon sd": "/media/dynamic_image/Pay_Bill_Logos_4_yW9V6HY.png",
+       "slug url": "/services/details/desco-prepaid"
+      },
+      {
+       "title": "<div style=\"text-align: left;\">Palli Bidyut</div>",
+       "title bn": "<div style=\"text-align: left;\">পল্লি বিদ্যুৎ</div>",
+       "icon": "/media/dynamic_image/Pay_Bill_Logos_5.png",
+       "icon sd": "/media/dynamic_image/Pay_Bill_Logos_5_QKTNINR.png",
+       "slug url": "/services/details/palli-bidyut"
+      },
+      {
+       "title": "Westzone Postpaid",
+       "title bn": "ওয়েস্টজোন পোস্টপেইড",
+       "icon": "/media/dynamic_image/Pay_Bill_Logos_2.png",
+       "icon sd": "/media/dynamic_image/Pay_Bill_Logos_2_tmMgipl.png",
+       "slug url": "/services/details/westzone-postpaid"
+      },
+      {
+       "title": "NESCO-Prepaid",
+       "title bn": "NESCO-Prepaid",
+       "icon": "/media/dynamic_image/Logo_of_NESCO_vkyftK3.png",
+       "icon sd": "/media/dynamic_image/Logo_of_NESCO_xRQxnh0.png",
+       "slug url": "/services/details/nesco-prepaid"
+      },
+      {
+       "title": "NESCO-Postpaid",
+       "title bn": "NESCO-Postpaid",
+       "icon": "/media/dynamic_image/Logo_of_NESCO_CK5vGmS.png",
+       "icon sd": "/media/dynamic_image/Logo_of_NESCO_rQmRtZQ.png",
+       "slug url": "/services/details/nesco-postpaid"
+      }
+     ],
+     "Other Service": [
+      {
+       "title": "Gas",
+       "title bn": "গ্যাস&nbsp;",
+       "slug url": "/ProductServices/titas-gas"
+      },
+      {
+       "title": "Water",
+       "title bn": "ওয়াটার&nbsp;",
+       "slug url": "/services/details/dhaka-wasa"
+      },
+      {
+       "title": "Credit Card",
+       "title bn": "ক্রেডিট কার্ড",
+       "slug url": "/products/utility/credit-card-service"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "electricity-bill"
+ }
+}

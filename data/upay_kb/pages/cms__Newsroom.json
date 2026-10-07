@@ -1,0 +1,141 @@
+{
+ "url": "https://www.upaybd.com/Media",
+ "api": "https://api.upaybd.com/api/v2/pages/Newsroom",
+ "data": {
+  "title_english": "Newsroom",
+  "title_bangla": "Newsroom",
+  "template_name": "newsroom",
+  "rows": {
+   "Data": [
+    {
+     "title": "News Room",
+     "title bn": "<div id=\"tw-target-text-container\" class=\"tw-ta-container F0azHf tw-lfl\" tabindex=\"0\">\r\n<pre id=\"tw-target-text\" class=\"tw-data-text tw-text-large XcVN5d tw-ta\" dir=\"ltr\" data-placeholder=\"Translation\"><span class=\"Y2IQFc\" lang=\"bn\">নিউজ রুম</span></pre>\r\n</div>\r\n<div id=\"tw-target-rmn-container\" class=\"tw-target-rmn tw-ta-container F0azHf tw-nfl\"></div>",
+     "cover image": "/media/dynamic_image/Media_Center_Media_Contact_Newsroom__desktop_ftPLx0L.jpg",
+     "cover image sd": "/media/dynamic_image/Website_Mobile_Header_4_4JZOntd.png",
+     "segment one": [
+      {
+       "title": "Our Commercials",
+       "title bn": "<div id=\"tw-target-text-container\" class=\"tw-ta-container F0azHf tw-lfl\" tabindex=\"0\">\r\n<pre id=\"tw-target-text\" class=\"tw-data-text tw-text-large XcVN5d tw-ta\" dir=\"ltr\" data-placeholder=\"Translation\"><span class=\"Y2IQFc\" lang=\"bn\">আমাদের বিজ্ঞাপন</span></pre>\r\n</div>\r\n<div id=\"tw-target-rmn-container\" class=\"tw-target-rmn tw-ta-container F0azHf tw-nfl\"></div>",
+       "Under segment one": [
+        {
+         "title": "কম খরচে নিরাপদ লেনদেন",
+         "title bn": "কম খরচে নিরাপদ লেনদেন",
+         "image": "/media/dynamic_image/Screenshot_3.png",
+         "image sd": "/media/dynamic_image/Screenshot_3_bFcDVZv.png",
+         "url": "https://www.youtube.com/watch?v=72UHILUK8N4"
+        },
+        {
+         "title": "উপায় অ্যাপে আছে সব কিছুর স্মার্ট সল্যুশন!",
+         "title bn": "উপায় অ্যাপে আছে সব কিছুর স্মার্ট সল্যুশন!",
+         "image": "/media/dynamic_image/Screenshot_1_6IxYdpj.png",
+         "image sd": "/media/dynamic_image/Screenshot_1_mHcLGMM.png",
+         "url": "https://www.youtube.com/watch?v=rJRcbzySkB8"
+        },
+        {
+         "title": "সবার আগে উপায় এর মাধ্যমে গ্রামীণফোন নম্বরে রিচার্জ করতে ডায়াল *১২১#",
+         "title bn": "সবার আগে উপায় এর মাধ্যমে গ্রামীণফোন নম্বরে রিচার্জ করতে ডায়াল *১২১#",
+         "image": "/media/dynamic_image/Linkedin_Thumbnail_3.png",
+         "image sd": "/media/dynamic_image/Linkedin_Thumbnail_3_LIiOteL.png",
+         "url": "https://www.youtube.com/watch?v=o-6PnK8iqFw"
+        },
+        {
+         "title": "উপায় অ্যাকাউন্ট খোলা এখন কোনো ব্যাপারই না!",
+         "title bn": "উপায় অ্যাকাউন্ট খোলা এখন কোনো ব্যাপারই না!",
+         "image": "/media/dynamic_image/Linkedin_Thumbnail_2.png",
+         "image sd": "/media/dynamic_image/Linkedin_Thumbnail_2_xAZ8aHN.png",
+         "url": "https://www.youtube.com/watch?v=dWx2k-dpU5M"
+        },
+        {
+         "title": "উপায় সাথে থাকলে যেতে হয় না অন্য কোথাও",
+         "title bn": "উপায় সাথে থাকলে যেতে হয় না অন্য কোথাও",
+         "image": "/media/dynamic_image/Untitled_design_TJBRo8C.png",
+         "image sd": "/media/dynamic_image/Untitled_design_OshiahS.png",
+         "url": "https://www.youtube.com/watch?v=oFxxX1DqsCg"
+        },
+        {
+         "title": "শর্ত ছাড়াই বিল পেমেন্ট উপায়-এ",
+         "title bn": "শর্ত ছাড়াই বিল পেমেন্ট উপায়-এ",
+         "image": "/media/dynamic_image/Thumbnail_Newsroom.png",
+         "image sd": "/media/dynamic_image/Thumbnail_Newsroom_qSB9OqC.png",
+         "url": "https://www.youtube.com/watch?v=jyNpIVoOT88"
+        },
+        {
+         "title": "Dial *268# and enjoy lowest cash-out charge",
+         "title bn": "ডায়াল করুন *২৬৮# এবং উপভোগ করুন সবচেয়ে কম ক্যাশ-আউট চার্জ",
+         "image": "/media/dynamic_image/TVCs-Thumbnail-desktop-1_1.jpg",
+         "image sd": "/media/dynamic_image/TVCs-Thumbnail-desktop-1_1_zR3lrxC.jpg",
+         "url": "https://www.youtube.com/watch?v=Is9esBsvgjU"
+        },
+        {
+         "title": "উপায় অ্যাপ মানেই - নতুন নতুন সুবিধা",
+         "title bn": "উপায় অ্যাপ মানেই - নতুন নতুন সুবিধা",
+         "image": "/media/dynamic_image/Website_Request_Money_Thumbnail_1.png",
+         "image sd": "/media/dynamic_image/Website_Request_Money_Thumbnail_1_pexcOEh.png",
+         "url": "https://www.youtube.com/watch?v=IrQyMifRJ9o"
+        },
+        {
+         "title": "এমবি ছাড়াও চলবে উপায় অ্যাপ",
+         "title bn": "এমবি ছাড়াও চলবে উপায় অ্যাপ",
+         "image": "/media/dynamic_image/Website_Request_Money_Thumbnail_2.png",
+         "image sd": "/media/dynamic_image/Website_Request_Money_Thumbnail_2_efyAyu3.png",
+         "url": "https://www.youtube.com/watch?v=Whna8_OPTyo"
+        },
+        {
+         "title": "upay, secured by Blockchain Technology",
+         "title bn": "উপায় ব্লকচেইন প্রযুক্তি দ্বারা সুরক্ষিত",
+         "image": "/media/dynamic_image/TVCs-Thumbnail-desktop-2_1.jpg",
+         "image sd": "/media/dynamic_image/TVCs-Thumbnail-desktop-2_1_ihIw3YW.jpg",
+         "url": "https://www.youtube.com/watch?v=NJrEeS-8tRs"
+        }
+       ]
+      }
+     ],
+     "Segment two": [
+      {
+       "title": "News Articles",
+       "title bn": "নিউজ আর্টিকেল&nbsp;",
+       "Under Segment two": [
+        {
+         "title": "সর্বনিম্ন ক্যাশ আউট চার্জ নিচ্ছে &lsquo;উপায়&rsquo;",
+         "title bn": "সর্বনিম্ন ক্যাশ আউট চার্জ নিচ্ছে &lsquo;উপায়&rsquo;",
+         "image": "/media/dynamic_image/TVCs-Thumbnail-desktop-5_1.jpg",
+         "image bn": "/media/dynamic_image/TVCs-Thumbnail-desktop-5_1_inZx58D.jpg",
+         "url": "https://www.banglanews24.com/economics-business/news/bd/853040.details"
+        },
+        {
+         "title": "UCB&rsquo;s upay offers lowest cash-out fee",
+         "title bn": "সর্বনিম্ন ক্যাশ আউট চার্জ নিচ্ছে &lsquo;উপায়&rsquo;",
+         "image": "/media/dynamic_image/Untitled_design_3.png",
+         "image bn": "/media/dynamic_image/Untitled_design_3_WYC8O2b.png",
+         "url": "https://www.tbsnews.net/companies/ucbs-upay-offers-lowest-cash-out-fee-234661"
+        },
+        {
+         "title": "&lsquo;উপায়&rsquo; দিচ্ছে সর্বনিম্ন ক্যাশ আউট সুবিধা",
+         "title bn": "&lsquo;উপায়&rsquo; দিচ্ছে সর্বনিম্ন ক্যাশ আউট সুবিধা",
+         "image": "/media/dynamic_image/Untitled_design_5.png",
+         "image bn": "/media/dynamic_image/Untitled_design_5_AdSIKdw.png",
+         "url": "https://www.bhorerkagoj.com/2021/04/20/%e0%a6%87%e0%a6%89%e0%a6%8f%e0%a6%b8%e0%a6%8f%e0%a6%b8%e0%a6%a1%e0%a6%bf-%e0%a6%a6%e0%a6%bf%e0%a6%9a%e0%a7%8d%e0%a6%9b%e0%a7%87-%e0%a6%b8%e0%a6%b0%e0%a7%8d%e0%a6%ac%e0%a6%a8%e0%a6%bf%e0%a6%ae%e0%a7%8d/"
+        },
+        {
+         "title": "Guardian Life Insurance and upay sign agreement",
+         "title bn": "<div id=\"tw-target-text-container\" class=\"tw-ta-container F0azHf tw-lfl\" tabindex=\"0\">\r\n<pre id=\"tw-target-text\" class=\"tw-data-text tw-text-large XcVN5d tw-ta\" dir=\"ltr\" data-placeholder=\"Translation\"><span class=\"Y2IQFc\" lang=\"bn\">গার্ডিয়ান লাইফ ইন্সুরেন্স এবং উপায় এর চুক্তি স্বাক্ষর </span></pre>\r\n</div>\r\n<div id=\"tw-target-rmn-container\" class=\"tw-target-rmn tw-ta-container F0azHf tw-nfl\"></div>",
+         "image": "/media/dynamic_image/Untitled_design_11.png",
+         "image bn": "/media/dynamic_image/Untitled_design_11_f9u0DRE.png",
+         "url": "https://en.prothomalo.com/corporate/local/upay-guardian-life-insurance-sign-agreement"
+        },
+        {
+         "title": "ভূমি সংক্রান্ত ফি পরিশোধ করা যাবে উপায়ে",
+         "title bn": "ভূমি সংক্রান্ত ফি পরিশোধ করা যাবে উপায়ে",
+         "image": "/media/dynamic_image/Untitled_design_12.png",
+         "image bn": "/media/dynamic_image/Untitled_design_12_tDVaUxA.png",
+         "url": "https://www.banglanews24.com/economics-business/news/bd/859291.details"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "Newsroom"
+ }
+}

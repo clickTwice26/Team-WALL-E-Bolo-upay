@@ -1,0 +1,55 @@
+{
+ "url": "https://www.upaybd.com/services/details/cable-tv",
+ "api": "https://api.upaybd.com/api/v2/pages/cable-tv",
+ "data": {
+  "title_english": "Cable TV",
+  "title_bangla": "Cable TV",
+  "template_name": "template-d",
+  "rows": {
+   "Data": [
+    {
+     "title": "Cable TV",
+     "title bn": "ক্যাবল টিভি&nbsp;",
+     "background image": "/media/dynamic_image/Desktop_Internet_Backdrop_IHsPlXy_4m4RJCw.png",
+     "background image sd": "/media/dynamic_image/Mobile_internet_backdrop_l014c16_0TcLEXr.png",
+     "desc": "Pay your Cable TV bill easily through upay",
+     "desc bn": "আপনার ক্যাবল টিভির বিল পরিশোধ করুন খুব সহজেই উপায়ের মাধ্যমে&nbsp;",
+     "bill payment list": [
+      {
+       "title": "Akash DTH",
+       "title bn": "আকাশ ডিটিএইচ",
+       "icon": "/media/dynamic_image/Untitled_design_24.png",
+       "icon sd": "/media/dynamic_image/Untitled_design_24_npPqlXo.png",
+       "slug url": "/services/details/akash-dth"
+      },
+      {
+       "title": "Set Top Box",
+       "title bn": "সেট টপ বক্স",
+       "icon": "/media/dynamic_image/Set_Top_Box.png",
+       "icon sd": "/media/dynamic_image/Set_Top_Box_09HXWsQ.png",
+       "slug url": "/services/details/set-top-box-recharge"
+      }
+     ],
+     "Other Service": [
+      {
+       "title": "Electricity",
+       "title bn": "ইলেক্ট্রিসিটি&nbsp;",
+       "slug url": "/products/utility/electricity-bill"
+      },
+      {
+       "title": "Water",
+       "title bn": "পানি&nbsp;",
+       "slug url": "/products/utility/water-bill"
+      },
+      {
+       "title": "Gas",
+       "title bn": "গ্যাস&nbsp;",
+       "slug url": "/products/utility/Gas"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "cable-tv"
+ }
+}

@@ -1,0 +1,91 @@
+{
+ "url": "https://www.upaybd.com/services/details/unlimited-cash-reward-for-robi-airtel",
+ "api": "https://api.upaybd.com/api/v2/pages/unlimited-cash-reward-for-robi-airtel",
+ "data": {
+  "title_english": "Unlimited Cash Reward for Robi & Airtel",
+  "title_bangla": "Unlimited Cash Reward for Robi & Airtel",
+  "template_name": "template-h",
+  "rows": {
+   "Data": [
+    {
+     "image": "/media/dynamic_image/Robi_Website_Desktop_I8RW6w4.jpg",
+     "image sd": "/media/dynamic_image/Robi_Website_Desktop_u6TI7Bk.jpg",
+     "Details data": [
+      {
+       "title": "Unlimited Cashback upon purchasing specific packs of Robi from upay!",
+       "title bn": "উপায় থেকে রবি নম্বরে নির্দিষ্ট প্যাক রিচার্জ করলেই আনলিমিটেড ক্যাশব্যাক!",
+       "desc": "<div style=\"text-align: center;\"><strong><span style=\"font-size: 12pt;\"><br />Robi users will get Cashback upon recharging:<br /></span><br /></strong></div>\r\n<div style=\"text-align: center;\">\r\n<table style=\"border-collapse: collapse; width: 100%; height: 248px; margin-left: auto; margin-right: auto;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 9.23224%;\" width=\"74\">\r\n<p>SL. No.</p>\r\n</td>\r\n<td style=\"width: 12.9802%;\" width=\"97\">\r\n<p>Pack Type</p>\r\n</td>\r\n<td style=\"width: 12.3936%;\" width=\"89\">\r\n<p>Amount</p>\r\n</td>\r\n<td style=\"width: 22.0334%;\" width=\"164\">\r\n<p>Offer</p>\r\n</td>\r\n<td style=\"width: 12.1496%;\" width=\"89\">\r\n<p>Validity</p>\r\n</td>\r\n<td style=\"width: 17.3095%;\" width=\"127\">\r\n<p>Cashback BDT</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 9.23224%;\" width=\"74\">\r\n<p>1</p>\r\n</td>\r\n<td style=\"width: 12.9802%;\" width=\"97\">\r\n<p>Data</p>\r\n</td>\r\n<td style=\"width: 12.3936%;\" width=\"89\">\r\n<p>698</p>\r\n</td>\r\n<td style=\"width: 22.0334%;\" width=\"164\">\r\n<p>70GB</p>\r\n</td>\r\n<td style=\"width: 12.1496%;\" width=\"89\">\r\n<p>30D</p>\r\n</td>\r\n<td style=\"width: 17.3095%;\" width=\"127\">\r\n<p>50</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 9.23224%;\" width=\"74\">\r\n<p>2</p>\r\n</td>\r\n<td style=\"width: 12.9802%;\" width=\"97\">\r\n<p>Data</p>\r\n</td>\r\n<td style=\"width: 12.3936%;\" width=\"89\">\r\n<p>798</p>\r\n</td>\r\n<td style=\"width: 22.0334%;\" width=\"164\">\r\n<p>100GB</p>\r\n</td>\r\n<td style=\"width: 12.1496%;\" width=\"89\">\r\n<p>30D</p>\r\n</td>\r\n<td style=\"width: 17.3095%;\" width=\"127\">\r\n<p>75</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 9.23224%;\" width=\"74\">\r\n<p>3</p>\r\n</td>\r\n<td style=\"width: 12.9802%;\" width=\"97\">\r\n<p>Data</p>\r\n</td>\r\n<td style=\"width: 12.3936%;\" width=\"89\">\r\n<p>897</p>\r\n</td>\r\n<td style=\"width: 22.0334%;\" width=\"164\">\r\n<p>Unlimited Internet</p>\r\n</td>\r\n<td style=\"width: 12.1496%;\" width=\"89\">\r\n<p>30D</p>\r\n</td>\r\n<td style=\"width: 17.3095%;\" width=\"127\">\r\n<p>85</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 9.23224%;\" width=\"74\">\r\n<p>4</p>\r\n</td>\r\n<td style=\"width: 12.9802%;\" width=\"97\">\r\n<p>Bundle</p>\r\n</td>\r\n<td style=\"width: 12.3936%;\" width=\"89\">\r\n<p>699</p>\r\n</td>\r\n<td style=\"width: 22.0334%;\" width=\"164\">\r\n<p>25GB+500 Mins</p>\r\n</td>\r\n<td style=\"width: 12.1496%;\" width=\"89\">\r\n<p>30D</p>\r\n</td>\r\n<td style=\"width: 17.3095%;\" width=\"127\">\r\n<p>40</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 9.23224%;\" width=\"74\">\r\n<p>5</p>\r\n</td>\r\n<td style=\"width: 12.9802%;\" width=\"97\">\r\n<p>Bundle</p>\r\n</td>\r\n<td style=\"width: 12.3936%;\" width=\"89\">\r\n<p>799</p>\r\n</td>\r\n<td style=\"width: 22.0334%;\" width=\"164\">\r\n<p>40GB+700 Mins</p>\r\n</td>\r\n<td style=\"width: 12.1496%;\" width=\"89\">\r\n<p>30D</p>\r\n</td>\r\n<td style=\"width: 17.3095%;\" width=\"127\">\r\n<p>80</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 9.23224%;\" width=\"74\">\r\n<p>6</p>\r\n</td>\r\n<td style=\"width: 12.9802%;\" width=\"97\">\r\n<p>Bundle</p>\r\n</td>\r\n<td style=\"width: 12.3936%;\" width=\"89\">\r\n<p>999</p>\r\n</td>\r\n<td style=\"width: 22.0334%;\" width=\"164\">\r\n<p>50GB+1500 Mins</p>\r\n</td>\r\n<td style=\"width: 12.1496%;\" width=\"89\">\r\n<p>30D</p>\r\n</td>\r\n<td style=\"width: 17.3095%;\" width=\"127\">\r\n<p>100</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 9.23224%;\" width=\"74\">\r\n<p>7</p>\r\n</td>\r\n<td style=\"width: 12.9802%;\" width=\"97\">\r\n<p>Voice</p>\r\n</td>\r\n<td style=\"width: 12.3936%;\" width=\"89\">\r\n<p>159</p>\r\n</td>\r\n<td style=\"width: 22.0334%;\" width=\"164\">\r\n<p>250 Minutes</p>\r\n</td>\r\n<td style=\"width: 12.1496%;\" width=\"89\">\r\n<p>7D</p>\r\n</td>\r\n<td style=\"width: 17.3095%;\" width=\"127\">\r\n<p>10</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 9.23224%;\" width=\"74\">\r\n<p>8</p>\r\n</td>\r\n<td style=\"width: 12.9802%;\" width=\"97\">\r\n<p>Voice</p>\r\n</td>\r\n<td style=\"width: 12.3936%;\" width=\"89\">\r\n<p>289</p>\r\n</td>\r\n<td style=\"width: 22.0334%;\" width=\"164\">\r\n<p>400 Minutes</p>\r\n</td>\r\n<td style=\"width: 12.1496%;\" width=\"89\">\r\n<p>30D</p>\r\n</td>\r\n<td style=\"width: 17.3095%;\" width=\"127\">\r\n<p>15</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 9.23224%;\" width=\"74\">\r\n<p>9</p>\r\n</td>\r\n<td style=\"width: 12.9802%;\" width=\"97\">\r\n<p>Voice</p>\r\n</td>\r\n<td style=\"width: 12.3936%;\" width=\"89\">\r\n<p>409</p>\r\n</td>\r\n<td style=\"width: 22.0334%;\" width=\"164\">\r\n<p>640 Minutes</p>\r\n</td>\r\n<td style=\"width: 12.1496%;\" width=\"89\">\r\n<p>30D</p>\r\n</td>\r\n<td style=\"width: 17.3095%;\" width=\"127\">\r\n<p>40</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 9.23224%;\" width=\"74\">\r\n<p>10</p>\r\n</td>\r\n<td style=\"width: 12.9802%;\" width=\"97\">\r\n<p>Voice</p>\r\n</td>\r\n<td style=\"width: 12.3936%;\" width=\"89\">\r\n<p>509</p>\r\n</td>\r\n<td style=\"width: 22.0334%;\" width=\"164\">\r\n<p>800 Minutes</p>\r\n</td>\r\n<td style=\"width: 12.1496%;\" width=\"89\">\r\n<p>30D</p>\r\n</td>\r\n<td style=\"width: 17.3095%;\" width=\"127\">\r\n<p>50</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 9.23224%;\" width=\"74\">\r\n<p>11</p>\r\n</td>\r\n<td style=\"width: 12.9802%;\" width=\"97\">\r\n<p>Voice</p>\r\n</td>\r\n<td style=\"width: 12.3936%;\" width=\"89\">\r\n<p>639</p>\r\n</td>\r\n<td style=\"width: 22.0334%;\" width=\"164\">\r\n<p>1000 Minutes</p>\r\n</td>\r\n<td style=\"width: 12.1496%;\" width=\"89\">\r\n<p>30D</p>\r\n</td>\r\n<td style=\"width: 17.3095%;\" width=\"127\">\r\n<p>60</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n<div style=\"text-align: center;\"><strong><br /></strong><strong><span style=\"font-size: 14pt;\">Terms and Conditions</span></strong></div>",
+       "desc bn": "<br />\r\n<div style=\"text-align: center;\">\r\n<div style=\"text-align: center;\">\r\n<div style=\"text-align: center;\">\r\n<div style=\"text-align: center;\">\r\n<div style=\"text-align: center;\">\r\n<div style=\"text-align: center;\">\r\n<div style=\"text-align: center;\"><strong><strong><strong><strong>রবি গ্রাহকরা উল্লেখিত নিদিষ্ট প্যাক রিচার্জ করলেই পাবেন ক্যাশব্যাকঃ<br /><br /></strong></strong></strong></strong>\r\n<table style=\"border-collapse: collapse; width: 100%; height: 455px; margin-left: auto; margin-right: auto;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 8.42548%;\" width=\"60\">\r\n<p><strong>ক্রমিক নং</strong></p>\r\n</td>\r\n<td style=\"width: 12.2188%;\" width=\"93\">\r\n<p><strong>প্যাকের ধরন</strong></p>\r\n</td>\r\n<td style=\"width: 12.1803%;\" width=\"93\">\r\n<p><strong>পরিমাণ (টাকা)</strong></p>\r\n</td>\r\n<td style=\"width: 28.8294%;\" width=\"240\">\r\n<p><strong>অফার</strong></p>\r\n</td>\r\n<td style=\"width: 10.3654%;\" width=\"80\">\r\n<p><strong>মেয়াদ</strong></p>\r\n</td>\r\n<td style=\"width: 15.1058%;\" width=\"113\">\r\n<p><strong>ক্যাশব্যাক (টাকা)</strong></p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 8.42548%;\" width=\"60\">\r\n<p>১</p>\r\n</td>\r\n<td style=\"width: 12.2188%;\" width=\"93\">\r\n<p>ডেটা</p>\r\n</td>\r\n<td style=\"width: 12.1803%;\" width=\"93\">\r\n<p>৬৯৮</p>\r\n</td>\r\n<td style=\"width: 28.8294%;\" width=\"240\">\r\n<p>৭০ জিবি</p>\r\n</td>\r\n<td style=\"width: 10.3654%;\" width=\"80\">\r\n<p>৩০ দিন</p>\r\n</td>\r\n<td style=\"width: 15.1058%;\" width=\"113\">\r\n<p>৫০</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 8.42548%;\" width=\"60\">\r\n<p>২</p>\r\n</td>\r\n<td style=\"width: 12.2188%;\" width=\"93\">\r\n<p>ডেটা</p>\r\n</td>\r\n<td style=\"width: 12.1803%;\" width=\"93\">\r\n<p>৭৯৮</p>\r\n</td>\r\n<td style=\"width: 28.8294%;\" width=\"240\">\r\n<p>১০০ জিবি</p>\r\n</td>\r\n<td style=\"width: 10.3654%;\" width=\"80\">\r\n<p>৩০ দিন</p>\r\n</td>\r\n<td style=\"width: 15.1058%;\" width=\"113\">\r\n<p>৭৫</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 8.42548%;\" width=\"60\">\r\n<p>৩</p>\r\n</td>\r\n<td style=\"width: 12.2188%;\" width=\"93\">\r\n<p>ডেটা</p>\r\n</td>\r\n<td style=\"width: 12.1803%;\" width=\"93\">\r\n<p>৮৯৭</p>\r\n</td>\r\n<td style=\"width: 28.8294%;\" width=\"240\">\r\n<p>আনলিমিটেড ইন্টারনেট</p>\r\n</td>\r\n<td style=\"width: 10.3654%;\" width=\"80\">\r\n<p>৩০ দিন</p>\r\n</td>\r\n<td style=\"width: 15.1058%;\" width=\"113\">\r\n<p>৮৫</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 8.42548%;\" width=\"60\">\r\n<p>৪</p>\r\n</td>\r\n<td style=\"width: 12.2188%;\" width=\"93\">\r\n<p>বান্ডেল</p>\r\n</td>\r\n<td style=\"width: 12.1803%;\" width=\"93\">\r\n<p>৬৯৯</p>\r\n</td>\r\n<td style=\"width: 28.8294%;\" width=\"240\">\r\n<p>২৫ জিবি + ৫০০ মিনিট</p>\r\n</td>\r\n<td style=\"width: 10.3654%;\" width=\"80\">\r\n<p>৩০ দিন</p>\r\n</td>\r\n<td style=\"width: 15.1058%;\" width=\"113\">\r\n<p>৪০</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 8.42548%;\" width=\"60\">\r\n<p>৫</p>\r\n</td>\r\n<td style=\"width: 12.2188%;\" width=\"93\">\r\n<p>বান্ডেল</p>\r\n</td>\r\n<td style=\"width: 12.1803%;\" width=\"93\">\r\n<p>৭৯৯</p>\r\n</td>\r\n<td style=\"width: 28.8294%;\" width=\"240\">\r\n<p>৪০ জিবি + ৭০০ মিনিট</p>\r\n</td>\r\n<td style=\"width: 10.3654%;\" width=\"80\">\r\n<p>৩০ দিন</p>\r\n</td>\r\n<td style=\"width: 15.1058%;\" width=\"113\">\r\n<p>৮০</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 8.42548%;\" width=\"60\">\r\n<p>৬</p>\r\n</td>\r\n<td style=\"width: 12.2188%;\" width=\"93\">\r\n<p>বান্ডেল</p>\r\n</td>\r\n<td style=\"width: 12.1803%;\" width=\"93\">\r\n<p>৯৯৯</p>\r\n</td>\r\n<td style=\"width: 28.8294%;\" width=\"240\">\r\n<p>৫০ জিবি + ১৫০০ মিনিট</p>\r\n</td>\r\n<td style=\"width: 10.3654%;\" width=\"80\">\r\n<p>৩০ দিন</p>\r\n</td>\r\n<td style=\"width: 15.1058%;\" width=\"113\">\r\n<p>১০০</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 8.42548%;\" width=\"60\">\r\n<p>৭</p>\r\n</td>\r\n<td style=\"width: 12.2188%;\" width=\"93\">\r\n<p>ভয়েস</p>\r\n</td>\r\n<td style=\"width: 12.1803%;\" width=\"93\">\r\n<p>১৫৯</p>\r\n</td>\r\n<td style=\"width: 28.8294%;\" width=\"240\">\r\n<p>২৫০ মিনিট</p>\r\n</td>\r\n<td style=\"width: 10.3654%;\" width=\"80\">\r\n<p>৭ দিন</p>\r\n</td>\r\n<td style=\"width: 15.1058%;\" width=\"113\">\r\n<p>১০</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 8.42548%;\" width=\"60\">\r\n<p>৮</p>\r\n</td>\r\n<td style=\"width: 12.2188%;\" width=\"93\">\r\n<p>ভয়েস</p>\r\n</td>\r\n<td style=\"width: 12.1803%;\" width=\"93\">\r\n<p>২৮৯</p>\r\n</td>\r\n<td style=\"width: 28.8294%;\" width=\"240\">\r\n<p>৪০০ মিনিট</p>\r\n</td>\r\n<td style=\"width: 10.3654%;\" width=\"80\">\r\n<p>৩০ দিন</p>\r\n</td>\r\n<td style=\"width: 15.1058%;\" width=\"113\">\r\n<p>১৫</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 8.42548%;\" width=\"60\">\r\n<p>৯</p>\r\n</td>\r\n<td style=\"width: 12.2188%;\" width=\"93\">\r\n<p>ভয়েস</p>\r\n</td>\r\n<td style=\"width: 12.1803%;\" width=\"93\">\r\n<p>৪০৯</p>\r\n</td>\r\n<td style=\"width: 28.8294%;\" width=\"240\">\r\n<p>৬৪০ মিনিট</p>\r\n</td>\r\n<td style=\"width: 10.3654%;\" width=\"80\">\r\n<p>৩০ দিন</p>\r\n</td>\r\n<td style=\"width: 15.1058%;\" width=\"113\">\r\n<p>৪০</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 8.42548%;\" width=\"60\">\r\n<p>১০</p>\r\n</td>\r\n<td style=\"width: 12.2188%;\" width=\"93\">\r\n<p>ভয়েস</p>\r\n</td>\r\n<td style=\"width: 12.1803%;\" width=\"93\">\r\n<p>৫০৯</p>\r\n</td>\r\n<td style=\"width: 28.8294%;\" width=\"240\">\r\n<p>৮০০ মিনিট</p>\r\n</td>\r\n<td style=\"width: 10.3654%;\" width=\"80\">\r\n<p>৩০ দিন</p>\r\n</td>\r\n<td style=\"width: 15.1058%;\" width=\"113\">\r\n<p>৫০</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 8.42548%;\" width=\"60\">\r\n<p>১১</p>\r\n</td>\r\n<td style=\"width: 12.2188%;\" width=\"93\">\r\n<p>ভয়েস</p>\r\n</td>\r\n<td style=\"width: 12.1803%;\" width=\"93\">\r\n<p>৬৩৯</p>\r\n</td>\r\n<td style=\"width: 28.8294%;\" width=\"240\">\r\n<p>১০০০ মিনিট</p>\r\n</td>\r\n<td style=\"width: 10.3654%;\" width=\"80\">\r\n<p>৩০ দিন</p>\r\n</td>\r\n<td style=\"width: 15.1058%;\" width=\"113\">\r\n<p>৬০</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<strong><strong><br /></strong></strong><strong><span style=\"font-size: 14pt;\">শর্তাবলীঃ</span></strong></div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
+       "sub title": "<div style=\"text-align: center;\">Enjoy unlimited Cashback upon recharge of specific packs of Robi from upay app or by dialing *268#. This offer is applicable for recharge to both own number and any other number.</div>",
+       "sub title bn": "<div style=\"text-align: center;\">উপায় (upay) অ্যাপ থেকে অথবা *268# ডায়াল করে রবির নির্দিষ্ট প্যাক রিচার্জে উপভোগ করুন আনলিমিটেড ক্যাশব্যাক! অফারটি আপনার নিজস্ব অথবা অন্য যেকোনো রবি নম্বরে রিচার্জের ক্ষেত্রে প্রযোজ্য।</div>",
+       "sub desc": "",
+       "sub desc bn": "",
+       "key value": [
+        {
+         "title": "Campaign duration is from September 23 to September 30, 2026.",
+         "title bn": "ক্যাম্পেইনের মেয়াদ ২৩ সেপ্টেম্বর থেকে ৩০ সেপ্টেম্বর, ২০২৬ পর্যন্ত।"
+        },
+        {
+         "title": "Cashback is applicable for mobile recharge to own or any other Robi number.",
+         "title bn": "নিজ নম্বর অথবা যেকোন রবি নম্বরে নিদিষ্ট প্যাক রিচার্জ এর ক্ষেত্রে ক্যাশব্যাক প্রযোজ্য হবে।"
+        },
+        {
+         "title": "This offer can be availed multiple times during the campaign period.",
+         "title bn": "ক্যাম্পাইন চলাকালীন সময়ে অফারটি একাধিকবার উপভোগ করা যাবে।"
+        },
+        {
+         "title": "The amounts will be disbursed in the &ldquo;Primary&rdquo; wallet of the customers.",
+         "title bn": "এমাউন্ট গ্রাহকের \"প্রাইমারি\" ওয়ালেটে পাঠানো হবে।"
+        },
+        {
+         "title": "Fulfillment of recharge pack offer is the responsibility of the respective mobile operator.",
+         "title bn": "রিচার্জ প্যাক অফার এর দায়িত্ব স্ব স্ব মোবাইল অপারেটর এর উপর বর্তায়।"
+        },
+        {
+         "title": "Limited profile customers are not eligible for cash reward. To participate in the campaign, customer has to be in full profile.",
+         "title bn": "লিমিটেড প্রোফাইল গ্রাহকরা ক্যাশ রিওয়ার্ড এর জন্য আওতাধীন নয়। ক্যাম্পেইনে অংশ নিতে গ্রাহককে সম্পূর্ণ প্রোফাইলে থাকতে হবে।"
+        },
+        {
+         "title": "Customer can check &ldquo;Cashback&rdquo; balance from the transaction details in the app",
+         "title bn": "কাস্টমার ক্যাশব্যাক উপায় আকাউন্ট এর ট্রানজ্যাকশন হিস্টোরি থেকে চেক করতে পারবেন&nbsp;"
+        },
+        {
+         "title": "Customers can use the cashback for any purpose&nbsp;",
+         "title bn": "গ্রাহক এই ক্যাশব্যাক যেকোনো ভাবে ব্যবহার করতে পারবে।"
+        },
+        {
+         "title": "upay reserves the right to change/modify campaign terms &amp; conditions, or cancel cash reward payout if the particular transaction and/or the customer transaction behavior raises reasonable suspicion that the customer has abused the benefits of the campaign.",
+         "title bn": "উপায় ক্যাম্পেইনের সকল ধরনের শর্ত যেকোনো সময় পরিবর্তন/পরিবর্ধন করতে পারে অথবা ক্যাশ রিওয়ার্ড বাতিল করতে পারে যদি কোনো নির্দিষ্ট লেনদেন সন্দেহজনক মনে হয় বা গ্রাহক যদি কোনো সুবিধার অপব্যবহার করে।"
+        },
+        {
+         "title": "Both USSD and app users of upay can avail this offer.",
+         "title bn": "ইউএসএসডি এবং উপায় অ্যাপ গ্রাহকরা অফারটি উপভোগ করতে পারবেন।"
+        }
+       ]
+      }
+     ],
+     "May like": [
+      {
+       "title": "Offers you may like",
+       "title bn": "Offers you may like",
+       "desc": "Check out the other offers you may like",
+       "desc bn": "Check out the other offers you may like",
+       "Under May like": [
+        {
+         "title": "Get Upto 75 Taka Cash Reward on Self Registration",
+         "title bn": "সেলফ রেজিস্ট্রেশান করলেই ৭৫ টাকা পর্যন্ত ক্যাশ রিওয়ার্ড",
+         "desc": "Download upay app. Enjoy Cash reward upon self-registration, Cash in/Add Money, Mobile recharge and Bill Pay.",
+         "desc bn": "সেলফ রেজিস্ট্রেশন করার সাথে ক্যাশ ইন/অ্যাড মানি, মোবাইল রিচার্জ এবং বিল পে করলেই পাবেন ক্যাশ রিওয়ার্ড।",
+         "image": "/media/dynamic_image/Self-Registration-May-2023---Website-Banner-Desktop--1440x680_Z3E6XX2_EK7dH0s.jpg",
+         "image sd": "/media/dynamic_image/Self-Registration-May-2023---Website-Banner-Desktop--1440x680_Z3E6XX2_QaazBY5.jpg",
+         "slug url": "/Latest-offer/75-taka-cash-reward-on-self-registration"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "unlimited-cash-reward-for-robi-airtel"
+ }
+}

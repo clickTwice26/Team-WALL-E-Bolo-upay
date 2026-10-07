@@ -1,0 +1,96 @@
+{
+ "url": "https://www.upaybd.com/services/details/akash-dth",
+ "api": "https://api.upaybd.com/api/v2/pages/akash-dth",
+ "data": {
+  "title_english": "Akash DTH",
+  "title_bangla": "Akash DTH",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Akash DTH",
+     "title bn": "আকাশ ডিটিএইচ",
+     "background image": "/media/dynamic_image/Desktop_Internet_Backdrop_IHsPlXy_an82Kxg.png",
+     "background image sd": "/media/dynamic_image/Mobile_internet_backdrop_l014c16_zyr9Iny.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "",
+     "desc bn": "",
+     "Methods": [
+      {
+       "title": "How to pay your Akash DTH Bill ?",
+       "title bn": "কিভাবে আপনার আকাশ ডি টি এইচ&nbsp; বিল পরিশোধ করবেন ?",
+       "desc": "Simply follow the below steps in order to complete your Akash DTH bill payment",
+       "desc bn": "",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Add_Money_from_Card_is_not_available_on_268_9.png",
+         "image sd": "/media/dynamic_image/Add_Money_from_Card_is_not_available_on_268_9_C0OaySw.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_CNrXDlk.png",
+         "image sd": "/media/dynamic_image/1_OXPv0xH.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_Tl7cvbW.png",
+         "image sd": "/media/dynamic_image/2_j04hPHp.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_C3A8z87.png",
+         "image sd": "/media/dynamic_image/3_bpDxNHE.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_vkYhtxC.png",
+         "image sd": "/media/dynamic_image/4_3guNOvh.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_KeALL76.png",
+         "image sd": "/media/dynamic_image/5_3eKi4QM.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_KgRVVm8.png",
+         "image sd": "/media/dynamic_image/6_SRJCp5V.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_L73dqpR.png",
+         "image sd": "/media/dynamic_image/7_tsKllgX.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_s5GyCAh.png",
+         "image sd": "/media/dynamic_image/8_9DYVB2G.png"
+        },
+        {
+         "image": "/media/dynamic_image/9_QwoQyxh.png",
+         "image sd": "/media/dynamic_image/9_WIIUF7G.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "akash-dth"
+ }
+}

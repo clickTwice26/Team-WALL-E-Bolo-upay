@@ -1,0 +1,92 @@
+{
+ "url": "https://www.upaybd.com/services/details/prepaid-card-application",
+ "api": "https://api.upaybd.com/api/v2/pages/prepaid-card-application",
+ "data": {
+  "title_english": "Prepaid Card Application",
+  "title_bangla": "Prepaid Card Application",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Prepaid Card",
+     "title bn": "প্রিপেইড কার্ড",
+     "background image": "/media/dynamic_image/New_Account_Creation_header_ieHSiKc_3PlTixx.jpg",
+     "background image sd": "/media/dynamic_image/Website_Mobile_Header_1_BJ3zsWF.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<p>For the first time in Bangladesh, upay introduces MFS co-branded prepaid card. Anyone can easily obtain an UCB - উপায় co-branded prepaid card without the need of any physical document or applications. All you need is simply an upay account, and apply through উপায় app. Follow the process below.</p>",
+     "desc bn": "<p>ইউনাইটেড কমার্শিয়াল ব্যাংক পিএলসি-এর সাথে যৌথ উদ্যোগে উপায় নিয়ে এসেছে বাংলাদেশের প্রথম এমএফএস কো-ব্র্যান্ডেড প্রিপেইড কার্ড। এখন খুব সহজেই আপনার উপায় অ্যাপ থেকে কোন ব্যাংক অ্যাকাউন্ট অথবা ফিজিক্যাল ডকুমেন্টস ছাড়াই UCB - উপায় কো-ব্র্যান্ডেড প্রিপেইড কার্ড এর জন্য আবেদন করা যাবে। পুরো নিয়মটি জানতে দেখে ফেলুন ধাপ গুলো।</p>",
+     "Methods": [
+      {
+       "title": "How to apply for a UCB - upay Co-branded Prepaid Card ?",
+       "title bn": "কিভাবে ইউসিবি উপায় প্রিপেইড কার্ড রেজিস্ট্রেশন করবেন অ্যাপ এর মাধ্যমে ?",
+       "desc": "",
+       "desc bn": "",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Not_Available_on_268_PGtFuHl.png",
+         "image sd": "/media/dynamic_image/Not_Available_on_268_G70bEKC.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_BICnDe4.png",
+         "image sd": "/media/dynamic_image/1_vIcd9B5.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_3Qs9hIw.png",
+         "image sd": "/media/dynamic_image/2_H4Xfedb.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_gB29awp.png",
+         "image sd": "/media/dynamic_image/3_ZlLKyCW.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_vcXIQ57.png",
+         "image sd": "/media/dynamic_image/4_Uq8Zy1g.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_D6zUqlc.png",
+         "image sd": "/media/dynamic_image/5_FyF0SYl.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_prCUkCO.png",
+         "image sd": "/media/dynamic_image/6_wY0ejeu.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_OCMKTwy.png",
+         "image sd": "/media/dynamic_image/7_sb93LEg.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_Tv6MYKS.png",
+         "image sd": "/media/dynamic_image/8_p6Prv2M.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "prepaid-card-application"
+ }
+}

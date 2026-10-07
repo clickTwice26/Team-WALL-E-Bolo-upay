@@ -1,0 +1,67 @@
+{
+ "url": "https://www.upaybd.com/services/details/water-bill",
+ "api": "https://api.upaybd.com/api/v2/pages/water-bill",
+ "data": {
+  "title_english": "Water Bill",
+  "title_bangla": "Water Bill",
+  "template_name": "template-d",
+  "rows": {
+   "Data": [
+    {
+     "title": "Water",
+     "title bn": "ওয়াটার&nbsp;",
+     "background image": "/media/dynamic_image/Water_-_Desktop_Header_BDaA442.png",
+     "background image sd": "/media/dynamic_image/Water_Mobile_Header_MOTTR6s.png",
+     "desc": "<p class=\"react-reveal electricity-thead\">You can pay your water bills with any of the prominent billers in the country with only a few clicks.</p>",
+     "desc bn": "শুধুমাত্র কয়েকটা ক্লিকের মাধ্যমে দেশের বিশিষ্ট বিলারদের সাথে আপনার পানির বিল পরিশোধ করতে পারেন।",
+     "bill payment list": [
+      {
+       "title": "Dhaka WASA",
+       "title bn": "ঢাকা ওয়াসা&nbsp;",
+       "icon": "/media/dynamic_image/Untitled_design_13.png",
+       "icon sd": "/media/dynamic_image/Untitled_design_13_42XO9Ty.png",
+       "slug url": "/services/details/dhaka-wasa"
+      },
+      {
+       "title": "Khulna WASA",
+       "title bn": "খুলনা ওয়াসা",
+       "icon": "/media/dynamic_image/Pay_Bill_Logos_1.png",
+       "icon sd": "/media/dynamic_image/Pay_Bill_Logos_1_jpZuNsa.png",
+       "slug url": "/services/details/khulna-wasa"
+      },
+      {
+       "title": "Rajshahi WASA",
+       "title bn": "রাজশাহী ওয়াসা",
+       "icon": "/media/dynamic_image/Rajshahi_WASA_LOGO.png",
+       "icon sd": "/media/dynamic_image/Rajshahi_WASA_LOGO_pY6Yq4p.png",
+       "slug url": "/services/details/rajshahi-wasa"
+      }
+     ],
+     "Other Service": [
+      {
+       "title": "Electricity",
+       "title bn": "",
+       "slug url": "/products/utility/electricity-bill"
+      },
+      {
+       "title": "Credit Card",
+       "title bn": "",
+       "slug url": "/services/details/ucb-credit-card"
+      },
+      {
+       "title": "Gas",
+       "title bn": "",
+       "slug url": "/ProductServices/titas-gas"
+      },
+      {
+       "title": "Internet",
+       "title bn": "ইন্টারনেট",
+       "slug url": "/products/utility/internet"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "water-bill"
+ }
+}

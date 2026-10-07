@@ -1,0 +1,27 @@
+{
+ "url": "https://www.upaybd.com/services/details/online-shop",
+ "api": "https://api.upaybd.com/api/v2/pages/online-shop",
+ "data": {
+  "title_english": "Online Shop",
+  "title_bangla": "Online Shop",
+  "template_name": "template-g",
+  "rows": {
+   "Data": [
+    {
+     "cover title": "Online Shop",
+     "cover title bn": "অনলাইন শপ",
+     "cover image": "/media/dynamic_image/Desktop_Make_Payment_1_fVKmX9J.png",
+     "cover image sd": "/media/dynamic_image/Mobile_Make_Payment_1_JTTjTb1.png",
+     "desc": "<p style=\"text-align: center;\"><span style=\"font-weight: 400;\"><br /><br /><span style=\"font-size: 14pt;\"><strong>Browsing through online shopping and checking out? Now you can use your উপায় (upay) account and enjoy online shopping with all the major online pages in Bangladesh, only if you have the উপায় (upay) app.</strong></span></span></p>\r\n<p><span style=\"font-weight: 400;\"><br /><span style=\"font-size: 12pt;\">Simply follow these steps for any kind of Online Shopping:</span><br /><br /></span></p>\r\n<ul>\r\n<li>Select your desired product from merchant app or website.</li>\r\n</ul>\r\n<ul>\r\n<li>Select upay from payment option</li>\r\n</ul>\r\n<ul>\r\n<li>Enter your upay Account Number</li>\r\n</ul>\r\n<ul>\r\n<li>Enter OTP for verification</li>\r\n</ul>\r\n<ul>\r\n<li>Enter your upay PIN and click on confirm</li>\r\n</ul>\r\n<ul>\r\n<li>Your payment is complete! You will receive payment confirmation notification from upay.</li>\r\n</ul>\r\n<p>&nbsp;</p>",
+     "desc bn": "<p style=\"text-align: center;\"><br /><strong><span style=\"font-size: 14pt;\">অনলাইন শপগুলো ব্রাউজ করতে চান? উপায় অ্যাপ দিয়ে বাংলাদেশের সবচেয়ে বড় অনলাইন শপগুলো থেকে কেনাকাটা করতে পারবেন এখন খুব সহজে। &nbsp;&nbsp;</span></strong></p>\r\n<p style=\"text-align: center;\"><br /><span style=\"font-size: 12pt;\">অনলাইনে শপিং করার জন্য ধাপগুলো অনুসরণ করুন:</span><br /><br /><br /></p>\r\n<ul>\r\n<li>মার্চেন্টের অ্যাপ অথবা ওয়েবসাইট থেকে আপনার পছন্দসই প্রোডাক্ট সিলেক্ট করুন</li>\r\n</ul>\r\n<br />\r\n<ul>\r\n<li>পেমেন্ট অপশনে গিয়ে উপায় সিলেক্ট করুন</li>\r\n</ul>\r\n<br />\r\n<ul>\r\n<li>আপনার উপায় অ্যাকাউন্ট নম্বরটি লিখুন</li>\r\n</ul>\r\n<br />\r\n<ul>\r\n<li>ভেরিফিকেশনের জন্য উপায় অ্যাকাউন্ট নম্বরে পাঠানো OTP লিখুন</li>\r\n</ul>\r\n<br />\r\n<ul>\r\n<li>আপনার উপায় অ্যাকাউন্টের পিন লিখুন এবং \"কনফার্ম\" বাটনে ক্লিক করুন</li>\r\n</ul>\r\n<br />\r\n<ul>\r\n<li>আপনার পেমেন্ট কমপ্লিট হয়েছে! আপনি উপায় থেকে পেমেন্ট কনফার্মেশনের একটি নোটিফিকেশন পাবেন</li>\r\n</ul>",
+     "Navigation": [
+      {
+       "slug url": "/nav/Navigation"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "online-shop"
+ }
+}

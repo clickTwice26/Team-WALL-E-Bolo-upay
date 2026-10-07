@@ -1,0 +1,92 @@
+{
+ "url": "https://www.upaybd.com/services/details/westzone-postpaid",
+ "api": "https://api.upaybd.com/api/v2/pages/westzone-postpaid",
+ "data": {
+  "title_english": "Westzone Postpaid",
+  "title_bangla": "Westzone Postpaid",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Westzone Postpaid",
+     "title bn": "ওয়েস্টজোন পোস্টপেইড",
+     "background image": "/media/dynamic_image/Electricity_-_Desktop_dkUBjmJ_D9R5Xdu_6FdMQng.png",
+     "background image sd": "/media/dynamic_image/Electricity_-_Mobile_hl5DF9p_gfNZeSN_zZVqCXj.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<div style=\"text-align: center;\">Too much hassle on paying your electricity bill on time ? No worries anymore, as upay lets you pay your bill without any tension, straight from upay app.</div>",
+     "desc bn": "<div style=\"text-align: center;\">এখন আর টেনশন করার কারণ নেই। উপায় এর মাধ্যমে আপনার বিল পরিশোধ করুন সহজেই এবং মাত্র কয়েকটা ক্লিক করে।</div>",
+     "Methods": [
+      {
+       "title": "How to pay Westzone Postpaid Bill ?",
+       "title bn": "কিভাবে ওয়েস্টজোন পোস্ট পেইড বিল সম্পন্ন করবেন ?",
+       "desc": "Simply follow the below steps to pay your WestZone Postpaid Bill",
+       "desc bn": "নিম্নের ধাপ অনুসরণ করে সহজেই ওয়েস্টজোন পোস্ট পেইড বিল সম্পন্ন করুন",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Not_Available_on_268_1.png",
+         "image sd": "/media/dynamic_image/Not_Available_on_268_1_0yN4p0M.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_J7LAoEr.png",
+         "image sd": "/media/dynamic_image/1_lowlu8S.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_eiUJdWF.png",
+         "image sd": "/media/dynamic_image/2_RNUVwMT.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_o5w77N6.png",
+         "image sd": "/media/dynamic_image/3_RmSTRkc.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_SIQDPuN.png",
+         "image sd": "/media/dynamic_image/4_7eNF9wd.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_s3xLzJO.png",
+         "image sd": "/media/dynamic_image/6_Ssa5S3N.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_ug5CmRM.png",
+         "image sd": "/media/dynamic_image/7_edbdhom.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_oMtVHJR.png",
+         "image sd": "/media/dynamic_image/8_cIto43f.png"
+        },
+        {
+         "image": "/media/dynamic_image/9_YID7NLx.png",
+         "image sd": "/media/dynamic_image/9_t5Y8ywY.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "westzone-postpaid"
+ }
+}
