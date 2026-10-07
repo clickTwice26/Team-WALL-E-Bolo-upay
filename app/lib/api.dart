@@ -25,25 +25,28 @@ class ApiError implements Exception {
   String toString() => 'ApiError($status, $detail)';
 }
 
-class Api {
-  static Future<dynamic> _send(String method, String path, [Map<String, dynamic>? body]) async {
-    final headers = {'Content-Type': 'application/json'};
-    late http.Response r;
-    try {
-      r = method == 'GET'
-          ? await http.get(_uri(path), headers: headers).timeout(const Duration(seconds: 30))
-          : await http
-              .post(_uri(path), headers: headers, body: jsonEncode(body ?? {}))
-              .timeout(const Duration(seconds: 30));
-    } catch (e) {
-      throw ApiError(0, 'network');
-    }
-    final data = r.body.isEmpty ? null : jsonDecode(utf8.decode(r.bodyBytes));
-    if (r.statusCode >= 400) {
-      throw ApiError(r.statusCode, data is Map ? data['detail'] : data);
-    }
-    return data;
+/// One JSON request to the API (also used by the support console).
+Future<dynamic> apiRequest(String method, String path,
+    {Map<String, dynamic>? body, Map<String, String> headers = const {}}) async {
+  final h = {'Content-Type': 'application/json', ...headers};
+  late http.Response r;
+  try {
+    r = method == 'GET'
+        ? await http.get(_uri(path), headers: h).timeout(const Duration(seconds: 30))
+        : await http.post(_uri(path), headers: h, body: jsonEncode(body ?? {})).timeout(const Duration(seconds: 30));
+  } catch (e) {
+    throw ApiError(0, 'network');
   }
+  final data = r.body.isEmpty ? null : jsonDecode(utf8.decode(r.bodyBytes));
+  if (r.statusCode >= 400) {
+    throw ApiError(r.statusCode, data is Map ? data['detail'] : data);
+  }
+  return data;
+}
+
+class Api {
+  static Future<dynamic> _send(String method, String path, [Map<String, dynamic>? body]) =>
+      apiRequest(method, path, body: body);
 
   static Future<List<dynamic>> users() async => await _send('GET', '/api/users') as List;
   static Future<Map<String, dynamic>> user(String id) async =>
@@ -78,6 +81,16 @@ class Api {
   static Future<void> reset() async => _send('POST', '/api/demo/reset');
   static Future<Map<String, dynamic>> agent(Map<String, dynamic> body) async =>
       Map<String, dynamic>.from(await _send('POST', '/api/agent', body));
+
+  // human handoff
+  static Future<Map<String, dynamic>> startHandoff(Map<String, dynamic> body) async =>
+      Map<String, dynamic>.from(await _send('POST', '/api/handoff', body));
+  static Future<Map<String, dynamic>> pollHandoff(String id, String userId, int after) async =>
+      Map<String, dynamic>.from(await _send('GET', '/api/handoff/$id?user_id=$userId&after=$after'));
+  static Future<void> handoffMessage(String id, String userId, String text) async =>
+      _send('POST', '/api/handoff/$id/messages', {'user_id': userId, 'text': text});
+  static Future<void> closeHandoff(String id, String userId) async =>
+      _send('POST', '/api/handoff/$id/close', {'user_id': userId});
 
   /// Natural server voice (WAV), or null when the server has no TTS or fails.
   static Future<Uint8List?> tts(String text) async {

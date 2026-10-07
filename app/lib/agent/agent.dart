@@ -126,6 +126,7 @@ class Agent extends ChangeNotifier {
   // ---------------- panel ----------------
   void openPanel({bool listen = false}) {
     open = true;
+    unread = 0;
     touch();
     if (listen) toggleListen();
   }
@@ -173,6 +174,7 @@ class Agent extends ChangeNotifier {
       Voice.instance.stop();
     }
     transcript = '';
+    if (chat != null) return _sendToHuman(text); // a person is answering now
     messages.add(AgentMsg('user', text));
     _utterances.add(text);
     if (_utterances.length > 3) _utterances.removeAt(0);
@@ -227,6 +229,114 @@ class Agent extends ChangeNotifier {
       busy = false;
       touch();
     }
+  }
+
+  // ---------------- human handoff ----------------
+  /// The open chat with a person: {id, status, agent_name, queue_position, user_id}.
+  Map<String, dynamic>? chat;
+  int unread = 0;
+  int _lastId = 0;
+  final Set<int> _seenIds = {};
+  Timer? _poll;
+
+  /// Starts (or resumes) a chat with support staff, with what the bot knows.
+  Future<void> connectHuman(String category, String reason) async {
+    if (chat != null) return openPanel();
+    final page = current;
+    final res = await Api.startHandoff({
+      'user_id': appState.userId,
+      'category': category,
+      'reason': reason,
+      'page': page,
+      'recent_pages': _recent.where((r) => r['id'] != page['id']).take(3).toList(),
+      'transcript': List.of(_history),
+      'bangla': appState.bangla,
+    });
+    chat = {...res, 'user_id': appState.userId}..remove('messages');
+    _ingest(res['messages'] as List?);
+    _poll?.cancel();
+    _poll = Timer.periodic(const Duration(seconds: 2), (_) => _pollChat());
+    touch();
+  }
+
+  Future<void> _pollChat() async {
+    final c = chat;
+    if (c == null) return;
+    if (c['user_id'] != appState.userId) return _dropChat(); // demo user switched
+    try {
+      final res = await Api.pollHandoff('${c['id']}', '${c['user_id']}', _lastId);
+      if (chat == null) return;
+      chat = {...c, ...res}..remove('messages');
+      _ingest(res['messages'] as List?);
+      if (res['status'] == 'closed') _endChat();
+      touch();
+    } on ApiError catch (_) {}
+  }
+
+  /// System notices are stored as "বাংলা / English": show the user's language.
+  String _inLanguage(String t) {
+    final i = t.indexOf(' / ');
+    if (i < 0) return t;
+    return appState.bangla ? t.substring(0, i) : t.substring(i + 3);
+  }
+
+  void _ingest(List? msgs) {
+    for (final m in msgs ?? const []) {
+      final id = (m['id'] as num).toInt();
+      if (!_seenIds.add(id)) continue;
+      if (id > _lastId) _lastId = id;
+      final sender = '${m['sender']}';
+      final text = sender == 'system' ? _inLanguage('${m['text']}') : '${m['text']}';
+      final role = sender == 'agent' ? 'human' : sender;
+      messages.add(AgentMsg(role, text, name: m['name'] as String?, id: id));
+      if (sender != 'user') {
+        Voice.instance.speak(text, bangla: appState.bangla);
+        if (!open) unread++;
+      }
+    }
+  }
+
+  Future<void> _sendToHuman(String text) async {
+    final c = chat!;
+    busy = true;
+    touch();
+    try {
+      await Api.handoffMessage('${c['id']}', '${c['user_id']}', text);
+      await _pollChat(); // fetch it back: a PIN in it shows masked
+    } on ApiError catch (e) {
+      if (e.status == 409) _endChat();
+    } finally {
+      busy = false;
+      touch();
+    }
+  }
+
+  Future<void> endChat() async {
+    final c = chat;
+    if (c == null) return;
+    try {
+      await Api.closeHandoff('${c['id']}', '${c['user_id']}');
+    } on ApiError catch (_) {}
+    await _pollChat();
+    _endChat();
+  }
+
+  void _endChat() {
+    _poll?.cancel();
+    _poll = null;
+    if (chat == null) return;
+    chat = null;
+    final s = tr(appState.bangla, 'আপনি আবার বলো upay-এর সাথে আছেন।', "You're back with Bolo upay.");
+    messages.add(AgentMsg('agent', s));
+    Voice.instance.speak(s, bangla: appState.bangla);
+    touch();
+  }
+
+  void _dropChat() {
+    _poll?.cancel();
+    _poll = null;
+    chat = null;
+    touch();
   }
 
   /// Wait until the page has finished loading after our actions.
@@ -307,6 +417,9 @@ class Agent extends ChangeNotifier {
         await Api.reset();
         await appState.refresh();
         return l('ডেমো রিসেট হয়েছে', 'Demo reset');
+      case 'connect_human':
+        await connectHuman('${a['category']}', '${a['text'] ?? ''}');
+        return l('মানুষের সাথে যুক্ত করা হচ্ছে', 'Connecting you to a person');
       case 'start_transfer':
         final text = '${a['text']}';
         final submit = current['id'] == 'assistant' ? top?.handlers['submit_command'] : null;

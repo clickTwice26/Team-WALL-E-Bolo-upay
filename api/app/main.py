@@ -21,7 +21,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, Response
 from pydantic import BaseModel, Field
 
-from . import store
+from . import handoff, store
 from .core import agent
 from .core import features as feat_mod
 from .core import llm, parser, risk, scam, tts
@@ -45,6 +45,7 @@ app = FastAPI(title="Bolo upay API", version="1.0.0",
               description="Voice-first Bangla payment assistant with scam shield (prototype, synthetic data).")
 app.add_middleware(CORSMiddleware, allow_origins=os.getenv("CORS_ORIGINS", "*").split(","),
                    allow_methods=["*"], allow_headers=["*"])
+app.include_router(handoff.router)
 
 
 # ---------- models ----------
@@ -323,6 +324,14 @@ def _static(base: Path, path: str, request: Request) -> Response:
         return Response(status_code=304, headers={**NO_CACHE, "etag": resp.headers["etag"]})
     return resp
 
+
+# support console: a second Flutter entrypoint built with --base-href /console/
+CONSOLE_DIR = Path(os.getenv("CONSOLE_DIR", str(ROOT / "app" / "build" / "console")))
+if CONSOLE_DIR.exists():
+    @app.get("/console", include_in_schema=False)
+    @app.get("/console/{path:path}", include_in_schema=False)
+    def console_app(request: Request, path: str = ""):
+        return _static(CONSOLE_DIR, path, request)
 
 if WEB_DIR.exists():
     @app.get("/{path:path}", include_in_schema=False)

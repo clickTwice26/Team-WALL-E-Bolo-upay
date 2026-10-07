@@ -32,6 +32,13 @@ CREATE TABLE IF NOT EXISTS assessments (id TEXT PRIMARY KEY, user_id TEXT NOT NU
 CREATE TABLE IF NOT EXISTS decisions (id TEXT PRIMARY KEY, ts TEXT NOT NULL,
   user_id TEXT NOT NULL, intent TEXT, amount REAL, recipient TEXT, level TEXT,
   probability REAL, categories TEXT, outcome TEXT NOT NULL, interviewed INTEGER);
+CREATE TABLE IF NOT EXISTS handoffs (id TEXT PRIMARY KEY, user_id TEXT NOT NULL,
+  status TEXT NOT NULL DEFAULT 'waiting', priority TEXT NOT NULL DEFAULT 'normal',
+  reason TEXT, context TEXT NOT NULL, agent_name TEXT, resolution TEXT,
+  created_at TEXT NOT NULL, updated_at TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS handoff_messages (id INTEGER PRIMARY KEY AUTOINCREMENT,
+  handoff_id TEXT NOT NULL, sender TEXT NOT NULL, name TEXT, text TEXT NOT NULL, ts TEXT NOT NULL);
+CREATE INDEX IF NOT EXISTS hm_handoff ON handoff_messages(handoff_id, id);
 """
 
 
@@ -68,7 +75,8 @@ def reset() -> None:
     with _lock:
         c = conn()
         c.executescript("DELETE FROM users; DELETE FROM transactions; "
-                        "DELETE FROM assessments; DELETE FROM decisions;")
+                        "DELETE FROM assessments; DELETE FROM decisions; "
+                        "DELETE FROM handoffs; DELETE FROM handoff_messages;")
         _seed(c)
 
 
@@ -152,3 +160,67 @@ def decisions(limit: int = 200) -> list[dict]:
         d["categories"] = json.loads(d["categories"] or "[]")
         out.append(d)
     return out
+
+
+def assessments_for(uid: str, limit: int = 8) -> list[dict]:
+    rows = conn().execute("SELECT id FROM assessments WHERE user_id=? ORDER BY created_at DESC LIMIT ?",
+                          (uid, limit)).fetchall()
+    return [get_assessment(r["id"]) for r in rows]
+
+
+# ---------- human handoff ----------
+def _handoff(r: sqlite3.Row | None) -> dict | None:
+    if not r:
+        return None
+    d = dict(r)
+    d["context"] = json.loads(d["context"])
+    return d
+
+
+def create_handoff(uid: str, priority: str, reason: str, context: dict) -> str:
+    hid = uuid.uuid4().hex[:10]
+    ts = now().isoformat()
+    with _lock:
+        conn().execute("INSERT INTO handoffs (id,user_id,status,priority,reason,context,created_at,updated_at) "
+                       "VALUES (?,?,?,?,?,?,?,?)",
+                       (hid, uid, "waiting", priority, reason, json.dumps(context, ensure_ascii=False), ts, ts))
+        conn().commit()
+    return hid
+
+
+def get_handoff(hid: str) -> dict | None:
+    return _handoff(conn().execute("SELECT * FROM handoffs WHERE id=?", (hid,)).fetchone())
+
+
+def open_handoff_for(uid: str) -> dict | None:
+    return _handoff(conn().execute(
+        "SELECT * FROM handoffs WHERE user_id=? AND status!='closed' ORDER BY created_at DESC LIMIT 1",
+        (uid,)).fetchone())
+
+
+def list_handoffs() -> list[dict]:
+    return [_handoff(r) for r in conn().execute("SELECT * FROM handoffs").fetchall()]
+
+
+def update_handoff(hid: str, **fields) -> None:
+    fields["updated_at"] = now().isoformat()
+    sets = ", ".join(f"{k}=?" for k in fields)
+    with _lock:
+        conn().execute(f"UPDATE handoffs SET {sets} WHERE id=?", (*fields.values(), hid))
+        conn().commit()
+
+
+def add_handoff_message(hid: str, sender: str, name: str | None, text: str) -> dict:
+    ts = now().isoformat()
+    with _lock:
+        cur = conn().execute("INSERT INTO handoff_messages (handoff_id,sender,name,text,ts) VALUES (?,?,?,?,?)",
+                             (hid, sender, name, text, ts))
+        conn().execute("UPDATE handoffs SET updated_at=? WHERE id=?", (ts, hid))
+        conn().commit()
+    return {"id": cur.lastrowid, "sender": sender, "name": name, "text": text, "ts": ts}
+
+
+def handoff_messages(hid: str, after: int = 0) -> list[dict]:
+    rows = conn().execute("SELECT id, sender, name, text, ts FROM handoff_messages "
+                          "WHERE handoff_id=? AND id>? ORDER BY id", (hid, after)).fetchall()
+    return [dict(r) for r in rows]

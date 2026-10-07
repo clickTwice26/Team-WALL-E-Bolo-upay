@@ -375,6 +375,15 @@ class _AssistantScreenState extends State<AssistantScreen> {
         });
       } else if (e.status == 425) {
         setState(() => step = _Step.hold);
+      } else if (e.status == 409) {
+        // support staff stopped this transfer from the console
+        final s = tr(bn, 'এই লেনদেনটি বাতিল করা হয়েছে। টাকা আপনার অ্যাকাউন্টেই আছে।',
+            'This transfer was cancelled. The money is still in your account.');
+        _say(s);
+        setState(() {
+          doneInfo = {'kind': 'cancelled', 'text': s, 'protected': true};
+          step = _Step.done;
+        });
       } else {
         _fail(e);
       }
@@ -553,7 +562,7 @@ class _AssistantScreenState extends State<AssistantScreen> {
           'cancel_transfer',
           'repeat',
         ];
-        sbn = '$level: ${amt(true)} → ${_nameIn(true)}। ${a['advice_bn'] ?? ''}'
+        sbn = '$level: ${_nameIn(true)} কে ${amt(true)}। ${a['advice_bn'] ?? ''}'
             '${reasons.isNotEmpty ? ' কারণ: ${reasons.map((r) => r['bn']).join(' ')}' : ''}'
             '${mistake != null ? ' ${mistake['bn']}' : ''}';
         sen = '$level: ${amt(false)} to ${_nameIn(false)}. ${a['advice_en'] ?? ''}'
@@ -569,7 +578,7 @@ class _AssistantScreenState extends State<AssistantScreen> {
       case _Step.auth:
         content.addAll({'level': level, 'amount': amount, 'recipient': _nameIn(false)});
         actions = ['cancel_transfer'];
-        sbn = 'পিন দিয়ে নিশ্চিত করার ধাপ: ${amt(true)} → ${_nameIn(true)}।';
+        sbn = 'পিন দিয়ে নিশ্চিত করার ধাপ: ${_nameIn(true)} কে ${amt(true)}।';
         sen = 'PIN step: ${amt(false)} to ${_nameIn(false)}.';
       case _Step.done:
         content['result'] = {'kind': doneInfo?['kind'], 'text': doneInfo?['text']};

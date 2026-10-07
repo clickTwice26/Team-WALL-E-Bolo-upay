@@ -29,7 +29,7 @@ from .text import extract_phones, mask_phone, normalize, tokens
 PAGES = ("home", "dashboard", "accuracy", "assistant")
 GLOBAL_ACTIONS = {"navigate", "go_back", "open_settings", "refresh", "set_language",
                   "show_balance", "switch_user", "set_simulate_call", "reset_demo",
-                  "start_transfer"}
+                  "start_transfer", "connect_human"}
 PAGE_ACTIONS = {"select_amount", "select_recipient", "clarify_continue", "answer_interview",
                 "confirm", "accept_suggestion", "keep_amount", "continue_to_pin",
                 "cancel_transfer", "new_transaction", "repeat"}
@@ -37,7 +37,8 @@ PAGE_ACTIONS = {"select_amount", "select_recipient", "clarify_continue", "answer
 # follow-up (observation) call, never without a message.
 USER_WORDS_ONLY = {"start_transfer", "select_amount", "select_recipient", "clarify_continue",
                    "answer_interview", "confirm", "accept_suggestion", "keep_amount",
-                   "continue_to_pin", "reset_demo", "switch_user"}
+                   "continue_to_pin", "reset_demo", "switch_user", "connect_human"}
+HANDOFF_CATEGORIES = ("scam", "money_lost", "dispute", "talk_to_human", "not_understood", "other")
 MAX_ACTIONS = 4
 MAX_AMOUNT = 1_000_000
 MAX_TEXT = 300
@@ -49,7 +50,8 @@ class AgentAction(BaseModel):
                   "show_balance", "switch_user", "set_simulate_call", "reset_demo",
                   "start_transfer", "select_amount", "select_recipient", "clarify_continue",
                   "answer_interview", "confirm", "accept_suggestion", "keep_amount",
-                  "continue_to_pin", "cancel_transfer", "new_transaction", "repeat"]
+                  "continue_to_pin", "cancel_transfer", "new_transaction", "repeat",
+                  "connect_human"]
     page: Optional[Literal["home", "dashboard", "accuracy", "assistant"]] = None
     lang: Optional[Literal["bn", "en"]] = None
     on: Optional[bool] = None
@@ -58,6 +60,8 @@ class AgentAction(BaseModel):
     amount: Optional[int] = None
     contact_id: Optional[str] = None
     phone: Optional[str] = None
+    category: Optional[Literal["scam", "money_lost", "dispute", "talk_to_human",
+                               "not_understood", "other"]] = None
 
 
 class AgentPlan(BaseModel):
@@ -81,6 +85,10 @@ PIN_WARNING = ("সতর্কতা! পিন বা ওটিপি কখ�
                "for it. If someone asks, hang up and call the helpline 16268.")
 GUARD_NOTE = (" (নিরাপত্তার জন্য এই ধাপটি আপনাকে নিজে করতে হবে।)",
               " (For your safety, that step is yours to do by hand.)")
+OFFER_HUMAN = ("আমি এখনও বুঝতে পারছি না। একজন মানুষের সাথে কথা বলতে চাইলে 'হ্যাঁ' বলুন।",
+               "I still didn't understand. Say 'yes' to talk to a person.")
+CONNECTING = ("ঠিক আছে, আপনাকে একজন মানুষের সাথে যুক্ত করছি। মনে রাখবেন, উপায় কখনো পিন বা ওটিপি চায় না।",
+              "OK, connecting you to a person. Remember: upay never asks for your PIN or OTP.")
 HELP = ("আমি যেকোনো পেজে আপনার কথা শুনে কাজ করতে পারি: টাকা পাঠানো ('আম্মুকে ৫০০ টাকা পাঠাও'), "
         "পেজ খোলা ('ড্যাশবোর্ড খোলো'), ব্যালেন্স দেখা, ভাষা বদলানো, আর এই পেজে কী আছে বলা। "
         "পিন সবসময় আপনাকেই দিতে হবে।",
@@ -225,6 +233,21 @@ QUESTION = ("কী", "কি", "ছিল", "ki", "chilo", "what", "which")
 AGAIN = ("আবার পাঠাও", "আবার পাঠান", "আরেকবার পাঠাও", "আগেরটা আবার", "একই টাকা আবার", "abar pathao",
          "abar pathan", "arekbar pathao", "aro ekbar pathao", "same again", "send again",
          "send it again", "repeat the transfer", "repeat last transfer", "do it again")
+HUMAN = ("মানুষের সাথে", "মানুষের সঙ্গে", "লোকের সাথে কথা", "এজেন্টের সাথে", "এজেন্টের সঙ্গে",
+         "কারো সাথে কথা", "কারও সাথে কথা", "কথা বলতে চাই", "আসল মানুষ", "প্রতিনিধির সাথে",
+         "manusher sathe", "manush er sathe", "kotha bolte chai", "agent er sathe", "agenter sathe",
+         "manush chai", "talk to a person", "talk to a human", "talk to someone", "talk to an agent",
+         "talk to agent", "speak to a person", "speak to someone", "speak to a human", "speak to an agent",
+         "real person", "human agent", "live agent", "connect me", "talk to support", "contact support")
+SCAMMED = ("প্রতারণা", "প্রতারিত", "প্রতারক", "ঠকিয়েছে", "ঠকেছি", "ঠকাইছে", "ঠকাইসে", "ধোঁকা", "স্ক্যাম",
+           "thokiyeche", "thokaise", "thokaiche", "thokse", "thoklam", "dhoka", "protarona", "protarok",
+           "scammed", "scam", "fraud", "cheated")
+MONEY_LOST = ("টাকা চলে গেছে", "টাকা চলে গেল", "টাকা গায়েব", "টাকা হারিয়ে", "টাকা কেটে নিয়েছে", "টাকা উধাও",
+              "taka chole geche", "taka chole gelo", "taka gayeb", "taka haraisi", "taka kete nise",
+              "lost money", "lost my money", "money is gone", "money gone", "money disappeared")
+DISPUTE = ("ভুল নম্বরে", "ভুল নাম্বারে", "অভিযোগ", "রিফান্ড", "ফেরত চাই", "vul number", "bhul number",
+           "vul nambar", "bhul nombor", "wrong number", "complaint", "complain", "refund", "ferot chai",
+           "money back", "abhijog", "ovijog")
 ORDINALS = {0: ("প্রথম", "প্রথমটা", "প্রথমজন", "1st", "first", "prothom", "prothomta",
                 "ek number"),
             1: ("দ্বিতীয়", "দ্বিতীয়টা", "2nd", "second", "ditiyo", "ditio", "dui number"),
@@ -362,11 +385,15 @@ def _send_money(t: str, msg: str, page: dict, user: dict) -> Optional[dict]:
                 reasons = c.get("reasons") or []
                 why_bn = " ".join(r.get("bn", "") for r in reasons[:2]).strip()
                 why_en = " ".join(r.get("en", "") for r in reasons[:2]).strip()
-                return _plan(
+                plan = _plan(
                     f"এই লেনদেনে প্রতারণার ঝুঁকি বেশি। {why_bn} নিরাপত্তার জন্য আমি এটি নিশ্চিত করতে "
                     "পারি না। তবুও পাঠাতে চাইলে 'তবুও পাঠাতে চাই' বোতামে নিজে চাপ দিন।",
                     f"This transfer has a high scam risk. {why_en} For your safety I can't "
                     "confirm it. If you still want to send, tap 'I still want to send' yourself.")
+                # Part of the same reply: a person can help right now.
+                plan["reply_bn"] += " অথবা বলুন 'মানুষের সাথে কথা বলতে চাই'।"
+                plan["reply_en"] += " Or say 'talk to a person'."
+                return plan
             if "confirm" in offered:
                 return _plan("ঠিক আছে, নিশ্চিত করছি। এবার পিন দিন।", "OK, confirming. Now enter your PIN.",
                              [{"type": "confirm"}])
@@ -560,6 +587,17 @@ def _last_agent_text(history: list[dict]) -> str:
     return ""
 
 
+def _connect(category: str, msg: str) -> dict:
+    return _plan(*CONNECTING, [{"type": "connect_human", "category": category, "text": msg[:MAX_TEXT]}])
+
+
+def _problem(t: str) -> Optional[str]:
+    for category, words in (("scam", SCAMMED), ("money_lost", MONEY_LOST), ("dispute", DISPUTE)):
+        if _has(t, words):
+            return category
+    return None
+
+
 def rules(req: dict, facts: dict) -> dict:
     """The page-aware keyword router (used without an LLM, or when it fails)."""
     msg = (req.get("message") or "").strip()
@@ -567,11 +605,27 @@ def rules(req: dict, facts: dict) -> dict:
         return _plan("", "")
     t = normalize(msg)
     page = req["page"]
+    last = _last_agent_text(req.get("history") or [])
+
+    # asking for a person always works, on any page; mid-scam it is urgent
+    if _has(t, HUMAN):
+        c = page.get("content") or {}
+        risky = page.get("id") == "assistant" and (
+            page.get("step") == "interview" or (page.get("step") == "review" and c.get("level") == "RED"))
+        return _connect("scam" if risky else "talk_to_human", msg)
+    if last in OFFER_HUMAN and _is_yes(t):
+        return _connect("not_understood", msg)
 
     if page.get("id") == "assistant":
         p = _send_money(t, msg, page, facts["user"])
         if p:
             return p
+    # "I was scammed" / "my money is gone" / "wrong number": a person, not a
+    # transfer (but "ferot pathao 500" with a send verb still goes to the risk check)
+    if not intent_mod.has_send_verb(t):
+        category = _problem(t)
+        if category:
+            return _connect(category, msg)
     for rule in GLOBAL_RULES:
         p = rule(t, msg, req, facts)
         if p:
@@ -587,6 +641,9 @@ def rules(req: dict, facts: dict) -> dict:
     if det["intent"] in ("send_money", "mobile_recharge"):
         return _plan("ঠিক আছে, সেন্ড মানি পেজে যাচাই করছি।", "OK, checking it on the Send Money page.",
                      [{"type": "start_transfer", "text": msg[:MAX_TEXT]}])
+    # second miss in a row: offer a person
+    if last in NOT_UNDERSTOOD or last in OFFER_HUMAN:
+        return _plan(*OFFER_HUMAN)
     return _plan(*NOT_UNDERSTOOD)
 
 
@@ -627,6 +684,10 @@ def _valid(a: dict, req: dict, facts: dict) -> Optional[dict]:
             return {"type": t, "contact_id": a["contact_id"]}
         phone = str(a.get("phone") or "")
         return {"type": t, "phone": phone} if PHONE_RE.match(phone) else None
+    if t == "connect_human":
+        if a.get("category") not in HANDOFF_CATEGORIES:
+            return None
+        return {"type": t, "category": a["category"], "text": str(a.get("text") or msg)[:MAX_TEXT]}
     if t == "answer_interview":
         # always the user's raw words, never the model's paraphrase
         return {"type": t, "text": msg}
@@ -664,6 +725,13 @@ Global, any page:
 - set_language {lang: bn|en}; show_balance {on}; set_simulate_call {on}
 - switch_user {user_id} (only when the user asks to switch user)
 - reset_demo (only when the user explicitly asks to reset the demo)
+- connect_human {category: scam|money_lost|dispute|talk_to_human|not_understood|other, text}:
+  hand the user to a person (support staff). Use it when the user asks for a person,
+  on any page (category scam if it happens during the scam interview or on a RED
+  review); when they report being scammed (scam), lost money (money_lost) or a wrong
+  transfer, complaint or refund (dispute) without asking to send money; and after a
+  second misunderstanding in a row, offer a person and connect on a short "yes"
+  (not_understood). Tell them a person is coming and that upay never asks for a PIN/OTP.
 - start_transfer {text}: any send-money or recharge request; pass the user's own words.
   The Send Money page parses it, runs the scam check and asks the user to confirm.
 Page actions, ONLY if listed in current_page.actions:
@@ -676,7 +744,8 @@ Safety rules (the app enforces them too):
 - There is no action for entering a PIN, using biometrics, ticking the RED warning
   box or skipping a hold. Tell the user to do those by hand.
 - Never ask for, repeat or accept a PIN or OTP. If the user says one, warn them.
-- Never confirm a RED transfer; explain its reasons and that it is risky.
+- Never confirm a RED transfer; explain its reasons and that it is risky, and suggest
+  saying "talk to a person".
 - Confirm or answer only with the user's own words: a new command on a review
   screen ("karim ke 2000 pathao") is a new transfer, not a confirmation.
 - During the scam interview, pass the user's answer with answer_interview; never

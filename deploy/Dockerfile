@@ -9,12 +9,14 @@ WORKDIR /src/app
 COPY app/pubspec.yaml app/pubspec.lock ./
 RUN flutter pub get
 COPY app/ ./
-RUN flutter build web --release --no-web-resources-cdn
+RUN flutter build web --release --no-web-resources-cdn \
+ && flutter build web --release --no-web-resources-cdn -t lib/console/main.dart \
+      --base-href /console/ -o build/console
 
 # ---- stage 2: API + static web on one origin ----
 FROM python:3.11-slim
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 \
-    WEB_DIR=/srv/web DB_PATH=/data/bolo.db
+    WEB_DIR=/srv/web CONSOLE_DIR=/srv/console DB_PATH=/data/bolo.db
 WORKDIR /srv
 COPY api/requirements.txt api/requirements.txt
 RUN pip install --no-cache-dir -r api/requirements.txt
@@ -23,6 +25,7 @@ COPY data/ data/
 COPY model/ model/
 COPY ml/ ml/
 COPY --from=web /src/app/build/web /srv/web
+COPY --from=web /src/app/build/console /srv/console
 RUN mkdir -p /data && rm -f data/bolo.db
 WORKDIR /srv/api
 EXPOSE 8000

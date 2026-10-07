@@ -29,7 +29,10 @@ class _LayerBody extends StatelessWidget {
         if (!agent.enabled) return const SizedBox.shrink();
         return Stack(children: [
           if (!agent.open && !agent.onMainTab)
-            Positioned(right: 14, bottom: 18, child: AgentOrb(onTap: () => agent.openPanel())),
+            Positioned(
+                right: 14,
+                bottom: 18,
+                child: UnreadBadge(count: agent.unread, child: AgentOrb(onTap: () => agent.openPanel()))),
           if (agent.open) const Positioned(left: 0, right: 0, bottom: 0, child: _Panel()),
         ]);
       },
@@ -57,6 +60,31 @@ class AgentOrb extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+/// Red count of unread messages from a person, on the orb and the centre mic.
+class UnreadBadge extends StatelessWidget {
+  const UnreadBadge({super.key, required this.count, required this.child});
+  final int count;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    if (count == 0) return child;
+    return Stack(clipBehavior: Clip.none, children: [
+      child,
+      Positioned(
+        right: -2,
+        top: -2,
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+          decoration: BoxDecoration(color: BrandColors.red, borderRadius: BorderRadius.circular(10),
+              border: Border.all(color: Colors.white, width: 2)),
+          child: Text('$count', style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.w700)),
+        ),
+      ),
+    ]);
   }
 }
 
@@ -103,6 +131,13 @@ class _PanelState extends State<_Panel> {
   /// review, and nothing during the scam interview: answers must be the
   /// user's own words.
   List<String> _suggestions(Map<String, dynamic> page) {
+    if (agent.chat != null) return const []; // a person is answering
+    final human = tr(bn, 'মানুষের সাথে কথা বলতে চাই', 'Talk to a person');
+    final ideas = _ideas(page);
+    return page['step'] == 'interview' ? ideas : [...ideas, human];
+  }
+
+  List<String> _ideas(Map<String, dynamic> page) {
     final step = page['step'];
     final c = Map<String, dynamic>.from(page['content'] ?? {});
     List<String> s(List<String> b, List<String> e) => bn ? b : e;
@@ -158,7 +193,8 @@ class _PanelState extends State<_Panel> {
             child: ConstrainedBox(
               constraints: BoxConstraints(maxHeight: h * 0.55),
               child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-                _header(page),
+                agent.chat != null ? _chatHeader() : _header(page),
+                if (agent.chat != null) _pinBanner(),
                 if (agent.busy) const LinearProgressIndicator(minHeight: 2),
                 Flexible(child: _messages()),
                 if (agent.listening || agent.transcript.isNotEmpty) _transcript(),
@@ -201,6 +237,53 @@ class _PanelState extends State<_Panel> {
         ]),
       );
 
+  Widget _chatHeader() {
+    final c = agent.chat!;
+    final name = c['agent_name'];
+    final status = name == null
+        ? tr(bn, 'অপেক্ষা করছেন · লাইনে #${bnDigits('${c['queue_position'] ?? 1}')}', 'Waiting · #${c['queue_position'] ?? 1} in line')
+        : '$name · ${tr(bn, 'অনলাইন', 'online')}';
+    return Container(
+      padding: const EdgeInsets.fromLTRB(14, 8, 4, 8),
+      decoration: const BoxDecoration(
+        color: BrandColors.green,
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      child: Row(children: [
+        const Icon(Icons.support_agent_rounded, color: Colors.white),
+        const SizedBox(width: 8),
+        Expanded(
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text(tr(bn, 'উপায় সাপোর্ট', 'upay support'),
+                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 15)),
+            Text(status, style: const TextStyle(color: Colors.white, fontSize: 12)),
+          ]),
+        ),
+        TextButton(
+          onPressed: agent.endChat,
+          child: Text(tr(bn, 'চ্যাট শেষ', 'End chat'), style: const TextStyle(color: Colors.white)),
+        ),
+        IconButton(
+          onPressed: agent.closePanel,
+          icon: const Icon(Icons.keyboard_arrow_down_rounded, color: Colors.white),
+        ),
+      ]),
+    );
+  }
+
+  Widget _pinBanner() => Container(
+        color: BrandColors.redBg,
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+        child: Row(children: [
+          const Icon(Icons.lock_outline, size: 16, color: BrandColors.red),
+          const SizedBox(width: 6),
+          Expanded(
+            child: Text(tr(bn, 'উপায় কখনো আপনার পিন, ওটিপি বা টাকা চাইবে না।', 'upay will never ask for your PIN, OTP or money.'),
+                style: const TextStyle(color: BrandColors.red, fontSize: 12.5, fontWeight: FontWeight.w600)),
+          ),
+        ]),
+      );
+
   Widget _messages() {
     final msgs = agent.messages;
     if (msgs.isEmpty) {
@@ -222,6 +305,33 @@ class _PanelState extends State<_Panel> {
   }
 
   Widget _bubble(AgentMsg m) {
+    if (m.role == 'system') {
+      return Padding(
+        padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 16),
+        child: Text(m.text, textAlign: TextAlign.center,
+            style: const TextStyle(color: BrandColors.muted, fontStyle: FontStyle.italic, fontSize: 12.5)),
+      );
+    }
+    if (m.role == 'human') {
+      return Align(
+        alignment: Alignment.centerLeft,
+        child: Container(
+          constraints: const BoxConstraints(maxWidth: 320),
+          margin: const EdgeInsets.only(bottom: 6),
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+          decoration: BoxDecoration(
+            color: BrandColors.greenBg,
+            border: Border.all(color: BrandColors.green, width: 1.5),
+            borderRadius: BorderRadius.circular(14),
+          ),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
+            Text(m.name ?? tr(bn, 'এজেন্ট', 'Agent'),
+                style: const TextStyle(color: BrandColors.green, fontWeight: FontWeight.w700, fontSize: 12)),
+            Text(m.text, style: const TextStyle(fontSize: 14.5)),
+          ]),
+        ),
+      );
+    }
     final mine = m.role == 'user';
     return Align(
       alignment: mine ? Alignment.centerRight : Alignment.centerLeft,

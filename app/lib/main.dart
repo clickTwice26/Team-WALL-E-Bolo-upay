@@ -170,7 +170,7 @@ class _ShellState extends State<Shell> {
   @override
   Widget build(BuildContext context) {
     return ListenableBuilder(
-      listenable: appState,
+      listenable: Listenable.merge([appState, Agent.instance]),
       builder: (context, _) {
         final bn = appState.bangla;
         return Scaffold(
@@ -186,7 +186,7 @@ class _ShellState extends State<Shell> {
               tooltip: tr(bn, 'বলো এজেন্ট', 'Bolo agent'),
               // on the main tabs the centre mic is the agent: open it and listen
               onPressed: () => Agent.instance.openPanel(listen: true),
-              child: const Icon(Icons.mic_rounded, size: 34),
+              child: UnreadBadge(count: Agent.instance.unread, child: const Icon(Icons.mic_rounded, size: 34)),
             ),
           ),
           floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
