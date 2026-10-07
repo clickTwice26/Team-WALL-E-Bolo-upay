@@ -60,10 +60,12 @@ def match(text: str) -> dict:
                     best = (phrase, 100.0)
                     break
             elif len(phrase) >= 8:
-                # tolerate speech-recognition spelling errors in longer phrases
-                score = fuzz.partial_ratio(phrase, t)
-                if score >= 90 and (best is None or score > best[1]):
-                    best = (phrase, score)
+                # tolerate speech-recognition spelling errors in longer phrases,
+                # with the same negation check as an exact match
+                al = fuzz.partial_ratio_alignment(phrase, t)
+                if (al is not None and al.score >= 90 and (best is None or al.score > best[1])
+                        and not _negated(t, al.dest_start, t[al.dest_start:al.dest_end])):
+                    best = (phrase, al.score)
         if best:
             hits.append({
                 "category": cat["id"],
