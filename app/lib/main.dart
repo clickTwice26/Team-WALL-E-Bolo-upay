@@ -6,9 +6,11 @@ import 'agent/agent.dart';
 import 'api.dart';
 import 'agent/agent_layer.dart';
 import 'screens/assistant.dart';
+import 'screens/eval_mode.dart';
 import 'screens/home.dart';
 import 'screens/insights.dart';
 import 'screens/login.dart';
+import 'services/call_state.dart';
 import 'state.dart';
 import 'strings.dart';
 import 'theme.dart';
@@ -113,7 +115,7 @@ class _GateState extends State<_Gate> {
 
   @override
   Widget build(BuildContext context) => unlocked
-      ? const Shell()
+      ? (kEvalMode ? const EvalScreen() : const Shell()) // study phones: straight to evaluation mode
       : LoginScreen(onUnlocked: () {
           Agent.instance.enabled = true; // the agent only works after the PIN unlock
           setState(() => unlocked = true);
@@ -148,6 +150,10 @@ class _ShellState extends State<Shell> {
       if (ctx != null) showSettingsSheet(ctx);
     };
     agent.push(_page);
+    // R11: after the PIN unlock, explain and ask once for call detection (Android only)
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) CallState.instance.start(context, bangla: appState.bangla);
+    });
   }
 
   @override

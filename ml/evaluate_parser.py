@@ -19,6 +19,8 @@ from app.core.parser import parse  # noqa: E402
 
 ASK_STATUSES = {"clarify_amount", "need_amount", "clarify_recipient", "need_recipient",
                 "confirm_recipient"}
+# payments whose amount and payee are checked (app/test/parser_parity_test.dart uses the same rules)
+MONEY_INTENTS = ("send_money", "mobile_recharge", "cash_out", "merchant_payment", "bill_payment")
 
 
 def recipient_of(r: dict):
@@ -44,7 +46,7 @@ def main(use_llm: bool = False) -> dict:
         intent_ok += i_ok
 
         a_ok = True
-        if t["intent"] in ("send_money", "mobile_recharge"):
+        if t["intent"] in MONEY_INTENTS:
             amount_n += 1
             if t["amount"] is None:
                 a_ok = r["amount"] is None and asked
@@ -55,7 +57,7 @@ def main(use_llm: bool = False) -> dict:
             amount_ok += a_ok
 
         r_ok = True
-        if t["intent"] in ("send_money", "mobile_recharge") and t["recipient"] is not None:
+        if t["intent"] in MONEY_INTENTS and t["recipient"] is not None:
             rec_n += 1
             exp = t["recipient"]
             got = recipient_of(r)

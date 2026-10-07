@@ -17,8 +17,10 @@ SEED = ROOT / "data" / "seed.json"
 DB_PATH = os.getenv("DB_PATH", str(ROOT / "data" / "bolo.db"))
 TZ = ZoneInfo("Asia/Dhaka")
 
-_lock = threading.Lock()
-_conn: sqlite3.Connection | None = None
+_lock = threading.Lock()        # one writer at a time within this process
+_init_lock = threading.Lock()
+_local = threading.local()
+_ready = False
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS users (id TEXT PRIMARY KEY, profile TEXT NOT NULL,
@@ -45,6 +47,10 @@ CREATE TABLE IF NOT EXISTS devices (user_id TEXT NOT NULL, key_id TEXT NOT NULL,
   public_key TEXT NOT NULL, created_at TEXT NOT NULL, PRIMARY KEY (user_id, key_id));
 CREATE TABLE IF NOT EXISTS feedback (assessment_id TEXT PRIMARY KEY, user_id TEXT NOT NULL,
   kind TEXT NOT NULL, level TEXT, ts TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS wallet_requests (user_id TEXT NOT NULL, key TEXT NOT NULL,
+  tx_id TEXT NOT NULL, ts TEXT NOT NULL, balance REAL NOT NULL, PRIMARY KEY (user_id, key));
+CREATE TABLE IF NOT EXISTS idempotency (user_id TEXT NOT NULL, key TEXT NOT NULL,
+  assessment_id TEXT NOT NULL, response TEXT NOT NULL, ts TEXT NOT NULL, PRIMARY KEY (user_id, key));
 """
 
 
@@ -53,15 +59,42 @@ def now() -> datetime:
 
 
 def conn() -> sqlite3.Connection:
-    global _conn
-    if _conn is None:
+    """This thread's connection. One per thread: a sqlite3 connection shared by
+    the request threads mixes their transactions ("database is locked" and
+    "another row available" under load)."""
+    c = getattr(_local, "conn", None)
+    if c is None:
         Path(DB_PATH).parent.mkdir(parents=True, exist_ok=True)
-        _conn = sqlite3.connect(DB_PATH, check_same_thread=False)
-        _conn.row_factory = sqlite3.Row
-        _conn.executescript(SCHEMA)
-        if _conn.execute("SELECT COUNT(*) FROM users").fetchone()[0] == 0:
-            _seed(_conn)
-    return _conn
+        c = sqlite3.connect(DB_PATH, check_same_thread=False, timeout=15)
+        c.row_factory = sqlite3.Row
+        # several gunicorn workers share this file: WAL lets readers run while
+        # one writes, and a writer waits (up to 15 s) instead of failing "locked"
+        c.execute("PRAGMA busy_timeout=15000")
+        c.execute("PRAGMA synchronous=NORMAL")
+        global _ready
+        with _init_lock:
+            if not _ready:
+                c.execute("PRAGMA journal_mode=WAL")
+                c.executescript(SCHEMA)
+                _migrate(c)
+                c.execute("BEGIN IMMEDIATE")  # only one worker seeds a new file
+                if c.execute("SELECT COUNT(*) FROM users").fetchone()[0] == 0:
+                    _seed(c)
+                c.commit()
+                _ready = True
+        _local.conn = c
+    return c
+
+
+# columns added after the first release: (table, column, type), added to an older database on start
+ADDED_COLUMNS = [("decisions", "call_signal_source", "TEXT")]  # R11: "native" or "simulated"
+
+
+def _migrate(c: sqlite3.Connection) -> None:
+    for table, col, typ in ADDED_COLUMNS:
+        if col not in {r[1] for r in c.execute(f"PRAGMA table_info({table})")}:
+            c.execute(f"ALTER TABLE {table} ADD COLUMN {col} {typ}")
+    c.commit()
 
 
 def _seed(c: sqlite3.Connection) -> None:
@@ -80,10 +113,11 @@ def _seed(c: sqlite3.Connection) -> None:
 def reset() -> None:
     with _lock:
         c = conn()
-        c.executescript("DELETE FROM users; DELETE FROM transactions; "
+        c.executescript("BEGIN IMMEDIATE; DELETE FROM users; DELETE FROM transactions; "
                         "DELETE FROM assessments; DELETE FROM decisions; "
                         "DELETE FROM handoffs; DELETE FROM handoff_messages; "
-                        "DELETE FROM pin_guard; DELETE FROM feedback;")
+                        "DELETE FROM pin_guard; DELETE FROM feedback; "
+                        "DELETE FROM wallet_requests; DELETE FROM idempotency;")
         _seed(c)
 
 
@@ -161,28 +195,36 @@ def update_assessment(aid: str, **fields) -> None:
         conn().commit()
 
 
-def execute_transfer(uid: str, intent: str, phone: str, amount: float) -> dict:
+def transition_assessment(aid: str, from_status: str, to_status: str) -> bool:
+    """Move an assessment on only if it is still in ``from_status`` (one winner across workers)."""
     with _lock:
-        c = conn()
-        bal = c.execute("SELECT balance FROM users WHERE id=?", (uid,)).fetchone()["balance"]
-        if amount > bal:
-            raise ValueError("insufficient_balance")
-        tid = f"{uid}-x{uuid.uuid4().hex[:8]}"
-        ts = now().isoformat()
-        c.execute("INSERT INTO transactions VALUES (?,?,?,?,?,?)", (tid, uid, intent, phone, amount, ts))
-        c.execute("UPDATE users SET balance=balance-? WHERE id=?", (amount, uid))
-        c.commit()
-        return {"id": tid, "ts": ts, "balance": bal - amount}
+        cur = conn().execute("UPDATE assessments SET status=? WHERE id=? AND status=?", (to_status, aid, from_status))
+        conn().commit()
+    return cur.rowcount == 1
+
+
+def idempotent_response(uid: str, key: str) -> dict | None:
+    r = conn().execute("SELECT assessment_id, response FROM idempotency WHERE user_id=? AND key=?",
+                       (uid, key)).fetchone()
+    return {"assessment_id": r["assessment_id"], "response": json.loads(r["response"])} if r else None
+
+
+def save_idempotent_response(uid: str, key: str, aid: str, response: dict) -> None:
+    with _lock:
+        conn().execute("INSERT OR IGNORE INTO idempotency VALUES (?,?,?,?,?)",
+                       (uid, key, aid, json.dumps(response, ensure_ascii=False), now().isoformat()))
+        conn().commit()
 
 
 def log_decision(uid: str, draft: dict, result: dict, outcome: str) -> None:
     cats = [r["key"].split(":", 1)[1] for r in result.get("reasons", []) if r["key"].startswith("scam:")]
     with _lock:
-        conn().execute("INSERT INTO decisions VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+        conn().execute("INSERT INTO decisions (id, ts, user_id, intent, amount, recipient, level, probability, "
+                       "categories, outcome, interviewed, call_signal_source) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
                        (uuid.uuid4().hex[:12], now().isoformat(), uid, draft.get("intent"),
                         draft.get("amount"), draft.get("recipient_phone"), result.get("level"),
                         result.get("probability"), json.dumps(cats), outcome,
-                        1 if draft.get("answers") else 0))
+                        1 if draft.get("answers") else 0, draft.get("call_signal_source", "simulated")))
         conn().commit()
 
 

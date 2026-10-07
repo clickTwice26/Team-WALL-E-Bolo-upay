@@ -2,6 +2,8 @@
 # Caddy gets and renews a Let's Encrypt certificate for $DOMAIN automatically.
 {$DOMAIN} {
 	encode gzip zstd
+	# Prometheus scrapes app:8000/metrics on the internal network, not through here
+	respond /metrics 404
 	reverse_proxy app:8000
 	header {
 		Strict-Transport-Security "max-age=31536000"

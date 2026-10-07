@@ -5,7 +5,8 @@ Flow used by the app (every call after /api/login carries its token):
   POST /api/parse    voice/text command -> intent, amount, recipient (or a question)
   POST /api/assess   risk check -> GREEN / YELLOW / RED (+ interview questions)
   POST /api/assess   again with the user's interview answers
-  POST /api/execute  PIN / biometric -> simulated transfer
+  POST /api/execute  PIN / biometric -> transfer through the wallet adapter
+                     (an Idempotency-Key header makes a retried tap safe)
   POST /api/cancel   user cancels after a warning
 """
 from __future__ import annotations
@@ -16,16 +17,18 @@ import os
 import secrets
 import time
 import uuid
+from contextlib import asynccontextmanager
 from datetime import datetime
 from pathlib import Path
 from typing import Literal, Optional
 
-from fastapi import Depends, FastAPI, HTTPException, Request
+from fastapi import Depends, FastAPI, Header, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse, Response
+from fastapi.responses import FileResponse, JSONResponse, Response
+from prometheus_fastapi_instrumentator import Instrumentator
 from pydantic import BaseModel, Field
 
-from . import auth, handoff, impact, monitor, store
+from . import auth, evaluation, handoff, impact, monitor, store, wallet
 from .core import agent
 from .core import features as feat_mod
 from .core import interview, kb, llm, parser, risk, scam, tts
@@ -45,11 +48,27 @@ INTERVIEW = [
      "en": "Did they ask for your PIN or OTP? Why are you sending this money?"},
 ]
 
-app = FastAPI(title="Bolo upay API", version="1.0.0",
+
+@asynccontextmanager
+async def lifespan(_app: FastAPI):
+    # each gunicorn worker opens the database and loads the model (and its
+    # SHAP explainer, ~1.5 s) once here, not on its first request
+    store.conn()
+    if risk.load_model():
+        risk._explainer()
+    yield
+
+
+app = FastAPI(title="Bolo upay API", version="1.0.0", lifespan=lifespan,
               description="Voice-first Bangla payment assistant with scam shield (prototype, synthetic data).")
 app.add_middleware(CORSMiddleware, allow_origins=os.getenv("CORS_ORIGINS", "*").split(","),
                    allow_methods=["*"], allow_headers=["*"])
 app.include_router(handoff.router)
+app.include_router(evaluation.router)  # demo-only study tooling
+# Prometheus text at /metrics (per route template, so cardinality stays small).
+# Registered before the SPA catch-all at the end of this file, which would
+# otherwise answer /metrics with index.html. Caddy keeps it off the internet.
+Instrumentator(excluded_handlers=["/metrics"]).instrument(app).expose(app, include_in_schema=False)
 access_log = logging.getLogger("bolo.access")
 if not access_log.handlers:
     _h = logging.StreamHandler()
@@ -75,6 +94,14 @@ async def request_log(request: Request, call_next):
     return response
 
 
+@app.exception_handler(wallet.WalletUnavailable)
+def wallet_down(request: Request, exc: wallet.WalletUnavailable):
+    # nothing is lost: the assessment stays open and a retry with the same
+    # Idempotency-Key can never send twice
+    log.warning("wallet unavailable: %s", exc)
+    return JSONResponse({"detail": {"code": "wallet_unavailable", "retry": True}}, status_code=503)
+
+
 # ---------- models ----------
 class ParseIn(BaseModel):
     text: str = Field(min_length=1, max_length=500)
@@ -82,16 +109,29 @@ class ParseIn(BaseModel):
 
 
 class Draft(BaseModel):
-    intent: Literal["send_money", "mobile_recharge", "cash_out", "merchant_payment"]
+    intent: Literal["send_money", "mobile_recharge", "cash_out", "merchant_payment", "bill_payment"]
     amount: int = Field(gt=0, le=1_000_000)
+    # a bill goes to its saved bill account's synthetic payee number (data/seed.json)
     recipient_phone: str = Field(pattern=r"^01[3-9]\d{8}$")
     is_return_claim: bool = False
     command_text: str = ""
 
 
+class VoiceSignals(BaseModel):
+    """R10, measured on the phone: scores and yes/no only, never audio or a voice print.
+    A missing or null value means not measured and counts as 0 / no."""
+    hesitation: Optional[float] = Field(default=None, ge=0, le=1)  # pause ratio of the spoken command
+    speaker_echo: Optional[bool] = None    # in a call with the loudspeaker on
+    voice_mismatch: Optional[bool] = None  # not the enrolled owner's voice
+    second_voice: Optional[bool] = None    # two speakers in one command
+
+
 class AssessIn(BaseModel):
     draft: Draft
     on_active_call: bool = False
+    # R11: "native" = the phone's own call state; "simulated" = the demo toggle or not measured
+    call_signal_source: Literal["native", "simulated"] = "simulated"
+    voice_signals: Optional[VoiceSignals] = None  # R10: absent = not measured
     answers: list[str] = []
     now: Optional[datetime] = None  # DEMO_MODE only: simulate the time of day
 
@@ -216,13 +256,14 @@ def list_users():
 def me(s: auth.Session = Depends(auth.current)):
     """The signed-in user's own profile, contacts and recent transactions."""
     u, uid = s.user, s.user["id"]
-    names = {c["phone"]: c for c in u["contacts"]}
+    names = {c["phone"]: c for c in u["contacts"] + u.get("billers", [])}
     recent = []
-    for t in reversed(store.history(uid)[-15:]):
+    w = wallet.get()
+    for t in reversed(w.history(uid)[-15:]):
         c = names.get(t["counterparty"])
         recent.append({**t, "name": c["name"] if c else ("নিজের নম্বর" if t["counterparty"] == u["phone"] else None),
                        "counterparty": mask_phone(t["counterparty"] or "")})
-    return {**u, "recent": recent}
+    return {**u, "balance": w.balance(uid), "recent": recent}
 
 
 @app.post("/api/login")
@@ -268,18 +309,22 @@ def parse(body: ParseIn, s: auth.Session = Depends(auth.current)):
 def assess(body: AssessIn, s: auth.Session = Depends(auth.current)):
     u = s.user
     d = body.draft
-    if d.amount > u["balance"]:
+    w = wallet.get()
+    balance = w.balance(u["id"])
+    if d.amount > balance:
         return {"level": "BLOCKED", "reason": "insufficient_balance",
                 "message_bn": "আপনার অ্যাকাউন্টে যথেষ্ট ব্যালেন্স নেই।",
-                "message_en": "Not enough balance.", "balance": u["balance"]}
+                "message_en": "Not enough balance.", "balance": balance}
     sc = scam.match_many([d.command_text, *body.answers])
+    voice = body.voice_signals.model_dump(exclude_none=True) if body.voice_signals else {}
     now = body.now.astimezone(store.TZ) if body.now and auth.demo_mode() else None
     feats, summary = feat_mod.compute(
         amount=d.amount, intent=d.intent, phone=d.recipient_phone,
-        is_return_claim=d.is_return_claim, balance=u["balance"],
-        history=store.history(u["id"]), contacts=u["contacts"],
+        is_return_claim=d.is_return_claim, balance=balance,
+        # saved bill accounts are known payees, like contacts: never a "new recipient"
+        history=w.history(u["id"]), contacts=u["contacts"] + u.get("billers", []),
         on_call=body.on_active_call, scam_score=sc["score"], now=now,
-        self_phone=u["phone"])
+        self_phone=u["phone"], voice=voice)
     result = risk.assess(feats, summary, sc, d.amount, interviewed=bool(body.answers))
     result["features"] = feats
     result["scam_hits"] = sc["hits"]
@@ -294,19 +339,40 @@ def assess(body: AssessIn, s: auth.Session = Depends(auth.current)):
     if result["level"] == "GREEN":
         # one-time challenge the phone signs if the user approves with biometrics
         result["bio_challenge"] = secrets.token_urlsafe(24)
-    draft = {**d.model_dump(), "answers": body.answers, "on_active_call": body.on_active_call}
+    draft = {**d.model_dump(), "answers": body.answers, "on_active_call": body.on_active_call,
+             "call_signal_source": body.call_signal_source, "voice_signals": voice}
     result["assessment_id"] = store.save_assessment(u["id"], draft, result)
+    # where the risk signals came from, for ops: ids and flags only, no numbers or text
+    access_log.info(json.dumps({"event": "assess", "assessment_id": result["assessment_id"],
+                                "level": result["level"], "on_call": body.on_active_call,
+                                "call_signal_source": body.call_signal_source, "voice": voice}))
     return result
 
 
+def _replay(uid: str, key: str | None, aid: str) -> dict | None:
+    """The first response for this Idempotency-Key, if that call completed."""
+    prev = store.idempotent_response(uid, key) if key else None
+    if prev and prev["assessment_id"] != aid:
+        raise HTTPException(422, {"code": "idempotency_key_reused"})
+    return prev["response"] if prev else None
+
+
 @app.post("/api/execute")
-def execute(body: ExecuteIn, s: auth.Session = Depends(auth.current)):
+def execute(body: ExecuteIn, s: auth.Session = Depends(auth.current),
+            idempotency_key: Optional[str] = Header(default=None, min_length=8, max_length=100)):
     u = s.user
+    # a retried tap gets the first result back and nothing is sent again;
+    # only completed transfers are remembered, so a wrong PIN can be retried
+    if (first := _replay(u["id"], idempotency_key, body.assessment_id)) is not None:
+        return first
     auth.ensure_unlocked(u["id"])
     a = store.get_assessment(body.assessment_id)
     if not a or a["user_id"] != u["id"]:
         raise HTTPException(404, "assessment not found")
     if a["status"] != "open":
+        # a parallel retry may have finished between the lookup above and now
+        if (first := _replay(u["id"], idempotency_key, body.assessment_id)) is not None:
+            return first
         raise HTTPException(409, f"assessment already {a['status']}")
     level = a["result"]["level"]
     if level == "BLOCKED":
@@ -341,12 +407,18 @@ def execute(body: ExecuteIn, s: auth.Session = Depends(auth.current)):
             raise HTTPException(401, {"code": "wrong_pin", "attempts_left": max(0, MAX_PIN_FAILURES - fails)})
     d = a["draft"]
     try:
-        tx = store.execute_transfer(u["id"], d["intent"], d["recipient_phone"], d["amount"])
-    except ValueError:
+        # the wallet's key is the assessment id: one risk check, at most one
+        # transfer, even if two different client keys race
+        tx = wallet.get().transfer(u["id"], d["intent"], d["recipient_phone"], d["amount"],
+                                   idempotency_key=f"assessment:{a['id']}")
+    except wallet.InsufficientFunds:
         raise HTTPException(400, "insufficient balance")
-    store.update_assessment(a["id"], status="executed")
-    store.log_decision(u["id"], d, a["result"], "sent")
-    return {"ok": True, "transaction": tx, "level": level}
+    out = {"ok": True, "transaction": {k: tx[k] for k in ("id", "ts", "balance")}, "level": level}
+    if idempotency_key:  # saved before the status flips, so a racing retry finds it
+        store.save_idempotent_response(u["id"], idempotency_key, a["id"], out)
+    if store.transition_assessment(a["id"], "open", "executed"):
+        store.log_decision(u["id"], d, a["result"], "sent")
+    return out
 
 
 @app.post("/api/cancel")
@@ -397,10 +469,11 @@ def agent_turn(body: AgentIn, s: auth.Session = Depends(auth.current)):
     u = s.user
     demo = auth.demo_mode()
     d = _dashboard_data()
-    facts = {"user": u, "demo": demo,
+    w = wallet.get()
+    facts = {"user": {**u, "balance": w.balance(u["id"])}, "demo": demo,
              # other users and the ops numbers exist only on a demo site
              "users": store.users() if demo else [],
-             "history": store.history(u["id"])[-8:],
+             "history": w.history(u["id"])[-8:],
              "ops": {k: d[k] for k in ("total", "by_level", "sent", "cancelled_after_warning",
                                        "amount_protected", "scam_categories")} if demo else {}}
     return agent.run(body.model_dump(), facts)
@@ -433,7 +506,7 @@ def _dashboard_data() -> dict:
 @app.get("/api/metrics")
 def metrics():
     out = {"risk_model": risk.model_card()}
-    for name in ("risk_metrics", "parser_metrics", "sequence_metrics"):
+    for name in ("risk_metrics", "parser_metrics", "sequence_metrics", "audio_metrics"):
         p = ROOT / "model" / f"{name}.json"
         out[name] = json.loads(p.read_text()) if p.exists() else None
     return out

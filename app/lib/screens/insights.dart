@@ -5,6 +5,7 @@ import '../api.dart';
 import '../state.dart';
 import '../strings.dart';
 import '../theme.dart';
+import '../widgets/real_audio.dart';
 
 String _pct(dynamic v) => v == null ? '–' : '${((v as num) * 100).toStringAsFixed(1)}%';
 
@@ -28,6 +29,10 @@ const _featureNames = {
   'recipient_paid_you_7d': ('প্রাপক সম্প্রতি আপনাকে টাকা দিয়েছে', 'Recipient paid you recently'),
   'is_cash_out': ('ক্যাশ আউট', 'Cash out'),
   'is_payment': ('বিল বা মার্চেন্ট পেমেন্ট', 'Bill or merchant payment'),
+  'hesitation': ('বলার সময় দীর্ঘ বিরতি', 'Long pauses while speaking'),
+  'speaker_echo': ('লাউডস্পিকারে কল চলছে', 'On a call on the loudspeaker'),
+  'voice_mismatch': ('মালিকের কণ্ঠ মেলেনি', "Not the owner's voice"),
+  'second_voice': ('আরেকজনের কণ্ঠ শোনা গেছে', 'A second voice heard'),
 };
 
 const _modelNames = {
@@ -241,6 +246,8 @@ class _AccuracyScreenState extends State<AccuracyScreen> {
               const SizedBox(height: 8),
               Text(tr(bn, 'ব্যর্থ কেস: ${failures.length}', 'Failed cases: ${failures.length}')),
             ],
+            const SizedBox(height: 20),
+            RealAudioCard(metrics: s.data!['audio_metrics'] == null ? null : Map<String, dynamic>.from(s.data!['audio_metrics']), bangla: bn),
             const SizedBox(height: 20),
             Text(tr(bn, '২. স্ক্যাম শিল্ড (সিনথেটিক টেস্ট সেট)', '2. Scam shield (synthetic test set)'),
                 style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 16)),

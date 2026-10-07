@@ -1,5 +1,5 @@
 {
- "note": "Hand-written labelled commands for user u1 (Rahima). recipient: contact id, phone, 'self', 'ask' (system must ask), 'cX?' (fuzzy: must ask to confirm cX). amount null = system must ask for the amount.",
+ "note": "Hand-written labelled commands (mostly user u1, Rahima). recipient: contact or bill account id, phone, 'self', 'ask' (system must ask), 'cX?' (fuzzy: must ask to confirm cX). amount null = system must ask for the amount.",
  "commands": [
   {
    "id": 1,
@@ -653,17 +653,17 @@
    "id": 82,
    "user": "u1",
    "text": "current bill dibo",
-   "intent": "unsupported",
+   "intent": "bill_payment",
    "amount": null,
-   "recipient": null
+   "recipient": "b1"
   },
   {
    "id": 83,
    "user": "u1",
    "text": "বিদ্যুৎ বিল দিব",
-   "intent": "unsupported",
+   "intent": "bill_payment",
    "amount": null,
-   "recipient": null
+   "recipient": "b1"
   },
   {
    "id": 84,
@@ -766,6 +766,142 @@
    "user": "u1",
    "text": "ki khobor",
    "intent": "unknown",
+   "amount": null,
+   "recipient": null
+  },
+  {
+   "id": 97,
+   "user": "u1",
+   "text": "DESCO bill 1200 taka dao",
+   "intent": "bill_payment",
+   "amount": 1200,
+   "recipient": "b1"
+  },
+  {
+   "id": 98,
+   "user": "u1",
+   "text": "ডেসকোর বিল ১২০০ টাকা দিব",
+   "intent": "bill_payment",
+   "amount": 1200,
+   "recipient": "b1"
+  },
+  {
+   "id": 99,
+   "user": "u1",
+   "text": "titas gas bill 975 taka",
+   "intent": "bill_payment",
+   "amount": 975,
+   "recipient": "b2"
+  },
+  {
+   "id": 100,
+   "user": "u1",
+   "text": "তিতাস গ্যাসের বিল সাড়ে নয়শো টাকা",
+   "intent": "bill_payment",
+   "amount": 950,
+   "recipient": "b2"
+  },
+  {
+   "id": 101,
+   "user": "u1",
+   "text": "pani bill 600 taka pay koro",
+   "intent": "bill_payment",
+   "amount": 600,
+   "recipient": "b3"
+  },
+  {
+   "id": 102,
+   "user": "u1",
+   "text": "ওয়াসার বিল ৮০০ টাকা",
+   "intent": "bill_payment",
+   "amount": 800,
+   "recipient": "b3"
+  },
+  {
+   "id": 103,
+   "user": "u1",
+   "text": "desco te 1000 taka dao",
+   "intent": "bill_payment",
+   "amount": 1000,
+   "recipient": "b1"
+  },
+  {
+   "id": 104,
+   "user": "u1",
+   "text": "current bill 01399000101 e 900 taka",
+   "intent": "bill_payment",
+   "amount": 900,
+   "recipient": "b1"
+  },
+  {
+   "id": 105,
+   "user": "u1",
+   "text": "bill dibo 500 taka",
+   "intent": "bill_payment",
+   "amount": 500,
+   "recipient": "ask"
+  },
+  {
+   "id": 106,
+   "user": "u1",
+   "text": "বিদ্যুৎ বিল",
+   "intent": "bill_payment",
+   "amount": null,
+   "recipient": "b1"
+  },
+  {
+   "id": 107,
+   "user": "u2",
+   "text": "desco bill 1500 taka dao",
+   "intent": "bill_payment",
+   "amount": 1500,
+   "recipient": "ask"
+  },
+  {
+   "id": 108,
+   "user": "u2",
+   "text": "দোকানের বিল ২৫০০ টাকা দাও",
+   "intent": "bill_payment",
+   "amount": 2500,
+   "recipient": "b5"
+  },
+  {
+   "id": 109,
+   "user": "u2",
+   "text": "basar current bill 1800 taka",
+   "intent": "bill_payment",
+   "amount": 1800,
+   "recipient": "ask"
+  },
+  {
+   "id": 110,
+   "user": "u3",
+   "text": "dpdc bill 700 taka",
+   "intent": "bill_payment",
+   "amount": 700,
+   "recipient": "b7"
+  },
+  {
+   "id": 111,
+   "user": "u3",
+   "text": "পানির বিল ৪৫০ টাকা দেব",
+   "intent": "bill_payment",
+   "amount": 450,
+   "recipient": "b8"
+  },
+  {
+   "id": 112,
+   "user": "u1",
+   "text": "add money korbo 1000 taka",
+   "intent": "unsupported",
+   "amount": null,
+   "recipient": null
+  },
+  {
+   "id": 113,
+   "user": "u1",
+   "text": "ক্যাশ ইন করব",
+   "intent": "unsupported",
    "amount": null,
    "recipient": null
   }
