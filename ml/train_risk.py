@@ -163,8 +163,14 @@ def plot_calibration(curves: dict, path: Path) -> bool:
     return True
 
 
-def main() -> None:
-    events = simulate.generate()  # time order
+def main(data: str | None = None) -> None:
+    # --data: real wallet data in the docs/DATA_REQUEST.md schema; results go to *_real files
+    tag = "_real" if data else ""
+    if data:
+        import real_data
+        events = real_data.load(data)
+    else:
+        events = simulate.generate()  # time order
     n = len(events)
     y = np.array([e["label"] for e in events])
     X2 = np.array([vector(e["feats"]) for e in events])                      # with answers
@@ -215,7 +221,7 @@ def main() -> None:
                     ("gradient boosting, raw", gb.predict_proba(X2[te])[:, 1])):
         obs, pred = calibration_curve(y[te], p, n_bins=10, strategy="quantile")
         curves[name] = {"predicted": [round(float(v), 4) for v in pred], "observed": [round(float(v), 4) for v in obs]}
-    plotted = plot_calibration(curves, ROOT / "docs" / "img" / "calibration.png")
+    plotted = plot_calibration(curves, ROOT / "docs" / "img" / f"calibration{tag}.png")
 
     importance = {}
     try:
@@ -275,11 +281,14 @@ def main() -> None:
     joblib.dump({"name": "gradient_boosting", "model": calibrated, "gb": gb, "features": FEATURES,
                  "thresholds": th, "trained_at": trained_at,
                  "fallback": {"scaler": lr_scaler, "model": lr_all_m, "thresholds": th_fallback}},
-                ROOT / "model" / "risk_model.joblib", compress=3)
-    (ROOT / "model" / "risk_metrics.json").write_text(json.dumps(metrics, indent=2, ensure_ascii=False) + "\n")
+                ROOT / "model" / f"risk_model{tag}.joblib", compress=3)
+    (ROOT / "model" / f"risk_metrics{tag}.json").write_text(json.dumps(metrics, indent=2, ensure_ascii=False) + "\n")
     print(json.dumps({k: metrics[k] for k in ("comparison", "thresholds", "test_pipeline")}, indent=2))
-    print("calibration plot:", "docs/img/calibration.png" if plotted else "skipped (matplotlib not installed)")
+    print("calibration plot:", f"docs/img/calibration{tag}.png" if plotted else "skipped (matplotlib not installed)")
 
 
 if __name__ == "__main__":
-    main()
+    import argparse
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    ap.add_argument("--data", help="CSV of real wallet transactions (docs/DATA_REQUEST.md)")
+    main(ap.parse_args().data)
