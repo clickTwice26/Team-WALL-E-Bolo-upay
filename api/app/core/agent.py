@@ -443,7 +443,7 @@ def _language(t, msg, req, facts):
 
 
 def _reset(t, msg, req, facts):
-    if not _has(t, RESET):
+    if not facts.get("demo") or not _has(t, RESET):
         return None
     if _has(t, DEMO):
         return _plan("ডেমো ডেটা রিসেট করছি।", "Resetting the demo data.", [{"type": "reset_demo"}])
@@ -468,7 +468,7 @@ def _call_sim(t, msg, req, facts):
 
 
 def _switch_user(t, msg, req, facts):
-    if not _has(t, SWITCH):
+    if not facts.get("demo") or not _has(t, SWITCH):
         return None
     said = set().union(*[_word_bases(w) for w in t.split()])
     match = []
@@ -665,6 +665,8 @@ def _valid(a: dict, req: dict, facts: dict) -> Optional[dict]:
         return {"type": t, "lang": a["lang"]} if a.get("lang") in ("bn", "en") else None
     if t in ("show_balance", "set_simulate_call"):
         return {"type": t, "on": a["on"]} if isinstance(a.get("on"), bool) else None
+    if t in ("switch_user", "reset_demo") and not facts.get("demo"):
+        return None  # demo controls exist only on a demo site
     if t == "switch_user":
         ids = {u["id"] for u in facts.get("users", [])}
         return {"type": t, "user_id": a["user_id"]} if a.get("user_id") in ids else None

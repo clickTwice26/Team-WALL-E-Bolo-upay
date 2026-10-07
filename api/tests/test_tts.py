@@ -10,12 +10,12 @@ os.environ.pop("LLM_PROVIDER", None)
 
 import httpx  # noqa: E402
 import pytest  # noqa: E402
-from fastapi.testclient import TestClient  # noqa: E402
 
 from app.core import tts  # noqa: E402
 from app.main import app  # noqa: E402
+from helpers import signed_in  # noqa: E402
 
-c = TestClient(app)
+c = signed_in(app, "u1")
 
 
 class _Resp:

@@ -5,13 +5,13 @@ os.environ["DB_PATH"] = os.path.join(tempfile.mkdtemp(), "test.db")
 os.environ["HOLD_SECONDS"] = "0"
 os.environ.pop("LLM_PROVIDER", None)
 
-from fastapi.testclient import TestClient  # noqa: E402
 
 from app import store  # noqa: E402
 from app.core import agent, llm  # noqa: E402
 from app.main import app  # noqa: E402
+from helpers import signed_in  # noqa: E402
 
-c = TestClient(app)
+c = signed_in(app, "u1")
 HOME = {"id": "home", "summary_bn": "হোম: রহিমা বেগম", "summary_en": "Home: Rahima Begum", "actions": []}
 DASH = {"id": "dashboard", "summary_bn": "ড্যাশবোর্ড: ৩টি যাচাই", "summary_en": "Dashboard: 3 checks",
         "actions": ["refresh"]}
@@ -23,7 +23,7 @@ def send_money(step, content=None, actions=()):
 
 
 def ask(message, page=HOME, **kw):
-    body = {"user_id": "u1", "message": message, "page": page, **kw}
+    body = {"message": message, "page": page, **kw}
     r = c.post("/api/agent", json=body)
     assert r.status_code == 200, r.text
     return r.json()
@@ -171,7 +171,7 @@ def test_spoken_pin_is_refused_but_an_amount_next_to_pin_is_not():
 
 def _facts():
     u = store.user("u1")
-    return {"user": u, "users": store.users(), "history": [], "ops": {}}
+    return {"user": u, "users": store.users(), "history": [], "ops": {}, "demo": True}
 
 
 def test_sanitize_drops_a_hostile_plan():

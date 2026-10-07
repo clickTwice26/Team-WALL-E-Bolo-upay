@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'agent/agent.dart';
+import 'api.dart';
 import 'agent/agent_layer.dart';
 import 'screens/assistant.dart';
 import 'screens/home.dart';
@@ -94,6 +95,20 @@ class _Gate extends StatefulWidget {
 
 class _GateState extends State<_Gate> {
   bool unlocked = false;
+
+  @override
+  void initState() {
+    super.initState();
+    // the server ended the session (expired): back to the PIN screen
+    Session.onExpired = () {
+      if (!mounted || !unlocked) return;
+      navigatorKey.currentState?.popUntil((r) => r.isFirst);
+      Agent.instance.enabled = false;
+      appState.signedOut();
+      setState(() => unlocked = false);
+    };
+  }
+
   @override
   Widget build(BuildContext context) => unlocked
       ? const Shell()

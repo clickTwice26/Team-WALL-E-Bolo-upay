@@ -5,22 +5,34 @@ scam or lost money, or the bot fails twice. Staff answer from /console.
 Staff can only protect money (stop a pending transfer): no route sends
 money, approves a held transfer, or reads or changes a PIN. A PIN or OTP
 typed into the chat is masked before it is stored, so staff never see it.
+
+Customers are identified by their session token. Staff sign in to named
+accounts (CONSOLE_STAFF="Mitu:<password or bcrypt hash>,Rafi:...") and every
+console call carries a staff token, so the name shown to customers and stored
+on a chat is the signed-in account, not something the browser sends. Without
+CONSOLE_STAFF a single shared CONSOLE_TOKEN still works, and the public default
+code ("support-demo") is accepted only on a demo site.
 """
 from __future__ import annotations
 
 import hmac
+import logging
 import os
 from datetime import datetime, timedelta
 from typing import Literal
 
-from fastapi import APIRouter, Depends, Header, HTTPException
+import bcrypt
+from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, Field
 
-from . import store
+from . import auth, store
 from .core import pinguard
 from .core.text import mask_phone
 
 router = APIRouter()
+log = logging.getLogger("bolo.console")
+DEFAULT_CODE = "support-demo"
+STAFF_MINUTES = int(os.getenv("STAFF_SESSION_MINUTES", "480"))
 
 CATEGORIES = ("scam", "money_lost", "dispute", "talk_to_human", "not_understood", "other")
 PRIORITY_ORDER = {"urgent": 0, "high": 1, "normal": 2}
@@ -34,7 +46,6 @@ _BN = str.maketrans("0123456789", "০১২৩৪৫৬৭৮৯")
 
 
 class HandoffIn(BaseModel):
-    user_id: str
     category: Literal["scam", "money_lost", "dispute", "talk_to_human", "not_understood", "other"] = "talk_to_human"
     reason: str = Field(default="", max_length=300)
     page: dict = {}
@@ -44,32 +55,23 @@ class HandoffIn(BaseModel):
 
 
 class CustomerMsgIn(BaseModel):
-    user_id: str
     text: str = Field(min_length=1, max_length=1000)
-
-
-class CustomerCloseIn(BaseModel):
-    user_id: str
 
 
 class ConsoleLoginIn(BaseModel):
     name: str = Field(min_length=1, max_length=40)
-    token: str
+    token: str = Field(max_length=200)  # the account password, or the shared code
 
 
-class StaffIn(BaseModel):
-    agent: str = Field(min_length=1, max_length=40)
-
-
-class StaffMsgIn(StaffIn):
+class StaffMsgIn(BaseModel):
     text: str = Field(min_length=1, max_length=1000)
 
 
-class StaffCloseIn(StaffIn):
+class StaffCloseIn(BaseModel):
     resolution: str = Field(default="", max_length=500)
 
 
-class StopTransferIn(StaffIn):
+class StopTransferIn(BaseModel):
     assessment_id: str
 
 
@@ -118,24 +120,23 @@ def _summary(h: dict) -> dict:
             "created_at": h["created_at"], "updated_at": h["updated_at"]}
 
 
-def _own(hid: str, user_id: str) -> dict:
+def _own(hid: str, s: auth.Session) -> dict:
     h = store.get_handoff(hid)
-    if not h or h["user_id"] != user_id:
+    if not h or h["user_id"] != s.user["id"]:
         raise HTTPException(404, "chat not found")
     return h
 
 
 # ---------------- customer ----------------
 @router.post("/api/handoff")
-def start_handoff(body: HandoffIn):
-    if not store.user(body.user_id):
-        raise HTTPException(404, "user not found")
-    h = store.open_handoff_for(body.user_id)
+def start_handoff(body: HandoffIn, s: auth.Session = Depends(auth.current)):
+    uid = s.user["id"]
+    h = store.open_handoff_for(uid)
     if not h:
         context = _mask_deep({"category": body.category, "reason": body.reason, "page": body.page,
                               "recent_pages": body.recent_pages[:3], "transcript": body.transcript[-12:],
                               "language": "bn" if body.bangla else "en"})
-        hid = store.create_handoff(body.user_id, _priority(body.user_id, body.category, body.page),
+        hid = store.create_handoff(uid, _priority(uid, body.category, body.page),
                                    context["reason"], context)
         store.add_handoff_message(hid, "system", None, WELCOME)
         h = store.get_handoff(hid)
@@ -143,14 +144,14 @@ def start_handoff(body: HandoffIn):
 
 
 @router.get("/api/handoff/{hid}")
-def poll_handoff(hid: str, user_id: str, after: int = 0):
-    h = _own(hid, user_id)
+def poll_handoff(hid: str, after: int = 0, s: auth.Session = Depends(auth.current)):
+    h = _own(hid, s)
     return {**_summary(h), "messages": store.handoff_messages(hid, after)}
 
 
 @router.post("/api/handoff/{hid}/messages")
-def customer_message(hid: str, body: CustomerMsgIn):
-    h = _own(hid, body.user_id)
+def customer_message(hid: str, body: CustomerMsgIn, s: auth.Session = Depends(auth.current)):
+    h = _own(hid, s)
     if h["status"] == "closed":
         raise HTTPException(409, "chat closed")
     text = pinguard.mask(body.text)
@@ -161,8 +162,8 @@ def customer_message(hid: str, body: CustomerMsgIn):
 
 
 @router.post("/api/handoff/{hid}/close")
-def customer_close(hid: str, body: CustomerCloseIn):
-    h = _own(hid, body.user_id)
+def customer_close(hid: str, s: auth.Session = Depends(auth.current)):
+    h = _own(hid, s)
     if h["status"] != "closed":
         store.update_handoff(hid, status="closed", resolution="Closed by the customer")
         store.add_handoff_message(hid, "system", None, "গ্রাহক চ্যাটটি শেষ করেছেন। / The customer ended the chat.")
@@ -170,21 +171,52 @@ def customer_close(hid: str, body: CustomerCloseIn):
 
 
 # ---------------- support console ----------------
-def _console(x_console_token: str = Header(default="")) -> None:
-    token = os.getenv("CONSOLE_TOKEN") or "support-demo"
-    if not hmac.compare_digest(x_console_token.encode(), token.encode()):
-        raise HTTPException(401, "bad console token")
+def staff_accounts() -> dict[str, str]:
+    """CONSOLE_STAFF="Mitu:secret,Rafi:$2b$12$..." -> {name: password or bcrypt hash}."""
+    out = {}
+    for item in (os.getenv("CONSOLE_STAFF") or "").split(","):
+        name, _, pw = item.strip().partition(":")
+        if name.strip() and pw:
+            out[name.strip()] = pw
+    return out
 
 
-console = APIRouter(prefix="/api/console", dependencies=[Depends(_console)])
+def _password_ok(given: str, stored: str) -> bool:
+    if stored.startswith(("$2a$", "$2b$", "$2y$")):
+        try:
+            return bcrypt.checkpw(given.encode(), stored.encode())
+        except ValueError:
+            return False
+    return hmac.compare_digest(given.encode(), stored.encode())
+
+
+def shared_code() -> str | None:
+    """The shared access code, or None when the console is not usable with one."""
+    code = os.getenv("CONSOLE_TOKEN") or DEFAULT_CODE
+    if code == DEFAULT_CODE and not auth.demo_mode():
+        return None  # never accept the public default on a real site
+    return code
+
+
+console = APIRouter(prefix="/api/console", dependencies=[Depends(auth.staff)])
 
 
 @router.post("/api/console/login")
 def console_login(body: ConsoleLoginIn):
-    token = os.getenv("CONSOLE_TOKEN") or "support-demo"
-    if not hmac.compare_digest(body.token.encode(), token.encode()):
-        raise HTTPException(401, "bad console token")
-    return {"ok": True, "name": body.name.strip()}
+    name = body.name.strip()
+    accounts = staff_accounts()
+    if accounts:
+        ok = name in accounts and _password_ok(body.token, accounts[name])
+    else:
+        code = shared_code()
+        if code is None:
+            log.error("support console refused: set CONSOLE_STAFF or a CONSOLE_TOKEN other than the default")
+            raise HTTPException(503, {"code": "console_not_configured"})
+        ok = bool(name) and hmac.compare_digest(body.token.encode(), code.encode())
+    if not ok:
+        raise HTTPException(401, "bad console login")
+    log.info("console sign-in: %s", name)
+    return {"ok": True, "name": name, "token": auth.issue(name, role="staff", amr="password", minutes=STAFF_MINUTES)}
 
 
 def _row(h: dict, users: dict) -> dict:
@@ -262,32 +294,32 @@ def _take(h: dict, agent: str) -> None:
 
 
 @console.post("/handoffs/{hid}/claim")
-def console_claim(hid: str, body: StaffIn):
-    _take(_get(hid), body.agent)
+def console_claim(hid: str, agent: str = Depends(auth.staff)):
+    _take(_get(hid), agent)
     return {"ok": True}
 
 
 @console.post("/handoffs/{hid}/messages")
-def console_message(hid: str, body: StaffMsgIn):
-    _take(_get(hid), body.agent)
-    return {"ok": True, "message": store.add_handoff_message(hid, "agent", body.agent, body.text)}
+def console_message(hid: str, body: StaffMsgIn, agent: str = Depends(auth.staff)):
+    _take(_get(hid), agent)
+    return {"ok": True, "message": store.add_handoff_message(hid, "agent", agent, body.text)}
 
 
 @console.post("/handoffs/{hid}/close")
-def console_close(hid: str, body: StaffCloseIn):
+def console_close(hid: str, body: StaffCloseIn, agent: str = Depends(auth.staff)):
     h = _get(hid)
-    if h["agent_name"] and h["agent_name"] != body.agent:
+    if h["agent_name"] and h["agent_name"] != agent:
         raise HTTPException(409, f"chat taken by {h['agent_name']}")
     if h["status"] != "closed":
-        store.update_handoff(hid, status="closed", agent_name=h["agent_name"] or body.agent,
+        store.update_handoff(hid, status="closed", agent_name=h["agent_name"] or agent,
                              resolution=body.resolution or None)
         store.add_handoff_message(hid, "system", None,
-                                  f"{body.agent} চ্যাটটি শেষ করেছেন। / {body.agent} closed the chat.")
+                                  f"{agent} চ্যাটটি শেষ করেছেন। / {agent} closed the chat.")
     return {"ok": True}
 
 
 @console.post("/handoffs/{hid}/cancel-transfer")
-def console_stop_transfer(hid: str, body: StopTransferIn):
+def console_stop_transfer(hid: str, body: StopTransferIn, agent: str = Depends(auth.staff)):
     """Protective only: stop the customer's own pending transfer."""
     h = _get(hid)
     a = store.get_assessment(body.assessment_id)
@@ -295,14 +327,14 @@ def console_stop_transfer(hid: str, body: StopTransferIn):
         raise HTTPException(404, "transfer not found")
     if a["status"] != "open":
         raise HTTPException(409, f"transfer already {a['status']}")
-    _take(h, body.agent)
+    _take(h, agent)
     store.update_assessment(a["id"], status="cancelled")
     store.log_decision(a["user_id"], a["draft"], a["result"], "cancelled")
     n = int(a["draft"]["amount"])
     store.add_handoff_message(
         hid, "system", None,
-        f"{body.agent} আপনার অপেক্ষমাণ ৳{f'{n:,}'.translate(_BN)} লেনদেনটি বাতিল করেছেন; টাকা আপনার অ্যাকাউন্টেই আছে। / "
-        f"{body.agent} cancelled your pending ৳{n:,} transfer; the money is still in your account.")
+        f"{agent} আপনার অপেক্ষমাণ ৳{f'{n:,}'.translate(_BN)} লেনদেনটি বাতিল করেছেন; টাকা আপনার অ্যাকাউন্টেই আছে। / "
+        f"{agent} cancelled your pending ৳{n:,} transfer; the money is still in your account.")
     return {"ok": True}
 
 

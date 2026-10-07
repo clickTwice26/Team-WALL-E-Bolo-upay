@@ -185,7 +185,6 @@ class Agent extends ChangeNotifier {
       for (var round = 0; round < 3; round++) {
         final page = current;
         final res = await Api.agent({
-          'user_id': appState.userId,
           'message': observation ? '' : text,
           'page': page,
           'recent_pages': _recent.where((r) => r['id'] != page['id']).take(3).toList(),
@@ -244,7 +243,6 @@ class Agent extends ChangeNotifier {
     if (chat != null) return openPanel();
     final page = current;
     final res = await Api.startHandoff({
-      'user_id': appState.userId,
       'category': category,
       'reason': reason,
       'page': page,
@@ -264,7 +262,7 @@ class Agent extends ChangeNotifier {
     if (c == null) return;
     if (c['user_id'] != appState.userId) return _dropChat(); // demo user switched
     try {
-      final res = await Api.pollHandoff('${c['id']}', '${c['user_id']}', _lastId);
+      final res = await Api.pollHandoff('${c['id']}', _lastId);
       if (chat == null) return;
       chat = {...c, ...res}..remove('messages');
       _ingest(res['messages'] as List?);
@@ -301,7 +299,7 @@ class Agent extends ChangeNotifier {
     busy = true;
     touch();
     try {
-      await Api.handoffMessage('${c['id']}', '${c['user_id']}', text);
+      await Api.handoffMessage('${c['id']}', text);
       await _pollChat(); // fetch it back: a PIN in it shows masked
     } on ApiError catch (e) {
       if (e.status == 409) _endChat();
@@ -315,7 +313,7 @@ class Agent extends ChangeNotifier {
     final c = chat;
     if (c == null) return;
     try {
-      await Api.closeHandoff('${c['id']}', '${c['user_id']}');
+      await Api.closeHandoff('${c['id']}');
     } on ApiError catch (_) {}
     await _pollChat();
     _endChat();

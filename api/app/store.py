@@ -39,6 +39,10 @@ CREATE TABLE IF NOT EXISTS handoffs (id TEXT PRIMARY KEY, user_id TEXT NOT NULL,
 CREATE TABLE IF NOT EXISTS handoff_messages (id INTEGER PRIMARY KEY AUTOINCREMENT,
   handoff_id TEXT NOT NULL, sender TEXT NOT NULL, name TEXT, text TEXT NOT NULL, ts TEXT NOT NULL);
 CREATE INDEX IF NOT EXISTS hm_handoff ON handoff_messages(handoff_id, id);
+CREATE TABLE IF NOT EXISTS pin_guard (user_id TEXT PRIMARY KEY, failures INTEGER NOT NULL,
+  locked_until TEXT);
+CREATE TABLE IF NOT EXISTS devices (user_id TEXT NOT NULL, key_id TEXT NOT NULL,
+  public_key TEXT NOT NULL, created_at TEXT NOT NULL, PRIMARY KEY (user_id, key_id));
 """
 
 
@@ -76,7 +80,8 @@ def reset() -> None:
         c = conn()
         c.executescript("DELETE FROM users; DELETE FROM transactions; "
                         "DELETE FROM assessments; DELETE FROM decisions; "
-                        "DELETE FROM handoffs; DELETE FROM handoff_messages;")
+                        "DELETE FROM handoffs; DELETE FROM handoff_messages; "
+                        "DELETE FROM pin_guard;")
         _seed(c)
 
 
@@ -93,6 +98,33 @@ def user(uid: str) -> dict | None:
 def check_pin(uid: str, pin: str) -> bool:
     r = conn().execute("SELECT pin_hash FROM users WHERE id=?", (uid,)).fetchone()
     return bool(r) and bcrypt.checkpw(pin.encode(), r["pin_hash"].encode())
+
+
+def pin_state(uid: str) -> tuple[int, datetime | None]:
+    """(wrong PINs in a row, locked until) for one account."""
+    r = conn().execute("SELECT failures, locked_until FROM pin_guard WHERE user_id=?", (uid,)).fetchone()
+    if not r:
+        return 0, None
+    return r["failures"], datetime.fromisoformat(r["locked_until"]) if r["locked_until"] else None
+
+
+def set_pin_state(uid: str, failures: int, locked_until: datetime | None) -> None:
+    with _lock:
+        conn().execute("INSERT INTO pin_guard VALUES (?,?,?) ON CONFLICT(user_id) DO UPDATE SET "
+                       "failures=excluded.failures, locked_until=excluded.locked_until",
+                       (uid, failures, locked_until.isoformat() if locked_until else None))
+        conn().commit()
+
+
+def register_device(uid: str, key_id: str, public_key: str) -> None:
+    with _lock:
+        conn().execute("INSERT OR IGNORE INTO devices VALUES (?,?,?,?)",
+                       (uid, key_id, public_key, now().isoformat()))
+        conn().commit()
+
+
+def device_registered(uid: str, key_id: str) -> bool:
+    return conn().execute("SELECT 1 FROM devices WHERE user_id=? AND key_id=?", (uid, key_id)).fetchone() is not None
 
 
 def history(uid: str) -> list[dict]:

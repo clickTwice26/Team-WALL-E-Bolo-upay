@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../api.dart';
+import '../services/biometric.dart';
 import '../state.dart';
 import '../strings.dart';
 import '../theme.dart';
@@ -37,11 +38,17 @@ class _LoginScreenState extends State<LoginScreen> {
     });
     try {
       await Api.login(appState.userId, pin);
+      await appState.refresh();
+      Biometric.enroll(); // in the background: registers this phone's signing key
       widget.onUnlocked();
     } on ApiError catch (e) {
-      setState(() => error = e.status == 401
-          ? tr(bn, 'ভুল পিন। ডেমো পিন ১২৩৪', 'Wrong PIN. Demo PIN is 1234')
-          : tr(bn, 'সার্ভারে সংযোগ হচ্ছে না', 'Cannot reach the server'));
+      final mins = (e.retryAfter / 60).ceil();
+      setState(() => error = switch (e.status) {
+            401 => tr(bn, 'ভুল পিন। ডেমো পিন ১২৩৪', 'Wrong PIN. Demo PIN is 1234'),
+            423 => tr(bn, 'অনেকবার ভুল পিন। ${bnDigits('$mins')} মিনিট পর আবার চেষ্টা করুন।',
+                'Too many wrong PINs. Try again in $mins minutes.'),
+            _ => tr(bn, 'সার্ভারে সংযোগ হচ্ছে না', 'Cannot reach the server'),
+          });
     } finally {
       if (mounted) setState(() => busy = false);
     }
