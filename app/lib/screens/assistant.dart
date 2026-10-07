@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+import '../agent/agent.dart';
 import '../api.dart';
 import '../services/biometric.dart';
 import '../services/voice.dart';
@@ -16,8 +17,13 @@ enum _Step { input, parsing, clarify, assessing, interview, review, hold, auth, 
 /// speak -> parse -> (clarify) -> risk check -> (scam interview) -> confirm
 /// -> (hold) -> PIN / biometric -> result.
 class AssistantScreen extends StatefulWidget {
-  const AssistantScreen({super.key, this.initialText});
+  const AssistantScreen({super.key, this.initialText, this.scamContext = const []});
   final String? initialText;
+
+  /// What the user said to the agent just before (last 3 utterances): added
+  /// to the scam check, so "upay office called me" still counts when only
+  /// "send 5000 to 017..." was passed on as the command.
+  final List<String> scamContext;
 
   @override
   State<AssistantScreen> createState() => _AssistantScreenState();
@@ -48,9 +54,63 @@ class _AssistantScreenState extends State<AssistantScreen> {
   bool get bn => appState.bangla;
   String get uid => appState.userId;
 
+  late List<String> _scamContext = widget.scamContext;
+  late final AgentPage _page = AgentPage(describe: _describe, handlers: {
+    'submit_command': (a) => _agentCommand('${a['text']}', (a['scam_context'] as List?)?.cast<String>()),
+    'select_amount': (a) {
+      if (step != _Step.clarify) return;
+      final n = (a['amount'] as num).toInt();
+      setState(() {
+        draft!['amount'] = n;
+        _amountField.text = '$n';
+      });
+    },
+    'select_recipient': (a) {
+      if (step == _Step.clarify) _selectRecipient(a);
+    },
+    'clarify_continue': (_) async {
+      if (step == _Step.clarify && _clarifyCanContinue) await _assess();
+    },
+    'answer_interview': (a) async {
+      if (step == _Step.interview) await _submitAnswer('${a['text']}');
+    },
+    'confirm': (_) {
+      if (step == _Step.review && assessment?['level'] != 'RED' && assessment?['mistake'] == null) _continueFromReview();
+    },
+    'accept_suggestion': (_) async {
+      if (step == _Step.review && assessment?['mistake'] != null) await _acceptSuggestion();
+    },
+    'keep_amount': (_) {
+      if (step == _Step.review && assessment?['mistake'] != null) _keepAmount();
+    },
+    'continue_to_pin': (_) {
+      // only after the user ticked the warning box by hand and the hold is over
+      if (step == _Step.hold && holdLeft == 0 && acknowledged) setState(() => step = _Step.auth);
+    },
+    'cancel_transfer': (_) async {
+      if (step == _Step.clarify) {
+        _restart();
+      } else if (const {_Step.interview, _Step.review, _Step.hold, _Step.auth}.contains(step)) {
+        await _cancel();
+      }
+    },
+    'new_transaction': (_) {
+      if (step == _Step.done) _restart();
+    },
+    'repeat': (_) => _repeat(),
+  });
+
+  /// Every change on this page is something the agent can see.
+  @override
+  void setState(VoidCallback fn) {
+    super.setState(fn);
+    Agent.instance.touch();
+  }
+
   @override
   void initState() {
     super.initState();
+    Agent.instance.push(_page);
     Biometric.available().then((v) => setState(() => biometricOk = v));
     if (widget.initialText != null) {
       _text.text = widget.initialText!;
@@ -62,6 +122,7 @@ class _AssistantScreenState extends State<AssistantScreen> {
 
   @override
   void dispose() {
+    Agent.instance.pop(_page);
     _timer?.cancel();
     Voice.instance.stop();
     Voice.instance.silence();
@@ -117,7 +178,7 @@ class _AssistantScreenState extends State<AssistantScreen> {
         'amount': p['amount'],
         'recipient_phone': (p['recipient'] as Map?)?['phone'] ?? p['new_number'],
         'is_return_claim': p['is_return_claim'] ?? false,
-        'command_text': t,
+        'command_text': {..._scamContext.map((s) => s.trim()).where((s) => s.isNotEmpty), t}.join(' । '),
       };
       recipient = p['recipient'] != null
           ? Map<String, dynamic>.from(p['recipient'])
@@ -172,6 +233,11 @@ class _AssistantScreenState extends State<AssistantScreen> {
 
   bool get _clarifyReady =>
       draft?['amount'] != null && draft?['recipient_phone'] != null && draft?['intent'] != null;
+
+  /// Same rule as the Continue button.
+  bool get _clarifyCanContinue => parsed?['status'] == 'confirm_recipient'
+      ? ((recipient?['confirmed'] ?? false) == true && _clarifyReady)
+      : _clarifyReady;
 
   // ---------------- risk ----------------
   Future<void> _assess() async {
@@ -246,6 +312,14 @@ class _AssistantScreenState extends State<AssistantScreen> {
       await _assess();
     }
   }
+
+  Future<void> _acceptSuggestion() async {
+    draft!['amount'] = (assessment!['mistake'] as Map)['suggested'];
+    answers = [];
+    await _assess();
+  }
+
+  void _keepAmount() => setState(() => assessment = {...assessment!, 'mistake': null});
 
   // ---------------- confirm / hold / auth ----------------
   void _continueFromReview() {
@@ -337,6 +411,172 @@ class _AssistantScreenState extends State<AssistantScreen> {
       message = null;
       _text.clear();
     });
+  }
+
+  // ---------------- agent ----------------
+  Future<void> _agentCommand(String text, List<String>? context) async {
+    if (const {_Step.parsing, _Step.assessing, _Step.working}.contains(step)) return;
+    if (context != null) _scamContext = context;
+    _restart();
+    _text.text = text;
+    await _submit();
+  }
+
+  void _selectRecipient(Map a) {
+    final shown = [
+      ...appState.contacts,
+      for (final c in (parsed?['recipient_candidates'] as List?) ?? []) Map<String, dynamic>.from(c),
+      if (parsed?['recipient'] != null) Map<String, dynamic>.from(parsed!['recipient']),
+    ];
+    Map<String, dynamic>? m;
+    if (a['contact_id'] != null) {
+      m = shown.where((c) => c['id'] == a['contact_id']).firstOrNull;
+    } else if (a['phone'] != null) {
+      m = appState.contacts.where((c) => c['phone'] == a['phone']).firstOrNull ?? {'name': null, 'phone': a['phone']};
+    }
+    if (m == null) return;
+    final chosen = m;
+    setState(() {
+      draft!['recipient_phone'] = chosen['phone'];
+      recipient = {...chosen, 'confirmed': true};
+    });
+  }
+
+  void _repeat() {
+    switch (step) {
+      case _Step.input:
+        _say(tr(bn, 'বলুন, কাকে কত টাকা পাঠাবেন?', 'Say who to send money to, and how much.'));
+      case _Step.clarify:
+        if (parsed != null) _say(_withWarning(parsed!));
+      case _Step.interview:
+        _askQuestion();
+      case _Step.review:
+        _readBack();
+      case _Step.hold:
+        _say(tr(bn, 'লেনদেন আটকে রাখা হয়েছে। ফোন কেটে দিন এবং পরিচিত নম্বরে নিজে ফোন করে নিশ্চিত হোন।',
+            'The transfer is on hold. Hang up and call the person on a number you already know.'));
+      case _Step.auth:
+        _say(tr(bn, 'পিন দিয়ে নিশ্চিত করুন।', 'Confirm with your PIN.'));
+      case _Step.done:
+        _say('${doneInfo?['text'] ?? ''}');
+      default:
+        break;
+    }
+  }
+
+  String _nameIn(bool b) {
+    final r = recipient;
+    if (r == null) return '';
+    if (r['relation'] == 'self') return tr(b, 'নিজের নম্বর', 'your own number');
+    if (r['name'] == null) return maskPhone('${r['phone']}');
+    return b ? (r['name_bn'] ?? r['name']) : r['name'];
+  }
+
+  /// What the agent sees: this step, its content and the actions its buttons allow.
+  Map<String, dynamic> _describe() {
+    final p = parsed ?? {};
+    final a = assessment ?? {};
+    final level = a['level'];
+    final mistake = a['mistake'] as Map?;
+    final content = <String, dynamic>{'command': _text.text.trim()};
+    var actions = <String>[];
+    var sbn = '', sen = '';
+    final amount = draft?['amount'];
+    String amt(bool b) => amount == null ? '' : taka(amount as num, b);
+    switch (step) {
+      case _Step.input:
+        sbn = 'সেন্ড মানি পেজ: কাকে কত টাকা পাঠাবেন বলুন বা লিখুন।${message != null ? ' বার্তা: $message' : ''}';
+        sen = 'Send Money page: say or type who to pay and how much.${message != null ? ' Message: $message' : ''}';
+      case _Step.parsing || _Step.assessing || _Step.working:
+        sbn = 'যাচাই চলছে, একটু অপেক্ষা করুন।';
+        sen = 'Checking, please wait.';
+      case _Step.clarify:
+        final status = p['status'];
+        final needAmount = status == 'clarify_amount' || status == 'need_amount';
+        final showList = const {'clarify_recipient', 'confirm_recipient', 'need_recipient'}.contains(status) ||
+            draft?['recipient_phone'] == null;
+        final cands = !showList
+            ? <Map<String, dynamic>>[]
+            : status == 'confirm_recipient'
+                ? [Map<String, dynamic>.from(p['recipient'] ?? {})]
+                : status == 'clarify_recipient'
+                    ? [for (final c in (p['recipient_candidates'] as List? ?? [])) Map<String, dynamic>.from(c)]
+                    : appState.contacts;
+        final list = [
+          for (final c in cands)
+            {for (final k in ['id', 'name', 'name_bn', 'relation']) k: c[k], 'phone': maskPhone('${c['phone'] ?? ''}')}
+        ];
+        content.addAll({
+          'status': status,
+          'amount': amount,
+          'amount_candidates': p['amount_candidates'],
+          'recipient': recipient == null ? null : _nameIn(false),
+          'recipient_candidates': list,
+          if (p['scam_warning'] != null) 'scam_warning': p['scam_warning'],
+        });
+        actions = [
+          if (needAmount) 'select_amount',
+          if (showList) 'select_recipient',
+          'clarify_continue',
+          'cancel_transfer',
+          'repeat',
+        ];
+        String opts(bool b) => [for (var i = 0; i < list.length; i++) '${i + 1}) ${b ? (list[i]['name_bn'] ?? list[i]['name'] ?? list[i]['phone']) : (list[i]['name'] ?? list[i]['phone'])}'].join(', ');
+        final w = p['scam_warning'] as Map?;
+        sbn = '${w != null ? '${w['bn']} ' : ''}প্রশ্ন: ${p['question_bn'] ?? ''} শোনা কথা: "${_text.text}"।'
+            '${list.isNotEmpty ? ' বিকল্প: ${opts(true)}।' : ''}${amount != null ? ' পরিমাণ: ${amt(true)}।' : ''}';
+        sen = '${w != null ? '${w['en']} ' : ''}Question: ${p['question_en'] ?? ''} Heard: "${_text.text}".'
+            '${list.isNotEmpty ? ' Options: ${opts(false)}.' : ''}${amount != null ? ' Amount: ${amt(false)}.' : ''}';
+      case _Step.interview:
+        final q = _questions.isEmpty ? {} : _questions[questionIndex];
+        content.addAll({'question': {'bn': q['bn'], 'en': q['en']}, 'index': questionIndex + 1, 'total': _questions.length});
+        actions = ['answer_interview', 'cancel_transfer', 'repeat'];
+        sbn = 'নিরাপত্তা প্রশ্ন ${questionIndex + 1}/${_questions.length}: ${q['bn']}';
+        sen = 'Safety question ${questionIndex + 1}/${_questions.length}: ${q['en']}';
+      case _Step.review:
+        final reasons = [
+          for (final r in (a['reasons'] as List? ?? []))
+            if (r['key'] != 'mistake_amount') {'bn': r['bn'], 'en': r['en']}
+        ];
+        content.addAll({
+          'level': level,
+          'intent': draft?['intent'],
+          'amount': amount,
+          'recipient': _nameIn(false),
+          'new_number': p['recipient_match'] == 'new_number',
+          'reasons': reasons,
+          if (mistake != null) 'mistake': {'usual': mistake['usual'], 'suggested': mistake['suggested']},
+        });
+        actions = [
+          if (mistake != null) ...['accept_suggestion', 'keep_amount'],
+          if (level != 'RED' && mistake == null) 'confirm',
+          'cancel_transfer',
+          'repeat',
+        ];
+        sbn = '$level: ${amt(true)} → ${_nameIn(true)}। ${a['advice_bn'] ?? ''}'
+            '${reasons.isNotEmpty ? ' কারণ: ${reasons.map((r) => r['bn']).join(' ')}' : ''}'
+            '${mistake != null ? ' ${mistake['bn']}' : ''}';
+        sen = '$level: ${amt(false)} to ${_nameIn(false)}. ${a['advice_en'] ?? ''}'
+            '${reasons.isNotEmpty ? ' Reasons: ${reasons.map((r) => r['en']).join(' ')}' : ''}'
+            '${mistake != null ? ' ${mistake['en']}' : ''}';
+      case _Step.hold:
+        content.addAll({'level': level, 'hold_seconds_left': holdLeft, 'acknowledged': acknowledged});
+        actions = [if (holdLeft == 0 && acknowledged) 'continue_to_pin', 'cancel_transfer', 'repeat'];
+        sbn = 'লেনদেন আটকে আছে${holdLeft > 0 ? ', আরও $holdLeft সেকেন্ড' : ''}। সতর্কবার্তার বক্সে টিক '
+            '${acknowledged ? 'দেওয়া হয়েছে' : 'দেওয়া হয়নি'}।';
+        sen = 'The transfer is on hold${holdLeft > 0 ? ' for $holdLeft more seconds' : ''}. The warning box is '
+            '${acknowledged ? 'ticked' : 'not ticked'}.';
+      case _Step.auth:
+        content.addAll({'level': level, 'amount': amount, 'recipient': _nameIn(false)});
+        actions = ['cancel_transfer'];
+        sbn = 'পিন দিয়ে নিশ্চিত করার ধাপ: ${amt(true)} → ${_nameIn(true)}।';
+        sen = 'PIN step: ${amt(false)} to ${_nameIn(false)}.';
+      case _Step.done:
+        content['result'] = {'kind': doneInfo?['kind'], 'text': doneInfo?['text']};
+        actions = ['new_transaction', 'repeat'];
+        sbn = sen = '${doneInfo?['text'] ?? ''}';
+    }
+    return {'id': 'assistant', 'step': step.name, 'summary_bn': sbn, 'summary_en': sen, 'content': content, 'actions': actions};
   }
 
   // ================= UI =================
@@ -612,11 +852,9 @@ class _AssistantScreenState extends State<AssistantScreen> {
       }
     }
 
-    final confirmed = (recipient?['confirmed'] ?? false) == true;
-    final ready = status == 'confirm_recipient' ? (confirmed && _clarifyReady) : _clarifyReady;
     children.addAll([
       const SizedBox(height: 20),
-      FilledButton(onPressed: ready ? _assess : null, child: Text(tr(bn, 'এগিয়ে যান', 'Continue'))),
+      FilledButton(onPressed: _clarifyCanContinue ? _assess : null, child: Text(tr(bn, 'এগিয়ে যান', 'Continue'))),
       const SizedBox(height: 8),
       OutlinedButton(onPressed: _restart, child: Text(tr(bn, 'বাতিল', 'Cancel'))),
     ]);
@@ -743,17 +981,11 @@ class _AssistantScreenState extends State<AssistantScreen> {
               const SizedBox(height: 10),
               Row(children: [
                 Expanded(
-                    child: FilledButton(
-                        onPressed: () {
-                          draft!['amount'] = mistake['suggested'];
-                          answers = [];
-                          _assess();
-                        },
-                        child: Text(taka(mistake['suggested'], bn)))),
+                    child: FilledButton(onPressed: _acceptSuggestion, child: Text(taka(mistake['suggested'], bn)))),
                 const SizedBox(width: 10),
                 Expanded(
                     child: OutlinedButton(
-                        onPressed: () => setState(() => assessment = {...a, 'mistake': null}),
+                        onPressed: _keepAmount,
                         child: Text(tr(bn, '${taka(draft!['amount'], true)} ঠিক আছে', 'Keep ${taka(draft!['amount'], false)}')))),
               ]),
             ]),

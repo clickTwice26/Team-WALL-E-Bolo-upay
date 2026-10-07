@@ -42,6 +42,12 @@ def _has(text: str, name: str, items: list[str]) -> bool:
     return False
 
 
+def has_send_verb(text_norm: str) -> bool:
+    """A real "send" word ("pathao", "dao", "send"), not just "ferot" (back):
+    "টাকা ফেরত চাই" is a complaint, "ferot pathao" is a transfer."""
+    return _has(text_norm, "send_verb", [w for w in SEND if w not in ("ferot", "ফেরত", "return")])
+
+
 def detect(text_norm: str, has_amount: bool) -> dict:
     """Return {"intent", "is_return_claim", "self_target", "unsupported"}."""
     out = {

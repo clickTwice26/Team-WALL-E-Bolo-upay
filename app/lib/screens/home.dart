@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../agent/agent.dart';
 import '../api.dart';
 import '../state.dart';
 import '../strings.dart';
@@ -107,7 +108,7 @@ class HomeScreen extends StatelessWidget {
         ),
         IconButton(
           tooltip: 'Settings',
-          onPressed: () => _settings(context),
+          onPressed: () => showSettingsSheet(context),
           icon: const Icon(Icons.tune_rounded, color: BrandColors.navy),
         ),
       ]),
@@ -314,26 +315,111 @@ class HomeScreen extends StatelessWidget {
       ),
     ]);
   }
+}
 
-  void _settings(BuildContext context) {
-    showModalBottomSheet(
-      context: context,
-      showDragHandle: true,
-      builder: (ctx) => ListenableBuilder(
-        listenable: appState,
-        builder: (ctx, _) => SafeArea(
+/// What the agent sees on Home, computed live from the app state.
+Map<String, dynamic> describeHome() {
+  final p = appState.profile ?? {};
+  final shown = appState.balanceVisible;
+  final recent = ((p['recent'] as List?) ?? []).take(3).map((e) => Map<String, dynamic>.from(e)).toList();
+  String tx(Map t, bool bn) {
+    final who = t['name'] ?? t['counterparty'];
+    return switch (t['type']) {
+      'receive' => bn ? '$who থেকে ${taka(t['amount'], true)} এসেছে' : 'received ${taka(t['amount'], false)} from $who',
+      'mobile_recharge' => bn ? '$who নম্বরে ${taka(t['amount'], true)} রিচার্জ' : 'recharged ${taka(t['amount'], false)} to $who',
+      _ => bn ? '$who কে ${taka(t['amount'], true)} পাঠানো' : 'sent ${taka(t['amount'], false)} to $who',
+    };
+  }
+
+  return {
+    'id': 'home',
+    'summary_bn': 'হোম পেজ। ব্যবহারকারী ${p['name_bn'] ?? ''}, ব্যালেন্স ${shown ? taka(appState.balance, true) : 'লুকানো'}। '
+        'সাম্প্রতিক লেনদেন: ${recent.map((t) => tx(t, true)).join('; ')}। '
+        'সেবা: সেন্ড মানি, মোবাইল টপআপ, ব্যালেন্স (ক্যাশ আউট ও পে বিল এই প্রোটোটাইপে নেই)।',
+    'summary_en': 'Home page. User ${p['name'] ?? ''}, balance ${shown ? taka(appState.balance, false) : 'hidden'}. '
+        'Recent transactions: ${recent.map((t) => tx(t, false)).join('; ')}. '
+        'Services: Send Money, Mobile TopUp, Balance (Cash Out and Pay Bill are not in this prototype).',
+    'content': {
+      'user': p['name'],
+      'balance_visible': shown,
+      if (shown) 'balance': appState.balance,
+      'recent': [for (final t in recent) {'type': t['type'], 'amount': t['amount'], 'with': t['name'] ?? t['counterparty']}],
+      'services': ['send_money', 'mobile_recharge', 'check_balance'],
+    },
+    'actions': <String>[],
+  };
+}
+
+/// Demo settings. While open, the sheet is the agent's page "settings".
+Future<void> showSettingsSheet(BuildContext context) =>
+    showModalBottomSheet(context: context, showDragHandle: true, builder: (_) => const _SettingsSheet());
+
+class _SettingsSheet extends StatefulWidget {
+  const _SettingsSheet();
+  @override
+  State<_SettingsSheet> createState() => _SettingsSheetState();
+}
+
+class _SettingsSheetState extends State<_SettingsSheet> {
+  late final AgentPage _page = AgentPage(describe: _describe);
+
+  @override
+  void initState() {
+    super.initState();
+    Agent.instance.push(_page);
+  }
+
+  @override
+  void dispose() {
+    Agent.instance.pop(_page);
+    super.dispose();
+  }
+
+  Map<String, dynamic> _describe() {
+    final users = appState.users;
+    final me = users.firstWhere((u) => u['id'] == appState.userId, orElse: () => {});
+    final others = users.where((u) => u['id'] != appState.userId);
+    return {
+      'id': 'settings',
+      'summary_bn': 'ডেমো সেটিংস। ব্যবহারকারী: ${me['name_bn'] ?? ''}। ভাষা: ${appState.bangla ? 'বাংলা' : 'ইংরেজি'}। '
+          'ফোন কল সিমুলেশন: ${appState.simulateCall ? 'চালু' : 'বন্ধ'}। অন্য ব্যবহারকারী: '
+          '${others.map((u) => u['name_bn']).join(', ')}। এখান থেকে ডেমো ডেটা রিসেট করা যায়।',
+      'summary_en': 'Demo settings. User: ${me['name'] ?? ''}. Language: ${appState.bangla ? 'Bangla' : 'English'}. '
+          'Phone call simulation: ${appState.simulateCall ? 'on' : 'off'}. Other users: '
+          '${others.map((u) => u['name']).join(', ')}. The demo data can be reset here.',
+      'content': {
+        'user_id': appState.userId,
+        'bangla': appState.bangla,
+        'simulate_call': appState.simulateCall,
+        'users': [for (final u in users) {'id': u['id'], 'name': u['name']}],
+      },
+      'actions': <String>[],
+    };
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return ListenableBuilder(
+      listenable: appState,
+      builder: (ctx, _) {
+        final bn = appState.bangla;
+        return SafeArea(
           child: ListView(shrinkWrap: true, padding: const EdgeInsets.fromLTRB(16, 0, 16, 16), children: [
             Text(tr(bn, 'ডেমো সেটিংস', 'Demo settings'), style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700)),
             const SizedBox(height: 8),
             Text(tr(bn, 'ডেমো ব্যবহারকারী', 'Demo user'), style: const TextStyle(color: BrandColors.muted)),
-            for (final u in appState.users)
-              RadioListTile<String>(
-                value: u['id'],
-                groupValue: appState.userId,
-                onChanged: (v) => appState.switchUser(v!),
-                title: Text(bn ? u['name_bn'] : u['name']),
-                subtitle: Text(u['persona']),
-              ),
+            RadioGroup<String>(
+              groupValue: appState.userId,
+              onChanged: (v) => appState.switchUser(v!),
+              child: Column(children: [
+                for (final u in appState.users)
+                  RadioListTile<String>(
+                    value: u['id'],
+                    title: Text(bn ? u['name_bn'] : u['name']),
+                    subtitle: Text(u['persona']),
+                  ),
+              ]),
+            ),
             SwitchListTile(
               value: appState.bangla,
               onChanged: (_) => appState.toggleLanguage(),
@@ -356,8 +442,8 @@ class HomeScreen extends StatelessWidget {
               label: Text(tr(bn, 'ডেমো ডেটা রিসেট', 'Reset demo data')),
             ),
           ]),
-        ),
-      ),
+        );
+      },
     );
   }
 }

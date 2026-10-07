@@ -39,6 +39,16 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
+  void setLanguage(bool bn) {
+    bangla = bn;
+    notifyListeners();
+  }
+
+  void setBalanceVisible(bool v) {
+    balanceVisible = v;
+    notifyListeners();
+  }
+
   void setSimulateCall(bool v) {
     simulateCall = v;
     notifyListeners();

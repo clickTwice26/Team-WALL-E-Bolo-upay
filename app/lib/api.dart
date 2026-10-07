@@ -76,6 +76,8 @@ class Api {
   static Future<void> login(String userId, String pin) async =>
       _send('POST', '/api/login', {'user_id': userId, 'pin': pin});
   static Future<void> reset() async => _send('POST', '/api/demo/reset');
+  static Future<Map<String, dynamic>> agent(Map<String, dynamic> body) async =>
+      Map<String, dynamic>.from(await _send('POST', '/api/agent', body));
 
   /// Natural server voice (WAV), or null when the server has no TTS or fails.
   static Future<Uint8List?> tts(String text) async {

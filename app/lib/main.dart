@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'agent/agent.dart';
+import 'agent/agent_layer.dart';
 import 'screens/assistant.dart';
 import 'screens/home.dart';
 import 'screens/insights.dart';
@@ -22,9 +24,11 @@ class BoloUpayApp extends StatelessWidget {
       title: 'Bolo upay (prototype)',
       debugShowCheckedModeBanner: false,
       theme: buildTheme(),
+      navigatorKey: navigatorKey,
       builder: (context, child) => _PhoneFrame(
         child: Column(children: [
-          Expanded(child: child!),
+          // the agent sits above every route, inside the phone frame
+          Expanded(child: Stack(children: [child!, const Positioned.fill(child: AgentLayer())])),
           const _PrototypeRibbon(),
         ]),
       ),
@@ -91,8 +95,12 @@ class _Gate extends StatefulWidget {
 class _GateState extends State<_Gate> {
   bool unlocked = false;
   @override
-  Widget build(BuildContext context) =>
-      unlocked ? const Shell() : LoginScreen(onUnlocked: () => setState(() => unlocked = true));
+  Widget build(BuildContext context) => unlocked
+      ? const Shell()
+      : LoginScreen(onUnlocked: () {
+          Agent.instance.enabled = true; // the agent only works after the PIN unlock
+          setState(() => unlocked = true);
+        });
 }
 
 class Shell extends StatefulWidget {
@@ -103,13 +111,54 @@ class Shell extends StatefulWidget {
 
 class _ShellState extends State<Shell> {
   int tab = 0;
+  late final AgentPage _page = AgentPage(
+    describe: _describe,
+    mainTab: true,
+    handlers: {'refresh': (_) => tab == 0 ? appState.refresh() : Agent.instance.refreshPage(_tabIds[tab])},
+  );
+
+  static const _tabIds = ['home', 'dashboard', 'accuracy'];
+
+  @override
+  void initState() {
+    super.initState();
+    final agent = Agent.instance;
+    agent.openTab = _openTab;
+    agent.openAssistant = ({String? text, List<String> scamContext = const []}) => navigatorKey.currentState
+        ?.push(MaterialPageRoute(builder: (_) => AssistantScreen(initialText: text, scamContext: scamContext)));
+    agent.openSettings = () {
+      final ctx = navigatorKey.currentContext;
+      if (ctx != null) showSettingsSheet(ctx);
+    };
+    agent.push(_page);
+  }
+
+  @override
+  void dispose() {
+    Agent.instance.pop(_page);
+    super.dispose();
+  }
+
+  void _openTab(int i) {
+    if (i == tab) return;
+    Agent.instance.willChange(); // remember the tab being left
+    setState(() => tab = i);
+    Agent.instance.touch();
+  }
+
+  Map<String, dynamic> _describe() {
+    final id = _tabIds[tab];
+    if (id == 'home') return describeHome();
+    return Agent.instance.snapshot(id) ??
+        {'id': id, 'summary_bn': 'পেজটি লোড হচ্ছে।', 'summary_en': 'The page is loading.', 'actions': <String>[]};
+  }
 
   Widget _nav(int i, IconData icon, String label) {
     final on = tab == i;
     final c = on ? BrandColors.navy : BrandColors.muted;
     return Expanded(
       child: InkWell(
-        onTap: () => setState(() => tab = i),
+        onTap: () => _openTab(i),
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Icon(icon, color: c),
           Text(label, style: TextStyle(fontSize: 12, color: c, fontWeight: on ? FontWeight.w700 : FontWeight.w500)),
@@ -134,8 +183,9 @@ class _ShellState extends State<Shell> {
               foregroundColor: Colors.white,
               elevation: 4,
               shape: const CircleBorder(side: BorderSide(color: Colors.white, width: 4)),
-              tooltip: 'বলো upay',
-              onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AssistantScreen())),
+              tooltip: tr(bn, 'বলো এজেন্ট', 'Bolo agent'),
+              // on the main tabs the centre mic is the agent: open it and listen
+              onPressed: () => Agent.instance.openPanel(listen: true),
               child: const Icon(Icons.mic_rounded, size: 34),
             ),
           ),

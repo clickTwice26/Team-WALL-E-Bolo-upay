@@ -22,6 +22,7 @@ from fastapi.responses import FileResponse, Response
 from pydantic import BaseModel, Field
 
 from . import store
+from .core import agent
 from .core import features as feat_mod
 from .core import llm, parser, risk, scam, tts
 from .core.text import mask_phone
@@ -89,6 +90,33 @@ class CancelIn(BaseModel):
 
 class TTSIn(BaseModel):
     text: str = Field(min_length=1, max_length=tts.MAX_CHARS)
+
+
+class AgentPage(BaseModel):
+    """What one page shows right now, as the app describes it."""
+    id: str = Field(max_length=40)
+    step: Optional[str] = Field(default=None, max_length=40)
+    summary_bn: str = Field(default="", max_length=3000)
+    summary_en: str = Field(default="", max_length=3000)
+    content: dict = {}
+    actions: list[str] = []  # page actions its buttons offer right now
+
+
+class AgentTurn(BaseModel):
+    role: Literal["user", "agent"]
+    text: str = Field(default="", max_length=2000)
+
+
+class AgentIn(BaseModel):
+    user_id: str
+    message: str = Field(default="", max_length=500)
+    page: AgentPage
+    recent_pages: list[AgentPage] = []  # newest first, without the current page
+    history: list[AgentTurn] = []
+    bangla: bool = True
+    settings: dict = {}
+    observation: bool = False  # automatic follow-up after the app ran the actions
+    use_llm: bool = True
 
 
 def _user_or_404(uid: str) -> dict:
@@ -225,6 +253,17 @@ def cancel(body: CancelIn):
         store.update_assessment(a["id"], status="cancelled")
         store.log_decision(u["id"], a["draft"], a["result"], "cancelled")
     return {"ok": True}
+
+
+@app.post("/api/agent")
+def agent_turn(body: AgentIn):
+    """Bolo agent: replies and app actions for what the user said on any page."""
+    u = _user_or_404(body.user_id)
+    d = dashboard()
+    facts = {"user": u, "users": store.users(), "history": store.history(u["id"])[-8:],
+             "ops": {k: d[k] for k in ("total", "by_level", "sent", "cancelled_after_warning",
+                                       "amount_protected", "scam_categories")}}
+    return agent.run(body.model_dump(), facts)
 
 
 @app.get("/api/dashboard")

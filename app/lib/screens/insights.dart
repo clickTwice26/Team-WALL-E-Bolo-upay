@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../agent/agent.dart';
 import '../api.dart';
 import '../state.dart';
 import '../strings.dart';
@@ -40,7 +41,27 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   void initState() {
     super.initState();
-    _f = Api.dashboard();
+    _load();
+    Agent.instance.registerRefresh('dashboard', () async => setState(_load));
+  }
+
+  void _load() => _f = Api.dashboard()..then(_publish, onError: (_) {});
+
+  /// What the agent can tell the user about this page.
+  void _publish(Map<String, dynamic> d) {
+    final lv = Map<String, dynamic>.from(d['by_level']);
+    final cats = Map<String, dynamic>.from(d['scam_categories']).keys.take(3).join(', ');
+    Agent.instance.publish('dashboard', {
+      'id': 'dashboard',
+      'summary_bn': 'অপস ড্যাশবোর্ড: মোট ${d['total']}টি যাচাই, ${d['sent']}টি পাঠানো, সতর্কতার পর '
+          '${d['cancelled_after_warning']}টি বাতিল, রক্ষা পেয়েছে ${taka(d['amount_protected'] ?? 0, true)}। '
+          'GREEN ${lv['GREEN']}, YELLOW ${lv['YELLOW']}, RED ${lv['RED']}।${cats.isEmpty ? '' : ' প্রতারণার ধরন: $cats।'}',
+      'summary_en': 'Ops dashboard: ${d['total']} checks, ${d['sent']} sent, ${d['cancelled_after_warning']} '
+          'cancelled after a warning, ${taka(d['amount_protected'] ?? 0, false)} protected. '
+          'GREEN ${lv['GREEN']}, YELLOW ${lv['YELLOW']}, RED ${lv['RED']}.${cats.isEmpty ? '' : ' Scam patterns: $cats.'}',
+      'content': {for (final k in ['total', 'sent', 'cancelled_after_warning', 'amount_protected', 'by_level']) k: d[k]},
+      'actions': <String>[],
+    });
   }
 
   @override
@@ -49,7 +70,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     return Scaffold(
       appBar: AppBar(title: Text(tr(bn, 'অপস ড্যাশবোর্ড', 'Ops dashboard'))),
       body: RefreshIndicator(
-        onRefresh: () async => setState(() => _f = Api.dashboard()),
+        onRefresh: () async => setState(_load),
         child: FutureBuilder<Map<String, dynamic>>(
           future: _f,
           builder: (context, s) {
@@ -106,8 +127,43 @@ class _DashboardScreenState extends State<DashboardScreen> {
 }
 
 /// Accuracy report: measured numbers from the evaluation scripts.
-class AccuracyScreen extends StatelessWidget {
+class AccuracyScreen extends StatefulWidget {
   const AccuracyScreen({super.key});
+  @override
+  State<AccuracyScreen> createState() => _AccuracyScreenState();
+}
+
+class _AccuracyScreenState extends State<AccuracyScreen> {
+  Future<Map<String, dynamic>>? _f;
+
+  @override
+  void initState() {
+    super.initState();
+    _load();
+    Agent.instance.registerRefresh('accuracy', () async => setState(_load));
+  }
+
+  void _load() => _f = Api.metrics()..then(_publish, onError: (_) {});
+
+  void _publish(Map<String, dynamic> m) {
+    final pm = Map<String, dynamic>.from(m['parser_metrics'] ?? {});
+    final tp = Map<String, dynamic>.from(Map<String, dynamic>.from(m['risk_metrics'] ?? {})['test_pipeline'] ?? {});
+    final ml = Map<String, dynamic>.from(tp['ml_plus_interview_plus_rules'] ?? {});
+    final base = Map<String, dynamic>.from(tp['baseline_rules_only'] ?? {});
+    Agent.instance.publish('accuracy', {
+      'id': 'accuracy',
+      'summary_bn': 'অ্যাকুরেসি রিপোর্ট: ${pm['test_set_size']}টি কমান্ডে ইনটেন্ট ${_pct(pm['intent_accuracy'])}, '
+          'টাকার পরিমাণ ${_pct(pm['amount_accuracy'])}, প্রাপক ${_pct(pm['recipient_accuracy'])}, না জিজ্ঞেস করে ভুল '
+          'পরিমাণ ${_pct(pm['silent_wrong_amount_rate'])}। স্ক্যাম ধরা পড়েছে ${_pct(ml['scam_flagged_rate'])} '
+          '(শুধু রুলে ${_pct(base['scam_flagged_rate'])}), সৎ লেনদেন আটকানো ${_pct(ml['legit_red_rate'])}।',
+      'summary_en': 'Accuracy report: on ${pm['test_set_size']} commands intent ${_pct(pm['intent_accuracy'])}, '
+          'amount ${_pct(pm['amount_accuracy'])}, recipient ${_pct(pm['recipient_accuracy'])}, silent wrong amount '
+          '${_pct(pm['silent_wrong_amount_rate'])}. Scams flagged ${_pct(ml['scam_flagged_rate'])} (rules only '
+          '${_pct(base['scam_flagged_rate'])}), honest transfers held ${_pct(ml['legit_red_rate'])}.',
+      'content': {'parser': pm['intent_accuracy'], 'scam_flagged': ml['scam_flagged_rate'], 'legit_held': ml['legit_red_rate']},
+      'actions': <String>[],
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -115,7 +171,7 @@ class AccuracyScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text(tr(bn, 'অ্যাকুরেসি রিপোর্ট', 'Accuracy report'))),
       body: FutureBuilder<Map<String, dynamic>>(
-        future: Api.metrics(),
+        future: _f,
         builder: (context, s) {
           if (!s.hasData) {
             return Center(child: s.hasError ? Text('${s.error}') : const CircularProgressIndicator());
