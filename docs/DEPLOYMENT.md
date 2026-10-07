@@ -1,7 +1,57 @@
 # Deployment guide
 
-How to put Bolo upay online on your own server, with HTTPS, in about 30 minutes.
+How to put Bolo upay online on your own server, with HTTPS, in about 30 minutes. Already deployed? Jump to section 0 to update the live server.
 HTTPS is required: browsers block the microphone on plain `http://`.
+
+## 0. Quick update of the live server (boloupay.shagato.space)
+
+The live server already runs nginx (with Cloudflare and certbot) in front of the **app container only**, published on `127.0.0.1:28620` by `docker-compose.override.yml` (see `deploy/nginx-boloupay.shagato.space.conf`). To ship the latest `main`:
+
+```bash
+ssh <user>@<server>
+cd /opt/bolo-upay                       # or wherever the repo is cloned
+git pull origin main
+```
+
+**Check `.env` before building.** Since R7 the API needs these, or logins break on every restart and admin tools are closed:
+
+```bash
+grep -E '^(AUTH_SECRET|DEMO_MODE|ADMIN_TOKEN|LLM_PROVIDER|CONSOLE_STAFF|CONSOLE_TOKEN)=' .env
+```
+
+| Variable | Value for the public demo |
+|---|---|
+| `AUTH_SECRET` | a long random value: `openssl rand -hex 32` (keep it the same across deploys) |
+| `DEMO_MODE` | `true` (persona picker, one-tap demo scenarios, reset, default console code) |
+| `ADMIN_TOKEN` | a long random value (`openssl rand -hex 24`) for `X-Admin-Token` ops calls |
+| `LLM_PROVIDER` / `LLM_API_KEY` | `gemini` and your key (demo only; production uses a local model, see README) |
+| `CONSOLE_STAFF` | `Mitu:<password>,Rafi:<password>`, or leave empty to use the code `support-demo` (demo mode only) |
+
+Add any missing line, e.g. `echo "AUTH_SECRET=$(openssl rand -hex 32)" >> .env`, then rebuild only the app container (nginx keeps running):
+
+```bash
+docker compose up -d --build app
+docker compose ps                          # app should be "healthy" after ~30 s
+docker compose logs --tail=50 app          # no tracebacks
+curl -s https://boloupay.shagato.space/api/health
+# {"ok":true,"llm":"gemini","tts":true,"model":"gradient_boosting"}
+```
+
+**Smoke test (2 minutes)** in Chrome at `https://boloupay.shagato.space`:
+1. Unlock with PIN `1234`. The home screen shows the upay agent icon and the **Demo scenarios** card.
+2. Tap **1. Fake upay employee** → RED, the authentication ladder highlights the 30-second hold, "Why?" lists the reasons.
+3. Tap **2. Wrong recipient** → "Which Rahim?". Tap **3. Unusually large amount** → "Did you mean ৳350?".
+4. `https://boloupay.shagato.space/console/` opens the support console sign-in.
+5. Without a token, `curl -s https://boloupay.shagato.space/api/me` returns `401`.
+
+If the build or start fails, roll back to the previous commit: `git log --oneline -5`, `git checkout <previous-merge>`, `docker compose up -d --build app`, then `git checkout main` once fixed. Cloudflare may cache the old web app for a few minutes; the server sends `Cache-Control: no-cache`, so a hard refresh (Ctrl+Shift+R) shows the new build.
+
+**Android APK for the judges** (from your machine):
+
+```bash
+cd app && flutter build apk --release --dart-define=API_BASE=https://boloupay.shagato.space
+# app/build/app/outputs/flutter-apk/app-release.apk
+```
 
 ## 1. What you need
 
@@ -64,7 +114,7 @@ App is up. Open: https://bolo.example.com   (demo PIN 1234)
 
 ```bash
 curl -s https://bolo.example.com/api/health
-# {"ok":true,"llm":"gemini","model":"logistic_regression"}   (llm is null without a key)
+# {"ok":true,"llm":"gemini","tts":true,"model":"gradient_boosting"}   (llm is null without a key)
 ```
 
 Then, in Chrome on a phone or laptop:
@@ -119,7 +169,6 @@ cd api && DEMO_MODE=true uvicorn app.main:app --port 8000
 ```bash
 cd app
 flutter build apk --release --dart-define=API_BASE=https://bolo.example.com   # Android
-flutter run -d <iphone> --dart-define=API_BASE=https://bolo.example.com        # iPhone (Xcode, Mac)
 ```
 
 ## 9. Security notes
