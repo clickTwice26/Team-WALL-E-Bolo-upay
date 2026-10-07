@@ -75,7 +75,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
           future: _f,
           builder: (context, s) {
             if (!s.hasData) {
-              return Center(child: s.hasError ? Text('${s.error}') : const CircularProgressIndicator());
+              final e = s.error;
+              final staffOnly = e is ApiError && e.status == 403;
+              return Center(
+                  child: !s.hasError
+                      ? const CircularProgressIndicator()
+                      : Text(staffOnly
+                          ? tr(bn, 'অপস ড্যাশবোর্ড শুধু উপায়ের কর্মীদের জন্য।', 'The ops dashboard is for upay staff only.')
+                          : '$e'));
             }
             final d = s.data!;
             final lv = Map<String, dynamic>.from(d['by_level']);

@@ -12,10 +12,11 @@ class AppState extends ChangeNotifier {
   bool balanceVisible = false;
   String? error;
 
+  /// Demo personas (before the PIN screen), and the profile once signed in.
   Future<void> load() async {
     try {
       users = (await Api.users()).map((e) => Map<String, dynamic>.from(e)).toList();
-      await refresh();
+      if (Session.token != null) await refresh();
       error = null;
     } on ApiError catch (e) {
       error = e.status == 0 ? 'network' : e.toString();
@@ -23,15 +24,26 @@ class AppState extends ChangeNotifier {
     notifyListeners();
   }
 
+  /// The signed-in user's profile (needs a session).
   Future<void> refresh() async {
-    profile = await Api.user(userId);
+    profile = await Api.me();
+    userId = '${profile!['id']}';
     notifyListeners();
   }
 
+  /// Demo only: the server gives a session for the other persona.
   Future<void> switchUser(String id) async {
+    await Api.demoSwitch(id);
     userId = id;
     balanceVisible = false;
     await refresh();
+  }
+
+  /// The session ended: forget the profile until the next PIN unlock.
+  void signedOut() {
+    profile = null;
+    balanceVisible = false;
+    notifyListeners();
   }
 
   void toggleLanguage() {

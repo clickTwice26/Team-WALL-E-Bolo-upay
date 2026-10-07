@@ -78,10 +78,13 @@ class _LoginState extends State<_Login> {
       error = null;
     });
     try {
-      final name = await ConsoleApi.login(_name.text.trim(), _code.text);
-      widget.onLogin(ConsoleApi(_code.text, name));
+      widget.onLogin(await ConsoleApi.login(_name.text.trim(), _code.text));
     } on ApiError catch (e) {
-      setState(() => error = e.status == 401 ? 'Wrong access code.' : 'Cannot reach the server.');
+      setState(() => error = switch (e.status) {
+            401 => 'Wrong name or password.',
+            503 => 'The console is not set up on this server (CONSOLE_STAFF).',
+            _ => 'Cannot reach the server.',
+          });
     } finally {
       if (mounted) setState(() => busy = false);
     }
@@ -108,14 +111,14 @@ class _LoginState extends State<_Login> {
                 const SizedBox(height: 20),
                 TextField(
                   controller: _name,
-                  decoration: const InputDecoration(labelText: 'Your name (shown to the customer)', border: OutlineInputBorder()),
+                  decoration: const InputDecoration(labelText: 'Staff name (shown to the customer)', border: OutlineInputBorder()),
                 ),
                 const SizedBox(height: 12),
                 TextField(
                   controller: _code,
                   obscureText: true,
                   onSubmitted: (_) => _go(),
-                  decoration: const InputDecoration(labelText: 'Access code', border: OutlineInputBorder()),
+                  decoration: const InputDecoration(labelText: 'Password', border: OutlineInputBorder()),
                 ),
                 if (error != null) ...[
                   const SizedBox(height: 10),

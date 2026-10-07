@@ -84,8 +84,10 @@ Run these in `/opt/bolo-upay`:
 | Update to the latest code | `git pull && docker compose up -d --build` |
 | Restart | `docker compose restart` |
 | Stop | `docker compose down` |
-| Reset demo data | `curl -X POST https://bolo.example.com/api/demo/reset` |
+| Reset demo data | `curl -X POST -H "X-Admin-Token: $(grep ^ADMIN_TOKEN= .env \| cut -d= -f2)" https://bolo.example.com/api/demo/reset` (or the reset button in the app's demo settings when `DEMO_MODE=true`) |
 | Change the LLM key | edit `.env`, then `docker compose up -d` |
+| Add support-console staff | set `CONSOLE_STAFF=Mitu:<password>,Rafi:<password>` in `.env`, then `docker compose up -d` |
+| Turn the demo controls off | set `DEMO_MODE=false` in `.env` (no persona picker, reset or default console code), then `docker compose up -d` |
 
 Data (SQLite) lives in the Docker volume `bolo-data` and survives restarts and updates.
 
@@ -108,7 +110,7 @@ Without a domain there is no HTTPS, so voice input will not work for remote user
 ```bash
 pip install -r api/requirements.txt
 cd app && flutter build web --release --no-web-resources-cdn && cd ..
-cd api && uvicorn app.main:app --port 8000
+cd api && DEMO_MODE=true uvicorn app.main:app --port 8000
 # open http://localhost:8000 in Chrome
 ```
 

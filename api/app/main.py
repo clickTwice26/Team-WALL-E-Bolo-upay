@@ -1,6 +1,7 @@
 """Bolo upay API.
 
-Flow used by the app:
+Flow used by the app (every call after /api/login carries its token):
+  POST /api/login    PIN -> session token
   POST /api/parse    voice/text command -> intent, amount, recipient (or a question)
   POST /api/assess   risk check -> GREEN / YELLOW / RED (+ interview questions)
   POST /api/assess   again with the user's interview answers
@@ -12,16 +13,17 @@ from __future__ import annotations
 import json
 import logging
 import os
+import secrets
 from datetime import datetime
 from pathlib import Path
 from typing import Literal, Optional
 
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import Depends, FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, Response
 from pydantic import BaseModel, Field
 
-from . import handoff, store
+from . import auth, handoff, store
 from .core import agent
 from .core import features as feat_mod
 from .core import llm, parser, risk, scam, tts
@@ -50,7 +52,6 @@ app.include_router(handoff.router)
 
 # ---------- models ----------
 class ParseIn(BaseModel):
-    user_id: str
     text: str = Field(min_length=1, max_length=500)
     use_llm: bool = True
 
@@ -64,19 +65,20 @@ class Draft(BaseModel):
 
 
 class AssessIn(BaseModel):
-    user_id: str
     draft: Draft
     on_active_call: bool = False
     answers: list[str] = []
-    now: Optional[datetime] = None  # demo/testing only: simulate time of day
+    now: Optional[datetime] = None  # DEMO_MODE only: simulate the time of day
 
 
 class ExecuteIn(BaseModel):
-    user_id: str
     assessment_id: str
     method: Literal["pin", "biometric"]
     pin: Optional[str] = Field(default=None, pattern=r"^\d{4,5}$")
     acknowledged_warning: bool = False
+    # biometric: the phone's device key signs auth.biometric_payload(...)
+    signature: Optional[str] = Field(default=None, max_length=512)
+    public_key: Optional[str] = Field(default=None, max_length=512)
 
 
 class LoginIn(BaseModel):
@@ -85,8 +87,15 @@ class LoginIn(BaseModel):
 
 
 class CancelIn(BaseModel):
-    user_id: str
     assessment_id: str
+
+
+class SwitchIn(BaseModel):
+    user_id: str
+
+
+class DeviceIn(BaseModel):
+    public_key: str = Field(min_length=40, max_length=512)  # base64 DER, P-256
 
 
 class TTSIn(BaseModel):
@@ -109,7 +118,6 @@ class AgentTurn(BaseModel):
 
 
 class AgentIn(BaseModel):
-    user_id: str
     message: str = Field(default="", max_length=500)
     page: AgentPage
     recent_pages: list[AgentPage] = []  # newest first, without the current page
@@ -135,7 +143,7 @@ def health():
 
 
 @app.post("/api/tts")
-def text_to_speech(body: TTSIn):
+def text_to_speech(body: TTSIn, s: auth.Session = Depends(auth.current)):
     """Natural server voice (Gemini TTS). The app falls back to the device voice."""
     if not tts.enabled():
         raise HTTPException(503, "tts_disabled")
@@ -149,13 +157,17 @@ def text_to_speech(body: TTSIn):
 
 @app.get("/api/users")
 def list_users():
+    """Demo persona picker. Only on a demo site (DEMO_MODE=true)."""
+    if not auth.demo_mode():
+        raise HTTPException(404, "not found")
     return [{"id": u["id"], "name": u["name"], "name_bn": u["name_bn"], "persona": u["persona"],
              "phone": mask_phone(u["phone"])} for u in store.users()]
 
 
-@app.get("/api/users/{uid}")
-def get_user(uid: str):
-    u = _user_or_404(uid)
+@app.get("/api/me")
+def me(s: auth.Session = Depends(auth.current)):
+    """The signed-in user's own profile, contacts and recent transactions."""
+    u, uid = s.user, s.user["id"]
     names = {c["phone"]: c for c in u["contacts"]}
     recent = []
     for t in reversed(store.history(uid)[-15:]):
@@ -167,29 +179,53 @@ def get_user(uid: str):
 
 @app.post("/api/login")
 def login(body: LoginIn):
-    """Demo app unlock with the 4-digit PIN (synthetic users, demo PIN 1234)."""
-    _user_or_404(body.user_id)
-    if not store.check_pin(body.user_id, body.pin):
+    """PIN unlock -> session token (synthetic users, demo PIN 1234).
+    Wrong PINs count per account; too many lock it (423)."""
+    if not store.user(body.user_id):
         raise HTTPException(401, {"code": "wrong_pin"})
-    return {"ok": True}
+    auth.check_pin(body.user_id, body.pin)
+    return {"ok": True, "token": auth.issue(body.user_id), "expires_in": auth.SESSION_MINUTES * 60}
+
+
+@app.post("/api/demo/switch")
+def demo_switch(body: SwitchIn, s: auth.Session = Depends(auth.current)):
+    """Demo site only: a session for another demo persona without its PIN."""
+    if not auth.demo_mode():
+        raise HTTPException(404, "not found")
+    _user_or_404(body.user_id)
+    return {"ok": True, "token": auth.issue(body.user_id, amr="demo_switch"),
+            "expires_in": auth.SESSION_MINUTES * 60}
+
+
+@app.post("/api/devices")
+def register_device(body: DeviceIn, s: auth.Session = Depends(auth.current)):
+    """Register the phone's biometric-protected signing key (after a PIN login)."""
+    if s.claims.get("amr") != "pin":
+        raise HTTPException(403, {"code": "pin_login_required"})
+    try:
+        auth.load_device_key(body.public_key)
+    except ValueError:
+        raise HTTPException(422, {"code": "bad_public_key"})
+    kid = auth.key_id(body.public_key)
+    store.register_device(s.user["id"], kid, body.public_key)
+    return {"ok": True, "key_id": kid}
 
 
 @app.post("/api/parse")
-def parse(body: ParseIn):
-    u = _user_or_404(body.user_id)
-    return parser.parse(body.text, u, use_llm=body.use_llm)
+def parse(body: ParseIn, s: auth.Session = Depends(auth.current)):
+    return parser.parse(body.text, s.user, use_llm=body.use_llm)
 
 
 @app.post("/api/assess")
-def assess(body: AssessIn):
-    u = _user_or_404(body.user_id)
+def assess(body: AssessIn, s: auth.Session = Depends(auth.current)):
+    u = s.user
     d = body.draft
     if d.amount > u["balance"]:
         return {"level": "BLOCKED", "reason": "insufficient_balance",
                 "message_bn": "আপনার অ্যাকাউন্টে যথেষ্ট ব্যালেন্স নেই।",
                 "message_en": "Not enough balance.", "balance": u["balance"]}
     sc = scam.match_many([d.command_text, *body.answers])
-    now = body.now.astimezone(store.TZ) if body.now else None
+    now = body.now.astimezone(store.TZ) if body.now and auth.demo_mode() else None
     feats, summary = feat_mod.compute(
         amount=d.amount, intent=d.intent, phone=d.recipient_phone,
         is_return_claim=d.is_return_claim, balance=u["balance"],
@@ -203,14 +239,18 @@ def assess(body: AssessIn):
         result["interview"] = INTERVIEW
     if result["level"] == "RED":
         result["hold_seconds"] = HOLD_SECONDS
+    if result["level"] == "GREEN":
+        # one-time challenge the phone signs if the user approves with biometrics
+        result["bio_challenge"] = secrets.token_urlsafe(24)
     draft = {**d.model_dump(), "answers": body.answers, "on_active_call": body.on_active_call}
     result["assessment_id"] = store.save_assessment(u["id"], draft, result)
     return result
 
 
 @app.post("/api/execute")
-def execute(body: ExecuteIn):
-    u = _user_or_404(body.user_id)
+def execute(body: ExecuteIn, s: auth.Session = Depends(auth.current)):
+    u = s.user
+    auth.ensure_unlocked(u["id"])
     a = store.get_assessment(body.assessment_id)
     if not a or a["user_id"] != u["id"]:
         raise HTTPException(404, "assessment not found")
@@ -222,6 +262,15 @@ def execute(body: ExecuteIn):
     # the server decides which authentication is enough, never the client
     if body.method == "biometric" and level != "GREEN":
         raise HTTPException(403, "PIN required for this transaction")
+    if body.method == "biometric":
+        # the server checks the phone's signature; it never trusts "biometric: ok"
+        challenge = a["result"].get("bio_challenge")
+        if not (challenge and body.signature and body.public_key):
+            raise HTTPException(403, {"code": "biometric_proof_required"})
+        err = auth.verify_device_signature(u["id"], body.public_key,
+                                           auth.biometric_payload(a["id"], challenge), body.signature)
+        if err:
+            raise HTTPException(403, {"code": err})
     if level == "RED":
         waited = (store.now() - datetime.fromisoformat(a["created_at"])).total_seconds()
         if waited < HOLD_SECONDS:
@@ -229,7 +278,11 @@ def execute(body: ExecuteIn):
         if not body.acknowledged_warning:
             raise HTTPException(400, "warning must be acknowledged")
     if body.method == "pin":
-        if not body.pin or not store.check_pin(u["id"], body.pin):
+        try:
+            auth.check_pin(u["id"], body.pin)  # 423 when the account is locked
+        except HTTPException as e:
+            if e.status_code != 401:
+                raise
             fails = a["pin_failures"] + 1
             store.update_assessment(a["id"], pin_failures=fails,
                                     status="locked" if fails >= MAX_PIN_FAILURES else "open")
@@ -245,8 +298,8 @@ def execute(body: ExecuteIn):
 
 
 @app.post("/api/cancel")
-def cancel(body: CancelIn):
-    u = _user_or_404(body.user_id)
+def cancel(body: CancelIn, s: auth.Session = Depends(auth.current)):
+    u = s.user
     a = store.get_assessment(body.assessment_id)
     if not a or a["user_id"] != u["id"]:
         raise HTTPException(404, "assessment not found")
@@ -257,18 +310,26 @@ def cancel(body: CancelIn):
 
 
 @app.post("/api/agent")
-def agent_turn(body: AgentIn):
+def agent_turn(body: AgentIn, s: auth.Session = Depends(auth.current)):
     """Bolo agent: replies and app actions for what the user said on any page."""
-    u = _user_or_404(body.user_id)
-    d = dashboard()
-    facts = {"user": u, "users": store.users(), "history": store.history(u["id"])[-8:],
+    u = s.user
+    demo = auth.demo_mode()
+    d = _dashboard_data()
+    facts = {"user": u, "demo": demo,
+             # other users and the ops numbers exist only on a demo site
+             "users": store.users() if demo else [],
+             "history": store.history(u["id"])[-8:],
              "ops": {k: d[k] for k in ("total", "by_level", "sent", "cancelled_after_warning",
-                                       "amount_protected", "scam_categories")}}
+                                       "amount_protected", "scam_categories")} if demo else {}}
     return agent.run(body.model_dump(), facts)
 
 
-@app.get("/api/dashboard")
+@app.get("/api/dashboard", dependencies=[Depends(auth.demo_user_or_admin)])
 def dashboard():
+    return _dashboard_data()
+
+
+def _dashboard_data() -> dict:
     ds = store.decisions(500)
     by_level = {lv: sum(1 for d in ds if d["level"] == lv) for lv in ("GREEN", "YELLOW", "RED")}
     stopped = [d for d in ds if d["outcome"] == "cancelled" and d["level"] in ("YELLOW", "RED")]
@@ -301,7 +362,7 @@ def interview_questions():
     return INTERVIEW
 
 
-@app.post("/api/demo/reset")
+@app.post("/api/demo/reset", dependencies=[Depends(auth.demo_user_or_admin)])
 def demo_reset():
     store.reset()
     return {"ok": True}
@@ -336,4 +397,6 @@ if CONSOLE_DIR.exists():
 if WEB_DIR.exists():
     @app.get("/{path:path}", include_in_schema=False)
     def spa(path: str, request: Request):
+        if path.startswith("api/"):  # an API route that does not exist, not a page
+            raise HTTPException(404, "not found")
         return _static(WEB_DIR, path, request)

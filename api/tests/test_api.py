@@ -8,29 +8,30 @@ os.environ.pop("LLM_PROVIDER", None)
 from fastapi.testclient import TestClient  # noqa: E402
 
 from app.main import app  # noqa: E402
+from helpers import signed_in  # noqa: E402
 
-c = TestClient(app)
+c = TestClient(app)  # anonymous
+U = {uid: signed_in(app, uid) for uid in ("u1", "u2", "u3")}
 DAY = "2026-10-03T14:00:00+06:00"
 
 
 def draft(text, uid="u1"):
-    p = c.post("/api/parse", json={"user_id": uid, "text": text}).json()
+    p = U[uid].post("/api/parse", json={"text": text}).json()
     phone = (p["recipient"] or {}).get("phone") or p["new_number"]
     return {"intent": p["intent"], "amount": p["amount"], "recipient_phone": phone,
             "is_return_claim": p["is_return_claim"], "command_text": text}
 
 
 def assess(text, uid="u1", **kw):
-    body = {"user_id": uid, "draft": draft(text, uid), "now": DAY, **kw}
-    return c.post("/api/assess", json=body).json()
+    body = {"draft": draft(text, uid), "now": DAY, **kw}
+    return U[uid].post("/api/assess", json=body).json()
 
 
-def test_normal_send_is_green_and_biometric_works():
-    c.post("/api/demo/reset")
+def test_normal_send_is_green_and_pin_works():
+    U["u1"].post("/api/demo/reset")
     a = assess("Ammu ke 2000 taka pathao")
-    assert a["level"] == "GREEN"
-    r = c.post("/api/execute", json={"user_id": "u1", "assessment_id": a["assessment_id"],
-                                     "method": "biometric"})
+    assert a["level"] == "GREEN" and a["bio_challenge"]
+    r = U["u1"].post("/api/execute", json={"assessment_id": a["assessment_id"], "method": "pin", "pin": "1234"})
     assert r.status_code == 200 and r.json()["ok"]
 
 
@@ -60,24 +61,24 @@ def test_extra_zero_triggers_mistake_check():
 
 def test_biometric_refused_for_risky_transfer():
     a = assess("01799998888 e 2000 taka ferot pathao")
-    r = c.post("/api/execute", json={"user_id": "u1", "assessment_id": a["assessment_id"],
+    r = U["u1"].post("/api/execute", json={"assessment_id": a["assessment_id"],
                                      "method": "biometric"})
     assert r.status_code == 403
 
 
 def test_red_needs_acknowledgement_and_pin():
     a = assess("01799998888 e 2000 taka ferot pathao")
-    body = {"user_id": "u1", "assessment_id": a["assessment_id"], "method": "pin", "pin": "1234"}
-    assert c.post("/api/execute", json=body).status_code == 400
-    assert c.post("/api/execute", json={**body, "acknowledged_warning": True, "pin": "0000"}).status_code == 401
-    assert c.post("/api/execute", json={**body, "acknowledged_warning": True}).status_code == 200
+    body = {"assessment_id": a["assessment_id"], "method": "pin", "pin": "1234"}
+    assert U["u1"].post("/api/execute", json=body).status_code == 400
+    assert U["u1"].post("/api/execute", json={**body, "acknowledged_warning": True, "pin": "0000"}).status_code == 401
+    assert U["u1"].post("/api/execute", json={**body, "acknowledged_warning": True}).status_code == 200
 
 
 def test_cancel_counts_as_protected():
-    c.post("/api/demo/reset")
+    U["u1"].post("/api/demo/reset")
     a = assess("01799998888 e 2000 taka ferot pathao")
-    c.post("/api/cancel", json={"user_id": "u1", "assessment_id": a["assessment_id"]})
-    d = c.get("/api/dashboard").json()
+    U["u1"].post("/api/cancel", json={"assessment_id": a["assessment_id"]})
+    d = U["u1"].get("/api/dashboard").json()
     assert d["cancelled_after_warning"] == 1 and d["amount_protected"] == 2000
 
 
@@ -98,7 +99,7 @@ def test_bangla_negative_verb_is_not_a_hit():
 
 
 def test_scam_warning_before_amount_or_recipient_is_known():
-    p = c.post("/api/parse", json={"user_id": "u1", "text":
+    p = U["u1"].post("/api/parse", json={"text":
                "উপায় অফিস থেকে ফোন দিয়েছে হাজার টাকা পাঠাতে বা পিন নাম্বার বলতে"}).json()
     assert p["status"] == "need_recipient"
     w = p["scam_warning"]
@@ -108,10 +109,11 @@ def test_scam_warning_before_amount_or_recipient_is_known():
 
 def test_no_early_warning_for_normal_or_refund_commands():
     for text in ("ammu ke 500 taka pathao", "ammu ke taka pathao", "vul kore pathaisi ferot dao"):
-        p = c.post("/api/parse", json={"user_id": "u1", "text": text}).json()
+        p = U["u1"].post("/api/parse", json={"text": text}).json()
         assert "scam_warning" not in p, text
 
 
 def test_login_pin():
-    assert c.post("/api/login", json={"user_id": "u1", "pin": "1234"}).status_code == 200
+    r = c.post("/api/login", json={"user_id": "u1", "pin": "1234"})
+    assert r.status_code == 200 and r.json()["token"]
     assert c.post("/api/login", json={"user_id": "u1", "pin": "9999"}).status_code == 401

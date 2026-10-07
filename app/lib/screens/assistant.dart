@@ -52,7 +52,6 @@ class _AssistantScreenState extends State<AssistantScreen> {
   Map<String, dynamic>? doneInfo;
 
   bool get bn => appState.bangla;
-  String get uid => appState.userId;
 
   late List<String> _scamContext = widget.scamContext;
   late final AgentPage _page = AgentPage(describe: _describe, handlers: {
@@ -171,7 +170,7 @@ class _AssistantScreenState extends State<AssistantScreen> {
       message = null;
     });
     try {
-      final p = await Api.parse(uid, t);
+      final p = await Api.parse(t);
       parsed = p;
       draft = {
         'intent': p['intent'],
@@ -243,7 +242,7 @@ class _AssistantScreenState extends State<AssistantScreen> {
   Future<void> _assess() async {
     setState(() => step = _Step.assessing);
     try {
-      final a = await Api.assess(uid, draft!, onCall: appState.simulateCall, answers: answers);
+      final a = await Api.assess(draft!, onCall: appState.simulateCall, answers: answers);
       assessment = a;
       final level = a['level'];
       if (level == 'BLOCKED') {
@@ -341,19 +340,25 @@ class _AssistantScreenState extends State<AssistantScreen> {
     }
   }
 
+  /// The phone signs the server's one-time challenge for this transfer with
+  /// its biometric-protected key; the server checks the signature.
   Future<void> _useBiometric() async {
-    final ok = await Biometric.authenticate(tr(bn, 'লেনদেন নিশ্চিত করুন', 'Confirm the transaction'));
-    if (ok) await _execute('biometric');
+    final a = assessment!;
+    final challenge = a['bio_challenge'];
+    if (challenge == null) return;
+    final proof = await Biometric.sign('bolo-upay:${a['assessment_id']}:$challenge',
+        tr(bn, 'লেনদেন নিশ্চিত করুন', 'Confirm the transaction'));
+    if (proof != null) await _execute('biometric', proof: proof);
   }
 
-  Future<void> _execute(String method, {String? pin}) async {
+  Future<void> _execute(String method, {String? pin, Map<String, String>? proof}) async {
     setState(() {
       step = _Step.working;
       pinError = null;
     });
     try {
-      final r = await Api.execute(uid, assessment!['assessment_id'], method,
-          pin: pin, acknowledged: acknowledged);
+      final r = await Api.execute(assessment!['assessment_id'], method,
+          pin: pin, acknowledged: acknowledged, proof: proof);
       await appState.refresh();
       final tx = Map<String, dynamic>.from(r['transaction']);
       final s = tr(bn, 'সফল হয়েছে! নতুন ব্যালেন্স ${taka(tx['balance'], true)}',
@@ -364,7 +369,7 @@ class _AssistantScreenState extends State<AssistantScreen> {
         step = _Step.done;
       });
     } on ApiError catch (e) {
-      if (e.status == 401) {
+      if (e.status == 401 && e.code == 'wrong_pin') {
         final left = e.detail is Map ? e.detail['attempts_left'] : 0;
         setState(() {
           step = left == 0 ? _Step.done : _Step.auth;
@@ -372,6 +377,23 @@ class _AssistantScreenState extends State<AssistantScreen> {
           if (left == 0) {
             doneInfo = {'kind': 'locked', 'text': tr(bn, 'অনেকবার ভুল পিন। লেনদেন বাতিল।', 'Too many wrong PINs. Cancelled.')};
           }
+        });
+      } else if (e.status == 423) {
+        // too many wrong PINs on this account: payments wait until the lock ends
+        final mins = (e.retryAfter / 60).ceil();
+        final s = tr(bn, 'অনেকবার ভুল পিন। নিরাপত্তার জন্য ${bnDigits('$mins')} মিনিট পর আবার চেষ্টা করুন।',
+            'Too many wrong PINs. For your safety, try again in $mins minutes.');
+        _say(s);
+        setState(() {
+          doneInfo = {'kind': 'locked', 'text': s};
+          step = _Step.done;
+        });
+      } else if (e.status == 403 && method == 'biometric') {
+        // the signature did not check out (key not registered or changed): use the PIN
+        setState(() {
+          biometricOk = false;
+          step = _Step.auth;
+          pinError = tr(bn, 'ফিঙ্গারপ্রিন্ট দিয়ে যাচাই হয়নি। পিন দিন।', 'Biometric approval failed. Please enter your PIN.');
         });
       } else if (e.status == 425) {
         setState(() => step = _Step.hold);
@@ -393,7 +415,7 @@ class _AssistantScreenState extends State<AssistantScreen> {
   Future<void> _cancel() async {
     if (assessment != null) {
       try {
-        await Api.cancel(uid, assessment!['assessment_id']);
+        await Api.cancel(assessment!['assessment_id']);
       } on ApiError catch (_) {}
     }
     final red = assessment?['level'] == 'RED' || assessment?['level'] == 'YELLOW';

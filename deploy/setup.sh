@@ -5,6 +5,8 @@
 #     | sudo DOMAIN=bolo.example.com bash
 #
 # Optional:  LLM_PROVIDER=gemini LLM_API_KEY=... LLM_MODEL=gemini-2.5-flash
+#            DEMO_MODE=false (default true: this script deploys the public demo)
+#            CONSOLE_STAFF="Mitu:password,Rafi:password" (named support-console accounts)
 # Before running: point the domain's A record at this server and open ports 80 and 443.
 set -euo pipefail
 
@@ -29,6 +31,12 @@ fi
 cd "$DIR"
 
 echo "==> Writing .env"
+# keep secrets from an earlier run so sessions and the admin token survive a redeploy
+old() { if [ -f .env ]; then grep -m1 "^$1=" .env | cut -d= -f2- || true; fi; }
+random_hex() { od -An -N32 -tx1 /dev/urandom | tr -d ' \n'; }
+AUTH_SECRET="${AUTH_SECRET:-$(old AUTH_SECRET)}"; AUTH_SECRET="${AUTH_SECRET:-$(random_hex)}"
+ADMIN_TOKEN="${ADMIN_TOKEN:-$(old ADMIN_TOKEN)}"; ADMIN_TOKEN="${ADMIN_TOKEN:-$(random_hex)}"
+CONSOLE_STAFF="${CONSOLE_STAFF:-$(old CONSOLE_STAFF)}"
 cat > .env <<EOF
 DOMAIN=${DOMAIN}
 LLM_PROVIDER=${LLM_PROVIDER:-}
@@ -36,6 +44,10 @@ LLM_API_KEY=${LLM_API_KEY:-}
 LLM_MODEL=${LLM_MODEL:-}
 HOLD_SECONDS=${HOLD_SECONDS:-30}
 CORS_ORIGINS=*
+DEMO_MODE=${DEMO_MODE:-true}
+AUTH_SECRET=${AUTH_SECRET}
+ADMIN_TOKEN=${ADMIN_TOKEN}
+CONSOLE_STAFF=${CONSOLE_STAFF}
 EOF
 chmod 600 .env
 

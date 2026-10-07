@@ -45,7 +45,7 @@ Prototype by **Team WALL-E** (Shagato Chowdhury, Umme Munia) for the AI Dev Fest
 | Scam interview | Spoken questions; answers matched against a Bangla/Banglish/English scam phrase lexicon (`data/scam_phrases.json`) with negation handling ("keu otp chay nai" is not a hit) |
 | Hard rules | Asking for a PIN/OTP, fake upay staff, lottery/fee, allowance fee → RED. "Send it back" when no money came from that number → RED. "Relative in trouble" from a new number → RED |
 | Mistake guard | Known recipient + amount about 10× the usual → "Did you mean ৳350?" |
-| Risk-based authentication | GREEN: Face ID / fingerprint or PIN · YELLOW: PIN · RED: 30-second hold, warning acknowledgement, then PIN. Enforced by the server, not the client |
+| Risk-based authentication | GREEN: Face ID / fingerprint or PIN · YELLOW: PIN · RED: 30-second hold, warning acknowledgement, then PIN. Enforced by the server, not the client: a fingerprint approval is a signature from the phone's hardware key over a one-time server challenge, which the server verifies |
 | Explanations | Every warning lists its reasons in Bangla and English |
 | Ops dashboard | Decisions by risk level, transfers cancelled after a warning, money protected, scam patterns seen |
 | Accuracy report | Measured parser accuracy and scam-shield metrics, shown live in the app |
@@ -61,7 +61,7 @@ Safety rules live in the server's `sanitize()` and apply to every plan, LLM or r
 
 ### Human handoff and the support console
 
-The agent connects a person when the user asks ("মানুষের সাথে কথা বলতে চাই", "talk to a person"), reports a scam, lost money or a wrong transfer, or after two misunderstandings in a row. Chats about a scam, lost money or a RED transfer are **urgent** and go first. Staff work in the support console at **`/console`** (access code: `CONSOLE_TOKEN`): a queue, the chat, and the context the bot handed over (what the customer said, the page they were on, recent pages, the bot conversation, their scam-shield checks and transactions). Staff can stop a pending transfer; no console route sends money, approves a held transfer, or reads or changes a PIN. A PIN typed into the chat is masked before it is stored.
+The agent connects a person when the user asks ("মানুষের সাথে কথা বলতে চাই", "talk to a person"), reports a scam, lost money or a wrong transfer, or after two misunderstandings in a row. Chats about a scam, lost money or a RED transfer are **urgent** and go first. Staff sign in to the support console at **`/console`** with a named account (`CONSOLE_STAFF`): a queue, the chat, and the context the bot handed over (what the customer said, the page they were on, recent pages, the bot conversation, their scam-shield checks and transactions). Staff can stop a pending transfer; no console route sends money, approves a held transfer, or reads or changes a PIN. A PIN typed into the chat is masked before it is stored.
 
 What the app deliberately does **not** do: it never listens to phone calls, never uses voice biometrics (voices can be cloned), and never sends money without the user's PIN or biometric confirmation.
 
@@ -77,8 +77,8 @@ What the app deliberately does **not** do: it never listens to phone calls, neve
 | Text matching | RapidFuzz |
 | LLM (optional) | Anthropic Python SDK (`claude-opus-5-5` by default), OpenAI or Gemini via REST |
 | Storage | SQLite (prototype) |
-| Security | bcrypt-hashed demo PIN, server-side authentication rules |
-| Tests | pytest (78 tests), parser evaluation script |
+| Security | Signed session tokens (every request acts as the signed-in user, never a user id in the body), bcrypt-hashed PINs with a per-account lock after 5 wrong tries, biometric approvals verified as ECDSA P-256 signatures from a hardware-backed device key (`biometric_signature`), named support-console accounts, demo-only controls behind `DEMO_MODE` |
+| Tests | pytest (93 tests), parser evaluation script |
 | Deploy | Docker, Docker Compose, Caddy (automatic HTTPS) |
 
 ## 4. Requirements
@@ -121,7 +121,12 @@ Copy `.env.example` to `.env`. Never commit `.env`.
 | `LLM_MODEL` | Optional model override | `claude-opus-5-5` |
 | `HOLD_SECONDS` | How long a RED transfer stays on hold | `30` |
 | `CORS_ORIGINS` | Allowed origins for the API | `*` |
-| `CONSOLE_TOKEN` | Access code for the support console at `/console`. **Change it on a public site** | `support-demo` |
+| `AUTH_SECRET` | Secret that signs session tokens (`openssl rand -hex 32`). Without it sessions end on every restart | random |
+| `SESSION_MINUTES` | Minutes before the PIN screen comes back | `30` |
+| `DEMO_MODE` | `true` only for the public demo: persona picker, switching demo users, reset, simulated time of day, default console code | `false` |
+| `ADMIN_TOKEN` | Header `X-Admin-Token` for ops tools: dashboard and reset outside demo mode. Empty = no admin access | random |
+| `CONSOLE_STAFF` | Named support-console accounts: `Mitu:<password or bcrypt hash>,Rafi:<...>` | |
+| `CONSOLE_TOKEN` | Shared console code, used only when `CONSOLE_STAFF` is empty. The default `support-demo` works only with `DEMO_MODE=true` | |
 | `TTS_VOICE` / `TTS_MODEL` | Optional Gemini TTS voice and model (used when `LLM_PROVIDER=gemini`) | `Kore` |
 | `DB_PATH` | SQLite file (set by Docker to `/data/bolo.db`) | `data/bolo.db` |
 | `WEB_DIR` | Folder of the Flutter web build served at `/` | `app/build/web` |
@@ -133,11 +138,12 @@ Copy `.env.example` to `.env`. Never commit `.env`.
 **Local development**
 ```bash
 # terminal 1: API on http://localhost:8000 (docs at /docs)
-cd api && uvicorn app.main:app --reload --port 8000
+cd api && DEMO_MODE=true uvicorn app.main:app --reload --port 8000
 
 # terminal 2: build the web app; the API serves it at http://localhost:8000
 cd app && flutter build web --release --no-web-resources-cdn
-# support console, served at http://localhost:8000/console (access code: CONSOLE_TOKEN, default support-demo)
+# support console, served at http://localhost:8000/console (sign in with a CONSOLE_STAFF account;
+# with DEMO_MODE=true and no accounts, any name with the code support-demo)
 flutter build web --release --no-web-resources-cdn -t lib/console/main.dart --base-href /console/ -o build/console
 ```
 
@@ -170,14 +176,14 @@ The app and API are served together at `https://$DOMAIN`.
 
 - API health check: https://boloupay.shagato.space/api/health
 - API docs (OpenAPI): https://boloupay.shagato.space/docs
-- Support console: https://boloupay.shagato.space/console (access code from `CONSOLE_TOKEN`)
+- Support console: https://boloupay.shagato.space/console (named accounts from `CONSOLE_STAFF`)
 
 Unlock the app with the **demo PIN `1234`**. Use the settings button (top right on the home screen) to switch between three synthetic users, toggle Bangla/English, and simulate "on a phone call". The **demo PIN is `1234`**.
 
 ## 9. Testing
 
 ```bash
-cd api && python -m pytest -q          # 78 tests: parser, scam matcher, API flow, agent rules and safety, handoff, TTS
+cd api && python -m pytest -q          # 93 tests: parser, scam matcher, API flow, sessions and PIN lock, signed biometrics, agent rules and safety, handoff, TTS
 python ml/evaluate_parser.py           # labelled command set → model/parser_metrics.json
 python ml/train_risk.py                # trains and evaluates → model/risk_metrics.json
 ```
