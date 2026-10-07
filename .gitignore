@@ -27,6 +27,9 @@ app/**/GeneratedPluginRegistrant.*
 app/android/.gradle/
 app/android/local.properties
 
+# Study logs from real people (docs/AUDIO_EVAL.md): kept off GitHub by default
+data/eval_logs/
+
 # OS / editors
 .DS_Store
 .idea/

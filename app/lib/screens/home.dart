@@ -6,6 +6,7 @@ import '../state.dart';
 import '../strings.dart';
 import '../theme.dart';
 import 'assistant.dart';
+import 'eval_mode.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -441,6 +442,17 @@ class _SettingsSheetState extends State<_SettingsSheet> {
               icon: const Icon(Icons.restart_alt),
               label: Text(tr(bn, 'ডেমো ডেটা রিসেট', 'Reset demo data')),
             ),
+            // study tools (docs/AUDIO_EVAL.md), only on a demo site
+            if (appState.users.isNotEmpty)
+              ListTile(
+                contentPadding: EdgeInsets.zero,
+                leading: const Icon(Icons.graphic_eq_rounded),
+                title: Text(tr(bn, 'মূল্যায়ন মোড (আসল কণ্ঠ)', 'Evaluation mode (real speech)')),
+                onTap: () {
+                  Navigator.pop(ctx);
+                  navigatorKey.currentState?.push(MaterialPageRoute(builder: (_) => const EvalScreen()));
+                },
+              ),
           ]),
         );
       },

@@ -40,6 +40,7 @@ dependencies:
   local_auth: ^3.0.2
   audioplayers: ^6.1.0
   biometric_signature: ^13.2.0
+  web: ^1.1.1  # study-log download on web
 dev_dependencies:
   flutter_test:
     sdk: flutter

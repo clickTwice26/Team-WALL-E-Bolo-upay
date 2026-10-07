@@ -25,7 +25,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, Response
 from pydantic import BaseModel, Field
 
-from . import auth, handoff, impact, monitor, store
+from . import auth, evaluation, handoff, impact, monitor, store
 from .core import agent
 from .core import features as feat_mod
 from .core import interview, llm, parser, risk, scam, tts
@@ -50,6 +50,7 @@ app = FastAPI(title="Bolo upay API", version="1.0.0",
 app.add_middleware(CORSMiddleware, allow_origins=os.getenv("CORS_ORIGINS", "*").split(","),
                    allow_methods=["*"], allow_headers=["*"])
 app.include_router(handoff.router)
+app.include_router(evaluation.router)  # demo-only study tooling
 access_log = logging.getLogger("bolo.access")
 if not access_log.handlers:
     _h = logging.StreamHandler()
@@ -421,7 +422,7 @@ def _dashboard_data() -> dict:
 @app.get("/api/metrics")
 def metrics():
     out = {"risk_model": risk.model_card()}
-    for name in ("risk_metrics", "parser_metrics", "sequence_metrics"):
+    for name in ("risk_metrics", "parser_metrics", "sequence_metrics", "audio_metrics"):
         p = ROOT / "model" / f"{name}.json"
         out[name] = json.loads(p.read_text()) if p.exists() else None
     return out
