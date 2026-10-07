@@ -95,6 +95,17 @@
         "banglish": ["chakrir jonno registration fee", "loan pete age", "double taka", "nishchit labh"],
         "en": ["registration fee for job", "pay first to get loan", "double your money", "guaranteed profit"]
       }
+    },
+    {
+      "id": "money_mule",
+      "level": "medium",
+      "explain_bn": "অচেনা কারো টাকা কমিশনের বিনিময়ে অন্য নম্বরে পাঠানো মানি লন্ডারিং; আপনার অ্যাকাউন্ট বন্ধ হতে পারে।",
+      "explain_en": "Passing on a stranger's money for a commission is money laundering; your account can be blocked.",
+      "phrases": {
+        "bn": ["কমিশন দেবে", "কমিশন দিবে", "কমিশন পাবো", "অন্য নম্বরে পাঠাতে বলেছে", "টাকা ঘুরিয়ে দিতে"],
+        "banglish": ["commission dibe", "commission debe", "commission pabo", "onno number e pathate", "taka ghurate", "forward korte"],
+        "en": ["for a commission", "pass the money on", "forward the money", "send it to another number"]
+      }
     }
   ]
 }

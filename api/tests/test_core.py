@@ -79,3 +79,15 @@ def test_parser_test_set_has_no_silent_wrong_amount():
     m = main(use_llm=False)
     assert m["silent_wrong_amount_rate"] == 0
     assert m["silent_wrong_recipient_rate"] == 0
+
+
+def test_money_mule_phrases():
+    for text in ("commission pabo bolse, onno number e pathate hobe", "অনলাইনে কাজ, কমিশন দেবে বলেছে",
+                 "they said forward the money for a commission"):
+        assert [h["category"] for h in scam.match(text)["hits"]] == ["money_mule"], text
+
+
+def test_negation_also_stops_a_fuzzy_match():
+    # "commission dibe" is negated; the near-identical "commission debe" must not sneak in
+    assert scam.match("keu commission dibe na")["score"] == 0
+    assert scam.match("costomer care theke bolse")["hits"][0]["category"] == "fake_official"  # misspelling still caught
