@@ -833,6 +833,7 @@ class _AssistantScreenState extends State<AssistantScreen> {
         error: pinError,
         title: level == 'GREEN' ? tr(bn, 'পিন বা ফিঙ্গারপ্রিন্ট', 'PIN or biometrics') : tr(bn, 'পিন দিয়ে নিশ্চিত করুন', 'Confirm with PIN'),
         onSubmit: (p) => _execute('pin', pin: p),
+        autoFillPin: '1234',
       ),
       if (canBio) ...[
         const SizedBox(height: 8),

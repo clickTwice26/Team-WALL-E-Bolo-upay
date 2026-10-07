@@ -22,11 +22,38 @@ class BoloUpayApp extends StatelessWidget {
       title: 'Bolo upay (prototype)',
       debugShowCheckedModeBanner: false,
       theme: buildTheme(),
-      builder: (context, child) => Column(children: [
-        Expanded(child: child!),
-        const _PrototypeRibbon(),
-      ]),
+      builder: (context, child) => _PhoneFrame(
+        child: Column(children: [
+          Expanded(child: child!),
+          const _PrototypeRibbon(),
+        ]),
+      ),
       home: const _Gate(),
+    );
+  }
+}
+
+/// Always the mobile layout: on a wide screen the app sits in a 430px column.
+class _PhoneFrame extends StatelessWidget {
+  const _PhoneFrame({required this.child});
+  final Widget child;
+
+  static const double _width = 430;
+
+  @override
+  Widget build(BuildContext context) {
+    final mq = MediaQuery.of(context);
+    if (mq.size.width <= _width) return child;
+    return ColoredBox(
+      color: BrandColors.navyDark,
+      child: Center(
+        child: SizedBox(
+          width: _width,
+          child: ClipRect(
+            child: MediaQuery(data: mq.copyWith(size: Size(_width, mq.size.height)), child: child),
+          ),
+        ),
+      ),
     );
   }
 }

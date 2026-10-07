@@ -15,6 +15,7 @@ class PinPad extends StatefulWidget {
     this.error,
     this.title,
     this.trailing,
+    this.autoFillPin,
   });
 
   final bool bangla;
@@ -23,6 +24,9 @@ class PinPad extends StatefulWidget {
   final String? title;
   final Widget? trailing;
   final ValueChanged<String> onSubmit;
+
+  /// Demo convenience: types this PIN digit by digit, then submits.
+  final String? autoFillPin;
 
   @override
   State<PinPad> createState() => _PinPadState();
@@ -35,6 +39,23 @@ class _PinPadState extends State<PinPad> {
     '2': 'ABC', '3': 'DEF', '4': 'GHI', '5': 'JKL',
     '6': 'MNO', '7': 'PQRS', '8': 'TUV', '9': 'WXYZ',
   };
+
+  @override
+  void initState() {
+    super.initState();
+    if (widget.autoFillPin != null) _autoFill(widget.autoFillPin!);
+  }
+
+  Future<void> _autoFill(String pin) async {
+    await Future.delayed(const Duration(milliseconds: 500));
+    for (final d in pin.split('')) {
+      if (!mounted) return;
+      _tap(d);
+      await Future.delayed(const Duration(milliseconds: 220));
+    }
+    await Future.delayed(const Duration(milliseconds: 250));
+    if (mounted) _submit();
+  }
 
   void _tap(String d) {
     HapticFeedback.lightImpact();

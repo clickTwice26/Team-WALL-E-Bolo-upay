@@ -134,6 +134,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           style: const TextStyle(color: BrandColors.navy, fontSize: 16)),
                     ),
                     onSubmit: _submit,
+                    autoFillPin: '1234',
                   ),
                 ]),
               ),
