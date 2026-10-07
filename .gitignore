@@ -37,3 +37,7 @@ docs/report/*.aux
 docs/report/*.log
 docs/report/*.out
 docs/report/report.pdf
+
+# trained on real data (ml/train_risk.py --data): stays on upay servers
+model/*_real.*
+docs/img/calibration_real.png
