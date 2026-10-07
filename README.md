@@ -49,6 +49,19 @@ Prototype by **Team WALL-E** (Shagato Chowdhury, Umme Munia) for the AI Dev Fest
 | Explanations | Every warning lists its reasons in Bangla and English |
 | Ops dashboard | Decisions by risk level, transfers cancelled after a warning, money protected, scam patterns seen |
 | Accuracy report | Measured parser accuracy and scam-shield metrics, shown live in the app |
+| Bolo agent (every page) | Voice/text agent that sees the page on screen and the last 3 pages, and acts through the same code as the buttons. LLM planner when a key is set, Bangla/Banglish/English keyword router otherwise; every plan passes a safety guard |
+| Human handoff + support console | "Talk to a person", a reported scam or lost money, or two misses in a row hand the chat to staff at `/console`, with the bot context and the customer's scam checks. Staff can stop a pending transfer, never send money |
+| Natural voice | Gemini TTS through the server (same key as the LLM), best installed device voice as fallback |
+
+### Bolo agent (every page)
+
+The centre mic (or the floating orb on other pages) opens a bottom panel that works on every page. The app tells the agent what is on screen (page, step, a short summary, and the actions its buttons offer right now) plus the last 3 pages; the agent answers in Bangla or English and the app runs the returned actions through the same methods as its buttons: open a page, go back, settings, language, show/hide balance, switch demo user, call simulation, start a transfer, pick an amount or recipient, answer the scam questions, confirm, cancel, repeat. Try: "ড্যাশবোর্ড খোলো", "এই পেজে কী আছে?", "আগের পেজে কী ছিল?", "dokaner ta", "abar pathao".
+
+Safety rules live in the server's `sanitize()` and apply to every plan, LLM or rules: there is no action for entering a PIN, using biometrics, ticking the RED warning box or skipping a hold; page actions run only when the page offers them (the app never offers "confirm" on a RED review); money-moving actions need the user's own words and never run on automatic follow-ups; interview answers are always the user's raw words; a PIN or OTP said aloud gets a warning and no action.
+
+### Human handoff and the support console
+
+The agent connects a person when the user asks ("মানুষের সাথে কথা বলতে চাই", "talk to a person"), reports a scam, lost money or a wrong transfer, or after two misunderstandings in a row. Chats about a scam, lost money or a RED transfer are **urgent** and go first. Staff work in the support console at **`/console`** (access code: `CONSOLE_TOKEN`): a queue, the chat, and the context the bot handed over (what the customer said, the page they were on, recent pages, the bot conversation, their scam-shield checks and transactions). Staff can stop a pending transfer; no console route sends money, approves a held transfer, or reads or changes a PIN. A PIN typed into the chat is masked before it is stored.
 
 What the app deliberately does **not** do: it never listens to phone calls, never uses voice biometrics (voices can be cloned), and never sends money without the user's PIN or biometric confirmation.
 
@@ -65,7 +78,7 @@ What the app deliberately does **not** do: it never listens to phone calls, neve
 | LLM (optional) | Anthropic Python SDK (`claude-opus-5-5` by default), OpenAI or Gemini via REST |
 | Storage | SQLite (prototype) |
 | Security | bcrypt-hashed demo PIN, server-side authentication rules |
-| Tests | pytest (40 tests), parser evaluation script |
+| Tests | pytest (78 tests), parser evaluation script |
 | Deploy | Docker, Docker Compose, Caddy (automatic HTTPS) |
 
 ## 4. Requirements
@@ -108,8 +121,11 @@ Copy `.env.example` to `.env`. Never commit `.env`.
 | `LLM_MODEL` | Optional model override | `claude-opus-5-5` |
 | `HOLD_SECONDS` | How long a RED transfer stays on hold | `30` |
 | `CORS_ORIGINS` | Allowed origins for the API | `*` |
+| `CONSOLE_TOKEN` | Access code for the support console at `/console`. **Change it on a public site** | `support-demo` |
+| `TTS_VOICE` / `TTS_MODEL` | Optional Gemini TTS voice and model (used when `LLM_PROVIDER=gemini`) | `Kore` |
 | `DB_PATH` | SQLite file (set by Docker to `/data/bolo.db`) | `data/bolo.db` |
 | `WEB_DIR` | Folder of the Flutter web build served at `/` | `app/build/web` |
+| `CONSOLE_DIR` | Folder of the console build served at `/console` | `app/build/console` |
 | `API_BASE` (Flutter build flag) | API URL for iOS/Android builds | `--dart-define=API_BASE=https://bolo.example.com` |
 
 ## 7. Run and build commands
@@ -121,6 +137,8 @@ cd api && uvicorn app.main:app --reload --port 8000
 
 # terminal 2: build the web app; the API serves it at http://localhost:8000
 cd app && flutter build web --release --no-web-resources-cdn
+# support console, served at http://localhost:8000/console (access code: CONSOLE_TOKEN, default support-demo)
+flutter build web --release --no-web-resources-cdn -t lib/console/main.dart --base-href /console/ -o build/console
 ```
 
 **iPhone (via Xcode or flutter)**
@@ -152,13 +170,14 @@ The app and API are served together at `https://$DOMAIN`.
 
 - API health check: https://boloupay.shagato.space/api/health
 - API docs (OpenAPI): https://boloupay.shagato.space/docs
+- Support console: https://boloupay.shagato.space/console (access code from `CONSOLE_TOKEN`)
 
 Unlock the app with the **demo PIN `1234`**. Use the settings button (top right on the home screen) to switch between three synthetic users, toggle Bangla/English, and simulate "on a phone call". The **demo PIN is `1234`**.
 
 ## 9. Testing
 
 ```bash
-cd api && python -m pytest -q          # 40 tests: parser, scam matcher, API flow, login
+cd api && python -m pytest -q          # 78 tests: parser, scam matcher, API flow, agent rules and safety, handoff, TTS
 python ml/evaluate_parser.py           # labelled command set → model/parser_metrics.json
 python ml/train_risk.py                # trains and evaluates → model/risk_metrics.json
 ```
@@ -201,12 +220,13 @@ The scenarios are simulated (no real fraud data is available). The numbers show 
 ## Repository layout
 
 ```
-api/            FastAPI backend (app/core: parser, numbers, contacts, scam, features, risk, llm)
-app/            Flutter app (iOS, Android, Web)
+api/            FastAPI backend (app/core: parser, numbers, contacts, scam, features, risk, llm,
+                agent, pinguard, tts; app/handoff.py: human handoff + support console API)
+app/            Flutter app (iOS, Android, Web); lib/agent: Bolo agent; lib/console: support console
 ml/             generate_data.py, train_risk.py, evaluate_parser.py
 data/           seed.json (synthetic), scam_phrases.json, test_commands.json
 model/          risk_model.joblib, risk_metrics.json, parser_metrics.json
-deploy/         Dockerfile, Caddyfile
+deploy/         Dockerfile, Caddyfile, nginx site (hosts that already run nginx)
 docs/           Bolo-upay-Report-Team-WALL-E.pdf (project report), report/ (LaTeX source), DEPLOYMENT.md,
                 PIPELINE.md, REPORT.md, DEMO_SCRIPT.md
 ```
