@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/agent_icon.dart';
+
 import '../state.dart';
 import '../strings.dart';
 import '../theme.dart';
@@ -47,7 +49,7 @@ class AgentOrb extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: BrandColors.navy,
+      color: Colors.white,
       shape: const CircleBorder(side: BorderSide(color: BrandColors.yellow, width: 3)),
       elevation: 6,
       child: InkWell(
@@ -56,7 +58,7 @@ class AgentOrb extends StatelessWidget {
         child: const SizedBox(
           width: 58,
           height: 58,
-          child: Icon(Icons.graphic_eq_rounded, color: Colors.white, size: 30),
+          child: Center(child: AgentIcon(size: 46)),
         ),
       ),
     );
@@ -215,7 +217,11 @@ class _PanelState extends State<_Panel> {
           borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
         ),
         child: Row(children: [
-          const Icon(Icons.graphic_eq_rounded, color: BrandColors.yellow),
+          Container(
+            padding: const EdgeInsets.all(2),
+            decoration: const BoxDecoration(color: Colors.white, shape: BoxShape.circle),
+            child: const AgentIcon(size: 28),
+          ),
           const SizedBox(width: 8),
           Text(tr(bn, 'বলো এজেন্ট', 'Bolo agent'),
               style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 16)),

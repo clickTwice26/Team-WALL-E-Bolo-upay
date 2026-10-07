@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/agent_icon.dart';
+
 import '../agent/agent.dart';
 import '../api.dart';
 import '../state.dart';
@@ -136,8 +138,8 @@ class HomeScreen extends StatelessWidget {
               Container(
                 width: 52,
                 height: 52,
-                decoration: const BoxDecoration(color: BrandColors.navy, shape: BoxShape.circle),
-                child: const Icon(Icons.mic_rounded, color: Colors.white, size: 28),
+                decoration: const BoxDecoration(color: Colors.white, shape: BoxShape.circle),
+                child: const AgentIcon(size: 48),
               ),
               const SizedBox(width: 12),
               Expanded(

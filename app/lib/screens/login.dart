@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/agent_icon.dart';
+
 import '../api.dart';
 import '../services/biometric.dart';
 import '../state.dart';
@@ -59,7 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
         height: size,
         decoration: const BoxDecoration(color: BrandColors.yellow, shape: BoxShape.circle),
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Icon(Icons.mic_rounded, color: BrandColors.navy, size: size * 0.38),
+          AgentIcon(size: size * 0.5),
           Text('বলো', style: TextStyle(color: BrandColors.navy, fontWeight: FontWeight.w800, fontSize: size * 0.16, height: 1)),
         ]),
       );
@@ -81,7 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
             height: 170,
             decoration: const BoxDecoration(color: Colors.white, shape: BoxShape.circle),
             child: Column(mainAxisAlignment: MainAxisAlignment.center, children: const [
-              Icon(Icons.mic_rounded, color: BrandColors.navy, size: 64),
+              AgentIcon(size: 96),
               Text('বলো upay', style: TextStyle(color: BrandColors.navy, fontWeight: FontWeight.w800, fontSize: 22)),
             ]),
           ),
