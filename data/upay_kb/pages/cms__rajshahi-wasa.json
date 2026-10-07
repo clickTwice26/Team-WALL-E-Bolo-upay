@@ -1,0 +1,92 @@
+{
+ "url": "https://www.upaybd.com/services/details/rajshahi-wasa",
+ "api": "https://api.upaybd.com/api/v2/pages/rajshahi-wasa",
+ "data": {
+  "title_english": "Rajshahi Wasa",
+  "title_bangla": "Rajshahi Wasa",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Rajshahi WASA",
+     "title bn": "রাজশাহী ওয়াসা",
+     "background image": "/media/dynamic_image/Water_-_Desktop_Header_1Ju4pB8_6QHliFi.png",
+     "background image sd": "/media/dynamic_image/Water_Mobile_Header_1tAOr6A_nasfgSf.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<div style=\"text-align: center;\"><span style=\"font-size: 14pt;\"><br />Complete your Rajshahi WASA Bill in just a few steps. Check the process and know more on the details</span></div>",
+     "desc bn": "<div style=\"text-align: center;\"><span style=\"font-size: 14pt;\"><br />আপনার রাজশাহী ওয়াসা বিল পরিশোধ করুন মাত্র কয়েকটা ক্লিক করেই। নিয়ম জানতে নিচের ধাপ অনুসরণ করুন</span></div>",
+     "Methods": [
+      {
+       "title": "How to pay Rajshahi WASA bill ?",
+       "title bn": "কিভাবে রাজশাহী ওয়াসা বিল পরিশোধ করবেন ?",
+       "desc": "",
+       "desc bn": "",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/25.png",
+         "image sd": "/media/dynamic_image/25_Djg1iv9.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_1Qb7H4p.png",
+         "image sd": "/media/dynamic_image/1_Np0UMTu.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_BLI7aPr.png",
+         "image sd": "/media/dynamic_image/2_HaMXxO4.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_n0XWtz7.png",
+         "image sd": "/media/dynamic_image/3_7ekiNph.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_FlFZFVG.png",
+         "image sd": "/media/dynamic_image/4_EQudLIi.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_Of7V2VQ.png",
+         "image sd": "/media/dynamic_image/5_GzS9rdH.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_HHbc05D.png",
+         "image sd": "/media/dynamic_image/6_ncDsQCr.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_XFJ9UmZ.png",
+         "image sd": "/media/dynamic_image/7_Fe4rjsB.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_SVrC3uA.png",
+         "image sd": "/media/dynamic_image/8_sbmBM7t.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "rajshahi-wasa"
+ }
+}

@@ -1,0 +1,92 @@
+{
+ "url": "https://www.upaybd.com/services/details/set-top-box-recharge",
+ "api": "https://api.upaybd.com/api/v2/pages/set-top-box-recharge",
+ "data": {
+  "title_english": "Set Top Box Recharge",
+  "title_bangla": "Set Top Box Recharge",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Set Top Box Recharge",
+     "title bn": "সেট টপ বক্স রিচার্জ",
+     "background image": "/media/dynamic_image/Desktop_Internet_Backdrop_IHsPlXy_an82Kxg_AubZPT9.png",
+     "background image sd": "/media/dynamic_image/Mobile_internet_backdrop_l014c16_zyr9Iny_fteXz72.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "",
+     "desc bn": "",
+     "Methods": [
+      {
+       "title": "How to pay your Set Top Box bill ?",
+       "title bn": "কিভাবে আপনার সেট টপ বক্স বিল পেমেন্ট করতে পারবেন ?",
+       "desc": "<div style=\"text-align: center;\"><br />No need to worry about your Set Top Box bill payment. With upay, you can clear your payment with ease in only a few clicks</div>",
+       "desc bn": "<div style=\"text-align: center;\"><br />এখন আর আপনার সেট টপ বক্স বিল পেমেন্ট নিয়ে আর চিন্তা নেই। উপায় সাথে থাকলে, খুব সহজেই বিল পেমেন্ট করতে পারবেন।</div>",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/3_1.png",
+         "image sd": "/media/dynamic_image/3_1_cBJWG4U.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_c5RiEsh.png",
+         "image sd": "/media/dynamic_image/1_wUzeRVF.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_6MUwCi6.png",
+         "image sd": "/media/dynamic_image/2_byebS1i.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_bAZeRqr.png",
+         "image sd": "/media/dynamic_image/3_gGraqUB.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_31dDdxV.png",
+         "image sd": "/media/dynamic_image/4_nNUTh2R.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_pUYTca2.png",
+         "image sd": "/media/dynamic_image/5_oBPK3Rv.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_fEET6KI.png",
+         "image sd": "/media/dynamic_image/6_eSXsE49.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_jw7BYum.png",
+         "image sd": "/media/dynamic_image/7_rjLp4Gh.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_RciL9ND.png",
+         "image sd": "/media/dynamic_image/8_UBc1AIV.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "set-top-box-recharge"
+ }
+}

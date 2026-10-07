@@ -1,0 +1,359 @@
+{
+ "url": "https://www.upaybd.com/need-help",
+ "api": "https://api.upaybd.com/api/v2/pages/faq",
+ "data": {
+  "title_english": "faq",
+  "title_bangla": "faq",
+  "template_name": "faq",
+  "rows": {
+   "Category": [
+    {
+     "category": "General Queries",
+     "category bn": "General Queries"
+    },
+    {
+     "category": "Account Service",
+     "category bn": "Account Service"
+    },
+    {
+     "category": "Basic Services",
+     "category bn": "Basic Services"
+    },
+    {
+     "category": "Cash Reward and Others",
+     "category bn": "Cash Reward and Others"
+    },
+    {
+     "category": "PIN and Security",
+     "category bn": "PIN and Security"
+    },
+    {
+     "category": "Service, Charges and Limits",
+     "category bn": "Service, Charges and Limits"
+    },
+    {
+     "category": "Prepaid Card",
+     "category bn": "Prepaid Card"
+    }
+   ],
+   "FAQ": [
+    {
+     "question": "What is উপায়?",
+     "question bn": "What is উপায়?",
+     "answer": "উপায় is the Digital Financial Service brand for UCB Fintech Company Limited, a subsidiary of the United Commercial Bank.",
+     "answer bn": "উপায় is the Digital Financial Service brand for UCB Fintech Company Limited, a subsidiary of the United Commercial Bank.",
+     "category type": "General Queries"
+    },
+    {
+     "question": "What is DFS?",
+     "question bn": "What is DFS?",
+     "answer": "Digital Financial Services (DFS) previously called DFS, is a method of providing financial services that integrates banking with mobile wireless networks and allows users to perform banking and other financial activities through their mobile devices.",
+     "answer bn": "Digital Financial Services (DFS) previously called DFS, is a method of providing financial services that integrates banking with mobile wireless networks and allows users to perform banking and other financial activities through their mobile devices.",
+     "category type": "General Queries"
+    },
+    {
+     "question": "Where shall I go to create a new account?",
+     "question bn": "Where shall I go to create a new account?",
+     "answer": "You can open a new account through উপায় App or from any উপায় Agent",
+     "answer bn": "You can open a new account through উপায় App or from any উপায় Agent",
+     "category type": "Account Service"
+    },
+    {
+     "question": "How can I open my উপায় Account through online/self-registration?",
+     "question bn": "How can I open my উপায় Account through online/self-registration?",
+     "answer": "<p><span style=\"font-weight: 400;\">&nbsp;You can open your </span><span style=\"font-weight: 400;\">উপায়</span><span style=\"font-weight: 400;\"> Account by downloading </span><span style=\"font-weight: 400;\">উপায়</span><span style=\"font-weight: 400;\"> App from Google Playstore and follow the new account opening process.&nbsp;</span></p>\r\n<br />\r\n<ol>\r\n<li><span style=\"font-weight: 400;\"> </span><span style=\"font-weight: 400;\">Customer App Download&nbsp;&nbsp;</span></li>\r\n<li><span style=\"font-weight: 400;\"> </span><span style=\"font-weight: 400;\">Customer OTP&nbsp;&nbsp;</span></li>\r\n<li><span style=\"font-weight: 400;\"> </span><span style=\"font-weight: 400;\">Customer NID Input</span></li>\r\n<li><span style=\"font-weight: 400;\"> </span><span style=\"font-weight: 400;\">Customer manual input&nbsp;&nbsp;</span></li>\r\n<li><span style=\"font-weight: 400;\"> </span><span style=\"font-weight: 400;\">Customer Picture</span></li>\r\n</ol>",
+     "answer bn": "<p><span style=\"font-weight: 400;\">You can open your </span><span style=\"font-weight: 400;\">উপায়</span><span style=\"font-weight: 400;\"> Account by downloading </span><span style=\"font-weight: 400;\">উপায়</span><span style=\"font-weight: 400;\"> App from Google Playstore and follow the new account opening process.&nbsp;</span></p>\r\n<br />\r\n<ol>\r\n<li><span style=\"font-weight: 400;\"> </span><span style=\"font-weight: 400;\">Customer App Download&nbsp;&nbsp;</span></li>\r\n<li><span style=\"font-weight: 400;\"> </span><span style=\"font-weight: 400;\">Customer OTP&nbsp;&nbsp;</span></li>\r\n<li><span style=\"font-weight: 400;\"> </span><span style=\"font-weight: 400;\">Customer NID Input</span></li>\r\n<li><span style=\"font-weight: 400;\"> </span><span style=\"font-weight: 400;\">Customer manual input&nbsp;&nbsp;</span></li>\r\n<li><span style=\"font-weight: 400;\"> </span><span style=\"font-weight: 400;\">Customer Picture</span></li>\r\n</ol>",
+     "category type": "Account Service"
+    },
+    {
+     "question": "What is Cash in?",
+     "question bn": "What is Cash in?",
+     "answer": "Cash In is a process to deposit money into your উপায় Account.",
+     "answer bn": "Cash In is a process to deposit money into your উপায় Account.",
+     "category type": "Basic Services"
+    },
+    {
+     "question": "Do I need to buy a new SIM Card to open an upay account?",
+     "question bn": "Do I need to buy a new SIM Card to open an upay account?",
+     "answer": "You do not need to buy a new SIM card to open an উপায় account. Your existing SIM card will be enough.",
+     "answer bn": "You do not need to buy a new SIM card to open an উপায় account. Your existing SIM card will be enough.",
+     "category type": "General Queries"
+    },
+    {
+     "question": "Do I need a Mobile Phone to avail upay services?",
+     "question bn": "Do I need a Mobile Phone to avail upay services?",
+     "answer": "Yes, you need an active mobile connection to avail upay services.",
+     "answer bn": "Yes, you need an active mobile connection to avail upay services.",
+     "category type": "General Queries"
+    },
+    {
+     "question": "How many Account can I open with a single NID?",
+     "question bn": "How many Account can I open with a single NID?",
+     "answer": "With a single NID, you can open a single উপায় account (one NID one Account)",
+     "answer bn": "With a single NID, you can open a single উপায় account (one NID one Account)",
+     "category type": "General Queries"
+    },
+    {
+     "question": "What is your contact number for call center?",
+     "question bn": "What is your contact number for call center?",
+     "answer": "For 24/7 customer support please call 16268.",
+     "answer bn": "For 24/7 customer support please call 16268.",
+     "category type": "General Queries"
+    },
+    {
+     "question": "What is the call rate charge in call center?",
+     "question bn": "What is the call rate charge in call center?",
+     "answer": "BDT 2+VAT+SD+SC (BDT 2.665); This is same for all similar short code based services and set from MNO end. Standard landline/Off-Net Call charge will be applicable for dialing long Code.",
+     "answer bn": "BDT 2+VAT+SD+SC (BDT 2.665); This is same for all similar short code based services and set from MNO end. Standard landline/Off-Net Call charge will be applicable for dialing long Code.",
+     "category type": "General Queries"
+    },
+    {
+     "question": "What is the Cash out charge?",
+     "question bn": "",
+     "answer": "Cash Out rate from agent point or ATM for customers will be as below (for both App and USSD):<br /><br />\r\n<table style=\"height: 370px; width: 90.2995%;\">\r\n<tbody>\r\n<tr style=\"height: 28px;\">\r\n<td style=\"width: 36.4493%; height: 28px;\" width=\"209\">\r\n<p><strong>Service</strong></p>\r\n</td>\r\n<td style=\"width: 21.1183%; height: 28px;\" width=\"121\">\r\n<p><strong>Channel/Category</strong></p>\r\n</td>\r\n<td style=\"width: 35.0556%; height: 28px;\" width=\"199\">\r\n<p><strong>Service Charge (VAT inclusive)</strong></p>\r\n</td>\r\n</tr>\r\n<tr style=\"height: 46px;\">\r\n<td style=\"width: 36.4493%; height: 158px;\" rowspan=\"4\" width=\"209\">\r\n<p>Cash Out from Agent<br />(App &amp; USSD)</p>\r\n</td>\r\n<td style=\"width: 21.1183%; height: 46px;\" width=\"121\">\r\n<p>Primary</p>\r\n</td>\r\n<td style=\"width: 35.0556%; height: 46px;\" width=\"199\">\r\n<p>1.40%</p>\r\n</td>\r\n</tr>\r\n<tr style=\"height: 46px;\">\r\n<td style=\"width: 21.1183%; height: 46px;\" width=\"121\">\r\n<p>Disbursement</p>\r\n</td>\r\n<td style=\"width: 35.0556%; height: 46px;\" width=\"199\">\r\n<p>0.70%</p>\r\n</td>\r\n</tr>\r\n<tr style=\"height: 46px;\">\r\n<td style=\"width: 21.1183%; height: 46px;\" width=\"121\">\r\n<p>Salary</p>\r\n</td>\r\n<td style=\"width: 35.0556%; height: 46px;\" width=\"199\">\r\n<p>0.90%</p>\r\n</td>\r\n</tr>\r\n<tr style=\"height: 20px;\">\r\n<td style=\"width: 21.1183%; height: 20px;\" width=\"121\">\r\n<p>Remittance</p>\r\n</td>\r\n<td style=\"width: 35.0556%; height: 20px;\" width=\"199\">\r\n<p>1%</p>\r\n</td>\r\n</tr>\r\n<tr style=\"height: 46px;\">\r\n<td style=\"width: 36.4493%; height: 184px;\" rowspan=\"4\" width=\"209\">\r\n<p>Cash Out from ATM<br />(App &amp; USSD)</p>\r\n</td>\r\n<td style=\"width: 21.1183%; height: 46px;\" width=\"121\">\r\n<p>Primary</p>\r\n</td>\r\n<td style=\"width: 35.0556%; height: 46px;\" width=\"199\">\r\n<p>0.80%</p>\r\n</td>\r\n</tr>\r\n<tr style=\"height: 46px;\">\r\n<td style=\"width: 21.1183%; height: 46px;\" width=\"121\">\r\n<p>Disbursement</p>\r\n</td>\r\n<td style=\"width: 35.0556%; height: 46px;\" width=\"199\">\r\n<p>0.00%</p>\r\n</td>\r\n</tr>\r\n<tr style=\"height: 46px;\">\r\n<td style=\"width: 21.1183%; height: 46px;\" width=\"121\">\r\n<p>Salary</p>\r\n</td>\r\n<td style=\"width: 35.0556%; height: 46px;\" width=\"199\">\r\n<p>0.00%</p>\r\n</td>\r\n</tr>\r\n<tr style=\"height: 46px;\">\r\n<td style=\"width: 21.1183%; height: 46px;\" width=\"121\">\r\n<p>Remittance</p>\r\n</td>\r\n<td style=\"width: 35.0556%; height: 46px;\" width=\"199\">\r\n<p>0.00%</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>",
+     "answer bn": "",
+     "category type": "Cash Reward and Others"
+    },
+    {
+     "question": "What is cash reward? How can I use it?",
+     "question bn": "What is cash reward? How can I use it?",
+     "answer": "Cash reward is an incentive program operated by উপায়. Cash reward can be spent in all transactions except Cash Out, Send Money(P2P) and transfer fund.",
+     "answer bn": "Cash reward is an incentive program operated by উপায়. Cash reward can be spent in all transactions except Cash Out, Send Money(P2P) and transfer fund.",
+     "category type": "Cash Reward and Others"
+    },
+    {
+     "question": "Is my upay account PIN and app PIN same?",
+     "question bn": "Is my upay account PIN and app PIN same?",
+     "answer": "Yes, both PIN is same.",
+     "answer bn": "Yes, both PIN is same.",
+     "category type": "PIN and Security"
+    },
+    {
+     "question": "How many times can I change my account PIN in a single day?",
+     "question bn": "How many times can I change my account PIN in a single day?",
+     "answer": "There is no time binding for PIN Change.",
+     "answer bn": "There is no time binding for PIN Change.",
+     "category type": "PIN and Security"
+    },
+    {
+     "question": "What to do If I forget my UCash PIN?",
+     "question bn": "What to do If I forget my UCash PIN?",
+     "answer": "For PIN reset, kindly give a call to 16268 from your registered number. After successful verification, you can reset your PIN.",
+     "answer bn": "For PIN reset, kindly give a call to 16268 from your registered number. After successful verification, you can reset your PIN.",
+     "category type": "PIN and Security"
+    },
+    {
+     "question": "How can I change my PIN?",
+     "question bn": "How can I change my PIN?",
+     "answer": "<p>You can change your current PIN from উপায় app or through USSD menu:</p>\r\n<p>Dial *268# Select option 7: My upay&gt; Select Change PIN&gt; Enter Current PIN&gt; Enter New PIN&gt; Enter New PIN again to Confirm New PIN&gt; Receive confirmation SMS.</p>\r\n<p>Through উপায় app select More&gt; Select Settings&gt; Select Change PIN&gt; &nbsp; Enter Current PIN&gt; Enter New PIN&gt; Enter New PIN again to Confirm New PIN&gt; User will receive PIN Change success notification.&nbsp;</p>",
+     "answer bn": "<p>You can change your current PIN from উপায় app or through USSD menu:</p>\r\n<p>Dial *268# Select option 7: My upay&gt; Select Change PIN&gt; Enter Current PIN&gt; Enter New PIN&gt; Enter New PIN again to Confirm New PIN&gt; Receive confirmation SMS.</p>\r\n<p>Through উপায় app select More&gt; Select Settings&gt; Select Change PIN&gt; &nbsp; Enter Current PIN&gt; Enter New PIN&gt; Enter New PIN again to Confirm New PIN&gt; User will receive PIN Change success notification.&nbsp;</p>",
+     "category type": "PIN and Security"
+    },
+    {
+     "question": "What if I lose my SIM card or mobile phone?",
+     "question bn": "What if I lose my SIM card or mobile phone?",
+     "answer": "To secure your উপায় Account and balance, please call to the call center 16268 and block your উপায় Account.",
+     "answer bn": "To secure your উপায় Account and balance, please call to the call center 16268 and block your উপায় Account.",
+     "category type": "PIN and Security"
+    },
+    {
+     "question": "I have shared my উপায় PIN with my friend, can he cash out my money from my Account from other handset?",
+     "question bn": "",
+     "answer": "Under any circumstance, do not share your pin to others.",
+     "answer bn": "",
+     "category type": "PIN and Security"
+    },
+    {
+     "question": "I am not getting OTP on my phone. What to do?",
+     "question bn": "I am not getting OTP on my phone. What to do?",
+     "answer": "Please update your MNP Info from more option from your upay App or My upay from USSD menu dialing *268#, if still not working please call our helpline 16268 and lodge a complaint.",
+     "answer bn": "Please update your MNP Info from more option from your upay App or My upay from USSD menu dialing *268#, if still not working please call our helpline 16268 and lodge a complaint.",
+     "category type": "PIN and Security"
+    },
+    {
+     "question": "What are the services you are providing?",
+     "question bn": "What are the services you are providing?",
+     "answer": "<p>উপায়&rsquo;s customers can avail all types of mobile banking services using our mobile app or by dialing *268#. Such as:</p>\r\n<ul>\r\n<li>Cash in</li>\r\n<li>Cash out from Agent Point or UCB ATM</li>\r\n<li>Send money</li>\r\n<li>Mobile recharge</li>\r\n<li>Add Money</li>\r\n<li>Request Money</li>\r\n<li>All types of utility bill payments</li>\r\n<li>Make payment</li>\r\n<li>Traffic Fine and Indian Visa Application fee payment with convenience</li>\r\n<li>Receiving remittance and many more advanced services like games, quiz will come out of this, which we will inform you in time to time.</li>\r\n</ul>",
+     "answer bn": "<p>উপায়&rsquo;s customers can avail all types of mobile banking services using our mobile app or by dialing *268#. Such as:</p>\r\n<ul>\r\n<li>Cash in</li>\r\n<li>Cash out from Agent Point or UCB ATM</li>\r\n<li>Send money</li>\r\n<li>Mobile recharge</li>\r\n<li>Add Money</li>\r\n<li>Request Money</li>\r\n<li>All types of utility bill payments</li>\r\n<li>Make payment</li>\r\n<li>Traffic Fine and Indian Visa Application fee payment with convenience</li>\r\n<li>Receiving remittance and many more advanced services like games, quiz will come out of this, which we will inform you in time to time.</li>\r\n</ul>",
+     "category type": "Service, Charges and Limits"
+    },
+    {
+     "question": "What is Transaction limits for উপায়?",
+     "question bn": "What is Transaction limits for উপায়?",
+     "answer": "<p><br />An upay account holder can keep a maximum amount of Tk 300,000 (including Cash Reward) in their upay account at any moment</p>\r\n<p>*A maximum of Tk. 1,000 can be recharged to a prepaid mobile number and a maximum of Tk. 5,000 to a postpaid mobile number from a upay account in a single mobile recharge transaction</p>\r\n**For inward remittance, a person from abroad can remit up to Tk. 1,22,500 per day and a maximum amount of Tk. 4,41,000 per month. 2% Govt incentive will be added with the remitted amount.<br /><br />\r\n<table style=\"width: 95.9656%; height: 380px;\" border=\"1\">\r\n<tbody>\r\n<tr style=\"height: 76px;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 76px;\"><strong>&nbsp;Service Type</strong></td>\r\n<td style=\"width: 21.877%; text-align: center; height: 76px;\" colspan=\"2\"><strong><br /></strong><strong>Per Transaction Limit (Amount in BDT)</strong></td>\r\n<td style=\"width: 9.80142%; text-align: center; height: 76px;\" colspan=\"2\"><strong><br /></strong><strong>Daily Transaction Limit (Amount in BDT)</strong></td>\r\n<td style=\"width: 9.80142%; text-align: center; height: 76px;\" colspan=\"2\"><strong><br /></strong><strong>Monthly Transaction Limit (Amount in BDT)</strong></td>\r\n</tr>\r\n<tr style=\"height: 38px;\">\r\n<td style=\"width: 27.3208%; height: 38px; text-align: center;\">&nbsp;</td>\r\n<td style=\"width: 11.7091%; height: 38px; text-align: center;\"><strong>Min</strong></td>\r\n<td style=\"width: 10.1679%; height: 38px; text-align: center;\"><strong>Max</strong></td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 38px;\"><strong>Count</strong></td>\r\n<td style=\"width: 4.90071%; height: 38px; text-align: center;\"><strong>Amount</strong></td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 38px;\"><strong>Count</strong></td>\r\n<td style=\"width: 4.90071%; height: 38px; text-align: center;\"><strong>Amount</strong></td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 19px;\">Cash In from Agent</td>\r\n<td style=\"width: 11.7091%; text-align: center; height: 76px;\" rowspan=\"3\">50</td>\r\n<td style=\"width: 10.1679%; text-align: center; height: 76px;\" rowspan=\"3\">30,000</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 76px;\" rowspan=\"3\">5</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 76px;\" rowspan=\"3\">30,000</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 76px;\" rowspan=\"3\">25</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 76px;\" rowspan=\"3\">200,000</td>\r\n</tr>\r\n<tr style=\"text-align: center;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 38px;\" width=\"125\">Add Money from Bank Account</td>\r\n</tr>\r\n<tr style=\"text-align: center;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 19px;\" width=\"125\">Add Money from Card</td>\r\n</tr>\r\n<tr style=\"text-align: center;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 19px;\" width=\"125\">Cash Out from Agent</td>\r\n<td style=\"width: 11.7091%; text-align: center; height: 19px;\">50</td>\r\n<td style=\"width: 10.1679%; text-align: center; height: 38px;\" rowspan=\"2\">25,000</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 38px;\" rowspan=\"2\">5</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 38px;\" rowspan=\"2\">25,000</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 38px;\" rowspan=\"2\">20</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 38px;\" rowspan=\"2\">150,000</td>\r\n</tr>\r\n<tr style=\"text-align: center;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 19px;\" width=\"125\">Cash Out from ATM</td>\r\n<td style=\"width: 11.7091%; text-align: center; height: 19px;\">500</td>\r\n</tr>\r\n<tr style=\"text-align: center;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 19px;\" width=\"125\">Send Money</td>\r\n<td style=\"width: 11.7091%; text-align: center; height: 57px;\" rowspan=\"2\">10</td>\r\n<td style=\"width: 10.1679%; text-align: center; height: 57px;\" rowspan=\"2\">25,000</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 57px;\" rowspan=\"2\">50</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 57px;\" rowspan=\"2\">25,000</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 57px;\" rowspan=\"2\">100</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 57px;\" rowspan=\"2\">200,000</td>\r\n</tr>\r\n<tr style=\"text-align: center;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 38px;\" width=\"125\">Transfer Money to Bank Account</td>\r\n</tr>\r\n<tr style=\"text-align: center;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 19px;\" width=\"125\">Mobile Recharge*</td>\r\n<td style=\"width: 11.7091%; text-align: center; height: 19px;\">10</td>\r\n<td style=\"width: 10.1679%; text-align: center; height: 19px;\">1,000</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 19px;\">50</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 19px;\">10,000</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 19px;\">1,500</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 19px;\">100,000</td>\r\n</tr>\r\n<tr style=\"text-align: center;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 19px;\" width=\"125\">Make Payment</td>\r\n<td style=\"width: 11.7091%; text-align: center; height: 19px;\">1</td>\r\n<td style=\"width: 29.7707%; text-align: center; height: 19px;\" colspan=\"5\">No Limit</td>\r\n</tr>\r\n<tr style=\"text-align: center;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 19px;\" width=\"125\">Pay Bill</td>\r\n<td style=\"width: 41.4798%; text-align: center; height: 19px;\" colspan=\"6\">No Limit</td>\r\n</tr>\r\n<tr style=\"text-align: center;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 19px;\" width=\"125\">Inward Remittance**</td>\r\n<td style=\"width: 11.7091%; text-align: center; height: 19px;\">50</td>\r\n<td style=\"width: 10.1679%; text-align: center; height: 19px;\">125,000</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 19px;\">10</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 19px;\">125,000</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 19px;\">50</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 19px;\">450,000</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 19px;\" width=\"125\">Request Money</td>\r\n<td style=\"width: 11.7091%; text-align: center; height: 19px;\">10</td>\r\n<td style=\"width: 10.1679%; text-align: center; height: 19px;\">25,000</td>\r\n<td style=\"width: 9.80142%; text-align: center; height: 19px;\" colspan=\"2\">No Limit</td>\r\n<td style=\"width: 9.80142%; text-align: center; height: 19px;\" colspan=\"2\">No Limit</td>\r\n</tr>\r\n</tbody>\r\n</table>",
+     "answer bn": "<p><br />An upay account holder can keep a maximum amount of Tk 300,000 (including Cash Reward) in their upay account at any moment</p>\r\n<p>*A maximum of Tk. 1,000 can be recharged to a prepaid mobile number and a maximum of Tk. 5,000 to a postpaid mobile number from a upay account in a single mobile recharge transaction</p>\r\n**For inward remittance, a person from abroad can remit up to Tk. 1,22,500 per day and a maximum amount of Tk. 4,41,000 per month. 2% Govt incentive will be added with the remitted amount.<br /><br />\r\n<table style=\"width: 95.9656%; height: 380px;\" border=\"1\">\r\n<tbody>\r\n<tr style=\"height: 76px;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 76px;\"><strong>&nbsp;Service Type</strong></td>\r\n<td style=\"width: 21.877%; text-align: center; height: 76px;\" colspan=\"2\"><strong>Per Transaction Limit (Amount in BDT)</strong></td>\r\n<td style=\"width: 9.80142%; text-align: center; height: 76px;\" colspan=\"2\"><strong>Daily Transaction Limit (Amount in BDT)</strong></td>\r\n<td style=\"width: 9.80142%; text-align: center; height: 76px;\" colspan=\"2\"><strong>Monthly Transaction Limit (Amount in BDT)</strong></td>\r\n</tr>\r\n<tr style=\"height: 38px;\">\r\n<td style=\"width: 27.3208%; height: 38px; text-align: center;\">&nbsp;</td>\r\n<td style=\"width: 11.7091%; height: 38px; text-align: center;\"><strong>Min</strong></td>\r\n<td style=\"width: 10.1679%; height: 38px; text-align: center;\"><strong>Max</strong></td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 38px;\"><strong>Count</strong></td>\r\n<td style=\"width: 4.90071%; height: 38px; text-align: center;\"><strong>Amount</strong></td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 38px;\"><strong>Count</strong></td>\r\n<td style=\"width: 4.90071%; height: 38px; text-align: center;\"><strong>Amount</strong></td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 19px;\">Cash In from Agent</td>\r\n<td style=\"width: 11.7091%; text-align: center; height: 76px;\" rowspan=\"3\">50</td>\r\n<td style=\"width: 10.1679%; text-align: center; height: 76px;\" rowspan=\"3\">30,000</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 76px;\" rowspan=\"3\">5</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 76px;\" rowspan=\"3\">30,000</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 76px;\" rowspan=\"3\">25</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 76px;\" rowspan=\"3\">200,000</td>\r\n</tr>\r\n<tr style=\"text-align: center;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 38px;\" width=\"125\">Add Money from Bank Account</td>\r\n</tr>\r\n<tr style=\"text-align: center;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 19px;\" width=\"125\">Add Money from Card</td>\r\n</tr>\r\n<tr style=\"text-align: center;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 19px;\" width=\"125\">Cash Out from Agent</td>\r\n<td style=\"width: 11.7091%; text-align: center; height: 19px;\">50</td>\r\n<td style=\"width: 10.1679%; text-align: center; height: 38px;\" rowspan=\"2\">25,000</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 38px;\" rowspan=\"2\">5</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 38px;\" rowspan=\"2\">25,000</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 38px;\" rowspan=\"2\">20</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 38px;\" rowspan=\"2\">150,000</td>\r\n</tr>\r\n<tr style=\"text-align: center;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 19px;\" width=\"125\">Cash Out from ATM</td>\r\n<td style=\"width: 11.7091%; text-align: center; height: 19px;\">500</td>\r\n</tr>\r\n<tr style=\"text-align: center;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 19px;\" width=\"125\">Send Money</td>\r\n<td style=\"width: 11.7091%; text-align: center; height: 57px;\" rowspan=\"2\">10</td>\r\n<td style=\"width: 10.1679%; text-align: center; height: 57px;\" rowspan=\"2\">25,000</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 57px;\" rowspan=\"2\">50</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 57px;\" rowspan=\"2\">25,000</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 57px;\" rowspan=\"2\">100</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 57px;\" rowspan=\"2\">200,000</td>\r\n</tr>\r\n<tr style=\"text-align: center;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 38px;\" width=\"125\">Transfer Money to Bank Account</td>\r\n</tr>\r\n<tr style=\"text-align: center;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 19px;\" width=\"125\">Mobile Recharge*</td>\r\n<td style=\"width: 11.7091%; text-align: center; height: 19px;\">10</td>\r\n<td style=\"width: 10.1679%; text-align: center; height: 19px;\">1,000</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 19px;\">50</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 19px;\">10,000</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 19px;\">1,500</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 19px;\">100,000</td>\r\n</tr>\r\n<tr style=\"text-align: center;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 19px;\" width=\"125\">Make Payment</td>\r\n<td style=\"width: 11.7091%; text-align: center; height: 19px;\">1</td>\r\n<td style=\"width: 29.7707%; text-align: center; height: 19px;\" colspan=\"5\">No Limit</td>\r\n</tr>\r\n<tr style=\"text-align: center;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 19px;\" width=\"125\">Pay Bill</td>\r\n<td style=\"width: 41.4798%; text-align: center; height: 19px;\" colspan=\"6\">No Limit</td>\r\n</tr>\r\n<tr style=\"text-align: center;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 19px;\" width=\"125\">Inward Remittance**</td>\r\n<td style=\"width: 11.7091%; text-align: center; height: 19px;\">50</td>\r\n<td style=\"width: 10.1679%; text-align: center; height: 19px;\">125,000</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 19px;\">10</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 19px;\">125,000</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 19px;\">50</td>\r\n<td style=\"width: 4.90071%; text-align: center; height: 19px;\">450,000</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 27.3208%; text-align: center; height: 19px;\" width=\"125\">Request Money</td>\r\n<td style=\"width: 11.7091%; text-align: center; height: 19px;\">10</td>\r\n<td style=\"width: 10.1679%; text-align: center; height: 19px;\">25,000</td>\r\n<td style=\"width: 9.80142%; text-align: center; height: 19px;\" colspan=\"2\">No Limit</td>\r\n<td style=\"width: 9.80142%; text-align: center; height: 19px;\" colspan=\"2\">No Limit</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<br />",
+     "category type": "Service, Charges and Limits"
+    },
+    {
+     "question": "I am not being able to Cash Out. What should I do?",
+     "question bn": "",
+     "answer": "Please check your balance &amp; account Cash Out limit, if it is ok then please contact to our customer service hotline 16268.",
+     "answer bn": "",
+     "category type": "Basic Services"
+    },
+    {
+     "question": "What are the charges for Cash Out from Agent?",
+     "question bn": "",
+     "answer": "<p>Cash Out rate from agent point for customers will be as below (for both App and USSD):</p>\r\n<ul>\r\n<li>Primary: 1.4%</li>\r\n<li>Remittance: 1%</li>\r\n<li>Government Disbursement: 0.7%</li>\r\n<li>Salary: 0.9%</li>\r\n</ul>",
+     "answer bn": "",
+     "category type": "Basic Services"
+    },
+    {
+     "question": "What are the charges for Cash Out from ATM?",
+     "question bn": "",
+     "answer": "<p>&nbsp;Cash Out rate from ATM point for customers will be as below (for both App and USSD):</p>\r\n<ol>\r\n<li>Primary: 0.8%</li>\r\n<li>Remittance: 0%</li>\r\n<li>Government Disbursement: 0%</li>\r\n<li>Salary: 0%</li>\r\n</ol>",
+     "answer bn": "",
+     "category type": "Basic Services"
+    },
+    {
+     "question": "What is the charge for sending money to any other উপায় account?",
+     "question bn": "What is the charge for sending money to any other উপায় account?",
+     "answer": "Send money charge will be BDT 0 from App and *268#.",
+     "answer bn": "Send money charge will be BDT 0 from App and *268#.",
+     "category type": "Basic Services"
+    },
+    {
+     "question": "Is there any cost to open an উপায় account?",
+     "question bn": "Is there any cost to open an উপায় account?",
+     "answer": "There is no charge in opening an উপায় account.",
+     "answer bn": "There is no charge in opening an উপায় account.",
+     "category type": "Account Service"
+    },
+    {
+     "question": "How many Account can I open with a single NID?",
+     "question bn": "How many Account can I open with a single NID?",
+     "answer": "With a single NID, you can open a single উপায় account (one NID one Account)",
+     "answer bn": "With a single NID, you can open a single উপায় account (one NID one Account)",
+     "category type": "Account Service"
+    },
+    {
+     "question": "What are the documents required for creating an account in উপায়?",
+     "question bn": "What are the documents required for creating an account in উপায়?",
+     "answer": "National ID card is required.",
+     "answer bn": "National ID card is required.",
+     "category type": "Account Service"
+    },
+    {
+     "question": "How can I create an account if my handset not support to download উপায় App?",
+     "question bn": "How can I create an account if my handset not support to download উপায় App?",
+     "answer": "Kindly visit your nearest উপায় agent point to open account with necessary document.",
+     "answer bn": "Kindly visit your nearest উপায় agent point to open account with necessary document.",
+     "category type": "Account Service"
+    },
+    {
+     "question": "What is the UCB upay Prepaid Card?",
+     "question bn": "What is the UCB upay Prepaid Card?",
+     "answer": "The UCB&ndash;upay Prepaid Card is a card unlike common bank cards, it is not required to conduct credit assessment like credit card and open the account like debit cards. This card is designed to use anywhere in the globe under foreign currency regulation of Bangladesh Bank. This card works in similar fashion of credit card that allows purchase, cash withdrawal and e-commerce transaction.",
+     "answer bn": "The UCB&ndash;upay Prepaid Card is a card unlike common bank cards, it is not required to conduct credit assessment like credit card and open the account like debit cards. This card is designed to use anywhere in the globe under foreign currency regulation of Bangladesh Bank. This card works in similar fashion of credit card that allows purchase, cash withdrawal and e-commerce transaction.",
+     "category type": "Prepaid Card"
+    },
+    {
+     "question": "Who is eligible for the UCB upay prepaid card",
+     "question bn": "Who is eligible for the UCB upay prepaid card",
+     "answer": "Any Bangladeshi National who has a Full Profile Active upay account are eligible for the UCB&ndash;upay Prepaid Card. Customer can apply for the card from any upay Point.",
+     "answer bn": "Any Bangladeshi National who has a Full Profile Active upay account are eligible for the UCB&ndash;upay Prepaid Card. Customer can apply for the card from any upay Point.",
+     "category type": "Prepaid Card"
+    },
+    {
+     "question": "Which documents are required to apply UCB upay Prepaid Card",
+     "question bn": "Which documents are required to apply UCB upay Prepaid Card",
+     "answer": "No physical document will be required to avail the co-branded prepaid card. However, customer need to have the followings while apply the card from any upay Point.<strong> </strong>Below documents are required for international prepaid card: Active full profile upay account, Nominee NID number, Nominee Date of Birth (as per NID)",
+     "answer bn": "No physical document will be required to avail the co-branded prepaid card. However, customer need to have the followings while apply the card from any upay Point.<strong> </strong>Below documents are required for international prepaid card: Active full profile upay account, Nominee NID number, Nominee Date of Birth (as per NID)",
+     "category type": "Prepaid Card"
+    },
+    {
+     "question": "What is Active Full Profile upay Account?",
+     "question bn": "What is Active Full Profile upay Account?",
+     "answer": "Active Full Profile upay Account means, a upay user have NID information (as per EC/Parichay) and verified selfie. Customer with no NID information and/or unverified selfie need to update upay account to get the prepaid card.",
+     "answer bn": "Active Full Profile upay Account means, a upay user have NID information (as per EC/Parichay) and verified selfie. Customer with no NID information and/or unverified selfie need to update upay account to get the prepaid card.",
+     "category type": "Prepaid Card"
+    },
+    {
+     "question": "How can I apply for the Prepaid Card?",
+     "question bn": "How can I apply for the Prepaid Card?",
+     "answer": "<p>You can apply for the prepaid card directly from the app. You can check the details <a href=\"https://www.upaybd.com/services/details/prepaid-card-application\" target=\"_blank\" rel=\"noopener\">here.</a>&nbsp;</p>",
+     "answer bn": "https://www.upaybd.com/services/details/prepaid-card-application",
+     "category type": "Prepaid Card"
+    },
+    {
+     "question": "How can I load money to the Prepaid Card?",
+     "question bn": "How can I load money to the Prepaid Card?",
+     "answer": "You can load your Prepaid Card directly from upay app, or from selected upay agents. You can check the process <a href=\"https://www.upaybd.com/services/details/prepaid-card-load\" target=\"_blank\" rel=\"noopener\">here</a>.&nbsp;",
+     "answer bn": "You can load your Prepaid Card directly from upay app, or from selected upay agents. You can check the process <a href=\"https://www.upaybd.com/services/details/prepaid-card-load\" target=\"_blank\" rel=\"noopener\">here</a>.&nbsp;",
+     "category type": "Prepaid Card"
+    },
+    {
+     "question": "How can I check balance of the Prepaid Card?",
+     "question bn": "How can I check balance of the Prepaid Card?",
+     "answer": "Once the card is issued by bank you will find three options for prepaid card in upay app &ndash; Card Balance, Card Load and Transaction Details. Click the &ldquo;Card Balance&rdquo; option. Additionally, you can check the card balance by calling UCB Call Center 16419.",
+     "answer bn": "Once the card is issued by bank you will find three options for prepaid card in upay app &ndash; Card Balance, Card Load and Transaction Details. Click the &ldquo;Card Balance&rdquo; option. Additionally, you can check the card balance by calling UCB Call Center 16419.",
+     "category type": "Prepaid Card"
+    },
+    {
+     "question": "How can I check transaction of the Prepaid Card?",
+     "question bn": "How can I check transaction of the Prepaid Card?",
+     "answer": "Once the card is issued by bank you will find three options for prepaid card in upay app &ndash; Card Balance, Card Load and Transaction Details. Click the &ldquo;Transaction Details&rdquo; option. You will be able to see the transactions made by the prepaid card.",
+     "answer bn": "Once the card is issued by bank you will find three options for prepaid card in upay app &ndash; Card Balance, Card Load and Transaction Details. Click the &ldquo;Transaction Details&rdquo; option. You will be able to see the transactions made by the prepaid card.",
+     "category type": "Prepaid Card"
+    },
+    {
+     "question": "Is endorsement required to use the prepaid card for international purchase?",
+     "question bn": "Is endorsement required to use the prepaid card for international purchase?",
+     "answer": "Yes, endorsement is required to use international prepaid card according to Bangladesh Bank rules.",
+     "answer bn": "Yes, endorsement is required to use international prepaid card according to Bangladesh Bank rules.",
+     "category type": "Prepaid Card"
+    },
+    {
+     "question": "How long I can use my Card?",
+     "question bn": "How long I can use my Card?",
+     "answer": "You can use your card till card expiry date. UCB-upay Co-Branded Prepaid Card is valid for 5 years from the card issuing date.",
+     "answer bn": "You can use your card till card expiry date. UCB-upay Co-Branded Prepaid Card is valid for 5 years from the card issuing date.",
+     "category type": "Prepaid Card"
+    },
+    {
+     "question": "Will I get interest on my card unused balance?",
+     "question bn": "Will I get interest on my card unused balance?",
+     "answer": "No interest or profit will be credited to the Cardholder&rsquo;s Account with respect to the available balance on Card.",
+     "answer bn": "No interest or profit will be credited to the Cardholder&rsquo;s Account with respect to the available balance on Card.",
+     "category type": "Prepaid Card"
+    },
+    {
+     "question": "At the time of the transaction abroad, how will the customer get OTP and confirmation",
+     "question bn": "At the time of the transaction abroad, how will the customer get OTP and confirmation",
+     "answer": "Customer will receive OTP both on SMS and E-mail. If customer enable roaming from their MNO, they will be able to receive OTP on SMS.",
+     "answer bn": "Customer will receive OTP both on SMS and E-mail. If customer enable roaming from their MNO, they will be able to receive OTP on SMS.",
+     "category type": "Prepaid Card"
+    },
+    {
+     "question": "If my upay account is blocked or locked, can I still perform transactions using the prepaid card associated with the account?",
+     "question bn": "If my upay account is blocked or locked, can I still perform transactions using the prepaid card associated with the account?",
+     "answer": "If you have existing balance in Prepaid Card, you can perform transactions. However, you cannot load card if your upay account is blocked or locked.",
+     "answer bn": "If you have existing balance in Prepaid Card, you can perform transactions. However, you cannot load card if your upay account is blocked or locked.",
+     "category type": "Prepaid Card"
+    },
+    {
+     "question": "For dispute, with whom the customer will contact.",
+     "question bn": "For dispute, with whom the customer will contact.",
+     "answer": "For any Card/ Transaction related query, please contact UCB Bank 24/7 call center 16419. For any Card Application, Card load related queries, please contact upay 24/7 call center 16268.",
+     "answer bn": "For any Card/ Transaction related query, please contact UCB Bank 24/7 call center 16419. For any Card Application, Card load related queries, please contact upay 24/7 call center 16268.",
+     "category type": "Prepaid Card"
+    },
+    {
+     "question": "If the customer wants to change his address/nominee information after activation the card, what will the process?",
+     "question bn": "If the customer wants to change his address/nominee information after activation the card, what will the process?",
+     "answer": "For any action after activation please contact UCB Bank.",
+     "answer bn": "For any action after activation please contact UCB Bank.",
+     "category type": "Prepaid Card"
+    },
+    {
+     "question": "How/when customer will pay SMS Fee (230 tk)?",
+     "question bn": "How/when customer will pay SMS Fee (230 tk)?",
+     "answer": "SMS Fee will be deducted from customer&rsquo;s first load amount. If customer load amount Tk 500, Tk 230 will be deducted as SMS fee.",
+     "answer bn": "SMS Fee will be deducted from customer&rsquo;s first load amount. If customer load amount Tk 500, Tk 230 will be deducted as SMS fee.",
+     "category type": "Prepaid Card"
+    }
+   ]
+  },
+  "slug": "faq"
+ }
+}

@@ -1,0 +1,917 @@
+{
+ "url": "https://www.upaybd.com/limits-and-charges",
+ "pageProps": {
+  "page": {
+   "data": {
+    "title_english": "Limits and charges",
+    "title_bangla": "Limits and charges",
+    "template_name": "limits-and-charges",
+    "rows": {
+     "Data": [
+      {
+       "title": "Limits and Charges",
+       "title bn": "লিমিট ও চার্জ",
+       "cover image": "/media/dynamic_image/Untitled_UXHGUiz.png",
+       "cover image sd": "/media/dynamic_image/Untitled_Cz4VIsu.png",
+       "segment one": [
+        {
+         "title": "Charge Calculator",
+         "title bn": "চার্জ ক্যালকুলেটর",
+         "desc": "Calculate the actual charge for all your upay activities through the calculator below. There will be no charge on first 5 bills of the month.&nbsp;<br /><br /><em>* Maximum charge for DESCO Prepaid and Postpaid is Tk 20. Maximum charge for NESCO Postpaid Westzone Postpaid, Dhaka WASA, Jalalabad Gas, Bakhrabad Gas, Pashchimanchal Gas is Tk 25.</em>",
+         "desc bn": "উপায় সংক্রান্ত যেকোনো ধরনের চার্জ হিসাব করে ফেলুন সহজেই। প্রতি মাসের প্রথম ৫টি বিল এর জন্য কোন চার্জ প্রযোজ্য নয়।&nbsp;<br /><br />* <em>ডেসকো প্রিপেইড এবং পোস্টপেইড বিল পেমেন্টের ক্ষেত্রে সর্বোচ্চ চার্জ ২০ টাকা, নেসকো পোস্টপেইড, ওয়েস্টজোন পোস্টপেইড, ঢাকা ওয়াসা, জালালাবাদ গ্যাস, বাখরাবাদ গ্যাস, পশ্চিমাঞ্চল গ্যাস বিল পেমেন্টের ক্ষেত্রে সর্বোচ্চ চার্জ ২৫ টাকা প্রযোজ্য হবে।</em>"
+        }
+       ],
+       "segment two": [
+        {
+         "title": "Limits and Frequency",
+         "title bn": "লেনদেনের সীমা",
+         "desc": "Learn more about the detailed limits and frequency from the below table, which includes Daily and Monthly Transaction Limits.If there is any confusion, feel free to call us anytime at 16268.",
+         "desc bn": "নীচের তালিকা থেকে লেনদেনের সীমা সম্পর্কে আরও জানুন, যার মধ্যে দৈনিক এবং মাসিক লেনদেনের সীমা রয়েছে I যদি কোনও প্রশ্ন থাকে, তবে 16268 নম্বরে কল করুন যেকোনো সময়।",
+         "slug url": "/schedule-charges"
+        }
+       ],
+       "segment three": [
+        {
+         "slug url": "/nav/Navigation"
+        }
+       ],
+       "segment four": [
+        {
+         "slug url": "/Footer"
+        }
+       ]
+      }
+     ]
+    },
+    "slug": "limits-and-charges"
+   },
+   "calc": [
+    {
+     "service_name": "Open an Account",
+     "transaction_type": "",
+     "calculation_type": "",
+     "charge": "No charge",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Cash Out from Agent",
+     "transaction_type": "Primary",
+     "calculation_type": "%",
+     "charge": "1.40",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Cash Out from Agent",
+     "transaction_type": "Remittance",
+     "calculation_type": "%",
+     "charge": "1",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Add Money",
+     "transaction_type": "Bank to upay",
+     "calculation_type": "",
+     "charge": "No charge",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Add Money",
+     "transaction_type": "Card to upay",
+     "calculation_type": "",
+     "charge": "No charge",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Make Payment",
+     "transaction_type": "",
+     "calculation_type": "",
+     "charge": "No charge",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Indian Visa",
+     "transaction_type": "",
+     "calculation_type": "%",
+     "charge": "3",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Credit Card",
+     "transaction_type": "Langka Bangla Credit Card",
+     "calculation_type": "%",
+     "charge": "0.80",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Credit Card",
+     "transaction_type": "UCB Credit Card",
+     "calculation_type": "%",
+     "charge": "0.80",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Fund Transfer",
+     "transaction_type": "UCB CASA",
+     "calculation_type": "%",
+     "charge": "1",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Barisal Zilla police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Bogra Highway Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Bogra Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Brahmanbaria Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Chapainawabganj Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Chuadanga Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Cumilla Highway Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Gazipur Highway Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Gazipur Metro Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Habiganj Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Jhenaidah Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Joypurhat Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Khulna Metropolitan Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Khulna Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Madaripur HW Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Magura Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Moulavibazar Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Naogaon Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Narayangonj Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Natore Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Pabna Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Rajshahi Metropolitan Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Rajshahi Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Satkhira Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Sirajganj Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Sunamganj Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Sylhet Highway Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Sylhet Metro Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Sylhet Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Send money",
+     "transaction_type": "app",
+     "calculation_type": "",
+     "charge": "No charge",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Cash Out from UCB ATM",
+     "transaction_type": "Disbursement",
+     "calculation_type": "",
+     "charge": "No charge",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Cash Out from UCB ATM",
+     "transaction_type": "Remittance",
+     "calculation_type": "",
+     "charge": "No charge",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Cash Out from UCB ATM",
+     "transaction_type": "Salary",
+     "calculation_type": "",
+     "charge": "No charge",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Send money",
+     "transaction_type": "*268#",
+     "calculation_type": "BDT",
+     "charge": "0",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Cash Out from UCB ATM",
+     "transaction_type": "Primary",
+     "calculation_type": "%",
+     "charge": "0.8",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "WASA",
+     "transaction_type": "Khulna WASA",
+     "calculation_type": "BDT",
+     "charge": "24",
+     "min_charge": "5000",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Cash Out from Agent",
+     "transaction_type": "Disbursement",
+     "calculation_type": "%",
+     "charge": "0.70",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Gas",
+     "transaction_type": "Titas Gas",
+     "calculation_type": "%",
+     "charge": "0.95",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Cash Out from Agent",
+     "transaction_type": "Salary",
+     "calculation_type": "%",
+     "charge": "1.0",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "WASA",
+     "transaction_type": "Khulna WASA",
+     "calculation_type": "BDT",
+     "charge": "24",
+     "min_charge": "5000",
+     "max_charge": "100000"
+    },
+    {
+     "service_name": "Electricity",
+     "transaction_type": "Nesco (Postpaid)",
+     "calculation_type": "%",
+     "charge": "0.9",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Electricity",
+     "transaction_type": "Westzone",
+     "calculation_type": "",
+     "charge": "No charge",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Electricity",
+     "transaction_type": "Palli Bidyut",
+     "calculation_type": "BDT",
+     "charge": "4",
+     "min_charge": "1",
+     "max_charge": "400"
+    },
+    {
+     "service_name": "Electricity",
+     "transaction_type": "Palli Bidyut",
+     "calculation_type": "BDT",
+     "charge": "9",
+     "min_charge": "400",
+     "max_charge": "1500"
+    },
+    {
+     "service_name": "WASA",
+     "transaction_type": "Khulna WASA",
+     "calculation_type": "BDT",
+     "charge": "4",
+     "min_charge": "1",
+     "max_charge": "400"
+    },
+    {
+     "service_name": "WASA",
+     "transaction_type": "Khulna WASA",
+     "calculation_type": "BDT",
+     "charge": "9",
+     "min_charge": "400",
+     "max_charge": "1500"
+    },
+    {
+     "service_name": "WASA",
+     "transaction_type": "Khulna WASA",
+     "calculation_type": "BDT",
+     "charge": "14",
+     "min_charge": "1500",
+     "max_charge": "5000"
+    },
+    {
+     "service_name": "Electricity",
+     "transaction_type": "Palli Bidyut",
+     "calculation_type": "BDT",
+     "charge": "14",
+     "min_charge": "1500",
+     "max_charge": "5000"
+    },
+    {
+     "service_name": "Electricity",
+     "transaction_type": "Palli Bidyut",
+     "calculation_type": "BDT",
+     "charge": "14",
+     "min_charge": "1500",
+     "max_charge": "5000"
+    },
+    {
+     "service_name": "Electricity",
+     "transaction_type": "Palli Bidyut",
+     "calculation_type": "BDT",
+     "charge": "24",
+     "min_charge": "5000",
+     "max_charge": "100000"
+    },
+    {
+     "service_name": "Electricity",
+     "transaction_type": "DPDC (Postpaid)",
+     "calculation_type": "BDT",
+     "charge": "4",
+     "min_charge": "1",
+     "max_charge": "400"
+    },
+    {
+     "service_name": "Electricity",
+     "transaction_type": "DPDC (Postpaid)",
+     "calculation_type": "BDT",
+     "charge": "9",
+     "min_charge": "400",
+     "max_charge": "1500"
+    },
+    {
+     "service_name": "Electricity",
+     "transaction_type": "DPDC (Postpaid)",
+     "calculation_type": "BDT",
+     "charge": "14",
+     "min_charge": "1500",
+     "max_charge": "5000"
+    },
+    {
+     "service_name": "Electricity",
+     "transaction_type": "DPDC (Postpaid)",
+     "calculation_type": "BDT",
+     "charge": "24",
+     "min_charge": "5000",
+     "max_charge": "100000"
+    },
+    {
+     "service_name": "Electricity",
+     "transaction_type": "DESCO (Postpaid)",
+     "calculation_type": "%",
+     "charge": "0.9",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Chittagong Metropolitan Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Cumilla Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Dhaka Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Dhaka Metropolitan Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Rangpur Metro Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Sherpur Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Manikganj Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Electricity",
+     "transaction_type": "West Zone (Postpaid)",
+     "calculation_type": "%",
+     "charge": "0.9",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Electricity",
+     "transaction_type": "DESCO (Prepaid)",
+     "calculation_type": "%",
+     "charge": "0.9",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "WASA",
+     "transaction_type": "Dhaka WASA",
+     "calculation_type": "%",
+     "charge": "0.9",
+     "min_charge": "",
+     "max_charge": "30"
+    },
+    {
+     "service_name": "Gas",
+     "transaction_type": "Jalalabad Gas",
+     "calculation_type": "%",
+     "charge": "0.9",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Gas",
+     "transaction_type": "Paschimanchal Gas",
+     "calculation_type": "%",
+     "charge": "0.9",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Gas",
+     "transaction_type": "Bakhrabad Gas",
+     "calculation_type": "%",
+     "charge": "0.9",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Dinajpur Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Gaibandha Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Jessore Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Kurigram Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Kustia Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Gazipur ZP Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Lalmonirhat Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Madaripur Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Meherpur Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Munshiganj Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Narail Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Netrokona Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Tangail Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Nilphamari Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Thakurgaon Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Panchagar Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Rangpur Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Gopalganj Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Kishoreganj Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Barisal Metro Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Faridpur Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Narsingdi Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Mymensingh Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Bagerhat Zilla Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    },
+    {
+     "service_name": "Traffic Fine",
+     "transaction_type": "Shariatpur ZP Police",
+     "calculation_type": "%+30",
+     "charge": "0.93",
+     "min_charge": "",
+     "max_charge": ""
+    }
+   ],
+   "table": {
+    "title_english": "schedule-charges",
+    "title_bangla": "schedule-charges",
+    "template_name": "schedule-charges",
+    "rows": {
+     "Data": [
+      {
+       "title": "Limits and Frequency",
+       "title bn": "",
+       "desc": "Limits and Frequency",
+       "desc bn": "",
+       "table data": [
+        {
+         "title": "table 1",
+         "charge table": "<div class=\"charge__table chrg_table-dview\">\r\n<div class=\"bill__pay--table--part\">\r\n<div class=\"table-responsive\">\r\n<table class=\"table table-bordered bill__pay-table\" style=\"width: 99.6965%; height: 478px;\">\r\n<thead>\r\n<tr style=\"height: 37px;\">\r\n<th class=\"start_t-head\" style=\"width: 19.3678%; height: 55px; text-align: center;\" rowspan=\"2\" scope=\"col\"><br /><br /></th>\r\n<th style=\"width: 21.6425%; height: 37px; text-align: center;\" colspan=\"2\" scope=\"col\">Per Transaction Limit (Amount in BDT)</th>\r\n<th style=\"width: 24.082%; height: 37px; text-align: center;\" colspan=\"2\" scope=\"col\">Daily Transaction Limit (Amount in BDT)</th>\r\n<th style=\"width: 26.3651%; height: 37px; text-align: center;\" colspan=\"2\" scope=\"col\">Monthly Transaction Limit (Amount in BDT)</th>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<th style=\"width: 9.73705%; height: 18px; text-align: center;\" scope=\"col\">Min</th>\r\n<th style=\"width: 11.9054%; height: 18px; text-align: center;\" scope=\"col\">Max</th>\r\n<th style=\"width: 11.7199%; height: 18px; text-align: center;\" scope=\"col\">Count</th>\r\n<th style=\"width: 12.3621%; height: 18px; text-align: center;\" scope=\"col\">Amount</th>\r\n<th style=\"width: 12.6332%; height: 18px; text-align: center;\" scope=\"col\">Count</th>\r\n<th style=\"width: 13.7319%; height: 18px; text-align: center;\" scope=\"col\">Amount</th>\r\n</tr>\r\n</thead>\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 19.3678%; text-align: center;\" width=\"146\">Cash In from Agent</td>\r\n<td style=\"width: 9.73705%; text-align: center;\" width=\"64\">50</td>\r\n<td style=\"width: 11.9054%; text-align: center;\" width=\"64\">50,000</td>\r\n<td style=\"width: 11.7199%; text-align: center;\" width=\"64\">200</td>\r\n<td style=\"width: 12.3621%; text-align: center;\" width=\"51\">50,000</td>\r\n<td style=\"width: 12.6332%; text-align: center;\" width=\"64\">1000</td>\r\n<td style=\"width: 13.7319%; text-align: center;\" width=\"64\">300,000</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 19.3678%; text-align: center;\" width=\"146\">Add Money&nbsp;</td>\r\n<td style=\"width: 9.73705%; text-align: center;\" width=\"64\">50</td>\r\n<td style=\"width: 11.9054%; text-align: center;\" width=\"64\">50,000</td>\r\n<td style=\"width: 11.7199%; text-align: center;\" width=\"64\">50</td>\r\n<td style=\"width: 12.3621%; text-align: center;\" width=\"51\">50,000</td>\r\n<td style=\"width: 12.6332%; text-align: center;\" width=\"64\">500</td>\r\n<td style=\"width: 13.7319%; text-align: center;\" width=\"64\">300,000</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 19.3678%; text-align: center;\" width=\"146\">Cash Out from Agent</td>\r\n<td style=\"width: 9.73705%; text-align: center;\" width=\"64\">50</td>\r\n<td style=\"width: 11.9054%; text-align: center;\" width=\"64\">30,000</td>\r\n<td style=\"width: 11.7199%; text-align: center;\" width=\"64\">100</td>\r\n<td style=\"width: 12.3621%; text-align: center;\" rowspan=\"2\" width=\"51\">30,000</td>\r\n<td style=\"width: 12.6332%; text-align: center;\" width=\"64\">1000</td>\r\n<td style=\"width: 13.7319%; text-align: center;\" rowspan=\"2\" width=\"64\">200,000</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 19.3678%; text-align: center;\" width=\"146\">Cash Out from ATM</td>\r\n<td style=\"width: 9.73705%; text-align: center;\" width=\"64\">500</td>\r\n<td style=\"width: 11.9054%; text-align: center;\" width=\"64\">30,000</td>\r\n<td style=\"width: 11.7199%; text-align: center;\" width=\"64\">5</td>\r\n<td style=\"width: 12.6332%; text-align: center;\" width=\"64\">20</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 19.3678%; text-align: center;\" width=\"146\">Send Money</td>\r\n<td style=\"width: 9.73705%; text-align: center;\" width=\"64\">10</td>\r\n<td style=\"width: 11.9054%; text-align: center;\" width=\"64\">25,000</td>\r\n<td style=\"width: 11.7199%; text-align: center;\" width=\"64\">200</td>\r\n<td style=\"width: 12.3621%; text-align: center;\" width=\"51\">50,000</td>\r\n<td style=\"width: 12.6332%; text-align: center;\" width=\"64\">1000</td>\r\n<td style=\"width: 13.7319%; text-align: center;\" width=\"64\">300,000</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 19.3678%; text-align: center;\" width=\"146\">Transfer Money to Bank Account</td>\r\n<td style=\"width: 9.73705%; text-align: center;\" width=\"64\">10</td>\r\n<td style=\"width: 11.9054%; text-align: center;\" width=\"64\">50,000</td>\r\n<td style=\"width: 11.7199%; text-align: center;\" width=\"64\">50</td>\r\n<td style=\"width: 12.3621%; text-align: center;\" width=\"51\">50,000</td>\r\n<td style=\"width: 12.6332%; text-align: center;\" width=\"64\">100</td>\r\n<td style=\"width: 13.7319%; text-align: center;\" width=\"64\">300,000</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 19.3678%; text-align: center;\" width=\"146\">Make Payment</td>\r\n<td style=\"width: 9.73705%; text-align: center;\" width=\"64\">1</td>\r\n<td style=\"width: 62.3525%; text-align: center;\" colspan=\"5\" width=\"307\">No Limit</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 19.3678%; text-align: center;\" width=\"146\">Pay Bill</td>\r\n<td style=\"width: 72.0896%; text-align: center;\" colspan=\"6\" width=\"371\">No Limit</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 19.3678%; text-align: center;\" width=\"146\">Mobile Recharge</td>\r\n<td style=\"width: 9.73705%; text-align: center;\" width=\"64\">-</td>\r\n<td style=\"width: 11.9054%; text-align: center;\" width=\"64\">-</td>\r\n<td style=\"width: 11.7199%; text-align: center;\" width=\"64\">50</td>\r\n<td style=\"width: 12.3621%; text-align: center;\" width=\"51\">10,000</td>\r\n<td style=\"width: 12.6332%; text-align: center;\" width=\"64\">1,500</td>\r\n<td style=\"width: 13.7319%; text-align: center;\" width=\"64\">100,000</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 19.3678%; text-align: center;\" width=\"146\">Inward Remittance</td>\r\n<td style=\"width: 9.73705%; text-align: center;\" width=\"64\">1</td>\r\n<td style=\"width: 11.9054%; text-align: center;\" width=\"64\">250,000</td>\r\n<td style=\"width: 11.7199%; text-align: center;\" width=\"64\">10</td>\r\n<td style=\"width: 12.3621%; text-align: center;\" width=\"51\">250,000</td>\r\n<td style=\"width: 12.6332%; text-align: center;\" width=\"64\">50</td>\r\n<td style=\"width: 13.7319%; text-align: center;\" width=\"64\">500,000</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 19.3678%; text-align: center;\" width=\"146\">Request Money</td>\r\n<td style=\"width: 9.73705%; text-align: center;\" width=\"64\">10</td>\r\n<td style=\"width: 11.9054%; text-align: center;\" width=\"64\">25,000</td>\r\n<td style=\"width: 24.082%; text-align: center;\" colspan=\"2\" width=\"115\">No Limit</td>\r\n<td style=\"width: 26.3651%; text-align: center;\" colspan=\"2\" width=\"128\">No Limit</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<br /><br />*An upay account holder can keep a maximum amount of Tk 500,000 (including Cash Reward) in their upay account at any moment.<br /><br />*Daily and monthly cash-out limits apply to combined cash-out from agents and ATMs.<br /><br />*A maximum of &nbsp;Tk. 1,000 can be recharged to a prepaid mobile number and a maximum of Tk. 5,000 to a postpaid mobile number from a upay account in a single mobile recharge transaction.<br /><br />*For limited KYC customers, maximum Tk. 500 can recharged to a prepaid/postpaid mobile number at limited KYC status&nbsp;<br /><br /><br /><br /></div>\r\n</div>\r\n</div>",
+         "charge table bn": "<div class=\"charge__table chrg_table-dview\">\r\n<div class=\"bill__pay--table--part\">\r\n<div class=\"table-responsive\">\r\n<table class=\"table table-bordered bill__pay-table\" style=\"width: 99.5443%; height: 335px;\">\r\n<thead>\r\n<tr style=\"height: 37px;\">\r\n<th class=\"start_t-head\" style=\"width: 19.3678%; height: 55px;\" rowspan=\"2\" scope=\"col\"><br /><br /></th>\r\n<th style=\"width: 21.6425%; height: 37px;\" colspan=\"2\" scope=\"col\">প্রতি ট্রানজেকশন লিমিট(টাকায়)</th>\r\n<th style=\"width: 24.082%; height: 37px;\" colspan=\"2\" scope=\"col\">প্রতিদিনের ট্রানজেকশন লিমিট (টাকায়)</th>\r\n<th style=\"width: 26.3651%; height: 37px;\" colspan=\"2\" scope=\"col\">মাসিক ট্রানজেকশন লিমিট (টাকায়)</th>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<th style=\"width: 9.73705%; height: 18px;\" scope=\"col\">সর্বনিম্ন</th>\r\n<th style=\"width: 11.9054%; height: 18px;\" scope=\"col\">সর্বোচ্চ</th>\r\n<th style=\"width: 11.7199%; height: 18px;\" scope=\"col\">কাউন্ট</th>\r\n<th style=\"width: 12.3621%; height: 18px;\" scope=\"col\">অ্যামাউন্ট</th>\r\n<th style=\"width: 12.6332%; height: 18px;\" scope=\"col\">কাউন্ট</th>\r\n<th style=\"width: 13.7319%; height: 18px;\" scope=\"col\">অ্যামাউন্ট</th>\r\n</tr>\r\n</thead>\r\n<tbody>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 19.3678%; height: 19px;\">এজেন্ট হতে ক্যাশ ইন</td>\r\n<td style=\"width: 9.73705%; text-align: center; height: 19px;\">৫০</td>\r\n<td style=\"width: 11.9054%; text-align: center; height: 19px;\">৫০,০০০</td>\r\n<td style=\"width: 11.7199%; text-align: center; height: 19px;\">২০০</td>\r\n<td style=\"width: 12.3621%; height: 19px; text-align: center;\">৫০,০০০</td>\r\n<td style=\"width: 12.6332%; text-align: center; height: 19px;\">১০০০</td>\r\n<td style=\"width: 13.7319%; text-align: center; height: 19px;\">৩,০০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 19.3678%; height: 19px;\">অ্যাড মানি&nbsp;</td>\r\n<td style=\"width: 9.73705%; text-align: center; height: 19px;\">৫০</td>\r\n<td style=\"width: 11.9054%; text-align: center; height: 19px;\">৫০,০০০</td>\r\n<td style=\"width: 11.7199%; text-align: center; height: 19px;\">৫০</td>\r\n<td style=\"width: 12.3621%; text-align: center; height: 19px;\">৫০,০০০</td>\r\n<td style=\"width: 12.6332%; text-align: center; height: 19px;\">৫০০</td>\r\n<td style=\"width: 13.7319%; text-align: center; height: 19px;\">৩,০০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 37px;\">\r\n<td style=\"width: 19.3678%; height: 37px;\">এজেন্ট হতে ক্যাশ আউট</td>\r\n<td class=\"text-center\" style=\"width: 9.73705%; height: 37px; text-align: center;\">৫০</td>\r\n<td class=\"text-center\" style=\"width: 11.9054%; height: 37px; text-align: center;\">৩০,০০০</td>\r\n<td class=\"text-center\" style=\"width: 11.7199%; height: 37px; text-align: center;\">১০০</td>\r\n<td class=\"text-center\" style=\"height: 37px; text-align: center; width: 12.3621%;\" rowspan=\"2\">৩০,০০০</td>\r\n<td class=\"text-center\" style=\"width: 12.6332%; height: 37px; text-align: center;\">১০০</td>\r\n<td class=\"text-center\" style=\"height: 37px; text-align: center; width: 13.7319%;\" rowspan=\"2\">২,০০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 19.3678%; height: 19px;\">এটিএম হতে ক্যাশ আউট</td>\r\n<td style=\"width: 9.73705%; text-align: center; height: 19px;\">৫০০</td>\r\n<td style=\"width: 11.9054%; text-align: center; height: 19px;\">৩০,০০০</td>\r\n<td style=\"width: 11.7199%; text-align: center; height: 19px;\">৫</td>\r\n<td style=\"width: 12.6332%; text-align: center; height: 19px;\">২০</td>\r\n</tr>\r\n<tr style=\"height: 37px;\">\r\n<td style=\"width: 19.3678%; height: 37px;\">সেন্ড মানি</td>\r\n<td class=\"text-center\" style=\"width: 9.73705%; height: 37px; text-align: center;\">১০</td>\r\n<td class=\"text-center\" style=\"width: 11.9054%; height: 37px; text-align: center;\">২৫,০০০</td>\r\n<td class=\"text-center\" style=\"width: 11.7199%; height: 37px; text-align: center;\">২০০</td>\r\n<td class=\"text-center\" style=\"width: 12.3621%; height: 37px; text-align: center;\">৫০,০০০</td>\r\n<td class=\"text-center\" style=\"width: 12.6332%; height: 37px; text-align: center;\">১০০০</td>\r\n<td class=\"text-center\" style=\"width: 13.7319%; height: 37px; text-align: center;\">৩,০০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 39px;\">\r\n<td style=\"width: 19.3678%; height: 39px;\">ব্যাংক অ্যাকাউন্টে মানি ট্রান্সফার</td>\r\n<td style=\"width: 9.73705%; text-align: center; height: 39px;\">১০</td>\r\n<td style=\"width: 11.9054%; text-align: center; height: 39px;\">৫০,০০০</td>\r\n<td style=\"width: 11.7199%; text-align: center; height: 39px;\">৫০</td>\r\n<td style=\"width: 12.3621%; text-align: center; height: 39px;\">৫০,০০০</td>\r\n<td style=\"width: 12.6332%; text-align: center; height: 39px;\">১০০</td>\r\n<td style=\"width: 13.7319%; text-align: center; height: 39px;\">৩,০০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 19.3678%; height: 18px;\">মেক পেমেন্ট</td>\r\n<td class=\"text-center\" style=\"width: 9.73705%; height: 18px; text-align: center;\">১</td>\r\n<td class=\"text-center\" style=\"width: 62.3525%; height: 18px; text-align: center;\" colspan=\"5\">লিমিট নেই</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 19.3678%; height: 18px;\">পে বিল</td>\r\n<td class=\"text-center\" style=\"width: 72.0896%; height: 18px; text-align: center;\" colspan=\"6\">লিমিট নেই</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 19.3678%; height: 19px;\">মোবাইল রিচার্জ</td>\r\n<td style=\"width: 9.73705%; text-align: center; height: 19px;\">-</td>\r\n<td style=\"width: 11.9054%; text-align: center; height: 19px;\">-</td>\r\n<td style=\"width: 11.7199%; text-align: center; height: 19px;\">৫০</td>\r\n<td style=\"width: 12.3621%; text-align: center; height: 19px;\">১০,০০০</td>\r\n<td style=\"width: 12.6332%; text-align: center; height: 19px;\">১,৫০০</td>\r\n<td style=\"width: 13.7319%; text-align: center; height: 19px;\">১,০০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 19.3678%; height: 18px;\">রেমিট্যান্স</td>\r\n<td class=\"text-center\" style=\"width: 9.73705%; height: 18px; text-align: center;\">১</td>\r\n<td class=\"text-center\" style=\"width: 11.9054%; height: 18px; text-align: center;\">২৫০,০০০</td>\r\n<td class=\"text-center\" style=\"width: 11.7199%; height: 18px; text-align: center;\">১০</td>\r\n<td class=\"text-center\" style=\"width: 12.3621%; height: 18px; text-align: center;\">২৫০,০০০</td>\r\n<td class=\"text-center\" style=\"width: 12.6332%; height: 18px; text-align: center;\">৫০</td>\r\n<td class=\"text-center\" style=\"width: 13.7319%; height: 18px; text-align: center;\">৫০০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 19.3678%; height: 18px;\">রিকুয়েস্ট মানি</td>\r\n<td class=\"text-center\" style=\"width: 9.73705%; height: 18px; text-align: center;\">১০</td>\r\n<td class=\"text-center\" style=\"width: 11.9054%; height: 18px; text-align: center;\">২৫,০০০</td>\r\n<td class=\"text-center\" style=\"height: 18px; width: 24.082%; text-align: center;\" colspan=\"2\">লিমিট নেই</td>\r\n<td class=\"text-center\" style=\"height: 18px; width: 26.3651%; text-align: center;\" colspan=\"2\">লিমিট নেই</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<br /><br />* একজন উপায় গ্রাহক যেকোন মুহূর্তে ক্যাশ রিওয়ার্ডসহ সর্বোচ্চ ৫,০০,০০০ টাকা তার ওয়ালেটে জমা রাখতে পারবেন।<br /><br />*এজেন্ট এবং এটিএম থেকে সম্মিলিত ক্যাশ আউটের ক্ষেত্রে দৈনিক ও মাসিক সীমা প্রযোজ্য।<br /><br />* একটি ট্রানজেকশনে একজন গ্রাহক সর্বোচ্চ ১,০০০ টাকা প্রিপেইড নম্বরে ও সর্বোচ্চ ৫,০০০ টাকা পোস্টপেইড নম্বরে মোবাইল রিচার্জ করতে পারবেন।&nbsp;<br /><br />* সীমিত সংখ্যক কেওআইসি কাস্টমাররা সীমিত কেওআইসি স্টাটাস এর কারণে সর্বোচ্চ ৫০০ টাকা প্রিপেইড/পোস্টপেইড মোবাইল নম্বরে রিচার্জ করতে পারবেন।<br /><br /><br /><br /></div>\r\n</div>\r\n</div>"
+        }
+       ],
+       "table data sd": [
+        {
+         "table title": "table 1",
+         "charge table": "<h2 class=\"charge__heade--mobview\">Per Transaction Limit</h2>\r\n<div class=\"charge__table chrg_table-mview mb-3\">\r\n<div class=\"bill__pay--table--part\">\r\n<div class=\"table-responsive\">\r\n<table class=\"table table-bordered bill__pay-table\" style=\"width: 99.648%; height: 271px;\">\r\n<thead>\r\n<tr style=\"height: 18px;\">\r\n<th class=\"start_t-head\" style=\"width: 41.4733%; height: 36px;\" rowspan=\"2\" scope=\"col\">Service Type</th>\r\n<th style=\"width: 52.6978%; height: 18px;\" colspan=\"2\" scope=\"col\">Per Transaction Limit (Amount in BDT)</th>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<th style=\"width: 22.449%; height: 18px;\" scope=\"col\">Min</th>\r\n<th style=\"width: 30.2488%; height: 18px;\" scope=\"col\">Max</th>\r\n</tr>\r\n</thead>\r\n<tbody>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">Add Money&nbsp; (NPSB)</td>\r\n<td class=\"text-center\" style=\"height: 18px; text-align: center; width: 22.449%;\">01</td>\r\n<td class=\"text-center\" style=\"height: 18px; text-align: center; width: 30.2488%;\">50,000</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 10px;\">Add Money (Rest)</td>\r\n<td class=\"text-center\" style=\"height: 10px; text-align: center; width: 22.449%;\">50</td>\r\n<td class=\"text-center\" style=\"height: 10px; text-align: center; width: 30.2488%;\">50,000</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 41.4733%; height: 19px;\">Cash In from Agent</td>\r\n<td style=\"width: 22.449%; height: 19px; text-align: center;\">50</td>\r\n<td style=\"width: 30.2488%; height: 19px; text-align: center;\">50,000</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">Cash Out from Agent</td>\r\n<td class=\"text-center\" style=\"width: 22.449%; height: 18px; text-align: center;\">50</td>\r\n<td class=\"text-center\" style=\"width: 30.2488%; height: 18px; text-align: center;\">30,000</td>\r\n</tr>\r\n<tr style=\"height: 42px;\">\r\n<td style=\"width: 41.4733%; height: 42px;\">Cash out from ATM</td>\r\n<td style=\"width: 22.449%; height: 42px; text-align: center;\">500</td>\r\n<td style=\"width: 30.2488%; height: 42px; text-align: center;\">30,000</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 41.4733%; height: 19px;\">Send Money</td>\r\n<td style=\"width: 22.449%; height: 19px; text-align: center;\">10</td>\r\n<td style=\"width: 30.2488%; height: 19px; text-align: center;\">50,000</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 41.4733%; height: 19px;\">Transfer Money to Bank Account</td>\r\n<td style=\"width: 22.449%; height: 19px; text-align: center;\">10</td>\r\n<td style=\"width: 30.2488%; height: 19px; text-align: center;\">50,000</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">Make Payment</td>\r\n<td class=\"text-center\" style=\"width: 22.449%; height: 18px; text-align: center;\">1</td>\r\n<td class=\"text-center\" style=\"width: 30.2488%; height: 18px; text-align: center;\">No Limit</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">Pay Bill</td>\r\n<td class=\"text-center\" style=\"width: 52.6978%; height: 18px; text-align: center;\" colspan=\"2\">No Limit</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">Mobile Recharge*</td>\r\n<td class=\"text-center\" style=\"width: 22.449%; height: 18px; text-align: center;\">-</td>\r\n<td class=\"text-center\" style=\"width: 30.2488%; height: 18px; text-align: center;\">-</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">Inward Remittance</td>\r\n<td class=\"text-center\" style=\"width: 22.449%; height: 18px; text-align: center;\">1</td>\r\n<td class=\"text-center\" style=\"width: 30.2488%; height: 18px; text-align: center;\">250,000</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">Request Money</td>\r\n<td class=\"text-center\" style=\"width: 22.449%; height: 18px; text-align: center;\">10</td>\r\n<td class=\"text-center\" style=\"width: 30.2488%; height: 18px; text-align: center;\">25,000</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n</div>\r\n</div>",
+         "charge table bn": "<h2 class=\"charge__heade--mobview\">প্রতিটি ট্রানজেকশন লিমিট (টাকায়)</h2>\r\n<div class=\"charge__table chrg_table-mview mb-3\">\r\n<div class=\"bill__pay--table--part\">\r\n<div class=\"table-responsive\">\r\n<table class=\"table table-bordered bill__pay-table\" style=\"width: 99.648%; height: 271px;\">\r\n<thead>\r\n<tr style=\"height: 18px;\">\r\n<th class=\"start_t-head\" style=\"width: 41.4733%; height: 36px;\" rowspan=\"2\" scope=\"col\">সার্ভিস টাইপ</th>\r\n<th style=\"width: 52.6978%; height: 18px;\" colspan=\"2\" scope=\"col\">প্রতিটি ট্রানজেকশন লিমিট (টাকায়)</th>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<th style=\"width: 22.449%; height: 18px;\" scope=\"col\">Min</th>\r\n<th style=\"width: 30.2488%; height: 18px;\" scope=\"col\">Max</th>\r\n</tr>\r\n</thead>\r\n<tbody>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">&nbsp;অ্যাড মানি (NPSB)</td>\r\n<td class=\"text-center\" style=\"height: 18px; text-align: center; width: 22.449%;\">০১</td>\r\n<td class=\"text-center\" style=\"height: 18px; text-align: center; width: 30.2488%;\">৫০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 10px;\">&nbsp;অ্যাড মানি (অন্যান্য)</td>\r\n<td class=\"text-center\" style=\"height: 10px; text-align: center; width: 22.449%;\">৫০</td>\r\n<td class=\"text-center\" style=\"height: 10px; text-align: center; width: 30.2488%;\">৫০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 41.4733%; height: 19px;\">এজেন্ট হতে ক্যাশ ইন</td>\r\n<td style=\"width: 22.449%; text-align: center; height: 19px;\">৫০</td>\r\n<td style=\"width: 30.2488%; text-align: center; height: 19px;\">৫০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">এজেন্ট হতে ক্যাশ আউট</td>\r\n<td class=\"text-center\" style=\"width: 22.449%; height: 18px; text-align: center;\">৫০</td>\r\n<td class=\"text-center\" style=\"width: 30.2488%; height: 18px; text-align: center;\">৩০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 42px;\">\r\n<td style=\"width: 41.4733%; height: 42px;\">এটিএম থেকে ক্যাশ আউট</td>\r\n<td style=\"width: 22.449%; height: 42px; text-align: center;\">৫০০</td>\r\n<td style=\"width: 30.2488%; height: 42px; text-align: center;\">৩০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 41.4733%; height: 19px;\">সেন্ড মানি</td>\r\n<td style=\"width: 22.449%; text-align: center; height: 19px;\">১০</td>\r\n<td style=\"width: 30.2488%; text-align: center; height: 19px;\">৫০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 41.4733%; height: 19px;\">ব্যাংক অ্যাকাউন্ট এ মানি ট্রান্সফার</td>\r\n<td style=\"width: 22.449%; text-align: center; height: 19px;\">১০</td>\r\n<td style=\"width: 30.2488%; text-align: center; height: 19px;\">৫০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">মেক পেমেন্ট</td>\r\n<td class=\"text-center\" style=\"width: 22.449%; height: 18px; text-align: center;\">১</td>\r\n<td class=\"text-center\" style=\"width: 30.2488%; height: 18px; text-align: center;\">লিমিট নেই</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">বিল পে</td>\r\n<td class=\"text-center\" style=\"width: 52.6978%; height: 18px; text-align: center;\" colspan=\"2\">লিমিট নেই</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">মোবাইল রিচার্জ*</td>\r\n<td class=\"text-center\" style=\"width: 22.449%; height: 18px; text-align: center;\">-</td>\r\n<td class=\"text-center\" style=\"width: 30.2488%; height: 18px; text-align: center;\">-</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">অভ্যন্তরীণ রেমিট্যান্স</td>\r\n<td class=\"text-center\" style=\"width: 22.449%; height: 18px; text-align: center;\">১</td>\r\n<td class=\"text-center\" style=\"width: 30.2488%; height: 18px; text-align: center;\">২৫০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">রিকুয়েষ্ট মানি</td>\r\n<td class=\"text-center\" style=\"width: 22.449%; height: 18px; text-align: center;\">১০</td>\r\n<td class=\"text-center\" style=\"width: 30.2488%; height: 18px; text-align: center;\">২৫,০০০</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n</div>\r\n</div>"
+        },
+        {
+         "table title": "table 2",
+         "charge table": "<h2 class=\"charge__heade--mobview\">Daily Transaction Limit</h2>\r\n<div class=\"charge__table chrg_table-mview mb-3\">\r\n<div class=\"bill__pay--table--part\">\r\n<div class=\"table-responsive\">\r\n<table class=\"table table-bordered bill__pay-table\" style=\"width: 75.8725%; height: 324px;\">\r\n<thead>\r\n<tr style=\"height: 19px;\">\r\n<th class=\"start_t-head\" style=\"width: 40.5174%; height: 38px;\" rowspan=\"2\" scope=\"col\">Service Type</th>\r\n<th style=\"width: 53.6702%; height: 19px;\" colspan=\"2\" scope=\"col\">Daily Transaction Limit (Amount in BDT)</th>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<th style=\"width: 27.8958%; height: 19px;\" scope=\"col\">Count</th>\r\n<th style=\"width: 25.7744%; height: 19px;\" scope=\"col\">Amount</th>\r\n</tr>\r\n</thead>\r\n<tbody>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 40.5174%; height: 19px;\">Add Money from Bank</td>\r\n<td class=\"text-center\" style=\"width: 27.8958%; height: 38px; text-align: center;\" rowspan=\"2\">20</td>\r\n<td class=\"text-center\" style=\"width: 25.7744%; height: 38px; text-align: center;\" rowspan=\"2\">50,000</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 40.5174%; height: 19px;\">Add Money from Credit Card</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 40.5174%; height: 19px;\">Cash In from Agent</td>\r\n<td style=\"width: 27.8958%; height: 19px; text-align: center;\">10</td>\r\n<td style=\"width: 25.7744%; height: 19px; text-align: center;\">50,000</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 40.5174%; height: 19px;\">Cash Out from Agent</td>\r\n<td style=\"width: 27.8958%; height: 19px; text-align: center;\">10</td>\r\n<td style=\"width: 25.7744%; height: 19px; text-align: center;\">30,000</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 40.5174%; height: 19px;\">Send Money</td>\r\n<td class=\"text-center\" style=\"width: 27.8958%; height: 19px; text-align: center;\">50</td>\r\n<td class=\"text-center\" style=\"width: 25.7744%; height: 19px; text-align: center;\">50,000</td>\r\n</tr>\r\n<tr style=\"height: 39px;\">\r\n<td style=\"width: 40.5174%; height: 39px;\">Transfer Money to Bank Account</td>\r\n<td style=\"width: 27.8958%; height: 39px; text-align: center;\">50</td>\r\n<td style=\"width: 25.7744%; height: 39px; text-align: center;\">50,000</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 40.5174%; height: 19px;\">Make Payment</td>\r\n<td class=\"text-center\" style=\"width: 53.6702%; height: 19px; text-align: center;\" colspan=\"2\">No Limit</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 40.5174%; height: 19px;\">Pay Bill</td>\r\n<td class=\"text-center\" style=\"width: 53.6702%; height: 19px; text-align: center;\" colspan=\"2\">No Limit</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 40.5174%; height: 19px;\">Mobile Recharge*</td>\r\n<td class=\"text-center\" style=\"width: 27.8958%; height: 19px; text-align: center;\">50</td>\r\n<td class=\"text-center\" style=\"width: 25.7744%; height: 19px; text-align: center;\">10,000</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 40.5174%; height: 19px;\">Inward Remittance</td>\r\n<td class=\"text-center\" style=\"width: 27.8958%; height: 19px; text-align: center;\">10</td>\r\n<td class=\"text-center\" style=\"width: 25.7744%; height: 19px; text-align: center;\">250,000</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 40.5174%; height: 19px;\">Request Money</td>\r\n<td class=\"text-center\" style=\"width: 53.6702%; height: 19px; text-align: center;\" colspan=\"2\">No Limit</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n</div>\r\n</div>",
+         "charge table bn": "<h2 class=\"charge__heade--mobview\"><strong>প্রতিদিনের ট্রানজেকশন লিমিট (টাকায়)</strong>&nbsp;</h2>\r\n<div class=\"charge__table chrg_table-mview mb-3\">\r\n<div class=\"bill__pay--table--part\">\r\n<div class=\"table-responsive\">\r\n<table class=\"table table-bordered bill__pay-table\" style=\"width: 78.5174%; height: 231px;\">\r\n<thead>\r\n<tr style=\"height: 19px;\">\r\n<th class=\"start_t-head\" style=\"width: 41.4733%; height: 38px;\" rowspan=\"2\" scope=\"col\">Service Type</th>\r\n<th style=\"width: 55.696%; height: 19px;\" colspan=\"2\" scope=\"col\"><strong>প্রতিদিনের ট্রানজেকশন লিমিট (টাকায়)</strong>&nbsp;</th>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<th style=\"width: 25.578%; height: 19px;\" scope=\"col\">সংখ্যা</th>\r\n<th style=\"width: 30.1179%; height: 19px;\" scope=\"col\">এমাউন্ট</th>\r\n</tr>\r\n</thead>\r\n<tbody>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">ব্যাংক হতে অ্যাড মানি</td>\r\n<td class=\"text-center\" style=\"width: 25.578%; height: 36px; text-align: center;\" rowspan=\"2\">২০</td>\r\n<td class=\"text-center\" style=\"width: 30.1179%; height: 36px; text-align: center;\" rowspan=\"2\">৫০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">ক্রেডিট কার্ড হতে অ্যাড মানি</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 41.4733%; height: 19px;\">এজেন্ট হতে ক্যাশ ইন&nbsp;</td>\r\n<td style=\"width: 25.578%; height: 19px; text-align: center;\">১০</td>\r\n<td style=\"width: 30.1179%; height: 19px; text-align: center;\">৫০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 41.4733%; height: 19px;\">এজেন্ট হতে ক্যাশ আউট</td>\r\n<td style=\"width: 25.578%; height: 19px; text-align: center;\">১০</td>\r\n<td style=\"width: 30.1179%; height: 19px; text-align: center;\">৩০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 10px;\">সেন্ড মানি</td>\r\n<td class=\"text-center\" style=\"width: 25.578%; height: 10px; text-align: center;\">৫০</td>\r\n<td class=\"text-center\" style=\"width: 30.1179%; height: 10px; text-align: center;\">৫০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 41.4733%; height: 19px;\">ব্যাংক অ্যাকাউন্ট এ মানি ট্রান্সফার</td>\r\n<td style=\"width: 25.578%; height: 19px; text-align: center;\">৫০</td>\r\n<td style=\"width: 30.1179%; height: 19px; text-align: center;\">৫০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">মেক পেমেন্ট</td>\r\n<td class=\"text-center\" style=\"width: 55.696%; height: 18px; text-align: center;\" colspan=\"2\">লিমিট নেই&nbsp;</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">বিল পে</td>\r\n<td class=\"text-center\" style=\"width: 55.696%; height: 18px; text-align: center;\" colspan=\"2\">লিমিট নেই</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">মোবাইল রিচার্জ*</td>\r\n<td class=\"text-center\" style=\"width: 25.578%; height: 18px; text-align: center;\">৫০</td>\r\n<td class=\"text-center\" style=\"width: 30.1179%; height: 18px; text-align: center;\">১০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">অভ্যন্তরীণ রেমিট্যান্স</td>\r\n<td class=\"text-center\" style=\"width: 25.578%; height: 18px; text-align: center;\">১০</td>\r\n<td class=\"text-center\" style=\"width: 30.1179%; height: 18px; text-align: center;\">২৫০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">রিকুয়েষ্ট মানি</td>\r\n<td class=\"text-center\" style=\"width: 55.696%; height: 18px; text-align: center;\" colspan=\"2\">লিমিট নেই</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n</div>\r\n</div>"
+        },
+        {
+         "table title": "table 3",
+         "charge table": "<h2 class=\"charge__heade--mobview\">Monthly Transaction Limit</h2>\r\n<div class=\"charge__table chrg_table-mview\">\r\n<div class=\"bill__pay--table--part\">\r\n<div class=\"table-responsive\">\r\n<table class=\"table table-bordered bill__pay-table\">\r\n<thead>\r\n<tr>\r\n<th class=\"start_t-head\" rowspan=\"2\" scope=\"col\">Service Type</th>\r\n<th colspan=\"2\" scope=\"col\">Monthly Transaction Limit (Amount in BDT)</th>\r\n</tr>\r\n<tr>\r\n<th scope=\"col\">Count</th>\r\n<th scope=\"col\">Amount</th>\r\n</tr>\r\n</thead>\r\n<tbody>\r\n<tr>\r\n<td>Add Money from Bank</td>\r\n<td class=\"text-center\" style=\"text-align: center;\" rowspan=\"2\">50</td>\r\n<td class=\"text-center\" style=\"text-align: center;\" rowspan=\"2\">300,000</td>\r\n</tr>\r\n<tr>\r\n<td>Add Money from Credit Card</td>\r\n</tr>\r\n<tr>\r\n<td>Cash In from Agent</td>\r\n<td style=\"text-align: center;\">100</td>\r\n<td style=\"text-align: center;\">300,000</td>\r\n</tr>\r\n<tr>\r\n<td>Cash Out from Agent</td>\r\n<td style=\"text-align: center;\">100</td>\r\n<td style=\"text-align: center;\">200,000</td>\r\n</tr>\r\n<tr>\r\n<td>Send Money</td>\r\n<td class=\"text-center\" style=\"text-align: center;\">100</td>\r\n<td class=\"text-center\" style=\"text-align: center;\">300,000</td>\r\n</tr>\r\n<tr>\r\n<td>Transfer Money to Bank Account</td>\r\n<td style=\"text-align: center;\">No Limit</td>\r\n<td style=\"text-align: center;\">300,000</td>\r\n</tr>\r\n<tr>\r\n<td>Make Payment</td>\r\n<td class=\"text-center\" style=\"text-align: center;\" colspan=\"2\">No Limit</td>\r\n</tr>\r\n<tr>\r\n<td>Pay Bill</td>\r\n<td class=\"text-center\" style=\"text-align: center;\" colspan=\"2\">No Limit</td>\r\n</tr>\r\n<tr>\r\n<td>Mobile Recharge*</td>\r\n<td class=\"text-center\" style=\"text-align: center;\">1500</td>\r\n<td class=\"text-center\" style=\"text-align: center;\">100,000</td>\r\n</tr>\r\n<tr>\r\n<td>Inward Remittance</td>\r\n<td class=\"text-center\" style=\"text-align: center;\">50</td>\r\n<td class=\"text-center\" style=\"text-align: center;\">500,000</td>\r\n</tr>\r\n<tr>\r\n<td>Request Money</td>\r\n<td class=\"text-center\" style=\"text-align: center;\" colspan=\"2\">No Limit</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<br />\r\n<p>An upay account holder can keep a maximum amount of Tk 500,000 (including Cash Reward) in their upay account at any moment.<br /><br />*A maximum of &nbsp;Tk. 1,000 can be recharged to a prepaid mobile number and a maximum of Tk. 5,000 to a postpaid mobile number from a upay account in a single mobile recharge transaction.<br /><br />*For limited KYC customers, maximum Tk. 500 can recharged to a prepaid/postpaid mobile number at limited KYC status&nbsp;</p>\r\n<br /><br /><br /></div>\r\n</div>\r\n</div>",
+         "charge table bn": "<h2 class=\"charge__heade--mobview\">মাসিক <strong>ট্রানজেকশন লিমিট </strong>(টাকায়)</h2>\r\n<div class=\"charge__table chrg_table-mview\">\r\n<div class=\"bill__pay--table--part\">\r\n<div class=\"table-responsive\">\r\n<table class=\"table table-bordered bill__pay-table\" style=\"width: 78.7557%; height: 239px;\">\r\n<thead>\r\n<tr style=\"height: 19px;\">\r\n<th class=\"start_t-head\" style=\"width: 41.4733%; height: 38px;\" rowspan=\"2\" scope=\"col\">Service Type</th>\r\n<th style=\"width: 55.6727%; height: 19px;\" colspan=\"2\" scope=\"col\">মাসিক <strong>ট্রানজেকশন লিমিট </strong>(টাকায়)</th>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<th style=\"width: 29.1091%; height: 19px;\" scope=\"col\">সংখ্যা</th>\r\n<th style=\"width: 26.5636%; height: 19px;\" scope=\"col\">এমাউন্ট</th>\r\n</tr>\r\n</thead>\r\n<tbody>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">ব্যাংক হতে অ্যাড মানি</td>\r\n<td class=\"text-center\" style=\"width: 29.1091%; height: 36px; text-align: center;\" rowspan=\"2\">৫০</td>\r\n<td class=\"text-center\" style=\"width: 26.5636%; height: 36px; text-align: center;\" rowspan=\"2\">৩০০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">ক্রেডিট কার্ড হতে অ্যাড মানি</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 41.4733%; height: 19px;\">এজেন্ট হতে ক্যাশ ইন&nbsp;</td>\r\n<td style=\"width: 29.1091%; height: 19px; text-align: center;\">১০০</td>\r\n<td style=\"width: 26.5636%; height: 19px; text-align: center;\">৩০০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 41.4733%; height: 19px;\">এজেন্ট হতে ক্যাশ আউট</td>\r\n<td style=\"width: 29.1091%; height: 19px; text-align: center;\">১০০</td>\r\n<td style=\"width: 26.5636%; height: 19px; text-align: center;\">২০০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">সেন্ড মানি</td>\r\n<td class=\"text-center\" style=\"width: 29.1091%; height: 18px; text-align: center;\">১০০</td>\r\n<td class=\"text-center\" style=\"width: 26.5636%; height: 18px; text-align: center;\">৩০০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 41.4733%; height: 19px;\">ব্যাংক অ্যাকাউন্ট এ মানি ট্রান্সফার</td>\r\n<td style=\"width: 29.1091%; height: 19px; text-align: center;\">১০০</td>\r\n<td style=\"width: 26.5636%; height: 19px; text-align: center;\">৩০০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">মেক পেমেন্ট</td>\r\n<td class=\"text-center\" style=\"width: 55.6727%; height: 18px; text-align: center;\" colspan=\"2\">লিমিট নেই</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">বিল পে</td>\r\n<td class=\"text-center\" style=\"width: 55.6727%; height: 18px; text-align: center;\" colspan=\"2\">লিমিট নেই</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">মোবাইল রিচার্জ*</td>\r\n<td class=\"text-center\" style=\"width: 29.1091%; height: 18px; text-align: center;\">১৫০০</td>\r\n<td class=\"text-center\" style=\"width: 26.5636%; height: 18px; text-align: center;\">১০০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">অভ্যন্তরীণ রেমিট্যান্স</td>\r\n<td class=\"text-center\" style=\"width: 29.1091%; height: 18px; text-align: center;\">৫০</td>\r\n<td class=\"text-center\" style=\"width: 26.5636%; height: 18px; text-align: center;\">৫০০,০০০</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 41.4733%; height: 18px;\">রিকুয়েষ্ট মানি</td>\r\n<td class=\"text-center\" style=\"width: 55.6727%; height: 18px; text-align: center;\" colspan=\"2\">লিমিট নেই</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<br />একজন উপায় গ্রাহক যে কোনো মুহূর্তে তার উপায় অ্যাকাউন্টে সর্বোচ্চ ৫০০,০০০/- টাকা (ক্যাশ রিওয়ার্ড সহ) রাখতে পারবেন।<br /><br />* একটি ট্রানজেকশনে একজন উপায় গ্রাহক প্রিপেইড নম্বর থেকে সর্বোচ্চ ১,০০০ টাকা ও পোস্টপেইড নম্বর থেকে সর্বোচ্চ ৫,০০০ টাকা মোবাইল রিচার্জ করতে পারবেন।<br /><br />* লিমিটেড KYC স্টাটাস এর গ্রাহকরা, প্রিপেইড/পোস্টপেইড মোবাইল নম্বরে সর্বোচ্চ ৫০০ টাকা রিচার্জ করতে পারবেন।<br /><br /><br /></div>\r\n</div>\r\n</div>"
+        }
+       ]
+      }
+     ]
+    },
+    "slug": "schedule-charges"
+   },
+   "error": ""
+  }
+ }
+}

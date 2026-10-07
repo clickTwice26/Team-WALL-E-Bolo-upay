@@ -1,0 +1,69 @@
+{
+ "url": "https://www.upaybd.com/services/details/Gas",
+ "api": "https://api.upaybd.com/api/v2/pages/Gas",
+ "data": {
+  "title_english": "Gas",
+  "title_bangla": "গ্যাস",
+  "template_name": "template-d",
+  "rows": {
+   "Data": [
+    {
+     "title": "Gas",
+     "title bn": "গ্যাস",
+     "background image": "/media/dynamic_image/Desktop_Backdrop_Website_1.png",
+     "background image sd": "/media/dynamic_image/Mobile_Backdrop_Website_2070_x_750_px_1.png",
+     "desc": "",
+     "desc bn": "",
+     "bill payment list": [
+      {
+       "title": "Titas Gas",
+       "title bn": "তিতাস গ্যাস&nbsp;",
+       "icon": "/media/dynamic_image/Titas.png",
+       "icon sd": "/media/dynamic_image/Titas_QVwh8O1.png",
+       "slug url": "/ProductServices/titas-gas"
+      },
+      {
+       "title": "Jalalabad Gas",
+       "title bn": "জালালাবাদ গ্যাস",
+       "icon": "/media/dynamic_image/8_yraEE8P.png",
+       "icon sd": "/media/dynamic_image/8_H9Y9ipr.png",
+       "slug url": "/products/jalalabad-gas-options"
+      },
+      {
+       "title": "Bakhrabad Gas",
+       "title bn": "বাখরাবাদ গ্যাস&nbsp;",
+       "icon": "/media/dynamic_image/Pay_Bill_Logos_6.png",
+       "icon sd": "/media/dynamic_image/Pay_Bill_Logos_6_YUFOPwF.png",
+       "slug url": "/services/details/bakhrabad-gas"
+      },
+      {
+       "title": "Pashchimanchal Gas",
+       "title bn": "পশ্চিমাঞ্চল গ্যাস",
+       "icon": "/media/dynamic_image/PGDCL_1.png",
+       "icon sd": "/media/dynamic_image/PGDCL_1_GBlsXFG.png",
+       "slug url": "/services/details/pashchimanchal-gas"
+      }
+     ],
+     "Other Service": [
+      {
+       "title": "Electricity",
+       "title bn": "ইলেক্ট্রিসিটি&nbsp;",
+       "slug url": "/products/utility/electricity-bill"
+      },
+      {
+       "title": "Water",
+       "title bn": "পানি",
+       "slug url": "/products/utility/water-bill"
+      },
+      {
+       "title": "Internet",
+       "title bn": "ইন্টারনেট",
+       "slug url": "/products/utility/internet"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "Gas"
+ }
+}

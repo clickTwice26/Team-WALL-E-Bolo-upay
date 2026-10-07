@@ -1,0 +1,100 @@
+{
+ "url": "https://www.upaybd.com/services/details/nesco-prepaid",
+ "api": "https://api.upaybd.com/api/v2/pages/nesco-prepaid",
+ "data": {
+  "title_english": "NESCO-Prepaid",
+  "title_bangla": "NESCO-Prepaid",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "NESCO Prepaid",
+     "title bn": "NESCO Prepaid",
+     "background image": "/media/dynamic_image/Electricity_-_Desktop_lkK7FPg_1_lKaKjvY.png",
+     "background image sd": "/media/dynamic_image/Electricity_-_Desktop_lkK7FPg_0swMVEf.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "Too much hassle on paying your electricity bill on time ? No worries anymore, as upay lets you pay your bill without any tension, straight from upay app.",
+     "desc bn": "এখন আর টেনশন করার কারণ নেই। উপায় এর মাধ্যমে আপনার বিল পরিশোধ করুন সহজেই এবং মাত্র কয়েকটা ক্লিক করে।",
+     "Methods": [
+      {
+       "title": "How to pay NESCO Prepaid Bill ?",
+       "title bn": "How to pay NESCO Prepaid Bill ?",
+       "desc": "Simply follow the below steps to pay your NESCO Prepaid Bill",
+       "desc bn": "নিম্নের ধাপ অনুসরণ করে সহজেই নেসকো প্রিপেইড বিল সম্পন্ন করুন",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Untitled_1.png",
+         "image sd": "/media/dynamic_image/Untitled_1_ci3v1gV.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_AoVbzO7.png",
+         "image sd": "/media/dynamic_image/1_Q6BaD2O.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_1xfzLt1.png",
+         "image sd": "/media/dynamic_image/2_nhz8n4f.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_oEw1xGe.png",
+         "image sd": "/media/dynamic_image/3_S6x7Ziz.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_lj20Cuf.png",
+         "image sd": "/media/dynamic_image/4_KKdKvb5.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_SzscSF7.png",
+         "image sd": "/media/dynamic_image/5_a9kTpiF.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_hzjsAoa.png",
+         "image sd": "/media/dynamic_image/6_j0CYV1Y.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_2mVacxG.png",
+         "image sd": "/media/dynamic_image/7_cAJj79f.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_OWj19vt.png",
+         "image sd": "/media/dynamic_image/8_ThXsLkc.png"
+        },
+        {
+         "image": "/media/dynamic_image/9_Fco0RMl.png",
+         "image sd": "/media/dynamic_image/9_y8W7qKK.png"
+        },
+        {
+         "image": "/media/dynamic_image/10_rKN8JSx.png",
+         "image sd": "/media/dynamic_image/10_A4prJKA.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "nesco-prepaid"
+ }
+}

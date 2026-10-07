@@ -28,7 +28,7 @@ from pydantic import BaseModel, Field
 from . import auth, handoff, impact, monitor, store
 from .core import agent
 from .core import features as feat_mod
-from .core import interview, llm, parser, risk, scam, tts
+from .core import interview, kb, llm, parser, risk, scam, tts
 from .core.text import mask_phone
 
 log = logging.getLogger("bolo.api")
@@ -175,7 +175,19 @@ def _user_or_404(uid: str) -> dict:
 @app.get("/api/health")
 def health():
     return {"ok": True, "llm": llm.provider() if llm.enabled() else None,
-            "tts": tts.enabled(), "model": risk.model_card().get("model")}
+            "tts": tts.enabled(), "model": risk.model_card().get("model"),
+            "kb_chunks": kb.info()["chunks"]}
+
+
+@app.get("/api/kb/search", dependencies=[Depends(auth.current)])
+def kb_search(q: str, k: int = 5):
+    """Passages from upay's public website that match a question (the agent's RAG source)."""
+    q = q.strip()[:300]
+    if not q:
+        raise HTTPException(422, "q is required")
+    return {**kb.info(), "query": q, "is_question": kb.is_info_question(q),
+            "hits": [{k_: h[k_] for k_ in ("id", "url", "title", "section", "category", "score", "text")}
+                     for h in kb.search(q, max(1, min(k, 10)))]}
 
 
 @app.post("/api/tts")

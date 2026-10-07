@@ -1,0 +1,96 @@
+{
+ "url": "https://www.upaybd.com/services/details/carnival-internet",
+ "api": "https://api.upaybd.com/api/v2/pages/carnival-internet",
+ "data": {
+  "title_english": "Carnival Internet",
+  "title_bangla": "Carnival Internet",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Internet Bill",
+     "title bn": "ইন্টারনেট বিল",
+     "background image": "/media/dynamic_image/Desktop_Internet_Backdrop_IHsPlXy_ac6XAaM.png",
+     "background image sd": "/media/dynamic_image/Mobile_internet_backdrop_l014c16_gFp7nwn.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "There is no need to worry about paying your internet bills physically. Through upay app, you can pay your internet bills easily with our below partnered Internet Service Providers anytime, anywhere.<br /><br /><br />\r\n<ul>\r\n<li class=\"\" data-start=\"58\" data-end=\"79\">\r\n<p class=\"\" data-start=\"61\" data-end=\"79\">BTCL Domain Bill</p>\r\n</li>\r\n<li class=\"\" data-start=\"80\" data-end=\"93\">\r\n<p class=\"\" data-start=\"83\" data-end=\"93\">Carnival</p>\r\n</li>\r\n<li class=\"\" data-start=\"94\" data-end=\"111\">\r\n<p class=\"\" data-start=\"97\" data-end=\"111\">Dot Internet</p>\r\n</li>\r\n<li class=\"\" data-start=\"112\" data-end=\"125\">\r\n<p class=\"\" data-start=\"115\" data-end=\"125\">Infolink</p>\r\n</li>\r\n<li class=\"\" data-start=\"126\" data-end=\"136\">\r\n<p class=\"\" data-start=\"129\" data-end=\"136\">Link3</p>\r\n</li>\r\n<li class=\"\" data-start=\"137\" data-end=\"152\">\r\n<p class=\"\" data-start=\"140\" data-end=\"152\">Sam Online</p>\r\n</li>\r\n<li class=\"\" data-start=\"153\" data-end=\"175\">\r\n<p class=\"\" data-start=\"156\" data-end=\"175\">BDCOM Online Ltd.</p>\r\n</li>\r\n<li class=\"\" data-start=\"176\" data-end=\"199\">\r\n<p class=\"\" data-start=\"179\" data-end=\"199\">Discovery Internet</p>\r\n</li>\r\n<li class=\"\" data-start=\"200\" data-end=\"220\">\r\n<p class=\"\" data-start=\"203\" data-end=\"220\">Raihan Internet</p>\r\n</li>\r\n<li class=\"\" data-start=\"221\" data-end=\"237\">\r\n<p class=\"\" data-start=\"225\" data-end=\"237\">KS Network</p>\r\n</li>\r\n<li class=\"\" data-start=\"238\" data-end=\"261\">\r\n<p class=\"\" data-start=\"242\" data-end=\"261\">ICC Communication</p>\r\n</li>\r\n<li class=\"\" data-start=\"262\" data-end=\"295\">\r\n<p class=\"\" data-start=\"266\" data-end=\"295\">VISION Technologies Limited</p>\r\n</li>\r\n<li class=\"\" data-start=\"296\" data-end=\"314\">\r\n<p class=\"\" data-start=\"300\" data-end=\"314\">Exord Online</p>\r\n</li>\r\n<li class=\"\" data-start=\"315\" data-end=\"338\">\r\n<p class=\"\" data-start=\"319\" data-end=\"338\">Data City Network</p>\r\n</li>\r\n<li class=\"\" data-start=\"339\" data-end=\"356\">\r\n<p class=\"\" data-start=\"343\" data-end=\"356\">A2Z Network</p>\r\n</li>\r\n<li class=\"\" data-start=\"357\" data-end=\"377\">\r\n<p class=\"\" data-start=\"361\" data-end=\"377\">Duronto Online</p>\r\n</li>\r\n<li class=\"\" data-start=\"378\" data-end=\"401\">\r\n<p class=\"\" data-start=\"382\" data-end=\"401\">Green Zone Online</p>\r\n</li>\r\n<li class=\"\" data-start=\"402\" data-end=\"415\">\r\n<p class=\"\" data-start=\"406\" data-end=\"415\">KSB Net</p>\r\n</li>\r\n<li class=\"\" data-start=\"416\" data-end=\"438\">\r\n<p class=\"\" data-start=\"420\" data-end=\"438\">SR Cable Service</p>\r\n</li>\r\n<li class=\"\" data-start=\"439\" data-end=\"456\">\r\n<p class=\"\" data-start=\"443\" data-end=\"456\">Trishal Net</p>\r\n</li>\r\n<li class=\"\" data-start=\"457\" data-end=\"496\">\r\n<p class=\"\" data-start=\"461\" data-end=\"496\">NOOR COMMUNICATION ONLINE NETWORK</p>\r\n</li>\r\n<li class=\"\" data-start=\"497\" data-end=\"508\">\r\n<p class=\"\" data-start=\"501\" data-end=\"508\">S-Net</p>\r\n</li>\r\n<li class=\"\" data-start=\"509\" data-end=\"530\">\r\n<p class=\"\" data-start=\"513\" data-end=\"530\">Bhuiyan Telecom</p>\r\n</li>\r\n<li class=\"\" data-start=\"531\" data-end=\"552\">\r\n<p class=\"\" data-start=\"535\" data-end=\"552\">Next Gen Online</p>\r\n</li>\r\n<li class=\"\" data-start=\"553\" data-end=\"572\">\r\n<p class=\"\" data-start=\"557\" data-end=\"572\">Expert Online</p>\r\n</li>\r\n<li class=\"\" data-start=\"573\" data-end=\"589\">\r\n<p class=\"\" data-start=\"577\" data-end=\"589\">Tetra Soft</p>\r\n</li>\r\n<li class=\"\" data-start=\"590\" data-end=\"614\">\r\n<p class=\"\" data-start=\"594\" data-end=\"614\">Pandora Technology</p>\r\n</li>\r\n<li class=\"\" data-start=\"615\" data-end=\"645\">\r\n<p class=\"\" data-start=\"619\" data-end=\"645\">Hashtag Business Limited</p>\r\n</li>\r\n<li class=\"\" data-start=\"646\" data-end=\"664\">\r\n<p class=\"\" data-start=\"650\" data-end=\"664\">Plexus Cloud</p>\r\n</li>\r\n<li class=\"\" data-start=\"665\" data-end=\"687\">\r\n<p class=\"\" data-start=\"669\" data-end=\"687\">TS COMMUNICATION</p>\r\n</li>\r\n<li class=\"\" data-start=\"688\" data-end=\"708\">\r\n<p class=\"\" data-start=\"692\" data-end=\"708\">Circle Network</p>\r\n</li>\r\n<li class=\"\" data-start=\"709\" data-end=\"732\">\r\n<p class=\"\" data-start=\"713\" data-end=\"732\">Antaranga Dot Com</p>\r\n</li>\r\n</ul>",
+     "desc bn": "ফিজিক্যালি ইন্টারনেট বিল পরিশোধের ঝামেলা ভুলে যান! এখন উপায় অ্যাপের মাধ্যমে আমাদের অংশীদার ইন্টারনেট সার্ভিস প্রোভাইডারদের বিল সহজেই যেকোনো সময়, যেকোনো স্থান থেকে পরিশোধ করুন।<br /><br />১. বিটিসিএল ডোমেইন বিল<br data-start=\"68\" data-end=\"71\" />২. কার্নিভাল<br data-start=\"83\" data-end=\"86\" data-is-only-node=\"\" />৩. ডট ইন্টারনেট<br data-start=\"101\" data-end=\"104\" />৪. ইনফোলিংক<br data-start=\"115\" data-end=\"118\" />৫. লিংক৩<br data-start=\"126\" data-end=\"129\" />৬. স্যাম অনলাইন<br data-start=\"144\" data-end=\"147\" />৭. বিডিকম অনলাইন লিমিটেড<br data-start=\"171\" data-end=\"174\" />৮. ডিসকভারি ইন্টারনেট<br data-start=\"195\" data-end=\"198\" />৯. রাইহান ইন্টারনেট<br data-start=\"217\" data-end=\"220\" />১০. কেএস নেটওয়ার্ক<br data-start=\"239\" data-end=\"242\" />১১. আইসিসি কমিউনিকেশন<br data-start=\"263\" data-end=\"266\" />১২. ভিশন টেকনোলজিস লিমিটেড<br data-start=\"292\" data-end=\"295\" />১৩. এক্সর্ড অনলাইন<br data-start=\"313\" data-end=\"316\" />১৪. ডাটা সিটি নেটওয়ার্ক<br data-start=\"340\" data-end=\"343\" />১৫. এটুজেড নেটওয়ার্ক<br data-start=\"364\" data-end=\"367\" />১৬. দুরন্ত অনলাইন<br data-start=\"384\" data-end=\"387\" />১৭. গ্রিন জোন অনলাইন<br data-start=\"407\" data-end=\"410\" />১৮. কেএসবিএ নেট<br data-start=\"425\" data-end=\"428\" />১৯. এসআর ক্যাবল সার্ভিস<br data-start=\"451\" data-end=\"454\" />২০. ত্রিশাল নেট<br data-start=\"469\" data-end=\"472\" />২১. নূর কমিউনিকেশন অনলাইন নেটওয়ার্ক<br data-start=\"508\" data-end=\"511\" />২২. এস-নেট<br data-start=\"521\" data-end=\"524\" />২৩. ভূঁইয়ান টেলিকম<br data-start=\"543\" data-end=\"546\" />২৪. নেক্সট জেন অনলাইন<br data-start=\"567\" data-end=\"570\" />২৫. এক্সপার্ট অনলাইন<br data-start=\"590\" data-end=\"593\" />২৬. টেট্রা সফট<br data-start=\"607\" data-end=\"610\" />২৭. প্যান্ডোরা টেকনোলজি<br data-start=\"633\" data-end=\"636\" />২৮. হ্যাশট্যাগ বিজনেস লিমিটেড<br data-start=\"665\" data-end=\"668\" />২৯. প্লেক্সাস ক্লাউড<br data-start=\"688\" data-end=\"691\" />৩০. টিএস কমিউনিকেশন<br data-start=\"710\" data-end=\"713\" />৩১. সার্কেল নেটওয়ার্ক<br data-start=\"735\" data-end=\"738\" />৩২. অন্তরঙ্গ ডট কম",
+     "Methods": [
+      {
+       "title": "How to pay your Internet Bill ?",
+       "title bn": "How to pay your Internet Bill ?",
+       "desc": "",
+       "desc bn": "",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Internet_Bill_Payment_is_not_available_on_USSD.png",
+         "image sd": "/media/dynamic_image/Internet_Bill_Payment_is_not_available_on_USSD_7CNYSAl.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_VGPRYao.png",
+         "image sd": "/media/dynamic_image/1_KCGa3mz.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_F451QTD.png",
+         "image sd": "/media/dynamic_image/2_ymhBZYx.png"
+        },
+        {
+         "image": "/media/dynamic_image/Internet_Bill_Payment_is_not_available_on_USSD_1.png",
+         "image sd": "/media/dynamic_image/Internet_Bill_Payment_is_not_available_on_USSD_1_tnVf2E1.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_fy3c9SS.png",
+         "image sd": "/media/dynamic_image/4_AFZf4p6.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_s5FZ9SD.png",
+         "image sd": "/media/dynamic_image/5_um73gQe.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_uRfpzy6.png",
+         "image sd": "/media/dynamic_image/6_fGBwLx1.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_djOwJiV.png",
+         "image sd": "/media/dynamic_image/7_SbRHveO.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_CQWNMgi.png",
+         "image sd": "/media/dynamic_image/8_gQHiOhw.png"
+        },
+        {
+         "image": "/media/dynamic_image/9_0wEuddT.png",
+         "image sd": "/media/dynamic_image/9_SypSR5i.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "carnival-internet"
+ }
+}

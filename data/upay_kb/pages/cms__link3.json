@@ -1,0 +1,100 @@
+{
+ "url": "https://www.upaybd.com/services/details/link3",
+ "api": "https://api.upaybd.com/api/v2/pages/link3",
+ "data": {
+  "title_english": "Link3",
+  "title_bangla": "Link3",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Link3 Internet",
+     "title bn": "লিংক ৩ ইন্টারনেট&nbsp;",
+     "background image": "/media/dynamic_image/Desktop_Internet_Backdrop_IHsPlXy_ac6XAaM_zJQxpij.png",
+     "background image sd": "/media/dynamic_image/Mobile_internet_backdrop_l014c16_gFp7nwn_bygGkp1.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "There is no need to worry about paying your internet bill physically. Through upay app, you can pay your internet bill easily anytime, anywhere",
+     "desc bn": "এখন আর সময় মত ইন্টারনেট বিল দেয়ার চিন্তা নিতে হবে না। উপায় অ্যাপ এর মাধ্যমে খুব সহজেই ইন্টারনেট বিল দিতে পারবেন যে কোন সময়, যে কোন জায়গায়।",
+     "Methods": [
+      {
+       "title": "How to pay Link3 Internet Bill?",
+       "title bn": "How to pay Link3 Internet Bill?",
+       "desc": "",
+       "desc bn": "",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Internet_BIll_qJCX0Xc.png",
+         "image sd": "/media/dynamic_image/Internet_BIll_AoRieF5.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_DglDsUt.png",
+         "image sd": "/media/dynamic_image/1_g0XAtj5.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_PXR6BWk.png",
+         "image sd": "/media/dynamic_image/2_vCS56Pp.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_3eIGnqO.png",
+         "image sd": "/media/dynamic_image/3_F6TYaLE.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_sNPKfoP.png",
+         "image sd": "/media/dynamic_image/4_vHxOAXU.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_SFilOZS.png",
+         "image sd": "/media/dynamic_image/5_YAj767s.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_iDFle1U.png",
+         "image sd": "/media/dynamic_image/6_5oetAD4.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_qkdW8X5.png",
+         "image sd": "/media/dynamic_image/7_A1jmiKI.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_VHuRWFe.png",
+         "image sd": "/media/dynamic_image/8_yPUeAVg.png"
+        },
+        {
+         "image": "/media/dynamic_image/9_q2Z1A5a.png",
+         "image sd": "/media/dynamic_image/9_5DA1T3E.png"
+        },
+        {
+         "image": "/media/dynamic_image/10_rNgi3Bl.png",
+         "image sd": "/media/dynamic_image/10_b5hclXN.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "link3"
+ }
+}

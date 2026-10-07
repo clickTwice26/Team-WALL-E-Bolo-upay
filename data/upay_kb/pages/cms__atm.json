@@ -1,0 +1,148 @@
+{
+ "url": "https://www.upaybd.com/services/details/atm",
+ "api": "https://api.upaybd.com/api/v2/pages/atm",
+ "data": {
+  "title_english": "ATM",
+  "title_bangla": "ATM",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "ATM Cashout",
+     "title bn": "এটিএম ক্যাশআউট",
+     "background image": "/media/dynamic_image/Add_money_desktop_e5NGlDs.jpg",
+     "background image sd": "/media/dynamic_image/Add_money_Mobile_0eI1gNA.jpg",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<div style=\"text-align: center;\">upay offers the lowest rate to cash out from any UCB ATM nationwide, only BDT 8 per Thousand. To cash out from an ATM booth, a security code is required to withdraw cash from UCB ATM where the Cash Out sign is available.</div>",
+     "desc bn": "<div style=\"text-align: center;\">সবচেয়ে কম খরচে ক্যাশ আউট করার উপায় আছে, মাত্র হাজারে ৮ টাকায়, যে কোনো UCB এটিএম বুথ থেকে।</div>",
+     "Methods": [
+      {
+       "title": "How to cash out through ATM ?",
+       "title bn": "কিভাবে ক্যাশআউট করবেন এটিএম থেকে ?&nbsp;",
+       "desc": "Simply follow the steps below to cash out through UCB ATM",
+       "desc bn": "নিম্নের ধাপ দেখে UCB এটিএম থেকে ক্যাশআউট করুন&nbsp;&nbsp;",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Artboard_9_copy_32.png",
+         "image sd": "/media/dynamic_image/Artboard_9_copy_32_7YM9EKv.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard_9_copy_33.png",
+         "image sd": "/media/dynamic_image/Artboard_9_copy_33_mOUx2on.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard_9_copy_34.png",
+         "image sd": "/media/dynamic_image/Artboard_9_copy_34_yFUSTDp.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard_9_copy_46.png",
+         "image sd": "/media/dynamic_image/Artboard_9_copy_46_AmKIWI7.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard_9_copy_55.png",
+         "image sd": "/media/dynamic_image/Artboard_9_copy_55_x6w07IW.png"
+        },
+        {
+         "image ": "/media/dynamic_image/1_icf8hwy.png",
+         "image sd": "/media/dynamic_image/1_FA2rFry.png"
+        },
+        {
+         "image ": "/media/dynamic_image/2_Lfu9CuQ.png",
+         "image sd": "/media/dynamic_image/2_3nzGaea.png"
+        },
+        {
+         "image ": "/media/dynamic_image/3_RxWBuqh.png",
+         "image sd": "/media/dynamic_image/3_P1e1nG0.png"
+        },
+        {
+         "image ": "/media/dynamic_image/4_lmu5isE.png",
+         "image sd": "/media/dynamic_image/4_S1Wa9Hz.png"
+        },
+        {
+         "image ": "/media/dynamic_image/5_HvIgRIN.png",
+         "image sd": "/media/dynamic_image/5_7HkwzC2.png"
+        },
+        {
+         "image ": "/media/dynamic_image/6_fLBLvpb.png",
+         "image sd": "/media/dynamic_image/6_ElszSUC.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_auIHqxy.png",
+         "image sd": "/media/dynamic_image/1_4mWhmpb.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_2_gNBtslk.png",
+         "image sd": "/media/dynamic_image/2_2_zeaeWKM.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_aMqghzd.png",
+         "image sd": "/media/dynamic_image/2_CEqhUJz.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_ZwRx5dg.png",
+         "image sd": "/media/dynamic_image/4_gNRyxQF.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_TxvFRxL.png",
+         "image sd": "/media/dynamic_image/5_8i6TDcx.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_UOP4Uqw.png",
+         "image sd": "/media/dynamic_image/6_ULRFsDX.png"
+        },
+        {
+         "image": "/media/dynamic_image/1_4juNv0J.png",
+         "image sd": "/media/dynamic_image/1_jaTIZBd.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_4oHGLms.png",
+         "image sd": "/media/dynamic_image/2_mjCcwee.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_24MKhHV.png",
+         "image sd": "/media/dynamic_image/3_6552dch.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_XKy7Le2.png",
+         "image sd": "/media/dynamic_image/4_g2AKfWS.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_tEVD6gG.png",
+         "image sd": "/media/dynamic_image/5_BDr3pCN.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_FFe1boN.png",
+         "image sd": "/media/dynamic_image/6_bPXHgC4.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "atm"
+ }
+}

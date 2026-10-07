@@ -1,0 +1,96 @@
+{
+ "url": "https://www.upaybd.com/services/details/jalalabad-gas",
+ "api": "https://api.upaybd.com/api/v2/pages/jalalabad-gas",
+ "data": {
+  "title_english": "Jalalabad Gas",
+  "title_bangla": "Jalalabad Gas",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Jalalabad Gas",
+     "title bn": "জালালাবাদ গ্যাস",
+     "background image": "/media/dynamic_image/Desktop_Backdrop_Website_1_JwwOwWp.png",
+     "background image sd": "/media/dynamic_image/Mobile_Backdrop_Website_2070_x_750_px_1_1_3x5mXKr.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "Time to get rid of queues, and go for gas bill payment through উপায় (upay).",
+     "desc bn": "দীর্ঘ লাইনে দাঁড়িয়ে থাকার দিন শেষ। আপনার বাড়িতে বসেই স্বাচ্ছন্দে গ্যাস বিলের অর্থ প্রদান করতে পারবেন।",
+     "Methods": [
+      {
+       "title": "How to pay your Jalalabad Gas Bill ?",
+       "title bn": "কিভাবে আপনার জালালাবাদ গ্যাস বিল পেমেন্ট করবেন ?",
+       "desc": "",
+       "desc bn": "",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Not_Available_on_268_2.png",
+         "image sd": "/media/dynamic_image/Not_Available_on_268_2_zGKidfB.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_re3tG0X.png",
+         "image sd": "/media/dynamic_image/1_kFrtTCE.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_HVCzLwm.png",
+         "image sd": "/media/dynamic_image/2_TbSr8gu.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_zVx9kA2.png",
+         "image sd": "/media/dynamic_image/3_V23eZdV.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_5BpsOcz.png",
+         "image sd": "/media/dynamic_image/4_6iLgdK3.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_VPCrW9N.png",
+         "image sd": "/media/dynamic_image/6_WRgtSuL.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_sGUz2DJ.png",
+         "image sd": "/media/dynamic_image/7_tYvYjbV.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_2.png",
+         "image sd": "/media/dynamic_image/7_2_1TVMu80.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_cYyWfm2.png",
+         "image sd": "/media/dynamic_image/8_V6gz8Xn.png"
+        },
+        {
+         "image": "/media/dynamic_image/9_7vSWS4r.png",
+         "image sd": "/media/dynamic_image/9_zmw3Tcd.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "jalalabad-gas"
+ }
+}

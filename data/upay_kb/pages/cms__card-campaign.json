@@ -1,0 +1,427 @@
+{
+ "url": "https://www.upaybd.com/card-campaign",
+ "api": "https://api.upaybd.com/api/v2/pages/card-campaign",
+ "data": {
+  "title_english": "Prepaid Card Campaign",
+  "title_bangla": "প্রিপেইড কার্ড ক্যাম্পেইন",
+  "template_name": "template-card-campaign",
+  "rows": {
+   "Data": [
+    {
+     "cover title": "upay Card Ongoing Campaigns",
+     "cover title bn": "উপায়&nbsp;কার্ড চলমান ক্যাম্পেইন",
+     "cover image": "/media/dynamic_image/Prepaid-card-Home-page-Banner.jpg",
+     "cover image sd": "/media/dynamic_image/Prepaid-card-Home-page-Banner_RqDzvXD.jpg",
+     "Campaign one": [
+      {
+       "title": "Dining",
+       "title bn": "ডাইন-ইন",
+       "desc": "",
+       "desc bn": "",
+       "Under Campaign one": [
+        {
+         "title": "Buffet",
+         "title bn": "বুফে",
+         "desc": "Enjoy 15% Off at Cafe Rio with Your upay Card!",
+         "desc bn": "উপায় কার্ডে ক্যাফে রিও-তে ১৫% ছাড় উপভোগ করুন!",
+         "image": "/media/dynamic_image/Adaptation_Cafe_Rio_Discount_Offer_Website_banner_Desktop_2500X11811400x68_zq7yymP.jpg",
+         "image sd": "/media/dynamic_image/Adaptation_Cafe_Rio_Discount_Offer_Website_banner_Desktop_2500X11811400x68_Yo28NFV.jpg",
+         "slug url": "/Latest-offer/prepaid-card-cafe-rio-discount"
+        },
+        {
+         "title": "Coffee and Bakery Delights",
+         "title bn": "কফি এবং বেকারি",
+         "desc": "Indulge in your favorite baked delights while enjoying up to 20% off at select, prestigious bakeries partnered with upay.",
+         "desc bn": "স্বাদে ভরা বেকড খাবার ও প্রিমিয়াম কফি উপভোগ করুন, সাথে ২০% পর্যন্ত ছাড়ও পান।",
+         "image": "/media/dynamic_image/UPAY_Bakaries--coffe-Offer_Adaptation_F7kSpi9.png",
+         "image sd": "/media/dynamic_image/UPAY_Bakaries--coffe-Offer_Adaptation_QNQNtAy.png",
+         "slug url": "/Latest-offer/prepaid-card-bakery-offer"
+        }
+       ]
+      }
+     ],
+     "Campaign two": [
+      {
+       "title": "Lifestyle",
+       "title bn": "লাইফস্টাইল",
+       "desc": "",
+       "desc bn": "",
+       "Under Campaign two": [
+        {
+         "title": "Up to 25% Discount !",
+         "title bn": "২৫% পর্যন্ত ছাড়!",
+         "desc": "",
+         "desc bn": "",
+         "image": "/media/dynamic_image/Upay-_Web-banner_LIFE-STYLE_MS2y09l.png",
+         "image sd": "/media/dynamic_image/Upay-_Web-banner_LIFE-STYLE_22Nkyyj.png",
+         "slug url": "/Latest-offer/prepaid-card-lifestyle-offer"
+        }
+       ]
+      }
+     ],
+     "Campaign three": [
+      {
+       "title": "Travel",
+       "title bn": "ট্রাভেল",
+       "desc": "",
+       "desc bn": "",
+       "Under Campaign three": [
+        {
+         "title": "Air Astra",
+         "title bn": "এয়ার অ্যাস্ট্রা",
+         "desc": "When you use your উপায় Card to book your next flight with Air Astra, you&rsquo;ll receive an exclusive 10% discount.",
+         "desc bn": "এয়ার অ্যাস্ট্রায় ফ্লাইট বুক করতে উপায় কার্ড ব্যবহার করলে পাবেন ১০% ছাড়।",
+         "image": "/media/dynamic_image/UPAYxAIR_ASTRAWebsite_banner_Desktop_2500X11811400x680_451YQbg.jpg",
+         "image sd": "/media/dynamic_image/UPAYxAIR_ASTRAWebsite_banner_Desktop_2500X11811400x680_AcGduZT.jpg",
+         "slug url": "/Latest-offer/prepaid-card-air-astra-offer"
+        }
+       ]
+      }
+     ],
+     "Campaign four": [
+      {
+       "title": "Vehicle Care",
+       "title bn": "অটোমোবাইল কেয়ার",
+       "desc": "",
+       "desc bn": "",
+       "Under Campaign four": [
+        {
+         "title": "Servicing",
+         "title bn": "সার্ভিসিং",
+         "desc": "Unlock exclusive discounts on car services at top automobile workshops with your upay Card",
+         "desc bn": "আপনার উপায়&nbsp; কার্ড দিয়ে পে করে দেশের শীর্ষস্থানীয় অটোমোবাইল ওয়ার্কশপগুলোতে গাড়ির সার্ভিসে এক্সক্লুসিভ ডিসকাউন্ট উপভোগ করুন",
+         "image": "/media/dynamic_image/UPAY_AUTO-MOBILE-SERVICE_zr5Boh5.png",
+         "image sd": "/media/dynamic_image/UPAY_AUTO-MOBILE-SERVICE_PAhOIcJ.png",
+         "slug url": "/Latest-offer/prepaid-card-automobile-service"
+        }
+       ]
+      }
+     ],
+     "Campaign five": [
+      {
+       "title": "Other Offers",
+       "title bn": "অন্যান্য অফার",
+       "desc": "",
+       "desc bn": "",
+       "Under Campaign five": [
+        {
+         "title": "Chorki",
+         "title bn": "চরকি",
+         "desc": "Enjoy an exclusive 20% discount on your CHORKI subscription with the উপায় Card",
+         "desc bn": "উপায় কার্ডে Chorki সাবস্ক্রিপশনে পান ২০% ছাড়! এখন আপনার পছন্দের মুভি, ওয়েব সিরিজ ও ইউনিক কনটেন্ট দেখুন আরও সাশ্রয়ে",
+         "image": "/media/dynamic_image/Chorki_Prepaid_Card_Offer_Website_banner_Desktop_2500X11811400x680_DuC4kFp.jpg",
+         "image sd": "/media/dynamic_image/Chorki_Prepaid_Card_Offer_Website_banner_Desktop_2500X11811400x680_nFSBhyc.jpg",
+         "slug url": "/Latest-offer/prepaid-card-chorki-subscription"
+        },
+        {
+         "title": "Refer and Earn",
+         "title bn": "রেফার করুন, রিওয়ার্ড জিতুন",
+         "desc": "On every successful referral of the upay card, both the referrer and the referee will receive BDT 50 cashback.",
+         "desc bn": "প্রতিটি সফল উপায় কার্ড রেফারে, রেফারকারী এবং রেফারকৃত উভয়েই পাবেন ৫০ টাকা ক্যাশব্যাক।",
+         "image": "/media/dynamic_image/upay_Card_referral_campaign_Website_banner_Desktop_2500X11811400x680_m3wTWFc.jpg",
+         "image sd": "/media/dynamic_image/upay_Card_referral_campaign_Website_banner_Desktop_2500X11811400x680_7n3aq1C.jpg",
+         "slug url": "/Latest-offer/prepaid-card-refer-offer"
+        }
+       ]
+      }
+     ],
+     "Campaign six": [
+      {
+       "title": "Healthcare",
+       "title bn": "স্বাস্থ্যসেবা",
+       "desc": "",
+       "desc bn": "",
+       "Under Campaign six": [
+        {
+         "title": "Medical Services",
+         "title bn": "চিকিৎসাসেবা",
+         "desc": "With your upay card, you can enjoy savings of up to 50% on various medical services.",
+         "desc bn": "উপায়&nbsp; কার্ড ব্যবহার করে আপনি বিভিন্ন চিকিৎসা সেবায় ৫০% পর্যন্ত ছাড় উপভোগ করতে পারবেন",
+         "image": "/media/dynamic_image/UPAY_Medical-Expense_Website-Banner-1440X680_Nf6U5mJ_SEdFIE1.jpg",
+         "image sd": "/media/dynamic_image/UPAY_Medical-Expense_Website-Banner-1440X680_Nf6U5mJ_0dAGfYD.jpg",
+         "slug url": "/Latest-offer/prepaid-card-medical-services-offer"
+        },
+        {
+         "title": "Omnicare",
+         "title bn": "ওমনিকেয়ার",
+         "desc": "Save up to 30% on healthcare costs at Omnicare!",
+         "desc bn": "ওমনিকেয়ারে স্বাস্থ্যসেবায় সর্বোচ্চ ৩০% পর্যন্ত ছাড়!",
+         "image": "/media/dynamic_image/UPAY_Web_Banner-Desk_1440x680_PREPAID_CARD_OFFER_-_OMNICARE_9sZ8QsD_eYtO01f.png",
+         "image sd": "/media/dynamic_image/UPAY_Web_Banner-Desk_1440x680_PREPAID_CARD_OFFER_-_OMNICARE_9sZ8QsD_Ea5c2si.png",
+         "slug url": "/Latest-offer/prepaid-card-omnicare"
+        }
+       ]
+      }
+     ],
+     "Campaign seven": [
+      {
+       "title": "Beauty and Grooming",
+       "title bn": "বিউটি ও গ্রুমিং",
+       "desc": "",
+       "desc bn": "",
+       "Under Campaign seven": [
+        {
+         "title": "Enjoy up to 30% off for উপায় Card holders!",
+         "title bn": "Enjoy up to 30% off for উপায় Cardholders!",
+         "desc": "",
+         "desc bn": "",
+         "image": "/media/dynamic_image/UPAY_Web_Banner-Desk_1440x680_BEAUTY_CARE_Prepaid_Card_voJ2HcQ_XVSY4a1.png",
+         "image sd": "/media/dynamic_image/UPAY_Web_Banner-Desk_1440x680_BEAUTY_CARE_Prepaid_Card_voJ2HcQ_iRth2wj.png",
+         "slug url": "/Latest-offer/prepaid-card-beauty-care"
+        }
+       ]
+      }
+     ],
+     "Campaign eight": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under Campaign eight": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "image": "",
+         "image sd": "",
+         "slug url": ""
+        }
+       ]
+      }
+     ],
+     "Campaign nine": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under Campaign nine": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "image": "",
+         "image sd": "",
+         "slug url": ""
+        }
+       ]
+      }
+     ],
+     "Campaign ten": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under Campaign ten": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "image": "",
+         "image sd": "",
+         "slug url": ""
+        }
+       ]
+      }
+     ],
+     "Campaign eleven": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under Campaign eleven": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "image": "",
+         "image sd": "",
+         "slug url": ""
+        }
+       ]
+      }
+     ],
+     "Campaign twelve": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under Campaign twelve": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "image": "",
+         "image sd": "",
+         "slug url": ""
+        }
+       ]
+      }
+     ],
+     "Campaign thirteen": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under Campaign thirteen": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "image": "",
+         "image sd": "",
+         "slug url": ""
+        }
+       ]
+      }
+     ],
+     "Campaign fourteen": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under Campaign fourteen": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "image": "",
+         "image sd": "",
+         "slug url": ""
+        }
+       ]
+      }
+     ],
+     "Campaign fifteen": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under Campaign fifteen": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "image": "",
+         "image sd": "",
+         "slug url": ""
+        }
+       ]
+      }
+     ],
+     "Campaign sixteen": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under Campaign sixteen": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "image": "",
+         "image sd": "",
+         "slug url": ""
+        }
+       ]
+      }
+     ],
+     "Campaign seventeen": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under Campaign seventeen": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "image": "",
+         "image sd": "",
+         "slug url": ""
+        }
+       ]
+      }
+     ],
+     "Campaign eighteen": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under Campaign eighteen": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "image": "",
+         "image sd": "",
+         "slug url": ""
+        }
+       ]
+      }
+     ],
+     "Campaign nineteen": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under Campaign nineteen": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "image": "",
+         "image sd": "",
+         "slug url": ""
+        }
+       ]
+      }
+     ],
+     "Campaign twenty": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under Campaign twenty": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "image": "",
+         "image sd": "",
+         "slug url": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "card-campaign"
+ }
+}

@@ -1,0 +1,113 @@
+{
+ "url": "https://www.upaybd.com/partners",
+ "pageProps": {
+  "page": {
+   "data": {
+    "title_english": "partners",
+    "title_bangla": "partners",
+    "template_name": "partners",
+    "rows": {
+     "Data": [
+      {
+       "title": "OUR PARTNERS",
+       "title bn": "আমাদের পার্টনার",
+       "cover image": "/media/dynamic_image/Desktop_Backdrop_Website_2_1.png",
+       "cover image sd": "/media/dynamic_image/Mobile_Backdrop_Website_2070_x_750_px_2_1.png",
+       "canvas": [
+        {
+         "image": "/media/dynamic_image/Slider-1440x680-Desktop.jpg",
+         "image sd": "/media/dynamic_image/Wesbite_Header_Mobile_v1.jpg"
+        }
+       ],
+       "merchant locator": [
+        {
+         "title": "LOCATE OUR PARTNERS",
+         "title bn": "আমাদের পার্টনার খুজুন",
+         "desc": "Use the search locator below and look for our merchant partners with a simple click",
+         "desc bn": "নিচের সার্চ অপশন ব্যাবহার করুন এবং খুব সহজেই আপনার পছন্দের পার্টনার খুজে ফেলুন"
+        }
+       ],
+       "our value partners": [
+        {
+         "title": "OUR VALUED PARTNERS",
+         "title bn": "আমাদের মূল্যবান পার্টনার",
+         "desc": "Our partners are working with us from all categories. Click on any of the categories to learn more about our partners",
+         "desc bn": "",
+         "image": "",
+         "image sd": "",
+         "Partners": [
+          {
+           "title": "Clothing",
+           "title bn": "পোশাক",
+           "image": "/media/dynamic_image/Clothing.png",
+           "image sd": "/media/dynamic_image/Clothing_2vJfFJe.png"
+          },
+          {
+           "title": "Restaurants",
+           "title bn": "রেস্টুরেন্ট",
+           "image": "/media/dynamic_image/Restuarnt.png",
+           "image sd": "/media/dynamic_image/Restuarnt_WHQ7pqN.png"
+          },
+          {
+           "title": "Online Commerce",
+           "title bn": "অনলাইন কমার্স",
+           "image": "/media/dynamic_image/E_Commerce.png",
+           "image sd": "/media/dynamic_image/E_Commerce_5xKBrtQ.png"
+          },
+          {
+           "title": "Footwear",
+           "title bn": "ফুটওয়্যার",
+           "image": "/media/dynamic_image/Footwear.png",
+           "image sd": "/media/dynamic_image/Footwear_dIReLdA.png"
+          },
+          {
+           "title": "Travel",
+           "title bn": "ট্রাভেল",
+           "image": "/media/dynamic_image/Travel.png",
+           "image sd": "/media/dynamic_image/Travel_WAvwlZA.png"
+          },
+          {
+           "title": "Technology",
+           "title bn": "টেকনোলজি",
+           "image": "/media/dynamic_image/Electronics.png",
+           "image sd": "/media/dynamic_image/Electronics_R5kTEK9.png"
+          },
+          {
+           "title": "Furniture",
+           "title bn": "ফার্নিচার",
+           "image": "/media/dynamic_image/Furniture.png",
+           "image sd": "/media/dynamic_image/Furniture_C27F81J.png"
+          },
+          {
+           "title": "Hospital",
+           "title bn": "হাসপাতাল",
+           "image": "/media/dynamic_image/Hospital.png",
+           "image sd": "/media/dynamic_image/Hospital_XDZN6eE.png"
+          },
+          {
+           "title": "Lifestyle",
+           "title bn": "লাইফস্টাইল",
+           "image": "/media/dynamic_image/Lifestyle.png",
+           "image sd": "/media/dynamic_image/Lifestyle_FovX1YO.png"
+          }
+         ]
+        }
+       ],
+       "current offers": [
+        {
+         "title": "CURRENT OFFERS",
+         "title bn": "কারেন্ট অফার",
+         "desc": "Check out our current offers below",
+         "desc bn": "দেখে ফেলুন আমাদের পার্টনার অফার",
+         "offer data": []
+        }
+       ]
+      }
+     ]
+    },
+    "slug": "partners"
+   },
+   "error": ""
+  }
+ }
+}

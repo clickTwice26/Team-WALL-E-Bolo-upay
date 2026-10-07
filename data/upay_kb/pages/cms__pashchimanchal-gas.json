@@ -1,0 +1,96 @@
+{
+ "url": "https://www.upaybd.com/services/details/pashchimanchal-gas",
+ "api": "https://api.upaybd.com/api/v2/pages/pashchimanchal-gas",
+ "data": {
+  "title_english": "Pashchimanchal Gas",
+  "title_bangla": "Pashchimanchal Gas",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Pashchimanchal Gas",
+     "title bn": "পশ্চিমাঞ্চল গ্যাস",
+     "background image": "/media/dynamic_image/Desktop_Backdrop_Website_1_XShr4An_59q7Qym.png",
+     "background image sd": "/media/dynamic_image/Mobile_Backdrop_Website_2070_x_750_px_1_W7lEVX3_faPsM10.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<span style=\"font-size: 14pt;\">Time to get rid of queues, and go for gas bill payment through উপায় (upay).</span>",
+     "desc bn": "<span style=\"font-size: 14pt;\">দীর্ঘ লাইনে দাঁড়িয়ে থাকার দিন শেষ। আপনার বাড়িতে বসেই স্বাচ্ছন্দে গ্যাস বিলের অর্থ প্রদান করতে পারবেন।</span>",
+     "Methods": [
+      {
+       "title": "How to pay Paschimanchal Gas Bill ?",
+       "title bn": "কিভাবে পশ্চিমাঞ্চল গ্যাস বিল পেমেন্ট করবেন ?",
+       "desc": "",
+       "desc bn": "",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/24.png",
+         "image sd": "/media/dynamic_image/24_28ZYuTc.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_KFfrB9O.png",
+         "image sd": "/media/dynamic_image/1_Qtxw6M5.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_pr3Yj19.png",
+         "image sd": "/media/dynamic_image/2_qwg9iso.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_zKQmmor.png",
+         "image sd": "/media/dynamic_image/3_JDOQfQ5.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_vUoh5di.png",
+         "image sd": "/media/dynamic_image/4_AM8HQt8.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_a1UbDiP.png",
+         "image sd": "/media/dynamic_image/5_8NjYlVu.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_SzBSWn9.png",
+         "image sd": "/media/dynamic_image/6_VQ3Akyx.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_jNiWHlr.png",
+         "image sd": "/media/dynamic_image/7_vyrohNU.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_HVLg5LK.png",
+         "image sd": "/media/dynamic_image/8_nA3l1Th.png"
+        },
+        {
+         "image": "/media/dynamic_image/9_gJcX3tJ.png",
+         "image sd": "/media/dynamic_image/9_fD1YHQo.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "pashchimanchal-gas"
+ }
+}

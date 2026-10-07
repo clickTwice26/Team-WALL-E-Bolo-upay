@@ -1,0 +1,157 @@
+{
+ "url": "https://www.upaybd.com/",
+ "api": "https://api.upaybd.com/api/v2/pages/product-and-campaigns",
+ "data": {
+  "title_english": "product and campaigns",
+  "title_bangla": "product and campaigns",
+  "template_name": "product-campaign",
+  "rows": {
+   "Data": [
+    {
+     "Campaigns": [
+      {
+       "title": "Prepaid Card Campaign",
+       "title bn": "প্রিপেইড কার্ড ক্যাম্পেইন",
+       "slug url": "/card-campaign"
+      },
+      {
+       "title": "latest offer",
+       "title bn": "সর্বশেষ অফার",
+       "slug url": "/Latest-offer"
+      },
+      {
+       "title": "limit and charges",
+       "title bn": "লিমিট এবং চার্জ",
+       "slug url": "/limits-and-charges"
+      }
+     ],
+     "Services": [
+      {
+       "title": "upay Registration",
+       "title bn": "উপায় রেজিস্ট্রেশন",
+       "slug url": "/services/details/upay-account-creation"
+      },
+      {
+       "title": "DPS",
+       "title bn": "সেভিংস",
+       "slug url": "/services/details/mtb-islamic-dps"
+      },
+      {
+       "title": "PIN Reset",
+       "title bn": "পিন রিসেট",
+       "slug url": "/services/details/pin-reset"
+      },
+      {
+       "title": "Send Money",
+       "title bn": "সেন্ড মানি",
+       "slug url": "/services/details/send-money"
+      },
+      {
+       "title": "Mobile Recharge",
+       "title bn": "মোবাইল রিচার্জ",
+       "slug url": "/services/details/mobile-recharge"
+      },
+      {
+       "title": "Cash in",
+       "title bn": "ক্যাশ ইন",
+       "slug url": "/products/cash-in-options"
+      },
+      {
+       "title": "Cash Out",
+       "title bn": "ক্যাশ আউট",
+       "slug url": "/products/Cash-Out"
+      },
+      {
+       "title": "Make Payment",
+       "title bn": "মেক পেমেন্ট",
+       "slug url": "/products/make-payment"
+      },
+      {
+       "title": "Pay Bill",
+       "title bn": "পে বিল",
+       "slug url": "/products/Pay-Bill"
+      },
+      {
+       "title": "Add Money",
+       "title bn": "অ্যাড মানি",
+       "slug url": "/products/Add-Money"
+      },
+      {
+       "title": "Request Money",
+       "title bn": "রিকোয়েস্ট মানি",
+       "slug url": "/services/details/upay-request-money"
+      },
+      {
+       "title": "Fund Transfer",
+       "title bn": "ফান্ড ট্রান্সফার",
+       "slug url": "/products/utility/transfer-fund"
+      },
+      {
+       "title": "Donation",
+       "title bn": "ডোনেশন",
+       "slug url": "/services/details/donation"
+      },
+      {
+       "title": "Remittance",
+       "title bn": "রেমিট্যান্স",
+       "slug url": "/ProductServices/remittance-service"
+      },
+      {
+       "title": "Payoneer",
+       "title bn": "পেওনিয়ার",
+       "slug url": "/services/details/payoneer-service"
+      },
+      {
+       "title": "Prepaid Card",
+       "title bn": "প্রিপেইড কার্ড",
+       "slug url": "/products/prepaid-card-process"
+      }
+     ],
+     "Payments": [
+      {
+       "title": "Traffic Fine",
+       "title bn": "ট্রাফিক ফাইন",
+       "slug url": "/services/details/traffic-fine"
+      },
+      {
+       "title": "Land Tax",
+       "title bn": "ভূমি উন্নয়ন কর",
+       "slug url": "/services/details/land-tax"
+      },
+      {
+       "title": "E-Porcha",
+       "title bn": "ই- পর্চা",
+       "slug url": "/services/details/e-porcha"
+      },
+      {
+       "title": "DNCC Holding Tax",
+       "title bn": "ডিএনসিসি হোল্ডিং ট্যাক্স",
+       "slug url": "/services/details/dncc"
+      },
+      {
+       "title": "E-Mutation",
+       "title bn": "ই-নামজারি",
+       "slug url": "/services/details/e-mutation"
+      },
+      {
+       "title": "NID Service",
+       "title bn": "এনআইডি সার্ভিস",
+       "slug url": "/services/details/nid-service"
+      },
+      {
+       "title": "Toll Payment",
+       "title bn": "টোল পেমেন্ট",
+       "slug url": "/services/details/toll-booth-payment"
+      },
+      {
+       "title": "Education",
+       "title bn": "এডুকেশন",
+       "slug url": "/products/utility/education"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "product-and-campaigns"
+ }
+}

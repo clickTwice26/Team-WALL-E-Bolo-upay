@@ -1,0 +1,77 @@
+{
+ "url": "https://www.upaybd.com/services/details/prepaid-card-refer-offer",
+ "api": "https://api.upaybd.com/api/v2/pages/prepaid-card-refer-offer",
+ "data": {
+  "title_english": "Prepaid Card Refer Offer",
+  "title_bangla": "Prepaid Card Refer Offer",
+  "template_name": "template-h",
+  "rows": {
+   "Data": [
+    {
+     "image": "/media/dynamic_image/upay_Card_referral_campaign_Website_banner_Desktop_2500X11811400x680.jpg",
+     "image sd": "/media/dynamic_image/upay_Card_referral_campaign_Website_banner_Desktop_2500X11811400x680_zqQMeDC.jpg",
+     "Details data": [
+      {
+       "title": "Get Rewarded for Referring upay Card",
+       "title bn": "উপায় কার্ড রেফার করে রিওয়ার্ড জিতুন",
+       "desc": "<br />\r\n<div style=\"text-align: justify;\"><span style=\"font-family: helvetica, arial, sans-serif; font-size: 14pt;\">upay brings you an exclusive referral reward! On every successful referral of the upay card, both the referrer and the referee will receive BDT 50 cashback. The cashback will be credited directly to the primary wallet upon successful payment of the card issuance fee. Enjoy instant rewards while sharing the convenience of the upay card!</span></div>\r\n<div style=\"text-align: justify;\"><span style=\"font-family: helvetica, arial, sans-serif; font-size: 14pt;\"><strong><u><br />Offer Duration: </u></strong>15<sup>th</sup> September &ndash; 31<sup>st</sup> December 2025</span></div>\r\n<div style=\"text-align: justify;\"><span style=\"font-family: helvetica, arial, sans-serif; font-size: 14pt;\"><strong><u><br />Offer Details:</u></strong></span></div>\r\n<div style=\"text-align: justify;\">\r\n<ul>\r\n<li><span style=\"font-family: helvetica, arial, sans-serif; font-size: 14pt;\">Referrer (Who will refer) and referee (Who will be referred) will receive <strong>BDT 50 </strong>cash back (disburse to primary wallet) <strong>each</strong> on successful issuance fee payment of upay prepaid card.</span></li>\r\n</ul>\r\n<span style=\"font-family: helvetica, arial, sans-serif; font-size: 14pt;\"><strong>Terms and Condition:</strong></span></div>",
+       "desc bn": "<br />\r\n<div style=\"text-align: justify;\" data-start=\"0\" data-end=\"217\"><span style=\"font-family: helvetica, arial, sans-serif; font-size: 14pt;\">উপায় নিয়ে এসেছে এক্সক্লুসিভ রেফারাল রিওয়ার্ড!</span><br data-start=\"45\" data-end=\"48\" /><span style=\"font-family: helvetica, arial, sans-serif; font-size: 14pt;\">প্রতিটি সফল <strong>উপায় কার্ড</strong> রেফারে, রেফারকারী এবং রেফারকৃত উভয়েই পাবেন ৫০ টাকা ক্যাশব্যাক।</span><br data-start=\"133\" data-end=\"136\" /><span style=\"font-family: helvetica, arial, sans-serif; font-size: 14pt;\">কার্ড ইস্যু ফি সফলভাবে পরিশোধের পর ক্যাশব্যাক সরাসরি প্রাইমারি ওয়ালেটে জমা হবে।</span></div>\r\n<div style=\"text-align: justify;\" data-start=\"219\" data-end=\"285\"><span style=\"font-family: helvetica, arial, sans-serif; font-size: 14pt;\">উপায় কার্ডের সুবিধা ছড়িয়ে দিন, আর সাথে পান ইনস্ট্যান্ট রিওয়ার্ড!</span></div>\r\n<div style=\"text-align: justify;\" data-start=\"0\" data-end=\"50\"><span style=\"font-family: helvetica, arial, sans-serif; font-size: 14pt;\"><strong><br />অফারের সময়কাল</strong>: ১৫ সেপ্টেম্বর &ndash; ৩১ ডিসেম্বর ২০২৫</span></div>\r\n<div style=\"text-align: justify;\" data-start=\"52\" data-end=\"257\"><span style=\"font-family: helvetica, arial, sans-serif; font-size: 14pt;\"><strong data-start=\"52\" data-end=\"73\"><br />অফারের বিস্তারিত:</strong></span><br data-start=\"73\" data-end=\"76\" /><span style=\"font-family: helvetica, arial, sans-serif; font-size: 14pt;\">রেফারার (যিনি রেফার করবেন) এবং রেফারি (যিনি রেফার হবেন) &ndash; উভয়েই উপায় প্রিপেইড কার্ডের ইস্যু ফি সফলভাবে পরিশোধের পর প্রত্যেকে ৫০ টাকা ক্যাশব্যাক (প্রাইমারি ওয়ালেটে জমা হবে) পাবেন।</span></div>\r\n<div style=\"text-align: justify;\" data-start=\"259\" data-end=\"274\"><span style=\"font-family: helvetica, arial, sans-serif; font-size: 14pt;\"><strong data-start=\"259\" data-end=\"272\"><br />শর্তাবলী:</strong></span></div>",
+       "sub title": "",
+       "sub title bn": "",
+       "sub desc": "",
+       "sub desc bn": "",
+       "key value": [
+        {
+         "title": "Referee has to input a valid active upay account in the referral code field.",
+         "title bn": "রেফারিকে রেফারাল কোড ফিল্ডে একটি সক্রিয় ভ্যালিড উপায় অ্যাকাউন্ট ইনপুট করতে হবে।"
+        },
+        {
+         "title": "To get the cash back referrer account must be active.",
+         "title bn": "ক্যাশব্যাক পেতে হলে রেফারারের অ্যাকাউন্ট অবশ্যই সক্রিয় থাকতে হবে।"
+        },
+        {
+         "title": "<strong>Cash back will be disbursed to primary wallet </strong><strong>within 24 hours of issuance fee (BDT 575) payment.</strong>",
+         "title bn": "ইস্যু ফি (৫৭৫ টাকা) পরিশোধের ২৪ ঘণ্টার মধ্যে ক্যাশব্যাক প্রাইমারি ওয়ালেটে জমা হবে।"
+        },
+        {
+         "title": "Both Referrer and referee will receive <strong>BDT 50 </strong>cash back each (disburse to primary wallet).",
+         "title bn": "রেফারার এবং রেফারি উভয়েই প্রত্যেকে ৫০ টাকা করে ক্যাশব্যাক পাবেন (প্রাইমারি ওয়ালেটে জমা হবে)।"
+        },
+        {
+         "title": "Both Referrer and referee will receive the cash back at the same time.",
+         "title bn": "রেফারার এবং রেফারি উভয়েই একসাথে ক্যাশব্যাক পাবেন।"
+        },
+        {
+         "title": "Referrer and referee cannot be the same wallet number.",
+         "title bn": "রেফারার এবং রেফারি একই ওয়ালেট নম্বর হতে পারবে না।"
+        },
+        {
+         "title": "<strong>Referrer can refer as many as UCB-upay prepaid card in the campaign period.</strong>",
+         "title bn": "রেফারার প্রচারণার সময়কালে যত খুশি উপায় কার্ড রেফার করতে পারবেন।"
+        },
+        {
+         "title": "Only card application from upay customer app will be eligible for this campaign.",
+         "title bn": "এই প্রচারণার জন্য শুধুমাত্র উপায় কাস্টমার অ্যাপ থেকে করা কার্ড অ্যাপ্লিকেশনই গ্রহণযোগ্য হবে।"
+        },
+        {
+         "title": "Cash Back will be disbursed to primary wallet and can be used for any services.",
+         "title bn": "ক্যাশব্যাক প্রাইমারি ওয়ালেটে জমা হবে এবং যেকোনো সার্ভিসে ব্যবহার করা যেতে পারে।"
+        }
+       ]
+      }
+     ],
+     "May like": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under May like": []
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "prepaid-card-refer-offer"
+ }
+}

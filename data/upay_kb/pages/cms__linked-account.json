@@ -1,0 +1,27 @@
+{
+ "url": "https://www.upaybd.com/services/details/linked-account",
+ "api": "https://api.upaybd.com/api/v2/pages/linked-account",
+ "data": {
+  "title_english": "Linked Account",
+  "title_bangla": "Linked Account",
+  "template_name": "template-g",
+  "rows": {
+   "Data": [
+    {
+     "cover title": "Linked Account",
+     "cover title bn": "লিংকড একাউন্ট",
+     "cover image": "/media/dynamic_image/Credit_card_Mobile_b7967Kb.jpg",
+     "cover image sd": "/media/dynamic_image/Website_Mobile_Header_3_AyWqjY4.png",
+     "desc": "<p style=\"text-align: center;\"><span style=\"font-weight: 400; font-size: 14pt;\"><br />Tired of entering the PIN and OTP every time? Using your UCB Bank account, you can transfer money to your উপায় (upay) account easily. After linking your UCB Bank account, you do not need to enter your PIN &amp; generate OTP every time. The money will be transferred to your account by just a couple of clicks.</span></p>\r\n<p><span style=\"font-weight: 400; font-size: 14pt;\">Simply follow the below steps:</span></p>\r\n<ul>\r\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400; font-size: 14pt;\">User input his/her PIN and press &ldquo;GO&rsquo; button to login</span></li>\r\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400; font-size: 14pt;\">Click &ldquo;Add Money&rdquo; from account home page</span></li>\r\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400; font-size: 14pt;\">Select &ldquo;Receiver Name or Number&rdquo;</span></li>\r\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400; font-size: 14pt;\">Enter &ldquo;Amount&rdquo;</span></li>\r\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400; font-size: 14pt;\">Select &ldquo;Linked Accounts&rdquo;&nbsp;</span></li>\r\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400; font-size: 14pt;\">Select &ldquo;Linked Account Name&rdquo; from drop down menu</span></li>\r\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400; font-size: 14pt;\">Enter &ldquo;PIN&rdquo;</span></li>\r\n<li style=\"font-weight: 400;\" aria-level=\"1\"><span style=\"font-weight: 400; font-size: 14pt;\">Slide &ldquo;Confirm&rdquo; to add money</span></li>\r\n</ul>",
+     "desc bn": "<br /><br /><br /><span style=\"font-size: 14pt;\">আপনি কি পিন এবং ওটিপি প্রতিবার দিতে যেয়ে ক্লান্ত হয়ে গিয়েছেন? আপনি আপনার উপায় অ্যাকাউন্টে খুব সহজেই অর্থ স্থানান্তর করতে পারবেন আপনার&nbsp; UCB ব্যাংক &nbsp;অ্যাকাউন্ট টি ব্যবহার করে। এই ঝামেলা থেকে মুক্তি পাওয়ার জন্য উপায় আপনার ইউসিবি ব্যাংক অ্যাকাউন্ট ট্যাগিংয়ের সুবিধা করেছে এবং তাৎক্ষণিক ভাবে অর্থ স্থানান্তর করার সুবিধা রয়েছে। আপনার ইউসিবি &nbsp;অ্যাকাউন্ট টি লিংক করার পরে, আপনাকে প্রতিবার পিন এবং ওটিপি দেওয়ার প্রয়োজন হবে না। আপনার টাকা কেবল কয়েক ক্লিকের মাধ্যমে আপনার ওয়ালেটে স্থানান্তরিত হবে।</span><br /><br /><span style=\"font-size: 14pt;\">নিচের ধাপ অনুসরণ&nbsp;করুন:</span><br /><span style=\"font-size: 14pt;\">- আপনার পিন টাইপ করুন এবং \"Go\" বাটন এ ক্লিক করুন।</span><br /><span style=\"font-size: 14pt;\">- অ্যাড মানি ক্লিক করুন&nbsp;</span><br /><span style=\"font-size: 14pt;\">- রিসিভার নাম অথবা নম্বর সিলেক্ট করুন&nbsp;</span><br /><span style=\"font-size: 14pt;\">- এমাউন্ট টাইপ করুন&nbsp;</span><br /><span style=\"font-size: 14pt;\">- লিংকড একাউন্ট সিলেক্ট করুন&nbsp;</span><br /><span style=\"font-size: 14pt;\">- মেনু থেকে \"লিংকড একাউন্ট নাম\" সিলেক্ট করুন&nbsp;</span><br /><span style=\"font-size: 14pt;\">- পিন নম্বর টাইপ করুন&nbsp;</span><br /><span style=\"font-size: 14pt;\">- স্লাইড করে কন্ফার্ম করুন&nbsp;</span>",
+     "Navigation": [
+      {
+       "slug url": "/nav/Navigation"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "linked-account"
+ }
+}

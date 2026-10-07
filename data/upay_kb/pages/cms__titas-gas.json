@@ -1,0 +1,27 @@
+{
+ "url": "https://www.upaybd.com/services/details/titas-gas",
+ "api": "https://api.upaybd.com/api/v2/pages/titas-gas",
+ "data": {
+  "title_english": "Titas Gas",
+  "title_bangla": "Titas Gas",
+  "template_name": "template-g",
+  "rows": {
+   "Data": [
+    {
+     "cover title": "Titas Gas",
+     "cover title bn": "তিতাস গ্যাস",
+     "cover image": "/media/dynamic_image/Desktop_Backdrop_Website_1_xYBf3Gm.png",
+     "cover image sd": "/media/dynamic_image/Mobile_Backdrop_Website_2070_x_750_px_1_ROkRlwr.png",
+     "desc": "<div style=\"text-align: center;\"><span style=\"font-weight: 400;\"><br /><br />Time to get rid of queues, and go for gas bill payment through উপায় (upay). <br /><br />Nowadays people are too busy to line-up for gas bill payments. Feel the comfort of your home and make a gas bill payment with উপায় (upay).&nbsp;</span></div>\r\n<div style=\"text-align: center;\"><span style=\"font-weight: 400;\">You can pay your Titas Gas (prepaid card) anywhere by simply visiting your nearest উপায় (upay) agent point. All you have to do is simply follow these steps:<br /><br /></span></div>\r\n<br />\r\n<ol>\r\n<li><span style=\"font-weight: 400;\"> Take your Titas Prepaid Card to your nearest উপায় (upay) Agent point.</span></li>\r\n</ol>\r\n<br />\r\n<ol start=\"2\">\r\n<li><span style=\"font-weight: 400;\"> Recharge your desired amount&nbsp;</span></li>\r\n</ol>\r\n<br />\r\n<ol start=\"3\">\r\n<li><span style=\"font-weight: 400;\"> Agent will complete the process for you.</span></li>\r\n</ol>\r\n<br />\r\n<ol start=\"4\">\r\n<li><span style=\"font-weight: 400;\"> Take the confirmation from agent and complete the process</span></li>\r\n</ol>",
+     "desc bn": "<p style=\"margin: 0in 0in 0.0001pt; text-align: center;\"><span style=\"font-size: 11.0pt; font-family: 'Nirmala UI',sans-serif; color: black;\"><br /><br /><strong>দীর্ঘ</strong></span><strong><span style=\"font-size: 11.0pt; font-family: KongshoMJ; color: black;\"> </span><span style=\"font-size: 11.0pt; font-family: 'Nirmala UI',sans-serif; color: black;\">লাইনে</span><span style=\"font-size: 11.0pt; font-family: KongshoMJ; color: black;\"> </span><span style=\"font-size: 11.0pt; font-family: 'Nirmala UI',sans-serif; color: black;\">দাঁড়িয়ে</span><span style=\"font-size: 11.0pt; font-family: KongshoMJ; color: black;\"> </span><span style=\"font-size: 11.0pt; font-family: 'Nirmala UI',sans-serif; color: black;\">থাকার</span><span style=\"font-size: 11.0pt; font-family: KongshoMJ; color: black;\"> </span><span style=\"font-size: 11.0pt; font-family: 'Nirmala UI',sans-serif; color: black;\">দিন</span><span style=\"font-size: 11.0pt; font-family: KongshoMJ; color: black;\"> </span><span style=\"font-size: 11.0pt; font-family: 'Nirmala UI',sans-serif; color: black;\">শেষ</span></strong><span style=\"font-size: 11.0pt; font-family: 'Nirmala UI',sans-serif; color: black;\"><strong>। আপনার বাড়িতে বসেই স্বাচ্ছন্দে গ্যাস বিলের অর্থ প্রদান করতে পারবেন।&nbsp; নিম্নের পদক্ষেপটি ফলো করুন:<br /><br /></strong><br /><br />১. আপনার তিতাস গ্যাস কার্ড নিয়ে কাছের উপায় এজেন্ট পয়েন্ট ভিসিট করুন।&nbsp; <br /><br />২. আপনার এমাউন্ট রিচার্জ করুন&nbsp;<br /><br />৩. উপায় এজেন্ট আপনার তিতাস গ্যাস বিল পরিশোধ করে দিবে&nbsp;<br /><br />৪. বিল পরিশোধ করার পর এজেন্ট এর কাছ থেকে কনফার্ম করুন&nbsp;&nbsp;<br /></span><span style=\"font-size: 11.0pt; font-family: KongshoMJ; color: black;\">&nbsp;</span></p>",
+     "Navigation": [
+      {
+       "slug url": "/nav/Navigation"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "titas-gas"
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "url": "https://www.upaybd.com/services/details/unlimited-cash-reward-cirkle",
+ "api": "https://api.upaybd.com/api/v2/pages/unlimited-cash-reward-cirkle",
+ "data": {
+  "title_english": "Unlimited Cash reward Cirkle",
+  "title_bangla": "Unlimited Cash reward Cirkle",
+  "template_name": "template-h",
+  "rows": {
+   "Data": [
+    {
+     "image": "/media/dynamic_image/Cirkle_Website_Desktop_4iAfKag.jpg",
+     "image sd": "/media/dynamic_image/Cirkle_Wallpaper_Mobile_qn3E9TA.jpg",
+     "Details data": [
+      {
+       "title": "Unlimited Cashback upon purchasing specific packs of Cirkle from upay!",
+       "title bn": "উপায় থেকে Cirkle নম্বরে নির্দিষ্ট প্যাক রিচার্জ করলেই আনলিমিটেড ক্যাশব্যাক!",
+       "desc": "<div style=\"text-align: center;\"><strong>Cirkle users will get Cashback upon recharging:<br /><br /></strong></div>\r\n<div style=\"text-align: center;\">\r\n<table style=\"border-collapse: collapse; width: 100%; border-color: #000000; border-style: solid;\" border=\"1\" width=\"563\" cellpadding=\"1\">\r\n<tbody>\r\n<tr>\r\n<td width=\"60\">\r\n<p>SL. No.</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Pack Type</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>Amount</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>Offer</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>Validity</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>Cashback BDT</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>1</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Entertainment</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>138</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>2 GB + 30D Chorki+iScreen+Bongo Subscription</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>30 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>3</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>2</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Data</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>228</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>30 GB</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>10 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>10</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>3</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Bundle</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>249</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>25 GB + 200 Min</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>10 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>10</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>4</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Data</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>598</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>80 GB</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>30 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>50</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>5</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Bundle</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>599</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>50 GB + 500 Min</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>30 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>50</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>6</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Data</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>698</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>100 GB</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>30 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>60</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>7</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Data</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>699</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>60 GB + 600 Min</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>30 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>60</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>8</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Bundle</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>999</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>80 GB + 1500 Min</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>30 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>100</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>9</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Voice</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>159</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>250 Min</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>10 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>4</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>10</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Voice</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>269</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>380 Min</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>30 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>15</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>11</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Voice</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>329</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>500 Min</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>30 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>30</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>12</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Voice</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>429</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>680 Min</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>30 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>40</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>13</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Voice</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>629</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>1000 Min</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>30 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>60</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n<div style=\"text-align: center;\">&nbsp;</div>\r\n<div style=\"text-align: center;\">&nbsp;</div>\r\n<div style=\"text-align: center;\"><strong>Terms and Conditions</strong></div>",
+       "desc bn": "<div style=\"text-align: center;\"><strong><strong><span style=\"font-size: 12pt;\">Cirkle </span>গ্রাহকরা উল্লেখিত নিদিষ্ট প্যাক রিচার্জ করলেই পাবেন ক্যাশব্যাকঃ<br /><br /></strong></strong></div>\r\n<div style=\"text-align: center;\">\r\n<div class=\"container\">\r\n<div id=\"model-response-message-contentr_4c8ab0f58d5d84df\" class=\"markdown markdown-main-panel md-content enable-luminous-fast-follows enable-updated-hr-color stronger tutor-markdown-rendering\" dir=\"ltr\" aria-busy=\"false\" aria-live=\"polite\"></div>\r\n</div>\r\n</div>\r\n<div style=\"text-align: center;\">\r\n<div style=\"text-align: center;\">\r\n<div class=\"container\">\r\n<div id=\"model-response-message-contentr_e16370919c9beaff\" class=\"markdown markdown-main-panel md-content enable-luminous-fast-follows enable-updated-hr-color stronger tutor-markdown-rendering\" dir=\"ltr\" aria-busy=\"false\" aria-live=\"polite\"></div>\r\n</div>\r\n</div>\r\n<table style=\"border-collapse: collapse; width: 100%; border-color: #000000; border-style: solid;\" border=\"1\" width=\"563\" cellpadding=\"1\">\r\n<tbody>\r\n<tr>\r\n<td width=\"60\">\r\n<p>SL. No.</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Pack Type</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>Amount</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>Offer</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>Validity</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>Cashback BDT</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>1</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Entertainment</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>138</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>2 GB + 30D Chorki+iScreen+Bongo Subscription</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>30 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>3</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>2</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Data</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>228</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>30 GB</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>10 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>10</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>3</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Bundle</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>249</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>25 GB + 200 Min</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>10 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>10</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>4</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Data</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>598</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>80 GB</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>30 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>50</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>5</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Bundle</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>599</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>50 GB + 500 Min</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>30 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>50</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>6</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Data</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>698</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>100 GB</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>30 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>60</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>7</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Data</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>699</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>60 GB + 600 Min</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>30 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>60</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>8</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Bundle</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>999</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>80 GB + 1500 Min</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>30 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>100</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>9</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Voice</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>159</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>250 Min</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>10 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>4</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>10</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Voice</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>269</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>380 Min</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>30 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>15</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>11</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Voice</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>329</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>500 Min</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>30 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>30</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>12</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Voice</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>429</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>680 Min</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>30 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>40</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"60\">\r\n<p>13</p>\r\n</td>\r\n<td width=\"77\">\r\n<p>Voice</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>629</p>\r\n</td>\r\n<td width=\"193\">\r\n<p>1000 Min</p>\r\n</td>\r\n<td width=\"66\">\r\n<p>30 Days</p>\r\n</td>\r\n<td width=\"101\">\r\n<p>60</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<strong><strong><br /></strong></strong><br /><strong><span style=\"font-size: 14pt;\">শর্তাবলীঃ</span></strong></div>",
+       "sub title": "",
+       "sub title bn": "",
+       "sub desc": "<span style=\"font-size: 12pt;\">Enjoy unlimited Cashback upon recharge of specific packs of Cirkle from upay app or by dialing *268#. This offer is applicable for recharge to both own number and any other number.</span>",
+       "sub desc bn": "<p>উপায় (upay) অ্যাপ থেকে অথবা *268# ডায়াল করে সার্কেল (Cirkle)-এর নির্দিষ্ট প্যাক রিচার্জে উপভোগ করুন আনলিমিটেড ক্যাশব্যাক! অফারটি আপনার নিজস্ব অথবা অন্য যেকোনো সার্কেল নম্বরে রিচার্জের ক্ষেত্রে প্রযোজ্য।</p>",
+       "key value": [
+        {
+         "title": "Campaign duration is from September 23 to September 30, 2026.",
+         "title bn": "ক্যাম্পেইনের মেয়াদ ২৩ সেপ্টেম্বর থেকে ৩০ সেপ্টেম্বর, ২০২৬ পর্যন্ত।"
+        },
+        {
+         "title": "For Internet bonus campaign, the Campaign duration is from <strong>September 21 to September 24</strong>, 2026.",
+         "title bn": "ইন্টারনেট বোনাস ক্যাম্পেইনের সময়কাল <strong data-start=\"36\" data-end=\"78\">২১ সেপ্টেম্বর থেকে ২৪ সেপ্টেম্বর, ২০২৬</strong> পর্যন্ত।"
+        },
+        {
+         "title": "This offer can be availed multiple times during the campaign period.",
+         "title bn": "ক্যাম্পেইন চলাকালীন সময়ে অফারটি একাধিকবার উপভোগ করা যাবে।"
+        },
+        {
+         "title": "Cashback is applicable for mobile recharge of above applicable pack to own or any other Cirkle number.",
+         "title bn": "নিজ নম্বর অথবা যেকোন Cirkle নম্বরে নিদিষ্ট প্যাক রিচার্জ এর ক্ষেত্রে ক্যাশব্যাক প্রযোজ্য হবে।"
+        },
+        {
+         "title": "The cashback amount will be disbursed in the &ldquo;Primary&rdquo; wallet of the upay customers.",
+         "title bn": "ক্যাশব্যাক অ্যামাউন্ট গ্রাহকের \"প্রাইমারি\" ওয়ালেটে পাঠানো হবে।"
+        },
+        {
+         "title": "Limited profile customers are not eligible for cash reward. To participate in the campaign, customer has to be in full profile.",
+         "title bn": "লিমিটেড প্রোফাইল গ্রাহকরা ক্যাশ রিওয়ার্ড এর জন্য আওতাধীন নয়। ক্যাম্পেইনে অংশ নিতে গ্রাহককে সম্পূর্ণ প্রোফাইলে থাকতে হবে।"
+        },
+        {
+         "title": "Fulfillment of recharge pack offer is the responsibility of the respective mobile operator.",
+         "title bn": "রিচার্জ প্যাক অফার এর দায়িত্ব স্ব স্ব মোবাইল অপারেটর এর উপর বর্তায়।"
+        },
+        {
+         "title": "Customer can check &ldquo;Cashback&rdquo; balance from Transactions History page in app and also in USSD under &ldquo;My upay&rdquo; option.",
+         "title bn": "কাস্টমার ক্যাশব্যাক উপায় আকাউন্ট এর ট্রানজ্যাকশন হিস্টোরি থেকে চেক করতে পারবেন এবং ইউএসএসডি কোড ডায়াল করে &ldquo;My upay&rdquo; অপশন থেকেও চেক করতে পারবেন।"
+        },
+        {
+         "title": "Customers can use the cashback for any purpose",
+         "title bn": "গ্রাহক এই ক্যাশব্যাক যেকোনো ভাবে ব্যবহার করতে পারবে।"
+        },
+        {
+         "title": "Both USSD and app users of upay can avail this offer.",
+         "title bn": "ইউএসএসডি এবং অ্যাপ ব্যবহারকারী উভয়ই এই অফার উপভোগ করতে পারবেন।"
+        },
+        {
+         "title": "upay reserves the right to change/modify campaign terms &amp; conditions or cancel cashback payout if the particular transaction and/or the customer transaction behavior raises reasonable suspicion that the customer has abused the benefits of the campaign.",
+         "title bn": "উপায় ক্যাম্পেইনের সকল ধরনের শর্ত যেকোনো সময় পরিবর্তন/পরিবর্ধন করতে পারে অথবা ক্যাশ রিওয়ার্ড বাতিল করতে পারে যদি কোনো নির্দিষ্ট লেনদেন সন্দেহজনক মনে হয় বা গ্রাহক যদি কোনো সুবিধার অপব্যবহার করে।"
+        }
+       ]
+      }
+     ],
+     "May like": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under May like": []
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "unlimited-cash-reward-cirkle"
+ }
+}

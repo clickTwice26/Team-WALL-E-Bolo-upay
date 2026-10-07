@@ -1,0 +1,61 @@
+{
+ "url": "https://www.upaybd.com/services/details/prepaid-card-cafe-rio-discount",
+ "api": "https://api.upaybd.com/api/v2/pages/prepaid-card-cafe-rio-discount",
+ "data": {
+  "title_english": "Prepaid Card Cafe Rio Discount",
+  "title_bangla": "Prepaid Card Cafe Rio Discount",
+  "template_name": "template-h",
+  "rows": {
+   "Data": [
+    {
+     "image": "/media/dynamic_image/Adaptation_Cafe_Rio_Discount_Offer_Website_banner_Desktop_2500X11811400x680.jpg",
+     "image sd": "/media/dynamic_image/Adaptation_Cafe_Rio_Discount_Offer_Website_banner_Desktop_2500X11811400x68_SwIRSAE.jpg",
+     "Details data": [
+      {
+       "title": "Enjoy 15% Off at Cafe Rio with Your upay Card!",
+       "title bn": "উপায় কার্ডে ক্যাফে রিও-তে ১৫% ছাড় উপভোগ করুন!",
+       "desc": "<br />\r\n<div style=\"text-align: justify;\"><span style=\"font-family: helvetica, arial, sans-serif; font-size: 14pt;\"><strong>Validity: </strong>Until further notice.</span></div>\r\n<div style=\"text-align: justify;\"><span style=\"font-family: helvetica, arial, sans-serif; font-size: 14pt;\"><strong><br />Campaign Detail:</strong></span></div>\r\n<div style=\"text-align: justify;\"><span style=\"font-family: helvetica, arial, sans-serif; font-size: 14pt;\">Make every meal more enjoyable at <strong>Caf&eacute; Rio</strong> with your <strong>upay card</strong>. Cardholders can now avail a <strong>flat 15% discount</strong> on all regular menu prices. Whether you&rsquo;re planning a casual hangout, a quick coffee break, or a full dining experience with friends and family, this special offer ensures that your moments at Caf&eacute; Rio are both memorable and rewarding.</span></div>\r\n<div style=\"text-align: justify;\"><span style=\"font-family: helvetica, arial, sans-serif; font-size: 14pt;\"><strong><br />Terms &amp; Conditions&nbsp;</strong></span></div>",
+       "desc bn": "<div style=\"text-align: justify;\" data-start=\"53\" data-end=\"102\"><strong data-start=\"53\" data-end=\"68\"><br /><span style=\"font-family: helvetica, arial, sans-serif; font-size: 12pt;\">ভ্যালিডিটি:</span></strong><span style=\"font-family: helvetica, arial, sans-serif; font-size: 12pt;\"> পরবর্তী নোটিশ না দেওয়া পর্যন্ত।</span></div>\r\n<div style=\"text-align: justify;\" data-start=\"104\" data-end=\"466\"><span style=\"font-family: helvetica, arial, sans-serif; font-size: 12pt;\"><strong data-start=\"104\" data-end=\"131\"><br />ক্যাম্পেইনের বিস্তারিত:</strong></span><br data-start=\"131\" data-end=\"134\" /><span style=\"font-family: helvetica, arial, sans-serif; font-size: 12pt;\">আপনার উপায় কার্ড দিয়ে ক্যাফে রিও-তে প্রতিটি খাবারকে আরও উপভোগ্য করে তুলুন। কার্ডহোল্ডাররা এখন সকল রেগুলার মেনু মূল্যে ফ্ল্যাট ১৫% ডিসকাউন্ট পাবেন। বন্ধু কিংবা পরিবারের সঙ্গে ক্যাজুয়াল হ্যাংআউট, দ্রুত কফি ব্রেক বা পূর্ণাঙ্গ ডাইনিং অভিজ্ঞতা&mdash;যাই হোক না কেন, এই বিশেষ অফারটি নিশ্চিত করবে আপনার মুহূর্তগুলো হবে আরও স্মরণীয় ও আনন্দদায়ক।</span></div>\r\n<div style=\"text-align: justify;\" data-start=\"468\" data-end=\"1183\"><span style=\"font-family: helvetica, arial, sans-serif; font-size: 12pt;\"><strong data-start=\"468\" data-end=\"481\"><br />শর্তাবলী:</strong></span></div>",
+       "sub title": "",
+       "sub title bn": "",
+       "sub desc": "",
+       "sub desc bn": "",
+       "key value": [
+        {
+         "title": "Customer will get the discount multiple times as per the selected individual merchant&rsquo;s policy during the campaign period.",
+         "title bn": "গ্রাহক নির্বাচিত মার্চেন্টের নীতিমালা অনুযায়ী প্রচারণার সময়কাল জুড়ে একাধিকবার এই ডিসকাউন্ট উপভোগ করতে পারবেন।"
+        },
+        {
+         "title": "Discount will be applicable on catalogue price. However, offers cannot be clubbed with other offers simultaneously.",
+         "title bn": "ডিসকাউন্ট ক্যাটালগ মূল্যের ওপর প্রযোজ্য হবে। তবে অফার অন্য কোনো অফারের সঙ্গে একত্রে উপভোগ করা যাবে না।"
+        },
+        {
+         "title": "Customer will not be eligible for this discount if payment is made using upay account through upay App or *268#.",
+         "title bn": "গ্রাহক উপায় অ্যাকাউন্ট ব্যবহার করে উপায় অ্যাপ বা *268# এর মাধ্যমে পেমেন্ট করলে এই ডিসকাউন্ট প্রযোজ্য হবে না।"
+        },
+        {
+         "title": "upay is neither liable nor responsible for the merchant&rsquo;s inability to ensure the availability or delivery of the product since upay is only providing a payment service to the customer.",
+         "title bn": "উপায় শুধুমাত্র গ্রাহককে পেমেন্ট সার্ভিস প্রদান করছে; তাই মার্চেন্টের পণ্য সরবরাহ বা প্রাপ্যতা নিশ্চিত করতে ব্যর্থ হলে তার জন্য উপায় দায়ী বা দায়িত্বশীল থাকবে না।"
+        },
+        {
+         "title": "upay reserves the right to change/modify campaign terms &amp; conditions if the particular transaction and/ or the customer transaction behavior raises reasonable suspicion that the customer has abused the benefits of the campaign.",
+         "title bn": "যদি কোনো নির্দিষ্ট লেনদেন বা গ্রাহকের লেনদেনের আচরণ থেকে যুক্তিসঙ্গত সন্দেহ তৈরি হয় যে তিনি প্রচারণার সুবিধা অপব্যবহার করেছেন, তবে উপায় প্রচারণার শর্তাবলী পরিবর্তন/সংশোধন করার অধিকার সংরক্ষণ করে।"
+        }
+       ]
+      }
+     ],
+     "May like": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under May like": []
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "prepaid-card-cafe-rio-discount"
+ }
+}

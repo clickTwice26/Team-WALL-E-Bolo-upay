@@ -1,0 +1,27 @@
+{
+ "url": "https://www.upaybd.com/ProductServices/Cash-in",
+ "api": "https://api.upaybd.com/api/v2/pages/Cash-in",
+ "data": {
+  "title_english": "Cash in",
+  "title_bangla": "Cash in",
+  "template_name": "template-g",
+  "rows": {
+   "Data": [
+    {
+     "cover title": "Cash in",
+     "cover title bn": "ক্যাশ ইন",
+     "cover image": "/media/dynamic_image/Cash_In_desktop_ah3qKXi.jpg",
+     "cover image sd": "/media/dynamic_image/Cash_In_mobile_e62N3DE.jpg",
+     "desc": "<p style=\"text-align: center;\"><span style=\"font-weight: 400;\"><br /><br /><br /><span style=\"font-size: 14pt;\"><strong><span style=\"font-size: 12pt; color: #236fa1;\">Do you need to send money to your friend or family who is not around or somewhere close to you, but don&rsquo;t have any money in your upay account? Just go to your nearest upay agent and cash in money to your account and send it to your friend or family.&nbsp;</span></strong><br /><strong><br /></strong></span></span></p>\r\n<ul>\r\n<li aria-level=\"1\"><span style=\"font-weight: 400;\">You can deposit money to your upay account by going to your nearest উপায় (upay) agent point.</span></li>\r\n</ul>\r\n<br />\r\n<ul>\r\n<li aria-level=\"1\"><span style=\"font-weight: 400;\">Let the agent know how much you want to cash in</span></li>\r\n</ul>\r\n<br />\r\n<ul>\r\n<li aria-level=\"1\"><span style=\"font-weight: 400;\">Write down the number at the upay register book.</span></li>\r\n</ul>\r\n<br />\r\n<ul>\r\n<li aria-level=\"1\"><span style=\"font-weight: 400;\">Pay the total amount of money to the agent. In exchange, the upay agent will deposit the money to your upay account.</span></li>\r\n</ul>",
+     "desc bn": "<p style=\"text-align: center;\"><br /><br /><span style=\"color: #34495e;\"><strong><span style=\"font-size: 14pt;\">উপায় এ ক্যাশ ইন/ডিপোজিট করা খুব সহজ।</span></strong></span><br /><br /></p>\r\n<ul>\r\n<li><span style=\"font-size: 12pt;\">উপায় অ্যাকাউন্টে ক্যাশ ইন/ডিপোজিট করতে আপনার নিকটস্থ এজেন্ট পয়েন্টে যোগাযোগ করুন।</span></li>\r\n</ul>\r\n<br />\r\n<ul>\r\n<li><span style=\"font-size: 12pt;\">আপনি কত টাকা ক্যাশ ইন/ডিপোজিট করতে চান উপায় এজেন্টকে সেই অ্যামাউন্ট জানান।</span></li>\r\n</ul>\r\n<br />\r\n<ul>\r\n<li><span style=\"font-size: 12pt;\">এরপর উপায় রেজিস্টার্ড বুক এ যে নম্বরে ক্যাশ ইন/ডিপোজিট করবেন সেই নম্বর লিখুন।</span></li>\r\n</ul>\r\n<br />\r\n<ul>\r\n<li><span style=\"font-size: 12pt;\">আপনি যে পরিমান টাকা ক্যাশ ইন/ডিপোজিট করতে চান সে টাকা উপায় এজেন্টকে প্রদান করুন।</span></li>\r\n</ul>",
+     "Navigation": [
+      {
+       "slug url": "/nav/Navigation"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "Cash-in"
+ }
+}

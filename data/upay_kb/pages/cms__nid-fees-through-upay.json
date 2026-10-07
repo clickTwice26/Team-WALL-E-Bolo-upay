@@ -1,0 +1,60 @@
+{
+ "url": "https://www.upaybd.com/services/details/nid-fees-through-upay",
+ "api": "https://api.upaybd.com/api/v2/pages/nid-fees-through-upay",
+ "data": {
+  "title_english": "NID fees through upay",
+  "title_bangla": "NID fees through upay",
+  "template_name": "template-e",
+  "rows": {
+   "Data": [
+    {
+     "title": "Press Release",
+     "title bn": "প্রেস রিলিজ",
+     "cover image": "/media/dynamic_image/Website_Desktop_Header_1_1_eNmYx4N_rQ6t50b_1_F21pKpa.png",
+     "cover image sd": "/media/dynamic_image/Mobile_Desktop_Header_1_1_w1HtvDk_5fVMeB8_1_UztXDCC.png",
+     "segment one": [
+      {
+       "title": "NID related fees can be paid through উপায়",
+       "title bn": "NID related fees can be paid through উপায়",
+       "desc": "<p>উপায় (upay), the fast-growing mobile financial service provider in the country signed an agreement with Election Commission on Tuesday aiming to facilitate customers to make payment of various service-related fees through upay such as correction of National Identity (NID) card and collection of duplicate NID.</p>\r\n<p>The service will be available to customers soon through the upay App as well as through dialing the USSD code &lsquo;268&rsquo;.</p>\r\n<p>Rezaul Hossain, Managing Director and Chief Executive Officer of upay and Mohammad Azizul Islam, Director, Administration &amp; Finance, NID wing under the Election Commission Secretariat signed the agreement on behalf of their respective organizations.</p>\r\n<p>Among others, Iman Kalyan Dutta, Chief Sales &amp; Service officer, Shakib Altaf, Deputy Director, Government and Emerging sales, Hasan Mohammad Zahid, Assistant Director, Government Sales, Shah Md Bodiur Rahman, Account Manager of upay and Mohammad Nuruzzaman Khan, Additional Project Director (Admin &amp; Finance) and Mohammad Tajul Islam, Director (Budget, Accounts and General Services) of the NID wing were present at the signing ceremony held at the Election Commission office in the city.</p>\r\nupay, a subsidiary of United Commercial Bank, launched its operation in March 2021. upay customers enjoy a range of services, including fund transfer, utility bill payment, merchant payment, airtime recharge, traffic-fine payment, Indian visa fee payment; receiving inward remittances, salary and government social safety net, and other value-added financial services. Since launching, the company has acquired around 60 lakhs customers. upay has more than one lakh agent points across the country.",
+       "desc bn": "<p>উপায় (upay), the fast-growing mobile financial service provider in the country signed an agreement with Election Commission on Tuesday aiming to facilitate customers to make payment of various service-related fees through upay such as correction of National Identity (NID) card and collection of duplicate NID.</p>\r\n<p>The service will be available to customers soon through the upay App as well as through dialing the USSD code &lsquo;268&rsquo;.</p>\r\n<p>Rezaul Hossain, Managing Director and Chief Executive Officer of upay and Mohammad Azizul Islam, Director, Administration &amp; Finance, NID wing under the Election Commission Secretariat signed the agreement on behalf of their respective organizations.</p>\r\n<p>Among others, Iman Kalyan Dutta, Chief Sales &amp; Service officer, Shakib Altaf, Deputy Director, Government and Emerging sales, Hasan Mohammad Zahid, Assistant Director, Government Sales, Shah Md Bodiur Rahman, Account Manager of upay and Mohammad Nuruzzaman Khan, Additional Project Director (Admin &amp; Finance) and Mohammad Tajul Islam, Director (Budget, Accounts and General Services) of the NID wing were present at the signing ceremony held at the Election Commission office in the city.</p>\r\nupay, a subsidiary of United Commercial Bank, launched its operation in March 2021. upay customers enjoy a range of services, including fund transfer, utility bill payment, merchant payment, airtime recharge, traffic-fine payment, Indian visa fee payment; receiving inward remittances, salary and government social safety net, and other value-added financial services. Since launching, the company has acquired around 60 lakhs customers. upay has more than one lakh agent points across the country.\r\n<p>&nbsp;</p>",
+       "image": "/media/dynamic_image/Press_Release_-_2000_x_1200_5.png",
+       "image sd": "/media/dynamic_image/Press_Release_-_2000_x_1200_5_M9uPREY.png",
+       "sub title": "",
+       "sub title bn": "",
+       "sub desc": "",
+       "sub desc bn": "",
+       "sub image": "",
+       "sub image sd": ""
+      }
+     ],
+     "Segment two": [
+      {
+       "image": "",
+       "image sd": ""
+      }
+     ],
+     "Segment three": [
+      {
+       "title": "",
+       "title bn": "",
+       "facebook icon": "",
+       "facebook icon sd": "",
+       "instagram icon": "",
+       "instagram icon sd": ""
+      }
+     ],
+     "Segment four": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": ""
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "nid-fees-through-upay"
+ }
+}

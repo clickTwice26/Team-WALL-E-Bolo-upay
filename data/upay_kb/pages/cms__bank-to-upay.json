@@ -1,0 +1,76 @@
+{
+ "url": "https://www.upaybd.com/services/details/bank-to-upay",
+ "api": "https://api.upaybd.com/api/v2/pages/bank-to-upay",
+ "data": {
+  "title_english": "Bank to upay",
+  "title_bangla": "Bank to upay",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Bank to upay",
+     "title bn": "ব্যাংক থেকে উপায়-এ",
+     "background image": "/media/dynamic_image/Credit_card_Mobile_DM4Hhtb_9FyUvla.jpg",
+     "background image sd": "/media/dynamic_image/Website_Mobile_Header_3_8d1eEcB_gooUapD.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "No need to worry about adding money to your upay account. Now you can add money from multiple bank accounts.",
+     "desc bn": "আপনার উপায় একাউন্ট এ টাকা অ্যাড করার চিন্তা নেই। এখন সহজেই অ্যাড মানি করতে পারবেন বাংলাদেশের বিভিন্ন ব্যাংক থেকে।",
+     "Methods": [
+      {
+       "title": "How to Add Money via Bank ?",
+       "title bn": "ব্যাংক অ্যাকাউন্ট এর মাধ্যমে কিভাবে অ্যাড মানি করতে হয় ?",
+       "desc": "",
+       "desc bn": "",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Not_Available_on_268_3_wlfl7ZN.png",
+         "image sd": "/media/dynamic_image/Not_Available_on_268_3_W68XRGO.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_412sHPY.png",
+         "image sd": "/media/dynamic_image/1_6Ttse2E.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_2_ngCpuGi.png",
+         "image sd": "/media/dynamic_image/2_2_l9YAVCR.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_UPogVbY.png",
+         "image sd": "/media/dynamic_image/3_ipvpb4L.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_rdMw0gJ.png",
+         "image sd": "/media/dynamic_image/4_iOdzkGl.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "bank-to-upay"
+ }
+}

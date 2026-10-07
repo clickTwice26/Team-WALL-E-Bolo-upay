@@ -1,0 +1,54 @@
+{
+ "url": "https://www.upaybd.com/products/cash-in-options",
+ "api": "https://api.upaybd.com/api/v2/pages/cash-in-options",
+ "data": {
+  "title_english": "Cash in options",
+  "title_bangla": "Cash in options",
+  "template_name": "template-c",
+  "rows": {
+   "Data": [
+    {
+     "cover title": "Cash-in Methods",
+     "cover title bn": "ক্যাশ-ইন করার উপায়",
+     "background image": "/media/dynamic_image/istockphoto-1415987958-612x612_Ubiuqal.jpg",
+     "background image sd": "/media/dynamic_image/istockphoto-1415987958-612x612_I58E8rM.jpg",
+     "desc": "",
+     "desc bn": "",
+     "methods": [
+      {
+       "title": "Agent Cash-in&nbsp;",
+       "title bn": "এজেন্ট দ্বারা ক্যাশ-ইন",
+       "image": "/media/dynamic_image/agent-cash-in-cash-out-solutions-for-agency-banking-banner.png",
+       "image sd": "/media/dynamic_image/agent-cash-in-cash-out-solutions-for-agency-banking-banner_UImJXAz.png",
+       "icon image": "/media/dynamic_image/284737-200.png",
+       "icon image sd": "/media/dynamic_image/284737-200_vvwUlOG.png",
+       "slug url": "/ProductServices/Cash-in",
+       "has providers": "true"
+      },
+      {
+       "title": "CRM Cash-in",
+       "title bn": "সিআরএম ক্যাশ-ইন",
+       "image": "/media/dynamic_image/istockphoto-692922402-612x612.jpg",
+       "image sd": "/media/dynamic_image/istockphoto-692922402-612x612_hlOEryC.jpg",
+       "icon image": "/media/dynamic_image/103816.png",
+       "icon image sd": "/media/dynamic_image/103816_GvQazOL.png",
+       "slug url": "/Latest-offer/crm-cash-in",
+       "has providers": "true"
+      }
+     ],
+     "GetApp": [
+      {
+       "Slug url": ""
+      }
+     ],
+     "Navigation": [
+      {
+       "slug url": "/nav/Navigation"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "cash-in-options"
+ }
+}

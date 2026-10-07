@@ -1,0 +1,92 @@
+{
+ "url": "https://www.upaybd.com/services/details/visa-credit-card",
+ "api": "https://api.upaybd.com/api/v2/pages/visa-credit-card",
+ "data": {
+  "title_english": "VISA Credit Card",
+  "title_bangla": "VISA Credit Card",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "VISA Credit Card",
+     "title bn": "VISA Credit Card",
+     "background image": "/media/dynamic_image/Credit_card_Mobile_cUIAlfF.jpg",
+     "background image sd": "/media/dynamic_image/Website_Mobile_Header_3_gPzg0OQ.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<span style=\"font-size: 12pt;\"><br />উপায় users will now be able to pay any VISA Credit Card bills issued by commercial banks operating in Bangladesh. The service is available from উপায় customer app only.<br /><br />The applicable Limits and Frequency for VISA Credit Card bill are given below:<br /><br /></span>\r\n<table style=\"border-collapse: collapse; width: 99.718%; height: 169px;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 31.2986%; text-align: center; vertical-align: middle;\" colspan=\"2\"><span style=\"font-size: 12pt;\"><strong>Per Transaction Limit (Amount in BDT)</strong></span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">Minimum</span></td>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">Maximum</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">100</span></td>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">300,000</span></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<br />\r\n<table style=\"border-collapse: collapse; width: 99.718%; height: 169px;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 31.2986%; text-align: center; vertical-align: middle;\" colspan=\"2\"><span style=\"font-size: 12pt;\"><strong>Daily Transaction Limit (Amount in BDT)</strong></span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">Count</span></td>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">Amount</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"text-align: center; vertical-align: middle; width: 31.2986%;\" colspan=\"2\"><span style=\"font-size: 12pt;\">N/A</span></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<br />\r\n<table style=\"border-collapse: collapse; width: 99.718%; height: 169px;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 31.3044%; text-align: center; vertical-align: middle;\" colspan=\"2\"><span style=\"font-size: 12pt;\"><strong>Monthly Transaction Limit (Amount in BDT)</strong></span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">Count</span></td>\r\n<td style=\"width: 15.6551%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">Amount</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"text-align: center; vertical-align: middle; width: 31.3044%;\" colspan=\"2\"><span style=\"font-size: 12pt;\">N/A</span></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<br /><span style=\"font-size: 12pt;\"><br />Terms and Conditions:</span><br /><br />\r\n<ul>\r\n<li><span style=\"font-size: 12pt;\">Customers will be charged 0.8% of total bill amount by upay.</span></li>\r\n<li><span style=\"font-size: 12pt;\">Only active (full profile) customers with sufficient balance will be eligible for this service through upay app.</span></li>\r\n<li><span style=\"font-size: 12pt;\">A customer can avail this service multiple times with the conditions of applicable local (Bangladesh) credit limit.</span></li>\r\n<li><span style=\"font-size: 12pt;\">Payment will be updated within 3 working days after bill payment. However, if the customer is charged a late fee by the bank for making a last-minute credit card bill through upay, then the customer has to contact the card-issuing bank to resolve the issue.</span></li>\r\n<li><span style=\"font-size: 12pt;\">Customer must follow the applicable payment rules of their concerned bank.</span></li>\r\n<li><span style=\"font-size: 12pt;\">Customer will be charged by upay for this credit card bill payment service as determined by upay from time to time.</span></li>\r\n<li><span style=\"font-size: 12pt;\">upay shall only be responsible for payment as a payment service provider. Visa/Mastercard will bear the sole responsibility and liability of its credit card services.</span></li>\r\n<li><span style=\"font-size: 12pt;\">upay reserves the right to change/modify/amend these terms &amp; conditions or applicable charges of bill payment service or cancel this service at any time without giving any prior notice.</span></li>\r\n<li><span style=\"font-size: 12pt;\">Any decision taken by upay in respect to this service, shall be in the sole discretion of upay and shall be deemed final.</span></li>\r\n<li><span style=\"font-size: 12pt;\">For details Terms &amp; Condition &ndash; <a href=\"https://www.upaybd.com/ProductServices/terms-and-condition-credit-and-debit-card\">https://www.upaybd.com/ProductServices/terms-and-condition-credit-and-debit-card</a></span></li>\r\n</ul>",
+     "desc bn": "<span style=\"font-size: 12pt;\"><span style=\"font-size: 12pt;\"><br />উপায় users will now be able to pay any VISA Credit Card bills issued by commercial banks operating in Bangladesh. The service is available from উপায় customer app only.<br /><br />The applicable Limits and Frequency for VISA Credit Card bill are given below:<br /><br /></span></span>\r\n<table style=\"border-collapse: collapse; width: 99.718%; height: 169px;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 31.2986%; text-align: center; vertical-align: middle;\" colspan=\"2\"><span style=\"font-size: 12pt;\"><strong>Per Transaction Limit (Amount in BDT)</strong></span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">Minimum</span></td>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">Maximum</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">100</span></td>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">300,000</span></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<span style=\"font-size: 12pt;\"><span style=\"font-size: 12pt;\"><br /></span></span>\r\n<table style=\"border-collapse: collapse; width: 99.718%; height: 169px;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 31.2986%; text-align: center; vertical-align: middle;\" colspan=\"2\"><span style=\"font-size: 12pt;\"><strong>Daily Transaction Limit (Amount in BDT)</strong></span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">Count</span></td>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">Amount</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"text-align: center; vertical-align: middle; width: 31.2986%;\" colspan=\"2\"><span style=\"font-size: 12pt;\">N/A</span></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<span style=\"font-size: 12pt;\"><span style=\"font-size: 12pt;\"><br /></span></span>\r\n<table style=\"border-collapse: collapse; width: 99.718%; height: 169px;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 31.3044%; text-align: center; vertical-align: middle;\" colspan=\"2\"><span style=\"font-size: 12pt;\"><strong>Monthly Transaction Limit (Amount in BDT)</strong></span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">Count</span></td>\r\n<td style=\"width: 15.6551%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">Amount</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"text-align: center; vertical-align: middle; width: 31.3044%;\" colspan=\"2\"><span style=\"font-size: 12pt;\">N/A</span></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<span style=\"font-size: 12pt;\"><br /><br /><br /></span><span style=\"font-size: 12pt;\">Terms and Conditions:</span><br /><br />\r\n<ul>\r\n<li><span style=\"font-size: 12pt;\">Customers will be charged 0.8% of total bill amount by upay.</span></li>\r\n<li><span style=\"font-size: 12pt;\">Only active (full profile) customers with sufficient balance will be eligible for this service through upay app.</span></li>\r\n<li><span style=\"font-size: 12pt;\">A customer can avail this service multiple times with the conditions of applicable local (Bangladesh) credit limit.</span></li>\r\n<li><span style=\"font-size: 12pt;\">Payment will be updated within 3 working days after bill payment. However, if the customer is charged a late fee by the bank for making a last-minute credit card bill through upay, then the customer has to contact the card-issuing bank to resolve the issue.</span></li>\r\n<li><span style=\"font-size: 12pt;\">Customer must follow the applicable payment rules of their concerned bank.</span></li>\r\n<li><span style=\"font-size: 12pt;\">Customer will be charged by upay for this credit card bill payment service as determined by upay from time to time.</span></li>\r\n<li><span style=\"font-size: 12pt;\">upay shall only be responsible for payment as a payment service provider. Visa/Mastercard will bear the sole responsibility and liability of its credit card services.</span></li>\r\n<li><span style=\"font-size: 12pt;\">upay reserves the right to change/modify/amend these terms &amp; conditions or applicable charges of bill payment service or cancel this service at any time without giving any prior notice.</span></li>\r\n<li><span style=\"font-size: 12pt;\">Any decision taken by upay in respect to this service, shall be in the sole discretion of upay and shall be deemed final.</span></li>\r\n<li><span style=\"font-size: 12pt;\">For details Terms &amp; Condition &ndash; <a href=\"https://www.upaybd.com/ProductServices/terms-and-condition-credit-and-debit-card\">https://www.upaybd.com/ProductServices/terms-and-condition-credit-and-debit-card</a></span></li>\r\n</ul>",
+     "Methods": [
+      {
+       "title": "How to pay your VISA Credit Card Bill ?",
+       "title bn": "How to pay your VISA Credit Card Bill ?",
+       "desc": "",
+       "desc bn": "",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Credit_Card_.png",
+         "image sd": "/media/dynamic_image/Credit_Card__FLmkPtI.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_kqXxy6v.png",
+         "image sd": "/media/dynamic_image/1_Df3QL6n.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_WuzBR6j.png",
+         "image sd": "/media/dynamic_image/2_ANQ9TaJ.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_chZqXKF.png",
+         "image sd": "/media/dynamic_image/3_F9MYEkT.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_EXgtqhB.png",
+         "image sd": "/media/dynamic_image/4_k6wnjUP.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_se4XTpZ.png",
+         "image sd": "/media/dynamic_image/5_CANtCKT.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_7T3wZPs.png",
+         "image sd": "/media/dynamic_image/6_4CRsIJJ.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_RRFPg26.png",
+         "image sd": "/media/dynamic_image/7_OOlTx6p.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_ibnOTw9.png",
+         "image sd": "/media/dynamic_image/8_jorUVe7.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "visa-credit-card"
+ }
+}

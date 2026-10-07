@@ -1,0 +1,328 @@
+{
+ "url": "https://www.upaybd.com/products/utility/education",
+ "api": "https://api.upaybd.com/api/v2/pages/education",
+ "data": {
+  "title_english": "Education",
+  "title_bangla": "Education",
+  "template_name": "template-d",
+  "rows": {
+   "Data": [
+    {
+     "title": "Education",
+     "title bn": "এডুকেশন",
+     "background image": "/media/dynamic_image/Destop_Education_-_Website_Cover.png",
+     "background image sd": "/media/dynamic_image/Mobile_Education_-_Website_Cover.png",
+     "desc": "<div class=\"flex max-w-full flex-col flex-grow\">\r\n<div class=\"min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words [.text-message+&amp;]:mt-5\" dir=\"auto\" data-message-author-role=\"assistant\" data-message-id=\"35a1e1fd-70b5-4f09-82c7-63319588c0b9\" data-message-model-slug=\"gpt-4o\">\r\n<div class=\"flex w-full flex-col gap-1 empty:hidden first:pt-[3px]\">\r\n<div class=\"markdown prose w-full break-words dark:prose-invert light\">\r\n<p>Managing your educational institution&rsquo;s payments is now easier than ever. Simply log in to your upay account and pay your education fees with just a few clicks, hassle-free!</p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
+     "desc bn": "<div class=\"flex max-w-full flex-col flex-grow\">\r\n<div class=\"min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal break-words [.text-message+&amp;]:mt-5\" dir=\"auto\" data-message-author-role=\"assistant\" data-message-id=\"3f92c2bf-643c-4791-8562-4614f23ab5db\" data-message-model-slug=\"gpt-4o\">\r\n<div class=\"flex w-full flex-col gap-1 empty:hidden first:pt-[3px]\">\r\n<div class=\"markdown prose w-full break-words dark:prose-invert light\">\r\n<p>এখন আপনার শিক্ষা প্রতিষ্ঠানের ফি প্রদানের কাজটি আরও সহজ! উপায় অ্যাকাউন্টে লগ ইন করে মাত্র কয়েকটি ক্লিকেই সহজে শিক্ষা ফি পরিশোধ করুন, কোনো ঝামেলা ছাড়াই!</p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
+     "bill payment list": [
+      {
+       "title": "Agricultural University College&nbsp;",
+       "title bn": "কৃষি বিশ্ববিদ্যালয় কলেজ&nbsp;",
+       "icon": "/media/dynamic_image/auc-logo.jpg",
+       "icon sd": "/media/dynamic_image/auc-logo_Rx4OyZv.jpg",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Ananda Mohan College",
+       "title bn": "আনন্দ মোহন কলেজ&nbsp;",
+       "icon": "/media/dynamic_image/Ananda_Mohan_College_Logo.png",
+       "icon sd": "/media/dynamic_image/Ananda_Mohan_College_Logo_Q8Iqz95.png",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Ali Hossain Girls High School&nbsp;",
+       "title bn": "আলী হোসেন বালিকা উচ্চ বিদ্যালয়&nbsp;",
+       "icon": "/media/dynamic_image/305276000_501074025358937_7907849108973905676_n.jpg",
+       "icon sd": "/media/dynamic_image/305276000_501074025358937_7907849108973905676_n_9Qd7kUo.jpg",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Bancharampur Govt. College&nbsp;",
+       "title bn": "বাঞ্ছারাম্পুর সরকারি কলেজ&nbsp;",
+       "icon": "/media/dynamic_image/3810_logo.jpg",
+       "icon sd": "/media/dynamic_image/3810_logo_2PhRhed.jpg",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Bhawal Badre Alam Govt. College&nbsp;",
+       "title bn": "ভাওয়াল বদরে আলম সরকারি কলেজ&nbsp;",
+       "icon": "/media/dynamic_image/images_nRtUNbm.png",
+       "icon sd": "/media/dynamic_image/images_gBWifI6.png",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Brahmanbaria Govt. College&nbsp;",
+       "title bn": "ব্রাহ্মণবাড়িয়া সরকারি কলেজ&nbsp;",
+       "icon": "/media/dynamic_image/images_1_cLoO4Ke.png",
+       "icon sd": "/media/dynamic_image/images_1_FZFadmJ.png",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Brindaban Govt. College&nbsp;",
+       "title bn": "বৃন্দাবন সরকারি কলেজ&nbsp;",
+       "icon": "/media/dynamic_image/images_2_xTru1MP.png",
+       "icon sd": "/media/dynamic_image/images_2_NWz5kvN.png",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "BTEB",
+       "title bn": "বাংলাদেশ কারিগরি শিক্ষা বোর্ড",
+       "icon": "/media/dynamic_image/accrediton-img2_9rz0c3J.png",
+       "icon sd": "/media/dynamic_image/accrediton-img2_9PWzEUt.png",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "BUET",
+       "title bn": "বুয়েট",
+       "icon": "/media/dynamic_image/BUET_LOGO.svg.png",
+       "icon sd": "/media/dynamic_image/BUET_LOGO.svg_L2j84uW.png",
+       "slug url": "/Latest-offer/education-fees-payment-through-sonali-bank"
+      },
+      {
+       "title": "BUTEX",
+       "title bn": "বুটেক্স",
+       "icon": "/media/dynamic_image/cropped-Thumb-Logo.png",
+       "icon sd": "/media/dynamic_image/cropped-Thumb-Logo_H30Vo3s.png",
+       "slug url": "/Latest-offer/education-fees-payment-through-sonali-bank"
+      },
+      {
+       "title": "Chandpur Govt. College&nbsp;",
+       "title bn": "চাঁদপুর সরকারি কলেজ&nbsp;",
+       "icon": "/media/dynamic_image/chandpur-government-college-logo-D74A5FA997-seeklogo.com.png",
+       "icon sd": "/media/dynamic_image/chandpur-government-college-logo-D74A5FA997-seeklogo.com_926D7l2.png",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Chittagong College&nbsp;",
+       "title bn": "চট্টগ্রাম কলেজ&nbsp;",
+       "icon": "/media/dynamic_image/Chittagong_College_logo.png",
+       "icon sd": "/media/dynamic_image/Chittagong_College_logo_Q6Epo8z.png",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Dania College&nbsp;",
+       "title bn": "দনিয়া কলেজ&nbsp;",
+       "icon": "/media/dynamic_image/images_3_fNUeTWU.png",
+       "icon sd": "/media/dynamic_image/images_3_72hsd7Q.png",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Dhaka College&nbsp;",
+       "title bn": "ঢাকা কলেজ&nbsp;",
+       "icon": "/media/dynamic_image/Dhaka_College_Seal.svg.png",
+       "icon sd": "/media/dynamic_image/Dhaka_College_Seal.svg_prCJ7wo.png",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Dhaka Commerce College",
+       "title bn": "ঢাকা কমার্স কলেজ",
+       "icon": "/media/dynamic_image/images.png",
+       "icon sd": "/media/dynamic_image/images_xLk345H.png",
+       "slug url": "/Latest-offer/education-fees-payment-through-sonali-bank"
+      },
+      {
+       "title": "Dhaka Residential Model College&nbsp;",
+       "title bn": "ঢাকা রেসিডেন্সিয়াল মডেল কলেজ&nbsp;",
+       "icon": "/media/dynamic_image/Logo_of_DRMC.png",
+       "icon sd": "/media/dynamic_image/Logo_of_DRMC_GLjUED4.png",
+       "slug url": "/Latest-offer/education-fees-payment-through-sonali-bank"
+      },
+      {
+       "title": "Eden Mohila College&nbsp;",
+       "title bn": "ইডেন মহিলা কলেজ&nbsp;",
+       "icon": "/media/dynamic_image/Eden_Mohila_College_Monogram.svg.png",
+       "icon sd": "/media/dynamic_image/Eden_Mohila_College_Monogram.svg_3q7KtIo.png",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Govt. Bangla College&nbsp;",
+       "title bn": "সরকারি বাঙলা কলেজ&nbsp;",
+       "icon": "/media/dynamic_image/Government_Bangla_College_Monogram.svg.png",
+       "icon sd": "/media/dynamic_image/Government_Bangla_College_Monogram.svg_tRcTgSS.png",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Govt. Debendra College&nbsp;",
+       "title bn": "সরকারি দেবেন্দ্র কলেজ&nbsp;",
+       "icon": "/media/dynamic_image/unnamed_iHvO25K.png",
+       "icon sd": "/media/dynamic_image/unnamed_gIXbvU0.png",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Govt. Haraganga College",
+       "title bn": "সরকারি হরগঙ্গা কলেজ",
+       "icon": "/media/dynamic_image/Govt-Haraganga-College.png",
+       "icon sd": "/media/dynamic_image/Govt-Haraganga-College_SpFPJ14.png",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Govt. Tolaram college",
+       "title bn": "সরকারি তোলারাম কলেজ",
+       "icon": "/media/dynamic_image/%E0%A6%B8%E0%A6%B0%E0%A6%95%E0%A6%B0_%E0%A6%A4%E0%A6%B2%E0%A6%B0%E0%A6%AE_%E0%A6%95%E0%A6%B2%E0%A6%9C%E0%A6%B0_%E0%A6%B2%E0%A6%97.jpg",
+       "icon sd": "/media/dynamic_image/%E0%A6%B8%E0%A6%B0%E0%A6%95%E0%A6%B0_%E0%A6%A4%E0%A6%B2%E0%A6%B0%E0%A6%AE_%E0%A6%95%E0%A6%B2%E0%A6%9C%E0%A6%B0_%E0%A6%B2%E0%A6%97_DC5MdSq.jpg",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Govt. Sarada Sundari Mohila College&nbsp;",
+       "title bn": "সরকারি সারদা সুন্দরী মহিলা কলেজ&nbsp;",
+       "icon": "/media/dynamic_image/images_2_1.png",
+       "icon sd": "/media/dynamic_image/images_2_1_9Ou33Ja.png",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Government Science College&nbsp;",
+       "title bn": "সরকারি বিজ্ঞান কলেজ&nbsp;",
+       "icon": "/media/dynamic_image/GOVT._SCIENCE_COLLEGE_DHAKA_LOGO.png",
+       "icon sd": "/media/dynamic_image/GOVT._SCIENCE_COLLEGE_DHAKA_LOGO_Ti3F8ZV.png",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Govt. Shaheed Suhrawardy College&nbsp;",
+       "title bn": "সরকারি শহীদ সোহরাওয়ারদি কলেজ",
+       "icon": "/media/dynamic_image/Government_Shaheed_Suhrawardy_College_Monogram.svg.png",
+       "icon sd": "/media/dynamic_image/Government_Shaheed_Suhrawardy_College_Monogram.svg_dVBCw8i.png",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Habiganj Govt Mohila College",
+       "title bn": "হবিগঞ্জ সরকারি মহিলা কলেজ",
+       "icon": "/media/dynamic_image/Habiganj_Govt_Mohila_College.png",
+       "icon sd": "/media/dynamic_image/Habiganj_Govt_Mohila_College_bEluCG7.png",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "HSC",
+       "title bn": "এইচ,এস,সি",
+       "icon": "/media/dynamic_image/Board_of_Intermediate_and_Secondary_Education_Dhaka_Monogram.svg.png",
+       "icon sd": "/media/dynamic_image/Board_of_Intermediate_and_Secondary_Education_Dhaka_Monogram.svg_Fxem3C3.png",
+       "slug url": "/Latest-offer/education-fees-payment-through-sonali-bank"
+      },
+      {
+       "title": "IIUC",
+       "title bn": "আইআইইউসি",
+       "icon": "/media/dynamic_image/IIUC.png",
+       "icon sd": "/media/dynamic_image/IIUC_U0jC3KH.png",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Jatiyo Kabi Kazi Nazrul <br />Islam University",
+       "title bn": "জাতীয় কবি কাজী নজরুল <br />ইসলাম বিশ্ববিদ্যালয়",
+       "icon": "/media/dynamic_image/Jatiya_Kabi_Kazi_Nazrul_Islam_University_Logo.png",
+       "icon sd": "/media/dynamic_image/Jatiya_Kabi_Kazi_Nazrul_Islam_University_Logo_jrrSodA.png",
+       "slug url": "/Latest-offer/education-fees-payment-through-sonali-bank"
+      },
+      {
+       "title": "Madan Mohan College",
+       "title bn": "মদন মোহন কলেজ",
+       "icon": "/media/dynamic_image/Madan_Mohan_College.jpeg",
+       "icon sd": "/media/dynamic_image/Madan_Mohan_College_1R7SMAK.jpeg",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Mirpur Cantonment Public School and College",
+       "title bn": "মিরপুর ক্যান্টনমেন্ট পাবলিক স্কুল অ্যান্ড কলেজ",
+       "icon": "/media/dynamic_image/Mirpur_Cantonment_Public_School_and_College.jpeg",
+       "icon sd": "/media/dynamic_image/Mirpur_Cantonment_Public_School_and_College_HyT9xZM.jpeg",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Motijheel Model School &amp; College",
+       "title bn": "মতিঝিল মডেল স্কুল ও কলেজ",
+       "icon": "/media/dynamic_image/images_4.png",
+       "icon sd": "/media/dynamic_image/images_4_WIdG5Rn.png",
+       "slug url": "/Latest-offer/education-fees-payment-through-sonali-bank"
+      },
+      {
+       "title": "National University",
+       "title bn": "জাতীয় বিশ্ববিদ্যালয়",
+       "icon": "/media/dynamic_image/images_1.png",
+       "icon sd": "/media/dynamic_image/images_1_bkUZklw.png",
+       "slug url": "/Latest-offer/education-fees-payment-through-sonali-bank"
+      },
+      {
+       "title": "Netrakona Government College",
+       "title bn": "নেত্রকোনা সরকারি কলেজ",
+       "icon": "/media/dynamic_image/Netrakona_Government_College.jpeg",
+       "icon sd": "/media/dynamic_image/Netrakona_Government_College_PYBbBCL.jpeg",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Police Lines Adarsha High School, Tangail",
+       "title bn": "পুলিশ লাইনস আদর্শ উচ্চ বিদ্যালয়, টাঙ্গাইল",
+       "icon": "/media/dynamic_image/Police_Lines_Adarsha_High_School_Tangail.jpeg",
+       "icon sd": "/media/dynamic_image/Police_Lines_Adarsha_High_School_Tangail_CuMBUd8.jpeg",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Rajbari Government College",
+       "title bn": "রাজবাড়ী সরকারি কলেজ",
+       "icon": "/media/dynamic_image/Rajbari_Government_College.jpeg",
+       "icon sd": "/media/dynamic_image/Rajbari_Government_College_vpxoM1m.jpeg",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Sondah Nondolalpur Secondary School",
+       "title bn": "সোন্দাহ নন্দলালপুর মাধ্যমিক বিদ্যালয়",
+       "icon": "/media/dynamic_image/Sondah_Nondolalpur_Secondary_School.png",
+       "icon sd": "/media/dynamic_image/Sondah_Nondolalpur_Secondary_School_kWNM702.png",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "Sultanpur Mahtabia Secondary School",
+       "title bn": "সুলতানপুর মাহতাবিয়া মাধ্যমিক বিদ্যালয়",
+       "icon": "/media/dynamic_image/Sultanpur_Mahtabia_Secondary_School.png",
+       "icon sd": "/media/dynamic_image/Sultanpur_Mahtabia_Secondary_School_yfURW3e.png",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      },
+      {
+       "title": "SUST ePayment",
+       "title bn": "শাহজালাল বিজ্ঞান ও প্রযুক্তি <br />বিশ্ববিদ্যালয় ePayment",
+       "icon": "/media/dynamic_image/shahjalal-university-of-science-and-technology-logo-F34BC01F81-seeklogo.com.png",
+       "icon sd": "/media/dynamic_image/shahjalal-university-of-science-and-technology-logo-F34BC01F81-seeklogo.co_AxoxNwE.png",
+       "slug url": "/Latest-offer/education-fees-payment-through-sonali-bank"
+      },
+      {
+       "title": "University Laboratory School &amp; College&nbsp;",
+       "title bn": "ইউনিভার্সিটি ল্যাবরেটরি স্কুল এন্ড কলেজ&nbsp;",
+       "icon": "/media/dynamic_image/ulscdu_logo.png",
+       "icon sd": "/media/dynamic_image/ulscdu_logo_UiR5zP9.png",
+       "slug url": "/Latest-offer/education-fees-payment-through-sonali-bank"
+      },
+      {
+       "title": "Viqarunnisa Noon School &amp; College",
+       "title bn": "ভিকারুন্নিসা নুন স্কুল ও কলেজ&nbsp;",
+       "icon": "/media/dynamic_image/vnsc_logo.png",
+       "icon sd": "/media/dynamic_image/vnsc_logo_TwGdU8c.png",
+       "slug url": "/Latest-offer/education-fees-payment-through-sonali-bank"
+      },
+      {
+       "title": "24th BCS Forum",
+       "title bn": "২৪তম বিসিএস ফোরাম",
+       "icon": "/media/dynamic_image/24th_BCS_Forum.png",
+       "icon sd": "/media/dynamic_image/24th_BCS_Forum_jEVOjxe.png",
+       "slug url": "/Latest-offer/education-fees-through-app"
+      }
+     ],
+     "Other Service": [
+      {
+       "title": "Electricity",
+       "title bn": "বিদ্যুৎ",
+       "slug url": "/products/utility/electricity-bill"
+      },
+      {
+       "title": "Gas",
+       "title bn": "গ্যাস",
+       "slug url": "/products/utility/Gas"
+      },
+      {
+       "title": "Mobile Recharge",
+       "title bn": "মোবাইল রিচার্জ&nbsp;",
+       "slug url": "/services/details/mobile-recharge"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "education"
+ }
+}

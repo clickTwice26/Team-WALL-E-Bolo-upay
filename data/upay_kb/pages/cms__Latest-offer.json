@@ -1,0 +1,162 @@
+{
+ "url": "https://www.upaybd.com/Latest-offer",
+ "api": "https://api.upaybd.com/api/v2/pages/Latest-offer",
+ "data": {
+  "title_english": "Latest offer",
+  "title_bangla": "সর্বশেষ অফার",
+  "template_name": "latest-offers",
+  "rows": {
+   "Data": [
+    {
+     "title": "Latest Offer",
+     "title bn": "নতুন অফার",
+     "cover image": "/media/dynamic_image/Latest_Offer_desktop_1.jpg",
+     "cover image sd": "/media/dynamic_image/Latest_Offer_mobile_sYrUwQa.jpg",
+     "desc": "Check out all the best offers for you in order to enjoy a more convenient and better lifestyle",
+     "desc bn": "জীবনকে আরো স্বাচ্ছন্দময় এবং সহজ করতে বেছে নিন সেরা অফারটি।&nbsp;",
+     "Options": [
+      {
+       "titile": "Cash Reward",
+       "title bn": "ক্যাশ রিওয়ার্ড&nbsp;"
+      },
+      {
+       "titile": "Mobile Recharge",
+       "title bn": "মোবাইল রিচার্জ"
+      },
+      {
+       "titile": "Prepaid Card",
+       "title bn": "প্রিপেইড কার্ড"
+      },
+      {
+       "titile": "Registration",
+       "title bn": "রেজিস্ট্রেশন"
+      }
+     ],
+     "canvas": [
+      {
+       "title": "Up to 200 Taka Cash Reward on Self Registration!",
+       "title bn": "সেলফ রেজিস্ট্রেশনে ২০০ টাকা পর্যন্ত ক্যাশ রিওয়ার্ড",
+       "desc": "Download উপায় App Now &amp; Enjoy Exciting Cash Reward Upon Self-Registration, Cash In/ Add Money, Mobile Recharge, Bill Payment &amp; Many More.",
+       "desc bn": "<span style=\"font-size: 12pt;\">ডাউনলোড করুন উপায় অ্যাপ।&nbsp; সেলফ রেজিস্ট্রেশন করার সাথে ক্যাশ ইন / অ্যাড মানি, মোবাইল রিচার্জ এবং বিল পে করলেই পাবেন ক্যাশ রিওয়ার্ড।&nbsp;</span>",
+       "image": "/media/dynamic_image/upay-self-reg-200-Adaptations-Web-Banner-With-Logo-v3_oxZ6siP.jpg",
+       "image sd": "/media/dynamic_image/upay-self-reg-200-Adaptations-Web-Banner-With-Logo-v3_SGamJKo.jpg",
+       "option": "Registration",
+       "slug url": "/Latest-offer/customer-self-registration-campaign"
+      },
+      {
+       "title": "উপায়&nbsp;NPSB: Easy, Convenient &amp; Cost-Effective Money Transfer",
+       "title bn": "উপায় NPSB: সহজ, সুবিধাজনক ও সাশ্রয়ী মানি ট্রান্সফার",
+       "desc": "Customers will be able to Fund Transfer and Add Money via NPSB channel.",
+       "desc bn": "গ্রাহক NPSB চ্যানেলের মাধ্যমে <strong data-start=\"32\" data-end=\"65\">ফান্ড ট্রান্সফার ও অ্যাড মানি</strong> করতে পারবেন।",
+       "image": "/media/dynamic_image/Website_Banner_Desktop_kv-003-1440_x_680_2_W0r6qf9.jpg",
+       "image sd": "/media/dynamic_image/Website_Banner_Desktop_kv-003-1440_x_680_2_9FGQYzL.jpg",
+       "option": "",
+       "slug url": "/Latest-offer/npsb-interoperability"
+      },
+      {
+       "title": "Enjoy Attractive Discounts on Travel Bookings with উপায়&nbsp;&amp; goZayaan!",
+       "title bn": "উপায় ও goZayaan-এর সঙ্গে ট্রাভেল বুকিংয়ে উপভোগ করুন আকর্ষণীয় ডিসকাউন্ট!",
+       "desc": "Visit gozayaan (app or website) and select your preferred flight, hotel, or resort package.",
+       "desc bn": "goZayaan-এর অ্যাপ অথবা ওয়েবসাইটে প্রবেশ করে আপনার পছন্দের ফ্লাইট, হোটেল অথবা রিসোর্ট প্যাকেজ নির্বাচন করুন।",
+       "image": "/media/dynamic_image/gozayan_Promotional_Campaign_Website_Desktop_SrTq6Jy.jpg",
+       "image sd": "/media/dynamic_image/gozayan_Promotional_Campaign_Website_Desktop_r67NVBz.jpg",
+       "option": "Cash Reward",
+       "slug url": "/Latest-offer/gozayaan-discount"
+      },
+      {
+       "title": "Get 10% Cash Reward on Jatrabari-Gulistan Flyover Toll Payments with উপায়&nbsp;",
+       "title bn": "উপায়-এর মাধ্যমে যাত্রাবাড়ী&ndash;গুলিস্তান ফ্লাইওভারের টোল পরিশোধে পান ১০% ক্যাশ রিওয়ার্ড।",
+       "desc": "Enjoy up to BDT 75 Cash Reward per transaction.",
+       "desc bn": "প্রতি ট্রানজেকশনে সর্বোচ্চ&nbsp;<strong data-start=\"282\" data-end=\"293\">৭৫ টাকা</strong>&nbsp;পর্যন্ত ক্যাশ রিওয়ার্ড উপভোগ করুন।",
+       "image": "/media/dynamic_image/UPAY_Web_Banner-Desktop_1440x680_6_Aujz6II.png",
+       "image sd": "/media/dynamic_image/UPAY_Web_Banner-Desktop_1440x680_6_0oQT6Pp.png",
+       "option": "Cash Reward",
+       "slug url": "/Latest-offer/jatrabari-gulistan-flyover-toll-payment"
+      },
+      {
+       "title": "Unlimited Cashback on Mobile Recharge with উপায়!",
+       "title bn": "<p>উপায় থেকে মোবাইল রিচার্জে&nbsp; আনলিমিটেড ক্যাশব্যাক!</p>",
+       "desc": "Enjoy Unlimited Cashback upon Purchasing Specific Packs of Robi from উপায়",
+       "desc bn": "<p>উপায় থেকে রবিতে&nbsp; নিদিষ্ট প্যাক রিচার্জ পাচ্ছেন আনলিমিটেড ক্যাশব্যাক!</p>",
+       "image": "/media/dynamic_image/Robi_Website_Desktop1.jpg",
+       "image sd": "/media/dynamic_image/Robi_Website_Desktop1_206GBsc.jpg",
+       "option": "Mobile Recharge",
+       "slug url": "/Latest-offer/unlimited-cash-reward-for-robi-airtel"
+      },
+      {
+       "title": "Unlimited Cashback on Recharging any Cirkle number with উপায়!",
+       "title bn": "উপায় থেকে যেকোন Cirkle নম্বরে মোবাইল রিচার্জে আনলিমিটেড ক্যাশব্যাক!",
+       "desc": "Enjoy unlimited Cashback upon recharge of specific packs of Cirkle from upay app or by dialing *268#.",
+       "desc bn": "উপায় অ্যাপ অথবা *২৬৮# ডায়াল করে Cirkle নম্বরে নির্দিষ্ট প্যাক রিচার্জ করে উপভোগ করুন আনলিমিটেড ক্যাশব্যাক!",
+       "image": "/media/dynamic_image/Cirkle_Website_Desktop_Mbr7ZHy.jpg",
+       "image sd": "/media/dynamic_image/Cirkle_Website_Desktop_agk8KJn.jpg",
+       "option": "Mobile Recharge",
+       "slug url": "/Latest-offer/unlimited-cash-reward-cirkle"
+      },
+      {
+       "title": "Unlimited Cashback on Recharging any Grameenphone number with উপায়!",
+       "title bn": "উপায় থেকে যেকোন গ্রামীনফোন&nbsp;নম্বরে মোবাইল রিচার্জে আনলিমিটেড ক্যাশব্যাক!",
+       "desc": "Enjoy unlimited Cashback upon recharge of specific packs of Grameenphone from upay app or by dialing *268#",
+       "desc bn": "উপায় অ্যাপ অথবা *২৬৮# ডায়াল করে গ্রামীনফোন&nbsp;নম্বরে নির্দিষ্ট প্যাক রিচার্জ করে উপভোগ করুন আনলিমিটেড ক্যাশব্যাক!",
+       "image": "/media/dynamic_image/gp_august_phase_4_Website_Desktop_um9IzD1.jpg",
+       "image sd": "/media/dynamic_image/gp_august_phase_4_Website_Desktop_MtFbOmQ.jpg",
+       "option": "Mobile Recharge",
+       "slug url": "/Latest-offer/grameenphone-unlimited-cash-reward"
+      },
+      {
+       "title": "Save up to 30% on healthcare costs at Omnicare!",
+       "title bn": "ওমনিকেয়ারে স্বাস্থ্যসেবায় সর্বোচ্চ ৩০% পর্যন্ত ছাড়!",
+       "desc": "Get access to up to 30% discount on a wide range of diagnostic and medical services at Omnicare Diagnostic Center",
+       "desc bn": "শুধুমাত্র উপায় কার্ডধারীদের জন্য বিশেষ সুবিধা",
+       "image": "/media/dynamic_image/UPAY_Web_Banner-Desk_1440x680_PREPAID_CARD_OFFER_-_OMNICARE_69z09cF.png",
+       "image sd": "/media/dynamic_image/UPAY_Web_Banner-Desk_1440x680_PREPAID_CARD_OFFER_-_OMNICARE_SCL0GSC.png",
+       "option": "Prepaid Card",
+       "slug url": "/Latest-offer/prepaid-card-omnicare"
+      },
+      {
+       "title": "Enjoy up to 50% discount on service charge at your favorite automobile workshops",
+       "title bn": "আপনার পছন্দের অটোমোবাইল ওয়ার্কশপে সার্ভিস চার্জে সর্বোচ্চ ৫০% পর্যন্ত ডিসকাউন্ট উপভোগ করুন",
+       "desc": "Unlock exclusive discounts on car services at top automobile workshops with your UCB upay Co-Branded Prepaid Card",
+       "desc bn": "নির্বাচিত অটোমোবাইল ওয়ার্কশপে গাড়ির সার্ভিস করালে ক্যাম্পেইন চলাকালীন সময়ে সার্ভিস চার্জে ৫০% পর্যন্ত ডিসকাউন্ট পান।",
+       "image": "/media/dynamic_image/UPAY_AUTO-MOBILE-SERVICE_WQ3vIRL.png",
+       "image sd": "/media/dynamic_image/UPAY_AUTO-MOBILE-SERVICE_z3QLhCy.png",
+       "option": "Prepaid Card",
+       "slug url": "/Latest-offer/prepaid-card-automobile-service"
+      },
+      {
+       "title": "উপায় Card: Your Healthcare Discount Partner!",
+       "title bn": "উপায় কার্ড: আপনার হেলথকেয়ার ডিসকাউন্ট পার্টনার!",
+       "desc": "Enjoy Savings Up to 50% on Various Medical Services with Your উপায় Card, Both in Bangladesh &amp; Internationally.",
+       "desc bn": "<p style=\"background: white;\"><span lang=\"BN\" style=\"font-family: 'Nirmala UI',sans-serif; color: #242424;\">এখন</span><span style=\"font-family: 'Aptos',sans-serif; color: #242424;\">&nbsp;</span><span lang=\"BN\" style=\"font-family: 'Nirmala UI',sans-serif; color: #242424;\">আপনার</span><span style=\"font-family: 'Aptos',sans-serif; color: #242424;\"> </span><span lang=\"BN\" style=\"font-family: 'Nirmala UI',sans-serif; color: #242424;\">উপায়</span><span style=\"font-family: 'Aptos',sans-serif; color: #242424;\"> </span><span lang=\"BN\" style=\"font-family: 'Nirmala UI',sans-serif; color: #242424;\">কার্ডে</span><span style=\"font-family: 'Aptos',sans-serif; color: #242424;\">&nbsp;</span><span lang=\"BN\" style=\"font-family: 'Nirmala UI',sans-serif; color: #242424;\">পেমেন্ট</span><span style=\"font-family: 'Aptos',sans-serif; color: #242424;\">&nbsp;</span><span lang=\"BN\" style=\"font-family: 'Nirmala UI',sans-serif; color: #242424;\">করলেই</span><span style=\"font-family: 'Aptos',sans-serif; color: #242424;\">&nbsp;</span><span lang=\"BN\" style=\"font-family: 'Nirmala UI',sans-serif; color: #242424;\">চিকিৎসাসেবায়</span><span style=\"font-family: 'Aptos',sans-serif; color: #242424;\">&nbsp;</span><span lang=\"BN\" style=\"font-family: 'Nirmala UI',sans-serif; color: #242424;\">পাবেন</span><span style=\"font-family: 'Aptos',sans-serif; color: #242424;\">&nbsp;</span><span lang=\"BN\" style=\"font-family: 'Nirmala UI',sans-serif; color: #242424;\">৫০</span><span style=\"font-family: 'Aptos',sans-serif; color: #242424;\">% </span><span lang=\"BN\" style=\"font-family: 'Nirmala UI',sans-serif; color: #242424;\">পর্যন্ত</span><span style=\"font-family: 'Aptos',sans-serif; color: #242424;\">&nbsp;</span><span lang=\"BN\" style=\"font-family: 'Nirmala UI',sans-serif; color: #242424;\">ডিসকাউন্ট।</span></p>",
+       "image": "/media/dynamic_image/UPAY_Medical-Expense_Website-Banner-1440X680_Nf6U5mJ_eDaBhab.jpg",
+       "image sd": "/media/dynamic_image/UPAY_Medical-Expense_Website-Banner-1440X680_Nf6U5mJ_DNv01xJ.jpg",
+       "option": "Prepaid Card",
+       "slug url": "/Latest-offer/prepaid-card-medical-services-offer"
+      },
+      {
+       "title": "উপায় Brings First Ever MFS Prepaid Card!",
+       "title bn": "উপায় নিয়ে এলো দেশের প্রথম এমএফএস&nbsp; প্রিপেইড কার্ড!",
+       "desc": "For the First Time Ever, উপায় Brings MFS Prepaid Card with United Commercial Bank PLC.",
+       "desc bn": "দেশে-বিদেশে লেনদেনের স্বাধীনতা দিতে উপায় নিয়ে এলো দেশের প্রথম এমএফএস&nbsp; প্রিপেইড কার্ড!",
+       "image": "/media/dynamic_image/Website_Desktop_PrePaid-Card-KV_QGzvFms.jpg",
+       "image sd": "/media/dynamic_image/Website_Desktop_PrePaid-Card-KV_5pfu8l2.jpg",
+       "option": "Prepaid Card",
+       "slug url": "/Latest-offer/ucb-upay-prepaid-card"
+      },
+      {
+       "title": "Pay your utility bills without any extra charge through উপায়",
+       "title bn": "এখন উপায়-এর মাধ্যমে কোনো চার্জ ছাড়াই আপনার ইউটিলিটি বিল পরিশোধ করুন",
+       "desc": "You can pay up to 5 utility bills every month through উপায় absolutely free.",
+       "desc bn": "প্রতি মাসে সর্বোচ্চ ৫টি ইউটিলিটি বিল উপায়-এর মাধ্যমে পরিশোধ করুন কোনো চার্জ ছাড়াই",
+       "image": "/media/dynamic_image/Utility_Bill_payment_Website_banner_Desktop_2500X11811400x680_ZHdGAEP.jpg",
+       "image sd": "/media/dynamic_image/Utility_Bill_payment_Website_banner_Desktop_2500X11811400x680_Bu8C5zi.jpg",
+       "option": "",
+       "slug url": "/Latest-offer/utility-bill-payment-updated"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "Latest-offer"
+ }
+}

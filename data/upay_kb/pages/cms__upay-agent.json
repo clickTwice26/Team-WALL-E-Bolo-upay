@@ -1,0 +1,129 @@
+{
+ "url": "https://www.upaybd.com/services/details/upay-agent",
+ "api": "https://api.upaybd.com/api/v2/pages/upay-agent",
+ "data": {
+  "title_english": "upay agent",
+  "title_bangla": "upay agent",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "upay Agent",
+     "title bn": "উপায় এজেন্ট",
+     "background image": "/media/dynamic_image/Rates_and_Charges_desktop_1_stD4fjk.jpg",
+     "background image sd": "/media/dynamic_image/Rates_and_Charges_mobile_QM74iMU.jpg",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<div style=\"text-align: center;\">Visit your nearest উপায় (upay) agent, and Cash Out anytime using your upay App Or simply dial *268#. upay has brought the lowest cash out charge for you, for both app and *268#.&nbsp;<br /><br /></div>\r\n<table style=\"border-collapse: collapse; width: 93.1823%; border-color: #000000; border-style: solid; height: 90px;\" border=\"1\">\r\n<tbody>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 54.8532%; height: 18px; text-align: center;\"><span style=\"color: #236fa1;\"><strong>Category (App and *268#)</strong></span></td>\r\n<td style=\"width: 42.1961%; height: 18px; text-align: center;\"><span style=\"color: #236fa1;\"><strong>Service Charge (VAT inclusive)</strong></span></td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 54.8532%; height: 18px; text-align: center;\">Primary Wallet</td>\r\n<td style=\"width: 42.1961%; height: 18px; text-align: center;\">1.4%</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 54.8532%; height: 18px; text-align: center;\">Disbursement Wallet</td>\r\n<td style=\"width: 42.1961%; height: 18px; text-align: center;\">0.7%</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 54.8532%; height: 18px; text-align: center;\">Salary Wallet</td>\r\n<td style=\"width: 42.1961%; height: 18px; text-align: center;\">1%</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 54.8532%; height: 18px; text-align: center;\">Remittance Wallet</td>\r\n<td style=\"width: 42.1961%; height: 18px; text-align: center;\">1%</td>\r\n</tr>\r\n</tbody>\r\n</table>",
+     "desc bn": "কাছের উপায় এজেন্ট পয়েন্ট ভিজিট করুন, এবং ক্যাশ আউট করুন খুব সহজেই। উপায় অ্যাপ অথবা *২৬৮# ডায়াল করে সব চেয়ে কম চার্জ দিয়ে ক্যাশ আউট করুন।&nbsp; &nbsp;&nbsp;<br /><br />\r\n<table style=\"border-collapse: collapse; width: 93.1823%; border-color: #000000; border-style: solid; height: 90px;\" border=\"1\">\r\n<tbody>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 54.8532%; height: 18px; text-align: center;\"><span style=\"color: #236fa1;\"><strong>ক্যাটাগরি (অ্যাপ অথবা *২৬৮#)</strong></span></td>\r\n<td style=\"width: 42.1961%; height: 18px; text-align: center;\"><span style=\"color: #236fa1;\"><strong>সার্ভিস চার্জ (VAT সহ)</strong></span></td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 54.8532%; height: 18px; text-align: center;\">প্রাইমারি ওয়ালেট&nbsp;</td>\r\n<td style=\"width: 42.1961%; height: 18px; text-align: center;\">১.৪%</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 54.8532%; height: 18px; text-align: center;\">ডিসবার্সমেন্ট ওয়ালেট</td>\r\n<td style=\"width: 42.1961%; height: 18px; text-align: center;\">০.৭%</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 54.8532%; height: 18px; text-align: center;\">স্যালারি ওয়ালেট&nbsp;</td>\r\n<td style=\"width: 42.1961%; height: 18px; text-align: center;\">১%</td>\r\n</tr>\r\n<tr style=\"height: 18px;\">\r\n<td style=\"width: 54.8532%; height: 18px; text-align: center;\">রেমিট্যান্স ওয়ালেট&nbsp;</td>\r\n<td style=\"width: 42.1961%; height: 18px; text-align: center;\">১%</td>\r\n</tr>\r\n</tbody>\r\n</table>",
+     "Methods": [
+      {
+       "title": "How to cash out through upay agent?",
+       "title bn": "উপায় এজেন্ট এর মাধ্যমে কিভাবে ক্যাশআউট করবেন ?&nbsp;&nbsp;",
+       "desc": "Simply follow the below steps to Cash Out easily through upay agent",
+       "desc bn": "সহজেই ক্যাশআউট করার নিয়ম দেখুন নিম্নে:&nbsp;&nbsp;",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-32_9bTJduk.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-32_ZWyXYgq.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-33_UeXt7lR.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-33_KqTfd4e.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-34.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-34_a3xl763.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-37_pO8vZhv.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-37_2pzfWws.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-46_78NwF6U.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-46_JLI5aDB.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard_9_copy_55_2.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-55_XsMLJWI.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_macXByG.png",
+         "image sd": "/media/dynamic_image/1_83NrdRn.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_07KnOvL.png",
+         "image sd": "/media/dynamic_image/2_qw3PCnr.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_PzmIjA3.png",
+         "image sd": "/media/dynamic_image/3_FdSYXbZ.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_ottCIYW.png",
+         "image sd": "/media/dynamic_image/4_j6M6FvJ.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_g6p5JCi.png",
+         "image sd": "/media/dynamic_image/5_jY91pF7.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_ATvO3eb.png",
+         "image sd": "/media/dynamic_image/6_D68efmw.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "Lorem Ipsum",
+       "title bn": "Lorem Ipsum",
+       "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
+       "desc bn": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
+       "Tutorial": [
+        {
+         "title": "Lorem Ipsum ",
+         "title bn": "Lorem Ipsum",
+         "desc": "Lorem Ipsum",
+         "desc bn": "Lorem Ipsum",
+         "thumb image": "/media/dynamic_image/0_zMcmmOU.png",
+         "thumb image sd": "/media/dynamic_image/0_Y0JWKdR.png",
+         "video": "/media/dynamic_video/Small_short_test_video_dWW4boP.mp4",
+         "current video tutorial": "true"
+        },
+        {
+         "title": "Lorem Ipsum",
+         "title bn": "Lorem Ipsum",
+         "desc": "Lorem Ipsum",
+         "desc bn": "Lorem Ipsum",
+         "thumb image": "/media/dynamic_image/0_m9GWzYX.png",
+         "thumb image sd": "/media/dynamic_image/0_RbRE0pV.png",
+         "video": "/media/dynamic_video/Small_short_test_video_9R3PYJ5.mp4",
+         "current video tutorial": "false"
+        },
+        {
+         "title": "Lorem Ipsum",
+         "title bn": "Lorem Ipsum",
+         "desc": "Lorem Ipsum",
+         "desc bn": "Lorem Ipsum",
+         "thumb image": "/media/dynamic_image/0_Ob0zE9Y.png",
+         "thumb image sd": "/media/dynamic_image/0_U6tOnOc.png",
+         "video": "/media/dynamic_video/tea.mp4",
+         "current video tutorial": "false"
+        }
+       ]
+      }
+     ],
+     "Navigation": [
+      {
+       "slug url": "/nav/Navigation"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "upay-agent"
+ }
+}

@@ -1,0 +1,88 @@
+{
+ "url": "https://www.upaybd.com/services/details/visa-debit-card",
+ "api": "https://api.upaybd.com/api/v2/pages/visa-debit-card",
+ "data": {
+  "title_english": "VISA Debit Card",
+  "title_bangla": "VISA Debit Card",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "VISA Debit Card",
+     "title bn": "VISA Debit Card",
+     "background image": "/media/dynamic_image/Cash_In_desktop_4oSoEn6_11v8xHk_NoN8tOg.jpg",
+     "background image sd": "/media/dynamic_image/Cash_In_mobile_X5JdPEu_GuJgbu0_bdtxV3c.jpg",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<span style=\"font-size: 12pt;\"><span style=\"font-size: 12pt;\"><br /><br />উপায় users will be able to transfer fund from upay to any bank using his/her VISA debit card issued by commercial banks operating in Bangladesh. The service is available from উপায় customer app only.<br /><br />The applicable Limits and Frequency for VISA Debit Card transfer are given below:<br /><br /></span></span>\r\n<table style=\"border-collapse: collapse; width: 99.718%; height: 169px;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 31.2986%; text-align: center; vertical-align: middle;\" colspan=\"2\"><span style=\"font-size: 12pt;\"><strong>Per Transaction Limit (Amount in BDT)</strong></span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">Minimum</span></td>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">Maximum</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">10</span></td>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">50,000</span></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<span style=\"font-size: 12pt;\"><span style=\"font-size: 12pt;\"><br /></span></span>\r\n<table style=\"border-collapse: collapse; width: 99.718%; height: 169px;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 31.2986%; text-align: center; vertical-align: middle;\" colspan=\"2\"><span style=\"font-size: 12pt;\"><strong>Daily Transaction Limit (Amount in BDT)</strong></span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">Count</span></td>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">Amount</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">50</span></td>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">50,000</span></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<span style=\"font-size: 12pt;\"><span style=\"font-size: 12pt;\"><br /></span></span>\r\n<table style=\"border-collapse: collapse; width: 99.718%; height: 169px;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 31.3044%; text-align: center; vertical-align: middle;\" colspan=\"2\"><span style=\"font-size: 12pt;\"><strong>Monthly Transaction Limit (Amount in BDT)</strong></span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">Count</span></td>\r\n<td style=\"width: 15.6551%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">Amount</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">100</span></td>\r\n<td style=\"width: 15.6551%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">300,000</span></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<span style=\"font-size: 12pt;\"><span style=\"font-size: 12pt;\"><br /><br /><strong>Terms and Conditions:</strong><br /><br /></span></span>\r\n<ul>\r\n<li><span style=\"font-size: 12pt;\">Customers will be charged 1% of total bill amount by উপায়.</span></li>\r\n<li><span style=\"font-size: 12pt;\">Only active (full profile) customers with sufficient balance will be eligible for this service through উপায় app.</span></li>\r\n<li><span style=\"font-size: 12pt;\">A customer can avail this service multiple times with the conditions of applicable MFS to Bank Transfer limit applicable by Bangladesh Bank.</span></li>\r\n<li><span style=\"font-size: 12pt;\">Customer will be charged by উপায় for this service as determined by উপায় from time to time.</span></li>\r\n<li><span style=\"font-size: 12pt;\">Customer is required to insert the Debit Card information correctly to transfer money from their upay account to VISA Debit Card(s).</span></li>\r\n<li><span style=\"font-size: 12pt;\">upay shall not be liable if the transfer of money fails or the money is transferred to an unintended card due to incorrect information provided by the customer.</span></li>\r\n<li><span style=\"font-size: 12pt;\">upay shall not be liable for any rejected &lsquo;Fund Transfer&rsquo; by the system for the mistake/non-compliance activities by the customer</span></li>\r\n<li><span style=\"font-size: 12pt;\">upay shall not be liable for any delay by the concerned Bank to credit customer&rsquo;s selected card.</span></li>\r\n<li><span style=\"font-size: 12pt;\">Visa will bear the sole liability of its debit card fund transfer service. upay shall only take the responsibility since upay is a payment service provider only.</span></li>\r\n<li><span style=\"font-size: 12pt;\">upay reserves the right to change/modify/amend these terms &amp; conditions or applicable charges or cancel this service at any time without giving any prior notice.</span></li>\r\n<li><span style=\"font-size: 12pt;\">Any decision taken by upay in respect to this service, shall be in the sole discretion of upay and shall be deemed final.</span></li>\r\n<li><span style=\"font-size: 12pt;\">For details Terms &amp; Condition &ndash; <a href=\"https://www.upaybd.com/ProductServices/terms-and-condition-credit-and-debit-card\">https://www.upaybd.com/ProductServices/terms-and-condition-credit-and-debit-card</a></span></li>\r\n</ul>\r\n<span style=\"font-size: 12pt;\"><br /></span>",
+     "desc bn": "<br /><span style=\"font-size: 12pt;\"><span style=\"font-size: 12pt;\"><br /></span></span>\r\n<p><span style=\"font-size: 12pt;\">উপায় ব্যবহারকারীরা বাংলাদেশের বাণিজ্যিক ব্যাংকগুলোর দ্বারা জারি করা VISA ডেবিট কার্ড ব্যবহার করে উপায় থেকে যেকোনো ব্যাংকে ফান্ড স্থানান্তর করতে পারবেন। এই সেবা শুধুমাত্র উপায় গ্রাহক অ্যাপের মাধ্যমে উপলব্ধ।</span></p>\r\n<p><span style=\"font-size: 12pt;\">VISA ডেবিট কার্ড স্থানান্তরের জন্য প্রযোজ্য সীমা এবং ফ্রিকোয়েন্সি নিচে দেওয়া হলো:</span></p>\r\n<span style=\"font-size: 12pt;\"><br /><br /></span>\r\n<table style=\"border-collapse: collapse; width: 99.718%; height: 169px;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 31.2986%; text-align: center; vertical-align: middle;\" colspan=\"2\"><span style=\"font-size: 12pt;\">প্রতিটি লেনদেনের লিমিট (পরিমাণ BDT-এ):</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">ন্যূনতম</span></td>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\">সর্বোচ্চ</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\">১০</td>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">৫০,০০০</span></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<span style=\"font-size: 12pt;\"><br /></span>\r\n<table style=\"border-collapse: collapse; width: 99.718%; height: 169px;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 31.2986%; text-align: center; vertical-align: middle;\" colspan=\"2\"><span style=\"font-size: 12pt;\">দৈনিক লেনদেনের লিমিট (পরিমাণ BDT-এ):</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">সংখ্যা</span></td>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">পরিমাণ</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\">৫০</td>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">৫০,০০০</span></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<span style=\"font-size: 12pt;\"><br /></span>\r\n<table style=\"border-collapse: collapse; width: 99.718%; height: 169px;\" border=\"1\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 31.3044%; text-align: center; vertical-align: middle;\" colspan=\"2\"><span style=\"font-size: 12pt;\">মাসিক লেনদেনের লিমিট (পরিমাণ BDT-এ):</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\">সংখ্যা</td>\r\n<td style=\"width: 15.6551%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">পরিমাণ</span></td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 15.6493%; text-align: center; vertical-align: middle;\">১০০</td>\r\n<td style=\"width: 15.6551%; text-align: center; vertical-align: middle;\"><span style=\"font-size: 12pt;\">৩০০,০০০</span></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<span style=\"font-size: 12pt;\"><span style=\"font-size: 12pt;\"><br /><br /></span></span>\r\n<p><span style=\"font-size: 12pt;\"><strong>শর্তাবলী:</strong></span></p>\r\n<ul>\r\n<li><span style=\"font-size: 12pt;\">গ্রাহকদের উপায় দ্বারা মোট বিলের পরিমাণের ১% চার্জ করা হবে।</span></li>\r\n<li><span style=\"font-size: 12pt;\">শুধুমাত্র সক্রিয় (পূর্ণ প্রোফাইল) গ্রাহকরা যথেষ্ট ব্যালেন্স সহ উপায় অ্যাপের মাধ্যমে এই সেবার জন্য যোগ্য।</span></li>\r\n<li><span style=\"font-size: 12pt;\">একটি গ্রাহক বাংলাদেশ ব্যাংক দ্বারা নির্ধারিত MFS থেকে ব্যাংক ট্রান্সফার সীমার শর্তে একাধিকবার এই সেবা গ্রহণ করতে পারবেন।</span></li>\r\n<li><span style=\"font-size: 12pt;\">এই সেবার জন্য গ্রাহককে উপায় দ্বারা সময় সময়ে নির্ধারিত চার্জ পরিশোধ করতে হবে।</span></li>\r\n<li><span style=\"font-size: 12pt;\">উপায় অ্যাকাউন্ট থেকে VISA ডেবিট কার্ডে অর্থ স্থানান্তরের জন্য গ্রাহককে ডেবিট কার্ডের তথ্য সঠিকভাবে প্রবেশ করতে হবে।</span></li>\r\n<li><span style=\"font-size: 12pt;\">গ্রাহক দ্বারা প্রদত্ত ভুল তথ্যের কারণে অর্থ স্থানান্তর ব্যর্থ হলে বা অনিচ্ছিত কার্ডে অর্থ স্থানান্তরিত হলে উপায় দায়ী হবে না।</span></li>\r\n<li><span style=\"font-size: 12pt;\">গ্রাহকের ভুল/অবশ্য পালন না করার কারণে সিস্টেম দ্বারা 'ফান্ড ট্রান্সফার' প্রত্যাখ্যাত হলে উপায় দায়ী হবে না।</span></li>\r\n<li><span style=\"font-size: 12pt;\">গ্রাহকের নির্বাচিত কার্ডে অর্থ জমা দেওয়ার জন্য সংশ্লিষ্ট ব্যাংকের কোনো বিলম্বের জন্য উপায় দায়ী হবে না।</span></li>\r\n<li><span style=\"font-size: 12pt;\">Visa তাদের ডেবিট কার্ড ফান্ড ট্রান্সফার পরিষেবার একমাত্র দায় বহন করবে। উপায় শুধুমাত্র একটি পেমেন্ট সেবা প্রদানকারী হিসাবে দায়িত্ব গ্রহণ করবে।</span></li>\r\n<li><span style=\"font-size: 12pt;\">উপায় এই শর্তাবলী বা প্রযোজ্য চার্জ পরিবর্তন/সংশোধন/সংশোধন করার বা এই পরিষেবা বাতিল করার অধিকার সংরক্ষণ করে কোনো পূর্ব নোটিশ ছাড়াই।</span></li>\r\n<li><span style=\"font-size: 12pt;\">এই পরিষেবার বিষয়ে উপায় কর্তৃক গৃহীত যে কোনো সিদ্ধান্ত একমাত্র উপায়ের বিবেচনায় থাকবে এবং চূড়ান্ত বলে গণ্য হবে।</span></li>\r\n</ul>\r\n<p><span style=\"font-size: 12pt;\"><strong>বিস্তারিত শর্তাবলী দেখুন &ndash;</strong> <a href=\"https://www.upaybd.com/ProductServices/terms-and-condition-credit-and-debit-card\" target=\"_new\" rel=\"noopener\">https://www.upaybd.com/ProductServices/terms-and-condition-credit-and-debit-card</a></span></p>",
+     "Methods": [
+      {
+       "title": "How to transfer Fund from your VISA Debit Card ?",
+       "title bn": "How to transfer Fund from your VISA Debit Card ?",
+       "desc": "",
+       "desc bn": "",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Add_Money_from_Card_is_not_available_on_268_13_fPOQXMt.png",
+         "image sd": "/media/dynamic_image/Add_Money_from_Card_is_not_available_on_268_13_dpxK19p.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_SbPRATr.png",
+         "image sd": "/media/dynamic_image/1_pfTNshj.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_cZJeAyC.png",
+         "image sd": "/media/dynamic_image/2_qi1aShV.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_Jwnxk5r.png",
+         "image sd": "/media/dynamic_image/3_eG8BtCk.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_PDmUOxK.png",
+         "image sd": "/media/dynamic_image/4_WCmfjNj.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_mbPAANT.png",
+         "image sd": "/media/dynamic_image/5_YbLr3FV.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_uQsHAi8.png",
+         "image sd": "/media/dynamic_image/6_FN7NmQB.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_DIcpQI4.png",
+         "image sd": "/media/dynamic_image/7_dMmd5zZ.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "visa-debit-card"
+ }
+}

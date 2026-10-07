@@ -1,0 +1,134 @@
+{
+ "url": "https://www.upaybd.com/",
+ "api": "https://api.upaybd.com/api/v2/pages/Home-Slider",
+ "data": {
+  "title_english": "Home Slider",
+  "title_bangla": "Home Slider",
+  "template_name": "home-slider",
+  "rows": {
+   "Data": [
+    {
+     "title": "",
+     "title bn": "",
+     "image": "/media/dynamic_image/Upay-Unmadona-Website-Banner-Desktop_1440X680_DLMe6qF.jpg",
+     "image sd": "/media/dynamic_image/Upay-Unmadona-Website-Banner-MOBILE_828X1360_ZpZNFRO.jpg",
+     "current": "true",
+     "slug url": "/Latest-offer/upay-unmadona-campaign"
+    },
+    {
+     "title": "",
+     "title bn": "",
+     "image": "/media/dynamic_image/upay-self-reg-200-Adaptations-Web-Banner-With-Logo-v3_lRe71Vp.jpg",
+     "image sd": "/media/dynamic_image/upay-self-reg-200-Adaptations-Phone-Web-Banner-With-Logo-v3_Y4W9LTX.jpg",
+     "current": "true",
+     "slug url": "/Latest-offer/customer-self-registration-campaign"
+    },
+    {
+     "title": "",
+     "title bn": "",
+     "image": "/media/dynamic_image/Website_Banner_Desktop_kv-003-1440_x_680_2_ObLw0Os.jpg",
+     "image sd": "/media/dynamic_image/Website_Banner_Mobile_kv-003-828_x_1360_2.jpg",
+     "current": "true",
+     "slug url": "/Latest-offer/npsb-interoperability"
+    },
+    {
+     "title": "",
+     "title bn": "",
+     "image": "/media/dynamic_image/u-Pay_ShareTrip_70-10perc_Web-Banner_1140x680px_zkk81rH.jpg",
+     "image sd": "/media/dynamic_image/u-Pay_ShareTrip_70-10perc_PhoneWeb-Banner_-828x1360px.jpg",
+     "current": "true",
+     "slug url": "/Latest-offer/sharetrip-offer"
+    },
+    {
+     "title": "",
+     "title bn": "",
+     "image": "/media/dynamic_image/UPAY-MTB_Web_Banner-Desk_1440x680_ISLAMIC_DPS_5apWhGs.png",
+     "image sd": "/media/dynamic_image/UPAY-MTB_Web_Banner-Phone_828x1360_ISLAMIC_DPS.png",
+     "current": "true",
+     "slug url": "/services/details/mtb-islamic-dps"
+    },
+    {
+     "title": "",
+     "title bn": "",
+     "image": "/media/dynamic_image/gp_august_phase_4_Website_Desktop_xxGbrnH.jpg",
+     "image sd": "/media/dynamic_image/gp_august_phase_4_Wallpaper_Mobile.jpg",
+     "current": "true",
+     "slug url": "/Latest-offer/grameenphone-unlimited-cash-reward"
+    },
+    {
+     "title": "",
+     "title bn": "",
+     "image": "/media/dynamic_image/Cirkle_Website_Desktop_4yYLaQo.jpg",
+     "image sd": "/media/dynamic_image/Cirkle_Wallpaper_Mobile.jpg",
+     "current": "true",
+     "slug url": "/Latest-offer/unlimited-cash-reward-cirkle"
+    },
+    {
+     "title": "",
+     "title bn": "",
+     "image": "/media/dynamic_image/Robi_Website_Desktop_yD5m9BB.jpg",
+     "image sd": "/media/dynamic_image/Robi_Wallpaper_Mobile.jpg",
+     "current": "true",
+     "slug url": "/Latest-offer/unlimited-cash-reward-for-robi-airtel"
+    },
+    {
+     "title": "",
+     "title bn": "",
+     "image": "/media/dynamic_image/UPAY_Web_Banner-Desktop_1440x680_6_US5lYGy.png",
+     "image sd": "/media/dynamic_image/UPAY_Web_Banner-Phone_828x1360_6.png",
+     "current": "true",
+     "slug url": "/Latest-offer/jatrabari-gulistan-flyover-toll-payment"
+    },
+    {
+     "title": "",
+     "title bn": "",
+     "image": "/media/dynamic_image/WEB_BANNER1440X680_ClA36nt.png",
+     "image sd": "/media/dynamic_image/WEB_BANNER_828X1360.png",
+     "current": "true",
+     "slug url": "/Latest-offer/card-to-upay-add-money"
+    },
+    {
+     "title": "",
+     "title bn": "",
+     "image": "/media/dynamic_image/Upay_toll_payment_web_Banner_1440x680_2.jpg",
+     "image sd": "/media/dynamic_image/Upay_toll_payment_web_banner_phone__828x1360_2.jpg",
+     "current": "true",
+     "slug url": "/services/details/toll-booth-payment"
+    },
+    {
+     "title": "",
+     "title bn": "",
+     "image": "/media/dynamic_image/uPay-G-Pay-Final_1440x680_web-banner-dekstop_1_QxlBeW7.jpg",
+     "image sd": "/media/dynamic_image/uPay-G-Pay-Final_828x1360_web-banner-phone_1.jpg",
+     "current": "true",
+     "slug url": "/Latest-offer/upay-prepaid-card-and-google-pay-integration"
+    },
+    {
+     "title": "",
+     "title bn": "",
+     "image": "/media/dynamic_image/BLINK_Website_Desktop_0GsWk03.jpg",
+     "image sd": "/media/dynamic_image/BLINK_Wallpaper_Mobile.jpg",
+     "current": "true",
+     "slug url": "/Latest-offer/banglalink-exclusive-bundle-pack"
+    },
+    {
+     "title": "",
+     "title bn": "",
+     "image": "/media/dynamic_image/gozayan_Promotional_Campaign_Website_Desktop_KBx40FG.jpg",
+     "image sd": "/media/dynamic_image/gozayan_Promotional_Campaign_Website_Mobile.jpg",
+     "current": "true",
+     "slug url": "/Latest-offer/gozayaan-discount"
+    },
+    {
+     "title": "",
+     "title bn": "",
+     "image": "/media/dynamic_image/upay-X-Firsttrip_2500X1250_Revised_Wtd2125.jpg",
+     "image sd": "/media/dynamic_image/upay-X-Firsttrip_828X1360_Revised.jpg",
+     "current": "true",
+     "slug url": "/Latest-offer/firsttrip-discount-campaign"
+    }
+   ]
+  },
+  "slug": "Home-Slider"
+ }
+}

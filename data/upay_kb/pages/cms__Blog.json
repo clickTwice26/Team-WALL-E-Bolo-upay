@@ -1,0 +1,247 @@
+{
+ "url": "https://www.upaybd.com/Blog",
+ "api": "https://api.upaybd.com/api/v2/pages/Blog",
+ "data": {
+  "title_english": "blog",
+  "title_bangla": "blog",
+  "template_name": "blog",
+  "rows": {
+   "Data": [
+    {
+     "title": "Press Release",
+     "title bn": "প্রেস বিজ্ঞপ্তি&nbsp;",
+     "cover image": "/media/dynamic_image/Website_Desktop_Header_1_8POkXzy.png",
+     "cover image sd": "/media/dynamic_image/Mobile_Desktop_Header_1_6c3xw0K.png",
+     "segment one": [
+      {
+       "title": "উপায় Appoints Shyamol B. Das as Chief Executive Officer",
+       "title bn": "উপায় Appoints Shyamol B. Das as Chief Executive Officer",
+       "desc": "<p>upay is pleased to announce the appointment of Mr. Shyamol B. Das as its new Chief Executive Officer. Mr. Das brings a distinguished record of leadership and innovation, poised to guide upay through its next phase of strategic growth and market expansion.</p>",
+       "desc bn": "<p>upay is pleased to announce the appointment of Mr. Shyamol B. Das as its new Chief Executive Officer. Mr. Das brings a distinguished record of leadership and innovation, poised to guide upay through its next phase of strategic growth and market expansion.</p>",
+       "image": "/media/dynamic_image/upay_New_CEO___Web_bannerUPAY_Web_Banner-Desk_1440x680_Airtel_2UaMA2J.jpg",
+       "image sd": "/media/dynamic_image/upay_New_CEO___Web_bannerUPAY_Web_Banner-Desk_1440x680_Airtel_2UaMA2J_bXdSgAQ.jpg",
+       "slug url": "/upaywelcomesnewceo"
+      },
+      {
+       "title": "upay &amp; UCB Investment Partner for Corporate Payout Solution",
+       "title bn": "upay &amp; UCB Investment Partner for Corporate Payout Solution",
+       "desc": "<p data-start=\"248\" data-end=\"575\"><span class=\"hover:entity-accent entity-underline inline cursor-pointer align-baseline\"><span class=\"whitespace-normal\">UCB Fintech Company Limited</span></span>&rsquo;s mobile financial service brand <span class=\"hover:entity-accent entity-underline inline cursor-pointer align-baseline\"><span class=\"whitespace-normal\">upay</span></span> has signed an agreement with <span class=\"hover:entity-accent entity-underline inline cursor-pointer align-baseline\"><span class=\"whitespace-normal\">UCB Investment Limited</span></span> to introduce a comprehensive corporate payout solution aimed at enhancing seamless and efficient financial disbursement services for corporate clients.</p>\r\n<p data-start=\"577\" data-end=\"706\">The signing ceremony was held at the upay Head Office on 11 May 2026 in the presence of senior officials from both organizations.</p>",
+       "desc bn": "<p><strong>&nbsp;</strong></p>\r\n<p data-start=\"248\" data-end=\"575\"><span class=\"hover:entity-accent entity-underline inline cursor-pointer align-baseline\"><span class=\"whitespace-normal\">UCB Fintech Company Limited</span></span>&rsquo;s mobile financial service brand <span class=\"hover:entity-accent entity-underline inline cursor-pointer align-baseline\"><span class=\"whitespace-normal\">upay</span></span> has signed an agreement with <span class=\"hover:entity-accent entity-underline inline cursor-pointer align-baseline\"><span class=\"whitespace-normal\">UCB Investment Limited</span></span> to introduce a comprehensive corporate payout solution aimed at enhancing seamless and efficient financial disbursement services for corporate clients.</p>\r\n<p data-start=\"577\" data-end=\"706\">The signing ceremony was held at the upay Head Office on 11 May 2026 in the presence of senior officials from both organizations.</p>\r\n<p><strong>&nbsp;</strong></p>",
+       "image": "/media/dynamic_image/Press-Release-Photo-upayXUCB-Investment_igR2nTo.jpg",
+       "image sd": "/media/dynamic_image/Press-Release-Photo-upayXUCB-Investment_ebmviwn.jpg",
+       "slug url": "/signing-ceremony-upay-and-ucb-investment-limited"
+      },
+      {
+       "title": "upay partners with Zaytun Business Solutions",
+       "title bn": "উপায় এবং জয়তুন বিজনেস সলিউশন্সের সাথে পার্টনারশিপ চুক্তি",
+       "desc": "upay becomes first MFS to partner with Zaytoon Business Solutions, driving digital inclusion at mass level",
+       "desc bn": "প্রথম এমএফএস পার্টনার হিসেবে উপায় এবং জয়তুন বিজনেস সলিউশন্সের সাথে পার্টনারশিপ চুক্তি, যা সারা বাংলাদেশে ডিজিটাল অন্তর্ভুক্তি নিশ্চিত করবে",
+       "image": "/media/dynamic_image/Zaytun_-_upay.jpeg_4YZg2li.png",
+       "image sd": "/media/dynamic_image/Zaytun_-_upay.jpeg_4FlznWb.png",
+       "slug url": "/upay-partners-with-zaytoon-business-solutions"
+      },
+      {
+       "title": "উপায় wins 'Innovator of the Year' award for its smart toll payment feature.",
+       "title bn": "'উপায়&rsquo; স্মার্ট টোল পেমেন্ট ফিচার সুবিধার জন্য &lsquo;ইনোভেটর অব দি ইয়ার&rsquo; পুরস্কার পেয়েছে",
+       "desc": "উপায়, one of the country's leading mobile financial service providers, has received the 'Innovator of the Year' award for its smart toll payment feature in the developing e-commerce category.",
+       "desc bn": "",
+       "image": "/media/dynamic_image/Screenshot_2_JGP4doj.png",
+       "image sd": "/media/dynamic_image/Screenshot_2_oEjkgUn.png",
+       "slug url": "/innovator-of-the-year-award"
+      },
+      {
+       "title": "upay inaugurates own customer service center",
+       "title bn": "উপায় এর নিজস্ব কাস্টমার সার্ভিস সেন্টার চালু",
+       "desc": "উপায় launched its customer service center today in Dhaka aiming to provide customers better experience with উপায় products and services.",
+       "desc bn": "উপায় আরও উন্নত গ্রাহকসেবা প্রদানের লক্ষ্যে চালু করল নিজস্ব কাস্টমার সার্ভিস সেন্টার ।",
+       "image": "/media/dynamic_image/Press_Release_-2000__1000px_1_vzARDdx.png",
+       "image sd": "/media/dynamic_image/Press_Release_-2000__1000px_1_er99MBv.png",
+       "slug url": "/customer-center-launch"
+      },
+      {
+       "title": "উপায় Payoneer Partnership",
+       "title bn": "উপায় এবং পেওনিয়ার পার্টনারশিপ&nbsp;",
+       "desc": "উপায় partners with Payoneer to help Bangladesh's freelancers conduct international payments",
+       "desc bn": "উপায়- এ ফ্রিল্যান্সারদের আয় আসবে পেওনিয়ার-এর মাধ্যমে",
+       "image": "/media/dynamic_image/Payoneer_Press_Release_1_O93jrub.png",
+       "image sd": "/media/dynamic_image/Payoneer_Press_Release_1_5A94x9m.png",
+       "slug url": "/upay-partners-with-payoneer"
+      },
+      {
+       "title": "উপায় and Grameenphone team up to simplify MFS account opening and recharging",
+       "title bn": "গ্রাহকদের জন্য এমএফএস একাউন্ট খোলা ও রিচার্জ আরও সহজ করলো উপায় ও গ্রামীণফোন",
+       "desc": "উপায় in association with Grameenphone has launched an innovative yet simple MFS account registration process, allowing Grameenphone customers to open উপায় accounts by dialing upay USSD code *268#.",
+       "desc bn": "উপায় এবং গ্রামীণফোন একসাথে এবার নিয়ে এলো সহজ ও উদ্ভাবনী MFS অ্যাকাউন্ট রেজিস্ট্রেশন প্রক্রিয়া। এখন গ্রামীণফোন ব্যবহারকারীরা সহজেই USSD কোড *২৬৮# ডায়ালের মাধ্যমে উপায়&rsquo;এ অ্যাকাউন্ট খুলতে পারবেন।",
+       "image": "/media/dynamic_image/Press_Release_-2000__1000px_2_OmLH0AK.png",
+       "image sd": "/media/dynamic_image/Press_Release_-2000__1000px_2_eu3WR5S.png",
+       "slug url": "/grameenphone-upay-launching"
+      },
+      {
+       "title": "উপায়, Tang joint Ramadan campaign winners receive car, motorcycles",
+       "title bn": "উপায় ও ট্যাং ক্যাম্পেইনে বিজয়ীদের পুরস্কার হস্তান্তর",
+       "desc": "উপায়, in collaboration with globally reputed beverage brand Tang, today handed over the grand prize, a brand new car to the winner of its Ramadan mega campaign.",
+       "desc bn": "উপায় এবং পানীয় &lsquo;ট্যাং&rsquo;-এর যৌথ উদ্যোগে পরিচালিত &lsquo;রমজান মেগা&rsquo; ক্যাম্পেইনের বিজয়ীদের পুরস্কার হস্তান্তর করা হয়েছে।",
+       "image": "/media/dynamic_image/Press_Release_-_2000_x_1200_12_0Yu3PRz.png",
+       "image sd": "/media/dynamic_image/Press_Release_-_2000_x_1200_12_mGzK8CP.png",
+       "slug url": "/upay-tang-ramadan-campaign-winners"
+      },
+      {
+       "title": "উপায় and BGMEA recently signed an agreement to disburse stipends through উপায় accounts",
+       "title bn": "উপায় এর সাথে বিজিএমইএ এর চুক্তি সাক্ষর",
+       "desc": "Under this agreement, the participants of the BGMEA-SEIP skill development project, an initiative for skill development of mid-level officials and workers in the RMG sector, would receive their stipend directly into their উপায় accounts.",
+       "desc bn": "এই চুক্তির ফলে বিজিএমইএ &ndash;এসইআইপি প্রকল্পের মাধ্যমে পোশাক খাতের মধ্যম পর্যায়ের কর্মকর্তা ও শ্রমিকদের দক্ষতা বৃদ্ধিতে পরিচালিত প্রশিক্ষণ কর্মসূচীতে অংশগ্রহণকারীদের বৃত্তির টাকা বিতরণ হবে উপায়-এর মাধ্যমে।",
+       "image": "/media/dynamic_image/IMG_3971---2000-x-1200.jpg",
+       "image sd": "/media/dynamic_image/IMG_3971---2000-x-1200_Mu0nAqp.jpg",
+       "slug url": "/upay-bgmea-sign-agreement"
+      },
+      {
+       "title": "PM gifts on Bangamata&rsquo; s birthday",
+       "title bn": "বঙ্গমাতার জন্মদিনে প্রধানমন্ত্রীর উপহার",
+       "desc": "2,500 women received PM gifts through উপায় on Bangamata&rsquo; s birthday",
+       "desc bn": "বঙ্গমাতার জন্মদিনে ২৫০০ নারীর &lsquo;উপায়&rsquo; অ্যাকাউন্টে প্রধানমন্ত্রীর উপহার",
+       "image": "/media/dynamic_image/Press_Release_-_2000_x_1200_10_BmgCSFe.png",
+       "image sd": "/media/dynamic_image/Press_Release_-_2000_x_1200_10_IKvdqPE.png",
+       "slug url": "/bangamata-birthday"
+      },
+      {
+       "title": "উপায়, PRAN sign agreement on salary disbursement, merchant payment",
+       "title bn": "উপায় একাউন্টে কর্মীদের বেতন দেবে প্রাণ-আরএফএল গ্রুপ",
+       "desc": "উপায় signed an agreement with the country&rsquo;s leading business conglomerate PRAN-RFL Group, to facilitate the disbursement of monthly salaries to employees of different factories of the conglomerate",
+       "desc bn": "উপায় এর মাধ্যমে প্রাণ-আরএফএল গ্রুপের বিভিন্ন কারখানার কর্মীরা বেতন পাবেন তাদের নিজ নিজ উপায় একাউন্টে।",
+       "image": "/media/dynamic_image/Press_Release_-_2000_x_1200_8_YH7kIXz.png",
+       "image sd": "/media/dynamic_image/Press_Release_-_2000_x_1200_8_Nw8J9S7.png",
+       "slug url": "/upay-pran-agreement"
+      },
+      {
+       "title": "উপায় signs agreement with Titas Gas to facilitate prepaid bill payment",
+       "title bn": "প্রিপেইড বিল পেমেন্ট সহজ করতে উপায় - তিতাস গ্যাস এর চুক্তি সাক্ষর",
+       "desc": "উপায় has signed agreement with Titas Gas Transmission and Distribution Company Limited (TGTDCL) to facilitate prepaid meter bill payment/prepaid card recharge through upay.",
+       "desc bn": "বিল পেমেন্ট কার্ড&nbsp; রিচার্জ সহজ করতে উপায় এর সাথে চুক্তি সাক্ষর করেছে তিতাস গ্যাস ট্রান্সমিসন অ্যান্ড ডিস্ট্রিবিউশন &nbsp;কোম্পানি লিমিটেড",
+       "image": "/media/dynamic_image/Press_Release_-_2000_x_1200_2_CWLs9ab.png",
+       "image sd": "/media/dynamic_image/Press_Release_-_2000_x_1200_2_fA8dMY5.png",
+       "slug url": "/upay-titas-agreement"
+      },
+      {
+       "title": "Eden college students can pay academic fees through উপায়",
+       "title bn": "উপায়-এ দেওয়া যাবে ইডেন কলেজের একাডেমিক ফি",
+       "desc": "The students of Eden Mohila College, a pioneer education institute for women in Bangladesh, can now pay for all kinds of academic frees through উপায়",
+       "desc bn": "ইডেন মহিলা কলেজের শিক্ষার্থীরা তাদের সব ধরণের একাডেমিক ফি প্রদান করতে পারবেন উপায় এর মাধ্যমে ।",
+       "image": "/media/dynamic_image/Press_Release_-_2000_x_1200_9_brDUyrs.png",
+       "image sd": "/media/dynamic_image/Press_Release_-_2000_x_1200_9_TbCrCP3.png",
+       "slug url": "/upay-eden-college-agreement"
+      },
+      {
+       "title": "Fashol Dotcom to disburse employee salary through উপায়",
+       "title bn": "Fashol Dotcom to disburse employee salary through উপায়",
+       "desc": "উপায় signed an agreement recently with Fashol Dotcom Limited, a fresh produce supply chain network, to facilitate the company disburse monthly salaries to their employees through উপায়.",
+       "desc bn": "উপায় signed an agreement recently with Fashol Dotcom Limited, a fresh produce supply chain network, to facilitate the company disburse monthly salaries to their employees through উপায়.",
+       "image": "/media/dynamic_image/Press_Release_-_2000_x_1200_4_1_NIBItPB.png",
+       "image sd": "/media/dynamic_image/Press_Release_-_2000_x_1200_4_1_593aKUh.png",
+       "slug url": "/upay-fashol-dotcom-agreement"
+      },
+      {
+       "title": "NESCO bill payment through উপায়",
+       "title bn": "উপায়-এ পরিশোধ করা যাবে নেসকো বিদ্যুৎ বিল",
+       "desc": "উপায় has signed an agreement with Northern Electricity Supply Company Limited (NESCO), facilitating around 17 lakh customers to pay their electricity bills through উপায়.",
+       "desc bn": "উপায় এর মাধ্যমে বিদ্যুৎ বিল পরিশোধ করতে পারবেন নর্দান ইলেক্ট্রিসিটি সাপ্লাই কোম্পানি লি. (নেসকো) এর ১৭ লাখ গ্রাহক",
+       "image": "/media/dynamic_image/Press_Release_-_2000_x_1200_6_H6PO2fL.png",
+       "image sd": "/media/dynamic_image/Press_Release_-_2000_x_1200_6_KZJswLx.png",
+       "slug url": "/upay-nesco-agreement"
+      },
+      {
+       "title": "NID related fees can be paid through upay",
+       "title bn": "জাতীয় পরিচয়পত্র সংক্রান্ত ফি প্রদান করা যাবে উপায়-এ&nbsp;&nbsp;",
+       "desc": "উপায় (upay) signed an agreement with Election Commission, aiming to facilitate customers to make payment of various service-related fees",
+       "desc bn": "উপায় এর গ্রাহকরা জাতীয় পরিচয়পত্র (NID) সংক্রান্ত সেবা ফি উপায় এর মাধ্যমে প্রদান করতে পারবেন&nbsp;",
+       "image": "/media/dynamic_image/Press_Release_-_2000_x_1200_5_VeCOrim.png",
+       "image sd": "/media/dynamic_image/Press_Release_-_2000_x_1200_5_kTZBsCP.png",
+       "slug url": "/nid-fees-through-upay"
+      },
+      {
+       "title": "Land ministry, উপায় signs MoU on land fee payment",
+       "title bn": "Land ministry, উপায় signs MoU on land fee payment",
+       "desc": "This will facilitate Bangladeshi citizens to pay different land related fees through উপায়.",
+       "desc bn": "This will facilitate Bangladeshi citizens to pay different land related fees through উপায়.",
+       "image": "/media/dynamic_image/Press_Release_Page_-_360_x_180_1.png",
+       "image sd": "/media/dynamic_image/Press_Release_Page_-_360_x_180_1_MsWafH5.png",
+       "slug url": "/land-ministry-upay-signs-mou-on-land-fee-payment"
+      },
+      {
+       "title": "Traffic prosecution fee payment through উপায় in Chandpur",
+       "title bn": "চাঁদপুরে ট্র্যাফিক প্রসিকিউশন ফি দেয়া যাবে উপায় এর মাধ্যমে",
+       "desc": "উপায় signed an agreement with the Chandpur Police for traffic prosecution fee payment.",
+       "desc bn": "উপায় এর মাধ্যমে ট্রাফিক প্রসিকিউশন ফি প্রদানের জন্য সম্প্রতি চাঁদপুর পুলিশের সাথে একটি চুক্তি স্বাক্ষর করেছেন।",
+       "image": "/media/dynamic_image/Press_Release_Page_-_360_x_180.png",
+       "image sd": "/media/dynamic_image/Press_Release_Page_-_360_x_180_mfbQE8H.png",
+       "slug url": "/traffic-prosecution-fee-through-upay-in-chandpur"
+      },
+      {
+       "title": "উপায় wins fintech innovation award for its multi-wallet feature",
+       "title bn": "উপায় wins fintech innovation award for its multi-wallet feature",
+       "desc": "উপায় has won the &lsquo;Fintech Innovation of the Year&rsquo; award in mobile money category.",
+       "desc bn": "উপায় has won the &lsquo;Fintech Innovation of the Year&rsquo; award in mobile money category.",
+       "image": "/media/dynamic_image/Untitled_design_19.png",
+       "image sd": "/media/dynamic_image/Untitled_design_19_AzEDRTH.png",
+       "slug url": "/upay-wins-fintech-award"
+      },
+      {
+       "title": "উপায় recently held its first Annual General Meeting (AGM)",
+       "title bn": "উপায় recently held its first Annual General Meeting (AGM)",
+       "desc": "The first Annual General Meeting (AGM) of উপায়, a fast growing mobile financial provider, was held recently.",
+       "desc bn": "The first Annual General Meeting (AGM) of উপায়, a fast growing mobile financial provider, was held recently.",
+       "image": "/media/dynamic_image/Press_Release_Page_-_360_x_180_2.png",
+       "image sd": "/media/dynamic_image/Press_Release_Page_-_360_x_180_2_x3UX1jG.png",
+       "slug url": "/upay-held-its-first-annual-general-meeting-agm"
+      },
+      {
+       "title": "উপায়, Falcon Group sign agreement on salary disbursement",
+       "title bn": "উপায়, Falcon Group sign agreement on salary disbursement",
+       "desc": "উপায় signed an agreement with Falcon group to facilitate the monthly salaries to their employees",
+       "desc bn": "উপায় signed an agreement with Falcon group to facilitate the monthly salaries to their employees",
+       "image": "/media/dynamic_image/Falcon_Group.png",
+       "image sd": "/media/dynamic_image/Falcon_Group_nnOJIjg.png",
+       "slug url": "/upay-falcon-group-sign-agreement"
+      },
+      {
+       "title": "উপায়, Guardian Life Insurance sign agreement",
+       "title bn": "উপায়, Guardian Life Insurance sign agreement",
+       "desc": "This will facilitate the উপায় customers to Guardian Life&rsquo;s insurance policies from the উপায় app.",
+       "desc bn": "This will facilitate the উপায় customers to Guardian Life&rsquo;s insurance policies from the উপায় app.",
+       "image": "/media/dynamic_image/Guardian_Life.png",
+       "image sd": "/media/dynamic_image/Guardian_Life_7vvzl8I.png",
+       "slug url": "/upay-guardian-life-insurance-sign-agreement"
+      },
+      {
+       "title": "উপায় app usage free for Robi-Airtel customers",
+       "title bn": "উপায় app usage free for Robi-Airtel customers",
+       "desc": "উপায়, the fast-growing mobile financial service provider in the country signed an agreement with Robi Axiata Limited recently.",
+       "desc bn": "উপায়, the fast-growing mobile financial service provider in the country signed an agreement with Robi Axiata Limited recently.",
+       "image": "/media/dynamic_image/upay-Robi_agreement_signing_pics.jpg",
+       "image sd": "/media/dynamic_image/upay-Robi_agreement_signing_pics_pxCCEOu.jpg",
+       "slug url": "/upay-free-for-robi-airtel"
+      },
+      {
+       "title": "Brazil Ambassador visits উপায় office",
+       "title bn": "Brazil Ambassador visits উপায় office",
+       "desc": "The Ambassador of Brazil to Bangladesh, His Excellency Mr. Joao Tabajara de Oliveira Junior visited the office of UCB Fintech Company Limited recently.",
+       "desc bn": "The Ambassador of Brazil to Bangladesh, His Excellency Mr. Joao Tabajara de Oliveira Junior visited the office of UCB Fintech Company Limited recently.",
+       "image": "/media/dynamic_image/brazil_ambasador_upay_office_visit_pics_wecompress.com.jpg",
+       "image sd": "/media/dynamic_image/brazil_ambasador_upay_office_visit_pics_wecompress.com_5CG4oIo.jpg",
+       "slug url": "/brazil-ambassador-visit"
+      },
+      {
+       "title": "upay signs agreement with KGDCL to facilitate bill payment",
+       "title bn": "বিল পেমেন্ট সুবিধা দিতে উপায়-কর্ণফুলী গ্যাস চুক্তি স্বাক্ষর",
+       "desc": "উপায় has signed an agreement with Karnaphuli Gas Distribution Company Limited (KGDCL) under which customers of KGDCL can pay their postpaid gas bills through উপায়.",
+       "desc bn": "মোবাইল ফিনান্সিয়াল সার্ভিস প্রদানকারী প্রতিষ্ঠান উপায় এর সাথে চুক্তি স্বাক্ষর করেছে কর্ণফুলী গ্যাস ডিস্ট্রিবিউশন কোম্পানী লিমিটেড।",
+       "image": "/media/dynamic_image/Press_Release_-_2000_x_1200_11_dmFMsmv.png",
+       "image sd": "/media/dynamic_image/Press_Release_-_2000_x_1200_11_NDFuR99.png",
+       "slug url": "/upay-kgdcl-agreement"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "Blog"
+ }
+}

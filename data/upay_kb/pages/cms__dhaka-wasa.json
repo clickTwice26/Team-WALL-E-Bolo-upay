@@ -1,0 +1,116 @@
+{
+ "url": "https://www.upaybd.com/services/details/dhaka-wasa",
+ "api": "https://api.upaybd.com/api/v2/pages/dhaka-wasa",
+ "data": {
+  "title_english": "Dhaka WASA",
+  "title_bangla": "Dhaka WASA",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Dhaka WASA",
+     "title bn": "ঢাকা ওয়াসা&nbsp;",
+     "background image": "/media/dynamic_image/Water_-_Desktop_Header.png",
+     "background image sd": "/media/dynamic_image/Water_Mobile_Header.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<div style=\"text-align: center;\"><span style=\"font-size: 12pt;\">Complete your Dhaka WASA Bill in just a few steps. Check the process and know more on the details</span></div>",
+     "desc bn": "<div style=\"text-align: center;\">আপনার ঢাকা ওয়াসা বিল পরিশোধ করুন মাত্র কয়েকটা ক্লিক করেই।&nbsp; নিয়ম জানতে নিচের ধাপ অনুসরণ করুন&nbsp; &nbsp;</div>",
+     "Methods": [
+      {
+       "title": "How to pay Dhaka WASA bill ?",
+       "title bn": "কিভাবে ঢাকা ওয়াসা বিল পরিশোধ করবেন ?&nbsp;",
+       "desc": "Simply follow the below steps",
+       "desc bn": "",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/1_58yKzaI.png",
+         "image sd": "/media/dynamic_image/1_uilmZyc.png"
+        },
+        {
+         "image ": "/media/dynamic_image/2_QdyujId.png",
+         "image sd": "/media/dynamic_image/2_bU0M9CP.png"
+        },
+        {
+         "image ": "/media/dynamic_image/2_2_sULA4mF.png",
+         "image sd": "/media/dynamic_image/2_2_LXbcHLU.png"
+        },
+        {
+         "image ": "/media/dynamic_image/2_3_5RrlbXB.png",
+         "image sd": "/media/dynamic_image/2_3_MJomJST.png"
+        },
+        {
+         "image ": "/media/dynamic_image/4_sctSLd3.png",
+         "image sd": "/media/dynamic_image/4_Xj1Linf.png"
+        },
+        {
+         "image ": "/media/dynamic_image/7_oBq0RER.png",
+         "image sd": "/media/dynamic_image/7_tV8oRDO.png"
+        },
+        {
+         "image ": "/media/dynamic_image/8_4FUGS65.png",
+         "image sd": "/media/dynamic_image/8_D07Cghb.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_zVEMfNZ.png",
+         "image sd": "/media/dynamic_image/1_q8cK8X7.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_1_XKgljCs.png",
+         "image sd": "/media/dynamic_image/2_1_dyIJgIn.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_2_PlrhyNU.png",
+         "image sd": "/media/dynamic_image/2_2_tdQ4F5A.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_3_yiCFYuf.png",
+         "image sd": "/media/dynamic_image/2_3_2gH4mb8.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_4.png",
+         "image sd": "/media/dynamic_image/2_4_fmYhceE.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_5.png",
+         "image sd": "/media/dynamic_image/2_5_b5ZJTu7.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_6.png",
+         "image sd": "/media/dynamic_image/2_6_HSsyhbs.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_7.png",
+         "image sd": "/media/dynamic_image/2_7_dUnxryy.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "dhaka-wasa"
+ }
+}

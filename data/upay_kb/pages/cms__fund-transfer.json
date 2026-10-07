@@ -1,0 +1,84 @@
+{
+ "url": "https://www.upaybd.com/services/details/fund-transfer",
+ "api": "https://api.upaybd.com/api/v2/pages/fund-transfer",
+ "data": {
+  "title_english": "Fund Transfer",
+  "title_bangla": "Fund Transfer",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Fund Transfer",
+     "title bn": "ফান্ড ট্রান্সফার",
+     "background image": "/media/dynamic_image/Cash_In_desktop_4oSoEn6_11v8xHk.jpg",
+     "background image sd": "/media/dynamic_image/Cash_In_mobile_X5JdPEu_GuJgbu0.jpg",
+     "heading": "",
+     "heading bn": "",
+     "desc": "Need to transfer money to your bank account on a holiday when the Bank is closed ? No need to worry. Now with upay app, you can easily transfer funds to your desired bank account any time anywhere.",
+     "desc bn": "ব্যাংক একাউন্টে টাকা অ্যাড করা প্রয়োজন ? উপায় অ্যাপ এর মাধ্যমে টাকা আপনার ব্যাংক একাউন্টে পাঠাতে পারবেন সহজেই।",
+     "Methods": [
+      {
+       "title": "How to transfer your fund ?",
+       "title bn": "কিভাবে ফান্ড ট্রান্সফার করতে হয় ?",
+       "desc": "Simply follow the below steps in order to fund transfer easily",
+       "desc bn": "নিচের ধাপ গুলো&nbsp; দেখে সহজেই ফান্ড ট্রান্সফার করে ফেলুন&nbsp;",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Add_Money_from_Card_is_not_available_on_268_13.png",
+         "image sd": "/media/dynamic_image/Add_Money_from_Card_is_not_available_on_268_13_922ndsO.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_p2VP3xs.png",
+         "image sd": "/media/dynamic_image/1_zNwl1Pl.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_1_cpDHPQV.png",
+         "image sd": "/media/dynamic_image/2_1_fM3PJoF.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_pAymn1I.png",
+         "image sd": "/media/dynamic_image/3_bwDdgUW.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_mHs9bGp.png",
+         "image sd": "/media/dynamic_image/7_mt1yYmt.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_W4X74W5.png",
+         "image sd": "/media/dynamic_image/8_BgqCQ63.png"
+        },
+        {
+         "image": "/media/dynamic_image/9_1ZB0mV2.png",
+         "image sd": "/media/dynamic_image/9_VlL4NYU.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "fund-transfer"
+ }
+}

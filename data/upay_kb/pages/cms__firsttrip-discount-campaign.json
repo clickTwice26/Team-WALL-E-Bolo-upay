@@ -1,0 +1,61 @@
+{
+ "url": "https://www.upaybd.com/services/details/firsttrip-discount-campaign",
+ "api": "https://api.upaybd.com/api/v2/pages/firsttrip-discount-campaign",
+ "data": {
+  "title_english": "FirstTrip Discount Campaign",
+  "title_bangla": "FirstTrip Discount Campaign",
+  "template_name": "template-h",
+  "rows": {
+   "Data": [
+    {
+     "image": "/media/dynamic_image/upay-X-Firsttrip_2500X1250_Revised.jpg",
+     "image sd": "/media/dynamic_image/upay-X-Firsttrip_2500X1250_Revised_egtrq1Q.jpg",
+     "Details data": [
+      {
+       "title": "Enjoy Up to 10% OFF on Flight &amp; Up to 70% Discount on Domestic Hotel Bookings, All Year Round!",
+       "title bn": "সারা বছর জুড়েই ফ্লাইট বুকিংয়ে ১০% পর্যন্ত এবং অভ্যন্তরীণ হোটেল বুকিংয়ে ৭০% পর্যন্ত ছাড় উপভোগ করুন!",
+       "desc": "<div style=\"text-align: justify;\">\r\n<p><strong>Duration: </strong>The offer will remain until further notice (On Going)</p>\r\n<p><strong>Offer Details:</strong></p>\r\n<ul>\r\n<li>Get up to 10% discount on Domestic &amp; International Flight Bookings.</li>\r\n<li>Get up to 70% discount on Domestic Hotel Bookings.</li>\r\n<li>Domestic hotel discount is based on Firsttrip&rsquo;s current ongoing offers.</li>\r\n</ul>\r\n<p><strong>How It Works:</strong></p>\r\n<ul>\r\n<li>Visit Firsttrip (app or website) and select your preferred flight or hotel.</li>\r\n<li>Choose upay as the payment method at checkout.</li>\r\n<li>Complete the payment using upay.</li>\r\n<li>The applicable discount will be automatically applied as per the offer terms.</li>\r\n</ul>\r\n<p><strong>Offer Terms:</strong></p>\r\n</div>",
+       "desc bn": "<div style=\"text-align: justify;\">\r\n<p class=\"isSelectedEnd\"><strong>মেয়াদ:</strong> পরবর্তী নির্দেশনা না দেওয়া পর্যন্ত অফারটি চলমান থাকবে।</p>\r\n<p class=\"isSelectedEnd\"><strong>অফারের বিস্তারিত:</strong></p>\r\n<ul data-spread=\"false\">\r\n<li>ডোমেস্টিক ও আন্তর্জাতিক ফ্লাইট বুকিংয়ে সর্বোচ্চ ১০% ডিসকাউন্ট।</li>\r\n<li>ডোমেস্টিক হোটেল বুকিংয়ে সর্বোচ্চ ৭০% ডিসকাউন্ট।</li>\r\n<li>ডোমেস্টিক হোটেল বুকিংয়ের ডিসকাউন্ট ফার্স্টট্রিপের চলমান অফারের ওপর নির্ভরশীল।</li>\r\n</ul>\r\n<p class=\"isSelectedEnd\"><strong>যেভাবে অফারটি পাবেন:</strong></p>\r\n<ul data-spread=\"false\">\r\n<li>ফার্স্টট্রিপ (অ্যাপ অথবা ওয়েবসাইট) ভিজিট করে আপনার পছন্দের ফ্লাইট বা হোটেল নির্বাচন করুন।</li>\r\n<li>পেমেন্টের সময় পেমেন্ট মেথড হিসেবে upay নির্বাচন করুন।</li>\r\n<li>upay-এর মাধ্যমে পেমেন্ট সম্পন্ন করুন।</li>\r\n<li>অফারের শর্ত অনুযায়ী প্রযোজ্য ডিসকাউন্ট স্বয়ংক্রিয়ভাবে প্রয়োগ হবে।</li>\r\n</ul>\r\n<p><strong>অফারের শর্তাবলি:</strong></p>\r\n</div>",
+       "sub title": "",
+       "sub title bn": "",
+       "sub desc": "",
+       "sub desc bn": "",
+       "key value": [
+        {
+         "title": "The flight discount will not be applicable on Low-Cost Carrier (LCC) airlines.",
+         "title bn": "Low-Cost Carrier (LCC) এয়ারলাইন্সের ক্ষেত্রে ফ্লাইট ডিসকাউন্ট প্রযোজ্য হবে না।"
+        },
+        {
+         "title": "Domestic hotel discounts will be applicable in accordance with the prevailing offers and campaign mechanics of Firsttrip at the time of booking.",
+         "title bn": "ডোমেস্টিক হোটেল বুকিংয়ের ক্ষেত্রে বুকিংয়ের সময় Firsttrip-এর চলমান অফার ও ক্যাম্পেইন মেকানিজম অনুযায়ী ডিসকাউন্ট প্রযোজ্য হবে।"
+        },
+        {
+         "title": "The above offers will remain valid throughout the partnership period, subject to mutually agreed campaign mechanics.",
+         "title bn": "পারস্পরিক সম্মত ক্যাম্পেইন মেকানিজমের ভিত্তিতে, পার্টনারশিপ চলাকালীন সময়ে উপরোক্ত অফারগুলো কার্যকর থাকবে।"
+        },
+        {
+         "title": "Firsttrip Limited reserves the right to modify, amend, suspend, or discontinue any of the offers at any time without prior notice.",
+         "title bn": "Firsttrip Limited কোনো পূর্ব নোটিশ ছাড়াই যেকোনো সময় অফার পরিবর্তন, সংশোধন, স্থগিত বা বন্ধ করার অধিকার সংরক্ষণ করে।"
+        },
+        {
+         "title": "Any suspicious, collusive, or fraudulent transaction or activity intended to derive financial gain by abusing these terms and conditions will result in disqualification of the transaction and/or customer from this campaign or any future campaign.",
+         "title bn": "এই শর্তাবলির অপব্যবহার করে আর্থিক সুবিধা অর্জনের উদ্দেশ্যে কোনো সন্দেহজনক, যোগসাজশমূলক বা প্রতারণামূলক লেনদেন বা কার্যক্রম শনাক্ত হলে, সংশ্লিষ্ট লেনদেন এবং/অথবা গ্রাহককে এই ক্যাম্পেইন বা ভবিষ্যতের যেকোনো ক্যাম্পেইন থেকে অযোগ্য ঘোষণা করা হবে।"
+        }
+       ]
+      }
+     ],
+     "May like": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under May like": []
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "firsttrip-discount-campaign"
+ }
+}

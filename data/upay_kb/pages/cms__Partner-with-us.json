@@ -1,0 +1,197 @@
+{
+ "url": "https://www.upaybd.com/partners",
+ "api": "https://api.upaybd.com/api/v2/pages/Partner-with-us",
+ "data": {
+  "title_english": "Partner with us",
+  "title_bangla": "Partner with us",
+  "template_name": "partner-with-us",
+  "rows": {
+   "Data": [
+    {
+     "title": "Partner with Us",
+     "title bn": "যোগ দিন&nbsp;",
+     "cover image": "/media/dynamic_image/Partner_With_Us_header_Ac2u8xD.jpg",
+     "cover image sd": "/media/dynamic_image/Website_Mobile_Header_Z3kbMJo.png",
+     "Data canvas": [
+      {
+       "title": "Partner with Us",
+       "title bn": "যোগ দিন",
+       "desc": "Cash and card payments are no longer a complete solution for your customers. Join the revolution and grow your sales by going cashless. Become an upay merchant partner, and enjoy a seamless payment collection process and a convenient customer experience. It&rsquo;s swift, effortless and perfect! We provide QR stickers, table-top standees and nifty hangings that your customers can use to make lightning fast payments. The money is credited to your own upay account.",
+       "desc bn": "উপায়ের মার্চেন্ট পার্টনার হয়ে পেমেন্ট কালেকশন&nbsp; প্রক্রিয়ার অভিজ্ঞতা উপভোগ করুন। এটি দ্রুত, ঝামেলাবিহীন এবং নিখুঁত! আমরা QR স্টিকার, টেবিল-টপ স্ট্যান্ডি এবং হ্যাঙ্গিংগুলি সরবরাহ করি, যা আপনার গ্রাহকরা দ্রুতগতিতে অর্থ প্রদানের জন্য ব্যবহার করতে পারেন। টাকাটি আপনার নিজের অ্যাপ অ্যাকাউন্টে জমা হয়।",
+       "image": "/media/dynamic_image/1st_section_pic_left_KPGMa6m.jpg",
+       "image sd": "/media/dynamic_image/1st_section_pic_left_Mobile.jpg"
+      }
+     ],
+     "Advantages": [
+      {
+       "title": "Our Advantages",
+       "title bn": "আমাদের সুবিধা",
+       "desc": "",
+       "desc bn": "",
+       "advantages list": [
+        {
+         "title": "Convenience",
+         "title bn": "সুবিধা",
+         "desc": "A convenient method of accepting remote payments very easily through upay app.",
+         "desc bn": "উপায় অ্যাপের মাধ্যমে খুব সহজেই রিমোট পেমেন্ট গ্রহণ করার একটি সুবিধাজনক পদ্ধতি রয়েছে।",
+         "image": "/media/dynamic_image/Affordable-01_1_d4Hkgpd.png",
+         "image sd": "/media/dynamic_image/Affordable-01_1_7noj8Ik.png"
+        },
+        {
+         "title": "Secured",
+         "title bn": "<p>সুরক্ষিত</p>",
+         "desc": "Your money&nbsp; is yours",
+         "desc bn": "আপনার টাকা আপনারই থাকবে।",
+         "image": "/media/dynamic_image/Customized_solution-01_1.png",
+         "image sd": "/media/dynamic_image/Customized_solution-01_1_BsAwmqf.png"
+        },
+        {
+         "title": "Management",
+         "title bn": "<p>ব্যবস্থাপনা</p>",
+         "desc": "<span style=\"font-weight: 400;\">Better accounting and inventory management</span>",
+         "desc bn": "<p>আরও ভালো অ্যাকাউন্টিং এবং ইনভেন্টরি ম্যানেজমেন্ট।</p>",
+         "image": "/media/dynamic_image/Security-01_1.png",
+         "image sd": "/media/dynamic_image/Security-01_1_cCVhxBW.png"
+        },
+        {
+         "title": "24x7 Help",
+         "title bn": "<p>২৪/৭ হেল্প</p>",
+         "desc": "<span style=\"font-weight: 400;\">Have a query and need help? Simply call us at 16268</span>",
+         "desc bn": "আপনার কিছু জানার আছে বা সাহায্যের প্রয়োজন? তাহলে আমাদের ১৬২৬৮ এ কল করুন।",
+         "image": "/media/dynamic_image/In_depth_understanding-01_1.png",
+         "image sd": "/media/dynamic_image/In_depth_understanding-01_1_RQN2s6v.png"
+        }
+       ]
+      }
+     ],
+     "Opportunities list": [
+      {
+       "title": "WHAT ARE THE PARTNERSHIP OPPORTUNITIES ?",
+       "title bn": "আমাদের সাথে পার্টনার হওয়ার সুবিধা কি কি ?&nbsp;",
+       "Opportunities": [
+        {
+         "title": "Agent",
+         "title bn": "এজেন্ট&nbsp;",
+         "image": "/media/dynamic_image/Agent-01_1.svg",
+         "image sd": "/media/dynamic_image/Agent-01_1_xuC4pIw.svg"
+        },
+        {
+         "title": "upay Point",
+         "title bn": "উপায় পয়েন্ট&nbsp;",
+         "image": "/media/dynamic_image/Upay_point-01_1.svg",
+         "image sd": "/media/dynamic_image/Upay_point-01_1_YG6NaaK.svg"
+        },
+        {
+         "title": "Merchant",
+         "title bn": "মার্চেন্ট&nbsp;&nbsp;",
+         "image": "/media/dynamic_image/Merchant-01_1.svg",
+         "image sd": "/media/dynamic_image/Merchant-01_1_hE2ZIOM.svg"
+        },
+        {
+         "title": "SME",
+         "title bn": "এসএমই&nbsp;",
+         "image": "/media/dynamic_image/SME-01_1.svg",
+         "image sd": "/media/dynamic_image/SME-01_1_8K7blgb.svg"
+        },
+        {
+         "title": "Educational<br />Institution",
+         "title bn": "শিক্ষা প্রতিষ্ঠান&nbsp;",
+         "image": "/media/dynamic_image/Educational_institution-01_1.svg",
+         "image sd": "/media/dynamic_image/Educational_institution-01_1_f65f0KB.svg"
+        },
+        {
+         "title": "RMG",
+         "title bn": "আরএমজি&nbsp;",
+         "image": "/media/dynamic_image/RMG-01_1.svg",
+         "image sd": "/media/dynamic_image/RMG-01_1_2cHE0so.svg"
+        },
+        {
+         "title": "Corporate",
+         "title bn": "কর্পোরেট&nbsp;",
+         "image": "/media/dynamic_image/Corporate-01_1.svg",
+         "image sd": "/media/dynamic_image/Corporate-01_1_t84myQq.svg"
+        },
+        {
+         "title": "NGO",
+         "title bn": "এনজিও&nbsp;",
+         "image": "/media/dynamic_image/NGO-01_1.svg",
+         "image sd": "/media/dynamic_image/NGO-01_1_RQ39YvU.svg"
+        }
+       ]
+      }
+     ],
+     "Valued Agents list": [
+      {
+       "title": "Our Valued Agents",
+       "title bn": "আমাদের মূল্যবান এজেন্ট&nbsp;",
+       "Valued Agents": [
+        {
+         "name": "Wasif Khan",
+         "name bn": "ওয়াসিফ খান",
+         "desc": "\"Congratulations to upay for starting the journey and giving me an opportunity.\"",
+         "desc bn": "উপায় এর নতুন শুরুতে আমি ধন্যবাদ জানাই",
+         "image": "/media/dynamic_image/main-qimg-2b21b9dd05c757fe30231fac65b504dd.png",
+         "image sd": "/media/dynamic_image/main-qimg-2b21b9dd05c757fe30231fac65b504dd_DMsmIaV.png"
+        },
+        {
+         "name": "Shibli Sadik",
+         "name bn": "শিবলী সাদিক",
+         "desc": "\" I am always with upay\"",
+         "desc bn": "আমি উপায় এর সাথে সবসময় আছি",
+         "image": "/media/dynamic_image/main-qimg-2b21b9dd05c757fe30231fac65b504dd_lkFuXRl.png",
+         "image sd": "/media/dynamic_image/main-qimg-2b21b9dd05c757fe30231fac65b504dd_ZhuyFAF.png"
+        }
+       ]
+      }
+     ],
+     "Merchant Partners list": [
+      {
+       "title": "OUR MERCHANT PARTNERS",
+       "title bn": "আমাদের মার্চেন্ট পার্টনার&nbsp;",
+       "Merchant Partners": [
+        {
+         "image": "/media/dynamic_image/1_1Qvsz2k.png",
+         "image sd": "/media/dynamic_image/1_nDKqFu9.png"
+        },
+        {
+         "image": "/media/dynamic_image/Grand_Mughal_logo-01.png",
+         "image sd": "/media/dynamic_image/Grand_Mughal_logo-01_9RCpGLy.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_CGfoMMH.png",
+         "image sd": "/media/dynamic_image/2_NQkJRje.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_7dbXmxh.png",
+         "image sd": "/media/dynamic_image/3_DefUD8v.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_JmaZyue.png",
+         "image sd": "/media/dynamic_image/4_HzAakyS.png"
+        },
+        {
+         "image": "/media/dynamic_image/1_znDRNSI.png",
+         "image sd": "/media/dynamic_image/1_LKGQrhR.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_0cNFPd6.png",
+         "image sd": "/media/dynamic_image/2_fuER1tz.png"
+        }
+       ]
+      }
+     ],
+     "Join with us API": [
+      {
+       "title": "want to join us ?",
+       "title bn": "আমাদের সাথে যোগ দিতে চান ?",
+       "desc": "Get the chance to provide a complete secured solution for your customer",
+       "desc bn": "আপনার গ্রাহকের জন্য একটি সম্পূর্ণ সুরক্ষিত সমাধান দেয়ার সুযোগ নিন",
+       "name": "api/v2/partner_with_us/"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "Partner-with-us"
+ }
+}

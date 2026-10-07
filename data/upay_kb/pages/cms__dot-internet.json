@@ -1,0 +1,88 @@
+{
+ "url": "https://www.upaybd.com/services/details/dot-internet",
+ "api": "https://api.upaybd.com/api/v2/pages/dot-internet",
+ "data": {
+  "title_english": "DOT Internet",
+  "title_bangla": "DOT Internet",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "DOT Internet",
+     "title bn": "DOT Internet",
+     "background image": "/media/dynamic_image/DOT_Internet_Logo.png",
+     "background image sd": "/media/dynamic_image/DOT_Internet_Logo_mdwtbW0.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "There is no need to worry about paying your internet bill physically. Through upay app, you can pay your internet bill easily anytime, anywhere",
+     "desc bn": "There is no need to worry about paying your internet bill physically. Through upay app, you can pay your internet bill easily anytime, anywhere",
+     "Methods": [
+      {
+       "title": "How to pay DOT Internet Bill ?",
+       "title bn": "How to pay DOT Internet Bill ?",
+       "desc": "",
+       "desc bn": "",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Untitled4.png",
+         "image sd": "/media/dynamic_image/Untitled4_KrCwD3a.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_cA7HZH8.png",
+         "image sd": "/media/dynamic_image/1_Vu20ZWw.png"
+        },
+        {
+         "image": "/media/dynamic_image/1_Id163xw.png",
+         "image sd": "/media/dynamic_image/1_ou0XmU6.png"
+        },
+        {
+         "image": "/media/dynamic_image/1_ILmFENK.png",
+         "image sd": "/media/dynamic_image/1_4D2oFFj.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_uPpYJA6.png",
+         "image sd": "/media/dynamic_image/2_Ff6RVSN.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_D7j2oZF.png",
+         "image sd": "/media/dynamic_image/3_7U2sLnX.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_uGfcTic.png",
+         "image sd": "/media/dynamic_image/4_JRzhyDu.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_EcKztDR.png",
+         "image sd": "/media/dynamic_image/5_em3J0ew.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "dot-internet"
+ }
+}

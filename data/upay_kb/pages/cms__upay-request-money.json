@@ -1,0 +1,120 @@
+{
+ "url": "https://www.upaybd.com/services/details/upay-request-money",
+ "api": "https://api.upaybd.com/api/v2/pages/upay-request-money",
+ "data": {
+  "title_english": "upay Request Money",
+  "title_bangla": "upay Request Money",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Request Money",
+     "title bn": "রিকোয়েস্ট মানি&nbsp;",
+     "background image": "/media/dynamic_image/Desktop_Request_Money_1_1CHlSOz_DT1IKPT.png",
+     "background image sd": "/media/dynamic_image/Mobile_Request_Money_1_pqt6lfA.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<div style=\"text-align: center;\">Now you do not have to worry about Agent, Personal or Merchant Number. With Request money feature, you can easily ask for money to any upay number.</div>",
+     "desc bn": "<div style=\"text-align: center;\">এজেন্ট, ব্যক্তিগত বা মার্চেন্ট নম্বর নিয়ে এখন আর চিন্তা নেই। রিকোয়েস্ট মানি ফিচারের মাধ্যমে আপনি সহজেই যেকোনো উপায় নম্বরে টাকা চাইতে পারেন।</div>",
+     "Methods": [
+      {
+       "title": "How to use Request Money Feature?",
+       "title bn": "কীভাবে রিকোয়েস্ট মানি ফিচার ব্যবহার করবেন?",
+       "desc": "Simply follow the below steps for the Request Money Feature in upay app",
+       "desc bn": "উপায় অ্যাপে রিকোয়েস্ট মানি ফিচার ব্যবহার করার জন্য নিচের সহজ পদক্ষেপগুলি অনুসরণ করুন",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Add_Money_from_Card_is_not_available_on_268_1.png",
+         "image sd": "/media/dynamic_image/Add_Money_from_Card_is_not_available_on_268_1_Z2G3aP4.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_GFMk5wP.png",
+         "image sd": "/media/dynamic_image/1_puMo1Sx.png"
+        },
+        {
+         "image": "/media/dynamic_image/1_2_aFlNyuM.png",
+         "image sd": "/media/dynamic_image/1_2_XFqtyiB.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_2_bTPtBrK.png",
+         "image sd": "/media/dynamic_image/2_2_ze12mpZ.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_3.png",
+         "image sd": "/media/dynamic_image/2_3_UlJC6P6.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_8hfObAp.png",
+         "image sd": "/media/dynamic_image/2_SPgJOEy.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_Pvkv1Py.png",
+         "image sd": "/media/dynamic_image/6_wSizgcZ.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_kbMdUJe.png",
+         "image sd": "/media/dynamic_image/7_pyUChqg.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_T8NVsy9.png",
+         "image sd": "/media/dynamic_image/8_huA2qtT.png"
+        },
+        {
+         "image": "/media/dynamic_image/9_Xa5UKz4.png",
+         "image sd": "/media/dynamic_image/9_yCQeTba.png"
+        },
+        {
+         "image": "/media/dynamic_image/10_KBbxApc.png",
+         "image sd": "/media/dynamic_image/10_shBBXkq.png"
+        },
+        {
+         "image": "/media/dynamic_image/11_FzzrU46.png",
+         "image sd": "/media/dynamic_image/11_yccyGHb.png"
+        },
+        {
+         "image": "/media/dynamic_image/12_kshRedE.png",
+         "image sd": "/media/dynamic_image/12_A4DAm6e.png"
+        },
+        {
+         "image": "/media/dynamic_image/13.png",
+         "image sd": "/media/dynamic_image/13_sxuVvoU.png"
+        },
+        {
+         "image": "/media/dynamic_image/14.png",
+         "image sd": "/media/dynamic_image/14_58fq2YO.png"
+        },
+        {
+         "image": "/media/dynamic_image/15.png",
+         "image sd": "/media/dynamic_image/15_v1hdGDr.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "upay-request-money"
+ }
+}

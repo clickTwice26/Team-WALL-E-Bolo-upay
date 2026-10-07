@@ -1,0 +1,141 @@
+{
+ "url": "https://www.upaybd.com/services/details/send-money",
+ "api": "https://api.upaybd.com/api/v2/pages/send-money",
+ "data": {
+  "title_english": "send money",
+  "title_bangla": "send money",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Send money",
+     "title bn": "সেন্ড মানি",
+     "background image": "/media/dynamic_image/Send_Money_desktop_MKEPUMZ.jpg",
+     "background image sd": "/media/dynamic_image/Untitled_design_7.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<div style=\"text-align: center;\"><span style=\"font-weight: 400;\">Send money to any উপায় (upay) number with only a few clicks. Now, you can send money easily through উপায় (upay) without any worry. Also, no need to worry about Cash Out charge, as you can add Cash Out charge while sending money to your friends and family.</span></div>",
+     "desc bn": "<div style=\"text-align: center;\">&nbsp;</div>\r\n<div style=\"text-align: center;\">এখন উপায় এর মাধ্যমে সেন্ড মানি করা খুব সহজ। আপনি কোনো চিন্তা ছাড়াই সেন্ড মানি করতে পারবেন উপায় অ্যাপ অথবা USSD-এর মাধ্যমে। এছাড়াও, ক্যাশ আউট চার্জ নিয়ে কোনো চিন্তা করতে হবে না। কারণ, উপায় অ্যাপ এর মাধ্যমে সেন্ড মানি করার সময় ক্যাশ আউট চার্জ অ্যাড করতে পারবেন সহজেই।&nbsp; &nbsp; &nbsp;&nbsp;</div>",
+     "Methods": [
+      {
+       "title": "How to Send Money through উপায় (upay)",
+       "title bn": "",
+       "desc": "<span style=\"font-weight: 400;\">Simply follow the below steps to Send Money easily through উপায় (upay)</span>",
+       "desc bn": "",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-32.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-32_8JquJaG.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-33.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-33_3UVsGDf.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-37.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-37_IsU5RS7.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-46.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-46_MOGQ7rL.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-55.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-55_5T0ubsB.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-60.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-60_ZgRseQA.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-61.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-61_zO2gn2f.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_nrklVZW.png",
+         "image sd": "/media/dynamic_image/1_IFqJseW.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_WXIxytT.png",
+         "image sd": "/media/dynamic_image/2_z2N144n.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_lXO3BRP.png",
+         "image sd": "/media/dynamic_image/3_pGBJlG5.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_ktWMnaF.png",
+         "image sd": "/media/dynamic_image/4_Vvu2Yah.png"
+        },
+        {
+         "image": "/media/dynamic_image/Send_Money.png",
+         "image sd": "/media/dynamic_image/Send_Money_UJHJ0Mx.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_3hAHFE6.png",
+         "image sd": "/media/dynamic_image/6_4dayhXr.png"
+        },
+        {
+         "image": "/media/dynamic_image/8.1.png",
+         "image sd": "/media/dynamic_image/8.1_EWKhZpp.png"
+        },
+        {
+         "image": "/media/dynamic_image/9.1.png",
+         "image sd": "/media/dynamic_image/9.1_f4bphWy.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "Lorem Ipsum",
+       "title bn": "Lorem Ipsum",
+       "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
+       "desc bn": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
+       "Tutorial": [
+        {
+         "title": "Lorem Ipsum ",
+         "title bn": "Lorem Ipsum",
+         "desc": "Lorem Ipsum",
+         "desc bn": "Lorem Ipsum",
+         "thumb image": "/media/dynamic_image/0_zMcmmOU.png",
+         "thumb image sd": "/media/dynamic_image/0_Y0JWKdR.png",
+         "video": "/media/dynamic_video/Small_short_test_video_dWW4boP.mp4",
+         "current video tutorial": "true"
+        },
+        {
+         "title": "Lorem Ipsum",
+         "title bn": "Lorem Ipsum",
+         "desc": "Lorem Ipsum",
+         "desc bn": "Lorem Ipsum",
+         "thumb image": "/media/dynamic_image/0_m9GWzYX.png",
+         "thumb image sd": "/media/dynamic_image/0_RbRE0pV.png",
+         "video": "/media/dynamic_video/Small_short_test_video_9R3PYJ5.mp4",
+         "current video tutorial": "false"
+        },
+        {
+         "title": "Lorem Ipsum",
+         "title bn": "Lorem Ipsum",
+         "desc": "Lorem Ipsum",
+         "desc bn": "Lorem Ipsum",
+         "thumb image": "/media/dynamic_image/0_Ob0zE9Y.png",
+         "thumb image sd": "/media/dynamic_image/0_U6tOnOc.png",
+         "video": "/media/dynamic_video/tea.mp4",
+         "current video tutorial": "false"
+        }
+       ]
+      }
+     ],
+     "Navigation": [
+      {
+       "slug url": "/nav/Navigation"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "send-money"
+ }
+}

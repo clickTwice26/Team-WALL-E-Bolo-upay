@@ -1,0 +1,121 @@
+{
+ "url": "https://www.upaybd.com/services/details/ucb-credit-card",
+ "api": "https://api.upaybd.com/api/v2/pages/ucb-credit-card",
+ "data": {
+  "title_english": "UCB Credit Card",
+  "title_bangla": "UCB Credit Card",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "UCB Credit Card",
+     "title bn": "UCB ক্রেডিট কার্ড&nbsp;",
+     "background image": "/media/dynamic_image/Credit_card_Mobile.jpg",
+     "background image sd": "/media/dynamic_image/Website_Mobile_Header_3.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<div style=\"text-align: center;\"><br />Last day to submit your credit card bill? No worries now you can pay your credit card bill through উপায় (upay).</div>",
+     "desc bn": "<div style=\"text-align: center;\"><br />ক্রেডিট কার্ড বিল দেয়ার শেষ দিন ? আর কোনো চিন্তা নেই কারণ উপায় এর মাধ্যমে সহজেই আপনার UCB ক্রেডিট কার্ড বিল পরিশোধ করুন।&nbsp;&nbsp;</div>",
+     "Methods": [
+      {
+       "title": "How to Pay your Credit Card Bill",
+       "title bn": "কিভাবে ক্রেডিট কার্ড বিল পরিশোধ করবেন ?&nbsp;",
+       "desc": "Using উপায় (upay) app, just in a few clicks, you can pay your UCB credit card bill easily.",
+       "desc bn": "কয়েকটি ক্লিক এর মাধ্যমে সহজেই UCB ক্রেডিট কার্ড বিল পরিশোধ করুন।&nbsp;",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Credit_Card__N8dBfIu.png",
+         "image sd": "/media/dynamic_image/Credit_Card__loDyr3n.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_knKjXnD.png",
+         "image sd": "/media/dynamic_image/1_wVxuP0R.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_lZA1ZGD.png",
+         "image sd": "/media/dynamic_image/2_dTfp4zq.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_By7GR3b.png",
+         "image sd": "/media/dynamic_image/3_DUs9QSP.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_crFVJ93.png",
+         "image sd": "/media/dynamic_image/4_2JxelI1.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_cJ5S7Wz.png",
+         "image sd": "/media/dynamic_image/5_j955xIw.png"
+        },
+        {
+         "image": "/media/dynamic_image/5.1.png",
+         "image sd": "/media/dynamic_image/5.1_1WsjnTQ.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_acNtN6i.png",
+         "image sd": "/media/dynamic_image/6_wYt2Ibe.png"
+        },
+        {
+         "image": "/media/dynamic_image/7.1.png",
+         "image sd": "/media/dynamic_image/7.1_UaflXba.png"
+        },
+        {
+         "image": "/media/dynamic_image/8.1_o0GyF6V.png",
+         "image sd": "/media/dynamic_image/8.1_EAxXHYb.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "Lorem Ipsum",
+       "title bn": "Lorem Ipsum",
+       "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
+       "desc bn": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
+       "Tutorial": [
+        {
+         "title": "Lorem Ipsum ",
+         "title bn": "Lorem Ipsum",
+         "desc": "Lorem Ipsum",
+         "desc bn": "Lorem Ipsum",
+         "thumb image": "/media/dynamic_image/0_zMcmmOU.png",
+         "thumb image sd": "/media/dynamic_image/0_Y0JWKdR.png",
+         "video": "/media/dynamic_video/Small_short_test_video_dWW4boP.mp4",
+         "current video tutorial": "true"
+        },
+        {
+         "title": "Lorem Ipsum",
+         "title bn": "Lorem Ipsum",
+         "desc": "Lorem Ipsum",
+         "desc bn": "Lorem Ipsum",
+         "thumb image": "/media/dynamic_image/0_m9GWzYX.png",
+         "thumb image sd": "/media/dynamic_image/0_RbRE0pV.png",
+         "video": "/media/dynamic_video/Small_short_test_video_9R3PYJ5.mp4",
+         "current video tutorial": "false"
+        },
+        {
+         "title": "Lorem Ipsum",
+         "title bn": "Lorem Ipsum",
+         "desc": "Lorem Ipsum",
+         "desc bn": "Lorem Ipsum",
+         "thumb image": "/media/dynamic_image/0_Ob0zE9Y.png",
+         "thumb image sd": "/media/dynamic_image/0_U6tOnOc.png",
+         "video": "/media/dynamic_video/tea.mp4",
+         "current video tutorial": "false"
+        }
+       ]
+      }
+     ],
+     "Navigation": [
+      {
+       "slug url": "/nav/Navigation"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "ucb-credit-card"
+ }
+}

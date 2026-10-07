@@ -1,0 +1,100 @@
+{
+ "url": "https://www.upaybd.com/services/details/khulna-wasa",
+ "api": "https://api.upaybd.com/api/v2/pages/khulna-wasa",
+ "data": {
+  "title_english": "Khulna Wasa",
+  "title_bangla": "Khulna Wasa",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Khulna WASA",
+     "title bn": "খুলনা ওয়াসা",
+     "background image": "/media/dynamic_image/Water_-_Desktop_Header_1Ju4pB8.png",
+     "background image sd": "/media/dynamic_image/Water_Mobile_Header_1tAOr6A.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<div style=\"text-align: center;\">Complete your Khulna WASA Bill in just a few steps. Check the process and know more on the details</div>",
+     "desc bn": "<div style=\"text-align: center;\">আপনার খুলনা ওয়াসা বিল পরিশোধ করুন মাত্র কয়েকটা ক্লিক করেই। নিয়ম জানতে নিচের ধাপ অনুসরণ করুন</div>",
+     "Methods": [
+      {
+       "title": "How to pay Khulna WASA bill ?",
+       "title bn": "কিভাবে খুলনা ওয়াসা বিল পরিশোধ করবেন ?",
+       "desc": "Simply follow the below steps",
+       "desc bn": "নিচের ধাপগুলো অনুসরণ করুন",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Not_Available_on_268.png",
+         "image sd": "/media/dynamic_image/Not_Available_on_268_HCmMpQq.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_8zsR4R3.png",
+         "image sd": "/media/dynamic_image/1_EifdbjE.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_TyaqtGH.png",
+         "image sd": "/media/dynamic_image/2_ZLuKU4k.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_hDQMX02.png",
+         "image sd": "/media/dynamic_image/3_vCZJXsZ.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_Z7thzK2.png",
+         "image sd": "/media/dynamic_image/4_UAfsaxu.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_V6BKis2.png",
+         "image sd": "/media/dynamic_image/5_IGcBZlR.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_s25RJfF.png",
+         "image sd": "/media/dynamic_image/6_7AkWXQN.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_YMwWddL.png",
+         "image sd": "/media/dynamic_image/7_o1U5TNM.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_Zo1ARoB.png",
+         "image sd": "/media/dynamic_image/8_Z7VUw3i.png"
+        },
+        {
+         "image": "/media/dynamic_image/9_WHKfOk4.png",
+         "image sd": "/media/dynamic_image/9_2bPWicN.png"
+        },
+        {
+         "image": "/media/dynamic_image/9_sbbKUeH.png",
+         "image sd": "/media/dynamic_image/9_lckdhqa.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "khulna-wasa"
+ }
+}

@@ -1,0 +1,117 @@
+{
+ "url": "https://www.upaybd.com/services/details/traffic-fine",
+ "api": "https://api.upaybd.com/api/v2/pages/traffic-fine",
+ "data": {
+  "title_english": "traffic fine",
+  "title_bangla": "traffic fine",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Traffic Fine",
+     "title bn": "ট্রাফিক ফাইন",
+     "background image": "/media/dynamic_image/Traffic_desktop_gTztWBW.jpg",
+     "background image sd": "/media/dynamic_image/Traffic_mobile_e0pk0cV.jpg",
+     "heading": "",
+     "heading bn": "",
+     "desc": "Giving Traffic fines is now easier than ever. No need to get in a long queue for a day for your traffic fines. Pay your traffic fine easily through উপায় (upay) app. Simply download the app, click on Traffic fine and follow the process. There is no more hassle or waiting to clear the traffic fine payment.",
+     "desc bn": "লম্বা লাইনের চিন্তা না করে সহজেই ট্রাফিক ফাইন পরিশোধ করুন উপায় এর মাধ্যমে।&nbsp; একমাত্র উপায় তাই আপনি ট্রাফিক ফাইন পরিশোধ করতে পারবেন কোনো ঝামেলা ছাড়াই।",
+     "Methods": [
+      {
+       "title": "How to pay your Traffic Fines?",
+       "title bn": "কিভাবে ট্রাফিক ফাইন পরিশোধ করবেন ?",
+       "desc": "Simply follow the below steps to complete your Traffic Fine payment",
+       "desc bn": "নিচের নিয়মগুলো দেখে সহজেই ট্রাফিক ফাইন পরিশোধ করুন&nbsp;",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-32_oeLeqA5.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-32_ttdjFdW.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-33_1AsSJWH.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-33_v0qjUuM.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-37_PFmKl7g.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-37_YxiSE60.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-38_j1RHT8A.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-38_u5ZhPBK.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-67_amoWdW5.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-67_Lhmf1nZ.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/traffic-fine-website.jpg",
+         "image sd": "/media/dynamic_image/traffic-fine-website_VT4TlHK.jpg"
+        },
+        {
+         "image": "/media/dynamic_image/Picture2.png",
+         "image sd": "/media/dynamic_image/23x_2Kxih6h.png"
+        },
+        {
+         "image": "/media/dynamic_image/Picture3.png",
+         "image sd": "/media/dynamic_image/33x_lqEiJZ3.png"
+        },
+        {
+         "image": "/media/dynamic_image/Picture4.png",
+         "image sd": "/media/dynamic_image/43x_YwM14DO.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "Lorem Ipsum",
+       "title bn": "Lorem Ipsum",
+       "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
+       "desc bn": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
+       "Tutorial": [
+        {
+         "title": "Lorem Ipsum ",
+         "title bn": "Lorem Ipsum",
+         "desc": "Lorem Ipsum",
+         "desc bn": "Lorem Ipsum",
+         "thumb image": "/media/dynamic_image/0_zMcmmOU.png",
+         "thumb image sd": "/media/dynamic_image/0_Y0JWKdR.png",
+         "video": "/media/dynamic_video/Small_short_test_video_dWW4boP.mp4",
+         "current video tutorial": "true"
+        },
+        {
+         "title": "Lorem Ipsum",
+         "title bn": "Lorem Ipsum",
+         "desc": "Lorem Ipsum",
+         "desc bn": "Lorem Ipsum",
+         "thumb image": "/media/dynamic_image/0_m9GWzYX.png",
+         "thumb image sd": "/media/dynamic_image/0_RbRE0pV.png",
+         "video": "/media/dynamic_video/Small_short_test_video_9R3PYJ5.mp4",
+         "current video tutorial": "false"
+        },
+        {
+         "title": "Lorem Ipsum",
+         "title bn": "Lorem Ipsum",
+         "desc": "Lorem Ipsum",
+         "desc bn": "Lorem Ipsum",
+         "thumb image": "/media/dynamic_image/0_Ob0zE9Y.png",
+         "thumb image sd": "/media/dynamic_image/0_U6tOnOc.png",
+         "video": "/media/dynamic_video/tea.mp4",
+         "current video tutorial": "false"
+        }
+       ]
+      }
+     ],
+     "Navigation": [
+      {
+       "slug url": "/nav/Navigation"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "traffic-fine"
+ }
+}

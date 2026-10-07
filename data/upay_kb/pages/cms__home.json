@@ -1,0 +1,189 @@
+{
+ "url": "https://www.upaybd.com/",
+ "api": "https://api.upaybd.com/api/v2/pages/home",
+ "data": {
+  "title_english": "home",
+  "title_bangla": "home",
+  "template_name": "home",
+  "rows": {
+   "Data": [
+    {
+     "Main Slider url ": "",
+     "segment one title": [
+      {
+       "titile": "why choose upay?",
+       "titile bn": "<div style=\"text-align: center;\">কেন উপায় বেছে নিবেন?</div>",
+       "desc": "We aim to usher in a new era in the digital financial service industry by keeping your needs at the front and center of everything we do.",
+       "desc bn": "ডিজিটাল আর্থিক সেবার এক নতুন যুগ সূচনা করার লক্ষ্য নিয়ে আমরা আপনাদের প্রয়োজনীয়তাকে সবার আগে এবং কেন্দ্রে রেখে সব কিছু করি।"
+      }
+     ],
+     "animated video": [
+      {
+       "video": "/media/dynamic_video/Comp_1.mp4"
+      }
+     ],
+     "icon": [
+      {
+       "titile": "Meaningful Innovation",
+       "title bn": "অর্থবহ উদ্ভাবন",
+       "desc": "With useful innovative features, উপায় is a brand that is dynamic and always ready to provide innovative solutions for catering the customer need.",
+       "desc bn": "যখন যেমন প্রয়োজন, তখন তেমন উদ্ভাবন নিয়ে উপায় প্রতিদিন এগিয়ে যেতে বদ্ধ-পরিকর। নিত্যনতুন উদ্ভাবনী সব ফিচার ও সেবা মানুষের প্রতিদিনের লেনদেনকে করছে যুগোপযোগী, সহজ ও স্বাচ্ছন্দময়।",
+       "image": "/media/dynamic_image/Group_11793-3_ni1yuPJ.svg",
+       "image sd": "/media/dynamic_image/Group_11793-3_FAkFnpW.svg"
+      },
+      {
+       "titile": "Simplicity",
+       "title bn": "সহজ ও সুবিধাজনক",
+       "desc": "উপায় believes in simplicity and making processes convenient with a simple and easy-to-use App and easy-to-understand pricing.",
+       "desc bn": "উপায় আছে সবার জন্য। দেশের সর্বস্তরের মানুষ যেনো সহজেই সব ধরণের লেনদেন করতে পারে - সেভাবেই তৈরি করা হয়েছে উপায়-এর অ্যাপ আর অন্যান্য সব ফিচার।",
+       "image": "/media/dynamic_image/Group_11793-2.svg",
+       "image sd": "/media/dynamic_image/Group_11793-2_lDkg0cS.svg"
+      },
+      {
+       "titile": "Availability",
+       "title bn": "হাতের কাছে উপায়",
+       "desc": "উপায় ensures availability of service for its customers throughout the country with wide coverage and multiple agent points.",
+       "desc bn": "দেশের ৬৪ টি জেলা জুড়ে উপায় পৌঁছে গেছে সব ধরণের আর্থিক সমাধান নিয়ে। জীবনের পথে বাধাহীন এগিয়ে যেতে, এখন হাত বাড়ালেই উপায় আছে।",
+       "image": "/media/dynamic_image/Group_11793-1_ClLAdyI.svg",
+       "image sd": "/media/dynamic_image/Group_11793-1_MKWbC2Z.svg"
+      },
+      {
+       "titile": "Celebration of<br />Life",
+       "title bn": "অনন্য&nbsp;&nbsp;<br />অভিজ্ঞতা",
+       "desc": "উপায় always looks at the brighter side of things. It champions freedom of choice, tries to make life comfortable for others.",
+       "desc bn": "গ্রাহকদের চাহিদাকে মাথায় রেখে উপায় নিশ্চিত করছে দ্রুততম ও সবচেয়ে মানসম্পন্ন সেবা।",
+       "image": "/media/dynamic_image/Group_11793-4.svg",
+       "image sd": "/media/dynamic_image/Group_11793-4_VdUuhbu.svg"
+      },
+      {
+       "titile": "Safety",
+       "title bn": "সর্বোচ্চ সুরক্ষা",
+       "desc": "উপায় ensures secured system, control mechanism, regulatory compliance and process orientation, which makes it safe and reliable.",
+       "desc bn": "ব্লকচেইন প্রযুক্তি এবং ডিভাইস অথেন্টিকেশনের মতো বৈশিষ্টগুলোর মাধ্যমে উপায় নিশ্চিত করছে গ্রাহকদের যেকোনো লেনদেনের সর্বোচ্চ নিরাপত্তা আর আগামীর সুরক্ষা।",
+       "image": "/media/dynamic_image/Group_11793.svg",
+       "image sd": "/media/dynamic_image/Group_11793_2zjKbq7.svg"
+      }
+     ],
+     "Get app": [
+      {
+       "icon": "/media/dynamic_image/Android_Icon.png",
+       "icon sd": "/media/dynamic_image/Android_Icon_uTifGrE.png",
+       "url": "https://cutt.ly/NzXvJDf"
+      },
+      {
+       "icon": "/media/dynamic_image/Apple-App-btn_N0RrXoK.svg",
+       "icon sd": "/media/dynamic_image/Apple-App-btn_N0RrXoK.svg",
+       "url": "https://apps.apple.com/us/app/upay-finance-and-payments/id1576179329"
+      }
+     ],
+     "services": [
+      {
+       "title": "Our Services",
+       "title bn": "আমাদের সার্ভিস",
+       "desc": "Our services are designed to make your regular financial transactions convenient and easy",
+       "desc bn": "আমাদের সার্ভিসগুলো আপনার নিয়মিত আর্থিক লেনদেন সুবিধাজনক এবং সহজ করার জন্য ডিজাইন করা হয়েছে।",
+       "service list": [
+        {
+         "title": "Cash In",
+         "title bn": "ক্যাশ ইন",
+         "icon": "/media/dynamic_image/Cash_In_XRcc55v.svg",
+         "icon sd": "/media/dynamic_image/Cash_In_W3hIPee.svg",
+         "slug url": "/ProductServices/Cash-in"
+        },
+        {
+         "title": "Cash Out",
+         "title bn": "ক্যাশ আউট",
+         "icon": "/media/dynamic_image/Cash_Out_BMbACdm.svg",
+         "icon sd": "/media/dynamic_image/Cash_Out_4jCh141.svg",
+         "slug url": "/products/Cash-Out"
+        },
+        {
+         "title": "Send Money",
+         "title bn": "সেন্ড মানি",
+         "icon": "/media/dynamic_image/Send_Money.svg",
+         "icon sd": "/media/dynamic_image/Send_Money_9zDpkFs.svg",
+         "slug url": "/services/details/send-money"
+        },
+        {
+         "title": "Make Payment",
+         "title bn": "মেক পেমেন্ট",
+         "icon": "/media/dynamic_image/Make_Payment.svg",
+         "icon sd": "/media/dynamic_image/Make_Payment_Newpfn9.svg",
+         "slug url": "/products/make-payment"
+        },
+        {
+         "title": "Add Money",
+         "title bn": "অ্যাড মানি",
+         "icon": "/media/dynamic_image/Add_money_option-01.svg",
+         "icon sd": "/media/dynamic_image/Add_money_option-01_Rj2XqUD.svg",
+         "slug url": "/products/Add-Money"
+        },
+        {
+         "title": "Pay Bill",
+         "title bn": "পে বিল",
+         "icon": "/media/dynamic_image/Icon-3.svg",
+         "icon sd": "/media/dynamic_image/Icon-3_3D3BSwf.svg",
+         "slug url": "/products/Pay-Bill"
+        },
+        {
+         "title": "Traffic Fine",
+         "title bn": "ট্রাফিক ফাইন&nbsp;",
+         "icon": "/media/dynamic_image/Icon-4.svg",
+         "icon sd": "/media/dynamic_image/Icon-4_YkEEV7v.svg",
+         "slug url": "/services/details/traffic-fine"
+        },
+        {
+         "title": "Mobile Recharge",
+         "title bn": "মোবাইল রিচার্জ",
+         "icon": "/media/dynamic_image/Mobile_recharge.svg",
+         "icon sd": "/media/dynamic_image/Mobile_recharge_5jMLM7X.svg",
+         "slug url": "/services/details/mobile-recharge"
+        },
+        {
+         "title": "Request Money",
+         "title bn": "রিকোয়েস্ট মানি",
+         "icon": "/media/dynamic_image/Untitled_design_1.svg",
+         "icon sd": "/media/dynamic_image/Untitled_design_1_R3oVsQK.svg",
+         "slug url": "/services/details/upay-request-money"
+        },
+        {
+         "title": "Indian Visa",
+         "title bn": "ইন্ডিয়ান ভিসা",
+         "icon": "/media/dynamic_image/IVAC.svg",
+         "icon sd": "/media/dynamic_image/IVAC_KamCNyE.svg",
+         "slug url": "/services/details/indian-visa"
+        },
+        {
+         "title": "Donation",
+         "title bn": "ডোনেশন",
+         "icon": "/media/dynamic_image/Untitled_design.svg",
+         "icon sd": "/media/dynamic_image/Untitled_design_8zrY2fv.svg",
+         "slug url": "/services/details/donation"
+        },
+        {
+         "title": "Fund Transfer",
+         "title bn": "ফান্ড ট্রান্সফার",
+         "icon": "/media/dynamic_image/Untitled_design_1_q0h08bG.svg",
+         "icon sd": "/media/dynamic_image/Untitled_design_1_K4ZENAl.svg",
+         "slug url": "/products/utility/transfer-fund"
+        }
+       ]
+      }
+     ],
+     "find us": [
+      {
+       "title": "Where to find us&nbsp;",
+       "title bn": "আমাদের সার্ভিস লোকেশন&nbsp;",
+       "desc": "Our upay agent&rsquo;s, merchants &amp; customer care is waiting to meet you! We are widely available, covering all 64 districts of Bangladesh.Come find us!",
+       "desc bn": "আমাদের উপায় এজেন্ট, মার্চেন্ট এবং কাস্টমার কেয়ার আপনার জন্য অপেক্ষা করছে! আমরা বাংলাদেশের ৬৪টি জেলা জুড়ে বিস্তৃতভাবে ছড়িয়ে রয়েছি। আমাদের খুঁজে নিন।",
+       "image": "/media/dynamic_image/Animation_Where_to_Find_Us.gif",
+       "image sd": "/media/dynamic_image/Animation_Where_to_Find_Us.png",
+       "service location url": "/Service-location"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "home"
+ }
+}

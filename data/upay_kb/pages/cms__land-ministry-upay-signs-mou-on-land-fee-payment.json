@@ -1,0 +1,55 @@
+{
+ "url": "https://www.upaybd.com/services/details/land-ministry-upay-signs-mou-on-land-fee-payment",
+ "api": "https://api.upaybd.com/api/v2/pages/land-ministry-upay-signs-mou-on-land-fee-payment",
+ "data": {
+  "title_english": "Land ministry, upay signs MoU on land fee payment",
+  "title_bangla": "Land ministry, upay signs MoU on land fee payment",
+  "template_name": "template-e",
+  "rows": {
+   "Data": [
+    {
+     "title": "Press Release",
+     "title bn": "",
+     "cover image": "/media/dynamic_image/Website_Desktop_Header_1_1.png",
+     "cover image sd": "/media/dynamic_image/Mobile_Desktop_Header_1_1.png",
+     "segment one": [
+      {
+       "title": "Land ministry, upay signs MoU on land fee payment",
+       "title bn": "",
+       "desc": "upay, a leading mobile financial service provider in the country today signed a Memorandum of Understanding (MoU) with the Ministry of Land facilitating the citizens of Bangladesh to pay different land related fees through upay. <br /><br />Sydul Haque Khandker and Pradip Kumar Das, Additional Secretary (Development) of the Land Ministry signed the MoU on behalf of their respective organizations. Saifuzzaman Chowdhury MP, the Hon&rsquo;ble Minister for Land was present at the signing ceremony as the chief guest. <br /><br />Among others, Md Mustafizur Rahman PAA, Honorable Secretary, Ministry of Land, Jahid Hossain Panir, Deputy Secretary, Digital Cell, Ministry of Land, Arif Quadri, Acting Managing Director, UCB, ATM Tahmiduzzaman FCS, Deputy Managing Director &amp; Company Secretary of UCB; Mr. Md. Sekander-E-Azam, Executive Vice President of UCB, Saad Mohammad Faizul Karim, Director, Business Sales, upay were present at the signing ceremony. <br /><br />Under the MoU, upay users will be able to pay various land related fees which include fee for e-porcha, mutation and Land Development Tax (LD Tax), sitting at the comfort of their home. upay, which launched its service in March is a subsidiary of UCB to provide mobile based financial service to the common people of Bangladesh.",
+       "desc bn": "",
+       "image": "/media/dynamic_image/Press_Release_Inner_-_1440_x_680_1.png",
+       "image sd": "/media/dynamic_image/Press_Release_Inner_-_1440_x_680_1_7PzbALz.png",
+       "sub title": "",
+       "sub title bn": "",
+       "sub desc": "",
+       "sub desc bn": "",
+       "sub image": "",
+       "sub image sd": ""
+      }
+     ],
+     "Segment two": [],
+     "Segment three": [
+      {
+       "title": "Share This Article",
+       "title bn": "",
+       "facebook icon": "",
+       "facebook icon sd": "",
+       "instagram icon": "",
+       "instagram icon sd": ""
+      }
+     ],
+     "Segment four": [
+      {
+       "title": "Other Announcements",
+       "title bn": "",
+       "desc": "Check out the other announcements from upay",
+       "desc bn": ""
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "land-ministry-upay-signs-mou-on-land-fee-payment"
+ }
+}

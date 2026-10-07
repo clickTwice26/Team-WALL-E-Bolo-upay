@@ -1,0 +1,92 @@
+{
+ "url": "https://www.upaybd.com/services/details/btcl",
+ "api": "https://api.upaybd.com/api/v2/pages/btcl",
+ "data": {
+  "title_english": "BTCL",
+  "title_bangla": "BTCL",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "BTCL Domain Bill",
+     "title bn": "BTCL Domain Bill",
+     "background image": "/media/dynamic_image/BTCL_Logo.png",
+     "background image sd": "/media/dynamic_image/BTCL_Logo_4aqJnyr.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "There is no need to worry about paying your BTCL Domain bill physically. Through upay app, you can pay your internet bill easily anytime, anywhere",
+     "desc bn": "There is no need to worry about paying your BTCL Domain bill physically. Through upay app, you can pay your internet bill easily anytime, anywhere",
+     "Methods": [
+      {
+       "title": "How to pay BTCL Domain Bill?",
+       "title bn": "How to pay BTCL Domain Bill?",
+       "desc": "",
+       "desc bn": "",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Untitled3.png",
+         "image sd": "/media/dynamic_image/Untitled3_iFYka5d.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_QVZzbnl.png",
+         "image sd": "/media/dynamic_image/1_bloDrd7.png"
+        },
+        {
+         "image": "/media/dynamic_image/1_c9EdvXV.png",
+         "image sd": "/media/dynamic_image/1_ykUMxrO.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_Nio5cZW.png",
+         "image sd": "/media/dynamic_image/3_b3RXJFn.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_H6uE6kF.png",
+         "image sd": "/media/dynamic_image/4_Bccn5ga.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_itO2jaJ.png",
+         "image sd": "/media/dynamic_image/5_XOpW5gG.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_Y6XyD3m.png",
+         "image sd": "/media/dynamic_image/6_MNo1cSw.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_pmmtiU1.png",
+         "image sd": "/media/dynamic_image/7_j3e1Ow6.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_UxRLop1.png",
+         "image sd": "/media/dynamic_image/8_nClwL5P.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "btcl"
+ }
+}

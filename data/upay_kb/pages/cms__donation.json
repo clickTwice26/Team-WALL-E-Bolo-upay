@@ -1,0 +1,84 @@
+{
+ "url": "https://www.upaybd.com/services/details/donation",
+ "api": "https://api.upaybd.com/api/v2/pages/donation",
+ "data": {
+  "title_english": "Donation",
+  "title_bangla": "Donation",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Donation",
+     "title bn": "ডোনেশন",
+     "background image": "/media/dynamic_image/Donation_desktop.jpg",
+     "background image sd": "/media/dynamic_image/Mobile_Donation.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<div style=\"text-align: left;\">Your small donation can bring a smile; by donating you can feed a hungry family. Let&rsquo;s show some care to the unprivileged ones by donating a little. Through our charity partners, your little gesture will make a huge difference.<br /><br />\r\n<table style=\"border-collapse: collapse; width: 80.2689%; height: 171px;\" border=\"1\">\r\n<tbody>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 8.47921%; height: 19px; text-align: center;\">SL&nbsp;</td>\r\n<td style=\"width: 39.4401%; height: 19px; text-align: center;\">Donation Merchant Name</td>\r\n<td style=\"width: 47.7063%; height: 19px; text-align: center;\">Merchant Number&nbsp;</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 8.47921%; height: 19px; text-align: center;\">1</td>\r\n<td style=\"width: 39.4401%; height: 19px; text-align: center;\">Obhizatrik Foundation</td>\r\n<td style=\"width: 47.7063%; height: 19px; text-align: center;\">01701666305</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 8.47921%; height: 19px; text-align: center;\">2</td>\r\n<td style=\"width: 39.4401%; height: 19px; text-align: center;\">As Sunnah Foundation</td>\r\n<td style=\"width: 47.7063%; height: 19px; text-align: center;\">01408304050</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 8.47921%; height: 19px; text-align: center;\">3</td>\r\n<td style=\"width: 39.4401%; height: 19px; text-align: center;\">Mastul Foundation</td>\r\n<td style=\"width: 47.7063%; height: 19px; text-align: center;\">01730482279</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 8.47921%; height: 19px; text-align: center;\">4</td>\r\n<td style=\"width: 39.4401%; height: 19px; text-align: center;\">Friendship NGO</td>\r\n<td style=\"width: 47.7063%; height: 19px; text-align: center;\">01847287716</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 8.47921%; height: 19px; text-align: center;\">5</td>\r\n<td style=\"width: 39.4401%; height: 19px; text-align: center;\">Amal Foundation</td>\r\n<td style=\"width: 47.7063%; height: 19px; text-align: center;\">01729199596</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 8.47921%; height: 19px; text-align: center;\">6</td>\r\n<td style=\"width: 39.4401%; height: 19px; text-align: center;\">Jaago Foundation</td>\r\n<td style=\"width: 47.7063%; height: 19px; text-align: center;\">01777742130, 01777742131</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 8.47921%; height: 19px; text-align: center;\">7</td>\r\n<td style=\"width: 39.4401%; height: 19px; text-align: center;\">Ek Takay Ahar</td>\r\n<td style=\"width: 47.7063%; height: 19px; text-align: center;\">01878116232</td>\r\n</tr>\r\n<tr style=\"height: 19px;\">\r\n<td style=\"width: 8.47921%; height: 19px; text-align: center;\">8</td>\r\n<td style=\"width: 39.4401%; height: 19px; text-align: center;\">Bidyanondo&nbsp;</td>\r\n<td style=\"width: 47.7063%; text-align: center;\" width=\"143\">\r\n<p>01878116230</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>",
+     "desc bn": "<div style=\"text-align: center;\">আপনার ক্ষুদ্র ক্ষুদ্র অনুদান আনতে পারে একটি ক্ষুধার্ত পরিবারের মুখে হাসি। আসুন আমরা সবাই ডোনেট করে কিছু সুবিধাবঞ্চিত পরিবারের পাশে দাঁড়াই। আমাদের সকলের এই অংশীদারিত্ব এনে দিতে পারে একটি বিশাল পরিবর্তন।</div>",
+     "Methods": [
+      {
+       "title": "How to donate ?",
+       "title bn": "কীভাবে ডোনেশন ফিচার ব্যবহার করবেন ?",
+       "desc": "Simply follow the below steps to donate via upay",
+       "desc bn": "উপায়-এর মাধ্যমে ডোনেট করার পদক্ষেপগুলো নিম্নে অনুসরণ করুন",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Donation.png",
+         "image sd": "/media/dynamic_image/Donation_nQm5RZL.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_1_oPmKwY1.png",
+         "image sd": "/media/dynamic_image/1_1_lkGwizg.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_1_nquQElm.png",
+         "image sd": "/media/dynamic_image/2_1.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_2_x28C2GV.png",
+         "image sd": "/media/dynamic_image/2_2_1KN0mzM.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_3_BUaBNQB.png",
+         "image sd": "/media/dynamic_image/2_3_Dw3iMdv.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_N4DC2Dy.png",
+         "image sd": "/media/dynamic_image/5_5rYFLb3.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_1.png",
+         "image sd": "/media/dynamic_image/6_1_R7w9nZR.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "donation"
+ }
+}

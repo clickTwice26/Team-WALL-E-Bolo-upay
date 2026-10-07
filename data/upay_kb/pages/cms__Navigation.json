@@ -1,0 +1,55 @@
+{
+ "url": "https://www.upaybd.com/need-help",
+ "api": "https://api.upaybd.com/api/v2/pages/Navigation",
+ "data": {
+  "title_english": "Navigation",
+  "title_bangla": "Navigation",
+  "template_name": "template-f",
+  "rows": {
+   "Data": [
+    {
+     "title": "Let Us Help You",
+     "title bn": "আমরা আপনার সহযোগিতায় নিয়োজিত",
+     "desc": "We are always here for you, every step of the way. Have a query and need help? Our team is ready to answer all your questions.",
+     "desc bn": "আমরা সর্বদা আপনার সহযোগিতায় পাশে আছি। আপনার কোনো জিজ্ঞাসা আছে? অথবা কোনো সাহায্য প্রয়োজন? আমাদের টিম আপনার সমস্ত প্রশ্নের উত্তর দিতে প্রস্তুত।",
+     "app list": [
+      {
+       "title": "16268-Talk To Us",
+       "title bn": "১৬২৬৮",
+       "desc": "Simply give us a call and we are here for you 24/7",
+       "desc bn": "আমরা আছি ২৪/৭। কল করুন যে কোনো সময়।",
+       "icon": "/media/dynamic_image/call_us.svg",
+       "icon sd": "/media/dynamic_image/call_us_TYjUz5L.svg",
+       "image": "/media/dynamic_image/Untitled_design_1_mXJwXTK.png",
+       "image sd": "/media/dynamic_image/Untitled_design_2_2Ah7tbi.png",
+       "url": "16268"
+      },
+      {
+       "title": "Messenger",
+       "title bn": "মেসেঞ্জার",
+       "desc": "We are available on Facebook as well. Inbox us anytime anywhere",
+       "desc bn": "আমরা ফেসবুকে আছি। &nbsp;আমাদের মেসেজ করুন যে কোনো সময়।",
+       "icon": "/media/dynamic_image/Facebook_Messenger.svg",
+       "icon sd": "/media/dynamic_image/Facebook_Messenger_5qNEScl.svg",
+       "image": "/media/dynamic_image/Messenger_Desktop_1_1.jpg",
+       "image sd": "/media/dynamic_image/Messenger_mobile_1_1.jpg",
+       "url": "http://m.me/upaybangladesh"
+      },
+      {
+       "title": "Chat with Us",
+       "title bn": "মেসেজ করুন আমাদের",
+       "desc": "Message us 1 on 1 anytime",
+       "desc bn": "আমাদের সাথে কথা বলুন সরাসরি",
+       "icon": "/media/dynamic_image/WASIF_BHAI_1.svg",
+       "icon sd": "/media/dynamic_image/WASIF_BHAI_1_4J5d884.svg",
+       "image": "/media/dynamic_image/LiveChat_Background_780x945.png",
+       "image sd": "/media/dynamic_image/510x618_Livechat_Background_Mobile.png",
+       "url": "https://customerservice.upaybd.com/"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "Navigation"
+ }
+}

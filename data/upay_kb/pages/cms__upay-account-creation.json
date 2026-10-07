@@ -1,0 +1,120 @@
+{
+ "url": "https://www.upaybd.com/services/details/upay-account-creation",
+ "api": "https://api.upaybd.com/api/v2/pages/upay-account-creation",
+ "data": {
+  "title_english": "upay account creation",
+  "title_bangla": "upay account creation",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "upay Registration",
+     "title bn": "উপায় রেজিস্ট্রেশন&nbsp;",
+     "background image": "/media/dynamic_image/New_Account_Creation_header_ieHSiKc.jpg",
+     "background image sd": "/media/dynamic_image/Website_Mobile_Header.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<br />\r\n<div style=\"text-align: center;\">Creating a new account in উপায় (upay) is very easy and convenient. You can easily open your own account by downloading the উপায় (upay) app or visiting your nearest উপায় (upay) agent.</div>",
+     "desc bn": "<div style=\"text-align: center;\">&nbsp;উপায় এর মাধ্যমে নতুন একাউন্ট করা এখন খুব সহজ।&nbsp; আপনি সহজেই নতুন একাউন্ট তৈরী করতে পারবেন উপায় অ্যাপ অথবা ভিজিট করুন আপনার নিকটস্থ উপায় এজেন্ট পয়েন্টে।&nbsp;&nbsp;</div>",
+     "Methods": [
+      {
+       "title": "How to create a new upay account ?",
+       "title bn": "",
+       "desc": "Simply follow the below steps to create a new upay account.",
+       "desc bn": "",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Add_Money_from_Card_is_not_available_on_268.png",
+         "image sd": "/media/dynamic_image/Add_Money_from_Card_is_not_available_on_268_SAQxRly.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/Self_Registration_01MD8KD.png",
+         "image sd": "/media/dynamic_image/Self_Registration_X6nCA5u.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_sn4PX61.png",
+         "image sd": "/media/dynamic_image/2_XZ198eo.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_0mjGoKH.png",
+         "image sd": "/media/dynamic_image/3_SWRNVTN.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_HqPmxFI.png",
+         "image sd": "/media/dynamic_image/4_m3l4hG3.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_Y3cC0Ms.png",
+         "image sd": "/media/dynamic_image/5_uvdb5Dh.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_kUzLVtP.png",
+         "image sd": "/media/dynamic_image/6_U03Z1Xk.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_pu4m1Be.png",
+         "image sd": "/media/dynamic_image/7_uncABMB.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_40GmZws.png",
+         "image sd": "/media/dynamic_image/8_a8wqHh6.png"
+        },
+        {
+         "image": "/media/dynamic_image/Picture1_Self_Reg.png",
+         "image sd": "/media/dynamic_image/Picture1_Self_Reg_9kxXONM.png"
+        },
+        {
+         "image": "/media/dynamic_image/10_ItB6h4r.png",
+         "image sd": "/media/dynamic_image/10_XvkJdKB.png"
+        },
+        {
+         "image": "/media/dynamic_image/11_g8voraV.png",
+         "image sd": "/media/dynamic_image/11_2tt8HXy.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_33wm3dy.png",
+         "image sd": "/media/dynamic_image/3_sOkpRKO.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_qd8n1c5.png",
+         "image sd": "/media/dynamic_image/2_ITDiYx5.png"
+        },
+        {
+         "image": "/media/dynamic_image/12_N4c4D1K.png",
+         "image sd": "/media/dynamic_image/12_ZZSeGT0.png"
+        },
+        {
+         "image": "/media/dynamic_image/10_khAPPP8.png",
+         "image sd": "/media/dynamic_image/10_aczooQB.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "upay-account-creation"
+ }
+}

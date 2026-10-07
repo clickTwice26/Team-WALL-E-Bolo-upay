@@ -1,0 +1,137 @@
+{
+ "url": "https://www.upaybd.com/services/details/mobile-recharge",
+ "api": "https://api.upaybd.com/api/v2/pages/mobile-recharge",
+ "data": {
+  "title_english": "mobile recharge",
+  "title_bangla": "mobile recharge",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Mobile Recharge",
+     "title bn": "মোবাইল রিচার্জ",
+     "background image": "/media/dynamic_image/Untitled_design_6.png",
+     "background image sd": "/media/dynamic_image/Website_Mobile_Header_1.png",
+     "heading": "",
+     "heading bn": "",
+     "desc": "<div style=\"text-align: center;\">Your mobile recharge is just a few clicks away with উপায় (upay). Talk to your loved ones endlessly without worrying about running out of balance as you can recharge your phone any time, which includes prepaid/postpaid airtime, internet megabytes, bundle packages, and more.<br /><br />In addition to recharging your desired amount, you can also purchase Popular pack directly from upay app in just a few taps.&nbsp;</div>\r\n<div style=\"text-align: center;\"><br /><br /></div>",
+     "desc bn": "<p style=\"text-align: center;\">উপায়-এর সাথে আপনার মোবাইল রিচার্জ এখন মাত্র কয়েকটি ক্লিক দূরে। প্রিয়জনের সাথে কথা বলার সময় এখন আর ব্যালেন্স শেষ হয়ে যাওয়ার চিন্তা নেই। <br /><br />কেননা, আপনি এখন যেকোনো সময় আপনার ফোনে প্রিপেইড/পোস্টপেইড এয়ারটাইম, ইন্টারনেট ম্যাগাবাইট, বান্ডেল প্যাকেজ রিচার্জ করে নিতে পারবেন উপায় মোবাইল রিচার্জের মাধ্যমে।&nbsp;<br /><br /></p>",
+     "Methods": [
+      {
+       "title": "How to Recharge?",
+       "title bn": "কিভাবে মোবাইল রিচার্জ করবেন ?",
+       "desc": "<span style=\"font-weight: 400;\">Recharge to any number quickly with ease and convenience </span>",
+       "desc bn": "মোবাইল রিচার্জ এর বিস্তারিত প্রক্রিয়া এখানে দেওয়া হল:",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-32_czsLIwZ.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-32_YO4pSOG.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-33_xAB1Yrf.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-33_su1esX4.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-37_JqNj2wZ.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-37_SgYBXH5.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-46_rUmDHVv.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-46_9ou3u2J.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-55_FallReL.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-55_p8HQHDj.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-61_NgdPxLg.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-61_agwgvCM.png"
+        },
+        {
+         "image ": "/media/dynamic_image/Artboard-9-copy-62.png",
+         "image sd": "/media/dynamic_image/Artboard-9-copy-62_3Jg248c.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_TeZ9iy8.png",
+         "image sd": "/media/dynamic_image/1_8SzDrFw.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_W0jT0fs.png",
+         "image sd": "/media/dynamic_image/2_xvAroln.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_6tizjDh.png",
+         "image sd": "/media/dynamic_image/3_qh0m77a.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_Qc0gMlX.png",
+         "image sd": "/media/dynamic_image/4_Gw0RRE9.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_5dpUx8o.png",
+         "image sd": "/media/dynamic_image/5_hoo9MtS.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_8sSc4rq.png",
+         "image sd": "/media/dynamic_image/6_kJIn0tZ.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_TxnwDIh.png",
+         "image sd": "/media/dynamic_image/7_GBlg8UF.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "Lorem Ipsum",
+       "title bn": "Lorem Ipsum",
+       "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
+       "desc bn": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
+       "Tutorial": [
+        {
+         "title": "Lorem Ipsum ",
+         "title bn": "Lorem Ipsum",
+         "desc": "Lorem Ipsum",
+         "desc bn": "Lorem Ipsum",
+         "thumb image": "/media/dynamic_image/0_zMcmmOU.png",
+         "thumb image sd": "/media/dynamic_image/0_Y0JWKdR.png",
+         "video": "/media/dynamic_video/Small_short_test_video_dWW4boP.mp4",
+         "current video tutorial": "true"
+        },
+        {
+         "title": "Lorem Ipsum",
+         "title bn": "Lorem Ipsum",
+         "desc": "Lorem Ipsum",
+         "desc bn": "Lorem Ipsum",
+         "thumb image": "/media/dynamic_image/0_m9GWzYX.png",
+         "thumb image sd": "/media/dynamic_image/0_RbRE0pV.png",
+         "video": "/media/dynamic_video/Small_short_test_video_9R3PYJ5.mp4",
+         "current video tutorial": "false"
+        },
+        {
+         "title": "Lorem Ipsum",
+         "title bn": "Lorem Ipsum",
+         "desc": "Lorem Ipsum",
+         "desc bn": "Lorem Ipsum",
+         "thumb image": "/media/dynamic_image/0_Ob0zE9Y.png",
+         "thumb image sd": "/media/dynamic_image/0_U6tOnOc.png",
+         "video": "/media/dynamic_video/tea.mp4",
+         "current video tutorial": "false"
+        }
+       ]
+      }
+     ],
+     "Navigation": [
+      {
+       "slug url": "/nav/Navigation"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "mobile-recharge"
+ }
+}

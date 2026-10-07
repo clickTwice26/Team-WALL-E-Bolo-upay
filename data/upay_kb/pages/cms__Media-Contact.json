@@ -1,0 +1,39 @@
+{
+ "url": "https://www.upaybd.com/Media",
+ "api": "https://api.upaybd.com/api/v2/pages/Media-Contact",
+ "data": {
+  "title_english": "Media Contact",
+  "title_bangla": "Media Contact",
+  "template_name": "media-contact",
+  "rows": {
+   "Data": [
+    {
+     "title": "MEDIA CONTACT",
+     "title bn": "মিডিয়া কন্টাক্ট&nbsp;",
+     "cover image": "/media/dynamic_image/Media_Center_Media_Contact_Newsroom__desktop_jV8zY8T.jpg",
+     "cover image sd": "/media/dynamic_image/Website_Mobile_Header_4_YA7xyVa.png",
+     "segment one": [
+      {
+       "title": "Contact us for any media related queries",
+       "title bn": "মিডিয়া সম্পর্কিত যেকোনো প্রশ্নের জন্য আমাদের সাথে যোগাযোগ করুন।",
+       "desc": "<p><span style=\"font-weight: 400;\">upay is dedicated to answer any of your queries or comments that would help you in your journalistic needs.</span></p>\r\n<p><span style=\"font-weight: 400;\">For any questions, please send your queries to info@upaybd.com.</span><span style=\"font-weight: 400;\">&nbsp;</span></p>\r\n<p><span style=\"font-weight: 400;\">Please Note:</span></p>\r\n<p><span style=\"font-weight: 400;\">Our media contacts do not have access to customer records, thus unable to assist with customer enquiries.</span></p>\r\n<p><span style=\"font-weight: 400;\">For customer service and related enquiries, please use the Customer Service section of this website.</span></p>\r\n<p><span style=\"font-weight: 400;\">For enquiries about job opportunities, please visit our LinkedIn Page.</span></p>",
+       "desc bn": "যে কোনো সাংবাদিকতা প্রয়োজনে উপায় আপনার যে কোনো প্রশ্নের উত্তর দিয়ে সহায়তা করতে প্রস্তুত। যে কোনো প্রশ্নের জন্য আমাদের ইমেইল করুন <span style=\"font-weight: 400;\">info@upaybd.com</span><br /><br /><br />আমাদের মিডিয়া প্রতিনিধি কোনো রকম গ্রাহক রেকর্ডে অ্যাক্সেস নেই, সুতরাং গ্রাহকদের অনুসন্ধানে সহায়তা করতে পারবে না।&nbsp; চাকরি সংক্রান্ত তথ্য জানতে হলে, আমাদের Linkedin পেজ ভিজিট করুন।&nbsp; &nbsp;<br /><br /><br />&nbsp;&nbsp;"
+      },
+      {
+       "title": "TEST",
+       "title bn": "",
+       "desc": "TEST",
+       "desc bn": ""
+      }
+     ],
+     "Segment two": [
+      {
+       "slug url": "/nav/Navigation"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "Media-Contact"
+ }
+}

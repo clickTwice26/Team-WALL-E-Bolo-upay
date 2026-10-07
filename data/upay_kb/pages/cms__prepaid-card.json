@@ -1,0 +1,221 @@
+{
+ "url": "https://www.upaybd.com/prepaid-card",
+ "api": "https://api.upaybd.com/api/v2/pages/prepaid-card",
+ "data": {
+  "title_english": "Prepaid Card",
+  "title_bangla": "প্রিপেইড কার্ড",
+  "template_name": "template-prepaid-card",
+  "rows": {
+   "Data": [
+    {
+     "cover title": "upay Card",
+     "cover title bn": "উপায়&nbsp;কার্ড",
+     "cover image": "/media/dynamic_image/Prepaid-card-Home-page-Banner_Jc5iCRp.jpg",
+     "cover image sd": "/media/dynamic_image/Prepaid-card-Home-page-Banner_6YfpvHu.jpg",
+     "Advantages": [
+      {
+       "title": "Benefits",
+       "title bn": "সুবিধাসমূহ",
+       "desc": "",
+       "desc bn": "",
+       "Under Advantages": [
+        {
+         "title": "Easy to Use",
+         "title bn": "<strong>সহজে ব্যবহারযোগ্য</strong>",
+         "desc": "You can easily add money onto the card directly from&nbsp;<strong>উপায়</strong>&nbsp;App. Additionally, you can load your card at any of the 130,000+ <strong>উপায়</strong> Agents across the country",
+         "desc bn": "আপনি উপায় অ্যাপ থেকে সহজেই আপনার কার্ডে সরাসরি টাকা যোগ অ্যাড পারবেন। এছাড়াও, দেশের ১,৩০,০০০+ উপায় এজেন্টের যেকোনো একটিতে গিয়ে আপনার কার্ডে টাকা লোড করতে পারবেন",
+         "image": "/media/dynamic_image/Icon_13_Feb_2025_Prepaid_Website-01.jpg",
+         "image sd": "/media/dynamic_image/Icon_13_Feb_2025_Prepaid_Website-01_S3L9B0F.jpg"
+        },
+        {
+         "title": "No Bank Account Needed",
+         "title bn": "<strong>ব্যাংক অ্যাকাউন্টের প্রয়োজন নেই</strong>",
+         "desc": "Anyone can easily obtain an UCB-<strong>উপায়</strong>&nbsp;co-branded prepaid card without the need of any physical document or applications",
+         "desc bn": "কোনো ফিজিক্যাল ডকুমেন্ট বা আবেদন ছাড়াই যে কেউ সহজেই UCB-উপায় কো-ব্র্যান্ডেড প্রিপেইড কার্ড পেতে পারেন!",
+         "image": "/media/dynamic_image/Icon_13_Feb_2025_Prepaid_Website-09.jpg",
+         "image sd": "/media/dynamic_image/Icon_13_Feb_2025_Prepaid_Website-09_ddF5RZo.jpg"
+        },
+        {
+         "title": "Complete Control from App",
+         "title bn": "<strong>অ্যাপ থেকেই সম্পূর্ণ নিয়ন্ত্রণ</strong>",
+         "desc": "You can access your card related information, like card balance and transaction directly from <strong>উপায়</strong> app",
+         "desc bn": "আপনি উপায় অ্যাপ থেকে সরাসরি আপনার কার্ড সংক্রান্ত তথ্য, যেমন কার্ড ব্যালেন্স এবং লেনদেন দেখতে পারেন",
+         "image": "/media/dynamic_image/Icon_13_Feb_2025_Prepaid_Website-03.jpg",
+         "image sd": "/media/dynamic_image/Icon_13_Feb_2025_Prepaid_Website-03_XiPSYq7.jpg"
+        },
+        {
+         "title": "Dual Currency",
+         "title bn": "<strong>ডুয়াল কারেন্সি</strong>",
+         "desc": "Our prepaid card is a dual currency card, which enables you to utilize the fund for any foreign currency transactions",
+         "desc bn": "আমাদের একটি ডুয়াল কারেন্সি কার্ড, যার মাধ্যমে আপনি যেকোনো বিদেশি মুদ্রায় লেনদেন করতে পারবেন!&nbsp;",
+         "image": "/media/dynamic_image/Icon_13_Feb_2025_Prepaid_Website-05.jpg",
+         "image sd": "/media/dynamic_image/Icon_13_Feb_2025_Prepaid_Website-05_jtTpUJX.jpg"
+        },
+        {
+         "title": "Globally Accepted",
+         "title bn": "<strong>বিশ্বব্যাপী স্বীকৃত!</strong>",
+         "desc": "This prepaid card enables you to access ATMs, Merchant Payment (Online and Offline), Digital Marketing Payment globally",
+         "desc bn": "এই প্রিপেইড কার্ডের মাধ্যমে আপনি বিশ্বব্যাপী এটিএম, মার্চেন্ট পেমেন্ট (অনলাইন ও অফলাইন) এবং ডিজিটাল মার্কেটিং পেমেন্ট করতে পারবেন।",
+         "image": "/media/dynamic_image/Icon_13_Feb_2025_Prepaid_Website-06.jpg",
+         "image sd": "/media/dynamic_image/Icon_13_Feb_2025_Prepaid_Website-06_JELuvpX.jpg"
+        }
+       ]
+      }
+     ],
+     "Segment card": [
+      {
+       "title": "<div style=\"text-align: center;\">FIRST EVER MFS CO-BRANDED PREPAID CARD IN THE COUNTRY</div>",
+       "title bn": "<div style=\"text-align: center;\">দেশের প্রথম MFS কো-ব্র্যান্ডেড প্রিপেইড কার্ড</div>",
+       "desc": "<div style=\"text-align: center;\">Introducing UCB&ndash;উপায় co branded Prepaid Card, which is designed to revolutionize the way you manage your finances and transactions, offering a host of benefits without the hassle of opening a bank account</div>",
+       "desc bn": "<div style=\"text-align: center;\">আপনার আর্থিক ব্যবস্থাপনা এবং লেনদেনকে সহজ করার জন্য আমরা উপস্থাপন করছি UCB&ndash;উপায় কো-ব্র্যান্ডেড প্রিপেইড কার্ড। এটি ব্যাংক অ্যাকাউন্ট খোলার কোন ঝামেলা ছাড়াই নানা সুবিধা প্রদান করে</div>",
+       "Under Segment card": [
+        {
+         "title": "How to apply?",
+         "title bn": "কিভাবে আবেদন করবেন?",
+         "desc": "",
+         "desc bn": "",
+         "readmore link": "https://www.youtube.com/watch?v=NMeDIC9slAg",
+         "image": "/media/dynamic_image/registration-korar-niyom.jpg",
+         "image sd": "/media/dynamic_image/registration-korar-niyom_GGbJbTt.jpg"
+        },
+        {
+         "title": "How to Load?",
+         "title bn": "কীভাবে লোড করবেন?",
+         "desc": "",
+         "desc bn": "",
+         "readmore link": "https://www.youtube.com/watch?v=R5jKFVsSSNQ",
+         "image": "/media/dynamic_image/balance-load-korar-niyom.jpg",
+         "image sd": "/media/dynamic_image/balance-load-korar-niyom_eqs2oRy.jpg"
+        }
+       ]
+      }
+     ],
+     "Icons": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under Icons": [
+        {
+         "image": "/media/dynamic_image/app-store-apple-download-logo-png-favpng-2BMS9KidgmX2fHMtAhjpVHway_WEtHAfO.jpg",
+         "image sd": "/media/dynamic_image/app-store-apple-download-logo-png-favpng-2BMS9KidgmX2fHMtAhjpVHway_i7bc8Yt.jpg",
+         "link": "https://play.google.com/store/apps/details?id=bd.com.upay.customer&amp;hl=en"
+        },
+        {
+         "image": "/media/dynamic_image/app-store-apple-download-logo-png-favpng-2BMS9KidgmX2fHMtAhjpVHway_mDEVy9G.jpg",
+         "image sd": "/media/dynamic_image/app-store-apple-download-logo-png-favpng-2BMS9KidgmX2fHMtAhjpVHway_6T1qdWN.jpg",
+         "link": "https://apps.apple.com/us/app/upay-finance-and-payments/id1576179329"
+        }
+       ]
+      }
+     ],
+     "Segment two": [
+      {
+       "title": "Current Offers",
+       "title bn": "বর্তমান অফারসমূহ",
+       "desc": "<p><strong>Get a glimpse on the exciting ongoing offers upon payment from </strong><strong>উপায় Prepaid Card</strong></p>",
+       "desc bn": "<strong>উপায় প্রিপেইড কার্ড দিয়ে পেমেন্ট করলে যেসকল অফারগুলো পেতে পারেন</strong>",
+       "Under Segment two": [
+        {
+         "title": "Coffee and Bakery",
+         "title bn": "কফি এবং বেকারি",
+         "desc": "Indulge in your favorite baked delights while enjoying up to&nbsp;20% off&nbsp;at select, prestigious bakeries partnered with UCB.",
+         "desc bn": "স্বাদে ভরা বেকড খাবার ও প্রিমিয়াম কফি উপভোগ করুন, সাথে ২০% পর্যন্ত ছাড়ও পান।",
+         "image": "/media/dynamic_image/UPAY_Bakaries--coffe-Offer_Adaptation_HSV40Cu.png",
+         "image sd": "/media/dynamic_image/UPAY_Bakaries--coffe-Offer_Adaptation_jjBLrtI.png",
+         "slug url": "/Latest-offer/prepaid-card-bakery-offer"
+        },
+        {
+         "title": "<p class=\"card-title\">Air Astra</p>",
+         "title bn": "<p class=\"card-title\">এয়ার অ্যাস্ট্রা</p>",
+         "desc": "Flat 10% discount on domestic flight bookings from Air Astra just by paying with your উপায় Prepaid Card",
+         "desc bn": "উপায় প্রিপেইড কার্ড দিয়ে এয়ার অ্যাস্ট্রার অভ্যন্তরীণ ফ্লাইট বুকিংয়ে ১০% ছাড় উপভোগ করুন।",
+         "image": "/media/dynamic_image/UPAYxAIR_ASTRAWebsite_banner_Desktop_2500X11811400x680_Hhh7mKC.jpg",
+         "image sd": "/media/dynamic_image/UPAYxAIR_ASTRAWebsite_banner_Mobile_1522X2500828x1360.jpg",
+         "slug url": "/Latest-offer/prepaid-card-air-astra-offer"
+        },
+        {
+         "title": "Local Lifestyle Merchants",
+         "title bn": "<p class=\"card-title\">লোকাল লাইফস্টাইল স্টোর</p>",
+         "desc": "With the UCB-উপায় Prepaid Card, unlock a world of exclusive local lifestyle discounts, making your everyday shopping more affordable and enjoyable!",
+         "desc bn": "আপনার প্রিয় লাইফস্টাইল স্টোরে UCB-উপায় প্রিপেইড কার্ড দিয়ে সাশ্রয়ের নতুন দুনিয়ায় প্রবেশ করুন।",
+         "image": "/media/dynamic_image/Upay-_Web-banner_LIFE-STYLE_pWKGZXI.png",
+         "image sd": "/media/dynamic_image/Upay-_Web-banner_LIFE-STYLE_2SnJqEz.png",
+         "slug url": "/Latest-offer/prepaid-card-lifestyle-offer"
+        }
+       ]
+      }
+     ],
+     "Segment three": [
+      {
+       "title": "Frequently Asked Questions",
+       "title bn": "আরও জানুন",
+       "desc": "",
+       "desc bn": "",
+       "Under Segment three": [
+        {
+         "title": "What is the UCB - <strong>উপায়</strong> Prepaid Card?",
+         "title bn": "UCB -<strong> উপায় প্রিপেইড কার্ডটি আসলে কি?</strong>",
+         "desc": "The UCB - <strong>উপায়</strong> Prepaid Card is a card unlike common bank cards, it is not required to conduct credit assessment like credit card and open the account like debit cards. This card is designed to use anywhere in the globe under foreign currency regulation of Bangladesh Bank. This card works in similar fashion of credit card that allows purchase, cash withdrawal and ecommerce transaction.",
+         "desc bn": "UCB - <strong>উপায় প্রিপেইড কার্ড একটি ব্যতিক্রমী কার্ড, যা সাধারণ ব্যাংক কার্ডের মতো নয়। এটি ক্রেডিট কার্ডের মতো ক্রেডিট মূল্যায়নের প্রয়োজন হয় না এবং ডেবিট কার্ডের মতো অ্যাকাউন্ট খুলতে হয় না। বাংলাদেশ ব্যাংকের বৈদেশিক মুদ্রা নীতিমালার অধীনে, এই কার্ডটি বিশ্বব্যাপী ব্যবহারের জন্য ডিজাইন করা হয়েছে। এটি ক্রেডিট কার্ডের মতোই কাজ করে, যা কেনাকাটা, নগদ উত্তোলন এবং ই-কমার্স লেনদেনের সুবিধা প্রদান করে।</strong>",
+         "image": "",
+         "image sd": ""
+        },
+        {
+         "title": "Who is eligible for the UCB - <strong>উপায়</strong> Prepaid Card?",
+         "title bn": "UCB - <strong>উপায়&nbsp;প্রিপেইড কার্ডের জন্য কারা যোগ্য</strong>?",
+         "desc": "Any Bangladeshi National who has a Full Profile Active upay account are eligible for the UCB - <strong>উপায়</strong> Prepaid Card. Customer can apply for the card from any upay Point.",
+         "desc bn": "<strong>যে কোনো বাংলাদেশি নাগরিক, যার সম্পূর্ণ প্রোফাইল অ্যাক্টিভ উপায় অ্যাকাউন্ট রয়েছে, তিনি </strong>UCB -<strong> উপায় প্রিপেইড কার্ডের জন্য যোগ্য। গ্রাহক যে কোনো উপায় পয়েন্ট থেকে কার্ডের জন্য আবেদন করতে পারেন।</strong>",
+         "image": "",
+         "image sd": ""
+        },
+        {
+         "title": "Which documents are required to apply UCB -&nbsp;<strong>উপায়</strong> Prepaid Card?",
+         "title bn": "UCB - <strong>উপায় প্রিপেইড কার্ডের জন্য আবেদন করতে কি কি প্রয়োজন?</strong>",
+         "desc": "<p>No physical document will be required to avail the co-branded prepaid card. However, customer need to have the followings while apply the card from any&nbsp;<strong>উপায়</strong> Point.<strong> </strong>Below documents are required for international prepaid card:</p>\r\n<ul>\r\n<li>Active Full Profile&nbsp;<strong>উপায়</strong> Account</li>\r\n<li>Nominee NID Number</li>\r\n<li>Nominee Date of Birth (as per NID)</li>\r\n</ul>",
+         "desc bn": "<p data-start=\"0\" data-end=\"178\"><strong>কো-ব্র্যান্ডেড প্রিপেইড কার্ডের জন্য কোনো ফিজিক্যাল ডকুমেন্টের প্রয়োজন নেই। তবে, গ্রাহকের নিম্নলিখিত তথ্য থাকতে হবে যখন তিনি যে কোনো উপায় পয়েন্ট থেকে কার্ডের জন্য আবেদন করবেন।</strong></p>\r\n<p data-start=\"180\" data-end=\"363\"><strong data-start=\"180\" data-end=\"233\">ডুয়াল কারেন্সি প্রিপেইড কার্ডের জন্য প্রয়োজনীয় তথ্য:</strong><br data-start=\"233\" data-end=\"236\" />✔ <strong data-start=\"238\" data-end=\"277\" data-is-only-node=\"\">সক্রিয় ফুল প্রোফাইল উপায় অ্যাকাউন্ট</strong><br data-start=\"277\" data-end=\"280\" />✔ <strong data-start=\"282\" data-end=\"322\">নমিনির জাতীয় পরিচয়পত্র (NID) নম্বর</strong><br data-start=\"322\" data-end=\"325\" />✔ <strong data-start=\"327\" data-end=\"361\">নমিনির জন্মতারিখ (NID অনুযায়ী)</strong></p>",
+         "image": "",
+         "image sd": ""
+        },
+        {
+         "title": "What is Active Full Profile<strong> উপায় </strong>Account?",
+         "title bn": "<strong>এক্টিভ ফুল প্রোফাইল উপায় অ্যাকাউন্ট আসলে কি?&nbsp;</strong>",
+         "desc": "Active Full Profile <strong>উপায়</strong> Account means, a <strong>উপায়</strong> user have NID information (as per EC/Parichay) and verified selfie. Customer with no NID information and/or unverified selfie need to update <strong>উপায়</strong> account to get the prepaid card.",
+         "desc bn": "<p data-start=\"0\" data-end=\"166\"><strong>সক্রিয় ফুল প্রোফাইল উপায় অ্যাকাউন্টের অর্থ হলো, একজন উপায় ব্যবহারকারীর জাতীয় পরিচয়পত্র (NID) সংক্রান্ত তথ্য (EC/পরিচয় অনুযায়ী) এবং যাচাইকৃত সেলফি থাকতে হবে।</strong></p>\r\n<p data-start=\"168\" data-end=\"288\" data-is-last-node=\"\" data-is-only-node=\"\"><strong>যেসব গ্রাহকের NID তথ্য নেই বা সেলফি যাচাই হয়নি, তাদের উপায় অ্যাকাউন্ট আপডেট করতে হবে প্রিপেইড কার্ড পাওয়ার জন্য।</strong></p>",
+         "image": "",
+         "image sd": ""
+        },
+        {
+         "title": "How many days it takes to receive the card?",
+         "title bn": "<strong>কার্ডটি পেতে কত দিন লাগে?</strong>",
+         "desc": "You will get the physical (plastic) card within 15 days of card issuance fee payment",
+         "desc bn": "<strong>আপনি কার্ড ইস্যু ফি পরিশোধের ১৫ দিনের মধ্যে ফিজিক্যাল (প্লাস্টিক) কার্ড পেয়ে যাবেন।</strong>",
+         "image": "",
+         "image sd": ""
+        },
+        {
+         "title": "What type of transaction can be done using UCB&ndash;<strong>উপায়</strong> Prepaid Card?&nbsp;",
+         "title bn": "UCB - <strong>উপায় প্রিপেইড কার্ড ব্যবহার করে কী ধরনের লেনদেন করা যায়?</strong>",
+         "desc": "<p>UCB&ndash;<strong>উপায়</strong> Prepaid Cards are allowed to purchase, cash withdrawal and e-commerce transaction in both local and foreign currency (by maintaining travel quota policy).</p>",
+         "desc bn": "<div class=\"flex max-w-full flex-col flex-grow\">\r\n<div class=\"min-h-8 text-message relative flex w-full flex-col items-end gap-2 whitespace-normal break-words text-start [.text-message+&amp;]:mt-5\" dir=\"auto\" data-message-author-role=\"assistant\" data-message-id=\"3d2008fd-d950-4f0e-8ee8-77893682073f\" data-message-model-slug=\"gpt-4o\">\r\n<div class=\"flex w-full flex-col gap-1 empty:hidden first:pt-[3px]\">\r\n<div class=\"markdown prose w-full break-words dark:prose-invert light\">\r\n<p data-start=\"0\" data-end=\"138\" data-is-last-node=\"\" data-is-only-node=\"\">UCB&ndash;উপায় প্রিপেইড কার্ড ব্যবহার করে স্থানীয় ও বিদেশি মুদ্রায় (ভ্রমণ কোটার নীতি মেনে) কেনাকাটা, নগদ উত্তোলন এবং ই-কমার্স লেনদেন করা যায়।</p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>",
+         "image": "",
+         "image sd": ""
+        },
+        {
+         "title": "What are the limits and charges for this card?",
+         "title bn": "এই কার্ডের লিমিট এবং চার্জেস কী কী?",
+         "desc": "Click the link here to see the detailed limits and charges for UCB - upay co-branded Prepaid Card - <a href=\"https://www.upaybd.com/products/prepaid-card-process\">Limits And Charges</a>",
+         "desc bn": "লিংকে ক্লিক করে দেখে ফেলুন ইউসিবি - উপায় কো - ব্র্যান্ডেড প্রিপেইড কার্ড - &nbsp; <a href=\"https://www.upaybd.com/products/prepaid-card-process\">Limits And Charges</a>",
+         "image": "",
+         "image sd": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "prepaid-card"
+ }
+}

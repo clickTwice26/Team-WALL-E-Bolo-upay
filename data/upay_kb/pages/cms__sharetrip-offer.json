@@ -1,0 +1,57 @@
+{
+ "url": "https://www.upaybd.com/services/details/sharetrip-offer",
+ "api": "https://api.upaybd.com/api/v2/pages/sharetrip-offer",
+ "data": {
+  "title_english": "ShareTrip Offer",
+  "title_bangla": "ShareTrip Offer",
+  "template_name": "template-h",
+  "rows": {
+   "Data": [
+    {
+     "image": "/media/dynamic_image/u-Pay_ShareTrip_70-10perc_Web-Banner_1140x680px.jpg",
+     "image sd": "/media/dynamic_image/u-Pay_ShareTrip_70-10perc_Web-Banner_1140x680px_8OP9tGu.jpg",
+     "Details data": [
+      {
+       "title": "Up to 10% Discount on flight booking &amp; up to 70% on Hotel &amp; Resort booking with upay",
+       "title bn": "উপায়-এর মাধ্যমে ফ্লাইট বুকিংয়ে সর্বোচ্চ ১০% ডিসকাউন্ট এবং হোটেল ও রিসোর্ট বুকিংয়ে সর্বোচ্চ ৭০% ডিসকাউন্ট!",
+       "desc": "<p><strong>Campaign Period:&nbsp; Till</strong><em> 31 October, 2026<br /><br /></em><strong>Campaign Details:<br /></strong>upay customers will receive Up to 10% Discount on flight booking &amp; up to 70% discount on Hotel &amp; Resort booking when they book flights and resorts via Sharetrip and make payments through upay during the campaign period.</p>\r\n<p><strong>Terms &amp; Conditions:&nbsp;</strong></p>",
+       "desc bn": "<p><strong>ক্যাম্পেইনের সময়কাল</strong>: ০১ থেকে ৩১ অক্টোবর ২০২৬ পর্যন্ত।<br /><br /><strong>ক্যাম্পেইনের বিস্তারিত:</strong></p>\r\n<p>ক্যাম্পেইন চলাকালীন Sharetrip-এর মাধ্যমে ফ্লাইট বুকিং করে উপায় দিয়ে পেমেন্ট করলে সর্বোচ্চ ১০% ডিসকাউন্ট ও হোটেল ও রিসোর্ট বুকিং করে উপায় দিয়ে পেমেন্ট করলে গ্রাহকরা বুকিংয়ে সর্বোচ্চ ৭০% পর্যন্ত ডিসকাউন্ট পাবেন।</p>\r\n<p><strong>শর্তাবলি</strong></p>",
+       "sub title": "",
+       "sub title bn": "",
+       "sub desc": "",
+       "sub desc bn": "",
+       "key value": [
+        {
+         "title": "Customer will get the discount multiple times** as per the selected individual merchant&rsquo;s policy during the Campaign Period.",
+         "title bn": "ক্যাম্পেইন চলাকালীন সময়ে নির্বাচিত প্রতিটি মার্চেন্টের নীতিমালা অনুযায়ী গ্রাহক একাধিকবার** ডিসকাউন্ট পেতে পারেন।"
+        },
+        {
+         "title": "Discount is applicable for online payment only.",
+         "title bn": "ডিসকাউন্ট শুধুমাত্র অনলাইন পেমেন্টের ক্ষেত্রে প্রযোজ্য।"
+        },
+        {
+         "title": "upay is neither liable nor responsible for the merchant&rsquo;s inability to ensure the availability or delivery of the product since upay is only providing a payment service to the customer.",
+         "title bn": "উপায় শুধুমাত্র পেমেন্ট সেবা প্রদান করছে। মার্চেন্টের পণ্য বা সেবার মান, প্রাপ্যতা নিশ্চিত করা বা সরবরাহ করতে ব্যর্থ হওয়ার জন্য উপায় কোনোভাবেই দায়ী থাকবে না।"
+        },
+        {
+         "title": "<p>** Different Merchants offer different count of discount offer for the Customers.</p>",
+         "title bn": "মার্চেন্ট ভেদে গ্রাহকদের জন্য এই ডিসকাউন্ট অফার ভিন্ন হতে পারে।"
+        }
+       ]
+      }
+     ],
+     "May like": [
+      {
+       "title": "Other offer",
+       "title bn": "Other offer",
+       "desc": "",
+       "desc bn": "",
+       "Under May like": []
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "sharetrip-offer"
+ }
+}

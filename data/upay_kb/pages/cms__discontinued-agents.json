@@ -1,0 +1,34 @@
+{
+ "url": "https://www.upaybd.com/discontinued-agents",
+ "api": "https://api.upaybd.com/api/v2/pages/discontinued-agents",
+ "data": {
+  "title_english": "Discontinued Agents",
+  "title_bangla": "ডিসকন্টিনিউড এজেন্টস",
+  "template_name": "template-i",
+  "rows": {
+   "Data": [
+    {
+     "title": "",
+     "title bn": "",
+     "cover image": "",
+     "cover image sd": "",
+     "segment one": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "sub title": "",
+       "sub title bn": "",
+       "sub desc": "",
+       "sub desc bn": "",
+       "image": "",
+       "image sd": ""
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "discontinued-agents"
+ }
+}

@@ -1,0 +1,100 @@
+{
+ "url": "https://www.upaybd.com/services/details/card-to-upay",
+ "api": "https://api.upaybd.com/api/v2/pages/card-to-upay",
+ "data": {
+  "title_english": "Card to upay",
+  "title_bangla": "Card to upay",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Card to upay",
+     "title bn": "কার্ড টু উপায়",
+     "background image": "/media/dynamic_image/Desktop_Card_to_upay_1_1.png",
+     "background image sd": "/media/dynamic_image/Card_to_upay_2.jpg",
+     "heading": "Add Money to your উপায় account from any card seamlessly!",
+     "heading bn": "যেকোনো ব্যাংকের কার্ড থেকে উপায় অ্যাকাউন্টে টাকা আনুন খুব সহজেই, কোনো চার্জ ছাড়াই!",
+     "desc": "<br /><span style=\"font-size: 12pt;\">No need to worry about adding money to your upay account. Now you can Add Money to your upay Account from any VISA, Mastercard and City Bank American Express (AMEX) card issued in Bangladesh.</span><br /><br />\r\n<ul>\r\n<li><span style=\"font-size: 12pt;\">You can add maximum BDT 50,000 per day to any upay account in up to 20 transactions. The monthly limit is BDT 300,000 and up to 50 transactions in total.</span></li>\r\n<li><span style=\"font-size: 12pt;\">For Add Money through Credit Card, charges may be imposed by the issuing bank as per schedule of charges. Please contact the card issuing bank for details.</span></li>\r\n<li><span style=\"font-size: 12pt;\">Always remember, never share your upay App PIN &amp; verification code and Card PIN number with anyone.</span></li>\r\n</ul>\r\n.",
+     "desc bn": "<span style=\"font-size: 12pt;\"><br />এখন যেকোনো ভিসা, মাস্টারকার্ড অথবা সিটি ব্যাংক আমেরিকান এক্সপ্রেস (অ্যামেক্স)কার্ড থেকে উপায় অ্যাকাউন্টে টাকা আনতে পারবেন অনায়াসে, কোনো চার্জ ছাড়াই।</span><br /><br />\r\n<ul>\r\n<li><span style=\"font-size: 12pt;\">*একটি উপায় অ্যাকাউন্টে দৈনিক সর্বোচ্চ ৫০,০০০ টাকা পর্যন্ত অ্যাড মানি করা যাবে। প্রতিদিন সর্বোচ্চ ২০ বার অ্যাড মানি করতে পারবেন। এভাবে প্রতি মাসে সর্বোচ্চ ৫০ বার, সর্বমোট ৩,০০,০০০ টাকা পর্যন্ত অ্যাড মানি করতে পারবেন।</span></li>\r\n<li><span style=\"font-size: 12pt;\">* অ্যাড মানি সার্ভিসের ক্ষেত্রে কার্ড দিয়ে উপায়-এ টাকা কার্ড প্রদানকারী ব্যাংক কর্তৃক চার্জ আরোপিত হতে পারে। বিস্তারিত জানতে কার্ড প্রদানকারী ব্যাংকের সাথে যোগাযোগ করুন।</span></li>\r\n<li><span style=\"font-size: 12pt;\">* মনে রাখবেন, কখনোই কারো সাথে উপায় অ্যাপ-এর পিন ও ভেরিকিকেশন কোড, কার্ড-এর পিন নম্বর শেয়ার করবেন না।&nbsp;&nbsp;</span></li>\r\n</ul>",
+     "Methods": [
+      {
+       "title": "How to Add Money via Card ?",
+       "title bn": "কার্ড এর মাধ্যমে কিভাবে অ্যাড মানি করতে হয় ?&nbsp;",
+       "desc": "Simply follow the below steps in order to add money via Card",
+       "desc bn": "নিচের নিয়ম দেখে অ্যাড মানি করে ফেলুন সহজেই&nbsp;",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Add_Money_from_Card_is_not_available_on__268.png",
+         "image sd": "/media/dynamic_image/Add_Money_from_Card_is_not_available_on__268_1.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/1_UMNlM0O.png",
+         "image sd": "/media/dynamic_image/1_2pEIVoE.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_kVntkDw.png",
+         "image sd": "/media/dynamic_image/2_1YlsI4K.png"
+        },
+        {
+         "image": "/media/dynamic_image/3_d9fcBwG.png",
+         "image sd": "/media/dynamic_image/3_Dqmyw0M.png"
+        },
+        {
+         "image": "/media/dynamic_image/4_RYxcyt2.png",
+         "image sd": "/media/dynamic_image/4_X5qg5Me.png"
+        },
+        {
+         "image": "/media/dynamic_image/5_wSgKy20.png",
+         "image sd": "/media/dynamic_image/5_GSXb7d4.png"
+        },
+        {
+         "image": "/media/dynamic_image/6_0DrrW9c.png",
+         "image sd": "/media/dynamic_image/6_DEDq5Nb.png"
+        },
+        {
+         "image": "/media/dynamic_image/7_rQ9Py78.png",
+         "image sd": "/media/dynamic_image/7_xDbfUoZ.png"
+        },
+        {
+         "image": "/media/dynamic_image/8_Pzi0iqj.png",
+         "image sd": "/media/dynamic_image/8_a9UG0Gu.png"
+        },
+        {
+         "image": "/media/dynamic_image/9_WFPv5Vv.png",
+         "image sd": "/media/dynamic_image/9_sVbBxfN.png"
+        },
+        {
+         "image": "/media/dynamic_image/10_NQLaI3B.png",
+         "image sd": "/media/dynamic_image/10_7Ij4K04.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "Check tutorial",
+       "title bn": "Check tutorial",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "card-to-upay"
+ }
+}

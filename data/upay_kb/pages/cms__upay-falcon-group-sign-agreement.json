@@ -1,0 +1,55 @@
+{
+ "url": "https://www.upaybd.com/services/details/upay-falcon-group-sign-agreement",
+ "api": "https://api.upaybd.com/api/v2/pages/upay-falcon-group-sign-agreement",
+ "data": {
+  "title_english": "upay, Falcon Group sign agreement",
+  "title_bangla": "upay, Falcon Group sign agreement",
+  "template_name": "template-e",
+  "rows": {
+   "Data": [
+    {
+     "title": "Press Release",
+     "title bn": "",
+     "cover image": "/media/dynamic_image/Website_Desktop_Header_1_UhohXB1.png",
+     "cover image sd": "/media/dynamic_image/Mobile_Desktop_Header_1_p5RcOZ1.png",
+     "segment one": [
+      {
+       "title": "upay, Falcon Group sign agreement on salary disbursement",
+       "title bn": "",
+       "desc": "upay, a leading mobile financial service provider in the country signed an agreement with Falcon group recently to facilitate the Falcon Group disburse monthly salaries to their employees through upay.<br /><br />Sydul H Khandker, Managing Director and CEO of upay and Mahtab Uddin Ahmed Chowdhury, Chairman &amp; Managing Director of Falcon Group signed the agreement on behalf of their respective organizations held at the head office of upay Gulshan. <br /><br />Among others, Ziaur Rahman, Chief Strategy Officer, Md. Nur-E-Alam Siddiquee, Chief Financial Officer, Saad Mohammad Faizul Karim, Director, Business Sales, Biplab Banerjee, Director, Distribution Sales and S.M. Wahid Ferdous, Senior Manager Business Sales of upay and Dulal Chandra Sarker, General Manager of Falcon Group were present at the signing ceremony. <br /><br />upay, a subsidiary of United Commercial Bank launched its operation in March 2021 aiming to provide mobile financial services to the people of all walks of life.",
+       "desc bn": "",
+       "image": "/media/dynamic_image/Falcon_Group_Inner.png",
+       "image sd": "/media/dynamic_image/Falcon_Group_Inner_IURDBpx.png",
+       "sub title": "",
+       "sub title bn": "",
+       "sub desc": "",
+       "sub desc bn": "",
+       "sub image": "",
+       "sub image sd": ""
+      }
+     ],
+     "Segment two": [],
+     "Segment three": [
+      {
+       "title": "Share This Article",
+       "title bn": "",
+       "facebook icon": "",
+       "facebook icon sd": "",
+       "instagram icon": "",
+       "instagram icon sd": ""
+      }
+     ],
+     "Segment four": [
+      {
+       "title": "Other Announcements",
+       "title bn": "",
+       "desc": "Check out the other announcements from upay here",
+       "desc bn": ""
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "upay-falcon-group-sign-agreement"
+ }
+}

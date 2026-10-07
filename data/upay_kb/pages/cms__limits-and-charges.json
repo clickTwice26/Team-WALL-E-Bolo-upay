@@ -1,0 +1,47 @@
+{
+ "url": "https://www.upaybd.com/limits-and-charges",
+ "api": "https://api.upaybd.com/api/v2/pages/limits-and-charges",
+ "data": {
+  "title_english": "Limits and charges",
+  "title_bangla": "Limits and charges",
+  "template_name": "limits-and-charges",
+  "rows": {
+   "Data": [
+    {
+     "title": "Limits and Charges",
+     "title bn": "লিমিট ও চার্জ",
+     "cover image": "/media/dynamic_image/Untitled_UXHGUiz.png",
+     "cover image sd": "/media/dynamic_image/Untitled_Cz4VIsu.png",
+     "segment one": [
+      {
+       "title": "Charge Calculator",
+       "title bn": "চার্জ ক্যালকুলেটর",
+       "desc": "Calculate the actual charge for all your upay activities through the calculator below. There will be no charge on first 5 bills of the month.&nbsp;<br /><br /><em>* Maximum charge for DESCO Prepaid and Postpaid is Tk 20. Maximum charge for NESCO Postpaid Westzone Postpaid, Dhaka WASA, Jalalabad Gas, Bakhrabad Gas, Pashchimanchal Gas is Tk 25.</em>",
+       "desc bn": "উপায় সংক্রান্ত যেকোনো ধরনের চার্জ হিসাব করে ফেলুন সহজেই। প্রতি মাসের প্রথম ৫টি বিল এর জন্য কোন চার্জ প্রযোজ্য নয়।&nbsp;<br /><br />* <em>ডেসকো প্রিপেইড এবং পোস্টপেইড বিল পেমেন্টের ক্ষেত্রে সর্বোচ্চ চার্জ ২০ টাকা, নেসকো পোস্টপেইড, ওয়েস্টজোন পোস্টপেইড, ঢাকা ওয়াসা, জালালাবাদ গ্যাস, বাখরাবাদ গ্যাস, পশ্চিমাঞ্চল গ্যাস বিল পেমেন্টের ক্ষেত্রে সর্বোচ্চ চার্জ ২৫ টাকা প্রযোজ্য হবে।</em>"
+      }
+     ],
+     "segment two": [
+      {
+       "title": "Limits and Frequency",
+       "title bn": "লেনদেনের সীমা",
+       "desc": "Learn more about the detailed limits and frequency from the below table, which includes Daily and Monthly Transaction Limits.If there is any confusion, feel free to call us anytime at 16268.",
+       "desc bn": "নীচের তালিকা থেকে লেনদেনের সীমা সম্পর্কে আরও জানুন, যার মধ্যে দৈনিক এবং মাসিক লেনদেনের সীমা রয়েছে I যদি কোনও প্রশ্ন থাকে, তবে 16268 নম্বরে কল করুন যেকোনো সময়।",
+       "slug url": "/schedule-charges"
+      }
+     ],
+     "segment three": [
+      {
+       "slug url": "/nav/Navigation"
+      }
+     ],
+     "segment four": [
+      {
+       "slug url": "/Footer"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "limits-and-charges"
+ }
+}

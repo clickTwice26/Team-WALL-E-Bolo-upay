@@ -1,0 +1,60 @@
+{
+ "url": "https://www.upaybd.com/services/details/upay-wins-fintech-award",
+ "api": "https://api.upaybd.com/api/v2/pages/upay-wins-fintech-award",
+ "data": {
+  "title_english": "upay wins Fintech Award",
+  "title_bangla": "upay wins Fintech Award",
+  "template_name": "template-e",
+  "rows": {
+   "Data": [
+    {
+     "title": "Press Release",
+     "title bn": "প্রেস বিজ্ঞপ্তি&nbsp;",
+     "cover image": "/media/dynamic_image/Website_Desktop_Header_1_1_eNmYx4N_rQ6t50b_Wc0ECCE.png",
+     "cover image sd": "/media/dynamic_image/Mobile_Desktop_Header_1_1_w1HtvDk_5fVMeB8_Oz5Wqzx.png",
+     "segment one": [
+      {
+       "title": "উপায় wins fintech innovation award for its multi-wallet feature",
+       "title bn": "উপায় wins fintech innovation award for its multi-wallet feature",
+       "desc": "উপায়, one of the fastest-growing mobile financial service providers in the country has won the &lsquo;Fintech Innovation of the Year&rsquo; award in mobile money category. <br /><br />The award has been conferred to upay for its innovative multi-wallet feature enabling customers to make transaction at a lower cost from four different wallets in one upay account. <br /><br />Sydul H Khandaker, Managing Director and Chief Executive Officer of উপায় received the award at the &lsquo;Fintech Award 2021&rsquo; event organized by the Bangladesh Brand Forum at the Hotel Sheraton in the city on Saturday. <br /><br />Multiple wallets include a common primary wallet, salary wallet, remittance wallet and disbursement wallet. Charges are less than Tk. 14 per Tk 1,000 for different wallets and in cases it is free of cost. <br /><br />Commenting on the winning of the award, Sydul H Khandaker said, &ldquo;We are very excited to receive the award. As a new MFS brand, upay focuses on addressing customer pain points and solving those by innovating new features and services. Introducing multiple wallets in a single MFS account is a very unique feature. It provides convenience to the customer in terms of cost and transparency. Customer can track the source of the funds in his or her wallet and make remittance, salary, disbursement cash out charge at different rates from our agent point to ATM booth instead of cashing out at a single rate.&rdquo; <br /><br />উপায় is the mobile financial service brand of UCB Fintech Company Limed, a subsidiary of the United Commercial Bank. উপায় launched its operation on March 17, 2021. Since launching উপায় has gained 3 million registered customers. It has also 100,000 agent network across the country.",
+       "desc bn": "উপায়, one of the fastest-growing mobile financial service providers in the country has won the &lsquo;Fintech Innovation of the Year&rsquo; award in mobile money category. <br /><br />The award has been conferred to upay for its innovative multi-wallet feature enabling customers to make transaction at a lower cost from four different wallets in one upay account. <br /><br />Sydul H Khandaker, Managing Director and Chief Executive Officer of উপায় received the award at the &lsquo;Fintech Award 2021&rsquo; event organized by the Bangladesh Brand Forum at the Hotel Sheraton in the city on Saturday. <br /><br />Multiple wallets include a common primary wallet, salary wallet, remittance wallet and disbursement wallet. Charges are less than Tk. 14 per Tk 1,000 for different wallets and in cases it is free of cost. <br /><br />Commenting on the winning of the award, Sydul H Khandaker said, &ldquo;We are very excited to receive the award. As a new MFS brand, upay focuses on addressing customer pain points and solving those by innovating new features and services. Introducing multiple wallets in a single MFS account is a very unique feature. It provides convenience to the customer in terms of cost and transparency. Customer can track the source of the funds in his or her wallet and make remittance, salary, disbursement cash out charge at different rates from our agent point to ATM booth instead of cashing out at a single rate.&rdquo; <br /><br />উপায় is the mobile financial service brand of UCB Fintech Company Limed, a subsidiary of the United Commercial Bank. উপায় launched its operation on March 17, 2021. Since launching উপায় has gained 3 million registered customers. It has also 100,000 agent network across the country.",
+       "image": "/media/dynamic_image/Caption__Sydul_Haque_Khandaker_Managing_Director_and_CEO_of_upay__Thrid_fr_K0bzwrz.jpg",
+       "image sd": "/media/dynamic_image/Caption__Sydul_Haque_Khandaker_Managing_Director_and_CEO_of_upay__Thrid_fr_MIfLF4g.jpg",
+       "sub title": "",
+       "sub title bn": "",
+       "sub desc": "",
+       "sub desc bn": "",
+       "sub image": "",
+       "sub image sd": ""
+      }
+     ],
+     "Segment two": [
+      {
+       "image": "",
+       "image sd": ""
+      }
+     ],
+     "Segment three": [
+      {
+       "title": "Share this Article",
+       "title bn": "Share this Article",
+       "facebook icon": "/media/dynamic_image/facebook_R0pSjSr_sSK2McB_ewGu6KD.png",
+       "facebook icon sd": "/media/dynamic_image/facebook_R0pSjSr_sSK2McB_lUPjZ1q.png",
+       "instagram icon": "",
+       "instagram icon sd": ""
+      }
+     ],
+     "Segment four": [
+      {
+       "title": "<table class=\"table\">\r\n<tbody>\r\n<tr>\r\n<td>OTHER ANNOUNCEMENTS</td>\r\n</tr>\r\n</tbody>\r\n</table>",
+       "title bn": "<table class=\"table\">\r\n<tbody>\r\n<tr>\r\n<td>OTHER ANNOUNCEMENTS</td>\r\n</tr>\r\n</tbody>\r\n</table>",
+       "desc": "Check out the other announcements from upay here",
+       "desc bn": "Check out the other announcements from upay here"
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "upay-wins-fintech-award"
+ }
+}

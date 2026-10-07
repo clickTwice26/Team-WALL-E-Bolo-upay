@@ -1,0 +1,40 @@
+{
+ "url": "https://www.upaybd.com/services/details/education-fees-through-app",
+ "api": "https://api.upaybd.com/api/v2/pages/education-fees-through-app",
+ "data": {
+  "title_english": "Education fees through app",
+  "title_bangla": "Education fees through app",
+  "template_name": "template-h",
+  "rows": {
+   "Data": [
+    {
+     "image": "/media/dynamic_image/Visuals_for_the_Education_Sonali_bank-02_1.png",
+     "image sd": "/media/dynamic_image/Visuals_for_the_Education_Sonali_bank-02_1_TWdbFNC.png",
+     "Details data": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "sub title": "",
+       "sub title bn": "",
+       "sub desc": "",
+       "sub desc bn": "",
+       "key value": []
+      }
+     ],
+     "May like": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under May like": []
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "education-fees-through-app"
+ }
+}

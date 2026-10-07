@@ -1,0 +1,88 @@
+{
+ "url": "https://www.upaybd.com/services/details/land-tax",
+ "api": "https://api.upaybd.com/api/v2/pages/land-tax",
+ "data": {
+  "title_english": "Land Tax",
+  "title_bangla": "Land Tax",
+  "template_name": "template-b",
+  "rows": {
+   "data": [
+    {
+     "tiitle": "Land Tax",
+     "title bn": "Land Tax",
+     "background image": "/media/dynamic_image/Land_Services_Header_desktop_RmKjqfl.jpg",
+     "background image sd": "/media/dynamic_image/Land_Services_Header_mobile_0uABKcn.jpg",
+     "heading": "",
+     "heading bn": "",
+     "desc": "Looking for ways to complete your Land payments. Simply visit upay app and complete your land payments in only a few clicks",
+     "desc bn": "Looking for ways to complete your Land payments. Simply visit upay app and complete your land payments in only a few clicks",
+     "Methods": [
+      {
+       "title": "How to pay your Land Tax ?",
+       "title bn": "How to pay your Land Tax ?",
+       "desc": "Check out the process below to clear your land tax payment",
+       "desc bn": "Check out the process below to clear your land tax payment",
+       "Try On USSD images": [
+        {
+         "image ": "/media/dynamic_image/Add_Money_from_Card_is_not_available_on_268_7.png",
+         "image sd": "/media/dynamic_image/Add_Money_from_Card_is_not_available_on_268_7_j56kJLr.png"
+        }
+       ],
+       "Try onApp": [
+        {
+         "image": "/media/dynamic_image/Land_Tax_4.png",
+         "image sd": "/media/dynamic_image/Land_Tax_4_G97jy84.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_PxzpBfb.png",
+         "image sd": "/media/dynamic_image/2_8Ffo7DT.png"
+        },
+        {
+         "image": "/media/dynamic_image/2_2_PyqBapc.png",
+         "image sd": "/media/dynamic_image/2_2_woXddRP.png"
+        },
+        {
+         "image": "/media/dynamic_image/Land_Tax_Pg1pOVZ.png",
+         "image sd": "/media/dynamic_image/Land_Tax_bV0p6uD.png"
+        },
+        {
+         "image": "/media/dynamic_image/Land_Tax_1.png",
+         "image sd": "/media/dynamic_image/Land_Tax_1_keUrObX.png"
+        },
+        {
+         "image": "/media/dynamic_image/Land_Tax_2.png",
+         "image sd": "/media/dynamic_image/Land_Tax_2_RRaWtaA.png"
+        },
+        {
+         "image": "/media/dynamic_image/Land_Tax_3.png",
+         "image sd": "/media/dynamic_image/Land_Tax_3_jft537o.png"
+        }
+       ]
+      }
+     ],
+     "Tutorial Methods": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Tutorial": [
+        {
+         "title": "",
+         "title bn": "",
+         "desc": "",
+         "desc bn": "",
+         "thumb image": "",
+         "thumb image sd": "",
+         "video": "",
+         "current video tutorial": ""
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "land-tax"
+ }
+}

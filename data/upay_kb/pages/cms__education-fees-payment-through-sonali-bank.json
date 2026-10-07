@@ -1,0 +1,40 @@
+{
+ "url": "https://www.upaybd.com/services/details/education-fees-payment-through-sonali-bank",
+ "api": "https://api.upaybd.com/api/v2/pages/education-fees-payment-through-sonali-bank",
+ "data": {
+  "title_english": "Education fees payment through Sonali Bank",
+  "title_bangla": "Education fees payment through Sonali Bank",
+  "template_name": "template-h",
+  "rows": {
+   "Data": [
+    {
+     "image": "/media/dynamic_image/Visuals_for_the_Education_Sonali_bank-01_1.png",
+     "image sd": "/media/dynamic_image/Visuals_for_the_Education_Sonali_bank-01_1_NyX0kOI.png",
+     "Details data": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "sub title": "",
+       "sub title bn": "",
+       "sub desc": "",
+       "sub desc bn": "",
+       "key value": []
+      }
+     ],
+     "May like": [
+      {
+       "title": "",
+       "title bn": "",
+       "desc": "",
+       "desc bn": "",
+       "Under May like": []
+      }
+     ]
+    }
+   ]
+  },
+  "slug": "education-fees-payment-through-sonali-bank"
+ }
+}
