@@ -351,7 +351,7 @@ def _dashboard_data() -> dict:
 @app.get("/api/metrics")
 def metrics():
     out = {"risk_model": risk.model_card()}
-    for name in ("risk_metrics", "parser_metrics"):
+    for name in ("risk_metrics", "parser_metrics", "sequence_metrics"):
         p = ROOT / "model" / f"{name}.json"
         out[name] = json.loads(p.read_text()) if p.exists() else None
     return out

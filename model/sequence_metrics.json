@@ -1,0 +1,22 @@
+{
+  "gru_over_last_20_plus_features": {
+    "roc_auc": 0.9889,
+    "pr_auc": 0.9725,
+    "epochs": 15
+  },
+  "served_gradient_boosting": {
+    "roc_auc": 0.9914,
+    "pr_auc": 0.9791
+  },
+  "pr_auc_gain": -0.0066,
+  "adopted": false,
+  "rule": "adopt only if test PR-AUC improves by more than 0.01",
+  "conclusion": "Not adopted: the GRU changes PR-AUC by -0.0066. The sequence signals that matter (bursts, new recipients, money passed on, the user's own habits) are already features of the served model, which stays explainable per decision.",
+  "data": {
+    "test": 1426,
+    "steps": 20,
+    "hidden": 32,
+    "note": "Same simulated timelines and time split as ml/train_risk.py."
+  },
+  "trained_at": "2026-10-07T04:35:43"
+}

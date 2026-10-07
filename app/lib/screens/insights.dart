@@ -219,6 +219,7 @@ class _AccuracyScreenState extends State<AccuracyScreen> {
           final base = Map<String, dynamic>.from(tp['baseline_rules_only'] ?? {});
           final importance = Map<String, dynamic>.from(rm['feature_importance'] ?? {});
           final comparison = Map<String, dynamic>.from(rm['comparison'] ?? {});
+          final seqm = Map<String, dynamic>.from(s.data!['sequence_metrics'] ?? {});
           final topImpact = importance.isEmpty ? 1.0 : (importance.values.first as num).toDouble();
           final failures = (pm['failures'] as List?) ?? [];
           return ListView(padding: const EdgeInsets.all(16), children: [
@@ -300,6 +301,17 @@ class _AccuracyScreenState extends State<AccuracyScreen> {
               ),
               Text(tr(bn, 'PR-AUC বেশি = ভালো; Brier কম = সম্ভাবনা বেশি নির্ভুল।', 'Higher PR-AUC is better; lower Brier means truer probabilities.'),
                   style: const TextStyle(color: BrandColors.muted, fontSize: 12)),
+              if (seqm['gru_over_last_20_plus_features'] != null)
+                Padding(
+                  padding: const EdgeInsets.only(top: 6),
+                  child: Text(
+                      tr(bn,
+                          'সিকোয়েন্স মডেল (শেষ ২০টি লেনদেনের ওপর GRU): PR-AUC ${seqm['gru_over_last_20_plus_features']['pr_auc']}। '
+                              '${seqm['adopted'] == true ? 'গ্রহণ করা হয়েছে।' : 'গ্রহণ করা হয়নি: ০.০১-এর বেশি উন্নতি হয়নি।'}',
+                          'Sequence model (GRU over the last 20 payments): PR-AUC ${seqm['gru_over_last_20_plus_features']['pr_auc']}. '
+                              '${seqm['adopted'] == true ? 'Adopted.' : 'Not adopted: it did not improve PR-AUC by more than 0.01.'}'),
+                      style: const TextStyle(fontSize: 13)),
+                ),
             ],
             const SizedBox(height: 16),
             Text(tr(bn, '৪. মডেল কী দেখে (গড় SHAP প্রভাব)', '4. What the model looks at (average SHAP impact)'),

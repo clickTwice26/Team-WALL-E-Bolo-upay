@@ -177,6 +177,8 @@ class Sim:
               amount: float, on_call: bool, return_claim: bool = False, balance: float | None = None) -> dict:
         """Score one payment: features from the history so far, then it joins the history."""
         balance = balance if balance is not None else self.balance_for(u, amount)
+        # the last 20 transactions before this one, for sequence models (ml/compare_sequence.py)
+        recent = sorted((t for t in u.history if t["ts"] <= ts.isoformat()), key=lambda t: t["ts"])[-20:]
         answer = self.answer(kind, label == 1)
         sc = scam.match(answer)
         feats, _ = features.compute(amount=amount, intent=intent, phone=phone, is_return_claim=return_claim,
@@ -184,7 +186,9 @@ class Sim:
                                     on_call=on_call, scam_score=sc["score"], now=ts, self_phone=u.phone)
         self.add(u, intent, phone, amount, ts)
         return {"user": u.uid, "ts": ts, "label": label, "kind": kind, "intent": intent,
-                "amount": round(float(amount)), "feats": feats, "answer": answer, "hits": sc["hits"]}
+                "amount": round(float(amount)), "feats": feats, "answer": answer, "hits": sc["hits"],
+                "phone": phone, "contacts": {c["phone"] for c in u.contacts}, "median": u.median,
+                "recent": [dict(t) for t in recent]}
 
     def legit(self, u: User, d: datetime) -> list[dict]:
         r = self.rng
