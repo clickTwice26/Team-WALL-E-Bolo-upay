@@ -1,49 +1,303 @@
 {
   "dataset": {
-    "total": 8000,
-    "train": 5600,
-    "validation": 1200,
-    "test": 1200,
-    "scam_share": 0.287,
-    "note": "Synthetic scenarios. Numbers show the pipeline works as designed; they are not real-world fraud results."
+    "total": 9506,
+    "train": 5703,
+    "calibration": 951,
+    "validation": 1426,
+    "test": 1426,
+    "scam_share": 0.264,
+    "split": "by time",
+    "kinds": {
+      "allowance": 171,
+      "cash_out": 447,
+      "fake_official": 451,
+      "job_loan": 168,
+      "known": 2725,
+      "known_big": 387,
+      "late_legit": 121,
+      "lottery": 198,
+      "merchant": 446,
+      "mule": 270,
+      "new_legit": 963,
+      "pin_otp": 282,
+      "pooled": 61,
+      "recharge": 757,
+      "refund": 263,
+      "relative": 241,
+      "sent_by_mistake": 204,
+      "shop_burst": 822,
+      "takeover": 529
+    },
+    "note": "Simulated wallet timelines. Numbers show the pipeline works as designed; they are not real-world fraud results."
   },
+  "model": "gradient_boosting",
+  "features": [
+    "is_new_recipient",
+    "log_recipient_ratio",
+    "is_night",
+    "recent_sends_30m",
+    "balance_fraction",
+    "on_active_call",
+    "return_claim_no_inflow",
+    "scam_score",
+    "is_recharge",
+    "sends_24h",
+    "new_recipients_7d",
+    "inflow_then_outflow",
+    "amount_z_user",
+    "log_recipient_age",
+    "hour_unusual_for_user",
+    "recipient_paid_you_7d",
+    "is_cash_out",
+    "is_payment"
+  ],
   "thresholds": {
-    "yellow": 0.08,
-    "red": 0.9
+    "yellow": 0.07,
+    "red": 0.66
+  },
+  "threshold_rules": {
+    "max_honest_red": 0.02,
+    "max_honest_warned": 0.12
+  },
+  "comparison": {
+    "logistic_regression_9_features": {
+      "roc_auc": 0.9704,
+      "pr_auc": 0.938,
+      "brier": 0.0554
+    },
+    "gradient_boosting_9_features": {
+      "roc_auc": 0.9789,
+      "pr_auc": 0.9521,
+      "brier": 0.0501
+    },
+    "logistic_regression_all_features": {
+      "roc_auc": 0.9891,
+      "pr_auc": 0.9722,
+      "brier": 0.0334
+    },
+    "gradient_boosting_all_features_calibrated": {
+      "roc_auc": 0.9914,
+      "pr_auc": 0.9791,
+      "brier": 0.0302
+    }
   },
   "test_auc": {
-    "logistic_regression": 0.9861,
-    "gradient_boosting": 0.9922
+    "logistic_regression": 0.9704,
+    "gradient_boosting": 0.9914
   },
   "test_pipeline": {
     "ml_plus_interview_plus_rules": {
-      "scam_flagged_rate": 0.9191,
-      "scam_red_rate": 0.7379,
-      "legit_red_rate": 0.0112,
-      "legit_flagged_rate": 0.1336,
-      "n_scam": 309,
-      "n_legit": 891
+      "scam_flagged_rate": 0.9529,
+      "scam_red_rate": 0.8403,
+      "legit_red_rate": 0.0153,
+      "legit_flagged_rate": 0.1284,
+      "n_scam": 382,
+      "n_legit": 1044
+    },
+    "previous_model_9_features": {
+      "scam_flagged_rate": 0.7827,
+      "scam_red_rate": 0.5576,
+      "legit_red_rate": 0.0096,
+      "legit_flagged_rate": 0.0967,
+      "n_scam": 382,
+      "n_legit": 1044
+    },
+    "fallback_logistic_regression": {
+      "scam_flagged_rate": 0.9398,
+      "scam_red_rate": 0.8403,
+      "legit_red_rate": 0.0182,
+      "legit_flagged_rate": 0.1322,
+      "n_scam": 382,
+      "n_legit": 1044
     },
     "baseline_rules_only": {
-      "scam_flagged_rate": 0.5307,
-      "scam_red_rate": 0.1618,
-      "legit_red_rate": 0.009,
-      "legit_flagged_rate": 0.0606,
-      "n_scam": 309,
-      "n_legit": 891
+      "scam_flagged_rate": 0.6309,
+      "scam_red_rate": 0.1047,
+      "legit_red_rate": 0.0029,
+      "legit_flagged_rate": 0.1092,
+      "n_scam": 382,
+      "n_legit": 1044
     }
   },
-  "model_choice": "Logistic regression: AUC close to gradient boosting and every warning can be explained feature by feature.",
-  "coefficients": {
-    "is_new_recipient": 1.503,
-    "log_recipient_ratio": 0.037,
-    "is_night": 0.179,
-    "recent_sends_30m": 0.723,
-    "balance_fraction": 1.688,
-    "on_active_call": 0.801,
-    "return_claim_no_inflow": 0.485,
-    "scam_score": 1.901,
-    "is_recharge": -0.328
+  "test_by_kind": {
+    "allowance": {
+      "n": 32,
+      "flagged_rate": 0.906
+    },
+    "cash_out": {
+      "n": 62,
+      "flagged_rate": 0.0
+    },
+    "fake_official": {
+      "n": 67,
+      "flagged_rate": 0.955
+    },
+    "job_loan": {
+      "n": 24,
+      "flagged_rate": 0.875
+    },
+    "known": {
+      "n": 406,
+      "flagged_rate": 0.007
+    },
+    "known_big": {
+      "n": 56,
+      "flagged_rate": 0.232
+    },
+    "late_legit": {
+      "n": 24,
+      "flagged_rate": 0.25
+    },
+    "lottery": {
+      "n": 25,
+      "flagged_rate": 1.0
+    },
+    "merchant": {
+      "n": 73,
+      "flagged_rate": 0.0
+    },
+    "mule": {
+      "n": 33,
+      "flagged_rate": 1.0
+    },
+    "new_legit": {
+      "n": 143,
+      "flagged_rate": 0.692
+    },
+    "pin_otp": {
+      "n": 49,
+      "flagged_rate": 0.816
+    },
+    "pooled": {
+      "n": 8,
+      "flagged_rate": 1.0
+    },
+    "recharge": {
+      "n": 118,
+      "flagged_rate": 0.0
+    },
+    "refund": {
+      "n": 32,
+      "flagged_rate": 0.0
+    },
+    "relative": {
+      "n": 42,
+      "flagged_rate": 1.0
+    },
+    "sent_by_mistake": {
+      "n": 37,
+      "flagged_rate": 1.0
+    },
+    "shop_burst": {
+      "n": 122,
+      "flagged_rate": 0.041
+    },
+    "takeover": {
+      "n": 73,
+      "flagged_rate": 1.0
+    }
   },
-  "trained_at": "2026-10-03T18:38:13"
+  "calibration": {
+    "gradient boosting, calibrated (served)": {
+      "predicted": [
+        0.0003,
+        0.0009,
+        0.0016,
+        0.0026,
+        0.0073,
+        0.0217,
+        0.108,
+        0.607,
+        0.962,
+        0.9986
+      ],
+      "observed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.021,
+        0.0775,
+        0.6154,
+        0.9648,
+        1.0
+      ]
+    },
+    "gradient boosting, raw": {
+      "predicted": [
+        0.0001,
+        0.0003,
+        0.0005,
+        0.0009,
+        0.0031,
+        0.0111,
+        0.0771,
+        0.605,
+        0.974,
+        0.9995
+      ],
+      "observed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.021,
+        0.0775,
+        0.6154,
+        0.9648,
+        1.0
+      ]
+    }
+  },
+  "feature_importance": {
+    "log_recipient_age": 1.9162,
+    "scam_score": 1.7642,
+    "amount_z_user": 0.6278,
+    "on_active_call": 0.6211,
+    "log_recipient_ratio": 0.4795,
+    "recent_sends_30m": 0.3997,
+    "is_cash_out": 0.367,
+    "hour_unusual_for_user": 0.3369,
+    "balance_fraction": 0.2577,
+    "recipient_paid_you_7d": 0.2441,
+    "is_night": 0.244,
+    "return_claim_no_inflow": 0.2325,
+    "is_payment": 0.2087,
+    "is_new_recipient": 0.0735,
+    "new_recipients_7d": 0.0547,
+    "sends_24h": 0.0521,
+    "inflow_then_outflow": 0.0285,
+    "is_recharge": 0.0019
+  },
+  "fallback": {
+    "model": "logistic_regression",
+    "thresholds": {
+      "yellow": 0.06,
+      "red": 0.64
+    },
+    "coefficients": {
+      "is_new_recipient": -0.762,
+      "log_recipient_ratio": 0.455,
+      "is_night": 0.308,
+      "recent_sends_30m": 0.519,
+      "balance_fraction": 0.183,
+      "on_active_call": 0.738,
+      "return_claim_no_inflow": 0.933,
+      "scam_score": 2.023,
+      "is_recharge": -0.138,
+      "sends_24h": 0.015,
+      "new_recipients_7d": 0.076,
+      "inflow_then_outflow": 0.112,
+      "amount_z_user": 0.954,
+      "log_recipient_age": -2.791,
+      "hour_unusual_for_user": 0.744,
+      "recipient_paid_you_7d": -1.235,
+      "is_cash_out": -1.326,
+      "is_payment": -0.884
+    }
+  },
+  "model_choice": "Gradient boosting on all features, monotonic and sigmoid-calibrated. Test PR-AUC 0.9791 (logistic regression on the same features 0.9722, previous 9-feature model 0.938); Brier score 0.0302 (0.0334, 0.0554). Monotonic constraints mean more risk evidence can never lower the score, calibration makes the probability mean what it says, and SHAP values explain each decision. Logistic regression on all features stays in the bundle as the fallback.",
+  "trained_at": "2026-10-07T04:32:04"
 }

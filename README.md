@@ -41,7 +41,7 @@ Prototype by **Team WALL-E** (Shagato Chowdhury, Umme Munia) for the AI Dev Fest
 | Voice input in Bangla / English, editable transcript | On-device speech-to-text (`speech_to_text`, Web Speech API on web). Audio never leaves the device |
 | Command understanding | **Rule parser** (Bangla number words like দেড়, আড়াই, সাড়ে, পৌনে; Bangla digits; phone numbers; intents) **plus optional LLM** (Anthropic, OpenAI or Gemini) returning structured JSON. If the amounts disagree, the app asks |
 | Recipient resolution | Alias matching with Bangla case suffixes (আম্মুকে, rahim-ke) and fuzzy matching for speech errors; ambiguous names → the user picks; fuzzy → the user confirms |
-| Scam risk score | **Logistic regression** on history-derived features, thresholds tuned on a validation split, explainable per feature |
+| Scam risk score | **Gradient boosting** (monotonic, calibrated) on 18 features from the user's own history: the payment itself, the last hours and days (bursts, new recipients, a stranger's money passed on) and the user's habits (usual amount, usual hours). Each warning's reasons come from that payment's SHAP values. Logistic regression is the fallback |
 | Scam interview | Spoken questions; answers matched against a Bangla/Banglish/English scam phrase lexicon (`data/scam_phrases.json`) with negation handling ("keu otp chay nai" is not a hit) |
 | Hard rules | Asking for a PIN/OTP, fake upay staff, lottery/fee, allowance fee → RED. "Send it back" when no money came from that number → RED. "Relative in trouble" from a new number → RED |
 | Mistake guard | Known recipient + amount about 10× the usual → "Did you mean ৳350?" |
@@ -73,7 +73,7 @@ What the app deliberately does **not** do: it never listens to phone calls, neve
 | Voice | `speech_to_text` (STT), `flutter_tts` (TTS) |
 | Biometrics | `local_auth` (Face ID / Touch ID / fingerprint) |
 | Backend API | Python 3.11, FastAPI, Pydantic, Uvicorn |
-| ML | scikit-learn (logistic regression, gradient boosting for comparison), NumPy, joblib |
+| ML | scikit-learn (gradient boosting with sigmoid calibration, logistic regression fallback), SHAP, NumPy, joblib; matplotlib for the training report |
 | Text matching | RapidFuzz |
 | LLM (optional) | Anthropic Python SDK (`claude-opus-5-5` by default), OpenAI or Gemini via REST |
 | Storage | SQLite (prototype) |
@@ -185,7 +185,7 @@ Unlock the app with the **demo PIN `1234`**. Use the settings button (top right 
 ```bash
 cd api && python -m pytest -q          # 93 tests: parser, scam matcher, API flow, sessions and PIN lock, signed biometrics, agent rules and safety, handoff, TTS
 python ml/evaluate_parser.py           # labelled command set → model/parser_metrics.json
-python ml/train_risk.py                # trains and evaluates → model/risk_metrics.json
+python ml/train_risk.py                # simulates timelines, trains, compares → model/risk_metrics.json
 ```
 
 **Measured results**
@@ -197,14 +197,22 @@ python ml/train_risk.py                # trains and evaluates → model/risk_met
 
 These commands were written by the team alongside the parser, so they show the parser handles the listed patterns; real user speech will be harder. Collecting real commands is the next step.
 
-| Scam shield (1,200 synthetic held-out scenarios) | Bolo upay | Rules only |
-|---|---|---|
-| Scams flagged (YELLOW or RED) | 91.9% | 53.1% |
-| Scams held (RED) | 73.8% | 16.2% |
-| Honest transfers held (RED) | 1.1% | 0.9% |
-| Honest transfers warned (YELLOW or RED) | 13.4% | 6.1% |
+| Scam shield (1,426 simulated payments, the last 15% by time) | Bolo upay | Previous model (9 inputs) | Rules only |
+|---|---|---|---|
+| Scams flagged (YELLOW or RED) | **95.3%** | 78.3% | 63.1% |
+| Scams held (RED) | **84.0%** | 55.8% | 10.5% |
+| Honest transfers held (RED) | 1.5% | 1.0% | 0.3% |
+| Honest transfers warned (YELLOW or RED) | 12.8% | 9.7% | 10.9% |
 
-The scenarios are simulated (no real fraud data is available). The numbers show the pipeline behaves as designed, not real-world performance. Test AUC: logistic regression 0.986, gradient boosting 0.992; logistic regression was chosen because every warning can be explained.
+The data is simulated (no real fraud data is available): 650 synthetic users with six months of wallet history, then a month of payments, honest ones and nine kinds of scam (`ml/simulate.py`). The numbers show the pipeline behaves as designed, not real-world performance. Thresholds are tuned on an earlier time slice to hold at most 2% and warn at most 12% of honest payments.
+
+| Model on the same test set | PR-AUC | Brier |
+|---|---|---|
+| Previous model: logistic regression, 9 inputs | 0.938 | 0.055 |
+| Logistic regression, all inputs (fallback) | 0.972 | 0.033 |
+| **Gradient boosting, all inputs, calibrated (served)** | **0.979** | **0.030** |
+
+Calibration plot: [`docs/img/calibration.png`](docs/img/calibration.png).
 
 **Manual test script** (with the deployed app, user "Rahima Begum"):
 1. "আম্মুকে দেড় হাজার টাকা পাঠাও" → GREEN, ৳1,500 to Ammu, fingerprint or PIN.
@@ -229,7 +237,7 @@ The scenarios are simulated (no real fraud data is available). The numbers show 
 api/            FastAPI backend (app/core: parser, numbers, contacts, scam, features, risk, llm,
                 agent, pinguard, tts; app/handoff.py: human handoff + support console API)
 app/            Flutter app (iOS, Android, Web); lib/agent: Bolo agent; lib/console: support console
-ml/             generate_data.py, train_risk.py, evaluate_parser.py
+ml/             generate_data.py, simulate.py (wallet timelines), train_risk.py, evaluate_parser.py
 data/           seed.json (synthetic), scam_phrases.json, test_commands.json
 model/          risk_model.joblib, risk_metrics.json, parser_metrics.json
 deploy/         Dockerfile, Caddyfile, nginx site (hosts that already run nginx)

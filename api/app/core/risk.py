@@ -1,19 +1,25 @@
 """Risk engine: ML score + hard rules + mistake guard -> GREEN / YELLOW / RED.
 
-The model (logistic regression, trained by ml/train_risk.py on synthetic
-labelled scenarios) gives a scam probability. Hard rules override it for
-cases where the evidence is unambiguous. Every decision carries its reasons
-in Bangla and English so the user and upay's ops team can see why.
+The model (gradient boosting, monotonic and calibrated, trained by
+ml/train_risk.py on simulated wallet timelines) gives a scam probability, and
+SHAP values say which features pushed it up for this payment. Logistic
+regression in the same bundle is the fallback, with its own thresholds. Hard
+rules override the model where the evidence is unambiguous. Every decision
+carries its reasons in Bangla and English so the user and upay's ops team
+can see why.
 """
 from __future__ import annotations
 
 import json
+import logging
 from functools import lru_cache
 from pathlib import Path
 
 import numpy as np
 
 from .features import FEATURES, vector
+
+log = logging.getLogger("bolo.risk")
 
 MODEL_PATH = Path(__file__).resolve().parents[3] / "model" / "risk_model.joblib"
 
@@ -32,7 +38,21 @@ REASONS = {
                                "No money was received from this number."),
     "scam_score": ("আপনার কথায় প্রতারণার সাধারণ লক্ষণ পাওয়া গেছে।",
                    "What you said matches common scam patterns."),
+    "sends_24h": ("গত ২৪ ঘণ্টায় আপনি অনেকবার টাকা পাঠিয়েছেন।",
+                  "You have sent money many times in the last 24 hours."),
+    "new_recipients_7d": ("গত ৭ দিনে আপনি কয়েকটি নতুন নম্বরে টাকা পাঠিয়েছেন।",
+                          "You have paid several new numbers in the last 7 days."),
+    "inflow_then_outflow": ("অচেনা নম্বর থেকে সদ্য টাকা এসেছে, আর এখন তার বড় অংশ অন্য নম্বরে যাচ্ছে।",
+                            "Money just came from an unknown number and most of it is now going to another number."),
+    "amount_z_user": ("এই পরিমাণ আপনার সাধারণ লেনদেনের তুলনায় অস্বাভাবিক।",
+                      "This amount is unusual for you."),
+    "hour_unusual_for_user": ("এই সময়ে আপনি সাধারণত টাকা পাঠান না।",
+                              "You don't usually send money at this time of day."),
 }
+# yes/no features: only a reason when they are actually on
+BINARY = ("is_night", "on_active_call", "is_new_recipient", "return_claim_no_inflow",
+          "inflow_then_outflow", "hour_unusual_for_user")
+REASON_MIN = 0.35  # how much a feature must push the score (log-odds) to be named
 
 ADVICE = {
     "RED": ("লেনদেনটি সাময়িক আটকে রাখা হয়েছে। উপায় কখনো ফোন করে পিন, ওটিপি বা টাকা চায় না। "
@@ -50,10 +70,31 @@ def _bn(n: int) -> str:
 
 @lru_cache(maxsize=1)
 def load_model():
+    """The trained bundle, or None (then transparent rules score instead)."""
     if not MODEL_PATH.exists():
         return None
     import joblib
-    return joblib.load(MODEL_PATH)
+    try:
+        m = joblib.load(MODEL_PATH)
+    except Exception as e:  # unreadable file or a library version it was not saved with
+        log.error("risk model could not be loaded (%s): using rule scoring", e)
+        return None
+    if m.get("features") != FEATURES:
+        log.error("risk model was trained on other features: using rule scoring; run ml/train_risk.py")
+        return None
+    return m
+
+
+@lru_cache(maxsize=1)
+def _explainer():
+    """SHAP explainer for the boosting model, or None (reasons then fall back)."""
+    m = load_model()
+    try:
+        import shap
+        return shap.TreeExplainer(m["gb"])
+    except Exception as e:
+        log.warning("SHAP explanations unavailable (%s)", e)
+        return None
 
 
 def _fallback_prob(f: dict) -> float:
@@ -64,28 +105,47 @@ def _fallback_prob(f: dict) -> float:
     return float(1 / (1 + np.exp(-z)))
 
 
-def score(feats: dict) -> tuple[float, list[tuple[str, float]]]:
-    """Return (probability, [(feature, contribution), ...]) sorted by impact."""
+RULE_THRESHOLDS = {"yellow": 0.3, "red": 0.7}
+
+
+def score(feats: dict) -> tuple[float, list[tuple[str, float]], str]:
+    """(probability, [(feature, contribution), ...] by impact, model used).
+
+    gradient boosting with SHAP contributions; if it fails, the logistic
+    fallback (coefficient x scaled value); without a model, transparent rules.
+    """
     m = load_model()
     if m is None:
-        return _fallback_prob(feats), []
+        return _fallback_prob(feats), [], "rules"
     x = np.array([vector(feats)])
-    xs = m["scaler"].transform(x)
-    prob = float(m["model"].predict_proba(xs)[0, 1])
-    contrib = xs[0] * m["model"].coef_[0]
-    ranked = sorted(zip(FEATURES, contrib.tolist()), key=lambda kv: -kv[1])
-    return prob, ranked
+    try:
+        prob = float(m["model"].predict_proba(x)[0, 1])
+        ranked: list[tuple[str, float]] = []
+        ex = _explainer()
+        if ex is not None:
+            contrib = np.asarray(ex.shap_values(x)).reshape(-1)[: len(FEATURES)]
+            ranked = sorted(zip(FEATURES, contrib.tolist()), key=lambda kv: -kv[1])
+        return prob, ranked, "gradient_boosting"
+    except Exception as e:
+        log.error("gradient boosting failed (%s): using the logistic fallback", e)
+    fb = m["fallback"]
+    xs = fb["scaler"].transform(x)
+    prob = float(fb["model"].predict_proba(xs)[0, 1])
+    contrib = xs[0] * fb["model"].coef_[0]
+    return prob, sorted(zip(FEATURES, contrib.tolist()), key=lambda kv: -kv[1]), "logistic_regression"
 
 
-def thresholds() -> dict:
+def thresholds(model: str = "gradient_boosting") -> dict:
     m = load_model()
-    return m["thresholds"] if m else {"yellow": 0.3, "red": 0.7}
+    if m is None or model == "rules":
+        return RULE_THRESHOLDS
+    return m["fallback"]["thresholds"] if model == "logistic_regression" else m["thresholds"]
 
 
 def assess(feats: dict, summary: dict, scam: dict, amount: float,
            interviewed: bool) -> dict:
-    prob, ranked = score(feats)
-    th = thresholds()
+    prob, ranked, model = score(feats)
+    th = thresholds(model)
     level = "RED" if prob >= th["red"] else "YELLOW" if prob >= th["yellow"] else "GREEN"
     rules: list[str] = []
 
@@ -126,13 +186,14 @@ def assess(feats: dict, summary: dict, scam: dict, amount: float,
         reasons.append({"key": f"scam:{h['category']}", "bn": h["explain_bn"],
                         "en": h["explain_en"], "phrase": h["phrase"], "hard": h["level"] == "high"})
     for feat, c in ranked:
-        if c > 0.35 and feat in REASONS and feat not in ("scam_score", "return_claim_no_inflow"):
-            if feat in ("is_night", "on_active_call", "is_new_recipient", "return_claim_no_inflow") and not feats[feat]:
+        if c > REASON_MIN and feat in REASONS and feat not in ("scam_score", "return_claim_no_inflow"):
+            if feat in BINARY and not feats[feat]:
                 continue
             bn, en = REASONS[feat]
             reasons.append({"key": feat, "bn": bn, "en": en, "weight": round(c, 2)})
-    if not ranked:  # fallback model: list the active binary signals
-        for feat in ("is_new_recipient", "on_active_call", "is_night"):
+    if not ranked:  # no per-feature contributions: list the active yes/no signals
+        for feat in ("is_new_recipient", "on_active_call", "is_night", "inflow_then_outflow",
+                     "hour_unusual_for_user"):
             if feats[feat]:
                 bn, en = REASONS[feat]
                 reasons.append({"key": feat, "bn": bn, "en": en})
@@ -153,6 +214,7 @@ def assess(feats: dict, summary: dict, scam: dict, amount: float,
     return {
         "level": level,
         "probability": round(prob, 4),
+        "model": model,
         "thresholds": th,
         "hard_rules": rules,
         "reasons": reasons[:6],
@@ -169,9 +231,11 @@ def model_card() -> dict:
     m = load_model()
     if not m:
         return {"model": "fallback-rules"}
-    return {"model": "logistic_regression", "features": FEATURES,
-            "thresholds": m["thresholds"],
-            "coefficients": dict(zip(FEATURES, [round(c, 3) for c in m["model"].coef_[0].tolist()])),
+    fb = m["fallback"]
+    return {"model": m["name"], "features": FEATURES, "thresholds": m["thresholds"],
+            "explanations": "shap" if _explainer() is not None else "none",
+            "fallback": {"model": "logistic_regression", "thresholds": fb["thresholds"],
+                         "coefficients": dict(zip(FEATURES, [round(c, 3) for c in fb["model"].coef_[0].tolist()]))},
             "trained_at": m.get("trained_at")}
 
 

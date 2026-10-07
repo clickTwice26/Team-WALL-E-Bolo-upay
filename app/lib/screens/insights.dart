@@ -8,6 +8,35 @@ import '../theme.dart';
 
 String _pct(dynamic v) => v == null ? '–' : '${((v as num) * 100).toStringAsFixed(1)}%';
 
+/// What each risk-model input means, in plain words (Bangla, English).
+const _featureNames = {
+  'is_new_recipient': ('নতুন প্রাপক', 'New recipient'),
+  'log_recipient_ratio': ('এই প্রাপকের জন্য পরিমাণ বেশি', 'Amount high for this recipient'),
+  'is_night': ('গভীর রাত', 'Late at night'),
+  'recent_sends_30m': ('৩০ মিনিটে কয়েকবার পাঠানো', 'Several sends in 30 minutes'),
+  'balance_fraction': ('ব্যালেন্সের বড় অংশ', 'Large share of balance'),
+  'on_active_call': ('ফোন কল চলছে', 'On a phone call'),
+  'return_claim_no_inflow': ('"ফেরত দিন", কিন্তু টাকা আসেনি', '"Send it back", but nothing came'),
+  'scam_score': ('কথায় প্রতারণার লক্ষণ', 'Scam phrases in what was said'),
+  'is_recharge': ('মোবাইল রিচার্জ', 'Mobile recharge'),
+  'sends_24h': ('২৪ ঘণ্টায় কতবার পাঠানো', 'Payments in the last 24 hours'),
+  'new_recipients_7d': ('৭ দিনে নতুন প্রাপক', 'New recipients in 7 days'),
+  'inflow_then_outflow': ('অচেনা টাকা এসে আবার চলে যাচ্ছে', 'Stranger\'s money passed on'),
+  'amount_z_user': ('আপনার জন্য অস্বাভাবিক পরিমাণ', 'Amount unusual for you'),
+  'log_recipient_age': ('এই প্রাপককে কতদিন ধরে টাকা দেন', 'How long you have paid this number'),
+  'hour_unusual_for_user': ('আপনার জন্য অস্বাভাবিক সময়', 'Unusual time for you'),
+  'recipient_paid_you_7d': ('প্রাপক সম্প্রতি আপনাকে টাকা দিয়েছে', 'Recipient paid you recently'),
+  'is_cash_out': ('ক্যাশ আউট', 'Cash out'),
+  'is_payment': ('বিল বা মার্চেন্ট পেমেন্ট', 'Bill or merchant payment'),
+};
+
+const _modelNames = {
+  'logistic_regression_9_features': ('আগের মডেল (৯টি তথ্য)', 'Previous model (9 inputs)'),
+  'gradient_boosting_9_features': ('গ্রেডিয়েন্ট বুস্টিং (৯টি তথ্য)', 'Gradient boosting (9 inputs)'),
+  'logistic_regression_all_features': ('লজিস্টিক রিগ্রেশন (সব তথ্য)', 'Logistic regression (all inputs)'),
+  'gradient_boosting_all_features_calibrated': ('বলো upay মডেল (সব তথ্য, ক্যালিব্রেটেড)', 'Bolo upay model (all inputs, calibrated)'),
+};
+
 Widget _stat(String label, String value, {Color color = BrandColors.navy, String? sub}) => Card(
       child: Padding(
         padding: const EdgeInsets.all(14),
@@ -188,7 +217,9 @@ class _AccuracyScreenState extends State<AccuracyScreen> {
           final tp = Map<String, dynamic>.from(rm['test_pipeline'] ?? {});
           final ml = Map<String, dynamic>.from(tp['ml_plus_interview_plus_rules'] ?? {});
           final base = Map<String, dynamic>.from(tp['baseline_rules_only'] ?? {});
-          final coef = Map<String, dynamic>.from(rm['coefficients'] ?? {});
+          final importance = Map<String, dynamic>.from(rm['feature_importance'] ?? {});
+          final comparison = Map<String, dynamic>.from(rm['comparison'] ?? {});
+          final topImpact = importance.isEmpty ? 1.0 : (importance.values.first as num).toDouble();
           final failures = (pm['failures'] as List?) ?? [];
           return ListView(padding: const EdgeInsets.all(16), children: [
             Text(tr(bn, '১. কমান্ড বোঝা (${pm['test_set_size']}টি লেবেল করা কমান্ড)', '1. Understanding commands (${pm['test_set_size']} labelled commands)'),
@@ -236,23 +267,76 @@ class _AccuracyScreenState extends State<AccuracyScreen> {
               ),
             ),
             const SizedBox(height: 8),
-            Text('AUC: LR ${rm['test_auc']?['logistic_regression']} · GBM ${rm['test_auc']?['gradient_boosting']}  ·  '
-                '${tr(bn, 'থ্রেশহোল্ড', 'thresholds')} ${rm['thresholds']}'),
+            Text('${tr(bn, 'থ্রেশহোল্ড', 'Thresholds')}: YELLOW ${rm['thresholds']?['yellow']} · RED ${rm['thresholds']?['red']}',
+                style: const TextStyle(color: BrandColors.muted, fontSize: 12)),
+            if (comparison.isNotEmpty) ...[
+              const SizedBox(height: 16),
+              Text(tr(bn, '৩. মডেলের তুলনা (একই টেস্ট সেট)', '3. Models compared (same test set)'),
+                  style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 16)),
+              const SizedBox(height: 8),
+              Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(12),
+                  child: Table(
+                    columnWidths: const {0: FlexColumnWidth(2.6), 1: FlexColumnWidth(1), 2: FlexColumnWidth(1)},
+                    children: [
+                      const TableRow(children: [
+                        SizedBox(),
+                        Text('PR-AUC', style: TextStyle(fontWeight: FontWeight.w700)),
+                        Text('Brier', style: TextStyle(fontWeight: FontWeight.w700)),
+                      ]),
+                      for (final e in comparison.entries)
+                        TableRow(children: [
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 6),
+                            child: Text(bn ? (_modelNames[e.key]?.$1 ?? e.key) : (_modelNames[e.key]?.$2 ?? e.key)),
+                          ),
+                          Padding(padding: const EdgeInsets.symmetric(vertical: 6), child: Text('${e.value['pr_auc']}')),
+                          Padding(padding: const EdgeInsets.symmetric(vertical: 6), child: Text('${e.value['brier']}')),
+                        ]),
+                    ],
+                  ),
+                ),
+              ),
+              Text(tr(bn, 'PR-AUC বেশি = ভালো; Brier কম = সম্ভাবনা বেশি নির্ভুল।', 'Higher PR-AUC is better; lower Brier means truer probabilities.'),
+                  style: const TextStyle(color: BrandColors.muted, fontSize: 12)),
+            ],
             const SizedBox(height: 16),
-            Text(tr(bn, '৩. মডেল কী দেখে (লজিস্টিক রিগ্রেশন ওজন)', '3. What the model looks at (logistic regression weights)'),
+            Text(tr(bn, '৪. মডেল কী দেখে (গড় SHAP প্রভাব)', '4. What the model looks at (average SHAP impact)'),
                 style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 16)),
             const SizedBox(height: 8),
             Card(
-              child: Column(children: [
-                for (final e in (coef.entries.toList()..sort((a, b) => (b.value as num).compareTo(a.value as num))))
-                  ListTile(
-                    dense: true,
-                    title: Text(e.key),
-                    trailing: Text((e.value as num).toStringAsFixed(2),
-                        style: TextStyle(color: (e.value as num) > 0 ? BrandColors.red : BrandColors.green, fontWeight: FontWeight.w700)),
-                  ),
-              ]),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 6),
+                child: Column(children: [
+                  for (final e in importance.entries)
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 5),
+                      child: Row(children: [
+                        Expanded(
+                          flex: 5,
+                          child: Text(bn ? (_featureNames[e.key]?.$1 ?? e.key) : (_featureNames[e.key]?.$2 ?? e.key),
+                              style: const TextStyle(fontSize: 13)),
+                        ),
+                        Expanded(
+                          flex: 4,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(3),
+                            child: LinearProgressIndicator(
+                              value: ((e.value as num) / topImpact).clamp(0.0, 1.0).toDouble(),
+                              minHeight: 8,
+                              backgroundColor: BrandColors.bg,
+                              color: BrandColors.navy,
+                            ),
+                          ),
+                        ),
+                      ]),
+                    ),
+                ]),
+              ),
             ),
+            Text(tr(bn, 'প্রতিটি সতর্কতার কারণ ওই লেনদেনের SHAP মান থেকে আসে।', 'Each warning\'s reasons come from that payment\'s own SHAP values.'),
+                style: const TextStyle(color: BrandColors.muted, fontSize: 12)),
             const SizedBox(height: 12),
             Text('${rm['dataset']?['note'] ?? ''}\n${pm['note'] ?? ''}', style: const TextStyle(color: BrandColors.muted, fontSize: 12)),
           ]);
