@@ -47,6 +47,7 @@ Prototype by **Team WALL-E** (Shagato Chowdhury, Umme Munia) for the AI Dev Fest
 | Mistake guard | Known recipient + amount about 10× the usual → "Did you mean ৳350?" |
 | Risk-based authentication | GREEN: Face ID / fingerprint or PIN · YELLOW: PIN · RED: 30-second hold, warning acknowledgement, then PIN. Enforced by the server, not the client: a fingerprint approval is a signature from the phone's hardware key over a one-time server challenge, which the server verifies |
 | Explanations | Every warning lists its reasons in Bangla and English |
+| Impact simulator | Per 1,000 / 100,000 / 1,000,000 transfers at 25.8% / 5% / 1% scam prevalence: scams flagged, held and stopped, money protected, honest payments warned, held and given up, and wrong-number disputes avoided, next to the previous model. Labelled as a simulation; every assumption is in `data/impact_assumptions.json`. Pilot plan: [`docs/PILOT.md`](docs/PILOT.md) |
 | Ops dashboard | Decisions by risk level, transfers cancelled after a warning, money protected, scam patterns seen, and model health: input drift (PSI) against training, RED overrides, warnings users reported wrong. See [`docs/FAILURE_POLICY.md`](docs/FAILURE_POLICY.md) |
 | Accuracy report | Measured parser accuracy and scam-shield metrics, shown live in the app |
 | Bolo agent (every page) | Voice/text agent that sees the page on screen and the last 3 pages, and acts through the same code as the buttons. LLM planner when a key is set, Bangla/Banglish/English keyword router otherwise; every plan passes a safety guard |

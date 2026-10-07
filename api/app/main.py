@@ -25,7 +25,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, Response
 from pydantic import BaseModel, Field
 
-from . import auth, handoff, monitor, store
+from . import auth, handoff, impact, monitor, store
 from .core import agent
 from .core import features as feat_mod
 from .core import interview, llm, parser, risk, scam, tts
@@ -361,6 +361,16 @@ def feedback(body: FeedbackIn, s: auth.Session = Depends(auth.current)):
         raise HTTPException(409, {"code": "not_a_warning"})
     store.add_feedback(a["id"], s.user["id"], body.kind, level)
     return {"ok": True}
+
+
+@app.get("/api/impact", dependencies=[Depends(auth.demo_user_or_admin)])
+def impact_simulation(transfers: int = 1000, prevalence: float = 0.01):
+    """Per N transfers: scams flagged, held and stopped, Tk protected, honest
+    users warned, and disputes avoided, at a chosen scam prevalence.
+    A simulation on synthetic data with explicit assumptions, not real results."""
+    if not (1 <= transfers <= 100_000_000) or not (0.0001 <= prevalence <= 0.5):
+        raise HTTPException(422, "transfers 1..100,000,000 and prevalence 0.0001..0.5")
+    return impact.simulate(transfers, prevalence)
 
 
 @app.get("/api/admin/monitor", dependencies=[Depends(auth.demo_user_or_admin)])
