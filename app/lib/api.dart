@@ -101,6 +101,14 @@ class Api {
         ...?proof,
       }));
   static Future<void> cancel(String assessmentId) async => _send('POST', '/api/cancel', {'assessment_id': assessmentId});
+
+  /// The user says a warning was wrong (a label for threshold reviews).
+  static Future<void> feedback(String assessmentId, String kind) async =>
+      _send('POST', '/api/feedback', {'assessment_id': assessmentId, 'kind': kind});
+
+  /// Model health for ops: drift, level mix, wrong-warning and override rates.
+  static Future<Map<String, dynamic>> monitor() async =>
+      Map<String, dynamic>.from(await _send('GET', '/api/admin/monitor'));
   static Future<Map<String, dynamic>> dashboard() async =>
       Map<String, dynamic>.from(await _send('GET', '/api/dashboard'));
   static Future<Map<String, dynamic>> metrics() async =>

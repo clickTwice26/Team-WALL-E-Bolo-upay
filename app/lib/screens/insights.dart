@@ -128,6 +128,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 _stat('RED', '${lv['RED']}', color: BrandColors.red),
               ]),
               const SizedBox(height: 16),
+              const _ModelHealth(),
+              const SizedBox(height: 16),
               Text(tr(bn, 'প্রতারণার ধরন', 'Scam patterns detected'), style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 16)),
               const SizedBox(height: 6),
               Card(
@@ -354,6 +356,60 @@ class _AccuracyScreenState extends State<AccuracyScreen> {
           ]);
         },
       ),
+    );
+  }
+}
+
+/// Model health (failure policy): drift against training, overrides of RED,
+/// warnings users called wrong, and alerts for the threshold review.
+class _ModelHealth extends StatelessWidget {
+  const _ModelHealth();
+
+  @override
+  Widget build(BuildContext context) {
+    final bn = appState.bangla;
+    return FutureBuilder<Map<String, dynamic>>(
+      future: Api.monitor(),
+      builder: (context, s) {
+        if (!s.hasData) return const SizedBox.shrink();
+        final m = s.data!;
+        final drift = Map<String, dynamic>.from(m['drift_psi'] ?? {});
+        final alerts = List<String>.from(m['alerts'] ?? const []);
+        return Card(
+          child: Padding(
+            padding: const EdgeInsets.all(14),
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Text(tr(bn, 'মডেলের স্বাস্থ্য (শেষ ${bnDigits('${m['window_days']}')} দিন)', 'Model health (last ${m['window_days']} days)'),
+                  style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 16)),
+              const SizedBox(height: 6),
+              Text(tr(bn, 'যাচাই: ${bnDigits('${m['checks']}')} · RED-এর পরও পাঠানো: ${_pct(m['red_override_rate'])} · ভুল সতর্কতার রিপোর্ট: ${_pct(m['wrong_warning_rate'])}',
+                  'Checks: ${m['checks']} · RED still sent: ${_pct(m['red_override_rate'])} · Warnings reported wrong: ${_pct(m['wrong_warning_rate'])}')),
+              if (drift.isNotEmpty) ...[
+                const SizedBox(height: 8),
+                Text(tr(bn, 'ট্রেনিংয়ের তুলনায় পরিবর্তন (PSI, ০.২-এর বেশি হলে সতর্কতা)', 'Shift since training (PSI, alert above 0.2)'),
+                    style: const TextStyle(color: BrandColors.muted, fontSize: 12)),
+                for (final e in drift.entries.take(5))
+                  Row(children: [
+                    Expanded(child: Text(e.key, style: const TextStyle(fontSize: 13))),
+                    Text('${e.value}',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            color: (e.value as num) > 0.2 ? BrandColors.red : BrandColors.green)),
+                  ]),
+              ],
+              for (final a in alerts)
+                Padding(
+                  padding: const EdgeInsets.only(top: 6),
+                  child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                    const Icon(Icons.warning_amber_rounded, size: 18, color: BrandColors.amber),
+                    const SizedBox(width: 6),
+                    Expanded(child: Text(a, style: const TextStyle(fontSize: 13))),
+                  ]),
+                ),
+            ]),
+          ),
+        );
+      },
     );
   }
 }

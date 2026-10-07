@@ -226,6 +226,15 @@ def main() -> None:
     except ImportError:
         print("shap is not installed: skipping feature importance")
 
+    # what the inputs looked like in training, for drift checks in production (api/app/monitor.py)
+    reference = {}
+    for j, f in enumerate(FEATURES):
+        col = X2[tr][:, j]
+        edges = sorted({round(float(q), 4) for q in np.quantile(col, np.linspace(0.1, 0.9, 9))})
+        counts = np.bincount(np.searchsorted(edges, col, side="right"), minlength=len(edges) + 1)
+        reference[f] = {"edges": edges, "share": [round(float(c) / len(col), 4) for c in counts]}
+    level_mix = {k: round(float(np.mean(lv == i)), 4) for i, k in enumerate(("GREEN", "YELLOW", "RED"))}
+
     trained_at = datetime.now().isoformat(timespec="seconds")
     test_events = [events[i] for i in te]
     metrics = {
@@ -249,6 +258,7 @@ def main() -> None:
         "test_by_kind": by_kind(test_events, lv),
         "calibration": curves,
         "feature_importance": importance,
+        "reference": {"features": reference, "level_mix": level_mix},
         "fallback": {"model": "logistic_regression", "thresholds": th_fallback,
                      "coefficients": dict(zip(FEATURES, [round(c, 3) for c in lr_all_m.coef_[0].tolist()]))},
         "model_choice": _choice(comparison),

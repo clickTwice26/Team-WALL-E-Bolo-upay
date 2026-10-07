@@ -271,6 +271,255 @@
     "inflow_then_outflow": 0.0285,
     "is_recharge": 0.0019
   },
+  "reference": {
+    "features": {
+      "is_new_recipient": {
+        "edges": [
+          0.0,
+          1.0
+        ],
+        "share": [
+          0.0,
+          0.5469,
+          0.4531
+        ]
+      },
+      "log_recipient_ratio": {
+        "edges": [
+          -1.2852,
+          -0.6247,
+          -0.2528,
+          0.0287,
+          0.3093,
+          0.6806,
+          1.2001,
+          1.7861,
+          2.432
+        ],
+        "share": [
+          0.0999,
+          0.1001,
+          0.0999,
+          0.0999,
+          0.0999,
+          0.1001,
+          0.0998,
+          0.1001,
+          0.0999,
+          0.1001
+        ]
+      },
+      "is_night": {
+        "edges": [
+          0.0
+        ],
+        "share": [
+          0.0,
+          1.0
+        ]
+      },
+      "recent_sends_30m": {
+        "edges": [
+          0.0,
+          1.0
+        ],
+        "share": [
+          0.0,
+          0.8899,
+          0.1101
+        ]
+      },
+      "balance_fraction": {
+        "edges": [
+          0.0345,
+          0.0592,
+          0.0868,
+          0.1197,
+          0.1634,
+          0.2283,
+          0.3264,
+          0.5122,
+          0.7208
+        ],
+        "share": [
+          0.0998,
+          0.0994,
+          0.1008,
+          0.0998,
+          0.1001,
+          0.0998,
+          0.1003,
+          0.0999,
+          0.0999,
+          0.1001
+        ]
+      },
+      "on_active_call": {
+        "edges": [
+          0.0,
+          1.0
+        ],
+        "share": [
+          0.0,
+          0.7798,
+          0.2202
+        ]
+      },
+      "return_claim_no_inflow": {
+        "edges": [
+          0.0
+        ],
+        "share": [
+          0.0,
+          1.0
+        ]
+      },
+      "scam_score": {
+        "edges": [
+          0.0,
+          0.5
+        ],
+        "share": [
+          0.0,
+          0.835,
+          0.165
+        ]
+      },
+      "is_recharge": {
+        "edges": [
+          0.0
+        ],
+        "share": [
+          0.0,
+          1.0
+        ]
+      },
+      "sends_24h": {
+        "edges": [
+          0.0,
+          1.0
+        ],
+        "share": [
+          0.0,
+          0.6532,
+          0.3468
+        ]
+      },
+      "new_recipients_7d": {
+        "edges": [
+          0.0,
+          1.0,
+          2.0,
+          3.0
+        ],
+        "share": [
+          0.0,
+          0.4043,
+          0.3118,
+          0.1739,
+          0.1099
+        ]
+      },
+      "inflow_then_outflow": {
+        "edges": [
+          0.0
+        ],
+        "share": [
+          0.0,
+          1.0
+        ]
+      },
+      "amount_z_user": {
+        "edges": [
+          -1.4487,
+          -0.7438,
+          -0.3356,
+          0.0369,
+          0.4305,
+          0.8501,
+          1.3351,
+          1.9081,
+          2.5785
+        ],
+        "share": [
+          0.1001,
+          0.0999,
+          0.0999,
+          0.0999,
+          0.0999,
+          0.1001,
+          0.0999,
+          0.0999,
+          0.0999,
+          0.1001
+        ]
+      },
+      "log_recipient_age": {
+        "edges": [
+          0.0,
+          0.0066,
+          4.9639,
+          5.1078,
+          5.1708,
+          5.2042,
+          5.2365
+        ],
+        "share": [
+          0.0,
+          0.3994,
+          0.1005,
+          0.0999,
+          0.0996,
+          0.1003,
+          0.0996,
+          0.1006
+        ]
+      },
+      "hour_unusual_for_user": {
+        "edges": [
+          0.0,
+          1.0
+        ],
+        "share": [
+          0.0,
+          0.8702,
+          0.1298
+        ]
+      },
+      "recipient_paid_you_7d": {
+        "edges": [
+          0.0
+        ],
+        "share": [
+          0.0,
+          1.0
+        ]
+      },
+      "is_cash_out": {
+        "edges": [
+          0.0
+        ],
+        "share": [
+          0.0,
+          1.0
+        ]
+      },
+      "is_payment": {
+        "edges": [
+          0.0
+        ],
+        "share": [
+          0.0,
+          1.0
+        ]
+      }
+    },
+    "level_mix": {
+      "GREEN": 0.6508,
+      "YELLOW": 0.1129,
+      "RED": 0.2363
+    }
+  },
   "fallback": {
     "model": "logistic_regression",
     "thresholds": {
@@ -299,5 +548,5 @@
     }
   },
   "model_choice": "Gradient boosting on all features, monotonic and sigmoid-calibrated. Test PR-AUC 0.9791 (logistic regression on the same features 0.9722, previous 9-feature model 0.938); Brier score 0.0302 (0.0334, 0.0554). Monotonic constraints mean more risk evidence can never lower the score, calibration makes the probability mean what it says, and SHAP values explain each decision. Logistic regression on all features stays in the bundle as the fallback.",
-  "trained_at": "2026-10-07T04:32:04"
+  "trained_at": "2026-10-07T04:38:53"
 }

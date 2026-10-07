@@ -47,7 +47,7 @@ Prototype by **Team WALL-E** (Shagato Chowdhury, Umme Munia) for the AI Dev Fest
 | Mistake guard | Known recipient + amount about 10× the usual → "Did you mean ৳350?" |
 | Risk-based authentication | GREEN: Face ID / fingerprint or PIN · YELLOW: PIN · RED: 30-second hold, warning acknowledgement, then PIN. Enforced by the server, not the client: a fingerprint approval is a signature from the phone's hardware key over a one-time server challenge, which the server verifies |
 | Explanations | Every warning lists its reasons in Bangla and English |
-| Ops dashboard | Decisions by risk level, transfers cancelled after a warning, money protected, scam patterns seen |
+| Ops dashboard | Decisions by risk level, transfers cancelled after a warning, money protected, scam patterns seen, and model health: input drift (PSI) against training, RED overrides, warnings users reported wrong. See [`docs/FAILURE_POLICY.md`](docs/FAILURE_POLICY.md) |
 | Accuracy report | Measured parser accuracy and scam-shield metrics, shown live in the app |
 | Bolo agent (every page) | Voice/text agent that sees the page on screen and the last 3 pages, and acts through the same code as the buttons. LLM planner when a key is set, Bangla/Banglish/English keyword router otherwise; every plan passes a safety guard |
 | Human handoff + support console | "Talk to a person", a reported scam or lost money, or two misses in a row hand the chat to staff at `/console`, with the bot context and the customer's scam checks. Staff can stop a pending transfer, never send money |
