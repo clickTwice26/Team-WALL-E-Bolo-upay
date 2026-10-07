@@ -25,12 +25,14 @@ T = TypeVar("T", bound=BaseModel)
 SYSTEM_PROMPT = """You extract a mobile-wallet command from a Bangladeshi user's speech.
 The text may be Bangla, Banglish (Bangla written in English letters) or English.
 Return only the fields asked for. Rules:
-- intent: send_money, mobile_recharge, check_balance, unsupported or unknown.
+- intent: send_money, mobile_recharge, cash_out, merchant_payment, bill_payment
+  (electricity, gas, water bills: DESCO, DPDC, Titas, WASA), check_balance,
+  unsupported or unknown.
 - amount: the taka amount as a whole number, or null if no amount was said.
   Convert Bangla number words: দেড় হাজার = 1500, আড়াইশো = 250, সাড়ে তিন হাজার = 3500.
   Never invent an amount.
-- recipient_text: the name or relation exactly as the user said it
-  (for example "Ammu", "Rahim bhai", "রহিম"), or null.
+- recipient_text: the name, relation or biller exactly as the user said it
+  (for example "Ammu", "Rahim bhai", "রহিম", "DESCO"), or null.
 - phone: an 11-digit number starting with 01 if one was said, else null.
 - confidence: 0.0 to 1.0, how sure you are about intent and amount together."""
 
@@ -42,8 +44,8 @@ DEFAULT_MODELS = {
 
 
 class LLMCommand(BaseModel):
-    intent: Literal["send_money", "mobile_recharge", "check_balance",
-                    "unsupported", "unknown"]
+    intent: Literal["send_money", "mobile_recharge", "cash_out", "merchant_payment",
+                    "bill_payment", "check_balance", "unsupported", "unknown"]
     amount: Optional[int] = None
     recipient_text: Optional[str] = None
     phone: Optional[str] = None

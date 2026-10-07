@@ -209,8 +209,8 @@ class HomeScreen extends StatelessWidget {
       borderRadius: BorderRadius.circular(12),
       onTap: onTap ??
           () => ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-              content: Text(tr(bn, 'এই প্রোটোটাইপে শুধু সেন্ড মানি, রিচার্জ ও ব্যালেন্স',
-                  'Prototype supports Send Money, Recharge and Balance')))),
+              content: Text(tr(bn, 'এই প্রোটোটাইপে সেন্ড মানি, ক্যাশ আউট, রিচার্জ, পে বিল, মেক পেমেন্ট ও ব্যালেন্স',
+                  'Prototype supports Send Money, Cash Out, Recharge, Pay Bill, Make Payment and Balance')))),
       child: Opacity(
         opacity: onTap == null ? 0.9 : 1,
         child: Column(mainAxisSize: MainAxisSize.min, children: [
@@ -235,11 +235,11 @@ class HomeScreen extends StatelessWidget {
       _service(context, Icons.send_rounded, const Color(0xFFBDEBFA), const Color(0xFF0B79B8),
           tr(bn, 'সেন্ড মানি', 'Send Money'), () => _openAssistant(context)),
       _service(context, Icons.payments_rounded, const Color(0xFFFFD9CC), const Color(0xFFE0603A),
-          tr(bn, 'ক্যাশ আউট', 'Cash Out'), null),
+          tr(bn, 'ক্যাশ আউট', 'Cash Out'), () => say(tr(bn, 'ক্যাশ আউট করব', 'cash out korbo'))),
       _service(context, Icons.phone_iphone_rounded, const Color(0xFFD3E6FB), const Color(0xFF2F7BD8),
           tr(bn, 'মোবাইল টপআপ', 'Mobile TopUp'), () => say(tr(bn, 'আমার নম্বরে ৫০ টাকা রিচার্জ', 'amar number e 50 taka recharge'))),
       _service(context, Icons.receipt_long_rounded, const Color(0xFFC9D3EE), const Color(0xFF3B4F9A),
-          tr(bn, 'পে বিল', 'Pay Bill'), null),
+          tr(bn, 'পে বিল', 'Pay Bill'), () => say(tr(bn, 'বিল দেব', 'bill dibo'))),
     ];
     final second = [
       _service(context, Icons.account_balance_wallet_outlined, BrandColors.bg, const Color(0xFF6A5ACD),
@@ -249,7 +249,8 @@ class HomeScreen extends StatelessWidget {
       _service(context, Icons.account_balance_outlined, BrandColors.bg, const Color(0xFF2F7BD8),
           tr(bn, 'ফান্ড ট্রান্সফার', 'Fund Transfer'), null, big: false),
       _service(context, Icons.qr_code_2_rounded, BrandColors.bg, BrandColors.text,
-          tr(bn, 'মেক পেমেন্ট', 'Make Payment'), null, big: false),
+          tr(bn, 'মেক পেমেন্ট', 'Make Payment'), () => say(tr(bn, 'মেক পেমেন্ট করব', 'make payment korbo')),
+          big: false),
     ];
     Widget row(List<Widget> items) => Row(children: [for (final i in items) Expanded(child: i)]);
     return Card(
@@ -340,6 +341,9 @@ class HomeScreen extends StatelessWidget {
     String label(String t) => switch (t) {
           'send_money' => tr(bn, 'সেন্ড মানি', 'Send Money'),
           'mobile_recharge' => tr(bn, 'রিচার্জ', 'Recharge'),
+          'cash_out' => tr(bn, 'ক্যাশ আউট', 'Cash Out'),
+          'bill_payment' => tr(bn, 'পে বিল', 'Pay Bill'),
+          'merchant_payment' => tr(bn, 'মেক পেমেন্ট', 'Make Payment'),
           'receive' => tr(bn, 'টাকা এসেছে', 'Received'),
           _ => t,
         };
@@ -375,6 +379,9 @@ Map<String, dynamic> describeHome() {
     return switch (t['type']) {
       'receive' => bn ? '$who থেকে ${taka(t['amount'], true)} এসেছে' : 'received ${taka(t['amount'], false)} from $who',
       'mobile_recharge' => bn ? '$who নম্বরে ${taka(t['amount'], true)} রিচার্জ' : 'recharged ${taka(t['amount'], false)} to $who',
+      'bill_payment' => bn ? '$who বিল ${taka(t['amount'], true)} দেওয়া' : 'paid a ${taka(t['amount'], false)} $who bill',
+      'cash_out' => bn ? '$who এজেন্টে ${taka(t['amount'], true)} ক্যাশ আউট' : 'cashed out ${taka(t['amount'], false)} at agent $who',
+      'merchant_payment' => bn ? '$who কে ${taka(t['amount'], true)} পেমেন্ট' : 'paid ${taka(t['amount'], false)} to $who',
       _ => bn ? '$who কে ${taka(t['amount'], true)} পাঠানো' : 'sent ${taka(t['amount'], false)} to $who',
     };
   }
@@ -383,16 +390,18 @@ Map<String, dynamic> describeHome() {
     'id': 'home',
     'summary_bn': 'হোম পেজ। ব্যবহারকারী ${p['name_bn'] ?? ''}, ব্যালেন্স ${shown ? taka(appState.balance, true) : 'লুকানো'}। '
         'সাম্প্রতিক লেনদেন: ${recent.map((t) => tx(t, true)).join('; ')}। '
-        'সেবা: সেন্ড মানি, মোবাইল টপআপ, ব্যালেন্স (ক্যাশ আউট ও পে বিল এই প্রোটোটাইপে নেই)।',
+        'সেবা: সেন্ড মানি, ক্যাশ আউট, মোবাইল টপআপ, পে বিল (${appState.billers.map((b) => b['name_bn']).join(', ')}), '
+        'মেক পেমেন্ট, ব্যালেন্স। সব লেনদেনে একই নিরাপত্তা যাচাই হয়।',
     'summary_en': 'Home page. User ${p['name'] ?? ''}, balance ${shown ? taka(appState.balance, false) : 'hidden'}. '
         'Recent transactions: ${recent.map((t) => tx(t, false)).join('; ')}. '
-        'Services: Send Money, Mobile TopUp, Balance (Cash Out and Pay Bill are not in this prototype).',
+        'Services: Send Money, Cash Out, Mobile TopUp, Pay Bill (${appState.billers.map((b) => b['name']).join(', ')}), '
+        'Make Payment, Balance. Every payment gets the same safety check.',
     'content': {
       'user': p['name'],
       'balance_visible': shown,
       if (shown) 'balance': appState.balance,
       'recent': [for (final t in recent) {'type': t['type'], 'amount': t['amount'], 'with': t['name'] ?? t['counterparty']}],
-      'services': ['send_money', 'mobile_recharge', 'check_balance'],
+      'services': ['send_money', 'cash_out', 'mobile_recharge', 'bill_payment', 'merchant_payment', 'check_balance'],
     },
     'actions': <String>[],
   };

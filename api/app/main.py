@@ -108,8 +108,9 @@ class ParseIn(BaseModel):
 
 
 class Draft(BaseModel):
-    intent: Literal["send_money", "mobile_recharge", "cash_out", "merchant_payment"]
+    intent: Literal["send_money", "mobile_recharge", "cash_out", "merchant_payment", "bill_payment"]
     amount: int = Field(gt=0, le=1_000_000)
+    # a bill goes to its saved bill account's synthetic payee number (data/seed.json)
     recipient_phone: str = Field(pattern=r"^01[3-9]\d{8}$")
     is_return_claim: bool = False
     command_text: str = ""
@@ -242,7 +243,7 @@ def list_users():
 def me(s: auth.Session = Depends(auth.current)):
     """The signed-in user's own profile, contacts and recent transactions."""
     u, uid = s.user, s.user["id"]
-    names = {c["phone"]: c for c in u["contacts"]}
+    names = {c["phone"]: c for c in u["contacts"] + u.get("billers", [])}
     recent = []
     w = wallet.get()
     for t in reversed(w.history(uid)[-15:]):
@@ -306,7 +307,8 @@ def assess(body: AssessIn, s: auth.Session = Depends(auth.current)):
     feats, summary = feat_mod.compute(
         amount=d.amount, intent=d.intent, phone=d.recipient_phone,
         is_return_claim=d.is_return_claim, balance=balance,
-        history=w.history(u["id"]), contacts=u["contacts"],
+        # saved bill accounts are known payees, like contacts: never a "new recipient"
+        history=w.history(u["id"]), contacts=u["contacts"] + u.get("billers", []),
         on_call=body.on_active_call, scam_score=sc["score"], now=now,
         self_phone=u["phone"])
     result = risk.assess(feats, summary, sc, d.amount, interviewed=bool(body.answers))

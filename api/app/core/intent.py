@@ -16,8 +16,11 @@ CASH_OUT = ["cash out", "cashout", "ক্যাশ আউট", "ক্যাশ
             "টাকা তুলব", "টাকা তুলবো", "withdraw"]
 MERCHANT = ["merchant", "মার্চেন্ট", "make payment", "মেক পেমেন্ট", "payment korbo", "payment koro",
             "payment dao", "pay korbo", "pay koro", "পেমেন্ট করব", "পেমেন্ট করবো", "পেমেন্ট করো", "পেমেন্ট দাও"]
+# bills, also by the biller's name alone ("desco te 1200 dao"); checked before
+# merchant and send words, since "bill pay koro" / "bill dao" contain both
+BILL = ["bill", "বিল", "pay bill", "electricity", "বিদ্যুৎ", "gas bill", "গ্যাস",
+        "desco", "ডেসকো", "ডেস্কো", "dpdc", "ডিপিডিসি", "titas", "তিতাস", "wasa", "ওয়াসা"]
 UNSUPPORTED = {
-    "pay_bill": ["bill", "বিল", "electricity", "বিদ্যুৎ", "gas bill", "গ্যাস"],
     "add_money": ["add money", "অ্যাড মানি", "cash in", "ক্যাশ ইন"],
 }
 RETURN_CLAIM = ["ferot", "ফেরত", "return", "vul kore", "bhul kore", "ভুল করে",
@@ -63,6 +66,8 @@ def detect(text_norm: str, has_amount: bool) -> dict:
         out["intent"] = "check_balance"
     elif _has(text_norm, "cash_out", CASH_OUT):
         out["intent"] = "cash_out"
+    elif _has(text_norm, "bill", BILL):
+        out["intent"] = "bill_payment"
     else:
         for name, kws in UNSUPPORTED.items():
             if _has(text_norm, f"u_{name}", kws):
