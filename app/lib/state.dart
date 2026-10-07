@@ -1,9 +1,14 @@
 import 'package:flutter/foundation.dart';
 
 import 'api.dart';
+import 'services/call_state.dart';
 
 /// App-wide state: selected demo user, language and demo toggles.
 class AppState extends ChangeNotifier {
+  AppState() {
+    CallState.instance.inCall.addListener(notifyListeners);
+  }
+
   List<Map<String, dynamic>> users = [];
   Map<String, dynamic>? profile;
   String userId = 'u1';
@@ -70,6 +75,28 @@ class AppState extends ChangeNotifier {
     balanceVisible = !balanceVisible;
     notifyListeners();
   }
+
+  /// Demo site: the server lists demo personas only with DEMO_MODE.
+  bool get demo => users.isNotEmpty;
+
+  /// The "simulate call" toggle exists only on web and on a demo site.
+  bool get callToggle => kIsWeb || demo;
+
+  /// R11: the phone's own call state (Android with permission), null when not measured.
+  bool? get nativeCall => CallState.instance.inCall.value;
+
+  /// On a call: the native value, or the demo toggle (which can only add a call, for demos).
+  bool get onCall => (nativeCall ?? false) || (callToggle && simulateCall);
+
+  /// "native" when the phone measured it, unless the demo toggle added a call it did not see.
+  String get callSource {
+    final n = nativeCall;
+    if (n == null) return 'simulated';
+    return n || !(callToggle && simulateCall) ? 'native' : 'simulated';
+  }
+
+  /// A fresh native reading right before a risk check.
+  Future<void> refreshCall() => CallState.instance.current();
 
   num get balance => (profile?['balance'] as num?) ?? 0;
   List<Map<String, dynamic>> get contacts =>

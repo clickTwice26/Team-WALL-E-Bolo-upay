@@ -43,8 +43,17 @@ SEQUENCE_FEATURES = [
 
 INTENT_FEATURES = ["is_cash_out", "is_payment"]  # cash-out at an agent; bill or merchant payment
 
+# R10 voice guard, measured on the phone: scores and yes/no only, never audio.
+# Not measured counts as 0, the lowest value, so it can never lower the risk.
+VOICE_FEATURES = [
+    "hesitation",      # share of the spoken command spent in long pauses (0..1)
+    "speaker_echo",    # in a call with the loudspeaker on (someone talking the user through it)
+    "voice_mismatch",  # not the enrolled owner's voice (on-device model, pending)
+    "second_voice",    # two different speakers in the command (on-device model, pending)
+]
+
 # What the risk model sees, in this order
-FEATURES = BASE_FEATURES + SEQUENCE_FEATURES + INTENT_FEATURES
+FEATURES = BASE_FEATURES + SEQUENCE_FEATURES + INTENT_FEATURES + VOICE_FEATURES
 
 
 def _ts(t: dict) -> datetime:
@@ -136,7 +145,7 @@ def sequence(amount: float, phone: str | None, history: list[dict], contacts: li
 def compute(amount: float, intent: str, phone: str | None, is_return_claim: bool,
             balance: float, history: list[dict], contacts: list[dict],
             on_call: bool, scam_score: float, now: datetime | None = None,
-            self_phone: str | None = None) -> tuple[dict, dict]:
+            self_phone: str | None = None, voice: dict | None = None) -> tuple[dict, dict]:
     now = now or datetime.now(TZ)
     s = summarize(history, contacts, phone, now)
     is_self = self_phone is not None and phone == self_phone
@@ -160,6 +169,9 @@ def compute(amount: float, intent: str, phone: str | None, is_return_claim: bool
         "is_payment": 1 if intent in ("bill_payment", "merchant_payment") else 0,
     }
     feats.update(sequence(amount, phone, history, contacts, now, self_phone))
+    v = voice or {}  # None or missing = not measured
+    feats.update({"hesitation": round(min(max(float(v.get("hesitation") or 0.0), 0.0), 1.0), 3),
+                  **{k: 1 if v.get(k) else 0 for k in ("speaker_echo", "voice_mismatch", "second_voice")}})
     return feats, s
 
 

@@ -9,6 +9,7 @@ import 'screens/assistant.dart';
 import 'screens/home.dart';
 import 'screens/insights.dart';
 import 'screens/login.dart';
+import 'services/call_state.dart';
 import 'state.dart';
 import 'strings.dart';
 import 'theme.dart';
@@ -148,6 +149,10 @@ class _ShellState extends State<Shell> {
       if (ctx != null) showSettingsSheet(ctx);
     };
     agent.push(_page);
+    // R11: after the PIN unlock, explain and ask once for call detection (Android only)
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) CallState.instance.start(context, bangla: appState.bangla);
+    });
   }
 
   @override

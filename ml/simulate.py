@@ -69,6 +69,12 @@ SCAM_KINDS = {
 ON_CALL = {"fake_official": .75, "pin_otp": .75, "lottery": .7, "allowance": .7, "job_loan": .35,
            "relative": .55, "sent_by_mistake": .5, "mule": .15, "takeover": 0.0}
 
+# R10 voice guard (assumptions, not measurements). Most payments carry no voice
+# measurement: typed, on the web, or no voice print enrolled, so 0 = not measured.
+SPOKEN = 0.45      # a spoken command on a phone that reports sound levels: hesitation measured
+ENROLLED = 0.35    # of those, an enrolled voice print: voice_mismatch and second_voice measured
+SPEAKER_ON = {"honest": 0.10, "coerced": 0.45}  # on a call, call audio on the loudspeaker
+
 
 @dataclass
 class User:
@@ -88,6 +94,7 @@ class User:
 class Sim:
     def __init__(self, seed: int = 7):
         self.rng = random.Random(seed)
+        self.vrng = random.Random(seed + 1010)  # voice cues: their own stream, so the rest stays as before
         self._used: set[str] = set()
         self._n = 0
 
@@ -183,12 +190,30 @@ class Sim:
         sc = scam.match(answer)
         feats, _ = features.compute(amount=amount, intent=intent, phone=phone, is_return_claim=return_claim,
                                     balance=balance, history=u.history, contacts=u.contacts,
-                                    on_call=on_call, scam_score=sc["score"], now=ts, self_phone=u.phone)
+                                    on_call=on_call, scam_score=sc["score"], now=ts, self_phone=u.phone,
+                                    voice=self.voice(kind, label, on_call))
         self.add(u, intent, phone, amount, ts)
         return {"user": u.uid, "ts": ts, "label": label, "kind": kind, "intent": intent,
                 "amount": round(float(amount)), "feats": feats, "answer": answer, "hits": sc["hits"],
                 "phone": phone, "contacts": {c["phone"] for c in u.contacts}, "median": u.median,
                 "recent": [dict(t) for t in recent]}
+
+    def voice(self, kind: str, label: int, on_call: bool) -> dict:
+        """R10 cues for one payment. Coerced scams (the owner pays while someone tells
+        them what to do) sometimes pause a lot, put the caller on the loudspeaker or let
+        a second voice be heard; honest payments rarely do. In a takeover someone else
+        speaks, so an enrolled voice print would not match."""
+        r = self.vrng
+        coerced, takeover = label == 1 and kind != "takeover", kind == "takeover"
+        speaker = on_call and r.random() < SPEAKER_ON["coerced" if coerced else "honest"]
+        out = {"speaker_echo": speaker}  # from the call state (R11), not the microphone
+        if r.random() < SPOKEN:
+            h = r.gauss(0.42, 0.13) if coerced and r.random() < 0.55 else r.gauss(0.14, 0.08)
+            out["hesitation"] = min(max(h, 0.0), 1.0)
+            if r.random() < ENROLLED:
+                out["voice_mismatch"] = r.random() < (0.7 if takeover else 0.03)  # 3%: false rejects
+                out["second_voice"] = r.random() < ((0.5 if speaker else 0.12) if coerced else 0.02)
+        return out
 
     def legit(self, u: User, d: datetime) -> list[dict]:
         r = self.rng

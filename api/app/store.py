@@ -76,6 +76,7 @@ def conn() -> sqlite3.Connection:
             if not _ready:
                 c.execute("PRAGMA journal_mode=WAL")
                 c.executescript(SCHEMA)
+                _migrate(c)
                 c.execute("BEGIN IMMEDIATE")  # only one worker seeds a new file
                 if c.execute("SELECT COUNT(*) FROM users").fetchone()[0] == 0:
                     _seed(c)
@@ -83,6 +84,17 @@ def conn() -> sqlite3.Connection:
                 _ready = True
         _local.conn = c
     return c
+
+
+# columns added after the first release: (table, column, type), added to an older database on start
+ADDED_COLUMNS = [("decisions", "call_signal_source", "TEXT")]  # R11: "native" or "simulated"
+
+
+def _migrate(c: sqlite3.Connection) -> None:
+    for table, col, typ in ADDED_COLUMNS:
+        if col not in {r[1] for r in c.execute(f"PRAGMA table_info({table})")}:
+            c.execute(f"ALTER TABLE {table} ADD COLUMN {col} {typ}")
+    c.commit()
 
 
 def _seed(c: sqlite3.Connection) -> None:
@@ -207,11 +219,12 @@ def save_idempotent_response(uid: str, key: str, aid: str, response: dict) -> No
 def log_decision(uid: str, draft: dict, result: dict, outcome: str) -> None:
     cats = [r["key"].split(":", 1)[1] for r in result.get("reasons", []) if r["key"].startswith("scam:")]
     with _lock:
-        conn().execute("INSERT INTO decisions VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+        conn().execute("INSERT INTO decisions (id, ts, user_id, intent, amount, recipient, level, probability, "
+                       "categories, outcome, interviewed, call_signal_source) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
                        (uuid.uuid4().hex[:12], now().isoformat(), uid, draft.get("intent"),
                         draft.get("amount"), draft.get("recipient_phone"), result.get("level"),
                         result.get("probability"), json.dumps(cats), outcome,
-                        1 if draft.get("answers") else 0))
+                        1 if draft.get("answers") else 0, draft.get("call_signal_source", "simulated")))
         conn().commit()
 
 

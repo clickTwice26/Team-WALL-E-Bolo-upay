@@ -6,6 +6,7 @@ import '../agent/agent.dart';
 import '../api.dart';
 import '../services/biometric.dart';
 import '../services/voice.dart';
+import '../services/voice_guard.dart';
 import '../state.dart';
 import '../strings.dart';
 import '../theme.dart';
@@ -178,6 +179,7 @@ class _AssistantScreenState extends State<AssistantScreen> {
   Future<void> _submit() async {
     final t = _text.text.trim();
     if (t.isEmpty) return;
+    VoiceGuard.instance.beginCommand(); // R10: pauses while the command was spoken, if it was
     setState(() {
       step = _Step.parsing;
       message = null;
@@ -255,7 +257,12 @@ class _AssistantScreenState extends State<AssistantScreen> {
   Future<void> _assess() async {
     setState(() => step = _Step.assessing);
     try {
-      final a = await Api.assess(draft!, onCall: appState.simulateCall, answers: answers);
+      await appState.refreshCall();
+      final a = await Api.assess(draft!,
+          onCall: appState.onCall,
+          callSource: appState.callSource,
+          voice: await VoiceGuard.instance.signals(),
+          answers: answers);
       assessment = a;
       reportedWrong = false;
       final level = a['level'];

@@ -116,9 +116,21 @@ class Draft(BaseModel):
     command_text: str = ""
 
 
+class VoiceSignals(BaseModel):
+    """R10, measured on the phone: scores and yes/no only, never audio or a voice print.
+    A missing or null value means not measured and counts as 0 / no."""
+    hesitation: Optional[float] = Field(default=None, ge=0, le=1)  # pause ratio of the spoken command
+    speaker_echo: Optional[bool] = None    # in a call with the loudspeaker on
+    voice_mismatch: Optional[bool] = None  # not the enrolled owner's voice
+    second_voice: Optional[bool] = None    # two speakers in one command
+
+
 class AssessIn(BaseModel):
     draft: Draft
     on_active_call: bool = False
+    # R11: "native" = the phone's own call state; "simulated" = the demo toggle or not measured
+    call_signal_source: Literal["native", "simulated"] = "simulated"
+    voice_signals: Optional[VoiceSignals] = None  # R10: absent = not measured
     answers: list[str] = []
     now: Optional[datetime] = None  # DEMO_MODE only: simulate the time of day
 
@@ -303,6 +315,7 @@ def assess(body: AssessIn, s: auth.Session = Depends(auth.current)):
                 "message_bn": "আপনার অ্যাকাউন্টে যথেষ্ট ব্যালেন্স নেই।",
                 "message_en": "Not enough balance.", "balance": balance}
     sc = scam.match_many([d.command_text, *body.answers])
+    voice = body.voice_signals.model_dump(exclude_none=True) if body.voice_signals else {}
     now = body.now.astimezone(store.TZ) if body.now and auth.demo_mode() else None
     feats, summary = feat_mod.compute(
         amount=d.amount, intent=d.intent, phone=d.recipient_phone,
@@ -310,7 +323,7 @@ def assess(body: AssessIn, s: auth.Session = Depends(auth.current)):
         # saved bill accounts are known payees, like contacts: never a "new recipient"
         history=w.history(u["id"]), contacts=u["contacts"] + u.get("billers", []),
         on_call=body.on_active_call, scam_score=sc["score"], now=now,
-        self_phone=u["phone"])
+        self_phone=u["phone"], voice=voice)
     result = risk.assess(feats, summary, sc, d.amount, interviewed=bool(body.answers))
     result["features"] = feats
     result["scam_hits"] = sc["hits"]
@@ -325,8 +338,13 @@ def assess(body: AssessIn, s: auth.Session = Depends(auth.current)):
     if result["level"] == "GREEN":
         # one-time challenge the phone signs if the user approves with biometrics
         result["bio_challenge"] = secrets.token_urlsafe(24)
-    draft = {**d.model_dump(), "answers": body.answers, "on_active_call": body.on_active_call}
+    draft = {**d.model_dump(), "answers": body.answers, "on_active_call": body.on_active_call,
+             "call_signal_source": body.call_signal_source, "voice_signals": voice}
     result["assessment_id"] = store.save_assessment(u["id"], draft, result)
+    # where the risk signals came from, for ops: ids and flags only, no numbers or text
+    access_log.info(json.dumps({"event": "assess", "assessment_id": result["assessment_id"],
+                                "level": result["level"], "on_call": body.on_active_call,
+                                "call_signal_source": body.call_signal_source, "voice": voice}))
     return result
 
 

@@ -482,12 +482,23 @@ class _SettingsSheetState extends State<_SettingsSheet> {
               onChanged: (_) => appState.toggleLanguage(),
               title: const Text('বাংলা / English'),
             ),
-            SwitchListTile(
-              value: appState.simulateCall,
-              onChanged: appState.setSimulateCall,
-              title: Text(tr(bn, 'ফোন কল চলছে (সিমুলেশন)', 'Simulate active phone call')),
-              subtitle: Text(tr(bn, 'আসল অ্যাপে ফোনের কল-স্ট্যাটাস থেকে আসবে', 'In the native app this comes from the phone call state')),
-            ),
+            if (appState.nativeCall != null)
+              ListTile(
+                leading: Icon(appState.nativeCall! ? Icons.phone_in_talk : Icons.phone_disabled_outlined),
+                title: Text(tr(bn, 'ফোন কল শনাক্তকরণ চালু', 'Phone call detection is on')),
+                subtitle: Text(appState.nativeCall!
+                    ? tr(bn, 'এখন একটি কল চলছে', 'A call is active now')
+                    : tr(bn, 'এখন কোনো কল নেই (শুধু হ্যাঁ/না দেখা হয়)', 'No call right now (only yes/no is read)')),
+              ),
+            if (appState.callToggle)
+              SwitchListTile(
+                value: appState.simulateCall,
+                onChanged: appState.setSimulateCall,
+                title: Text(tr(bn, 'ফোন কল চলছে (সিমুলেশন)', 'Simulate active phone call')),
+                subtitle: Text(appState.nativeCall != null
+                    ? tr(bn, 'ডেমোর জন্য: ফোনে কল না থাকলেও কল ধরা হবে', 'For demos: counts a call even when the phone has none')
+                    : tr(bn, 'অ্যান্ড্রয়েড অ্যাপে ফোনের কল-স্ট্যাটাস থেকে আসে', 'In the Android app this comes from the phone call state')),
+              ),
             const SizedBox(height: 8),
             OutlinedButton.icon(
               onPressed: () async {
