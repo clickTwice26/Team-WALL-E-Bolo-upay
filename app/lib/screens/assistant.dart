@@ -44,6 +44,7 @@ class _AssistantScreenState extends State<AssistantScreen> {
   Map<String, dynamic>? assessment;
   List<String> answers = [];
   int questionIndex = 0;
+  List<Map<String, dynamic>> asked = []; // interview questions so far (adaptive: grows per answer)
   bool acknowledged = false;
   int holdLeft = 0;
   Timer? _timer;
@@ -268,6 +269,7 @@ class _AssistantScreenState extends State<AssistantScreen> {
       }
       if (a['needs_interview'] == true) {
         questionIndex = 0;
+        asked = ((a['interview'] as List?) ?? []).map((e) => Map<String, dynamic>.from(e)).toList();
         _answer.clear();
         setState(() => step = _Step.interview);
         _askQuestion();
@@ -305,7 +307,10 @@ class _AssistantScreenState extends State<AssistantScreen> {
   }
 
   // ---------------- interview ----------------
-  List get _questions => (assessment?['interview'] as List?) ?? [];
+  List get _questions => asked;
+
+  /// Questions to expect: up to interview_max when the server asks adaptively.
+  int get _questionTotal => ((assessment?['interview_max'] as num?)?.toInt() ?? asked.length).clamp(asked.length, 9);
 
   void _askQuestion() {
     final q = _questions[questionIndex];
@@ -316,7 +321,23 @@ class _AssistantScreenState extends State<AssistantScreen> {
     if (a.trim().isEmpty) return;
     answers = [...answers, a.trim()];
     _answer.clear();
-    if (questionIndex + 1 < _questions.length) {
+    if (assessment?['interview_mode'] == 'adaptive') {
+      // the next question depends on what the answers revealed (or the interview is done)
+      try {
+        final r = await Api.interviewNext(assessment!['assessment_id'], [for (final q in asked) '${q['id']}'], answers);
+        if (r['question'] != null) {
+          setState(() {
+            asked = [...asked, Map<String, dynamic>.from(r['question'])];
+            questionIndex++;
+          });
+          _askQuestion();
+          return;
+        }
+      } on ApiError catch (_) {
+        // could not get a follow-up: score the answers we have
+      }
+      await _assess();
+    } else if (questionIndex + 1 < _questions.length) {
       setState(() => questionIndex++);
       _askQuestion();
     } else {
@@ -572,10 +593,10 @@ class _AssistantScreenState extends State<AssistantScreen> {
             '${list.isNotEmpty ? ' Options: ${opts(false)}.' : ''}${amount != null ? ' Amount: ${amt(false)}.' : ''}';
       case _Step.interview:
         final q = _questions.isEmpty ? {} : _questions[questionIndex];
-        content.addAll({'question': {'bn': q['bn'], 'en': q['en']}, 'index': questionIndex + 1, 'total': _questions.length});
+        content.addAll({'question': {'bn': q['bn'], 'en': q['en']}, 'index': questionIndex + 1, 'total': _questionTotal});
         actions = ['answer_interview', 'cancel_transfer', 'repeat'];
-        sbn = 'নিরাপত্তা প্রশ্ন ${questionIndex + 1}/${_questions.length}: ${q['bn']}';
-        sen = 'Safety question ${questionIndex + 1}/${_questions.length}: ${q['en']}';
+        sbn = 'নিরাপত্তা প্রশ্ন ${questionIndex + 1}/$_questionTotal: ${q['bn']}';
+        sen = 'Safety question ${questionIndex + 1}/$_questionTotal: ${q['en']}';
       case _Step.review:
         final reasons = [
           for (final r in (a['reasons'] as List? ?? []))
@@ -912,8 +933,8 @@ class _AssistantScreenState extends State<AssistantScreen> {
     return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
       _levelBanner('YELLOW', tr(bn, 'পাঠানোর আগে ছোট্ট ৩টি প্রশ্ন', 'Three quick questions before sending')),
       const SizedBox(height: 16),
-      Text(tr(bn, 'প্রশ্ন ${bnDigits('${questionIndex + 1}')}/${bnDigits('${_questions.length}')}',
-          'Question ${questionIndex + 1}/${_questions.length}'),
+      Text(tr(bn, 'প্রশ্ন ${bnDigits('${questionIndex + 1}')} (সর্বোচ্চ ${bnDigits('$_questionTotal')})',
+          'Question ${questionIndex + 1} (at most $_questionTotal)'),
           style: const TextStyle(color: BrandColors.muted, fontWeight: FontWeight.w600)),
       const SizedBox(height: 6),
       Text(bn ? q['bn'] : q['en'], style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700)),

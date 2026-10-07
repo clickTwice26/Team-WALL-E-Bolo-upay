@@ -12,9 +12,11 @@ SEND = ["pathao", "pathan", "pathai", "pathabo", "pathiye", "pathate", "patha",
         "পাঠাও", "পাঠান", "পাঠাই", "পাঠাবো", "পাঠিয়ে", "পাঠাতে", "পাঠা",
         "send", "transfer", "ট্রান্সফার", "dao", "diye dao", "দাও", "দিয়ে দাও",
         "den", "দেন", "dite", "দিতে", "ferot", "ফেরত", "return", "give"]
+CASH_OUT = ["cash out", "cashout", "ক্যাশ আউট", "ক্যাশআউট", "taka tulbo",
+            "টাকা তুলব", "টাকা তুলবো", "withdraw"]
+MERCHANT = ["merchant", "মার্চেন্ট", "make payment", "মেক পেমেন্ট", "payment korbo", "payment koro",
+            "payment dao", "pay korbo", "pay koro", "পেমেন্ট করব", "পেমেন্ট করবো", "পেমেন্ট করো", "পেমেন্ট দাও"]
 UNSUPPORTED = {
-    "cash_out": ["cash out", "cashout", "ক্যাশ আউট", "ক্যাশআউট", "taka tulbo",
-                 "টাকা তুলব", "টাকা তুলবো", "withdraw"],
     "pay_bill": ["bill", "বিল", "electricity", "বিদ্যুৎ", "gas bill", "গ্যাস"],
     "add_money": ["add money", "অ্যাড মানি", "cash in", "ক্যাশ ইন"],
 }
@@ -59,13 +61,17 @@ def detect(text_norm: str, has_amount: bool) -> dict:
         out["intent"] = "mobile_recharge"
     elif _has(text_norm, "balance", BALANCE) and not has_amount:
         out["intent"] = "check_balance"
+    elif _has(text_norm, "cash_out", CASH_OUT):
+        out["intent"] = "cash_out"
     else:
         for name, kws in UNSUPPORTED.items():
             if _has(text_norm, f"u_{name}", kws):
                 out["intent"] = "unsupported"
                 out["unsupported"] = name
                 return out
-        if _has(text_norm, "send", SEND) or has_amount:
+        if _has(text_norm, "merchant", MERCHANT):
+            out["intent"] = "merchant_payment"
+        elif _has(text_norm, "send", SEND) or has_amount:
             out["intent"] = "send_money"
         else:
             out["intent"] = "unknown"

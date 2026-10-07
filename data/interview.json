@@ -1,0 +1,47 @@
+{
+  "max_questions": 3,
+  "questions": {
+    "who": {"bn": "কেউ কি ফোন করে বা মেসেজ দিয়ে এই টাকা পাঠাতে বলেছে? কে বলেছে?",
+            "en": "Did someone call or message you asking for this money? Who?"},
+    "official": {"bn": "সে কি নিজেকে উপায় অফিস, কাস্টমার কেয়ার বা কোনো অফিসের লোক বলেছে?",
+                 "en": "Did they say they are from upay, customer care or any office?"},
+    "otp": {"bn": "সে কি আপনার পিন বা ওটিপি কোড চেয়েছে? কেন টাকা পাঠাচ্ছেন?",
+            "en": "Did they ask for your PIN or OTP? Why are you sending this money?"},
+    "money_arrived": {"bn": "এই নম্বর থেকে কি সত্যিই আপনার অ্যাকাউন্টে টাকা এসেছে? উপায়ের লেনদেনের তালিকায় দেখেছেন?",
+                      "en": "Did money from this number really reach your account? Did you check your upay transaction list?"},
+    "on_call": {"bn": "এখন ফোনে কার সাথে কথা বলছেন? সে কি এই টাকা পাঠাতে বলছে?",
+                "en": "Who are you on the phone with right now? Are they asking you to send this?"},
+    "how_know": {"bn": "এই মানুষটিকে আপনি কীভাবে চেনেন? সামনাসামনি দেখা হয়েছে?",
+                 "en": "How do you know this person? Have you met them in person?"},
+    "pass_on": {"bn": "কেউ কি আপনাকে টাকা পাঠিয়ে সেটা অন্য নম্বরে পাঠাতে বলেছে?",
+                "en": "Did someone send you money and ask you to pass it on to another number?"},
+    "relative_check": {"bn": "আত্মীয়ের পুরনো নম্বরে ফোন করে কি নিশ্চিত হয়েছেন যে সত্যিই তিনি?",
+                       "en": "Did you call your relative on their old number to check it is really them?"},
+    "commission": {"bn": "এর বিনিময়ে কি কেউ কমিশন, চাকরি বা লাভ দেবে বলেছে?",
+                   "en": "Did anyone promise you a commission, a job or a profit for this?"},
+    "unusual_time": {"bn": "এই সময়ে কি আপনি নিজেই ফোনটা ব্যবহার করছেন? কেউ কি আপনার ফোন নিয়েছে?",
+                     "en": "Are you the one using this phone right now? Has anyone else had your phone?"},
+    "agent": {"bn": "এজেন্ট কি আপনার সামনে আছেন? দোকানের সাইনবোর্ডের এজেন্ট নম্বরের সাথে মিলিয়েছেন?",
+              "en": "Is the agent in front of you? Did you match the agent number with the shop's sign?"}
+  },
+  "first": [
+    {"if": "is_return_claim", "ask": "money_arrived"},
+    {"if": "inflow_then_outflow", "ask": "pass_on"},
+    {"if": "on_active_call", "ask": "on_call"},
+    {"if": "hour_unusual_for_user", "ask": "unusual_time"},
+    {"if": "is_cash_out", "ask": "agent"},
+    {"if": "is_new_recipient", "ask": "how_know"}
+  ],
+  "follow_up": {
+    "fake_official": "otp",
+    "pin_otp_request": "official",
+    "lottery_prize": "otp",
+    "govt_allowance": "otp",
+    "relative_in_trouble": "relative_check",
+    "money_mule": "commission",
+    "job_loan_investment": "commission",
+    "urgency_pressure": "who",
+    "sent_by_mistake": "money_arrived"
+  },
+  "fill": ["who", "official", "otp"]
+}

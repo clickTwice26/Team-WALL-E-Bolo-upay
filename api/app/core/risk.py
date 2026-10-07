@@ -48,6 +48,8 @@ REASONS = {
                       "This amount is unusual for you."),
     "hour_unusual_for_user": ("এই সময়ে আপনি সাধারণত টাকা পাঠান না।",
                               "You don't usually send money at this time of day."),
+    "cash_out_night_new_agent": ("গভীর রাতে নতুন এজেন্টের কাছে ব্যালেন্সের বেশিরভাগ ক্যাশ আউট হচ্ছে।",
+                                 "Most of your balance is being cashed out late at night at an agent you have never used."),
 }
 # yes/no features: only a reason when they are actually on
 BINARY = ("is_night", "on_active_call", "is_new_recipient", "return_claim_no_inflow",
@@ -160,6 +162,10 @@ def assess(feats: dict, summary: dict, scam: dict, amount: float,
         rules.append("return_claim_no_inflow")
     if any(h.get("escalate_if") == "new_recipient" for h in scam["hits"]) and feats["is_new_recipient"]:
         rules.append("relative_in_trouble_new_number")
+    # cashing out most of the balance at night at an agent never used before
+    if (feats.get("is_cash_out") and feats["is_night"] and feats["is_new_recipient"]
+            and feats["balance_fraction"] >= 0.5):
+        rules.append("cash_out_night_new_agent")
     if rules:
         level = "RED"
 
@@ -179,8 +185,8 @@ def assess(feats: dict, summary: dict, scam: dict, amount: float,
 
     reasons = []
     for r in rules:
-        if r == "return_claim_no_inflow":
-            bn, en = REASONS["return_claim_no_inflow"]
+        if r in ("return_claim_no_inflow", "cash_out_night_new_agent"):
+            bn, en = REASONS[r]
             reasons.append({"key": r, "bn": bn, "en": en, "hard": True})
     for h in scam["hits"]:
         reasons.append({"key": f"scam:{h['category']}", "bn": h["explain_bn"],

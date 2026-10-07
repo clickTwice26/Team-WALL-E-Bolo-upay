@@ -324,7 +324,7 @@ def _full_command(t: str, user: dict) -> bool:
     """"karim ke 2000 pathao" on a step page is a new command, not an answer."""
     amount = _amount(t)
     det = intent_mod.detect(t, amount is not None)
-    if det["intent"] not in ("send_money", "mobile_recharge") or amount is None:
+    if det["intent"] not in ("send_money", "mobile_recharge", "cash_out", "merchant_payment") or amount is None:
         return False
     phones, rest = extract_phones(t)
     if phones:
@@ -638,7 +638,7 @@ def rules(req: dict, facts: dict) -> dict:
                             "add_money": ("অ্যাড মানি", "Add money")}.get(det["unsupported"], ("এটি", "That"))
         return _plan(f"{what_bn} এই প্রোটোটাইপে এখনো নেই। সেন্ড মানি, রিচার্জ আর ব্যালেন্স দেখা যায়।",
                      f"{what_en} is not in this prototype yet. You can send money, recharge and check your balance.")
-    if det["intent"] in ("send_money", "mobile_recharge"):
+    if det["intent"] in ("send_money", "mobile_recharge", "cash_out", "merchant_payment"):
         return _plan("ঠিক আছে, সেন্ড মানি পেজে যাচাই করছি।", "OK, checking it on the Send Money page.",
                      [{"type": "start_transfer", "text": msg[:MAX_TEXT]}])
     # second miss in a row: offer a person
