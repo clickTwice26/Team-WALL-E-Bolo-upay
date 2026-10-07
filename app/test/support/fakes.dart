@@ -43,6 +43,10 @@ class FakeVoice implements Voice {
   bool lastUnsure = false;
   @override
   double? lastConfidence;
+  @override
+  double? lastPauseRatio;
+  @override
+  DateTime? lastHeardAt;
   final spoken = <String>[];
 
   /// What the next listen() hears, and the recognizer's confidence.

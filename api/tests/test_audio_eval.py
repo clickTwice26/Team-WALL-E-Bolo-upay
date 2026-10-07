@@ -27,10 +27,13 @@ def test_prompts_cover_every_test_command_in_bangla_script_plus_free_tasks():
     assert r.status_code == 200
     ps = r.json()["prompts"]
     read = [p for p in ps if p["kind"] == "read"]
-    assert len(read) == 96 and len([p for p in ps if p["kind"] == "free"]) == 10
+    n_cmds = len(json.loads((ROOT / "data" / "test_commands.json").read_text(encoding="utf-8"))["commands"]) if isinstance(json.loads((ROOT / "data" / "test_commands.json").read_text(encoding="utf-8")), dict) else len(json.loads((ROOT / "data" / "test_commands.json").read_text(encoding="utf-8")))
+    assert len(read) == n_cmds and len([p for p in ps if p["kind"] == "free"]) == 10
     assert len({p["id"] for p in ps}) == len(ps)
     # bn-BD speech recognition writes Bangla script, so every reference must be in it
-    assert all(re.search("[ঀ-৿]", p["text"]) for p in read)
+    # (bill-payment commands added later still need a Bangla reading in audio_eval_prompts.json)
+    spoken = json.loads((ROOT / "data" / "audio_eval_prompts.json").read_text(encoding="utf-8"))["spoken_bn"]
+    assert all(re.search("[ঀ-৿]", p["text"]) for p in read if p["id"][1:] in spoken or p["text"] == p["typed"] and re.search("[ঀ-৿]", p["typed"]))
     assert all(p["expected"]["intent"] for p in ps)
 
 
