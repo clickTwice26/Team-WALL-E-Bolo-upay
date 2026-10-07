@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/agent_icon.dart';
+
 import 'agent/agent.dart';
 import 'api.dart';
 import 'agent/agent_layer.dart';
@@ -194,14 +196,14 @@ class _ShellState extends State<Shell> {
             width: 70,
             height: 70,
             child: FloatingActionButton(
-              backgroundColor: BrandColors.navy,
-              foregroundColor: Colors.white,
+              backgroundColor: Colors.white,
+              foregroundColor: BrandColors.navy,
               elevation: 4,
-              shape: const CircleBorder(side: BorderSide(color: Colors.white, width: 4)),
+              shape: const CircleBorder(side: BorderSide(color: BrandColors.yellow, width: 3)),
               tooltip: tr(bn, 'বলো এজেন্ট', 'Bolo agent'),
               // on the main tabs the centre mic is the agent: open it and listen
               onPressed: () => Agent.instance.openPanel(listen: true),
-              child: UnreadBadge(count: Agent.instance.unread, child: const Icon(Icons.mic_rounded, size: 34)),
+              child: UnreadBadge(count: Agent.instance.unread, child: const AgentIcon(size: 50)),
             ),
           ),
           floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
