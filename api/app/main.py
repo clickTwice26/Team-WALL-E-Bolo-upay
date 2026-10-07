@@ -14,6 +14,8 @@ import json
 import logging
 import os
 import secrets
+import time
+import uuid
 from datetime import datetime
 from pathlib import Path
 from typing import Literal, Optional
@@ -23,7 +25,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, Response
 from pydantic import BaseModel, Field
 
-from . import auth, handoff, store
+from . import auth, handoff, monitor, store
 from .core import agent
 from .core import features as feat_mod
 from .core import llm, parser, risk, scam, tts
@@ -48,6 +50,29 @@ app = FastAPI(title="Bolo upay API", version="1.0.0",
 app.add_middleware(CORSMiddleware, allow_origins=os.getenv("CORS_ORIGINS", "*").split(","),
                    allow_methods=["*"], allow_headers=["*"])
 app.include_router(handoff.router)
+access_log = logging.getLogger("bolo.access")
+if not access_log.handlers:
+    _h = logging.StreamHandler()
+    _h.setFormatter(logging.Formatter("%(message)s"))
+    access_log.addHandler(_h)
+    access_log.setLevel(logging.INFO)
+    access_log.propagate = False
+
+
+@app.middleware("http")
+async def request_log(request: Request, call_next):
+    """One JSON log line per API request, with a request id the client also
+    gets back (X-Request-ID). Only method, route, status and time are logged:
+    no bodies, so no phone numbers, PINs or answers."""
+    rid = request.headers.get("x-request-id") or uuid.uuid4().hex[:12]
+    start = time.perf_counter()
+    response = await call_next(request)
+    if request.url.path.startswith("/api/"):
+        access_log.info(json.dumps({"event": "request", "id": rid, "method": request.method,
+                                    "path": request.url.path, "status": response.status_code,
+                                    "ms": round((time.perf_counter() - start) * 1000, 1)}))
+    response.headers["X-Request-ID"] = rid
+    return response
 
 
 # ---------- models ----------
@@ -88,6 +113,11 @@ class LoginIn(BaseModel):
 
 class CancelIn(BaseModel):
     assessment_id: str
+
+
+class FeedbackIn(BaseModel):
+    assessment_id: str
+    kind: Literal["wrong_warning"]
 
 
 class SwitchIn(BaseModel):
@@ -307,6 +337,26 @@ def cancel(body: CancelIn, s: auth.Session = Depends(auth.current)):
         store.update_assessment(a["id"], status="cancelled")
         store.log_decision(u["id"], a["draft"], a["result"], "cancelled")
     return {"ok": True}
+
+
+@app.post("/api/feedback")
+def feedback(body: FeedbackIn, s: auth.Session = Depends(auth.current)):
+    """The user says a warning was wrong. It never changes the transfer; it is a
+    label for threshold reviews and retraining (see docs/FAILURE_POLICY.md)."""
+    a = store.get_assessment(body.assessment_id)
+    if not a or a["user_id"] != s.user["id"]:
+        raise HTTPException(404, "assessment not found")
+    level = a["result"].get("level")
+    if level not in ("YELLOW", "RED"):
+        raise HTTPException(409, {"code": "not_a_warning"})
+    store.add_feedback(a["id"], s.user["id"], body.kind, level)
+    return {"ok": True}
+
+
+@app.get("/api/admin/monitor", dependencies=[Depends(auth.demo_user_or_admin)])
+def model_health(days: int = 14):
+    """Drift, level mix, overrides, wrong-warning reports and support load."""
+    return monitor.report(max(1, min(days, 90)))
 
 
 @app.post("/api/agent")

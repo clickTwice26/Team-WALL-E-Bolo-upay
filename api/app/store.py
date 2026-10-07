@@ -43,6 +43,8 @@ CREATE TABLE IF NOT EXISTS pin_guard (user_id TEXT PRIMARY KEY, failures INTEGER
   locked_until TEXT);
 CREATE TABLE IF NOT EXISTS devices (user_id TEXT NOT NULL, key_id TEXT NOT NULL,
   public_key TEXT NOT NULL, created_at TEXT NOT NULL, PRIMARY KEY (user_id, key_id));
+CREATE TABLE IF NOT EXISTS feedback (assessment_id TEXT PRIMARY KEY, user_id TEXT NOT NULL,
+  kind TEXT NOT NULL, level TEXT, ts TEXT NOT NULL);
 """
 
 
@@ -81,7 +83,7 @@ def reset() -> None:
         c.executescript("DELETE FROM users; DELETE FROM transactions; "
                         "DELETE FROM assessments; DELETE FROM decisions; "
                         "DELETE FROM handoffs; DELETE FROM handoff_messages; "
-                        "DELETE FROM pin_guard;")
+                        "DELETE FROM pin_guard; DELETE FROM feedback;")
         _seed(c)
 
 
@@ -192,6 +194,22 @@ def decisions(limit: int = 200) -> list[dict]:
         d["categories"] = json.loads(d["categories"] or "[]")
         out.append(d)
     return out
+
+
+def assessments_since(ts: str) -> list[dict]:
+    """Every risk check since ``ts`` (ISO time), oldest first."""
+    rows = conn().execute("SELECT id FROM assessments WHERE created_at >= ? ORDER BY created_at", (ts,)).fetchall()
+    return [get_assessment(r["id"]) for r in rows]
+
+
+def add_feedback(aid: str, uid: str, kind: str, level: str | None) -> None:
+    with _lock:
+        conn().execute("INSERT OR IGNORE INTO feedback VALUES (?,?,?,?,?)", (aid, uid, kind, level, now().isoformat()))
+        conn().commit()
+
+
+def feedback_since(ts: str) -> list[dict]:
+    return [dict(r) for r in conn().execute("SELECT * FROM feedback WHERE ts >= ?", (ts,)).fetchall()]
 
 
 def assessments_for(uid: str, limit: int = 8) -> list[dict]:

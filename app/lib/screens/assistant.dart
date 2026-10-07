@@ -49,6 +49,7 @@ class _AssistantScreenState extends State<AssistantScreen> {
   Timer? _timer;
   String? pinError;
   bool biometricOk = false;
+  bool reportedWrong = false;
   Map<String, dynamic>? doneInfo;
 
   bool get bn => appState.bangla;
@@ -156,7 +157,17 @@ class _AssistantScreenState extends State<AssistantScreen> {
           target.text = t;
           if (done) listening = false;
         });
-        if (done && t.trim().isNotEmpty) onDone?.call();
+        if (done && t.trim().isNotEmpty) {
+          if (Voice.instance.lastUnsure) {
+            // failure policy: unsure speech is never used without the user checking it
+            final s = tr(bn, 'ঠিক শুনেছি কিনা নিশ্চিত নই। লেখাটা দেখে ঠিক করুন, তারপর পাঠান।',
+                "I'm not sure I heard that right. Check the words, fix them if needed, then send.");
+            setState(() => message = s);
+            _say(s);
+          } else {
+            onDone?.call();
+          }
+        }
       },
     );
   }
@@ -244,6 +255,7 @@ class _AssistantScreenState extends State<AssistantScreen> {
     try {
       final a = await Api.assess(draft!, onCall: appState.simulateCall, answers: answers);
       assessment = a;
+      reportedWrong = false;
       final level = a['level'];
       if (level == 'BLOCKED') {
         final m = bn ? a['message_bn'] : a['message_en'];
@@ -1036,6 +1048,16 @@ class _AssistantScreenState extends State<AssistantScreen> {
               Expanded(child: Text(_reasonText(r))),
             ]),
           ),
+        Align(
+          alignment: Alignment.centerLeft,
+          child: TextButton.icon(
+            onPressed: reportedWrong ? null : _reportWrongWarning,
+            icon: Icon(reportedWrong ? Icons.check : Icons.flag_outlined, size: 18),
+            label: Text(reportedWrong
+                ? tr(bn, 'ধন্যবাদ, উপায় টিম দেখবে', "Thanks, upay's team will review it")
+                : tr(bn, 'এই সতর্কতা ভুল মনে হচ্ছে?', 'This warning seems wrong?')),
+          ),
+        ),
       ],
       const SizedBox(height: 18),
       if (level == 'RED') ...[
@@ -1052,6 +1074,17 @@ class _AssistantScreenState extends State<AssistantScreen> {
         OutlinedButton(onPressed: _cancel, child: Text(tr(bn, 'বাতিল', 'Cancel'))),
       ],
     ]);
+  }
+
+  /// Failure policy: the user can say a warning was wrong. It does not change
+  /// this transfer; it becomes a label for threshold reviews and retraining.
+  Future<void> _reportWrongWarning() async {
+    try {
+      await Api.feedback(assessment!['assessment_id'], 'wrong_warning');
+      setState(() => reportedWrong = true);
+    } on ApiError catch (e) {
+      _fail(e);
+    }
   }
 
   String _reasonText(Map<String, dynamic> r) {

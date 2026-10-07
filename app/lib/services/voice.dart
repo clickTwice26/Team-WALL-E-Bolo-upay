@@ -22,6 +22,11 @@ class Voice {
   bool _ready = false;
   bool available = false;
 
+  /// The recognizer reported low confidence for the last final result
+  /// (the app then asks the user to check the words before using them).
+  bool lastUnsure = false;
+  static const minConfidence = 0.6;
+
   /// Bumped by every speak()/silence(): a slow server reply for an older
   /// sentence must not start playing over a newer one.
   int _seq = 0;
@@ -43,7 +48,10 @@ class Voice {
   Future<void> listen({required bool bangla, required void Function(String text, bool done) onText}) async {
     if (!await init()) return;
     await _stt.listen(
-      onResult: (SpeechRecognitionResult r) => onText(r.recognizedWords, r.finalResult),
+      onResult: (SpeechRecognitionResult r) {
+        if (r.finalResult) lastUnsure = r.hasConfidenceRating && r.confidence < minConfidence;
+        onText(r.recognizedWords, r.finalResult);
+      },
       listenOptions: SpeechListenOptions(
         localeId: _locale(bangla),
         partialResults: true,
