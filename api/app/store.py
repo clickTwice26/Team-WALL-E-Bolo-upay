@@ -59,9 +59,21 @@ def conn() -> sqlite3.Connection:
         _conn = sqlite3.connect(DB_PATH, check_same_thread=False)
         _conn.row_factory = sqlite3.Row
         _conn.executescript(SCHEMA)
+        _migrate(_conn)
         if _conn.execute("SELECT COUNT(*) FROM users").fetchone()[0] == 0:
             _seed(_conn)
     return _conn
+
+
+# columns added after the first release: (table, column, type), added to an older database on start
+ADDED_COLUMNS = [("decisions", "call_signal_source", "TEXT")]  # R11: "native" or "simulated"
+
+
+def _migrate(c: sqlite3.Connection) -> None:
+    for table, col, typ in ADDED_COLUMNS:
+        if col not in {r[1] for r in c.execute(f"PRAGMA table_info({table})")}:
+            c.execute(f"ALTER TABLE {table} ADD COLUMN {col} {typ}")
+    c.commit()
 
 
 def _seed(c: sqlite3.Connection) -> None:
@@ -178,11 +190,12 @@ def execute_transfer(uid: str, intent: str, phone: str, amount: float) -> dict:
 def log_decision(uid: str, draft: dict, result: dict, outcome: str) -> None:
     cats = [r["key"].split(":", 1)[1] for r in result.get("reasons", []) if r["key"].startswith("scam:")]
     with _lock:
-        conn().execute("INSERT INTO decisions VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+        conn().execute("INSERT INTO decisions (id, ts, user_id, intent, amount, recipient, level, probability, "
+                       "categories, outcome, interviewed, call_signal_source) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
                        (uuid.uuid4().hex[:12], now().isoformat(), uid, draft.get("intent"),
                         draft.get("amount"), draft.get("recipient_phone"), result.get("level"),
                         result.get("probability"), json.dumps(cats), outcome,
-                        1 if draft.get("answers") else 0))
+                        1 if draft.get("answers") else 0, draft.get("call_signal_source", "simulated")))
         conn().commit()
 
 

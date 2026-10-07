@@ -227,7 +227,7 @@ Calibration plot: [`docs/img/calibration.png`](docs/img/calibration.png). We als
 - **Microphone and Face ID permissions** are declared in `app/ios/Runner/Info.plist` and `app/android/app/src/main/AndroidManifest.xml`.
 - **Bangla speech recognition** depends on the device. Chrome on Android and desktop supports `bn-BD`. If Bangla is not available on a device, switch the app to English or type the command.
 - **Fingerprint** works in the iOS and Android builds. The web build uses PIN only.
-- **Phone-call signal:** a native upay app can know a call is active (not its content). The prototype simulates this with a toggle.
+- **Phone-call signal:** on Android the app asks for `READ_PHONE_STATE` after a Bangla/English explanation, then reads only whether a call is active: a GSM call, or a WhatsApp/IMO call through the audio mode (`MainActivity.kt`, `services/call_state.dart`). Never the number or the audio. On the web and the demo site a toggle simulates it; `/api/assess` records `call_signal_source` (`native` or `simulated`).
 - **Reset demo data:** settings → "Reset demo data", or `POST /api/demo/reset`.
 - **API docs:** https://boloupay.shagato.space/docs (OpenAPI).
 - **Disclosure of external resources:** Flutter and pub packages, FastAPI, scikit-learn, RapidFuzz, Hind Siliguri font (SIL Open Font License, `app/assets/fonts/OFL.txt`), optional LLM APIs. AI coding assistants were used during development. All data is synthetic.

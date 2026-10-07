@@ -254,7 +254,8 @@ class _AssistantScreenState extends State<AssistantScreen> {
   Future<void> _assess() async {
     setState(() => step = _Step.assessing);
     try {
-      final a = await Api.assess(draft!, onCall: appState.simulateCall, answers: answers);
+      await appState.refreshCall();
+      final a = await Api.assess(draft!, onCall: appState.onCall, callSource: appState.callSource, answers: answers);
       assessment = a;
       reportedWrong = false;
       final level = a['level'];

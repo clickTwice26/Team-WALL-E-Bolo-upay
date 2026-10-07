@@ -92,6 +92,8 @@ class Draft(BaseModel):
 class AssessIn(BaseModel):
     draft: Draft
     on_active_call: bool = False
+    # R11: "native" = the phone's own call state; "simulated" = the demo toggle or not measured
+    call_signal_source: Literal["native", "simulated"] = "simulated"
     answers: list[str] = []
     now: Optional[datetime] = None  # DEMO_MODE only: simulate the time of day
 
@@ -282,8 +284,13 @@ def assess(body: AssessIn, s: auth.Session = Depends(auth.current)):
     if result["level"] == "GREEN":
         # one-time challenge the phone signs if the user approves with biometrics
         result["bio_challenge"] = secrets.token_urlsafe(24)
-    draft = {**d.model_dump(), "answers": body.answers, "on_active_call": body.on_active_call}
+    draft = {**d.model_dump(), "answers": body.answers, "on_active_call": body.on_active_call,
+             "call_signal_source": body.call_signal_source}
     result["assessment_id"] = store.save_assessment(u["id"], draft, result)
+    # where the risk signals came from, for ops: ids and flags only, no numbers or text
+    access_log.info(json.dumps({"event": "assess", "assessment_id": result["assessment_id"],
+                                "level": result["level"], "on_call": body.on_active_call,
+                                "call_signal_source": body.call_signal_source}))
     return result
 
 
