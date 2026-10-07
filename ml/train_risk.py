@@ -237,6 +237,12 @@ def main() -> None:
 
     trained_at = datetime.now().isoformat(timespec="seconds")
     test_events = [events[i] for i in te]
+    # for the impact simulator (/api/impact): how big the scams were at each level
+    amt = np.array([e["amount"] for e in test_events], dtype=float)
+    yt = y[te]
+    impact_base = {f"scam_amount_mean_{name}": round(float(amt[(yt == 1) & sel].mean()), 1) if ((yt == 1) & sel).any() else 0.0
+                   for name, sel in (("all", lv >= 0), ("red", lv == 2), ("yellow", lv == 1), ("green", lv == 0))}
+    impact_base["honest_amount_mean"] = round(float(amt[yt == 0].mean()), 1)
     metrics = {
         "dataset": {"total": n, "train": len(tr), "calibration": len(ca), "validation": len(va), "test": len(te),
                     "scam_share": round(float(y.mean()), 3), "split": "by time",
@@ -259,6 +265,7 @@ def main() -> None:
         "calibration": curves,
         "feature_importance": importance,
         "reference": {"features": reference, "level_mix": level_mix},
+        "impact_base": impact_base,
         "fallback": {"model": "logistic_regression", "thresholds": th_fallback,
                      "coefficients": dict(zip(FEATURES, [round(c, 3) for c in lr_all_m.coef_[0].tolist()]))},
         "model_choice": _choice(comparison),

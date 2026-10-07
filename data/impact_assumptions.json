@@ -1,0 +1,12 @@
+{
+  "note": "Assumptions for the impact simulator. Each has a low / mid / high value and a source or reason. Change them here; the app shows them next to the results.",
+  "stop_rate_red": {"low": 0.7, "mid": 0.85, "high": 0.95, "why": "Share of scam transfers the user cancels after a RED hold, warning and questions (assumption; to be measured in a pilot)"},
+  "stop_rate_yellow": {"low": 0.2, "mid": 0.35, "high": 0.5, "why": "Share of scam transfers cancelled after a YELLOW check (assumption)"},
+  "abandon_rate_after_warning": {"low": 0.02, "mid": 0.05, "high": 0.1, "why": "Share of honest users who give up a payment after a warning (assumption; the false-warning cost)"},
+  "seconds_per_warning": {"low": 10, "mid": 20, "high": 40, "why": "Extra time an honest user spends on a YELLOW check (assumption)"},
+  "mfs_disputes_per_year": {"low": 700000, "mid": 700000, "high": 700000, "why": "Disputes handled by Bangladesh MFS providers (Bangladesh Bank figures reported by New Age, July 2026)"},
+  "share_disputes_wrong_number_or_amount": {"low": 0.2, "mid": 0.35, "high": 0.5, "why": "Share of disputes caused by a wrong number or amount (assumption)"},
+  "mistake_guard_catch_rate": {"low": 0.3, "mid": 0.5, "high": 0.7, "why": "Share of those mistakes the 'Which Rahim?' / 'Did you mean ৳350?' checks catch before sending (assumption)"},
+  "upay_share_of_disputes": {"low": 0.05, "mid": 0.1, "high": 0.15, "why": "upay's share of MFS disputes (assumption)"},
+  "cost_per_dispute_tk": {"low": 150, "mid": 300, "high": 500, "why": "Call-centre and back-office cost of handling one dispute (assumption)"}
+}

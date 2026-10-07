@@ -520,6 +520,13 @@
       "RED": 0.2363
     }
   },
+  "impact_base": {
+    "scam_amount_mean_all": 4047.8,
+    "scam_amount_mean_red": 4350.2,
+    "scam_amount_mean_yellow": 2699.5,
+    "scam_amount_mean_green": 1876.4,
+    "honest_amount_mean": 1431.0
+  },
   "fallback": {
     "model": "logistic_regression",
     "thresholds": {
@@ -548,5 +555,5 @@
     }
   },
   "model_choice": "Gradient boosting on all features, monotonic and sigmoid-calibrated. Test PR-AUC 0.9791 (logistic regression on the same features 0.9722, previous 9-feature model 0.938); Brier score 0.0302 (0.0334, 0.0554). Monotonic constraints mean more risk evidence can never lower the score, calibration makes the probability mean what it says, and SHAP values explain each decision. Logistic regression on all features stays in the bundle as the fallback.",
-  "trained_at": "2026-10-07T04:38:53"
+  "trained_at": "2026-10-07T04:47:35"
 }

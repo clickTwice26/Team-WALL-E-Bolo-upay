@@ -128,6 +128,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 _stat('RED', '${lv['RED']}', color: BrandColors.red),
               ]),
               const SizedBox(height: 16),
+              const _Impact(),
+              const SizedBox(height: 16),
               const _ModelHealth(),
               const SizedBox(height: 16),
               Text(tr(bn, 'প্রতারণার ধরন', 'Scam patterns detected'), style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 16)),
@@ -410,6 +412,112 @@ class _ModelHealth extends StatelessWidget {
           ),
         );
       },
+    );
+  }
+}
+
+/// Impact simulator: transfers -> scams -> flagged -> stopped -> Tk protected,
+/// the honest users it bothers, and call-centre disputes avoided. Always
+/// labelled as a simulation on synthetic data.
+class _Impact extends StatefulWidget {
+  const _Impact();
+  @override
+  State<_Impact> createState() => _ImpactState();
+}
+
+class _ImpactState extends State<_Impact> {
+  static const _prevalences = [0.258, 0.05, 0.01];
+  static const _volumes = [1000, 100000, 1000000];
+  double prevalence = 0.01;
+  int transfers = 1000;
+  late Future<Map<String, dynamic>> _f = Api.impact(transfers, prevalence);
+
+  void _set({double? p, int? t}) => setState(() {
+        prevalence = p ?? prevalence;
+        transfers = t ?? transfers;
+        _f = Api.impact(transfers, prevalence);
+      });
+
+  String _n(num v, bool bn) {
+    final s = v >= 100 ? v.round().toString() : v.toStringAsFixed(1);
+    final grouped = s.replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'), (m) => '${m[1]},');
+    return bn ? bnDigits(grouped) : grouped;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final bn = appState.bangla;
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Text(tr(bn, 'প্রভাব (সিমুলেশন)', 'Impact (simulation)'), style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 16)),
+          Text(tr(bn, 'সিনথেটিক ডেটায় সিমুলেশন, আসল ফলাফল নয়', 'Simulation on synthetic data, not real results'),
+              style: const TextStyle(color: BrandColors.red, fontSize: 12, fontWeight: FontWeight.w600)),
+          const SizedBox(height: 8),
+          Wrap(spacing: 6, runSpacing: 6, children: [
+            for (final p in _prevalences)
+              ChoiceChip(
+                  label: Text(tr(bn, 'স্ক্যাম ${bnDigits((p * 100).toStringAsFixed(p < 0.1 ? 0 : 1))}%', 'Scams ${(p * 100).toStringAsFixed(p < 0.1 ? 0 : 1)}%')),
+                  selected: prevalence == p,
+                  onSelected: (_) => _set(p: p)),
+            for (final t in _volumes)
+              ChoiceChip(label: Text(_n(t, bn)), selected: transfers == t, onSelected: (_) => _set(t: t)),
+          ]),
+          const SizedBox(height: 8),
+          FutureBuilder<Map<String, dynamic>>(
+            future: _f,
+            builder: (context, s) {
+              if (!s.hasData) {
+                return s.hasError ? const SizedBox.shrink() : const LinearProgressIndicator(minHeight: 2);
+              }
+              final shield = Map<String, dynamic>.from(s.data!['shield'] ?? {});
+              final me = Map<String, dynamic>.from(shield['bolo_upay']?['mid'] ?? {});
+              final old = Map<String, dynamic>.from(shield['previous_model']?['mid'] ?? {});
+              final d = Map<String, dynamic>.from(s.data!['disputes'] ?? {});
+              Widget row(String label, num v, {num? before, Color color = BrandColors.text}) => Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 3),
+                    child: Row(children: [
+                      Expanded(child: Text(label, style: const TextStyle(fontSize: 13))),
+                      Text(_n(v, bn), style: TextStyle(fontWeight: FontWeight.w700, color: color)),
+                      if (before != null)
+                        SizedBox(
+                            width: 84,
+                            child: Text(tr(bn, ' (আগে ${_n(before, bn)})', ' (was ${_n(before, false)})'),
+                                textAlign: TextAlign.right, style: const TextStyle(color: BrandColors.muted, fontSize: 12))),
+                    ]),
+                  );
+              return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                row(tr(bn, 'লেনদেন', 'Transfers'), transfers),
+                row(tr(bn, 'স্ক্যাম', 'Scams among them'), me['scams'] ?? 0),
+                row(tr(bn, 'ধরা পড়েছে', 'Flagged'), me['scams_flagged'] ?? 0, before: old['scams_flagged']),
+                row(tr(bn, 'আটকানো (RED)', 'Held (RED)'), me['scams_held_red'] ?? 0, before: old['scams_held_red']),
+                row(tr(bn, 'থামানো গেছে', 'Stopped'), me['scams_stopped'] ?? 0, before: old['scams_stopped']),
+                row(tr(bn, 'রক্ষা পাওয়া টাকা (৳)', 'Money protected (৳)'), me['tk_protected'] ?? 0,
+                    before: old['tk_protected'], color: BrandColors.green),
+                const Divider(),
+                row(tr(bn, 'সৎ লেনদেনে সতর্কতা', 'Honest payments warned'), me['honest_warned'] ?? 0, color: BrandColors.amber),
+                row(tr(bn, 'সৎ লেনদেন আটকানো', 'Honest payments held'), me['honest_held_red'] ?? 0, color: BrandColors.amber),
+                row(tr(bn, 'বাদ দেওয়া সৎ লেনদেন', 'Honest payments given up'), me['honest_payments_abandoned'] ?? 0,
+                    color: BrandColors.amber),
+                const Divider(),
+                Text(
+                    tr(bn,
+                        'ভুল নম্বর/পরিমাণের অভিযোগ এড়ানো (উপায়, বছরে): ${_n(d['low']?['avoided_per_year'] ?? 0, true)}–${_n(d['high']?['avoided_per_year'] ?? 0, true)}, '
+                            'খরচ সাশ্রয় ৳${_n(d['low']?['cost_saved_tk_per_year'] ?? 0, true)}–${_n(d['high']?['cost_saved_tk_per_year'] ?? 0, true)}',
+                        'Wrong-number/amount disputes avoided (upay, per year): ${_n(d['low']?['avoided_per_year'] ?? 0, false)}–${_n(d['high']?['avoided_per_year'] ?? 0, false)}, '
+                            'cost saved ৳${_n(d['low']?['cost_saved_tk_per_year'] ?? 0, false)}–${_n(d['high']?['cost_saved_tk_per_year'] ?? 0, false)}'),
+                    style: const TextStyle(fontSize: 13)),
+                const SizedBox(height: 4),
+                Text(
+                    tr(bn, 'মাঝারি অনুমান দেখানো হয়েছে; সব অনুমান data/impact_assumptions.json-এ।',
+                        'Mid assumptions shown; every assumption is in data/impact_assumptions.json.'),
+                    style: const TextStyle(color: BrandColors.muted, fontSize: 12)),
+              ]);
+            },
+          ),
+        ]),
+      ),
     );
   }
 }

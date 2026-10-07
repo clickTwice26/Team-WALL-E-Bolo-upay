@@ -111,6 +111,10 @@ class Api {
   static Future<void> feedback(String assessmentId, String kind) async =>
       _send('POST', '/api/feedback', {'assessment_id': assessmentId, 'kind': kind});
 
+  /// Impact simulator: per N transfers at a scam prevalence (simulation, not real results).
+  static Future<Map<String, dynamic>> impact(int transfers, double prevalence) async =>
+      Map<String, dynamic>.from(await _send('GET', '/api/impact?transfers=$transfers&prevalence=$prevalence'));
+
   /// Model health for ops: drift, level mix, wrong-warning and override rates.
   static Future<Map<String, dynamic>> monitor() async =>
       Map<String, dynamic>.from(await _send('GET', '/api/admin/monitor'));
