@@ -102,6 +102,11 @@ class Api {
       }));
   static Future<void> cancel(String assessmentId) async => _send('POST', '/api/cancel', {'assessment_id': assessmentId});
 
+  /// Adaptive scam interview: the next question, or {'done': true}.
+  static Future<Map<String, dynamic>> interviewNext(String assessmentId, List<String> asked, List<String> answers) async =>
+      Map<String, dynamic>.from(await _send('POST', '/api/interview/next',
+          {'assessment_id': assessmentId, 'asked': asked, 'answers': answers}));
+
   /// The user says a warning was wrong (a label for threshold reviews).
   static Future<void> feedback(String assessmentId, String kind) async =>
       _send('POST', '/api/feedback', {'assessment_id': assessmentId, 'kind': kind});

@@ -77,9 +77,13 @@ def test_transfers_go_to_the_normal_flow():
 
 
 def test_unsupported_intents():
-    for text in ("cash out korbo", "বিদ্যুৎ বিল দিবো"):
-        r = ask(text)
-        assert r["actions"] == [] and "not in this prototype" in r["reply_en"]
+    r = ask("বিদ্যুৎ বিল দিবো")
+    assert r["actions"] == [] and "not in this prototype" in r["reply_en"]
+
+
+def test_cash_out_and_merchant_payment_start_the_checked_flow():
+    for text in ("2000 taka cash out korbo", "dokane 300 taka payment koro"):
+        assert acts(ask(text)) == [("start_transfer", {"text": text})], text
 
 
 def test_describe_current_and_previous_page():

@@ -28,7 +28,7 @@ from pydantic import BaseModel, Field
 from . import auth, handoff, monitor, store
 from .core import agent
 from .core import features as feat_mod
-from .core import llm, parser, risk, scam, tts
+from .core import interview, llm, parser, risk, scam, tts
 from .core.text import mask_phone
 
 log = logging.getLogger("bolo.api")
@@ -82,7 +82,7 @@ class ParseIn(BaseModel):
 
 
 class Draft(BaseModel):
-    intent: Literal["send_money", "mobile_recharge"]
+    intent: Literal["send_money", "mobile_recharge", "cash_out", "merchant_payment"]
     amount: int = Field(gt=0, le=1_000_000)
     recipient_phone: str = Field(pattern=r"^01[3-9]\d{8}$")
     is_return_claim: bool = False
@@ -113,6 +113,12 @@ class LoginIn(BaseModel):
 
 class CancelIn(BaseModel):
     assessment_id: str
+
+
+class InterviewNextIn(BaseModel):
+    assessment_id: str
+    asked: list[str] = Field(default=[], max_length=10)   # question ids already asked
+    answers: list[str] = Field(default=[], max_length=10)
 
 
 class FeedbackIn(BaseModel):
@@ -266,7 +272,11 @@ def assess(body: AssessIn, s: auth.Session = Depends(auth.current)):
     result["features"] = feats
     result["scam_hits"] = sc["hits"]
     if result["needs_interview"]:
-        result["interview"] = INTERVIEW
+        # adaptive: the first question follows this payment's strongest risk signal;
+        # /api/interview/next picks each follow-up from the answers so far
+        result["interview"] = [interview.first(feats, d.model_dump())]
+        result["interview_mode"] = "adaptive"
+        result["interview_max"] = interview.bank()["max_questions"]
     if result["level"] == "RED":
         result["hold_seconds"] = HOLD_SECONDS
     if result["level"] == "GREEN":
@@ -409,7 +419,17 @@ def metrics():
 
 @app.get("/api/interview")
 def interview_questions():
+    """The fallback question list (the app asks adaptively via /api/interview/next)."""
     return INTERVIEW
+
+
+@app.post("/api/interview/next")
+def interview_next(body: InterviewNextIn, s: auth.Session = Depends(auth.current)):
+    a = store.get_assessment(body.assessment_id)
+    if not a or a["user_id"] != s.user["id"]:
+        raise HTTPException(404, "assessment not found")
+    q = interview.next_question(body.asked, body.answers)
+    return {"done": q is None, "question": q}
 
 
 @app.post("/api/demo/reset", dependencies=[Depends(auth.demo_user_or_admin)])

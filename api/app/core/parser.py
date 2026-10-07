@@ -27,8 +27,12 @@ QUESTIONS = {
     "need_recipient": ("কাকে পাঠাবেন? নাম বা নম্বর বলুন।",
                        "Who should receive it? Say a name or number."),
     "confirm_recipient": ("আপনি কি এই ব্যক্তিকে বোঝাচ্ছেন?", "Did you mean this person?"),
-    "unsupported": ("এই প্রোটোটাইপে এখন শুধু সেন্ড মানি, রিচার্জ ও ব্যালেন্স দেখা যায়।",
-                    "This prototype supports Send Money, Recharge and Balance only."),
+    "need_agent": ("কোন এজেন্টের কাছে ক্যাশ আউট করবেন? এজেন্ট নম্বরটি বলুন।",
+                   "Which agent? Say the agent's number."),
+    "need_merchant": ("কোন দোকানে পেমেন্ট করবেন? মার্চেন্ট নম্বরটি বলুন।",
+                      "Which shop? Say the merchant number."),
+    "unsupported": ("এই প্রোটোটাইপে সেন্ড মানি, রিচার্জ, ক্যাশ আউট, মার্চেন্ট পেমেন্ট ও ব্যালেন্স দেখা যায়।",
+                    "This prototype supports Send Money, Recharge, Cash Out, Merchant Payment and Balance."),
     "unknown": ("দুঃখিত, বুঝতে পারিনি। আবার বলুন, যেমন: আম্মুকে ৫০০ টাকা পাঠাও।",
                 "Sorry, I didn't understand. Try: \"Ammu ke 500 taka pathao\"."),
 }
@@ -107,7 +111,10 @@ def parse(text: str, user: dict, use_llm: bool = True) -> dict:
 
     def done(status: str) -> dict:
         result["status"] = status
-        q = QUESTIONS.get(status)
+        key = status
+        if status == "need_recipient" and intent in ("cash_out", "merchant_payment"):
+            key = "need_agent" if intent == "cash_out" else "need_merchant"
+        q = QUESTIONS.get(key)
         result["question_bn"], result["question_en"] = q if q else (None, None)
         if status != "ok":
             warning = _scam_warning(text)

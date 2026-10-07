@@ -637,16 +637,16 @@
    "id": 80,
    "user": "u1",
    "text": "500 taka cash out korbo",
-   "intent": "unsupported",
-   "amount": null,
+   "intent": "cash_out",
+   "amount": 500,
    "recipient": null
   },
   {
    "id": 81,
    "user": "u1",
    "text": "ক্যাশ আউট করব ১০০০ টাকা",
-   "intent": "unsupported",
-   "amount": null,
+   "intent": "cash_out",
+   "amount": 1000,
    "recipient": null
   },
   {
