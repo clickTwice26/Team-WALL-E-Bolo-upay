@@ -66,6 +66,10 @@ The agent connects a person when the user asks ("মানুষের সাথ
 
 What the app deliberately does **not** do: it never listens to phone calls, never uses voice biometrics (voices can be cloned), and never sends money without the user's PIN or biometric confirmation.
 
+### LLM today, local model in production
+
+The demo runs Gemini for the second parsing path, the agent planner and the spoken replies, because we had no server capacity or time to host a model. **In production we want a local model instead:** mobile-wallet data is sensitive and subject to Bangladesh Bank restrictions, so no customer text should leave upay's servers. The plan is an Ollama or llama.cpp service inside the same Docker network (candidates: Qwen 2.5 3B and Gemma 2 2B, chosen by Bangla accuracy on `data/test_commands.json`), phone numbers and contact names replaced by placeholders before any model call, the agent given only the fields it needs, and the device voice (or a local Bangla TTS such as MMS-TTS) instead of Gemini TTS. Nothing depends on the LLM: with `LLM_PROVIDER` empty the rule parser (100% on the test set), the keyword agent router and the device voice take over.
+
 ## 3. Technology stack
 
 | Layer | Technology |
@@ -76,7 +80,7 @@ What the app deliberately does **not** do: it never listens to phone calls, neve
 | Backend API | Python 3.11, FastAPI, Pydantic, Uvicorn |
 | ML | scikit-learn (gradient boosting with sigmoid calibration, logistic regression fallback), SHAP, NumPy, joblib; matplotlib for the training report |
 | Text matching | RapidFuzz |
-| LLM (optional) | Anthropic Python SDK (`claude-opus-5-5` by default), OpenAI or Gemini via REST |
+| LLM (optional) | Anthropic Python SDK (`claude-opus-5-5` by default), OpenAI or Gemini via REST (Gemini in the demo; a local model in production, see above) |
 | Storage | SQLite (prototype) |
 | Security | Signed session tokens (every request acts as the signed-in user, never a user id in the body), bcrypt-hashed PINs with a per-account lock after 5 wrong tries, biometric approvals verified as ECDSA P-256 signatures from a hardware-backed device key (`biometric_signature`), named support-console accounts, demo-only controls behind `DEMO_MODE` |
 | Tests | pytest (93 tests), parser evaluation script |
