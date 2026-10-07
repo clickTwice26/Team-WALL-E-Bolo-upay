@@ -212,7 +212,7 @@ The data is simulated (no real fraud data is available): 650 synthetic users wit
 | Logistic regression, all inputs (fallback) | 0.972 | 0.033 |
 | **Gradient boosting, all inputs, calibrated (served)** | **0.979** | **0.030** |
 
-Calibration plot: [`docs/img/calibration.png`](docs/img/calibration.png).
+Calibration plot: [`docs/img/calibration.png`](docs/img/calibration.png). We also tried a sequence model, a GRU over each payment's last 20 transactions plus its features (`ml/compare_sequence.py`): test PR-AUC 0.973, below the served model, so it was not adopted (the rule is +0.01 or better).
 
 **Manual test script** (with the deployed app, user "Rahima Begum"):
 1. "আম্মুকে দেড় হাজার টাকা পাঠাও" → GREEN, ৳1,500 to Ammu, fingerprint or PIN.

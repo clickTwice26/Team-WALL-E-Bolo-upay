@@ -1,2 +1,3 @@
 -r ../api/requirements.txt
 matplotlib>=3.8  # calibration plot in docs/img (optional)
+jax[cpu]>=0.4    # ml/compare_sequence.py (optional)
