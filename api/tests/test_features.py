@@ -84,6 +84,14 @@ def test_hour_unusual_for_user():
     assert seq(1000, AMMU["phone"], h[:5], now=night)["hour_unusual_for_user"] == 0  # too few
 
 
+def test_recipient_paid_you_7d():
+    friend = "01899999999"
+    h = habits() + [tx("receive", friend, 1000, timedelta(days=2))]
+    assert seq(1000, friend, h)["recipient_paid_you_7d"] == 1
+    assert seq(1000, "01977777777", h)["recipient_paid_you_7d"] == 0
+    assert seq(1000, friend, h, now=NOW + timedelta(days=6))["recipient_paid_you_7d"] == 0
+
+
 def test_future_transactions_are_ignored():
     h = [tx("send_money", "01811111111", 100, timedelta(hours=-1))]  # one hour after "now"
     assert seq(100, AMMU["phone"], h)["sends_24h"] == 0

@@ -12,7 +12,7 @@ from zoneinfo import ZoneInfo
 
 TZ = ZoneInfo("Asia/Dhaka")
 
-FEATURES = [
+BASE_FEATURES = [
     "is_new_recipient",       # never sent to, not in contacts
     "log_recipient_ratio",    # log2(amount / usual amount to this recipient,
                               #       or the user's median send if new)
@@ -38,7 +38,13 @@ SEQUENCE_FEATURES = [
     "amount_z_user",          # this amount against the user's own spread of payments
     "log_recipient_age",      # log(1 + days since the first payment to this number); 0 if never
     "hour_unusual_for_user",  # under 5% of the user's payments were within an hour of now
+    "recipient_paid_you_7d",  # this number sent the user money in the last 7 days (refunds)
 ]
+
+INTENT_FEATURES = ["is_cash_out", "is_payment"]  # cash-out at an agent; bill or merchant payment
+
+# What the risk model sees, in this order
+FEATURES = BASE_FEATURES + SEQUENCE_FEATURES + INTENT_FEATURES
 
 
 def _ts(t: dict) -> datetime:
@@ -122,6 +128,8 @@ def sequence(amount: float, phone: str | None, history: list[dict], contacts: li
         "amount_z_user": round(z, 4),
         "log_recipient_age": round(age, 4),
         "hour_unusual_for_user": unusual,
+        "recipient_paid_you_7d": int(any(t["type"] == "receive" and t["counterparty"] == phone
+                                         and now - _ts(t) <= timedelta(days=7) for t in past)),
     }
 
 
@@ -148,6 +156,8 @@ def compute(amount: float, intent: str, phone: str | None, is_return_claim: bool
         "return_claim_no_inflow": 1 if (is_return_claim and not s["has_recent_inflow"]) else 0,
         "scam_score": float(scam_score),
         "is_recharge": 1 if intent == "mobile_recharge" else 0,
+        "is_cash_out": 1 if intent == "cash_out" else 0,
+        "is_payment": 1 if intent in ("bill_payment", "merchant_payment") else 0,
     }
     feats.update(sequence(amount, phone, history, contacts, now, self_phone))
     return feats, s
