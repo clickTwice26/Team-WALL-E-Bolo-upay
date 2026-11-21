@@ -60,6 +60,8 @@ Prototype by **Team WALL-E** (Shagato Chowdhury, Umme Munia) for the AI Dev Fest
 
 ### Bolo agent (every page)
 
+Full guide with diagrams (architecture, one turn, planners, safety guard, Send Money steps, RAG, human handoff, API): [`docs/BOLO_AGENT.md`](docs/BOLO_AGENT.md).
+
 The centre mic (or the floating orb on other pages) opens a bottom panel that works on every page. The app tells the agent what is on screen (page, step, a short summary, and the actions its buttons offer right now) plus the last 3 pages; the agent answers in Bangla or English and the app runs the returned actions through the same methods as its buttons: open a page, go back, settings, language, show/hide balance, switch demo user, call simulation, start a transfer, pick an amount or recipient, answer the scam questions, confirm, cancel, repeat. Try: "ড্যাশবোর্ড খোলো", "এই পেজে কী আছে?", "আগের পেজে কী ছিল?", "dokaner ta", "abar pathao".
 
 Safety rules live in the server's `sanitize()` and apply to every plan, LLM or rules: there is no action for entering a PIN, using biometrics, ticking the RED warning box or skipping a hold; page actions run only when the page offers them (the app never offers "confirm" on a RED review); money-moving actions need the user's own words and never run on automatic follow-ups; interview answers are always the user's raw words; a PIN or OTP said aloud gets a warning and no action.
@@ -273,7 +275,7 @@ loadtest/       k6 load test (flow.js)
 model/          risk_model.joblib, risk_metrics.json, parser_metrics.json
 deploy/         Dockerfile, Caddyfile, nginx site (hosts that already run nginx)
 docs/           Bolo-upay-Report-Team-WALL-E.pdf (project report), report/ (LaTeX source), DEPLOYMENT.md,
-                PIPELINE.md, REPORT.md, DEMO_SCRIPT.md
+                PIPELINE.md, REPORT.md, DEMO_SCRIPT.md, BOLO_AGENT.md (the Bolo agent, with diagrams)
 ```
 
 ## Responsible AI
